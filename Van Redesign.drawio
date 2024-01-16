@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-01-16T18:08:52.940Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2.1 Safari/605.1.15" etag="Vggxtpnn4R27HVJpszrN" version="22.1.18" type="github">
+<mxfile host="app.diagrams.net" modified="2024-01-16T18:10:42.904Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2.1 Safari/605.1.15" etag="HkX2ZrB5LweFI9PfQ1cn" version="22.1.18" type="github">
   <diagram name="Devices" id="_XpPioPkWa0zS_CPMh-q">
     <mxGraphModel dx="1408" dy="781" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
       <root>
@@ -545,7 +545,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="8CpULcGprLRs8BwtIuAB-320" value="" style="group" vertex="1" connectable="0" parent="1">
-          <mxGeometry x="719.9999999999999" y="110" width="190.00000000000023" height="310.00000000000006" as="geometry" />
+          <mxGeometry x="719.9999999999999" y="115" width="190.00000000000023" height="310.00000000000006" as="geometry" />
         </mxCell>
         <mxCell id="8CpULcGprLRs8BwtIuAB-321" value="Row 3&lt;br&gt;USB Outlet" style="whiteSpace=wrap;html=1;aspect=fixed;sketch=1;curveFitting=1;jiggle=2;fontFamily=Montserrat;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DMontserrat;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="8CpULcGprLRs8BwtIuAB-320">
           <mxGeometry x="1.1368683772161603e-13" y="230.00000000000006" width="80" height="80" as="geometry" />
