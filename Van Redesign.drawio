@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-01-16T16:49:41.491Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2.1 Safari/605.1.15" etag="zxL3xg7EuLKBc3qBYsOh" version="22.1.18" type="github">
+<mxfile host="app.diagrams.net" modified="2024-01-16T16:50:10.702Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2.1 Safari/605.1.15" etag="hw_wNXwNSjMaWP439StZ" version="22.1.18" type="github">
   <diagram name="Devices" id="_XpPioPkWa0zS_CPMh-q">
     <mxGraphModel dx="1408" dy="1631" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
       <root>
@@ -484,7 +484,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="8CpULcGprLRs8BwtIuAB-294" value="" style="group" vertex="1" connectable="0" parent="1">
-          <mxGeometry x="250" y="160" width="290" height="310" as="geometry" />
+          <mxGeometry x="290" y="160" width="290" height="310" as="geometry" />
         </mxCell>
         <mxCell id="8CpULcGprLRs8BwtIuAB-1" value="Alpine PKG-RES3HDMI&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;(5A)" style="whiteSpace=wrap;html=1;aspect=fixed;sketch=1;curveFitting=1;jiggle=2;fontFamily=Montserrat;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DMontserrat;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="8CpULcGprLRs8BwtIuAB-294">
           <mxGeometry x="10" y="110" width="80" height="80" as="geometry" />
@@ -620,27 +620,27 @@
         <mxCell id="8CpULcGprLRs8BwtIuAB-296" style="edgeStyle=orthogonalEdgeStyle;rounded=0;hachureGap=4;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=16;fillColor=#dae8fc;strokeColor=#6c8ebf;endArrow=none;endFill=0;strokeWidth=2;" edge="1" parent="1" source="8CpULcGprLRs8BwtIuAB-6" target="8CpULcGprLRs8BwtIuAB-10">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="300" y="500" />
+              <mxPoint x="340" y="500" />
               <mxPoint x="470" y="500" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="8CpULcGprLRs8BwtIuAB-299" value="LAN" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;fontFamily=Montserrat;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DMontserrat;" vertex="1" connectable="0" parent="8CpULcGprLRs8BwtIuAB-296">
           <mxGeometry x="-0.2637" y="1" relative="1" as="geometry">
-            <mxPoint x="100" y="31" as="offset" />
+            <mxPoint x="78" y="31" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="8CpULcGprLRs8BwtIuAB-297" style="edgeStyle=orthogonalEdgeStyle;rounded=0;hachureGap=4;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=16;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;endArrow=none;endFill=0;" edge="1" parent="1" source="8CpULcGprLRs8BwtIuAB-4" target="8CpULcGprLRs8BwtIuAB-10">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="390" y="490" />
+              <mxPoint x="430" y="490" />
               <mxPoint x="500" y="490" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="8CpULcGprLRs8BwtIuAB-302" value="LAN" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;fontFamily=Montserrat;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DMontserrat;" vertex="1" connectable="0" parent="8CpULcGprLRs8BwtIuAB-297">
           <mxGeometry x="0.5959" y="2" relative="1" as="geometry">
-            <mxPoint x="-2" y="2" as="offset" />
+            <mxPoint x="-2" y="-6" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="8CpULcGprLRs8BwtIuAB-298" style="edgeStyle=orthogonalEdgeStyle;rounded=0;hachureGap=4;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=16;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;endArrow=none;endFill=0;" edge="1" parent="1" source="8CpULcGprLRs8BwtIuAB-5" target="8CpULcGprLRs8BwtIuAB-10">
@@ -653,7 +653,7 @@
         </mxCell>
         <mxCell id="8CpULcGprLRs8BwtIuAB-303" value="LAN" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;fontFamily=Montserrat;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DMontserrat;" vertex="1" connectable="0" parent="8CpULcGprLRs8BwtIuAB-298">
           <mxGeometry x="0.1705" y="1" relative="1" as="geometry">
-            <mxPoint as="offset" />
+            <mxPoint x="-1" y="1" as="offset" />
           </mxGeometry>
         </mxCell>
       </root>
