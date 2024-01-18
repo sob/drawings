@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-01-18T22:18:41.111Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2.1 Safari/605.1.15" etag="WWRSbC3rGA_RfdqbXmKU" version="22.1.18" type="github">
+<mxfile host="app.diagrams.net" modified="2024-01-18T22:18:48.595Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2.1 Safari/605.1.15" etag="UdrIh9lmKh6adoRqERm2" version="22.1.18" type="github">
   <diagram name="Devices" id="_XpPioPkWa0zS_CPMh-q">
     <mxGraphModel dx="476" dy="265" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
       <root>
@@ -518,8 +518,8 @@
         <mxCell id="8CpULcGprLRs8BwtIuAB-313" style="edgeStyle=orthogonalEdgeStyle;rounded=0;hachureGap=4;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=16;fillColor=#f8cecc;strokeColor=#b85450;endArrow=none;endFill=0;strokeWidth=2;" edge="1" parent="8CpULcGprLRs8BwtIuAB-391" source="8CpULcGprLRs8BwtIuAB-9" target="8CpULcGprLRs8BwtIuAB-204">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="50.000000000000114" y="110.00000000000006" />
-              <mxPoint x="50.000000000000114" y="110.00000000000006" />
+              <mxPoint x="35" y="105" />
+              <mxPoint x="35" y="105" />
             </Array>
           </mxGeometry>
         </mxCell>
