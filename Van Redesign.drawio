@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-01-18T22:18:48.595Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2.1 Safari/605.1.15" etag="UdrIh9lmKh6adoRqERm2" version="22.1.18" type="github">
+<mxfile host="app.diagrams.net" modified="2024-01-18T22:18:57.562Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2.1 Safari/605.1.15" etag="j9UHsh1Bwe354nN_M3FK" version="22.1.18" type="github">
   <diagram name="Devices" id="_XpPioPkWa0zS_CPMh-q">
     <mxGraphModel dx="476" dy="265" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
       <root>
@@ -458,7 +458,7 @@
         </mxCell>
         <mxCell id="8CpULcGprLRs8BwtIuAB-316" value="WAN" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;fontFamily=Montserrat;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DMontserrat;" vertex="1" connectable="0" parent="8CpULcGprLRs8BwtIuAB-315">
           <mxGeometry x="-0.541" relative="1" as="geometry">
-            <mxPoint y="-40" as="offset" />
+            <mxPoint x="20" y="-93" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="8CpULcGprLRs8BwtIuAB-17" value="Twinkle Lights" style="whiteSpace=wrap;html=1;aspect=fixed;sketch=1;curveFitting=1;jiggle=2;fontFamily=Montserrat;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DMontserrat;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="8CpULcGprLRs8BwtIuAB-391">
