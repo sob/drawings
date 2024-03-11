@@ -12,13 +12,14 @@ concurrency:
 jobs:
   drawio-export:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout sources
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          token: ${{ secrets.GITHUB_TOKEN }}
-
+  
       - name: Export drawio files to asciidoctor and png files
         uses: rlespinasse/drawio-export-action@v2
         with:
@@ -31,10 +32,10 @@ jobs:
         if: github.ref == 'refs/heads/main'
 
       - name: Commit changed files
-        uses: stefanzweifel/git-auto-commit-action@v4
+        uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "docs: sync draw.io exported files"
-          commit_user_name: "${{ env.GIT_COMMIT_COMMITTER_NAME }}"
-          commit_user_email: "${{ env.GIT_COMMIT_COMMITTER_EMAIL }}"
-          commit_author: "${{ env.GIT_COMMIT_AUTHOR }}"
+          commit_message: "[bot]: sync draw.io exported files"
+          commit_user_name: "stimpy-bot[bot]"
+          commit_user_email: "stimpy-bot <101597957+stimpy-bot[bot]@users.noreply.github.com>"
+
         if: github.ref == 'refs/heads/main'
