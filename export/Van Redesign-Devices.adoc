@@ -1,0 +1,4 @@
+= Van Redesign Devices
+
+image::Van Redesign-Devices.png[Devices]
+
