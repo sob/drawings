@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-03-11T16:38:52.434Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4 Safari/605.1.15" etag="bQkld_pCJGNvpQpLcaBL" version="24.0.1" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2024-03-13T14:52:58.210Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4 Safari/605.1.15" etag="ehFURZFeiP7Av2JKuPKF" version="24.0.1" type="github" pages="2">
   <diagram name="Devices" id="_XpPioPkWa0zS_CPMh-q">
     <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
       <root>
@@ -1424,12 +1424,6 @@
         <mxCell id="WHzFMk7UU_tTh9giWUfS-146" style="edgeStyle=orthogonalEdgeStyle;rounded=0;hachureGap=4;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=16;strokeWidth=2;endArrow=none;endFill=0;" edge="1" parent="WHzFMk7UU_tTh9giWUfS-140" source="WHzFMk7UU_tTh9giWUfS-155" target="WHzFMk7UU_tTh9giWUfS-145">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="WHzFMk7UU_tTh9giWUfS-147" value="KC Fog Lights" style="whiteSpace=wrap;html=1;aspect=fixed;sketch=1;curveFitting=1;jiggle=2;fontFamily=Montserrat;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DMontserrat;fillColor=#fff2cc;strokeColor=#d6b656;container=0;" vertex="1" parent="WHzFMk7UU_tTh9giWUfS-140">
-          <mxGeometry x="300" y="410" width="80" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="WHzFMk7UU_tTh9giWUfS-148" style="edgeStyle=orthogonalEdgeStyle;rounded=0;hachureGap=4;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=16;strokeWidth=2;endArrow=none;endFill=0;" edge="1" parent="WHzFMk7UU_tTh9giWUfS-140" source="WHzFMk7UU_tTh9giWUfS-154" target="WHzFMk7UU_tTh9giWUfS-147">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
         <mxCell id="WHzFMk7UU_tTh9giWUfS-149" value="Reverse Light Color Relay" style="whiteSpace=wrap;html=1;aspect=fixed;sketch=1;curveFitting=1;jiggle=2;fontFamily=Montserrat;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DMontserrat;fillColor=#d5e8d4;strokeColor=#82b366;container=0;" vertex="1" parent="WHzFMk7UU_tTh9giWUfS-140">
           <mxGeometry x="95" y="310" width="80" height="80" as="geometry" />
         </mxCell>
@@ -1451,17 +1445,11 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="WHzFMk7UU_tTh9giWUfS-154" value="Fog Light Beam Relay" style="whiteSpace=wrap;html=1;aspect=fixed;sketch=1;curveFitting=1;jiggle=2;fontFamily=Montserrat;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DMontserrat;fillColor=#d5e8d4;strokeColor=#82b366;container=0;" vertex="1" parent="WHzFMk7UU_tTh9giWUfS-140">
-          <mxGeometry x="300" y="310" width="80" height="80" as="geometry" />
-        </mxCell>
         <mxCell id="WHzFMk7UU_tTh9giWUfS-155" value="Bumper Light Color Relay" style="whiteSpace=wrap;html=1;aspect=fixed;sketch=1;curveFitting=1;jiggle=2;fontFamily=Montserrat;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DMontserrat;fillColor=#d5e8d4;strokeColor=#82b366;container=0;" vertex="1" parent="WHzFMk7UU_tTh9giWUfS-140">
           <mxGeometry x="205" y="310" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="WHzFMk7UU_tTh9giWUfS-156" value="&lt;font style=&quot;font-size: 9px;&quot;&gt;Ditch Light Color Switch&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;hachureGap=4;fontFamily=Montserrat;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DMontserrat;fontSize=9;fillColor=#d5e8d4;strokeColor=#82b366;sketch=1;curveFitting=1;jiggle=2;sketchStyle=rough;container=0;" vertex="1" parent="WHzFMk7UU_tTh9giWUfS-140">
           <mxGeometry x="210" y="210" width="70" height="70" as="geometry" />
-        </mxCell>
-        <mxCell id="WHzFMk7UU_tTh9giWUfS-157" value="Fog Light Color Switch" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;hachureGap=4;fontFamily=Montserrat;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DMontserrat;fontSize=9;fillColor=#d5e8d4;strokeColor=#82b366;sketch=1;curveFitting=1;jiggle=2;sketchStyle=rough;container=0;" vertex="1" parent="WHzFMk7UU_tTh9giWUfS-140">
-          <mxGeometry x="310" y="210" width="70" height="70" as="geometry" />
         </mxCell>
         <mxCell id="WHzFMk7UU_tTh9giWUfS-158" value="NO" style="edgeStyle=orthogonalEdgeStyle;rounded=0;hachureGap=4;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Montserrat;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DMontserrat;fontSize=8;endArrow=none;endFill=0;" edge="1" parent="WHzFMk7UU_tTh9giWUfS-140" source="WHzFMk7UU_tTh9giWUfS-151" target="WHzFMk7UU_tTh9giWUfS-150">
           <mxGeometry x="0.5176" relative="1" as="geometry">
@@ -1507,17 +1495,6 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="WHzFMk7UU_tTh9giWUfS-162" value="NC" style="edgeStyle=orthogonalEdgeStyle;rounded=0;hachureGap=4;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Montserrat;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DMontserrat;fontSize=8;endArrow=none;endFill=0;" edge="1" parent="WHzFMk7UU_tTh9giWUfS-140" source="WHzFMk7UU_tTh9giWUfS-157" target="WHzFMk7UU_tTh9giWUfS-154">
-          <mxGeometry x="0.5176" relative="1" as="geometry">
-            <mxPoint x="335" y="300" as="sourcePoint" />
-            <mxPoint x="325" y="331" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="335" y="290" />
-              <mxPoint x="325" y="290" />
-            </Array>
-            <mxPoint as="offset" />
-          </mxGeometry>
-        </mxCell>
         <mxCell id="WHzFMk7UU_tTh9giWUfS-163" value="NO" style="edgeStyle=orthogonalEdgeStyle;rounded=0;hachureGap=4;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Montserrat;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DMontserrat;fontSize=8;endArrow=none;endFill=0;" edge="1" parent="WHzFMk7UU_tTh9giWUfS-140" source="WHzFMk7UU_tTh9giWUfS-156" target="WHzFMk7UU_tTh9giWUfS-155">
           <mxGeometry x="0.5176" relative="1" as="geometry">
             <mxPoint x="255" y="299" as="sourcePoint" />
@@ -1525,17 +1502,6 @@
             <Array as="points">
               <mxPoint x="255" y="290" />
               <mxPoint x="265" y="290" />
-            </Array>
-            <mxPoint as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="WHzFMk7UU_tTh9giWUfS-164" value="NO" style="edgeStyle=orthogonalEdgeStyle;rounded=0;hachureGap=4;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Montserrat;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DMontserrat;fontSize=8;endArrow=none;endFill=0;" edge="1" parent="WHzFMk7UU_tTh9giWUfS-140" source="WHzFMk7UU_tTh9giWUfS-157" target="WHzFMk7UU_tTh9giWUfS-154">
-          <mxGeometry x="0.5389" relative="1" as="geometry">
-            <mxPoint x="350" y="246.62277660168377" as="sourcePoint" />
-            <mxPoint x="360" y="280" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="350" y="290" />
-              <mxPoint x="360" y="290" />
             </Array>
             <mxPoint as="offset" />
           </mxGeometry>
@@ -1557,14 +1523,6 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="WHzFMk7UU_tTh9giWUfS-167" style="edgeStyle=orthogonalEdgeStyle;rounded=0;hachureGap=4;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=16;fillColor=#f8cecc;strokeColor=#b85450;endArrow=none;endFill=0;strokeWidth=2;" edge="1" parent="WHzFMk7UU_tTh9giWUfS-140" source="WHzFMk7UU_tTh9giWUfS-170" target="WHzFMk7UU_tTh9giWUfS-154">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="295" y="160" />
-              <mxPoint x="295" y="350" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
         <mxCell id="WHzFMk7UU_tTh9giWUfS-168" value="KC 50&quot;&amp;nbsp;&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;Light Bar&amp;nbsp;&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;(Relay)" style="whiteSpace=wrap;html=1;aspect=fixed;sketch=1;curveFitting=1;jiggle=2;fontFamily=Montserrat;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DMontserrat;fillColor=#fff2cc;strokeColor=#d6b656;container=0;" vertex="1" parent="WHzFMk7UU_tTh9giWUfS-140">
           <mxGeometry y="120" width="80" height="80" as="geometry" />
         </mxCell>
@@ -1577,7 +1535,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="WHzFMk7UU_tTh9giWUfS-170" value="KC Fog Lights (Relay)" style="whiteSpace=wrap;html=1;aspect=fixed;sketch=1;curveFitting=1;jiggle=2;fontFamily=Montserrat;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DMontserrat;fillColor=#fff2cc;strokeColor=#d6b656;container=0;" vertex="1" parent="WHzFMk7UU_tTh9giWUfS-140">
+        <mxCell id="WHzFMk7UU_tTh9giWUfS-170" value="KC Fog Lights" style="whiteSpace=wrap;html=1;aspect=fixed;sketch=1;curveFitting=1;jiggle=2;fontFamily=Montserrat;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DMontserrat;fillColor=#d5e8d4;strokeColor=#82b366;container=0;" vertex="1" parent="WHzFMk7UU_tTh9giWUfS-140">
           <mxGeometry x="305" y="120" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="WHzFMk7UU_tTh9giWUfS-171" value="KC Reverse Lights (Relay)" style="whiteSpace=wrap;html=1;aspect=fixed;sketch=1;curveFitting=1;jiggle=2;fontFamily=Montserrat;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DMontserrat;fillColor=#e1d5e7;strokeColor=#9673a6;container=0;" vertex="1" parent="WHzFMk7UU_tTh9giWUfS-140">
