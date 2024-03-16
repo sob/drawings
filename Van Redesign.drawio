@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-03-16T17:13:23.411Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4 Safari/605.1.15" etag="pq2ZcPWNnMGVFopJG79u" version="24.0.1" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2024-03-16T17:15:38.944Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4 Safari/605.1.15" etag="FmJdcRzVc4TGgroVn0UQ" version="24.0.1" type="github" pages="2">
   <diagram name="Devices" id="_XpPioPkWa0zS_CPMh-q">
     <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
       <root>
@@ -859,15 +859,16 @@
         <mxCell id="WHzFMk7UU_tTh9giWUfS-0" />
         <mxCell id="WHzFMk7UU_tTh9giWUfS-1" parent="WHzFMk7UU_tTh9giWUfS-0" />
         <mxCell id="WHzFMk7UU_tTh9giWUfS-4" value="Modified &lt;br&gt;PoE Cable" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;fontFamily=Montserrat;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DMontserrat;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;" edge="1" parent="WHzFMk7UU_tTh9giWUfS-1" source="WHzFMk7UU_tTh9giWUfS-114" target="WHzFMk7UU_tTh9giWUfS-5">
-          <mxGeometry x="0.2705" relative="1" as="geometry">
+          <mxGeometry x="-0.3125" relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="440" y="800" />
+              <mxPoint x="180" y="810" />
+              <mxPoint x="180" y="810" />
             </Array>
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="WHzFMk7UU_tTh9giWUfS-5" value="" style="shape=image;imageAspect=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;image=https://iec-telecom.com/wp-content/uploads/2023/01/Starlink_Mobile_1000x600.png;clipPath=inset(22.22% 10.67% 22.22% 12%);" vertex="1" parent="WHzFMk7UU_tTh9giWUfS-1">
-          <mxGeometry x="376.67" y="89.99999999999994" width="153.33" height="66.09051724137932" as="geometry" />
+          <mxGeometry x="430" y="766.95" width="153.33" height="66.09051724137932" as="geometry" />
         </mxCell>
         <mxCell id="WHzFMk7UU_tTh9giWUfS-84" style="edgeStyle=orthogonalEdgeStyle;rounded=0;hachureGap=4;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=16;fillColor=#dae8fc;strokeColor=#6c8ebf;endArrow=none;endFill=0;strokeWidth=2;" edge="1" parent="WHzFMk7UU_tTh9giWUfS-1" source="WHzFMk7UU_tTh9giWUfS-58" target="WHzFMk7UU_tTh9giWUfS-49">
           <mxGeometry relative="1" as="geometry">
@@ -1112,13 +1113,6 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="WHzFMk7UU_tTh9giWUfS-175" style="edgeStyle=orthogonalEdgeStyle;rounded=0;hachureGap=4;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=16;fillColor=#f8cecc;strokeColor=#b85450;endArrow=none;endFill=0;strokeWidth=2;" edge="1" parent="WHzFMk7UU_tTh9giWUfS-140" source="WHzFMk7UU_tTh9giWUfS-170" target="WHzFMk7UU_tTh9giWUfS-185">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="320" y="80" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
         <mxCell id="WHzFMk7UU_tTh9giWUfS-176" style="edgeStyle=orthogonalEdgeStyle;rounded=0;hachureGap=4;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=16;endArrow=none;endFill=0;strokeWidth=2;fillColor=#f8cecc;strokeColor=#b85450;" edge="1" parent="WHzFMk7UU_tTh9giWUfS-140" source="WHzFMk7UU_tTh9giWUfS-171" target="WHzFMk7UU_tTh9giWUfS-185">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="60" y="140" as="sourcePoint" />
@@ -1227,10 +1221,10 @@
           <mxGeometry x="19.999999999999886" y="555" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="WHzFMk7UU_tTh9giWUfS-47" value="5v USB-C Buck Converter" style="whiteSpace=wrap;html=1;sketch=1;curveFitting=1;jiggle=2;fontFamily=Montserrat;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DMontserrat;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="WHzFMk7UU_tTh9giWUfS-1">
-          <mxGeometry x="285" y="620" width="110" height="30" as="geometry" />
+          <mxGeometry x="285" y="640" width="110" height="30" as="geometry" />
         </mxCell>
         <mxCell id="WHzFMk7UU_tTh9giWUfS-49" value="USW-Flex-Mini" style="whiteSpace=wrap;html=1;aspect=fixed;sketch=1;curveFitting=1;jiggle=2;fontFamily=Montserrat;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DMontserrat;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="WHzFMk7UU_tTh9giWUfS-1">
-          <mxGeometry x="300" y="470" width="80" height="80" as="geometry" />
+          <mxGeometry x="300" y="475" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="WHzFMk7UU_tTh9giWUfS-50" style="edgeStyle=orthogonalEdgeStyle;rounded=0;hachureGap=4;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=16;strokeWidth=2;fillColor=#f8cecc;strokeColor=#b85450;endArrow=none;endFill=0;" edge="1" parent="WHzFMk7UU_tTh9giWUfS-1" source="WHzFMk7UU_tTh9giWUfS-137" target="WHzFMk7UU_tTh9giWUfS-49">
           <mxGeometry relative="1" as="geometry">
@@ -1241,7 +1235,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="WHzFMk7UU_tTh9giWUfS-113" value="UXG Lite &lt;br&gt;(3A)" style="whiteSpace=wrap;html=1;aspect=fixed;sketch=1;curveFitting=1;jiggle=2;fontFamily=Montserrat;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DMontserrat;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="WHzFMk7UU_tTh9giWUfS-1">
-          <mxGeometry x="300" y="665" width="80" height="80" as="geometry" />
+          <mxGeometry x="300" y="680" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="WHzFMk7UU_tTh9giWUfS-117" value="Twinkle Lights" style="whiteSpace=wrap;html=1;aspect=fixed;sketch=1;curveFitting=1;jiggle=2;fontFamily=Montserrat;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DMontserrat;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="WHzFMk7UU_tTh9giWUfS-1">
           <mxGeometry x="20.000000000000114" y="665" width="80" height="80" as="geometry" />
@@ -1429,7 +1423,7 @@
           <mxGeometry x="54.669999999999945" y="60" width="10" height="10" as="geometry" />
         </mxCell>
         <mxCell id="WHzFMk7UU_tTh9giWUfS-137" value="5v USB-C Buck Converter" style="whiteSpace=wrap;html=1;sketch=1;curveFitting=1;jiggle=2;fontFamily=Montserrat;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DMontserrat;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="WHzFMk7UU_tTh9giWUfS-1">
-          <mxGeometry x="285" y="560" width="110" height="30" as="geometry" />
+          <mxGeometry x="285" y="570" width="110" height="30" as="geometry" />
         </mxCell>
         <mxCell id="hV6cqg-eL3uRD3BpBEvP-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;hachureGap=4;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=16;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;endArrow=none;endFill=0;" edge="1" parent="WHzFMk7UU_tTh9giWUfS-1" target="WHzFMk7UU_tTh9giWUfS-49">
           <mxGeometry relative="1" as="geometry">
@@ -1442,12 +1436,12 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="WHzFMk7UU_tTh9giWUfS-114" value="Yaosheng POE Injector&lt;br&gt;(8A)" style="whiteSpace=wrap;html=1;aspect=fixed;sketch=1;curveFitting=1;jiggle=2;fontFamily=Montserrat;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DMontserrat;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="WHzFMk7UU_tTh9giWUfS-1">
-          <mxGeometry x="299.9999999999999" y="760" width="80" height="80" as="geometry" />
+          <mxGeometry x="29.999999999999886" y="760" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="hV6cqg-eL3uRD3BpBEvP-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;hachureGap=4;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=16;fillColor=#f8cecc;strokeColor=#b85450;endArrow=none;endFill=0;strokeWidth=2;" edge="1" parent="WHzFMk7UU_tTh9giWUfS-1" source="WHzFMk7UU_tTh9giWUfS-127" target="WHzFMk7UU_tTh9giWUfS-137">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="340" y="600" />
+              <mxPoint x="340" y="610" />
             </Array>
             <mxPoint x="150" y="615" as="sourcePoint" />
             <mxPoint x="155" y="710" as="targetPoint" />
@@ -1466,8 +1460,8 @@
         <mxCell id="hV6cqg-eL3uRD3BpBEvP-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;hachureGap=4;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=16;fillColor=#f8cecc;strokeColor=#b85450;endArrow=none;endFill=0;strokeWidth=2;" edge="1" parent="WHzFMk7UU_tTh9giWUfS-1" source="WHzFMk7UU_tTh9giWUfS-127" target="WHzFMk7UU_tTh9giWUfS-114">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="270" y="630" />
-              <mxPoint x="270" y="800" />
+              <mxPoint x="130" y="630" />
+              <mxPoint x="130" y="790" />
             </Array>
             <mxPoint x="150" y="600" as="sourcePoint" />
             <mxPoint x="120" y="600" as="targetPoint" />
@@ -1476,7 +1470,7 @@
         <mxCell id="hV6cqg-eL3uRD3BpBEvP-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;hachureGap=4;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=16;fillColor=#f8cecc;strokeColor=#b85450;endArrow=none;endFill=0;strokeWidth=2;" edge="1" parent="WHzFMk7UU_tTh9giWUfS-1" source="WHzFMk7UU_tTh9giWUfS-127" target="WHzFMk7UU_tTh9giWUfS-47">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="340" y="610" />
+              <mxPoint x="340" y="630" />
             </Array>
             <mxPoint x="150" y="615" as="sourcePoint" />
             <mxPoint x="155" y="685" as="targetPoint" />
