@@ -1,4 +1,0 @@
-= Untitled Diagram Page-1
-
-image::Untitled Diagram-Page-1.png[Page-1]
-

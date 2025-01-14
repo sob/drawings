@@ -1,4 +1,0 @@
-= Van Redesign Starlink v2
-
-image::Van Redesign-Starlink-v2.png[Starlink v2]
-
