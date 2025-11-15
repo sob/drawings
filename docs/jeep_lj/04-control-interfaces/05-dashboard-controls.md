@@ -4,7 +4,7 @@ This section documents physical switches mounted in the dashboard area (separate
 ## Winch Control Switch
 
 !!! info "Winch System Documentation"
-    For complete winch specifications, wiring details, and recovery system information, see [Recovery Systems][# Recovery Systems {#recovery-systems}].
+    For complete winch specifications, wiring details, and recovery system information, see [Recovery Systems][recovery-systems].
 
 **Type:** 3-position dash switch
 **Location:** Dashboard (Button 4 on physical switch panel)
@@ -58,6 +58,6 @@ This section documents physical switches mounted in the dashboard area (separate
 
 ## Related Documentation
 
-- [Control Interfaces Overview][# Control Interfaces - Overview {#control-interfaces-overview}] - Main control interfaces overview
-- [SwitchPros SP-1200][# SwitchPros SP-1200 (RCR-Force 12) {#switchpros-sp-1200-rcr-force-12}] - Main lighting controller
-- [Recovery Systems][# Recovery Systems {#recovery-systems}] - Winch system complete documentation
+- [Control Interfaces Overview][control-interfaces-overview] - Main control interfaces overview
+- [SwitchPros SP-1200][switchpros-sp-1200-rcr-force-12] - Main lighting controller
+- [Recovery Systems][recovery-systems] - Winch system complete documentation

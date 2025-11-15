@@ -69,8 +69,8 @@ flowchart LR
 
 ## Related Documentation
 
-- [PMU Power Distribution][# 1.4 - PMU Power Distribution {#pmu-power-distribution}] - Engine bay power management
-- [Front Battery Distribution][# 1.2 Front Battery Distribution (Engine Bay) {#zone-1-front-battery-tray--primary-distribution-engine-bay}] - Direct battery connections
+- [PMU Power Distribution][pmu-power-distribution] - Engine bay power management
+- [Front Battery Distribution][zone-1-front-battery-tray--primary-distribution-engine-bay] - Direct battery connections
 
 ## Outstanding Items
 

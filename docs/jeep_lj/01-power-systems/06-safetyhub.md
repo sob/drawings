@@ -43,7 +43,7 @@
 
 ## Related Documentation
 
-- [Rear Battery Distribution][# 1.3 Rear Battery Distribution (Wheel Well) {#13-rear-battery-distribution-wheel-well}] - CONSTANT bus specifications
-- [Air System][# Air System - ARB Compressor & Lockers {#air-system-arb-compressor-lockers}] - ARB Twin Compressor wiring details
-- [Recovery Systems][# Recovery Systems {#recovery-systems}] - Winch system specifications
-- [SwitchPros SP-1200][# SwitchPros SP-1200 (RCR-Force 12) {#switchpros-sp-1200-rcr-force-12}] - OUTPUT-11 compressor control signal
+- [Rear Battery Distribution][13-rear-battery-distribution-wheel-well] - CONSTANT bus specifications
+- [Air System][air-system-arb-compressor-lockers] - ARB Twin Compressor wiring details
+- [Recovery Systems][recovery-systems] - Winch system specifications
+- [SwitchPros SP-1200][switchpros-sp-1200-rcr-force-12] - OUTPUT-11 compressor control signal

@@ -3,7 +3,7 @@ Physical installation, wire routing, project planning, and validation procedures
 
 ## Contents
 
-- **[9.1 Wire Routing & Physical Layout][# Wire Routing & Physical Layout {#wire-routing-physical-layout}]** - Cable management, harness routing, wire bundling, firewall penetrations, physical installation details
+- **[9.1 Wire Routing & Physical Layout][wire-routing-physical-layout]** - Cable management, harness routing, wire bundling, firewall penetrations, physical installation details
 
 ## System Overview
 

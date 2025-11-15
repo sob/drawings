@@ -32,9 +32,9 @@ The SwitchPros SP-1200 is the main lighting and accessory controller for the Jee
 |   6    |     Rock Lights     |  3A  |               6x KC Cyclone Lights                |       OUTPUT-6       |
 |   7    |  Rear Amber Chase   |  6A  |        BD OnX6 Arc (Amber, Wide Cornering)        |       OUTPUT-7       |
 |   8    |    Party Lights     |  6A  |      1x BD RGB Whip + 4x Footwell LED Strips      |       OUTPUT-8       |
-|   9    |    Front Locker     |  2A  |   ARB Locker (see [Air System][# Air System - ARB Compressor & Lockers {#air-system-arb-compressor-lockers}])   | OUTPUT-17 (low-side) |
-|   10   |     Rear Locker     |  2A  |   ARB Locker (see [Air System][# Air System - ARB Compressor & Lockers {#air-system-arb-compressor-lockers}])   |      OUTPUT-10       |
-|   11   |     Compressor      | 15A  |   ARB Twin Compressor (see [Air System][# Air System - ARB Compressor & Lockers {#air-system-arb-compressor-lockers}])   |      OUTPUT-11       |
+|   9    |    Front Locker     |  2A  |   ARB Locker (see [Air System][air-system-arb-compressor-lockers])   | OUTPUT-17 (low-side) |
+|   10   |     Rear Locker     |  2A  |   ARB Locker (see [Air System][air-system-arb-compressor-lockers])   |      OUTPUT-10       |
+|   11   |     Compressor      | 15A  |   ARB Twin Compressor (see [Air System][air-system-arb-compressor-lockers])   |      OUTPUT-11       |
 |   12   |     Rear Lights     |  5A  |        2x BD S1 Pro (Above License Plate)         |      OUTPUT-12       |
 
 **Notes:**
@@ -160,7 +160,7 @@ Program TRIGGER-3 to activate compressor when tank pressure drops below 135 PSI:
 - Tank ready for use whenever needed
 
 **Related Documentation:**
-- See [Air System][# Air System - ARB Compressor & Lockers {#air-system-arb-compressor-lockers}] for complete ARB compressor, tank, and pressure switch specifications
+- See [Air System][air-system-arb-compressor-lockers] for complete ARB compressor, tank, and pressure switch specifications
 
 ## Outstanding Items
 
@@ -171,7 +171,7 @@ Program TRIGGER-3 to activate compressor when tank pressure drops below 135 PSI:
 - [ ] Route 4 AWG ground wire from SwitchPros power module to front frame rail or front battery negative
   - Short run in engine bay, per manufacturer spec for direct battery ground
 - [ ] Connect ignition signal from ignition switch RUN terminal to SwitchPros Pin 3 (IGNITION - LT BLUE)
-  - 18 AWG wire, splits from main ignition signal distribution (see [PMU24][# 1.4.3 PMU Inputs {#143-pmu-inputs}])
+  - 18 AWG wire, splits from main ignition signal distribution (see [PMU24][143-pmu-inputs])
 - [ ] Determine parking lights signal source for SwitchPros Pin 4 (LIGHTS - WHITE) for DRL integration
 - [ ] Plan control panel cable routing from engine bay power module to dash-mounted control panel
   - Cable length required for engine bay to dash mount
@@ -191,6 +191,6 @@ Program TRIGGER-3 to activate compressor when tank pressure drops below 135 PSI:
 
 ## Related Documentation
 
-- [Control Interfaces Overview][# Control Interfaces - Overview {#control-interfaces-overview}] - Main control interfaces overview
-- [Offroad Lighting][# Offroad & Auxiliary Lighting {#offroad-auxiliary-lighting}] - Complete wiring details for all lighting circuits controlled by SwitchPros
-- [Air System][# Air System - ARB Compressor & Lockers {#air-system-arb-compressor-lockers}] - ARB locker and compressor wiring details
+- [Control Interfaces Overview][control-interfaces-overview] - Main control interfaces overview
+- [Offroad Lighting][offroad-auxiliary-lighting] - Complete wiring details for all lighting circuits controlled by SwitchPros
+- [Air System][air-system-arb-compressor-lockers] - ARB locker and compressor wiring details

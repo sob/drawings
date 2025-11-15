@@ -107,7 +107,7 @@ All 4 BIM modules are mounted to a single HDPE sheet on the firewall behind the 
    - Tap into J1939 CAN High/Low at punch-through location
 5. **GPS Antenna Cable:** GPS-50-2 module (on HDPE panel) → GPS antenna (dash/windshield)
 6. **Temperature Probe Cable:** BIM-17-2 module (on HDPE panel) → through firewall (Grommet 3) → outside temp probe (grille area)
-   - See [Firewall Ingress][# Firewall Penetrations & Ingress Points {#firewall-penetrations-ingress-points}] for penetration details
+   - See [Firewall Ingress][firewall-penetrations-ingress-points] for penetration details
 
 ## J1939 CAN Bus Integration
 
@@ -123,7 +123,7 @@ The Cummins R2.8 ECM provides engine data via J1939 CAN bus:
   - Other engine parameters
 - **Wiring:** CAN High and CAN Low from ECM
 - **Tap Location:** Cummins harness firewall punch-through
-- **Firewall Penetration:** See [Firewall Ingress][# Firewall Penetrations & Ingress Points {#firewall-penetrations-ingress-points}] for J1939 tap details
+- **Firewall Penetration:** See [Firewall Ingress][firewall-penetrations-ingress-points] for J1939 tap details
 
 ## Outstanding Items
 
@@ -141,13 +141,13 @@ The Cummins R2.8 ECM provides engine data via J1939 CAN bus:
 
 **Firewall Penetrations:**
 
-See [Firewall Ingress][# Firewall Penetrations & Ingress Points {#firewall-penetrations-ingress-points}] for complete firewall penetration planning including:
+See [Firewall Ingress][firewall-penetrations-ingress-points] for complete firewall penetration planning including:
 - Grommet 3: Outside temperature probe routing from HDPE panel to grille area
 - Cummins punch-through: J1939 CAN High/Low tap location and routing
 
 ## Related Documentation
 
-- [PMU Power Distribution][# 1.4 - PMU Power Distribution {#pmu-power-distribution}] - PMU Out 14 power specifications and ignition control
-- [Engine Systems][# 1.4 - PMU Power Distribution {#pmu-power-distribution}] - ECM J1939 CAN bus specifications
-- [Body RTMR][# 1.5 - Body RTMR {#body-rtmr}] - Body RTMR cabin convenience circuits
-- [Control Interfaces Overview][# Control Interfaces - Overview {#control-interfaces-overview}] - All control interfaces
+- [PMU Power Distribution][pmu-power-distribution] - PMU Out 14 power specifications and ignition control
+- [Engine Systems][pmu-power-distribution] - ECM J1939 CAN bus specifications
+- [Body RTMR][body-rtmr] - Body RTMR cabin convenience circuits
+- [Control Interfaces Overview][control-interfaces-overview] - All control interfaces

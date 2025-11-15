@@ -235,7 +235,7 @@ The WS-51C wiper control system replaces the following TIPM functions:
 
 ### ~~Rear Wiper System~~ (NOT IMPLEMENTED)
 - PMU OUT12, OUT13, OUT16 assigned to radiator fan instead
-- See [Front Battery Distribution][# 1.2 Front Battery Distribution (Engine Bay) {#zone-1-front-battery-tray--primary-distribution-engine-bay}] for radiator fan wiring
+- See [Front Battery Distribution][zone-1-front-battery-tray--primary-distribution-engine-bay] for radiator fan wiring
 
 ### Washer Pump System
 - [ ] Determine washer pump configuration: Dual pumps (recommended) or single pump with T-fitting
@@ -248,5 +248,5 @@ The WS-51C wiper control system replaces the following TIPM functions:
 
 ## Related Documentation
 
-- [Control Interfaces Overview][# Control Interfaces - Overview {#control-interfaces-overview}] - Main control interfaces overview
-- [Engine Systems][# 1.4 - PMU Power Distribution {#pmu-power-distribution}] - PMU fuse and relay specifications
+- [Control Interfaces Overview][control-interfaces-overview] - Main control interfaces overview
+- [Engine Systems][pmu-power-distribution] - PMU fuse and relay specifications

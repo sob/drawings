@@ -2,12 +2,12 @@
 ## Components
 
 - **Location:** Passenger side rear wheel well, custom compartment with access panel
-- **Battery:** Odyssey ODX-34/78-AGM (see [Section 1.1][# 1.1 Power Generation & Storage {#11-power-generation-storage}])
-- **Charger:** RedArc BCDC Alpha 50 (see [Section 1.1][# 1.1 Power Generation & Storage {#11-power-generation-storage}])
+- **Battery:** Odyssey ODX-34/78-AGM (see [Section 1.1][11-power-generation-storage])
+- **Charger:** RedArc BCDC Alpha 50 (see [Section 1.1][11-power-generation-storage])
 - **CONSTANT Bus Bar:** Always powered, feeds all accessory circuits (150A+ capacity required)
 
 !!! info "Detailed Specifications"
-    See [Section 1.1 - Battery System][# 1.1 Power Generation & Storage {#11-power-generation-storage}] for complete battery and BCDC Alpha 50 specifications.
+    See [Section 1.1 - Battery System][11-power-generation-storage] for complete battery and BCDC Alpha 50 specifications.
 
 ## Circuit Breakers
 

@@ -1,5 +1,4 @@
-# Documentation Guidelines for Jeep LJ Electrical System
-
+# Documentation Guidelines for Jeep LJ Electrical System {#documentation-guidelines-for-jeep-lj-electrical-system}
 ## Writing Style
 
 **BE SUCCINCT.** Technical documentation should be clear, direct, and concise.

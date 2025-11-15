@@ -2,7 +2,7 @@
 Non-DOT-required lighting circuits controlled by the SwitchPros SP-1200 controller.
 
 !!! info "Controller Documentation"
-    See [SwitchPros SP-1200][# SwitchPros SP-1200 (RCR-Force 12) {#switchpros-sp-1200-rcr-force-12}] for complete specifications, wiring, and installation.
+    See [SwitchPros SP-1200][switchpros-sp-1200-rcr-force-12] for complete specifications, wiring, and installation.
 
 ## System Overview
 
@@ -273,7 +273,7 @@ Available for future expansion:
 
 ## Related Documentation
 
-- [SwitchPros SP-1200][# SwitchPros SP-1200 (RCR-Force 12) {#switchpros-sp-1200-rcr-force-12}] - Complete SwitchPros controller specifications, pinouts, and installation
-- [Control Interfaces Overview][# Control Interfaces - Overview {#control-interfaces-overview}] - All control interfaces
-- [Vehicle Lighting][# Vehicle Lighting Overview {#vehicle-lighting-overview}] - Street-legal and DOT-required lighting circuits
-- [Dashboard Controls][# Dashboard Physical Controls {#dashboard-physical-controls}] - Rear seat switch for dome light control
+- [SwitchPros SP-1200][switchpros-sp-1200-rcr-force-12] - Complete SwitchPros controller specifications, pinouts, and installation
+- [Control Interfaces Overview][control-interfaces-overview] - All control interfaces
+- [Vehicle Lighting][vehicle-lighting-overview] - Street-legal and DOT-required lighting circuits
+- [Dashboard Controls][dashboard-physical-controls] - Rear seat switch for dome light control

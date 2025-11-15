@@ -3,13 +3,13 @@ This section documents all control interfaces in the Jeep LJ build - the switche
 
 ## System Controllers
 
-- **[SwitchPros SP-1200][# SwitchPros SP-1200 (RCR-Force 12) {#switchpros-sp-1200-rcr-force-12}]** - Main lighting and accessory controller
+- **[SwitchPros SP-1200][switchpros-sp-1200-rcr-force-12]** - Main lighting and accessory controller
   - 12-button control panel with Bluetooth app
   - 17 total outputs (12 main + 5 low-side drivers)
   - 150A total capacity on CONSTANT bus
   - Controls all auxiliary lighting and accessories
 
-- **[Command Touch CT4][# Command Touch CT4 {#command-touch-ct4}]** - Steering column turn signal and headlight controller
+- **[Command Touch CT4][command-touch-ct4]** - Steering column turn signal and headlight controller
   - 4 programmable outputs for turn signals and headlights
   - GPS module for intelligent turn signal auto-cancel
   - Replaces factory multifunction stalk
@@ -17,7 +17,7 @@ This section documents all control interfaces in the Jeep LJ build - the switche
 
 ## Physical Switches
 
-- **[Dashboard Controls][# Dashboard Physical Controls {#dashboard-physical-controls}]** - Physical dash-mounted switches
+- **[Dashboard Controls][dashboard-physical-controls]** - Physical dash-mounted switches
   - Winch control switch
   - Other dash-mounted controls
 
@@ -31,8 +31,8 @@ All control interfaces integrate with the dual-battery electrical system:
 
 ## Related Documentation
 
-- **[Vehicle Lighting][# Vehicle Lighting Overview {#vehicle-lighting-overview}]** - Complete vehicle lighting circuits controlled by these interfaces
-- **[Offroad Lighting][# Offroad & Auxiliary Lighting {#offroad-auxiliary-lighting}]** - Auxiliary and offroad lighting controlled by SwitchPros
-- **[Engine Systems][# 1.4 - PMU Power Distribution {#pmu-power-distribution}]** - PMU power distribution and engine bay subsystems
-- **[Horn][# Horn {#horn}]** - PIAA horn system (engine bay component)
-- **[Wipers][# Windshield Wiper Control System {#windshield-wiper-control-system}]** - Ron Francis WS-51C wiper controller (engine bay component)
+- **[Vehicle Lighting][vehicle-lighting-overview]** - Complete vehicle lighting circuits controlled by these interfaces
+- **[Offroad Lighting][offroad-auxiliary-lighting]** - Auxiliary and offroad lighting controlled by SwitchPros
+- **[Engine Systems][pmu-power-distribution]** - PMU power distribution and engine bay subsystems
+- **[Horn][horn]** - PIAA horn system (engine bay component)
+- **[Wipers][windshield-wiper-control-system]** - Ron Francis WS-51C wiper controller (engine bay component)

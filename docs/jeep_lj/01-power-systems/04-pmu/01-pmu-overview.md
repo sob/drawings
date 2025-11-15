@@ -113,13 +113,13 @@
 | **Main Power** | Power In | Front Battery CONSTANT bus | 2 AWG | 200A breaker (recommended) | All outputs powered from CONSTANT. Minimize voltage drop with short run. |
 | **Ignition Sense** | Pin 7 | Ignition switch RUN | 18 AWG | N/A | Dedicated 12V switched input. <500mA total (shared with CT4, SwitchPros, Radio, BCDC). |
 | **Ground** | Pin 25 | Front Battery- or NEGATIVE bus | 10 AWG | N/A | Low resistance path essential for proper operation and diagnostics. |
-| **CAN Bus** | Pin 23/36 or 24/37 | Cummins ECM J1939 | 18-20 AWG twisted pair | N/A | Stub connection, no termination. See [PMU Inputs][# 1.4.3 PMU Inputs {#143-pmu-inputs}] for topology. |
+| **CAN Bus** | Pin 23/36 or 24/37 | Cummins ECM J1939 | 18-20 AWG twisted pair | N/A | Stub connection, no termination. See [PMU Inputs][143-pmu-inputs] for topology. |
 
 ## Related Documentation
 
-- [PMU Outputs][# 1.4.2 PMU Outputs {#142-pmu-outputs}] - 24-output configuration and load details
-- [PMU Inputs][# 1.4.3 PMU Inputs {#143-pmu-inputs}] - Input configuration and CAN bus integration
-- [PMU Programming][# 1.4.4 PMU Programming {#144-pmu-programming}] - Logic examples and configuration
-- [Front Battery Distribution][# 1.2 Front Battery Distribution (Engine Bay) {#zone-1-front-battery-tray--primary-distribution-engine-bay}] - CONSTANT bus specifications
+- [PMU Outputs][142-pmu-outputs] - 24-output configuration and load details
+- [PMU Inputs][143-pmu-inputs] - Input configuration and CAN bus integration
+- [PMU Programming][144-pmu-programming] - Logic examples and configuration
+- [Front Battery Distribution][zone-1-front-battery-tray--primary-distribution-engine-bay] - CONSTANT bus specifications
 
 <br/><br/>

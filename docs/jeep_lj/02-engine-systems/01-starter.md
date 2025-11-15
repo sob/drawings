@@ -36,7 +36,7 @@ Two-stage design: low-current ignition switch (~1A) controls starter control rel
 **Type:** High-current automotive relay (30-75A continuous rating)
 **Mounting:** TBD - determine mounting location near battery
 
-**Note:** Similar architecture to SWITCHED bus relay in [Front Battery Distribution][# 1.2 Front Battery Distribution (Engine Bay) {#zone-1-front-battery-tray--primary-distribution-engine-bay}].
+**Note:** Similar architecture to SWITCHED bus relay in [Front Battery Distribution][zone-1-front-battery-tray--primary-distribution-engine-bay].
 
 **Terminals:**
 - **Power (85/86 or 30):** Tapped from main starter solenoid battery post
@@ -60,7 +60,7 @@ Two-stage design: low-current ignition switch (~1A) controls starter control rel
 - Output: Starter control relay trigger circuit
 - Must be wired in series - starter will not engage unless both ignition switch AND clutch switch are closed
 
-**Firewall Penetration:** See [Firewall Ingress][# Firewall Penetrations & Ingress Points {#firewall-penetrations-ingress-points}]
+**Firewall Penetration:** See [Firewall Ingress][firewall-penetrations-ingress-points]
 
 ## Control Methods
 
@@ -81,7 +81,7 @@ ELSE
 END
 ```
 
-See [Engine Systems - Starter Safety Logic][# 1.4.4 PMU Programming {#144-pmu-programming}] for complete PMU programming details.
+See [Engine Systems - Starter Safety Logic][144-pmu-programming] for complete PMU programming details.
 
 ### Method 2: Direct Ignition Switch Control (Traditional)
 
@@ -207,6 +207,6 @@ Front Battery+ (12V)
 
 ## Related Documentation
 
-- [Engine Systems][# 1.4 - PMU Power Distribution {#pmu-power-distribution}] - PMU Out 11 configuration and starter safety logic programming
-- [Front Battery Distribution][# 1.2 Front Battery Distribution (Engine Bay) {#zone-1-front-battery-tray--primary-distribution-engine-bay}] - Main power source and distribution
-- [Firewall Ingress][# Firewall Penetrations & Ingress Points {#firewall-penetrations-ingress-points}] - Ignition switch "START" wire routing (Grommet 2)
+- [Engine Systems][pmu-power-distribution] - PMU Out 11 configuration and starter safety logic programming
+- [Front Battery Distribution][zone-1-front-battery-tray--primary-distribution-engine-bay] - Main power source and distribution
+- [Firewall Ingress][firewall-penetrations-ingress-points] - Ignition switch "START" wire routing (Grommet 2)

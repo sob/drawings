@@ -46,14 +46,14 @@ The Rugged Radio G1 is a 50W GMRS (General Mobile Radio Service) two-way radio f
 1. **Power (+):** Battery positive  inline fuse (15A)  G1 radio power input (12V DC)
    - **CRITICAL:** Direct battery connection required (not through Body RTMR or other circuits)
    - Run dedicated power wire from battery positive terminal through firewall (Grommet 4) to G1 radio
-   - Firewall penetration: See [Firewall Ingress][# Firewall Penetrations & Ingress Points {#firewall-penetrations-ingress-points}]
+   - Firewall penetration: See [Firewall Ingress][firewall-penetrations-ingress-points]
    - Install 15A inline fuse holder within 18" of battery connection
    - Do NOT connect to ignition, SWITCHED bus, or other power sources (causes ground loop noise)
 2. **Ground (-):** G1 ground  battery negative terminal (preferred) or chassis ground
    - Direct battery negative connection recommended for best RF performance
    - Clean ground critical for radio performance and noise reduction
    - Run ground wire through firewall (Grommet 4) from G1 to battery negative
-   - Firewall penetration: See [Firewall Ingress][# Firewall Penetrations & Ingress Points {#firewall-penetrations-ingress-points}]
+   - Firewall penetration: See [Firewall Ingress][firewall-penetrations-ingress-points]
 3. **Antenna:** G1 antenna output  coax cable  roof-mounted GMRS antenna
    - Use quality coax (RG58 or better) to minimize signal loss
    - Keep cable length <25 ft for best performance
@@ -119,14 +119,14 @@ The Rugged Radio STX Intercom allows driver and passengers to communicate via he
 1. **Power (+):** Battery positive  inline fuse (3A-5A recommended)  STX red power wire (9-16V DC input)
    - **CRITICAL:** Direct battery connection required (not through Body RTMR or other circuits)
    - Run dedicated power wire from battery positive terminal through firewall (Grommet 4) to STX intercom
-   - Firewall penetration: See [Firewall Ingress][# Firewall Penetrations & Ingress Points {#firewall-penetrations-ingress-points}]
+   - Firewall penetration: See [Firewall Ingress][firewall-penetrations-ingress-points]
    - Install inline fuse holder within 18" of battery connection
    - Do NOT connect to ignition, SWITCHED bus, or other power sources (causes ground loop noise)
 2. **Ground (-):** STX black ground wire  battery negative terminal (preferred) or chassis ground
    - Direct battery negative connection recommended for best audio quality
    - Clean ground critical for preventing ground loop noise in audio system
    - Run ground wire through firewall (Grommet 4) from STX to battery negative
-   - Firewall penetration: See [Firewall Ingress][# Firewall Penetrations & Ingress Points {#firewall-penetrations-ingress-points}]
+   - Firewall penetration: See [Firewall Ingress][firewall-penetrations-ingress-points]
 3. **Headset Connections:** 4 headset ports on STX unit
    - Port 1 (Driver): Front left position, 6 ft cable
    - Port 2 (Front Passenger): Front right position, 6 ft cable
@@ -260,7 +260,7 @@ The WolfBox system replaces the factory rearview mirror with a smart mirror that
     - Front-facing dash camera (always recording when powered)
     - Rear camera display (triggered by reverse gear or manual activation)
     - Touchscreen display for settings and playback
-  - **Power:** Body RTMR F5 (10A fuse, CONSTANT power) - See [2.10 - Body RTMR][# 1.5 - Body RTMR {#body-rtmr}]
+  - **Power:** Body RTMR F5 (10A fuse, CONSTANT power) - See [2.10 - Body RTMR][body-rtmr]
     - Always-on power allows continuous dash cam recording (parking mode)
     - Alternative: Could be SWITCHED power if parking mode not desired
   - **Features:**

@@ -70,7 +70,7 @@ PMU Out 17 Brake Circuit ──[Diode]──┴──→ Right Maxbilt YELLOW
 **Control:** Automatic with ignition
 **Shared Circuit:** License plate lights, LP6 DRL, front markers
 
-See [DRL/Parking Lights][# DRL & Parking Lights {#drl-parking-lights}] for circuit details.
+See [DRL/Parking Lights][drl-parking-lights] for circuit details.
 
 ## Outstanding Items
 
@@ -89,7 +89,7 @@ See [DRL/Parking Lights][# DRL & Parking Lights {#drl-parking-lights}] for circu
 
 ## Related Documentation
 
-- [PMU Power Distribution][# 1.4 - PMU Power Distribution {#pmu-power-distribution}] - PMU Out 17, Out 18 circuits
-- [Command Touch CT4][# Command Touch CT4 {#command-touch-ct4}] - Turn signal control
-- [DRL/Parking Lights][# DRL & Parking Lights {#drl-parking-lights}] - Marker/parking circuit (RED wire)
-- [Communication & Camera][# Communication Systems {#communication-systems}] - WolfBox camera reverse trigger
+- [PMU Power Distribution][pmu-power-distribution] - PMU Out 17, Out 18 circuits
+- [Command Touch CT4][command-touch-ct4] - Turn signal control
+- [DRL/Parking Lights][drl-parking-lights] - Marker/parking circuit (RED wire)
+- [Communication & Camera][communication-systems] - WolfBox camera reverse trigger

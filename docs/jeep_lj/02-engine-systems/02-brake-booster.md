@@ -217,6 +217,6 @@ This minimal configuration provides basic brake assist without ignition signal o
 
 ## Related Documentation
 
-- [PMU Power Distribution][# 1.4 - PMU Power Distribution {#pmu-power-distribution}] - PMU OUT5+6 and OUT19 specifications
-- [Front Battery Distribution][# 1.2 Front Battery Distribution (Engine Bay) {#zone-1-front-battery-tray--primary-distribution-engine-bay}] - CONSTANT bus bar configuration
-- [Firewall Ingress][# Firewall Penetrations & Ingress Points {#firewall-penetrations-ingress-points}] - iBooster mounting and wiring routing through firewall
+- [PMU Power Distribution][pmu-power-distribution] - PMU OUT5+6 and OUT19 specifications
+- [Front Battery Distribution][zone-1-front-battery-tray--primary-distribution-engine-bay] - CONSTANT bus bar configuration
+- [Firewall Ingress][firewall-penetrations-ingress-points] - iBooster mounting and wiring routing through firewall

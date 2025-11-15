@@ -1,5 +1,5 @@
 # Turn Signals {#turn-signals}
-**Controller:** [Command Touch CT4][# Command Touch CT4 {#command-touch-ct4}] (SW1 = right turn, SW2 = left turn)
+**Controller:** [Command Touch CT4][command-touch-ct4] (SW1 = right turn, SW2 = left turn)
 **Power Source:** Front battery CONSTANT (via CT4 40A fuse)
 **Features:** GPS auto-cancel, lane change mode, hazard function
 
@@ -19,7 +19,7 @@
 ## Rear Turn Signals
 
 Rear turn signals are integrated into Maxbilt Trail Tail lights (YELLOW wire).
-See [Tail/Brake/Reverse Lights][# Tail, Brake & Reverse Lights {#tail-brake-reverse-lights}] for complete wiring.
+See [Tail/Brake/Reverse Lights][tail-brake-reverse-lights] for complete wiring.
 
 ## Front Side Markers (Parking - NOT Turn Signals)
 
@@ -29,7 +29,7 @@ See [Tail/Brake/Reverse Lights][# Tail, Brake & Reverse Lights {#tail-brake-reve
 **Control:** Automatic with ignition (DRL/parking circuit)
 **Power:** PMU Out 9 (shared with LP6 DRL, license plate, tail markers)
 
-See [DRL/Parking Lights][# DRL & Parking Lights {#drl-parking-lights}] for complete circuit details.
+See [DRL/Parking Lights][drl-parking-lights] for complete circuit details.
 
 ## Outstanding Items
 
@@ -39,6 +39,6 @@ See [DRL/Parking Lights][# DRL & Parking Lights {#drl-parking-lights}] for compl
 
 ## Related Documentation
 
-- [Command Touch CT4][# Command Touch CT4 {#command-touch-ct4}] - Controller programming and wiring
-- [Tail/Brake/Reverse Lights][# Tail, Brake & Reverse Lights {#tail-brake-reverse-lights}] - Rear turn signal integration
-- [DRL/Parking Lights][# DRL & Parking Lights {#drl-parking-lights}] - Front marker parking lights
+- [Command Touch CT4][command-touch-ct4] - Controller programming and wiring
+- [Tail/Brake/Reverse Lights][tail-brake-reverse-lights] - Rear turn signal integration
+- [DRL/Parking Lights][drl-parking-lights] - Front marker parking lights

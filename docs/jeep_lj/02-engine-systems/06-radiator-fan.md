@@ -55,5 +55,5 @@ Camaro electric radiator fan controlled by R2.8 ECM via PWM signal. Provides var
 
 ## Related Documentation
 
-- [Engine Systems][# 1.4 - PMU Power Distribution {#pmu-power-distribution}] - PMU and ECM specifications
-- [Auxiliary Engine Systems][# 7.3 - Auxiliary Systems {#auxiliary-systems}] - Oil cooler and PS cooler fan circuits
+- [Engine Systems][pmu-power-distribution] - PMU and ECM specifications
+- [Auxiliary Engine Systems][auxiliary-systems] - Oil cooler and PS cooler fan circuits

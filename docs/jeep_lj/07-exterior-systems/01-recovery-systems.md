@@ -4,7 +4,7 @@
 The recovery systems provide essential off-road and emergency recovery capabilities, centered around the Warn Zeon 10-S winch. These systems are designed for reliable operation in extreme conditions with proper power distribution and control integration.
 
 !!! info "Air System Moved"
-    ARB Twin Compressor and Air Lockers documentation has been moved to [Air System][# Air System - ARB Compressor & Lockers {#air-system-arb-compressor-lockers}]
+    ARB Twin Compressor and Air Lockers documentation has been moved to [Air System][air-system-arb-compressor-lockers]
 
 ---
 

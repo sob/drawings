@@ -84,7 +84,7 @@ END
 
 ## Related Documentation
 
-- [PMU Power Distribution][# 1.4 - PMU Power Distribution {#pmu-power-distribution}] - PMU Out 9 circuit and programming
-- [Headlights][# Headlights {#headlights}] - LP6 DRL function (Pin 3)
-- [Tail/Brake/Reverse][# Tail, Brake & Reverse Lights {#tail-brake-reverse-lights}] - Maxbilt RED wire (marker/parking)
-- [Turn Signals][# Turn Signals {#turn-signals}] - Front marker parking lights
+- [PMU Power Distribution][pmu-power-distribution] - PMU Out 9 circuit and programming
+- [Headlights][headlights] - LP6 DRL function (Pin 3)
+- [Tail/Brake/Reverse][tail-brake-reverse-lights] - Maxbilt RED wire (marker/parking)
+- [Turn Signals][turn-signals] - Front marker parking lights

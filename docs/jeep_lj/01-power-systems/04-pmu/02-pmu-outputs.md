@@ -7,7 +7,7 @@ Complete configuration of all 24 PMU outputs, load allocations, and combined out
 
 | Output           | Circuit                      | Load      | Control Type                   | Trigger/Input                       | Notes                                             |
 |:-----------------|:-----------------------------|:----------|:-------------------------------|:------------------------------------|:--------------------------------------------------|
-| **Out 1**        | HVAC Blower Motor            | ~20A      | Auto (ignition ON)             | Constant power when ignition on     | See [HVAC System][# HVAC System {#hvac-system}] - highest single load |
+| **Out 1**        | HVAC Blower Motor            | ~20A      | Auto (ignition ON)             | Constant power when ignition on     | See [HVAC System][hvac-system] - highest single load |
 | **Out 2**        | **Radiator Fan (combined)**  | Combined  | Auto (ECM PWM control)         | Combined with OUT3 + OUT4           | GM 84100128 - 30-60A, requires 3x 25A outputs     |
 | **Out 3**        | **Radiator Fan (combined)**  | Combined  | Auto (ECM PWM control)         | Combined with OUT2 + OUT4           | GM 84100128 - 30-60A, requires 3x 25A outputs     |
 | **Out 4**        | **Radiator Fan (combined)**  | Combined  | Auto (ECM PWM control)         | Combined with OUT2 + OUT3           | GM 84100128 - 30-60A, requires 3x 25A outputs     |
@@ -22,10 +22,10 @@ Complete configuration of all 24 PMU outputs, load allocations, and combined out
 
 | Output           | Circuit                      | Load      | Control Type                   | Trigger/Input                       | Notes                                             |
 |:-----------------|:-----------------------------|:----------|:-------------------------------|:------------------------------------|:--------------------------------------------------|
-| **Out 11**       | WS-51C Wiper Controller      | 15A       | Auto (ignition ON)             | Ignition signal (In 6)              | See [Wipers][# Windshield Wiper Control System {#windshield-wiper-control-system}]                        |
-| **Out 12**       | Dakota Digital Cluster       | ~15A      | Auto (ignition RUN)            | Ignition signal (Pin 7/In 6)        | See [Gauge Cluster][# Dakota Digital Gauge Cluster {#dakota-digital-gauge-cluster}]          |
+| **Out 11**       | WS-51C Wiper Controller      | 15A       | Auto (ignition ON)             | Ignition signal (In 6)              | See [Wipers][windshield-wiper-control-system]                        |
+| **Out 12**       | Dakota Digital Cluster       | ~15A      | Auto (ignition RUN)            | Ignition signal (Pin 7/In 6)        | See [Gauge Cluster][dakota-digital-gauge-cluster]          |
 | **Out 13**       | Command Touch CT4            | ~10A      | CONSTANT (always on)           | Works with ignition off (hazards)   | Critical safety system - hazards/turn signals     |
-| **Out 14**       | DRL/Parking Lights           | ~8A       | Auto (ignition) with logic     | Ignition ON + headlight status      | See [DRL & Parking Lights][# DRL & Parking Lights {#drl-parking-lights}]    |
+| **Out 14**       | DRL/Parking Lights           | ~8A       | Auto (ignition) with logic     | Ignition ON + headlight status      | See [DRL & Parking Lights][drl-parking-lights]    |
 | **Out 15**       | **[Available]**              | -         | -                              | -                                   | Future expansion (15A)                            |
 | **Out 16**       | **[Available]**              | -         | -                              | -                                   | Future expansion (15A)                            |
 
@@ -33,13 +33,13 @@ Complete configuration of all 24 PMU outputs, load allocations, and combined out
 
 | Output           | Circuit                      | Load      | Control Type                   | Trigger/Input                       | Notes                                             |
 |:-----------------|:-----------------------------|:----------|:-------------------------------|:------------------------------------|:--------------------------------------------------|
-| **Out 17**       | A/C Clutch                   | 3-5A      | Auto (A/C request)             | Factory TJ A/C button signal (In 9) | See [HVAC System][# HVAC System {#hvac-system}]                     |
+| **Out 17**       | A/C Clutch                   | 3-5A      | Auto (A/C request)             | Factory TJ A/C button signal (In 9) | See [HVAC System][hvac-system]                     |
 | **Out 18**       | Horn                         | 5.4A      | External input                 | Horn button (steering wheel)        | PIAA horns (2.7A × 2), works with ignition off    |
-| **Out 19**       | iBooster Ignition Signal     | ~5A       | Auto (ignition RUN)            | Ignition signal (Pin 7/In 6)        | Gen 2 iBooster - See [Brake Booster][# Brake Booster System - Bosch iBooster Gen 2 {#brake-booster-system-bosch-ibooster-gen-2}] |
+| **Out 19**       | iBooster Ignition Signal     | ~5A       | Auto (ignition RUN)            | Ignition signal (Pin 7/In 6)        | Gen 2 iBooster - See [Brake Booster][brake-booster-system-bosch-ibooster-gen-2] |
 | **Out 20**       | **[Available]**              | -         | -                              | -                                   | Gen 2 iBooster doesn't need secondary power       |
-| **Out 21**       | Brake Lights                 | ~3A       | External input                 | Brake switch signal (In 2)          | See [Tail, Brake & Reverse][# Tail, Brake & Reverse Lights {#tail-brake-reverse-lights}]    |
-| **Out 22**       | Reverse Lights               | ~3A       | External input                 | Trans reverse switch (In 3)         | See [Tail, Brake & Reverse][# Tail, Brake & Reverse Lights {#tail-brake-reverse-lights}]    |
-| **Out 23**       | Starter Control Relay Coil   | ~1A       | Auto (ignition START + clutch) | Ignition switch + clutch switch     | See [Starter System][# Starter System - Cummins R2.8 {#starter-system-cummins-r28}]               |
+| **Out 21**       | Brake Lights                 | ~3A       | External input                 | Brake switch signal (In 2)          | See [Tail, Brake & Reverse][tail-brake-reverse-lights]    |
+| **Out 22**       | Reverse Lights               | ~3A       | External input                 | Trans reverse switch (In 3)         | See [Tail, Brake & Reverse][tail-brake-reverse-lights]    |
+| **Out 23**       | Starter Control Relay Coil   | ~1A       | Auto (ignition START + clutch) | Ignition switch + clutch switch     | See [Starter System][starter-system-cummins-r28]               |
 | **Out 24**       | **[Available]**              | -         | -                              | -                                   | Future expansion (7A output)                      |
 
 ## Output Summary
@@ -59,7 +59,7 @@ Complete configuration of all 24 PMU outputs, load allocations, and combined out
 **Current:** 30-60A (peak), 30-40A average
 **Configuration:** 3x 25A outputs paralleled = 75A capacity
 
-See [Radiator Fan][# Radiator Fan System {#radiator-fan-system}] for complete specifications.
+See [Radiator Fan][radiator-fan-system] for complete specifications.
 
 ### iBooster Main Power (OUT5+OUT6)
 
@@ -68,7 +68,7 @@ See [Radiator Fan][# Radiator Fan System {#radiator-fan-system}] for complete sp
 **Configuration:** 2x 25A outputs paralleled = 50A capacity
 **Power Type:** CONSTANT (always on for safety)
 
-See [Brake Booster][# Brake Booster System - Bosch iBooster Gen 2 {#brake-booster-system-bosch-ibooster-gen-2}] for complete specifications.
+See [Brake Booster][brake-booster-system-bosch-ibooster-gen-2] for complete specifications.
 
 ### Output Combining Rules
 
@@ -167,12 +167,12 @@ flowchart TB
 
 - Engine RTMR eliminated - PMU provides all engine bay power distribution
 - PSC Full Hydro Steering uses belt-driven mechanical pump (no electrical power required)
-- Grid heater controlled directly by ECM - no PMU involvement (See [Grid Heater][# 2.9 Grid Heater System {#29-grid-heater-system}])
+- Grid heater controlled directly by ECM - no PMU involvement (See [Grid Heater][29-grid-heater-system])
 - iBooster requires CONSTANT power for safety (brake assist works with engine off)
 
 ## Related Documentation
 
-- [PMU Overview][# 1.4.1 PMU Overview {#141-pmu-overview}] - Product specifications and capacity
-- [PMU Inputs][# 1.4.3 PMU Inputs {#143-pmu-inputs}] - Input configuration and triggers
-- [PMU Programming][# 1.4.4 PMU Programming {#144-pmu-programming}] - Logic configuration for outputs
-- [Front Battery Distribution][# 1.2 Front Battery Distribution (Engine Bay) {#zone-1-front-battery-tray--primary-distribution-engine-bay}] - CONSTANT bus and power architecture
+- [PMU Overview][141-pmu-overview] - Product specifications and capacity
+- [PMU Inputs][143-pmu-inputs] - Input configuration and triggers
+- [PMU Programming][144-pmu-programming] - Logic configuration for outputs
+- [Front Battery Distribution][zone-1-front-battery-tray--primary-distribution-engine-bay] - CONSTANT bus and power architecture

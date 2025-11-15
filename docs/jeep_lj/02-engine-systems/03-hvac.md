@@ -222,4 +222,4 @@ No PMU outputs consumed - entirely vacuum-operated
 
 ## Related Documentation
 
-- [Engine Systems][# 1.4 - PMU Power Distribution {#pmu-power-distribution}] - PMU specifications and output allocation
+- [Engine Systems][pmu-power-distribution] - PMU specifications and output allocation

@@ -61,7 +61,7 @@
 
 ## Related Documentation
 
-- [Front Battery Distribution][# 1.2 Front Battery Distribution (Engine Bay) {#zone-1-front-battery-tray--primary-distribution-engine-bay}] - SWITCHED bus specifications
-- [Rear Battery Distribution][# 1.3 Rear Battery Distribution (Wheel Well) {#13-rear-battery-distribution-wheel-well}] - CONSTANT bus specifications
-- [Dashboard Controls][# Dashboard Physical Controls {#dashboard-physical-controls}] - Physical switch panel layout
-- [Audio Systems][# Audio Systems {#audio-systems}] - Fusion radio specifications
+- [Front Battery Distribution][zone-1-front-battery-tray--primary-distribution-engine-bay] - SWITCHED bus specifications
+- [Rear Battery Distribution][13-rear-battery-distribution-wheel-well] - CONSTANT bus specifications
+- [Dashboard Controls][dashboard-physical-controls] - Physical switch panel layout
+- [Audio Systems][audio-systems] - Fusion radio specifications

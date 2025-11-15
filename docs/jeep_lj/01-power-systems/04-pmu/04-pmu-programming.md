@@ -117,8 +117,8 @@ Prevents voltage sag during ignition-on by staggering high-current load activati
 
 ## Related Documentation
 
-- [PMU Overview][# 1.4.1 PMU Overview {#141-pmu-overview}] - Product specifications and capacity
-- [PMU Outputs][# 1.4.2 PMU Outputs {#142-pmu-outputs}] - Output configuration and load details
-- [PMU Inputs][# 1.4.3 PMU Inputs {#143-pmu-inputs}] - Input configuration and CAN bus integration
-- [Front Battery Distribution][# 1.2 Front Battery Distribution (Engine Bay) {#zone-1-front-battery-tray--primary-distribution-engine-bay}] - Power architecture and bus bars
-- [Gauge Cluster][# Dakota Digital Gauge Cluster {#dakota-digital-gauge-cluster}] - Dakota Digital J1939 CAN bus tap location
+- [PMU Overview][141-pmu-overview] - Product specifications and capacity
+- [PMU Outputs][142-pmu-outputs] - Output configuration and load details
+- [PMU Inputs][143-pmu-inputs] - Input configuration and CAN bus integration
+- [Front Battery Distribution][zone-1-front-battery-tray--primary-distribution-engine-bay] - Power architecture and bus bars
+- [Gauge Cluster][dakota-digital-gauge-cluster] - Dakota Digital J1939 CAN bus tap location

@@ -3,7 +3,7 @@
 **Installation Guide:** [Baja Designs LP6 DOT Wiring](https://www.bajadesigns.com/wp-content/uploads/Installation%20Instructions/FGXX_18-7801-INS_001.pdf)
 **Quantity:** 2 (left and right)
 **Mounting:** Factory headlight buckets
-**Controller:** [Command Touch CT4][# Command Touch CT4 {#command-touch-ct4}] SW3/SW4
+**Controller:** [Command Touch CT4][command-touch-ct4] SW3/SW4
 
 ## Pin Configuration (Deutsch DT06-4S connector)
 
@@ -35,7 +35,7 @@
 - **Auto-Off Logic:** PMU disables DRL when CT4 SW3 activates headlights
 - **Control:** Automatic with ignition (on when ignition on, off when headlights or ignition off)
 - **Load:** 0.8A total
-- See [DRL/Parking Lights][# DRL & Parking Lights {#drl-parking-lights}] for complete circuit details
+- See [DRL/Parking Lights][drl-parking-lights] for complete circuit details
 
 ## Outstanding Items
 
@@ -45,6 +45,6 @@
 
 ## Related Documentation
 
-- [Command Touch CT4][# Command Touch CT4 {#command-touch-ct4}] - Controller programming and wiring
-- [DRL/Parking Lights][# DRL & Parking Lights {#drl-parking-lights}] - DRL circuit and auto-off logic
-- [PMU24 Power Distribution][# 1.4 - PMU Power Distribution {#pmu-power-distribution}] - PMU Out 9 DRL circuit
+- [Command Touch CT4][command-touch-ct4] - Controller programming and wiring
+- [DRL/Parking Lights][drl-parking-lights] - DRL circuit and auto-off logic
+- [PMU24 Power Distribution][pmu-power-distribution] - PMU Out 9 DRL circuit

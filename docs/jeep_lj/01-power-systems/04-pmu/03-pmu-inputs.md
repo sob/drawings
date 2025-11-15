@@ -85,7 +85,7 @@ The PMU24 taps into the existing J1939 CAN bus as a stub connection (no terminat
 - Display engine data via PMU software or external displays
 - Create custom logic based on engine conditions
 
-See [PMU Programming][# 1.4.4 PMU Programming {#144-pmu-programming}] for CAN-based logic examples.
+See [PMU Programming][144-pmu-programming] for CAN-based logic examples.
 
 ## Ignition Signal Distribution
 
@@ -149,8 +149,8 @@ flowchart LR
 
 ## Related Documentation
 
-- [PMU Overview][# 1.4.1 PMU Overview {#141-pmu-overview}] - Product specifications and capacity
-- [PMU Outputs][# 1.4.2 PMU Outputs {#142-pmu-outputs}] - Output configuration and load details
-- [PMU Programming][# 1.4.4 PMU Programming {#144-pmu-programming}] - Logic examples using inputs and CAN data
-- [Firewall Ingress][# Firewall Penetrations & Ingress Points {#firewall-penetrations-ingress-points}] - Grommet 2 specifications for ignition wire
-- [Gauge Cluster][# Dakota Digital Gauge Cluster {#dakota-digital-gauge-cluster}] - Dakota Digital J1939 integration
+- [PMU Overview][141-pmu-overview] - Product specifications and capacity
+- [PMU Outputs][142-pmu-outputs] - Output configuration and load details
+- [PMU Programming][144-pmu-programming] - Logic examples using inputs and CAN data
+- [Firewall Ingress][firewall-penetrations-ingress-points] - Grommet 2 specifications for ignition wire
+- [Gauge Cluster][dakota-digital-gauge-cluster] - Dakota Digital J1939 integration

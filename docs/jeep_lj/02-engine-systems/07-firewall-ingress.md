@@ -47,7 +47,7 @@ All electrical penetrations through the firewall must be properly sized and seal
 
 **Related Documentation:**
 
-- [Engine Systems][# 1.4 - PMU Power Distribution {#pmu-power-distribution}] - Clutch and brake switch wiring
+- [Engine Systems][pmu-power-distribution] - Clutch and brake switch wiring
 
 ### Grommet 3: Body RTMR SWITCHED Power Feed
 
@@ -79,8 +79,8 @@ All electrical penetrations through the firewall must be properly sized and seal
 
 **Related Documentation:**
 
-- [Body RTMR][# 1.5 - Body RTMR {#body-rtmr}] - Body RTMR specifications and circuit breakdown
-- [Front Battery Distribution][# 1.2 Front Battery Distribution (Engine Bay) {#zone-1-front-battery-tray--primary-distribution-engine-bay}] - SWITCHED bus bar configuration
+- [Body RTMR][body-rtmr] - Body RTMR specifications and circuit breakdown
+- [Front Battery Distribution][zone-1-front-battery-tray--primary-distribution-engine-bay] - SWITCHED bus bar configuration
 
 ### Grommet 5: Dakota Digital Outside Temperature Probe {#grommet-3-dakota-digital-outside-temperature-probe}
 
@@ -100,7 +100,7 @@ All electrical penetrations through the firewall must be properly sized and seal
 
 **Related Documentation:**
 
-- [Gauge Cluster][# Dakota Digital Gauge Cluster {#dakota-digital-gauge-cluster}] - Dakota Digital BIM-17-2 compass/temp module
+- [Gauge Cluster][dakota-digital-gauge-cluster] - Dakota Digital BIM-17-2 compass/temp module
 
 ### Grommet 6: Communication Devices (G1 GMRS, STX Intercom, Ham Radio) {#grommet-4-rugged-radio-g1-gmrs-stx-intercom-battery-cables}
 
@@ -140,7 +140,7 @@ All electrical penetrations through the firewall must be properly sized and seal
 
 **Related Documentation:**
 
-- [Communication & Camera][# Communication Systems {#communication-systems}] - G1 GMRS radio and STX intercom specifications
+- [Communication & Camera][communication-systems] - G1 GMRS radio and STX intercom specifications
 
 ### Cummins R2.8 Interior Harness Bulkhead Connector {#cummins-r28-harness-punch-through}
 
@@ -191,8 +191,8 @@ All electrical penetrations through the firewall must be properly sized and seal
 
 **Related Documentation:**
 
-- [Engine Systems][# 1.4 - PMU Power Distribution {#pmu-power-distribution}] - ECM and J1939 CAN bus specifications
-- [Gauge Cluster][# Dakota Digital Gauge Cluster {#dakota-digital-gauge-cluster}] - Dakota Digital J1939 interface module
+- [Engine Systems][pmu-power-distribution] - ECM and J1939 CAN bus specifications
+- [Gauge Cluster][dakota-digital-gauge-cluster] - Dakota Digital J1939 interface module
 
 ## Firewall-Mounted Components
 
@@ -201,7 +201,7 @@ All electrical penetrations through the firewall must be properly sized and seal
 - **PMU:** Firewall-mounted programmable power distribution unit for engine circuits
   - Power source: Front Battery CONSTANT bus (SWITCHED logic via Pin 7 ignition sense)
   - Ground: Front battery negative bus via pin 25 - 10 AWG
-  - See [Engine Systems][# 1.4 - PMU Power Distribution {#pmu-power-distribution}] for complete specifications
+  - See [Engine Systems][pmu-power-distribution] for complete specifications
 
 ### Cabin Side (Interior)
 
@@ -212,7 +212,7 @@ All electrical penetrations through the firewall must be properly sized and seal
     - GPS-50-2 (GPS speed module)
     - BIM-22-3 (TPMS module)
     - BIM-17-2 (Compass/outside temp module)
-  - See [Gauge Cluster][# Dakota Digital Gauge Cluster {#dakota-digital-gauge-cluster}] for complete specifications
+  - See [Gauge Cluster][dakota-digital-gauge-cluster] for complete specifications
 
 - **Firewall Ground Stud:**
   - Purpose: Central ground point for cabin electronics and Dakota Digital cluster
@@ -280,7 +280,7 @@ All electrical penetrations through the firewall must be properly sized and seal
 
 ## Related Documentation
 
-- [Engine Systems][# 1.4 - PMU Power Distribution {#pmu-power-distribution}] - PMU power distribution and clutch/brake switches
-- [Gauge Cluster][# Dakota Digital Gauge Cluster {#dakota-digital-gauge-cluster}] - Dakota Digital modules and HDPE panel
-- [Communication & Camera][# Communication Systems {#communication-systems}] - G1 GMRS and STX intercom battery wiring
-- [Wire Routing & Layout][# Wire Routing & Physical Layout {#wire-routing-physical-layout}] - Overall wire routing strategy
+- [Engine Systems][pmu-power-distribution] - PMU power distribution and clutch/brake switches
+- [Gauge Cluster][dakota-digital-gauge-cluster] - Dakota Digital modules and HDPE panel
+- [Communication & Camera][communication-systems] - G1 GMRS and STX intercom battery wiring
+- [Wire Routing & Layout][wire-routing-physical-layout] - Overall wire routing strategy

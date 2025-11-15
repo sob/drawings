@@ -50,6 +50,6 @@ Front Battery CONSTANT → PMU → Out 18 → PIAA Horns (5.4A) → Chassis Grou
 
 ## Related Documentation
 
-- [PMU Power Distribution][# 1.4 - PMU Power Distribution {#pmu-power-distribution}] - PMU Out 18 circuit and programming
-- [Front Battery Distribution][# 1.2 Front Battery Distribution (Engine Bay) {#zone-1-front-battery-tray--primary-distribution-engine-bay}] - CONSTANT bus bar
-- [Firewall Ingress][# Firewall Penetrations & Ingress Points {#firewall-penetrations-ingress-points}] - Horn button trigger wire routing
+- [PMU Power Distribution][pmu-power-distribution] - PMU Out 18 circuit and programming
+- [Front Battery Distribution][zone-1-front-battery-tray--primary-distribution-engine-bay] - CONSTANT bus bar
+- [Firewall Ingress][firewall-penetrations-ingress-points] - Horn button trigger wire routing

@@ -3,7 +3,7 @@ Two-way radio, CB, and communication equipment installation and wiring.
 
 ## Contents
 
-- **[7.1 Communication Systems][# Communication Systems {#communication-systems}]** - Ham radio, CB radio, antennas, PTT controls, and wiring
+- **[7.1 Communication Systems][communication-systems]** - Ham radio, CB radio, antennas, PTT controls, and wiring
 
 ## System Overview
 

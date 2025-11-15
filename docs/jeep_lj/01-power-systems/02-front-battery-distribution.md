@@ -3,7 +3,7 @@
 ## Power Flow Architecture (Front Battery - Engine Bay)
 
 !!! info "Battery Specifications"
-    For complete battery specifications (capacity, dimensions, terminals, etc.), see [Section 1.1 - Battery System][# 1.1 Power Generation & Storage {#11-power-generation-storage}].
+    For complete battery specifications (capacity, dimensions, terminals, etc.), see [Section 1.1 - Battery System][11-power-generation-storage].
 
 ### ⚡ POSITIVE SIDE (+)
 
@@ -235,7 +235,7 @@ flowchart TB
   - Surface mount with 187 quick connect terminals for clean installation
   - Mounted in engine bay near front battery
 - **Starter Main Power:** Direct connection from Front Battery+ → Main Starter Solenoid (no fuse/breaker)
-  - See [Starter System][# Starter System - Cummins R2.8 {#starter-system-cummins-r28}] for complete two-stage starter wiring details
+  - See [Starter System][starter-system-cummins-r28] for complete two-stage starter wiring details
 - **Winch Main Power:** Direct connection from Front Battery+  Warn Zeon 10-S (no fuse/breaker)
   - Warn Zeon 10-S: 10,000 lb capacity, 400A peak draw
   - Front-mounted winch powered from front battery for short cable run
@@ -281,7 +281,7 @@ flowchart TB
       - **Why needed:** Same principle as starter control relay - ignition switch cannot handle 200A+ bus current
       - Similar to starter system: low-current ignition switch (~2.5A) controls high-current relay (500A capability) which energizes bus
     - Wire from ignition "RUN" through firewall (Grommet 2) to relay coil (14 AWG minimum for 2.5A coil current)
-    - See [Starter System][# Starter System - Cummins R2.8 {#starter-system-cummins-r28}] for similar two-stage control architecture
+    - See [Starter System][starter-system-cummins-r28] for similar two-stage control architecture
 
 - **CONSTANT Bus Bar:** Firewall-mounted (engine bay side)
   - **Model:** Blue Sea 2104 PowerBar - 600A BusBar (4x 3/8"-16 studs)
@@ -293,7 +293,7 @@ flowchart TB
     - Radiator Fan: OUT2+3+4 combined (3x25A = 75A capacity for 60A peak GM 84100128 fan)
     - iBooster: OUT5+6 combined (2x25A = 50A capacity for 40A peak braking, 0.25A idle)
     - Realistic continuous load: ~100-140A (typical usage, iBooster idle, radiator fan 30-40A average)
-    - **See [PMU Output Wiring Diagram][# 1.4.2 PMU Outputs {#142-pmu-outputs}] for detailed output breakdown**
+    - **See [PMU Output Wiring Diagram][142-pmu-outputs] for detailed output breakdown**
   - Location: Firewall (engine bay side) - near PMU for short cable runs
   - **Specifications:**
     - Rating: 600A DC continuous (adequate for PMU maximum load with headroom)
@@ -316,7 +316,7 @@ flowchart TB
   - Location: Firewall (engine bay side) - near positive bus bars and PMU
 
 !!! info "Complete Grounding Architecture"
-    See [Section 1.1 - Grounding Architecture][# 1.1 Power Generation & Storage {#11-power-generation-storage}] for complete grounding system design, wire gauges, and architecture details.
+    See [Section 1.1 - Grounding Architecture][11-power-generation-storage] for complete grounding system design, wire gauges, and architecture details.
 
 **NEGATIVE Bus Bar Stud Assignment:**
 
@@ -399,8 +399,8 @@ flowchart TB
 
 ## Related Documentation
 
-- [Power Generation & Storage][# 1.1 Power Generation & Storage {#11-power-generation-storage}] - Battery and alternator specifications
-- [Rear Battery Distribution][# 1.3 Rear Battery Distribution (Wheel Well) {#13-rear-battery-distribution-wheel-well}] - Rear battery bus bars and circuits
-- [Engine Systems][# 1.4 - PMU Power Distribution {#pmu-power-distribution}] - PMU power distribution and circuits
-- [Starter System][# Starter System - Cummins R2.8 {#starter-system-cummins-r28}] - Two-stage starter system wiring and specifications
-- [Firewall Ingress][# Firewall Penetrations & Ingress Points {#firewall-penetrations-ingress-points}] - Firewall penetrations and bus bar mounting
+- [Power Generation & Storage][11-power-generation-storage] - Battery and alternator specifications
+- [Rear Battery Distribution][13-rear-battery-distribution-wheel-well] - Rear battery bus bars and circuits
+- [Engine Systems][pmu-power-distribution] - PMU power distribution and circuits
+- [Starter System][starter-system-cummins-r28] - Two-stage starter system wiring and specifications
+- [Firewall Ingress][firewall-penetrations-ingress-points] - Firewall penetrations and bus bar mounting

@@ -3,9 +3,9 @@ Offroad equipment, recovery systems, and auxiliary mechanical/electrical systems
 
 ## Contents
 
-- **[8.1 Recovery Systems][# Recovery Systems {#recovery-systems}]** - Warn Zeon 10-S winch, SafetyHub, control circuits, and recovery equipment
-- **[8.2 Air System][# Air System - ARB Compressor & Lockers {#air-system-arb-compressor-lockers}]** - ARB Twin Compressor, air tank, ARB lockers, pressure switches, manifold, and controls
-- **[8.3 Auxiliary Systems][# 7.3 - Auxiliary Systems {#auxiliary-systems}]** - Additional auxiliary systems and equipment
+- **[8.1 Recovery Systems][recovery-systems]** - Warn Zeon 10-S winch, SafetyHub, control circuits, and recovery equipment
+- **[8.2 Air System][air-system-arb-compressor-lockers]** - ARB Twin Compressor, air tank, ARB lockers, pressure switches, manifold, and controls
+- **[8.3 Auxiliary Systems][auxiliary-systems]** - Additional auxiliary systems and equipment
 
 ## System Overview
 

@@ -290,6 +290,6 @@ END
 
 ## Related Documentation
 
-- [Control Interfaces Overview][# Control Interfaces - Overview {#control-interfaces-overview}] - Main control interfaces overview
-- [Vehicle Lighting][# Vehicle Lighting Overview {#vehicle-lighting-overview}] - Complete wiring details for all lighting circuits controlled by CT4
-- [Engine Systems][# 1.4 - PMU Power Distribution {#pmu-power-distribution}] - PMU specifications and programming
+- [Control Interfaces Overview][control-interfaces-overview] - Main control interfaces overview
+- [Vehicle Lighting][vehicle-lighting-overview] - Complete wiring details for all lighting circuits controlled by CT4
+- [Engine Systems][pmu-power-distribution] - PMU specifications and programming

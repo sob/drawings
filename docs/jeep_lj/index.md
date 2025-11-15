@@ -9,39 +9,39 @@ The electrical system is organized into zones for logical distribution and maint
 
 ### Power Systems
 
-- **[Power Generation & Storage][# 1.1 Power Generation & Storage {#11-power-generation-storage}]** - Alternators, batteries, charging systems
-- **[Front Battery Distribution][# 1.2 Front Battery Distribution (Engine Bay) {#zone-1-front-battery-tray--primary-distribution-engine-bay}]** - Engine bay primary power distribution
-- **[Rear Battery Distribution][# 1.3 Rear Battery Distribution (Wheel Well) {#13-rear-battery-distribution-wheel-well}]** - Wheel well accessory power distribution
+- **[Power Generation & Storage][11-power-generation-storage]** - Alternators, batteries, charging systems
+- **[Front Battery Distribution][zone-1-front-battery-tray--primary-distribution-engine-bay]** - Engine bay primary power distribution
+- **[Rear Battery Distribution][13-rear-battery-distribution-wheel-well]** - Wheel well accessory power distribution
 
 ### Engine Systems
 
-- **[Critical Engine Systems][# 1.4 - PMU Power Distribution {#pmu-power-distribution}]** - PMU, Body RTMR, HVAC, wipers, cooling fans
-- **[Auxiliary Engine Systems][# 7.3 - Auxiliary Systems {#auxiliary-systems}]** - Dakota Digital gauges, cameras, sensors
+- **[Critical Engine Systems][pmu-power-distribution]** - PMU, Body RTMR, HVAC, wipers, cooling fans
+- **[Auxiliary Engine Systems][auxiliary-systems]** - Dakota Digital gauges, cameras, sensors
 
 ### Control Interfaces
 
-- **[Control Interfaces][# Control Interfaces - Overview {#control-interfaces-overview}]** - SwitchPros, Command Touch CT4, physical switches, gauge cluster
+- **[Control Interfaces][control-interfaces-overview]** - SwitchPros, Command Touch CT4, physical switches, gauge cluster
 
 ### Lighting Systems
 
-- **[Lighting][# Vehicle Lighting Overview {#vehicle-lighting-overview}]** - All vehicle lighting (front, roof, interior, rear, specialty)
+- **[Lighting][vehicle-lighting-overview]** - All vehicle lighting (front, roof, interior, rear, specialty)
 
 ### Audio Systems
 
-- **[Audio & Stereo][# Audio Systems {#audio-systems}]** - Fusion head unit, Apollo amplifier, JL Audio speakers and subwoofer
+- **[Audio & Stereo][audio-systems]** - Fusion head unit, Apollo amplifier, JL Audio speakers and subwoofer
 
 ### Communication Systems
 
-- **[Communication & Camera][# Communication Systems {#communication-systems}]** - GMRS radio, intercom, Command Touch CT4, WolfBox camera
+- **[Communication & Camera][communication-systems]** - GMRS radio, intercom, Command Touch CT4, WolfBox camera
 
 ### Exterior Systems
 
-- **[Recovery Systems][# Recovery Systems {#recovery-systems}]** - Warn Zeon 10-S winch and recovery equipment
-- **[Air System][# Air System - ARB Compressor & Lockers {#air-system-arb-compressor-lockers}]** - ARB Twin Compressor and air lockers
+- **[Recovery Systems][recovery-systems]** - Warn Zeon 10-S winch and recovery equipment
+- **[Air System][air-system-arb-compressor-lockers]** - ARB Twin Compressor and air lockers
 
 ### Installation
 
-- **[Wire Routing & Layout][# Wire Routing & Physical Layout {#wire-routing-physical-layout}]** - Physical wire routing, grommets, grounds
+- **[Wire Routing & Layout][wire-routing-physical-layout]** - Physical wire routing, grommets, grounds
 
 ## Key Features
 
