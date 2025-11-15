@@ -1,0 +1,130 @@
+site_name: Technical Documentation
+site_description: In-depth technical documentation for various projects
+site_author: Sean O'Brien
+
+theme:
+  name: material
+  palette:
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.tracking
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+  font:
+    text: Roboto
+    code: Roboto Mono
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - tables
+  - attr_list
+  - md_in_html
+  - admonition
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - toc:
+      permalink: true
+      toc_depth: 3
+
+plugins:
+  - search
+  - autorefs
+
+nav:
+  - Home: index.md
+  - Jeep LJ Cummins R2.8 Build:
+      - Overview: jeep_lj/index.md
+      - Power Systems:
+        - jeep_lj/01-power-systems/index.md
+        - 1.1 - Power Generation: jeep_lj/01-power-systems/01-power-generation.md
+        - 1.2 - Front Battery Distribution: jeep_lj/01-power-systems/02-front-battery-distribution.md
+        - 1.3 - Rear Battery Distribution: jeep_lj/01-power-systems/03-rear-battery-distribution.md
+        - 1.4 - Power Management Unit: jeep_lj/01-power-systems/04-pmu/index.md
+        - 1.4.1 - Overview: jeep_lj/01-power-systems/04-pmu/01-pmu-overview.md
+        - 1.4.2 - Outputs: jeep_lj/01-power-systems/04-pmu/02-pmu-outputs.md
+        - 1.4.3 - Inputs: jeep_lj/01-power-systems/04-pmu/03-pmu-inputs.md
+        - 1.4.4 - Programming: jeep_lj/01-power-systems/04-pmu/04-pmu-programming.md
+        - 1.5 - Body RTMR: jeep_lj/01-power-systems/05-body-rtmr.md
+        - 1.6 - SafetyHub: jeep_lj/01-power-systems/06-safetyhub.md
+      - Critical Systems:
+        - jeep_lj/02-engine-systems/index.md
+        - 2.1 - Starter System: jeep_lj/02-engine-systems/01-starter.md
+        - 2.2 - Brake Booster: jeep_lj/02-engine-systems/02-brake-booster.md
+        - 2.3 - HVAC System: jeep_lj/02-engine-systems/03-hvac.md
+        - 2.4 - Wiper System: jeep_lj/02-engine-systems/04-wipers.md
+        - 2.5 - Horn System: jeep_lj/02-engine-systems/05-horn.md
+        - 2.6 - Radiator Fan: jeep_lj/02-engine-systems/06-radiator-fan.md
+        - 2.7 - Firewall Ingress: jeep_lj/02-engine-systems/07-firewall-ingress.md
+        - 2.8 - Grid Heater: jeep_lj/02-engine-systems/08-grid-heater.md
+      - Lighting Systems:
+        - jeep_lj/03-lighting-systems/index.md
+        - 3.1 - Lighting Overview: jeep_lj/03-lighting-systems/01-lighting-overview.md
+        - 3.2 - Headlights: jeep_lj/03-lighting-systems/02-headlights.md
+        - 3.3 - Turn Signals: jeep_lj/03-lighting-systems/03-turn-signals.md
+        - 3.4 - Tail, Brake & Reverse: jeep_lj/03-lighting-systems/04-tail-brake-reverse.md
+        - 3.5 - DRL & Parking Lights: jeep_lj/03-lighting-systems/05-drl-parking.md
+        - 3.6 - Offroad & Aux Lighting: jeep_lj/03-lighting-systems/06-offroad-lighting.md
+      - Control Interfaces:
+        - jeep_lj/04-control-interfaces/index.md
+        - 4.1 - Overview: jeep_lj/04-control-interfaces/01-overview.md
+        - 4.2 - SwitchPros SP-1200: jeep_lj/04-control-interfaces/02-switchpros-sp1200.md
+        - 4.3 - Command Touch CT4: jeep_lj/04-control-interfaces/03-command-touch-ct4.md
+        - 4.4 - Digital Gauge Cluster: jeep_lj/04-control-interfaces/04-gauge-cluster.md
+        - 4.5 - Dashboard Switches: jeep_lj/04-control-interfaces/05-dashboard-controls.md
+      - Stereo Systems:
+        - jeep_lj/05-audio-systems/index.md
+        - 5.1 - Audio Systems: jeep_lj/05-audio-systems/01-audio.md
+      - Communications:
+        - jeep_lj/06-communication-systems/index.md
+        - 6.1 - Communication Systems: jeep_lj/06-communication-systems/01-communication.md
+      - Exterior & Auxiliary Systems:
+        - jeep_lj/07-exterior-systems/index.md
+        - 7.1 - Recovery Systems: jeep_lj/07-exterior-systems/01-recovery-systems.md
+        - 7.2 - Air System: jeep_lj/07-exterior-systems/02-air-system.md
+        - 7.3 - Auxiliary Systems: jeep_lj/07-exterior-systems/03-auxiliary-systems.md
+      - Installation & Project Management:
+        - jeep_lj/08-installation/index.md
+        - 8.1 - Wire Routing & Layout: jeep_lj/08-installation/01-wire-routing.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/seobrien
+
+extra_css:
+  - stylesheets/extra.css

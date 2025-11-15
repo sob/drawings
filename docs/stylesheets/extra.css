@@ -1,0 +1,169 @@
+/* Hide the table of contents sidebar */
+.md-sidebar--secondary {
+  display: none;
+}
+
+/* Increase width of primary (left) sidebar */
+.md-sidebar--primary {
+  width: 15.5rem;
+}
+
+@media screen and (min-width: 76.25em) {
+  .md-sidebar--primary {
+    width: 15.5rem;
+  }
+}
+
+/* Expand main content to use full width when TOC is hidden */
+.md-content {
+  max-width: 100%;
+}
+
+/* Remove maximum width constraints from content container */
+.md-grid {
+  max-width: none;
+}
+
+/* Expand the main content area to use all available space */
+.md-content__inner {
+  max-width: none;
+  margin: 0 2rem;
+}
+
+/* Make tables responsive and prevent cutting off */
+.md-typeset table:not([class]) {
+  display: table;
+  width: 100%;
+  overflow-x: auto;
+}
+
+/* Ensure table wrapper doesn't constrain width */
+.md-typeset__scrollwrap {
+  margin: 0;
+}
+
+.md-typeset__table {
+  display: block;
+  overflow-x: auto;
+}
+
+/* Add spacing between main sections in navigation */
+.md-nav__item--section {
+  margin-top: 1.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+/* Section headers should be bold and larger */
+.md-nav__item--section > .md-nav__link {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* Hide the first child link in each section (it duplicates the section header) */
+.md-nav__item--section > .md-nav > .md-nav__list > .md-nav__item:first-child {
+  display: none;
+}
+
+/* First section shouldn't have top margin/border */
+.md-nav__list > .md-nav__item--section:first-of-type {
+  margin-top: 0;
+  border-top: none;
+  padding-top: 0;
+}
+
+/* Add vertical padding to all navigation links */
+.md-sidebar__inner .md-nav--primary .md-nav__item .md-nav__link {
+  padding-top: 0.4rem !important;
+  padding-bottom: 0.4rem !important;
+  padding-left: 0.8rem !important;
+  margin-top: 0.05rem !important;
+  margin-bottom: 0.05rem !important;
+}
+
+/* Indent subsection items using more specific selector to override Material theme */
+.md-sidebar__inner .md-nav--primary .md-nav__item .md-nav__link[href*="01-pmu-overview"],
+.md-sidebar__inner .md-nav--primary .md-nav__item .md-nav__link[href*="02-pmu-outputs"],
+.md-sidebar__inner .md-nav--primary .md-nav__item .md-nav__link[href*="03-pmu-inputs"],
+.md-sidebar__inner .md-nav--primary .md-nav__item .md-nav__link[href*="04-pmu-programming"] {
+  padding-left: 2.3rem !important;
+  margin-left: 0 !important;
+}
+
+/* Highlight current/active navigation item with background */
+.md-sidebar__inner .md-nav--primary .md-nav__item .md-nav__link--active {
+  background-color: rgba(99, 102, 241, 0.1);
+  font-weight: 500;
+  border-radius: 4px;
+  border-bottom: 2px solid rgba(99, 102, 241, 0.8);
+}
+
+/* Ensure active subsection items maintain their indentation with maximum specificity */
+.md-sidebar__inner .md-nav--primary .md-nav__item .md-nav__link--active[href*="01-pmu-overview"],
+.md-sidebar__inner .md-nav--primary .md-nav__item .md-nav__link--active[href*="02-pmu-outputs"],
+.md-sidebar__inner .md-nav--primary .md-nav__item .md-nav__link--active[href*="03-pmu-inputs"],
+.md-sidebar__inner .md-nav--primary .md-nav__item .md-nav__link--active[href*="04-pmu-programming"] {
+  padding-left: 2.3rem !important;
+  margin-left: 0 !important;
+}
+
+/* Section headings - uppercase with horizontal line separator */
+.md-typeset h2 {
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+/* Dark mode border for section headings */
+[data-md-color-scheme="slate"] .md-typeset h2 {
+  border-bottom-color: rgba(255, 255, 255, 0.12);
+}
+
+/* Image gallery styles */
+.image-gallery-float {
+  float: right;
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+  max-width: 500px;
+}
+
+.image-gallery-container {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  padding: 1rem;
+}
+
+[data-md-color-scheme="slate"] .image-gallery-container {
+  background: #2d2d2d;
+}
+
+.image-gallery-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.image-gallery-figure {
+  margin: 0;
+}
+
+.image-gallery-img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+.image-gallery-caption {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 0.5rem;
+}
+
+[data-md-color-scheme="slate"] .image-gallery-caption {
+  color: #aaa;
+}
