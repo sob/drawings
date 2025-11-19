@@ -136,7 +136,7 @@ Items completed since last update.
 - [Section 1.7 Wire Routing][wire-routing] - Wire routing organized by location
 
 [bcdc]: ../01-power-systems/01-power-generation/03-bcdc.md
-[radiator-fan]: ../02-engine-systems/06-radiator-fan.md
+[radiator-fan]: ../02-engine-systems/06-radiator-fan/index.md
 [wiper-system]: ../02-engine-systems/04-wipers.md
 [firewall-ingress]: ../02-engine-systems/07-firewall-ingress.md
 [wire-routing]: ../01-power-systems/07-wire-routing/index.md

@@ -50,7 +50,7 @@ Provides high-current fused distribution for heavy-load accessories.
 | ATC-3 | 10A | [STX Intercom][comms] | 16 AWG ✓ | ~3 ft | 13.76V (0.3%) | ~5A | Engine bay → firewall → under dash |
 | ATC-4 | - | **[Available]** | - | - | - | - | - |
 
-**Slot Utilization:** 5 of 7 used (2 MIDI + 3 ATC, 2 available - 1 reserved for Ham Radio)
+**Slot Utilization:** 5 of 7 used (2 MIDI + 3 ATC, 2 available - MIDI-3 reserved for Ham Radio)
 
 **Total Load:** ~111A maximum (ARB 90A + GMRS 15A + Intercom 5A + Winch contactor 1A)
 

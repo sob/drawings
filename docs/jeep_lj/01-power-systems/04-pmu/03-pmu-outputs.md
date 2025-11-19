@@ -13,9 +13,9 @@ Complete configuration of all 24 PMU outputs, load allocations, and combined out
 | Output           | Circuit                      | Load      | Control Type                   | Trigger/Input                       | Notes                                             |
 |:-----------------|:-----------------------------|:----------|:-------------------------------|:------------------------------------|:--------------------------------------------------|
 | **Out 1**        | HVAC Blower Motor            | ~20A      | Auto (ignition ON)             | Constant power when ignition on     | See [HVAC System][hvac-system] - highest single load |
-| **Out 2**        | **Radiator Fan (combined)**  | Combined  | Auto (ECM PWM control)         | Combined with OUT3 + OUT4           | GM 84100128 - 30-60A, requires 3x 25A outputs     |
-| **Out 3**        | **Radiator Fan (combined)**  | Combined  | Auto (ECM PWM control)         | Combined with OUT2 + OUT4           | GM 84100128 - 30-60A, requires 3x 25A outputs     |
-| **Out 4**        | **Radiator Fan (combined)**  | Combined  | Auto (ECM PWM control)         | Combined with OUT2 + OUT3           | GM 84100128 - 30-60A, requires 3x 25A outputs     |
+| **Out 2**        | **[Available]**              | -         | -                              | -                                   | Future expansion (25A high-current) |
+| **Out 3**        | **[Available]**              | -         | -                              | -                                   | Future expansion (25A high-current) |
+| **Out 4**        | **[Available]**              | -         | -                              | -                                   | Future expansion (25A high-current) |
 | **Out 5**        | **iBooster Main (combined)** | Combined  | CONSTANT (always on)           | Combined with OUT6 + OUT9           | Bosch iBooster - 40A peak, requires 3x 25A outputs for thermal margin|
 | **Out 6**        | **iBooster Main (combined)** | Combined  | CONSTANT (always on)           | Combined with OUT5 + OUT9           | Bosch iBooster - 40A peak, requires 3x 25A outputs for thermal margin|
 | **Out 7**        | Oil Cooler Fan               | ~15A      | Auto (CAN temp monitoring)     | ECM J1939 engine oil temp (SPN 175) | Programmable temp thresholds via CAN              |
@@ -51,8 +51,6 @@ Complete configuration of all 24 PMU outputs, load allocations, and combined out
 
 ## Combined Outputs
 
-**Radiator Fan (OUT2+3+4):** GM 84100128, 30-60A peak, 3×25A outputs paralleled
-
 **iBooster Main (OUT5+6+9):** Bosch Gen 2, 40A peak, 3×25A outputs paralleled for thermal margin, CONSTANT power
 
 **Combining Rules:**
@@ -70,8 +68,7 @@ Complete configuration of all 24 PMU outputs, load allocations, and combined out
 | Outputs | Load | Terminal Rating | Utilization @ 40°C | Status | Notes |
 |:--------|:-----|:----------------|:-------------------|:-------|:------|
 | **OUT5+6+9** | 40A peak | 75A (3×25A @ 40°C) | 53% @ 40°C | ✓ OK | 3 outputs provide adequate thermal margin even at high temps |
-| **OUT1** | 20A | 23A (single @ 40°C) | 87% | ⚠️ Acceptable | Close to thermal limit - avoid adjacent to OUT2-4 |
-| **OUT2-3-4** | 60A peak | 69A (3×23A @ 40°C) | 87% | ⚠️ Monitor | Requires balanced load across all 3 outputs - verify ECM PWM balancing |
+| **OUT1** | 20A | 23A (single @ 40°C) | 87% | ⚠️ Acceptable | HVAC blower - highest single 25A load |
 | **OUT11** | 15A | 19A (1.5 terminal) | 79% | ✓ OK | Avoid adjacent to OUT12 if possible |
 | **OUT12** | 15A | 19A (1.5 terminal) | 79% | ✓ OK | Avoid adjacent to OUT11 if possible |
 
@@ -79,7 +76,6 @@ Complete configuration of all 24 PMU outputs, load allocations, and combined out
 
 - PMU thermal protection will shut down overloaded outputs
 - Monitor output temperatures during initial testing (PMU displays thermal status)
-- Verify radiator fan ECM balances load evenly across OUT2-3-4
 - iBooster 40A peak is brief (motor inrush) - continuous load should be <30A
 
 !!! warning "Thermal Analysis Pending"

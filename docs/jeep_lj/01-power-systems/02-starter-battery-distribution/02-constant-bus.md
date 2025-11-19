@@ -46,12 +46,13 @@ Eliminates battery terminal crowding by providing central distribution for all c
 | 2 | PMU24 | 1 AWG ✓ | ~2 ft | 13.76V (1.0% @ 60°C) | 300A CB | ~220A max | Always-on power management - see [PMU][pmu] |
 | 3 | SafetyHub 100 | 4 AWG ✓ | ~3 ft | 13.73V (1.2% @ 60°C) | 150A CB | ~111A max | Fused high-current accessories - see [SafetyHub][safetyhub] |
 | 4 | BCDC Input | 4 AWG ✓ | ~5 ft | 13.84V (0.4% @ 60°C) | 40A CB | 25A charging | Charges AUX battery - see [BCDC][bcdc] |
-| 5 | **START battery+ (INPUT #2)** | **1/0 AWG ✓** | **~5 ft** | **13.82V (1.26% @ 60°C)** | **None** | **~356A max** | **Second parallel feed - see [START battery][front-battery]** |
-| 6-8 | **[Available]** | - | - | - | - | - | Future expansion (3 studs available) |
+| 5 | Critical Cabin PDU | 6 AWG ✓ | ~8 ft | TBD | 40A CB | <10A | Dakota Digital modules - see [Critical Cabin PDU][cabin-pdu] |
+| 6-7 | **[Available]** | - | - | - | - | - | Future expansion (2 studs available) |
+| 8 | **START battery+ (INPUT #2)** | **1/0 AWG ✓** | **~5 ft** | **13.82V (1.26% @ 60°C)** | **None** | **~356A max** | **Second parallel feed - see [START battery][front-battery]** |
 
-**Stud Utilization:** 5 of 8 used (3 available)
+**Stud Utilization:** 6 of 8 used (2 available)
 
-**Total Load:** ~356A max (PMU 220A + SafetyHub 111A + BCDC 25A)
+**Total Load:** ~366A max (PMU 220A + SafetyHub 111A + BCDC 25A + Cabin PDU 10A)
 
 **Wire Sizing (Engine Bay @ 60°C):**
 - **Input Feed:** 2×1/0 AWG @ 356A, 5 ft, 60°C: **1.26% voltage drop** (0.18V) ✅ Excellent performance
@@ -77,6 +78,7 @@ Eliminates battery terminal crowding by providing central distribution for all c
 - [PMU24][pmu] - Power management unit
 - [SafetyHub 100][safetyhub] - Fused distribution
 - [BCDC Alpha 25][bcdc] - DC-DC charger
+- [Critical Cabin PDU][cabin-pdu] - Dakota Digital modules distribution
 - [Installation Checklist][installation] - Bus bar mounting procedure
 
 [product-link]: https://www.bluesea.com/products/2107/PowerBar_600A_BusBar_with_Four_5_16inch-18_Studs_and_Four_1_4inch-20_Studs
@@ -85,4 +87,5 @@ Eliminates battery terminal crowding by providing central distribution for all c
 [pmu]: ../04-pmu/index.md
 [safetyhub]: 04-safetyhub.md
 [bcdc]: ../01-power-generation/03-bcdc.md
+[cabin-pdu]: 03-critical-cabin-pdu.md
 [installation]: ../installation-checklist.md#phase-2-power-distribution

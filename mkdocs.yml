@@ -92,6 +92,7 @@ nav:
         - jeep_lj/01-power-systems/02-starter-battery-distribution/index.md
         - 1.2.1 - Circuit Breakers: jeep_lj/01-power-systems/02-starter-battery-distribution/01-circuit-breakers.md
         - 1.2.2 - CONSTANT Bus: jeep_lj/01-power-systems/02-starter-battery-distribution/02-constant-bus.md
+        - 1.2.3 - Critical Cabin PDU: jeep_lj/01-power-systems/02-starter-battery-distribution/03-critical-cabin-pdu.md
         - 1.2.4 - SafetyHub 100: jeep_lj/01-power-systems/02-starter-battery-distribution/04-safetyhub.md
       - 1.3 - AUX Battery Distribution:
         - jeep_lj/01-power-systems/03-aux-battery-distribution/index.md
@@ -120,7 +121,10 @@ nav:
       - 2.3 - HVAC System: jeep_lj/02-engine-systems/03-hvac.md
       - 2.4 - Wiper System: jeep_lj/02-engine-systems/04-wipers.md
       - 2.5 - Horn System: jeep_lj/02-engine-systems/05-horn.md
-      - 2.6 - Radiator Fan: jeep_lj/02-engine-systems/06-radiator-fan.md
+      - 2.6 - Radiator Fan:
+        - jeep_lj/02-engine-systems/06-radiator-fan/index.md
+        - 2.6.1 - Fan Motor: jeep_lj/02-engine-systems/06-radiator-fan/01-fan-motor.md
+        - 2.6.2 - Fan Controller: jeep_lj/02-engine-systems/06-radiator-fan/02-fan-controller.md
       - 2.7 - Firewall Ingress: jeep_lj/02-engine-systems/07-firewall-ingress.md
       - 2.8 - Grid Heater: jeep_lj/02-engine-systems/08-grid-heater.md
     - Lighting Systems:

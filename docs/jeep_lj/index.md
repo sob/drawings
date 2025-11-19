@@ -31,7 +31,7 @@ The electrical system is organized into zones for logical distribution and maint
 - **[HVAC System](02-engine-systems/03-hvac.md)** - Heating, ventilation, and air conditioning
 - **[Wiper System](02-engine-systems/04-wipers.md)** - Windshield wipers
 - **[Horn System](02-engine-systems/05-horn.md)** - Vehicle horn
-- **[Radiator Fan](02-engine-systems/06-radiator-fan.md)** - Engine cooling fan
+- **[Radiator Fan](02-engine-systems/06-radiator-fan/index.md)** - Engine cooling fan
 - **[Firewall Ingress](02-engine-systems/07-firewall-ingress.md)** - Firewall wire pass-through
 - **[Grid Heater](02-engine-systems/08-grid-heater.md)** - Diesel grid heater
 

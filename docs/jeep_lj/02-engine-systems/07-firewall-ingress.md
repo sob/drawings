@@ -25,7 +25,7 @@ All electrical penetrations through the firewall must be properly sized and seal
 - A/C request signal wire (factory TJ A/C button → PMU In 9) - 18 AWG
 - Other TBD circuits from PMU to cabin
 
-**Note:** Rear defrost is not implemented. PMU OUT2, OUT3, OUT4 assigned to radiator fan (combined 25A outputs).
+**Note:** Rear defrost is not implemented.
 
 **Outstanding Items:**
 
@@ -69,7 +69,71 @@ All electrical penetrations through the firewall must be properly sized and seal
 
 - [BODY PDU][body-rtmr] - BODY PDU specifications and circuit breakdown
 
-### Grommet 5: Dakota Digital Outside Temperature Probe {#grommet-3-dakota-digital-outside-temperature-probe}
+### Grommet 4: Critical Cabin PDU Power Feed {#grommet-4-critical-cabin-pdu}
+
+**Location:** TBD - near CONSTANT bus (engine bay side)
+**Direction:** Engine bay (CONSTANT bus) → Cabin (Critical Cabin PDU)
+
+**Wire Bundle:**
+
+- Critical Cabin PDU power feed: CONSTANT bus → 40A CB → Critical Cabin PDU - 6 AWG
+
+**Wire Specifications:**
+
+- **Power Wire:** 6 AWG (<10A typical load, 40A CB protected)
+- **Distance:** ~8 ft (engine bay to cabin firewall area)
+- **Load:** Dakota Digital modules + PAC-2800BT controller (<10A combined)
+
+**Configuration:**
+
+- **Power Source:** CONSTANT bus via 40A circuit breaker
+- **Destination:** Blue Sea 5025 Critical Cabin PDU (cabin side firewall)
+- **Load:** Powers Dakota Digital instrumentation and critical cabin electronics
+
+**Outstanding Items:**
+
+- [ ] Determine exact Grommet 4 location on firewall
+- [ ] Determine grommet size for 6 AWG wire
+- [ ] Verify voltage drop calculation for Critical Cabin PDU feed
+
+**Related Documentation:**
+
+- [Critical Cabin PDU][cabin-pdu] - Blue Sea 5025 specifications and circuit assignments
+- [CONSTANT Bus][constant-bus] - Power source
+
+### Grommet 5: PAC-2800BT Radiator Fan Relay Trigger {#grommet-5-pac-2800bt-relay-trigger}
+
+**Location:** TBD - near Dakota Digital HDPE panel (cabin side)
+**Direction:** Cabin (PAC-2800BT controller) → Engine bay (external relay)
+
+**Wire Bundle:**
+
+- Relay trigger wire: PAC-2800BT output → External relay Terminal 85 (ground-trigger) - 18 AWG
+
+**Wire Specifications:**
+
+- **Trigger Wire:** 18 AWG (low current, ground-trigger signal)
+- **Distance:** ~8 ft (cabin to engine bay relay location)
+- **Signal:** Ground-trigger from PAC-2800BT when coolant temp exceeds setpoint
+
+**Configuration:**
+
+- **Controller:** PAC-2800BT (cabin-mounted on Dakota Digital HDPE panel)
+- **External Relay:** Bosch-style relay (engine bay, near fan)
+- **Operation:** Controller triggers ground to relay coil → relay closes → fan runs
+
+**Outstanding Items:**
+
+- [ ] Determine exact Grommet 5 location on firewall
+- [ ] Determine grommet size for 18 AWG wire
+- [ ] Determine relay mounting location in engine bay
+
+**Related Documentation:**
+
+- [Radiator Fan System][radiator-fan] - Complete fan controller documentation
+- [Fan Controller][fan-controller] - Dakota Digital PAC-2800BT specifications
+
+### Grommet 6: Dakota Digital Outside Temperature Probe {#grommet-6-dakota-digital-outside-temperature-probe}
 
 **Location:** TBD - path from firewall cabin side to grille area
 **Direction:** Cabin (HDPE panel) → Engine bay (grille area)
@@ -80,7 +144,7 @@ All electrical penetrations through the firewall must be properly sized and seal
 
 **Outstanding Items:**
 
-- [ ] Determine exact Grommet 5 location on firewall
+- [ ] Determine exact Grommet 6 location on firewall
 - [ ] Determine exact grille area mounting location for temperature probe
 - [ ] Determine wire gauge and length for temperature probe cable
 - [ ] Determine grommet size
@@ -89,7 +153,7 @@ All electrical penetrations through the firewall must be properly sized and seal
 
 - [Gauge Cluster][dakota-digital-gauge-cluster] - Dakota Digital BIM-17-2 compass/temp module
 
-### Grommet 6: Communication Devices (G1 GMRS, STX Intercom, Ham Radio) {#grommet-4-rugged-radio-g1-gmrs-stx-intercom-battery-cables}
+### Grommet 7: Communication Devices (G1 GMRS, STX Intercom, Ham Radio) {#grommet-7-communication-devices}
 
 **Location:** TBD - near START battery/SafetyHub location
 **Direction:** Engine bay (SafetyHub/battery) → Cabin (radios behind dash)
@@ -120,7 +184,7 @@ All electrical penetrations through the firewall must be properly sized and seal
 
 **Outstanding Items:**
 
-- [ ] Determine exact Grommet 6 location on firewall (near SafetyHub/battery preferred)
+- [ ] Determine exact Grommet 7 location on firewall (near SafetyHub/battery preferred)
 - [ ] Confirm wire gauge: 14 AWG for G1/STX, 10 AWG for Ham Radio
 - [ ] Determine grommet size (must accommodate 6 wires: 3 power + 3 ground)
 - [ ] Determine SafetyHub mounting location (near START battery)
@@ -235,24 +299,28 @@ All electrical penetrations through the firewall must be properly sized and seal
 
 - [ ] Determine exact location for Grommet 1 (PMU to cabin)
 - [ ] Determine exact location for Grommet 2 (Cabin to engine bay - near pedals)
-- [ ] Determine exact location for Grommet 5 (Dakota Digital temp probe)
-- [ ] Determine exact location for Grommet 6 (G1/STX battery cables - near battery)
+- [ ] Determine exact location for Grommet 4 (Critical Cabin PDU power feed)
+- [ ] Determine exact location for Grommet 5 (PAC-2800BT relay trigger)
+- [ ] Determine exact location for Grommet 6 (Dakota Digital temp probe)
+- [ ] Determine exact location for Grommet 7 (G1/STX/Ham battery cables - near battery)
 
 ### Wire Bundles
 
 - [ ] Complete wire bundle list for Grommet 1 (PMU cabin circuits)
 - [ ] Complete wire bundle list for Grommet 2 (clutch, brake, ignition signals)
-- [ ] Confirm wire gauge for Grommet 3 (BODY PDU SWITCHED: 8 AWG recommended for 40A)
-- [ ] Determine wire gauge for Grommet 5 (temp probe)
-- [ ] Confirm wire gauge for Grommet 6: 14 AWG for G1/STX, 10 AWG for Ham Radio
+- [ ] Verify wire gauge for Grommet 4 (Critical Cabin PDU: 6 AWG)
+- [ ] Verify wire gauge for Grommet 5 (PAC-2800BT relay trigger: 18 AWG)
+- [ ] Determine wire gauge for Grommet 6 (temp probe)
+- [ ] Confirm wire gauge for Grommet 7: 14 AWG for G1/STX, 10 AWG for Ham Radio
 
 ### Grommet Sizing
 
 - [ ] Determine grommet size for Grommet 1 (multiple signal wires + power circuits)
 - [ ] Determine grommet size for Grommet 2 (clutch, brake, ignition signals)
-- [ ] Determine grommet size for Grommet 3 (single 8 AWG power wire)
-- [ ] Determine grommet size for Grommet 5 (temp probe)
-- [ ] Determine grommet size for Grommet 6 (must accommodate 4 wires: 2 power + 2 ground)
+- [ ] Determine grommet size for Grommet 4 (6 AWG power wire)
+- [ ] Determine grommet size for Grommet 5 (18 AWG trigger wire)
+- [ ] Determine grommet size for Grommet 6 (temp probe)
+- [ ] Determine grommet size for Grommet 7 (must accommodate 6 wires: 3 power + 3 ground)
 
 ### J1939 CAN Bus
 
@@ -272,3 +340,7 @@ All electrical penetrations through the firewall must be properly sized and seal
 - [Wire Routing & Layout][wire-routing] - Overall wire routing strategy
 
 [wire-routing]: ../01-power-systems/07-wire-routing/index.md
+[radiator-fan]: 06-radiator-fan/index.md
+[fan-controller]: 06-radiator-fan/02-fan-controller.md
+[cabin-pdu]: ../01-power-systems/02-starter-battery-distribution/03-critical-cabin-pdu.md
+[constant-bus]: ../01-power-systems/02-starter-battery-distribution/02-constant-bus.md
