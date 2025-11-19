@@ -46,7 +46,7 @@ Provides fused distribution for critical cabin electronics and Dakota Digital in
 | Slot | Fuse | Circuit | Wire Gauge | Load | Notes |
 |:-----|:-----|:--------|:-----------|:-----|:------|
 | 1 | 5A | [PAC-2800BT Fan Controller][fan-controller] | 16 AWG ✓ | <1A | Dakota Digital fan controller |
-| 2 | TBD | Dakota Digital Gauge Module | TBD | TBD | Gauge cluster control box |
+| 2 | 10A | [Dakota Digital Gauge Cluster][gauge-cluster] | 16 AWG ✓ | TBD | Main cluster + 4 BIM modules |
 | 3 | - | **[Available]** | - | - | - |
 | 4 | - | **[Available]** | - | - | - |
 | 5 | - | **[Available]** | - | - | - |
@@ -54,7 +54,7 @@ Provides fused distribution for critical cabin electronics and Dakota Digital in
 
 **Slot Utilization:** 2 of 6 used (4 available)
 
-**Total Load:** TBD (currently <10A)
+**Total Load:** TBD (currently <11A)
 
 ## Wiring
 
@@ -66,8 +66,9 @@ Provides fused distribution for critical cabin electronics and Dakota Digital in
 ## Outstanding Items
 
 - [ ] Source product image for Blue Sea 5025
-- [ ] Determine total Dakota Digital module current draw
-- [ ] Assign remaining fuse slots for gauge modules
+- [ ] Determine Dakota Digital gauge cluster current draw (main cluster + 4 BIM modules)
+- [ ] Verify 10A fuse capacity for gauge cluster
+- [ ] Assign remaining fuse slots (Slots 3-6 available)
 - [ ] Confirm 40A circuit breaker sizing based on total load
 - [ ] Determine exact mounting location on firewall
 - [ ] Test voltage at PDU under load
@@ -83,8 +84,8 @@ Provides fused distribution for critical cabin electronics and Dakota Digital in
 
 **Connected Systems:**
 
-- [PAC-2800BT Fan Controller][fan-controller] - Fan controller specifications
-- [Dakota Digital Gauge Cluster][gauge-cluster] - Gauge module specifications
+- [PAC-2800BT Fan Controller][fan-controller] - Radiator fan controller
+- [Dakota Digital Gauge Cluster][gauge-cluster] - Main gauge cluster + BIM modules
 
 [product-link]: https://www.bluesea.com/products/5025/ST_Blade_Fuse_Block_-_6_Circuits_with_Negative_Bus_and_Cover
 [circuit-breakers]: 01-circuit-breakers.md

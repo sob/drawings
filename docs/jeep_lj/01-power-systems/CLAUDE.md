@@ -27,7 +27,7 @@ Section 1 documents the complete power generation and distribution architecture 
 
 **Files:**
 - `01-circuit-breakers.md` - All START battery CBs (PMU, SafetyHub, BCDC input)
-- `04-safetyhub.md` - Blue Sea SafetyHub 100 fused distribution
+- `04-safetyhub.md` - Blue Sea SafetyHub 150 fused distribution
 - `index.md` - START battery overview with terminal connection tables
 - `CLAUDE.md` - Navigation guide
 
@@ -229,7 +229,7 @@ Section 1 documents the complete power generation and distribution architecture 
 
 **Power Controllers:**
 - PMU24: Programmable outputs (24 channels)
-- SafetyHub 100: Fused distribution (3× MIDI, 4× ATC)
+- SafetyHub 150: Fused distribution (3× MIDI, 4× ATC)
 - BODY PDU: Relay/fuse panel (12 circuits)
 
 **Charging System:**

@@ -93,7 +93,7 @@ nav:
         - 1.2.1 - Circuit Breakers: jeep_lj/01-power-systems/02-starter-battery-distribution/01-circuit-breakers.md
         - 1.2.2 - CONSTANT Bus: jeep_lj/01-power-systems/02-starter-battery-distribution/02-constant-bus.md
         - 1.2.3 - Critical Cabin PDU: jeep_lj/01-power-systems/02-starter-battery-distribution/03-critical-cabin-pdu.md
-        - 1.2.4 - SafetyHub 100: jeep_lj/01-power-systems/02-starter-battery-distribution/04-safetyhub.md
+        - 1.2.4 - SafetyHub 150: jeep_lj/01-power-systems/02-starter-battery-distribution/04-safetyhub.md
       - 1.3 - AUX Battery Distribution:
         - jeep_lj/01-power-systems/03-aux-battery-distribution/index.md
         - 1.3.1 - Circuit Breakers: jeep_lj/01-power-systems/03-aux-battery-distribution/01-circuit-breakers.md

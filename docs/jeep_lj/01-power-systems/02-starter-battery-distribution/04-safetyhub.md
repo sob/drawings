@@ -7,18 +7,18 @@ tags:
   - fuse-block
 ---
 
-# 1.2.2 SafetyHub 100 {#safetyhub-100}
+# 1.2.2 SafetyHub 150 {#safetyhub-150}
 
 /// html | div.product-info
-![Blue Sea SafetyHub 100](../../images/blue-sea-7725-safetyhub.jpg){ loading=lazy }
+![Blue Sea SafetyHub 150](../../images/blue-sea-7748-safetyhub.jpg){ loading=lazy }
 
 **Type:** Fuse Block
 
-**Model:** Blue Sea 7725 SafetyHub 100
+**Model:** Blue Sea 7748 SafetyHub 150
 
 **Manufacturer:** Blue Sea Systems
 
-**Product Page:** [SafetyHub 100 Fuse Block][bluesea-7725]
+**Product Page:** [SafetyHub 150 Fuse Block][bluesea-7748]
 
 ///
 
@@ -32,11 +32,11 @@ Provides high-current fused distribution for heavy-load accessories.
 
 ## Specifications
 
-- **Rating:** 100A max combined (400A bus rating)
+- **Rating:** 150A max combined (400A bus rating)
 - **Fuse Types:** 3x MIDI (AMI/MIDI), 4x ATC (ATO/ATC)
 - **Fuse Range:** MIDI: 30-200A, ATC: 1-20A per circuit
 - **Features:** Ignition protected, negative ground bus, ISO 8846, SAE J1171, IP66
-- **Full Specs:** [Blue Sea 7725][bluesea-7725]
+- **Full Specs:** [Blue Sea 7748][bluesea-7748]
 
 ## Circuit Configuration
 
@@ -54,6 +54,8 @@ Provides high-current fused distribution for heavy-load accessories.
 
 **Total Load:** ~111A maximum (ARB 90A + GMRS 15A + Intercom 5A + Winch contactor 1A)
 
+**Utilization:** 111A / 150A = 74% ✓ Adequate headroom
+
 !!! warning "Winch Motor Power"
     Warn Zeon 10-S winch motor draws 400A peak directly from START battery positive (no CB). Only the 1A contactor coil trigger is powered through SafetyHub ATC-1. See [START battery Distribution][front-battery] for winch main power connection.
 
@@ -70,7 +72,7 @@ Provides high-current fused distribution for heavy-load accessories.
 - [Recovery Systems][recovery-systems] - Winch specifications
 - [Communication Systems][comms] - GMRS, Ham, Intercom specifications
 
-[bluesea-7725]: https://www.bluesea.com/products/7725/SafetyHub_100_Fuse_Block
+[bluesea-7748]: https://www.bluesea.com/products/7748/SafetyHub_150_Fuse_Block
 [circuit-breakers]: 01-circuit-breakers.md
 [air-system]: ../../07-exterior-systems/02-air-system.md
 [recovery-systems]: ../../07-exterior-systems/01-recovery-systems.md

@@ -60,7 +60,7 @@ hide:
 
 - [Radiator Fan System][radiator-fan] - Complete system overview
 - [Fan Controller][fan-controller] - Dakota Digital PAC-2800BT
-- [SafetyHub 100][safetyhub] - Power source
+- [SafetyHub 150][safetyhub] - Power source
 - [Engine Bay Ground Bus][ground-bus] - Ground connection
 
 [radiator-fan]: index.md

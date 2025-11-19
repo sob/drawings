@@ -28,7 +28,7 @@ Complete configuration of all 24 PMU outputs, load allocations, and combined out
 | Output           | Circuit                      | Load      | Control Type                   | Trigger/Input                       | Notes                                             |
 |:-----------------|:-----------------------------|:----------|:-------------------------------|:------------------------------------|:--------------------------------------------------|
 | **Out 11**       | WS-51C Wiper Controller      | 15A       | Auto (ignition ON)             | Ignition signal (Pin 7)             | See [Wipers][windshield-wiper-control-system]                        |
-| **Out 12**       | Dakota Digital Cluster       | ~15A      | Auto (ignition RUN)            | Ignition signal (Pin 7)             | See [Gauge Cluster][dakota-digital-gauge-cluster]          |
+| **Out 12**       | **[Available]**              | -         | -                              | -                                   | Future expansion (15A)                            |
 | **Out 13**       | Command Touch CT4            | ~10A      | CONSTANT (always on)           | Works with ignition off (hazards)   | Critical safety system - hazards/turn signals     |
 | **Out 14**       | DRL/Parking Lights           | ~8A       | Auto (ignition) with logic     | Ignition ON + headlight status      | See [DRL & Parking Lights][drl-parking-lights]    |
 | **Out 15**       | **[Available]**              | -         | -                              | -                                   | Future expansion (15A)                            |

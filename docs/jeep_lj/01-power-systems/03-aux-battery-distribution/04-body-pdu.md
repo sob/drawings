@@ -109,7 +109,7 @@ Dash Switch (manual) ───────→ Relay Coil (K21/K22)
 - Better fault isolation (one seat failure doesn't affect other)
 
 !!! info "Communication Devices"
-    G1 GMRS Radio, STX Intercom, and Ham Radio are powered from [SafetyHub 100][safetyhub] (START battery) as critical infrastructure, with direct grounds to START battery to minimize RF noise.
+    G1 GMRS Radio, STX Intercom, and Ham Radio are powered from [SafetyHub 150][safetyhub] (START battery) as critical infrastructure, with direct grounds to START battery to minimize RF noise.
 
 ## Power Feed Wire Sizing
 

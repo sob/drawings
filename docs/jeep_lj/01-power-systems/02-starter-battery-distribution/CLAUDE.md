@@ -24,9 +24,9 @@ Documents START battery power distribution from the driver wheel well (Odyssey P
 
 **Use when:** Finding CONSTANT bus bar capacity, available studs, or what connects to the bus
 
-### `04-safetyhub.md` - SafetyHub 100
+### `04-safetyhub.md` - SafetyHub 150
 
-**Contains:** Blue Sea SafetyHub 100 product details and fuse assignments
+**Contains:** Blue Sea SafetyHub 150 product details and fuse assignments
 
 **Use when:** Finding SafetyHub specifications or fuse assignments
 

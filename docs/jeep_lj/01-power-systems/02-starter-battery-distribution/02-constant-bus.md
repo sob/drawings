@@ -44,7 +44,7 @@ Eliminates battery terminal crowding by providing central distribution for all c
 |:-----|:-----------|:-----------|:---------|:---------------|:-----------|:-----|:------|
 | 1 | **START battery+ (INPUT #1)** | **1/0 AWG ✓** | **~5 ft** | **13.82V (1.26% @ 60°C)** | **None** | **~356A max** | **First parallel feed - see [START battery][front-battery]** |
 | 2 | PMU24 | 1 AWG ✓ | ~2 ft | 13.76V (1.0% @ 60°C) | 300A CB | ~220A max | Always-on power management - see [PMU][pmu] |
-| 3 | SafetyHub 100 | 4 AWG ✓ | ~3 ft | 13.73V (1.2% @ 60°C) | 150A CB | ~111A max | Fused high-current accessories - see [SafetyHub][safetyhub] |
+| 3 | SafetyHub 150 | 4 AWG ✓ | ~3 ft | 13.73V (1.2% @ 60°C) | 150A CB | ~111A max | Fused high-current accessories - see [SafetyHub][safetyhub] |
 | 4 | BCDC Input | 4 AWG ✓ | ~5 ft | 13.84V (0.4% @ 60°C) | 40A CB | 25A charging | Charges AUX battery - see [BCDC][bcdc] |
 | 5 | Critical Cabin PDU | 6 AWG ✓ | ~8 ft | TBD | 40A CB | <10A | Dakota Digital modules - see [Critical Cabin PDU][cabin-pdu] |
 | 6-7 | **[Available]** | - | - | - | - | - | Future expansion (2 studs available) |
@@ -76,7 +76,7 @@ Eliminates battery terminal crowding by providing central distribution for all c
 **Connected Systems:**
 
 - [PMU24][pmu] - Power management unit
-- [SafetyHub 100][safetyhub] - Fused distribution
+- [SafetyHub 150][safetyhub] - Fused distribution
 - [BCDC Alpha 25][bcdc] - DC-DC charger
 - [Critical Cabin PDU][cabin-pdu] - Dakota Digital modules distribution
 - [Installation Checklist][installation] - Bus bar mounting procedure

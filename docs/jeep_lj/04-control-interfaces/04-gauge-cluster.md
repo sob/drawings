@@ -14,7 +14,7 @@ tags:
 
 **Model:** Dakota Digital 1996-03 TJ Style Gauge Cluster
 
-**Power Source:** PMU Out 14 (15A, auto-on with ignition RUN)
+**Power Source:** Critical Cabin PDU Slot 2 (10A fuse)
 
 **Ground:** Firewall ground stud
 
@@ -29,7 +29,7 @@ The Dakota Digital custom dash replaces the factory gauge cluster with a modern 
 ### Main Cluster
 
 - **Model:** Dakota Digital 1996-03 (TJ style gauge cluster)
-- **Power:** PMU Out 14 (15A, auto-on with ignition RUN)
+- **Power:** Critical Cabin PDU Slot 2 (10A fuse, CONSTANT power)
 - **Ground:** Firewall ground stud
 - **Display:** Digital/analog hybrid display with customizable gauges
 - **Functions:** Speedometer, tachometer, fuel level, coolant temp, oil pressure, voltmeter, odometer, trip meter
@@ -96,14 +96,15 @@ All 4 BIM modules are mounted to a single HDPE sheet on the firewall behind the 
 
 ## Power Distribution
 
-- **Main Power:** PMU Out 14 (15A, auto-on with ignition RUN) → Dakota Digital main cluster
-  - Auto-energized when ignition in RUN position (via PMU Pin 7/In 6)
+- **Main Power:** Critical Cabin PDU Slot 2 (10A fuse, CONSTANT power) → Dakota Digital main cluster
+  - CONSTANT power (always available when needed)
   - Critical system: speedometer required for legal vehicle operation
-  - Overcurrent protection via PMU
+  - Fused protection via Critical Cabin PDU
+  - Wire gauge: 16 AWG from PDU to cluster power input (~2 ft)
 - **Module Power:** All BIM modules (J1939, GPS, TPMS, Compass/Temp) powered via BIM/IO cables from main cluster
   - No separate power wiring needed for individual modules
   - Modules receive power through interconnecting BIM/IO cable harness
-- **Ground:** Firewall ground stud
+- **Ground:** Firewall ground stud (shared with other cabin electronics)
 
 ## Data Flow
 
@@ -114,16 +115,16 @@ All 4 BIM modules are mounted to a single HDPE sheet on the firewall behind the 
 
 ## Wiring Summary
 
-1. **Main Power:** PMU Out 14 → Dakota Digital 1996-03 main cluster (15A, auto-on with ignition RUN)
+1. **Main Power:** Critical Cabin PDU Slot 2 → Dakota Digital 1996-03 main cluster (10A fuse, CONSTANT power)
    - All BIM modules powered via BIM/IO cables from main cluster
-   - Wire gauge: 14 AWG from PMU Out 14 to cluster power input
-2. **Ground:** Cluster ground → firewall ground stud (14 AWG)
+   - Wire gauge: 16 AWG from Critical Cabin PDU to cluster power input (~2 ft)
+2. **Ground:** Cluster ground → firewall ground stud (16 AWG)
 3. **Module Interconnect:** Single BIM/IO cable harness from main cluster → firewall HDPE panel → all 4 BIM modules
 4. **J1939 CAN Bus:** Pickup from Cummins harness punch-through (engine bay) → J1939 CAN High/Low wires → 01-2-J1939 module (on HDPE panel)
    - Cummins wiring harness has its own firewall penetration
    - Tap into J1939 CAN High/Low at punch-through location
 5. **GPS Antenna Cable:** GPS-50-2 module (on HDPE panel) → GPS antenna (dash/windshield)
-6. **Temperature Probe Cable:** BIM-17-2 module (on HDPE panel) → through firewall (Grommet 3) → outside temp probe (grille area)
+6. **Temperature Probe Cable:** BIM-17-2 module (on HDPE panel) → through firewall (Grommet 6) → outside temp probe (grille area)
    - See [Firewall Ingress][firewall-penetrations-ingress-points] for penetration details
 
 ## J1939 CAN Bus Integration
@@ -144,8 +145,8 @@ The Cummins R2.8 ECM provides engine data via J1939 CAN bus:
 
 ## Outstanding Items
 
-- [ ] Verify 15A PMU output capacity is sufficient for entire Dakota Digital cluster system (main cluster + 4 BIM modules: 01-2-J1939, GPS-50-2, BIM-22-3, BIM-17-2)
-- [ ] Route 14 AWG power wire from PMU Out 14 (engine bay) through firewall to Dakota Digital cluster (behind dash)
+- [ ] Verify 10A fuse capacity is sufficient for entire Dakota Digital cluster system (main cluster + 4 BIM modules: 01-2-J1939, GPS-50-2, BIM-22-3, BIM-17-2)
+- [ ] Route 16 AWG power wire from Critical Cabin PDU Slot 2 to Dakota Digital cluster (behind dash, ~2 ft)
 - [ ] Determine if transfer case position sensors (2WD/4WD/4LO indicators) are available via J1939 or need discrete wiring to Dakota Digital
 - [ ] Determine exact GPS antenna mounting location (dash top vs windshield mount)
 - [ ] Determine exact outside temperature probe mounting location in grille area
@@ -159,12 +160,14 @@ The Cummins R2.8 ECM provides engine data via J1939 CAN bus:
 **Firewall Penetrations:**
 
 See [Firewall Ingress][firewall-penetrations-ingress-points] for complete firewall penetration planning including:
-- Grommet 3: Outside temperature probe routing from HDPE panel to grille area
+- Grommet 6: Outside temperature probe routing from HDPE panel to grille area
 - Cummins punch-through: J1939 CAN High/Low tap location and routing
 
 ## Related Documentation
 
-- [PMU Power Distribution][pmu-power-distribution] - PMU Out 14 power specifications and ignition control
+- [Critical Cabin PDU][critical-cabin-pdu] - Power source for Dakota Digital cluster
 - [Engine Systems][pmu-power-distribution] - ECM J1939 CAN bus specifications
-- [BODY PDU][body-rtmr] - BODY PDU cabin convenience circuits
+- [Firewall Ingress][firewall-penetrations-ingress-points] - Temperature probe and J1939 wiring through firewall
 - [Control Interfaces Overview][control-interfaces-overview] - All control interfaces
+
+[critical-cabin-pdu]: ../01-power-systems/02-starter-battery-distribution/03-critical-cabin-pdu.md

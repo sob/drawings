@@ -52,14 +52,14 @@ Organized by installation order for efficient build workflow.
 **Circuit Breakers:**
 
 - [ ] Mount Mechanical Products 174-S2-300-2 300A (PMU main power)
-- [ ] Mount Mechanical Products 174-S2-150-2 150A (SafetyHub 100)
+- [ ] Mount Mechanical Products 174-S2-150-2 150A (SafetyHub 150)
 - [ ] Mount Mechanical Products 174-S2-040-2 40A (BCDC input)
 
 **CONSTANT Bus Wiring:**
 
 - [ ] Run 2/0 AWG: START battery+ → CONSTANT bus (~5 ft)
 - [ ] Run 1 AWG: CONSTANT bus → 300A CB → PMU main power (~7-10 ft, temp-derated for 60°C)
-- [ ] Run 4 AWG: CONSTANT bus → 150A CB → SafetyHub 100
+- [ ] Run 4 AWG: CONSTANT bus → 150A CB → SafetyHub 150
 - [ ] Run 4 AWG: CONSTANT bus → 40A CB → BCDC input
 
 **NEGATIVE Bus Wiring:**
