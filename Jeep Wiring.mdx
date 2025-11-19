@@ -1,0 +1,1797 @@
+<style>{`
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 14px;
+    }
+
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.5rem; }
+    p { font-size: 1rem; }
+
+    li:has(input[type="checkbox"]) {
+      list-style: none;
+    }
+  `}</style>
+
+# Jeep LJ Cummins R2.8 - Electrical System Design
+
+## 1. Power Generation & Storage
+
+### Battery System
+
+- **Configuration:** Dual battery (front/rear split)
+- **Primary Battery (Front - Engine Bay):**
+  - Model: Odyssey ODX-34/78-AGM
+  - Type: AGM (Absorbed Glass Mat)
+  - CCA: 850A @ 0°F (-18°C)
+  - CA: 1050A @ 32°F (0°C)
+  - Amp-Hour Capacity: 68 Ah @ 20-hour rate
+  - Reserve Capacity: 135 minutes @ 25A
+  - Weight: 51 lbs
+  - Dimensions: 10.86" L × 6.84" W × 7.78" H
+  - Cycle Life: 400 cycles @ 80% DOD
+  - Loads Powered: Starter, Engine RTMR (all critical/SWITCHED circuits), Front-mounted winch
+- **Auxiliary Battery (Rear - Passenger Wheel Well):**
+  - Model: Odyssey ODX-34/78-AGM (same as front)
+  - Mounting: Enclosed compartment with access panel behind passenger seat
+  - Loads Powered: SwitchPros, SafetyHub, Body RTMR (all convenience/CONSTANT circuits)
+  - Charged by: RedArc BCDC Alpha 50
+- **Total System Capacity:** 136 Ah combined (68 Ah × 2), 1700 CCA combined
+- **Battery Isolator/Manager:** RedArc BCDC Alpha 50 (BCDC1250A)
+  - 50A DC-DC charging output
+  - Mounted near rear battery in wheel well compartment
+  - Input: 9-32V DC (from front battery/alternator)
+  - Multi-stage smart charging (AGM compatible)
+  - Automatic battery isolation
+  - Built-in jump start assist mode for emergency starting
+  - Solar input capability (future expansion)
+  - Green Power Priority (solar prioritized when available)
+  - Dimensions: 220mm L × 155mm W × 65mm H
+  - Ignition signal required: Body RTMR F12 provides BCDC trigger signal
+
+**Design Rationale:**
+
+- **Front Battery:** Handles all critical loads (starter, ECM, fuel pump, engine systems) - ensures vehicle can start and run even if rear battery fails
+- **Rear Battery:** Handles all convenience loads (lights, radios, compressor, heated seats) - can be fully depleted without affecting starting ability
+- **Weight Distribution:** Rear battery helps balance heavy Cummins diesel up front
+- **Emergency Jump:** BCDC Alpha 50's jump start assist mode can parallel batteries if front battery fails
+- **Charging Performance:** 50A output fully charges rear battery in ~1.5 hours from 50% depth of discharge
+- **Redundancy:** Vehicle can limp home on front battery alone if rear system fails
+
+### Alternator
+
+- **Rating:** 200A (TBD - specific part number)
+- **Output to Battery Positive:** 2/0 AWG cable (red)
+- **Alternator Case Ground:** TBD - size and routing to engine block
+
+### Grounding Architecture
+
+- **Front Battery Negative to Chassis:** 2/0 AWG cable (black) - engine bay chassis point
+- **Rear Battery Negative to Frame:** 2/0 AWG cable (black) - rear frame rail near wheel well
+- **Front to Rear Ground Reference:** 2/0 AWG cable from front battery negative to rear battery negative
+  - Prevents voltage differential between batteries
+  - Critical for BCDC operation and system stability
+- **Engine Block to Chassis:** 2/0 AWG cable
+- **Auxiliary Ground Points:**
+  - Engine bay frame rail ground stud
+  - Firewall ground stud (for body electronics)
+  - Rear frame rail (for rear battery)
+  - Body/tub ground points (verify paint removal)
+  - SwitchPros: Direct to rear battery negative (per manufacturer spec)
+  - BCDC Alpha 50: Direct to rear battery negative
+
+### System Load Summary
+
+- **Estimated Continuous Load:** TBD - calculate from all circuits
+- **Estimated Peak Load:** TBD - calculate worst-case simultaneous loads
+- **Alternator Margin:** TBD - verify 200A is sufficient
+- **Idle Load:** TBD - ECM, fuel pump, cooling fans at idle
+
+**Load Calculation Notes:**
+
+- SwitchPros alone can draw up to 150A peak
+- Engine systems (ECM, fuel, fans) approximately 40-60A
+- Need to verify we don't exceed alternator capacity
+
+**Outstanding Items:**
+
+- [ ] Determine specific alternator part number (200A)
+- [ ] Determine alternator case ground wire size and routing to engine block
+- [ ] Calculate exact front battery negative to chassis ground location in engine bay
+- [ ] Calculate exact rear battery negative to frame ground location near wheel well
+- [ ] Verify all auxiliary ground point locations and ensure paint removal for clean connection
+- [ ] Complete system load calculation (continuous, peak, idle, worst-case)
+- [ ] Verify 200A alternator is sufficient for total system load
+
+---
+
+## 2. Zone 1: Front Battery Tray & Primary Distribution (Engine Bay)
+
+### Main Circuit Breakers (Front Battery)
+
+- **SWITCHED Bus Protection:** Blue Sea 100A breaker from Front Battery+ → SWITCHED bus bar
+  - Feeds all critical engine circuits via Engine RTMR
+  - Mounted in engine bay near front battery
+- **Winch Main Power:** Direct connection from Front Battery+ → Warn Zeon 10-S (no fuse/breaker)
+  - Warn Zeon 10-S: 10,000 lb capacity, 400A peak draw
+  - Front-mounted winch powered from front battery for short cable run
+  - Dual 2/0 AWG cables (positive and negative) per Warn specifications
+- **BCDC Input Feed:** 50-60A breaker from Front Battery+ → BCDC Alpha 50 input
+  - Long cable run from engine bay to rear wheel well (~10-12 ft)
+  - Recommended: 2/0 or 4/0 AWG to minimize voltage drop
+
+### Bus Bar Configuration (Front Battery)
+
+- **SWITCHED Bus Bar:** TBD - location in engine bay, stud count, max capacity
+  - Powered when ignition is on
+  - Feeds: Engine RTMR (all critical engine circuits)
+  - Mounted: Engine bay (firewall or fender location)
+  - **CRITICAL:** Need to determine how starter solenoid/ignition switch energizes this bus
+
+### Power Flow Architecture (Front Battery - Engine Bay)
+
+```
+FRONT BATTERY+ (Engine Bay - Odyssey ODX-34/78-AGM, 68Ah, 850 CCA)
+  │
+  ├─→ Alternator (2/0 AWG red) - charging input
+  │
+  ├─→ Starter (2 AWG or larger, direct connection)
+  │
+  ├─→ [Blue Sea 100A CB] → SWITCHED Bus Bar (Engine Bay)
+  │     └─→ Engine RTMR → All critical engine circuits
+  │           ├─ ECM Power (F5 - 20A) - ECM internally controls fuel pump
+  │           ├─ HVAC Blower (F1 - 25A)
+  │           ├─ Engine Fans (F3, F4 - 20A each)
+  │           ├─ Grid Heater (F8 - 10A)
+  │           ├─ Headlights (F9 - 20A)
+  │           └─ Tail/Brake/Reverse (F6, F7 - 10A each)
+  │
+  ├─→ Direct connection (no breaker) → Winch Contactor → Winch Motor
+  │     └─ Controlled by 3-position dash switch via SafetyHub ATC-1
+  │
+  └─→ [50-60A CB] → BCDC Alpha 50 Input (2/0 or 4/0 AWG to rear)
+        └─ Long cable run: Engine bay → under vehicle → rear wheel well
+
+FRONT BATTERY- (Engine Bay)
+  ├─→ Engine bay chassis ground (2/0 AWG)
+  ├─→ Engine block ground (2/0 AWG)
+  └─→ Ground reference to rear battery (2/0 AWG to rear wheel well)
+```
+
+## 2a. Zone 1b: Rear Battery Compartment & Accessory Distribution (Wheel Well)
+
+### Rear Battery Compartment
+
+- **Location:** Passenger side rear wheel well
+- **Enclosure:** Custom compartment with access panel behind passenger seat
+- **Components in Compartment:**
+  - Odyssey ODX-34/78-AGM battery
+  - RedArc BCDC Alpha 50 charger/isolator
+  - CONSTANT bus bar (feeds all accessory circuits)
+  - Circuit breakers for SwitchPros and SafetyHub
+
+### Main Circuit Breakers (Rear Battery)
+
+- **CONSTANT Bus Protection:** Blue Sea 100A breaker from Rear Battery+ → CONSTANT bus bar
+  - Mounted in rear wheel well compartment
+  - Feeds all convenience/accessory circuits
+- **SwitchPros Feed Protection:** Blue Sea 150A breaker from CONSTANT bus → SwitchPros
+- **SafetyHub Feed Protection:** Blue Sea 100A breaker from CONSTANT bus → SafetyHub 150
+  - SafetyHub feeds ARB twin compressor (dual 60A MIDI fuses) and winch trigger (10A ATC fuse)
+
+### Bus Bar Configuration (Rear Battery)
+
+- **CONSTANT Bus Bar:** Mounted in rear wheel well compartment
+  - Always powered (even with ignition off, when rear battery is charged)
+  - Feeds: SwitchPros, SafetyHub, Body RTMR CONSTANT circuits
+  - Size: TBD - must handle up to 150A for SwitchPros alone
+
+### Power Flow Architecture (Rear Battery - Wheel Well)
+
+```
+REAR BATTERY+ (Passenger Wheel Well - Odyssey ODX-34/78-AGM, 68Ah, 850 CCA)
+  │
+  ├─→ BCDC Alpha 50 Output (50A DC-DC charging from front battery)
+  │     ├─ Input: Front battery via 2/0 or 4/0 AWG (50-60A CB protected)
+  │     ├─ Ignition Signal: Body RTMR F12 (12V trigger when engine running)
+  │     └─ Multi-stage AGM charging (bulk/absorption/float)
+  │
+  ├─→ [Blue Sea 100A CB] → CONSTANT Bus Bar (Rear Wheel Well)
+  │     │
+  │     ├─→ [Blue Sea 150A CB] → SwitchPros RCR-Force 12
+  │     │     └─→ All auxiliary lighting, lockers, compressor control
+  │     │           ├─ Roof lights (31A + 12A + 12A = 55A)
+  │     │           ├─ Fog/ditch/rock lights (9A + 12A + 3A = 24A)
+  │     │           ├─ Party/chase/rear lights (6A + 6A + 5A = 17A)
+  │     │           ├─ Dome lights (4A)
+  │     │           ├─ ARB lockers (2A + 2A = 4A)
+  │     │           └─ ARB compressor control (OUTPUT-11, 15A max)
+  │     │
+  │     ├─→ [Blue Sea 100A CB] → SafetyHub 150
+  │     │     ├─ ARB Compressor Motor 1 (MIDI-1 - 60A)
+  │     │     ├─ ARB Compressor Motor 2 (MIDI-2 - 60A)
+  │     │     └─ Winch contactor trigger (ATC-1 - 10A from dash switch)
+  │     │
+  │     └─→ Body RTMR (CONSTANT circuits only)
+  │           ├─ Rearview mirror camera (F5 - 10A)
+  │           ├─ *OPEN* (F6 - previously G1 GMRS, now direct battery)
+  │           ├─ *OPEN* (F7 - previously STX Intercom, now direct battery)
+  │           ├─ Ham radio (F8 - 15A, future)
+  │           ├─ USB charging (F9 - 10A)
+  │           ├─ Heated/cooled seats (F10, F11 - 20A each)
+  │           └─ Cargo lights + BCDC signal (F12 - 15A)
+  │                └─ **NOTE:** BCDC signal must be isolated from cargo lights!
+  │
+  └─→ Jump Start Assist (via BCDC Alpha 50 automatic mode when front battery low)
+
+REAR BATTERY- (Wheel Well)
+  ├─→ Rear frame rail ground (2/0 AWG)
+  ├─→ SwitchPros direct ground (2/0 AWG, per manufacturer)
+  ├─→ BCDC Alpha 50 ground (2/0 AWG)
+  └─→ Ground reference from front battery (2/0 AWG from engine bay)
+```
+
+### Inter-Battery Wiring Requirements
+
+**Front to Rear Power Cables:**
+1. **BCDC Input Power:** 2/0 or 4/0 AWG from front battery+ to BCDC input
+   - Route: Engine bay → under vehicle along frame rail → rear wheel well
+   - Length: ~10-12 feet
+   - Protection: 50-60A breaker at front battery
+   - Voltage drop critical: Use 4/0 AWG for best performance
+
+2. **Ground Reference:** 2/0 AWG from front battery- to rear battery-
+   - Prevents voltage differential between batteries
+   - Critical for BCDC operation and load distribution
+   - Same routing as power cable
+
+3. **BCDC Ignition Signal:** 14-16 AWG from Body RTMR F12 to BCDC trigger
+   - Tells BCDC when engine is running
+   - Route with main power cables or through cabin
+   - Must be clean SWITCHED signal, NOT shared with cargo lights!
+
+**Outstanding Items:**
+
+- [ ] Determine SWITCHED bus bar specifications (location, stud count, max capacity)
+- [ ] Determine specific mounting location in engine bay (firewall or fender)
+- [ ] **CRITICAL:** Determine how starter solenoid/ignition switch energizes the SWITCHED bus
+- [ ] Confirm exact BCDC breaker size (50A or 60A)
+- [ ] Decide on wire gauge for BCDC front-to-rear run: 2/0 AWG or upgrade to 4/0 AWG
+- [ ] Determine exact routing path for front-to-rear cables (under vehicle along frame rail vs through cabin)
+- [ ] Determine exact starter cable size (2 AWG or larger)
+- [ ] Confirm routing path for winch 2/0 AWG cables through front bumper
+- [ ] Determine CONSTANT bus bar specifications (location, stud count, max capacity)
+- [ ] Determine exact physical mounting locations for bus bars in rear wheel well compartment
+- [ ] Body RTMR F12: Determine how to isolate BCDC trigger signal from cargo lights circuit
+- [ ] Determine exact wire gauges for all inter-battery wiring
+- [ ] Confirm exact cable lengths for all inter-battery runs
+
+---
+
+## 3. Zone 2: Engine Bay - Critical Engine Systems
+
+### Engine Bay RTMR (Relay/Fuse Panel)
+
+**Model:** TBD - need to determine part number
+**Power Source:** SWITCHED bus bar (majority of circuits)
+**Mounting Location:** TBD - firewall or fender location
+**Ground:** TBD - direct to chassis or battery negative
+
+| Slot | Size |       Circuit        | Gauge  | Power Source |           Routing           | Load |                    Notes                    |
+| :--: | :--: | :------------------: | :----: | :----------: | :-------------------------: | :--: | :-----------------------------------------: |
+|  R1  | 10A  |   AC Clutch Relay    |  TBD   |   SWITCHED   |             TBD             | TBD  |         Trigger for R1 relay below          |
+|  R2  | 20A  | LP6 Headlight - High |  TBD   |   SWITCHED   |             TBD             | TBD  |                                             |
+|  R3  | 20A  | LP6 Headlight - Low  |  TBD   |   SWITCHED   |             TBD             | TBD  |       Need to determine DRL function        |
+|  F1  | 25A  |     HVAC Blower      | 12 AWG |   SWITCHED   |    To blower motor relay    | ~20A |           Consider 10 AWG upgrade           |
+|  F2  | 10A  |   Starter Solenoid   | 14 AWG |   SWITCHED   | To starter solenoid trigger | TBD  | Verify this is trigger only, not main power |
+|  F3  | 20A  |    Oil Cooler Fan    | 12 AWG |   SWITCHED   |   To fan relay/controller   | TBD  |                                             |
+|  F4  | 20A  |    PS Cooler Fan     | 12 AWG |   SWITCHED   |   To fan relay/controller   | TBD  |                                             |
+|  F5  | 20A  |      ECM Power       | 12 AWG |   SWITCHED   |      To ECM main power      | TBD  |     Critical - engine won't run without     |
+|  F6  | 10A  |     Tail / Brake     | 14 AWG |   SWITCHED   | To tail/brake light switch  | TBD  |                                             |
+|  F7  | 10A  |       Reverse        | 14 AWG |   SWITCHED   |   To reverse light switch   | TBD  |         Also triggers backup camera         |
+|  F8  | 10A  |     Grid Heater      | 14 AWG |   SWITCHED   |    To grid heater relay     | TBD  |           Verify relay and sizing           |
+|  F9  | 20A  |      Headlights      | 12 AWG |   SWITCHED   |     To headlight switch     | TBD  |                                             |
+| F10  | 15A  | Wiper Control (WS-51C) | 14 AWG |   SWITCHED   | To Ron Francis WS-51C module | 3-8A |  Wiper motor: 3-5A low, 6-8A high speed    |
+
+**Outstanding Items:**
+
+- [ ] Determine specific Engine RTMR part number and confirm slot configuration
+- [ ] Confirm Engine RTMR mounting location (firewall or fender)
+- [ ] Determine Engine RTMR ground connection (direct to chassis or battery negative)
+- [ ] Validate wire gauge for all circuits (current values are estimates)
+- [ ] Determine all routing paths through firewall for Engine RTMR circuits
+- [ ] Confirm actual load for all Engine RTMR circuits (currently TBD)
+- [ ] Verify LP6 DRL functionality and wiring requirements
+- [ ] Determine LP6 headlight relay trigger sources (R2, R3)
+- [ ] Confirm AC clutch relay (R1) trigger source and wiring
+- [ ] Confirm starter solenoid trigger circuit is trigger only, not main power
+- [ ] Confirm fuse sizing matches actual loads for all circuits
+- [ ] Determine Grid Heater relay specifications and verify sizing
+
+### Standalone Engine Controllers & HVAC
+
+#### HVAC Blower System
+
+**System Overview:**
+The Jeep LJ retains the factory HVAC system with heater and A/C functionality. The blower motor is controlled by the dashboard HVAC controls and powered through the Engine RTMR.
+
+**Components:**
+- **Blower Motor:** Factory Jeep TJ/LJ HVAC blower motor
+  - **Location:** Under dashboard, passenger side (factory location)
+  - **Speed Control:** Factory resistor pack or blower motor speed controller
+  - **Power:** Engine RTMR F1 (25A fuse, 12 AWG wire)
+  - **Load:** ~20A at maximum speed
+  - **Ground:** Chassis ground at firewall
+- **A/C Compressor Clutch:**
+  - **Power:** Controlled by Engine RTMR R1 relay (10A trigger fuse)
+  - **Trigger Source:** Factory HVAC controls (A/C button)
+  - **Main Power:** Direct from alternator or battery via high-current circuit
+  - **Load:** TBD - verify A/C clutch amperage (typically 3-5A for clutch coil)
+  - **Protection:** TBD - inline fuse or breaker size for main A/C circuit
+- **HVAC Controls:**
+  - **Type:** Factory Jeep TJ/LJ dash-mounted HVAC control panel
+  - **Functions:** Fan speed, temperature blend, mode selection, A/C on/off
+  - **Power Source:** TBD - likely from Body RTMR SWITCHED circuit
+  - **Wiring:** Factory Jeep harness retained where possible
+
+**Power Flow:**
+1. **Blower Motor:** SWITCHED bus → Engine RTMR F1 (25A) → blower motor speed controller → blower motor → chassis ground
+2. **A/C Clutch Trigger:** SWITCHED bus → Engine RTMR R1 relay trigger (10A) → A/C clutch coil
+3. **A/C Clutch Main Power:** Battery+ or alternator → TBD breaker/fuse → R1 relay contacts → A/C compressor clutch
+
+**Outstanding Items:**
+- [ ] Verify blower motor power draw at maximum speed (currently estimated 20A)
+- [ ] Determine if 25A fuse (F1) is sufficient or if upgrade to 30A is needed
+- [ ] Consider upgrading F1 circuit to 10 AWG if blower draws >20A
+- [ ] Determine A/C compressor clutch coil amperage draw
+- [ ] Determine main A/C power circuit protection (breaker or fuse size)
+- [ ] Determine A/C clutch main power source (battery+ direct or via alternator output)
+- [ ] Confirm Engine RTMR R1 relay specifications (contact rating, coil voltage)
+- [ ] Verify HVAC control panel power source (likely Body RTMR SWITCHED circuit)
+- [ ] Determine wire gauge for A/C clutch main power circuit
+- [ ] Confirm blower motor ground connection point on firewall
+- [ ] Test blower motor on all speed settings to verify resistor pack operation
+
+#### Windshield Wiper Control System
+
+**System Overview:**
+The Ron Francis WS-51C wiper control system replaces the TIPM wiper functions, providing delay/intermittent wiper control for the factory Jeep wiper motor. This standalone control module eliminates the need for the factory TIPM wiper circuits.
+
+**Components:**
+- **Wiper Control Module:** Ron Francis WS-51C
+  - **Installation Manual:** [Ron Francis WS-51C Instructions](https://s3.amazonaws.com/cdn.ronfrancis.com/downloads/INSTRUCTIONS/WS51C-INST.pdf)
+  - **Mounting:** TBD - under dash or near wiper motor (accessible location for adjustments)
+  - **Power Requirements:**
+    - Input Voltage: 12V DC
+    - Fuse: 15A recommended (typical wiper motor draw: 3-5A low speed, 6-8A high speed)
+    - Power Source: Engine RTMR F10 (spare slot, 15A, SWITCHED power)
+  - **Features:**
+    - Off / Mist / Delay / Low / High functions
+    - Variable delay adjustment (typical: 1-20 seconds)
+    - Park position control
+    - Compatible with single-motor wiper systems
+    - Replaces TIPM wiper control functions
+- **Wiper Motor:** Factory Jeep TJ/LJ wiper motor
+  - **Location:** Cowl area below windshield (factory location)
+  - **Type:** Single motor, two-speed with park position
+  - **Power:** Through WS-51C control module
+  - **Ground:** Chassis ground at firewall or cowl area
+- **Wiper Switch:** Ron Francis wiper switch (included with WS-51C or separate)
+  - **Type:** Multi-function rotary or lever switch
+  - **Mounting:** Dash panel or column-mounted location
+  - **Positions:** Off / Mist / Int (Delay) / Low / High
+  - **Wiring:** Low-voltage control signal to WS-51C module
+
+**Power Flow:**
+1. **Module Power:** SWITCHED bus → Engine RTMR F10 (15A) → WS-51C power input → chassis ground
+2. **Wiper Motor:** WS-51C high/low outputs → wiper motor high/low speed terminals → motor ground
+3. **Control Switch:** Dash wiper switch → control signal wires → WS-51C control inputs
+4. **Park Position:** Wiper motor park switch → WS-51C park input (auto-shutoff at rest position)
+
+**Wiring Summary:**
+1. **Power (+):** SWITCHED bus → Engine RTMR F10 (15A fuse) → WS-51C red power wire (12V input)
+2. **Ground (-):** WS-51C black ground wire → chassis ground or firewall ground point
+3. **Wiper Motor Outputs:**
+   - **Low Speed:** WS-51C low speed output → wiper motor low speed terminal
+   - **High Speed:** WS-51C high speed output → wiper motor high speed terminal
+   - **Motor Ground:** Wiper motor ground → chassis ground (factory ground location)
+4. **Park Switch:** Wiper motor park terminal → WS-51C park input (detects wiper rest position)
+5. **Control Switch Inputs:**
+   - Dash wiper switch → control wires → WS-51C module
+   - Switch functions: Off, Mist (momentary), Delay (variable), Low, High
+6. **Washer Pump (Optional):** Dash washer button → WS-51C washer output → washer pump motor
+
+**TIPM Functions Replaced:**
+The WS-51C wiper control system replaces the following TIPM functions:
+- Wiper motor low/high speed control
+- Intermittent/delay wiper timing
+- Mist function (momentary wipe)
+- Park position control (auto-shutoff)
+- Washer pump activation (optional)
+
+**Outstanding Items:**
+- [ ] Assign Engine RTMR F10 (spare slot) for WS-51C wiper control (15A, SWITCHED power)
+- [ ] Determine WS-51C mounting location (under dash or near wiper motor for easy adjustment access)
+- [ ] Verify factory wiper motor compatibility with WS-51C (single motor, two-speed with park)
+- [ ] Determine wiper switch mounting location (dash panel or column-mounted)
+- [ ] Confirm wiper motor power draw (typical: 3-5A low, 6-8A high) to verify 15A fuse sizing
+- [ ] Plan wire routing from Engine RTMR F10 to WS-51C module location
+- [ ] Plan wire routing from WS-51C to wiper motor (through firewall or cowl area)
+- [ ] Plan control switch wire routing from dash to WS-51C module
+- [ ] Verify wiper motor ground connection point (chassis ground at firewall or cowl)
+- [ ] Determine if washer pump integration is desired (optional WS-51C feature)
+- [ ] Order Ron Francis WS-51C module and compatible wiper switch
+- [ ] Verify WS-51C delay adjustment range meets requirements (typical: 1-20 seconds)
+
+#### Camaro Radiator Fan Controller
+
+**System Overview:**
+The Cummins R2.8 cooling system uses a Camaro electric radiator fan controlled by the ECM via PWM (Pulse Width Modulation) signal. This provides variable speed control based on coolant temperature.
+
+**Components:**
+- **Fan Motor:** Camaro electric radiator fan (dual-speed or variable speed)
+  - **Location:** Mounted to radiator (front of engine bay)
+  - **Power Source:** Direct to battery positive or SWITCHED bus (high current)
+  - **Control:** ECM PWM signal via fan controller module
+  - **Load:** TBD - verify actual amperage (typically 20-40A depending on speed)
+  - **Protection:** TBD - inline fuse or breaker (30A to 60A depending on fan specs)
+- **Fan Controller Module:**
+  - **Function:** Receives ECM PWM signal and controls fan motor speed
+  - **Trigger Input:** ECM pins 33/34 (verify exact pin numbers with Cummins harness documentation)
+  - **Output:** High-current switched power to fan motor
+  - **Mounting Location:** TBD - near radiator or on radiator shroud
+  - **Ground:** Engine bay chassis ground
+- **ECM Integration:**
+  - **ECM Output:** Pins 33/34 provide PWM signal (0-100% duty cycle)
+  - **Signal Type:** Ground-switched PWM (verify with Cummins documentation)
+  - **Wire Gauge:** 18-20 AWG for signal wires (low current)
+
+**Power Flow:**
+1. **Fan Power:** Battery+ or SWITCHED bus → TBD breaker/fuse (30-60A) → fan controller module → Camaro fan motor → chassis ground
+2. **Fan Control Signal:** ECM pins 33/34 → 18-20 AWG wires → fan controller PWM input
+3. **Controller Ground:** Fan controller ground terminal → engine bay chassis ground
+
+**Notes:**
+- This is the main radiator cooling fan, separate from:
+  - Oil cooler fan (Engine RTMR F3 - 20A)
+  - Power steering cooler fan (Engine RTMR F4 - 20A)
+- Fan may run continuously at low speed when engine is hot
+- Fan controller handles high inrush current during motor startup
+- ECM monitors coolant temperature and adjusts fan speed automatically
+
+**Outstanding Items:**
+- [ ] Confirm ECM pins 33/34 are correct for fan controller PWM trigger (verify with Cummins R2.8 harness documentation)
+- [ ] Determine Camaro fan actual amperage draw at low and high speed
+- [ ] Determine specific Camaro radiator fan model/part number
+- [ ] Determine fan controller module part number and specifications
+- [ ] Determine wire size for battery positive to fan controller (based on fan amperage)
+- [ ] Determine inline fuse or breaker size for fan power (30A, 40A, 50A, or 60A)
+- [ ] Decide if fan power comes from battery+ direct or SWITCHED bus
+- [ ] Confirm fan controller mounting location (near radiator or on shroud)
+- [ ] Verify fan controller ground connection point in engine bay
+- [ ] Determine wire routing from ECM to fan controller (through existing Cummins harness or separate)
+- [ ] Test fan operation at various coolant temperatures to verify ECM control
+
+#### Fuel Pump Circuit
+
+**ECM-Controlled (No External Power Circuit Required):**
+
+The Cummins R2.8 uses an electronically controlled Common Rail fuel injection system with a high-pressure fuel pump mounted on the front of the engine and driven by the camshaft through a gear. The fuel pump is powered and controlled directly by the ECM (Engine Control Module) through the engine wiring harness provided by Cummins.
+
+**No additional external power circuit, relay, or fuse is required** - the fuel pump receives power through the ECM's internal drivers and the Cummins-supplied engine harness.
+
+**What this means for the electrical system:**
+- The ECM (powered by Engine RTMR F5 - 20A) controls the fuel pump internally
+- No separate fuel pump relay needed in the Engine RTMR
+- No additional wiring required beyond the Cummins-supplied engine harness
+- Fuel pump operation is automatic when ECM is powered and engine is cranking/running
+
+### Engine Sensors & Critical Circuits
+
+#### ECM (Engine Control Module)
+
+- **Power:** F5 - 20A from Engine RTMR
+- **Ground:** TBD - dedicated ECM ground to battery negative?
+- **J1939 CAN Bus:** Outputs engine data to Dakota Digital J1939 interface module
+  - CAN High and CAN Low connections from ECM
+  - Provides: RPM, oil pressure, coolant temp, fuel level, CEL/MIL status, and other engine parameters
+  - Standard J1939 protocol (common for medium/heavy duty diesel engines)
+- **Other Outputs:** Pins 33/34 to fan controller, others TBD
+
+**Outstanding Items:**
+
+- [ ] Determine ECM ground connection (dedicated to battery negative or chassis ground)
+- [ ] Confirm ECM pin assignments for J1939 CAN bus (CAN High, CAN Low)
+- [ ] Confirm ECM pins 33/34 assignment for fan controller
+- [ ] Identify any other ECM outputs that need to be wired
+
+#### Instrument Cluster
+
+**Dakota Digital Custom Dash - 1996-03 TJ Style Gauge Cluster:**
+
+**System Components:**
+- **Main Cluster:** Dakota Digital 1996-03 (TJ style gauge cluster)
+- **J1939 Interface Module:** Dakota Digital 01-2-J1939
+  - Connects to Cummins R2.8 ECM via J1939 CAN bus
+  - Provides: Tachometer, oil pressure, coolant temperature, fuel level, check engine light (CEL/MIL)
+  - Wiring: CAN High, CAN Low from ECM
+- **GPS Speed Module:** Dakota Digital GPS-50-2
+  - GPS antenna mounted for clear sky view
+  - Eliminates need for transmission speed sensor
+  - Provides accurate speed regardless of gear ratios or tire size
+- **TPMS Module:** Dakota Digital BIM-22-3
+  - Tire Pressure Monitoring System
+- **Compass/Outside Temp Module:** Dakota Digital BIM-17-2
+  - Digital compass with outside temperature sensor
+
+**Power Distribution:**
+- **Main Power:** Body RTMR F1 (15A, SWITCHED circuit) → Dakota Digital main cluster
+- **Module Power:** All BIM modules (J1939, GPS, TPMS, Compass/Temp) powered via BIM/IO cables from main cluster
+  - No separate power wiring needed for individual modules
+  - Modules receive power through interconnecting BIM/IO cable harness
+- **Ground:** Firewall ground stud
+
+**Data Flow:**
+- Cummins R2.8 ECM → J1939 CAN bus (CAN High/CAN Low) → 01-2-J1939 module → Main Cluster
+- GPS-50-2 module → Main Cluster (speedometer data)
+- BIM-22-3 TPMS module → Main Cluster (tire pressure data)
+- BIM-17-2 Compass/Temp → Main Cluster (compass heading and outside temperature)
+
+**Physical Installation Plan:**
+
+**Module Mounting:**
+- **Module Panel:** HDPE sheet mounted to firewall behind dashboard
+  - All 4 BIM modules mounted to HDPE panel:
+    - 01-2-J1939 (J1939 interface)
+    - GPS-50-2 (GPS speed module)
+    - BIM-22-3 (TPMS module)
+    - BIM-17-2 (Compass/outside temp module)
+  - Single consolidated mounting location for easy service access
+  - Clean cable management from modules to main cluster
+
+**Sensor/Antenna Mounting:**
+- **GPS Antenna:** Dash top or windshield mount (clear sky view)
+  - Cable from GPS-50-2 module (on firewall HDPE panel) to antenna
+- **Outside Temperature Probe:** Grille area
+  - Cable from BIM-17-2 module (on firewall HDPE panel) to grille probe
+- **TPMS Sensors:** 4x wireless sensors (one per wheel)
+  - No wiring required - communicate wirelessly with BIM-22-3 module
+
+**Wiring Summary:**
+- **Main Power:** Body RTMR F1 → Dakota Digital 1996-03 main cluster (15A, SWITCHED)
+  - All BIM modules powered via BIM/IO cables from main cluster
+- **Ground:** Cluster ground → firewall ground stud
+- **Module Interconnect:** Single BIM/IO cable harness from main cluster → firewall HDPE panel → all 4 BIM modules
+- **J1939 CAN Bus:** Pickup from Cummins harness punch-through (engine bay) → J1939 CAN High/Low wires → 01-2-J1939 module (on HDPE panel)
+  - Cummins wiring harness has its own firewall penetration
+  - Tap into J1939 CAN High/Low at punch-through location
+- **GPS Antenna Cable:** GPS-50-2 module (on HDPE panel) → GPS antenna (dash/windshield)
+- **Temperature Probe Cable:** BIM-17-2 module (on HDPE panel) → outside temp probe (grille area)
+
+**Outstanding Items:**
+- [ ] Verify 15A fuse is sufficient for entire Dakota Digital cluster system (main cluster + 4 BIM modules)
+- [ ] Determine exact GPS antenna mounting location (dash top vs windshield mount)
+- [ ] Determine exact outside temperature probe mounting location in grille area
+- [ ] Confirm TPMS sensor compatibility with wheel/tire setup (4x wireless sensors)
+- [ ] Determine exact HDPE panel dimensions and mounting points on firewall
+- [ ] Plan exact cable routing for BIM/IO harness from dash cluster to firewall HDPE panel
+- [ ] Determine cable routing for GPS antenna cable from HDPE panel to dash/windshield
+- [ ] Determine cable routing for outside temp probe from HDPE panel through firewall to grille area
+- [ ] Confirm J1939 CAN High/Low tap location at Cummins harness punch-through
+- [ ] Determine wire gauge and routing for J1939 wires from Cummins punch-through to 01-2-J1939 module on HDPE panel
+
+#### Transmission & Safety Switches
+
+**Transmission:** AX15 5-speed manual
+- **Clutch Safety Switch:** Required - prevents starter engagement unless clutch depressed
+  - Location: Clutch pedal bracket
+  - Wiring: In series with starter solenoid trigger circuit (Engine RTMR F2)
+  - Type: Normally open switch, closes when clutch depressed
+- **Reverse Light Switch:** Integrated in transmission
+  - Wiring: To Engine RTMR F7 (reverse light circuit)
+  - Also triggers backup camera when in reverse
+
+**Outstanding Items:**
+- [ ] Verify clutch safety switch part number and type
+- [ ] Confirm clutch safety switch wiring polarity (normally open switch, closes when clutch depressed)
+- [ ] Confirm reverse switch output wire from AX15 transmission
+- [ ] Wire clutch switch in series with starter solenoid trigger circuit (Engine RTMR F2)
+- [ ] Determine routing for clutch switch wire from pedal bracket to Engine RTMR
+
+**Outstanding Items - Other Critical Circuits:**
+
+- [ ] **OBDII Port Power** - verify if Cummins ECM provides or needs separate circuit
+- [ ] **Transfer Case Position Sensors** - determine if 2WD/4WD/4LO indicators available via J1939 or need discrete wiring to Dakota Digital
+- [ ] **Brake Light Switch** - verify integration with Engine RTMR F6 circuit
+- [ ] **Horn Relay** - determine specifications and wiring for Command Touch CT4 horn button
+
+**Notes:**
+- Oil pressure and coolant temperature are provided by Cummins R2.8 ECM via J1939 CAN bus to Dakota Digital
+- No additional discrete sensors needed for oil pressure or coolant temp
+- Fuel level sender connects directly to ECM (which reports it via J1939)
+
+---
+
+## 4. Zone 3: Engine Bay - Auxiliary Systems
+
+### SafetyHub 150 Fuse Panel
+
+**Model:** Blue Sea 7748
+**Link:** https://www.bluesea.com/products/7748/SafetyHub_150_Fuse_Block
+**Power Source:** CONSTANT bus bar
+**Mounting Location:** Engine compartment - TBD specific location
+**Ground:** TBD - chassis ground point
+
+|  Slot  | Size |           Circuit            | Gauge | Power Source |           Routing            | Load |                   Notes                    |
+| :----: | :--: | :--------------------------: | :---: | :----------: | :--------------------------: | :--: | :----------------------------------------: |
+| MIDI-1 | 60A  | ARB Compressor Motor 1 Power | 10AWG |   CONSTANT   |     To compressor motor 1     | 45A  |           One motor of twin setup           |
+| MIDI-2 | 60A  | ARB Compressor Motor 2 Power | 10AWG |   CONSTANT   |     To compressor motor 2     | 45A  |           One motor of twin setup           |
+| MIDI-3 |  -   |            SPARE             |   -   |      -       |              -               |  -   |                                            |
+| MIDI-4 |  -   |            SPARE             |   -   |      -       |              -               |  -   |                                            |
+| ATC-1  | 10A  |   Winch Contactor Trigger    |  TBD  |   CONSTANT   |   From 3-position selector   | ~1A  | Trigger only, main winch power is separate |
+| ATC-2  |  -   |            SPARE             |   -   |      -       |              -               |  -   |                                            |
+| ATC-3  |  -   |            SPARE             |   -   |      -       |              -               |  -   |                                            |
+| ATC-4  |  -   |            SPARE             |   -   |      -       |              -               |  -   |                                            |
+
+**NOTE:** ARB CKBLTA12 twin compressor uses both MIDI-1 and MIDI-2 fuse slots (60A each) for the two independent motors. SwitchPros OUTPUT-11 provides control signal. See Section 7 ARB Twin Compressor for complete wiring details.
+
+**Outstanding Items:**
+
+- [ ] Determine exact SafetyHub mounting location in engine compartment
+- [ ] Determine SafetyHub chassis ground point location
+- [ ] Determine wire gauge for all SafetyHub circuits (currently TBD)
+- [ ] Determine routing for winch contactor trigger from SafetyHub ATC-1 to winch
+
+---
+
+## 5. Zone 4: Cabin - Body Control & Accessories
+
+### Body RTMR (Relay/Fuse Panel)
+
+**Model:** TBD - need to determine part number
+**Power Source:** Mix of CONSTANT and SWITCHED buses
+**Mounting Location:** Under dash - passenger side
+**Ground:** TBD
+
+| Slot | Size |              Circuit               | Gauge | Power Source |                Routing                | Load |                  Notes                  |
+| :--: | :--: | :--------------------------------: | :---: | :----------: | :-----------------------------------: | :--: | :-------------------------------------: |
+|  F1  | 15A  |      Dakota Digital Cluster        |  TBD  |   SWITCHED   |     To instrument cluster power       | TBD  |   Includes all gauge control units      |
+|  F2  | 15A  |  Fusion MS-RA670 Radio (dual pwr)  |  TBD  | CONSTANT + SWITCHED |    To radio constant & switched power | 15A  | Requires both CONSTANT and SWITCHED power inputs |
+|  F3  | 20A  |          Ignition Switch           |  TBD  |   SWITCHED   | Feeds SafetyHub and Switched circuits | TBD  | Verify this routing - seems backwards?  |
+|  F4  | 10A  |         Accessories Small          |  TBD  |   SWITCHED   |                  TBD                  | TBD  |            What accessories?            |
+|  F5  | 10A  |          Rearview Mirror           |  TBD  |   CONSTANT   |         WolfBox camera/mirror         | TBD  |                                         |
+|  F6  | 10A  |         *OPEN*         |  TBD  |   CONSTANT   |                  OPEN                  | TBD  |   Previously: G1 GMRS (now direct battery)    |
+|  F7  | 10A  |       *OPEN*        |  TBD  |   CONSTANT   |                  OPEN                  | TBD  |   Previously: STX Intercom (now direct battery)    |
+|  F8  | 15A  |         Ham Radio - FUTURE         |  TBD  |   CONSTANT   |                  TBD                  | TBD  |                                         |
+|  F9  | 20A  |       Always-on USB Charging       |  TBD  |   CONSTANT   |           To USB dash ports (2x Powerwerx PanelUSB-75W)           | ~13A |  Dual USB ports, ~6.5A each max                                        |
+| F10  | 15A  |        Driver Heated Seat          |  TBD  |   CONSTANT   |         via On/Off Switch             | 15A  |        Heated seat only                 |
+| F11  | 15A  |       Passenger Heated Seat        |  TBD  |   CONSTANT   |         via On/Off Switch             | 15A  |        Heated seat only                 |
+| F12  | 15A  | Cargo Lights + RedArch BCDC Signal |  TBD  |   CONSTANT   |                  TBD                  | TBD  | Verify BCDC signal is isolated properly |
+
+**Outstanding Items:**
+
+- [ ] Determine specific Body RTMR part number
+- [ ] Determine Body RTMR ground connection location
+- [ ] Verify if 15A fuse is sufficient for Dakota Digital 1996-03 cluster system (main cluster + 4 BIM modules: 01-2-J1939, GPS-50-2, BIM-22-3, BIM-17-2)
+- [ ] Determine wire gauge for all Body RTMR circuits (currently TBD)
+- [ ] Confirm actual load for all Body RTMR circuits (currently TBD)
+- [ ] **Clarify F3 ignition switch routing** - does this circuit feed ignition or is it fed by ignition?
+- [ ] **Determine what F4 "Accessories Small" circuit is for**
+- [ ] Determine specific WolfBox camera/mirror model and power requirements (F5)
+- [ ] Determine routing for all CONSTANT circuits from Body RTMR to devices
+- [ ] Determine routing for all SWITCHED circuits from Body RTMR to devices
+- [ ] **Body RTMR F12: Determine how to isolate BCDC trigger signal from cargo lights**
+  - BCDC needs clean SWITCHED signal for proper battery management
+  - Should not share fuse with cargo lights
+- [ ] Confirm routing for heated seat on/off switches to Body RTMR F10/F11
+
+### Physical Switch Panel Layout
+
+**Location:** Dashboard
+**Configuration:** 6-button panel
+
+| Button |    Type    |     Label     |             Notes              |    Routed To    | Power Source |
+| :----: | :--------: | :-----------: | :----------------------------: | :-------------: | :----------: |
+|   1    |    USB     | USB-C + USB-A |           Always on            |  Body RTMR F9   |   CONSTANT   |
+|   2    |   BLANK    |       -       |               -                |        -        |      -       |
+|   3    |   ON/OFF   | Driver Heat   |    Heated seat on/off          |  Body RTMR F10  |   CONSTANT   |
+|   4    | 3-POSITION | Winch Control |   Off / SwitchPros / Manual    | SafetyHub ATC-1 |   CONSTANT   |
+|   5    |   ON/OFF   | Passenger Heat|    Heated seat on/off          |  Body RTMR F11  |   CONSTANT   |
+|   6    |    USB     | USB-C + USB-A |           Always on            |  Body RTMR F9   |   CONSTANT   |
+
+**USB Port Specifications (Buttons 1 & 6):**
+- **Model:** Powerwerx Panel Mount USB Type-C QC 4.0 75W (PanelUSB-75W)
+- **Link:** [Powerwerx PanelUSB-75W](https://powerwerx.com/panel-mount-usb-typec-qc40-75w)
+- **Ports per Unit:** USB-C (QC 4.0, 60W PD) + USB-A (QC 3.0, 18W)
+- **Total Power per Unit:** 78W combined (75W rated)
+- **Input Voltage:** 9-24V DC (12V vehicle compatible)
+- **Mounting:** 1-1/8" diameter round panel cutout
+- **Features:** Weather-tight protective cover with dual seal
+- **Charging Protocols:** QC4.0, QC3.0, QC2.0, PD3.0 PPS (27W/36W/48W/60W), Apple 2.4A, Samsung AFC, Huawei FCP/SCP
+- **Current Draw per Unit:** Up to 6.5A at 12V (78W ÷ 12V ≈ 6.5A)
+- **Combined Draw (2 units):** Up to ~13A maximum
+
+**Power Distribution:**
+- Both USB ports powered from Body RTMR F9 (CONSTANT, 20A fuse)
+- Combined maximum draw: ~13A (well within 20A fuse capacity)
+
+**Heated Seat Specifications (Buttons 3 & 5):**
+- **Seats:** PRP EnduroTrek with integrated heating elements
+- **Type:** Simple on/off switches (not DPDT)
+- **Function:** Heated seats only (no cooling function)
+- **Power:** 15A per seat (Body RTMR F10 and F11)
+  - Driver seat: Body RTMR F10 (15A fuse)
+  - Passenger seat: Body RTMR F11 (15A fuse)
+- **Control:** Direct on/off control from dashboard switches
+- **Fuse Rating:** 15A per seat (PRP EnduroTrek factory specification)
+
+**Notes:**
+
+- 3-position winch control: Off / controlled by SwitchPros / manual bypass
+- USB ports are panel mount, round style from Powerwerx (1-1/8" diameter cutout)
+- Each USB port unit supports simultaneous USB-C and USB-A charging
+- Heated seats are 15A each (not heated/cooled, so simpler on/off switches instead of DPDT)
+
+**Outstanding Items:**
+
+- [ ] Determine exact dashboard switch panel mounting location and layout
+- [ ] Determine switch panel part numbers for on/off switches (heated seats) and 3-position switch (winch)
+- [ ] Confirm USB port wiring from Body RTMR F9 to both dashboard USB panels (buttons 1 and 6)
+  - 2x Powerwerx PanelUSB-75W units (1-1/8" round cutout each)
+  - Total combined draw up to ~13A on 20A fuse
+- [ ] Determine exact 3-position winch control switch wiring diagram (positions: off/SwitchPros/manual)
+- [ ] Confirm heated seat on/off switch wiring to Body RTMR F10/F11
+  - 15A per seat (driver and passenger)
+  - Simple on/off control (not heated/cooled DPDT)
+- [ ] Determine what Button 2 (currently blank) will be used for
+
+---
+
+## 6. Zone 5: Cabin - Lighting & Accessory Control
+
+### SwitchPros RCR-Force 12
+
+**Model:** RCR-Force 12
+**Manual:** https://www.switchpros.com/wp-content/uploads/RCR-force-12-installation-guide-REV-1.9.pdf
+**Power Source:** 150A breaker from CONSTANT bus
+**Power Module Location:** TBD - under hood (rated to 125°C) or under dash
+**Control Panel Location:** TBD - dash mount (4" L x 3" W x 0.375" H)
+**Ground:** Direct to battery negative (per manufacturer spec)
+**IP Rating:** IP67 (both power module and control panel)
+
+**Specifications:**
+
+- 150A total capacity
+- 17 outputs total
+- 4 outputs @ 35A (high in-rush circuits)
+- 1 output @ 30A (high in-rush)
+- 11 outputs @ 15A (can be combined for larger loads)
+- 1 low-side driver @ 2A
+
+#### Control Panel Layout
+
+| Button |       Circuit       | Draw |                      Details                      |    Output Pin(s)     |
+| :----: | :-----------------: | :--: | :-----------------------------------------------: | :------------------: |
+|   1    | Roof Center Section | 31A  |         6x BD XL Linkable (Combo Pattern)         |       OUTPUT-1       |
+|   2    |    Ditch Lights     | 12A  |          2x BD LP6 Pro (Driving Pattern)          |       OUTPUT-2       |
+|   3    |     Fog Lights      |  9A  |            3x BD Squadron SAE (Amber)             |       OUTPUT-3       |
+|   4    |     Dome Lights     |  4A  | 4x KC Cyclone (2 front roll bar, 2 rear roll bar) |       OUTPUT-4       |
+|   5    |  Roof Outer Spots   | 12A  |         2x BD XL Linkable (Spot Pattern)          |       OUTPUT-5       |
+|   6    |     Rock Lights     |  3A  |               6x KC Cyclone Lights                |       OUTPUT-6       |
+|   7    |  Rear Amber Chase   |  6A  |        BD OnX6 Arc (Amber, Wide Cornering)        |       OUTPUT-7       |
+|   8    |    Party Lights     |  6A  |      1x BD RGB Whip + 4x Footwell LED Strips      |       OUTPUT-8       |
+|   9    |    Front Locker     |  2A  |                    ARB Locker                     | OUTPUT-17 (low-side) |
+|   10   |     Rear Locker     |  2A  |                    ARB Locker                     |      OUTPUT-10       |
+|   11   |     Compressor      | 15A  |          ARB Twin Compressor (Brushless)          |      OUTPUT-11       |
+|   12   |     Rear Lights     |  5A  |        2x BD S1 Pro (Above License Plate)         |      OUTPUT-12       |
+
+**Notes:**
+
+- Rear roll bar lights can also be controlled by a switch in the back seat (need to wire in parallel or use TRIGGER input)
+- OUTPUT-11 provides control signal to ARB compressor (main power is separate: CONSTANT bus → dual 60A fuses → compressor)
+- Total draw if all outputs on simultaneously: ~115A (within 150A capacity)
+
+#### 20-Pin Harness Connector Pinout
+
+| Pin |   Label   |    Color    | Gauge  |  Max Load   | Assigned Circuit           | Load |              Notes               |
+| :-: | :-------: | :---------: | :----: | :---------: | -------------------------- | :--: | :------------------------------: |
+|  1  | OUTPUT-5  |    GREEN    | 14 AWG |     15A     | Roof Outer Spots           | 12A  |                                  |
+|  2  | OUTPUT-6  |    BLUE     | 14 AWG |     15A     | Rock Lights                |  3A  |                                  |
+|  3  | IGNITION  |   LT BLUE   |   -    |      -      | Connect to ignition signal |  -   |      For auto-off features       |
+|  4  |  LIGHTS   |    WHITE    |   -    |      -      | Connect to parking lights  |  -   |       For DRL integration        |
+|  5  | OUTPUT-7  |   PURPLE    | 14 AWG |     15A     | Rear Amber Chase           |  6A  |                                  |
+|  6  | OUTPUT-8  |    GREY     | 14 AWG |     15A     | Party Lights               |  6A  |                                  |
+|  7  | TRIGGER-1 |    PINK     |   -    |      -      | TBD                        |  -   |   Can trigger output remotely    |
+|  8  | TRIGGER-2 |    PINK     |   -    |      -      | TBD                        |  -   |   Can trigger output remotely    |
+|  9  | OUTPUT-9  |    WHITE    | 14 AWG | 30A (2x15A) | SPARE (can combine 9+10)   |  -   |                                  |
+| 10  | OUTPUT-9B |    WHITE    | 14 AWG |      -      | SPARE (fused with 9)       |  -   |                                  |
+| 11  | OUTPUT-10 |     TAN     | 14 AWG |     15A     | Rear Locker                |  2A  |                                  |
+| 12  | OUTPUT-11 |    BROWN    | 14 AWG |     15A     | Compressor control         | 15A  | Control signal to compressor     |
+| 13  | OUTPUT-12 |     RED     | 14 AWG |     15A     | Rear Lights                |  5A  |                                  |
+| 14  |  GROUND   |    BLACK    |   -    |      -      | Direct to battery negative |  -   |   Critical - direct connection   |
+| 15  | OUTPUT-13 |   ORANGE    | 14 AWG |     15A     | SPARE                      |  -   |                                  |
+| 16  | OUTPUT-14 |   YELLOW    | 14 AWG |     15A     | SPARE                      |  -   |                                  |
+| 17  | TRIGGER-3 |    PINK     |   -    |      -      | TBD                        |  -   |   Can trigger output remotely    |
+| 18  | OUTPUT-17 |  LT GREEN   |   -    |     2A      | Front Locker (low-side)    |  2A  |       Low-side switch only       |
+| 19  | OUTPUT-15 | GREEN/BLACK | 14 AWG |     15A     | SPARE                      |  -   |                                  |
+| 20  | OUTPUT-16 | BLUE/BLACK  | 14 AWG |     15A     | SPARE                      |  -   |                                  |
+
+#### 4-Pin Harness (High Current Outputs)
+
+| Pin |  Label   | Color  | Gauge | Max Load | Assigned Circuit    | Load |        Notes         |
+| :-: | :------: | :----: | :---: | :------: | ------------------- | :--: | :------------------: |
+|  1  | OUTPUT-1 | BROWN  | 10AWG |   35A    | Roof Center Section | 31A  |                      |
+|  2  | OUTPUT-2 |  RED   | 10AWG |   35A    | Ditch Lights        | 12A  |                      |
+|  3  | OUTPUT-3 | ORANGE | 10AWG |   35A    | Fog Lights          |  9A  |                      |
+|  4  | OUTPUT-4 | YELLOW | 10AWG |   35A    | Dome Lights         |  4A  |                      |
+
+
+**Outstanding Items:**
+
+- [ ] Determine SwitchPros power module mounting location (under hood at 125°C or under dash)
+- [ ] Determine SwitchPros control panel mounting location on dash
+- [ ] Confirm SwitchPros ground direct to rear battery negative (per manufacturer spec)
+- [ ] Determine ignition signal source for SwitchPros Pin 3 (IGNITION - LT BLUE)
+- [ ] Determine parking lights signal source for SwitchPros Pin 4 (LIGHTS - WHITE) for DRL integration
+- [ ] Decide what to use TRIGGER-1, TRIGGER-2, TRIGGER-3 inputs for
+- [ ] Assign spare outputs: OUTPUT-9, OUTPUT-13, OUTPUT-14, OUTPUT-15, OUTPUT-16
+- [ ] Determine how to wire rear roll bar switch in parallel with button 4 or use a TRIGGER input
+
+### Communication Systems
+
+#### Radio Head Unit
+
+**System Overview:**
+The dash-mounted radio head unit provides AM/FM radio, Bluetooth connectivity, and NMEA 2000 integration for marine-grade performance in off-road conditions.
+
+**Components:**
+- **Radio Head Unit:** Fusion MS-RA670 Marine Entertainment System
+  - **Manual:** [Fusion MS-RA670 Installation Manual](https://pdf.crutchfieldonline.com/ImageBank/v20190610170100/Manuals/917/917RA670.PDF)
+  - **Location:** Dashboard center console (factory radio location)
+  - **Power Requirements:**
+    - **Constant Power (Memory):** Yellow wire - 12V constant (battery direct)
+    - **Switched Power (Ignition):** Red wire - 12V switched (on with ignition)
+    - **Fuse Rating:** 15A (per manual specifications)
+    - **Combined Circuit:** Body RTMR F2 (20A fuse, SWITCHED power with constant power tap)
+  - **Features:**
+    - AM/FM radio with RDS
+    - Bluetooth audio streaming and hands-free calling
+    - Multi-zone audio (3 zones + subwoofer)
+    - DSP (Digital Signal Processing) with presets
+    - NMEA 2000 integration (future expansion for GPS/depth/wind data)
+    - PartyBus networking (link multiple Fusion units)
+    - IPX7 waterproof rating (marine-grade for off-road dust/water resistance)
+    - USB audio playback
+  - **RCA Pre-Outs (to Fusion Apollo amplifier):**
+    - Zone 1: Left + Right RCA outputs (to amplifier channels 3 & 4 for front dash speakers)
+    - Zone 2: Left + Right RCA outputs (to amplifier channels 5 & 6 for rear roll bar speakers)
+    - Zone 3: Left + Right RCA outputs (available for future expansion)
+    - Subwoofer: Mono RCA output (to amplifier channels 1+2 bridged for subwoofer)
+  - **Speaker Outputs:** 4x 50W RMS (not used - amplifier powers all speakers)
+  - **Antenna:** Factory Jeep AM/FM antenna (mounted on fender or windshield)
+    - Motorola connector (standard automotive antenna)
+  - **Display:** 2.7" full-color TFT display with sunlight viewability
+  - **Load:** 15A maximum (per manual specifications)
+
+**Wiring:**
+1. **Constant Power (Yellow wire):** CONSTANT bus → Body RTMR F2 (20A) → MS-RA670 constant power (memory)
+   - Note: F2 will need to source from CONSTANT bus (not SWITCHED bus) to provide both constant and switched power
+   - Alternative: Run separate constant power wire from CONSTANT bus to radio, keep F2 on SWITCHED bus
+2. **Switched Power (Red wire):** SWITCHED bus → Body RTMR F2 (20A) → MS-RA670 switched power (ignition)
+   - Radio powers on/off with ignition
+3. **Ground (Black wire):** MS-RA670 ground → firewall ground stud or dash ground point
+   - Clean ground critical for audio quality and noise reduction
+4. **Speaker Wiring:** MS-RA670 speaker outputs → front/rear speakers via factory harness (where possible)
+   - Front Left: White (+) / White-Black (-)
+   - Front Right: Gray (+) / Gray-Black (-)
+   - Rear Left: Green (+) / Green-Black (-)
+   - Rear Right: Purple (+) / Purple-Black (-)
+5. **Antenna:** MS-RA670 antenna input (blue Motorola connector) → factory antenna cable
+6. **Bluetooth Microphone:** MS-RA670 microphone input → wired microphone mounted near driver (for hands-free calling)
+
+**Power Source Clarification:**
+Since the MS-RA670 requires both constant power (memory/clock) and switched power (on/off), Body RTMR F2 needs to be configured to provide both:
+
+**Option 1 (Recommended):** Modify F2 to support dual power
+- F2 constant power input from CONSTANT bus → MS-RA670 yellow wire (memory)
+- F2 switched power input from SWITCHED bus → MS-RA670 red wire (ignition on/off)
+- Single 20A fuse protects both circuits (15A radio draw is within capacity)
+
+**Option 2:** Separate circuits
+- F2 (SWITCHED bus, 20A) → MS-RA670 red wire only (ignition power)
+- New spare Body RTMR circuit (CONSTANT bus, 15A) → MS-RA670 yellow wire only (memory)
+
+**Outstanding Items:**
+- [ ] Decide on power wiring configuration (Option 1: dual power via F2, or Option 2: separate circuits)
+- [ ] Verify if Body RTMR F2 can support both CONSTANT and SWITCHED power inputs (or if separate circuit needed)
+- [ ] Determine ground connection point for MS-RA670 (firewall stud or dash ground)
+- [ ] Plan wiring for Bluetooth microphone mounting location (near driver for hands-free calling)
+- [ ] Determine if NMEA 2000 integration will be used (future GPS/depth/wind data display on radio)
+- [ ] Configure MS-RA670 DSP settings for subwoofer crossover (typically 80-120 Hz low-pass filter)
+- [ ] Verify MS-RA670 Zone 1/2/3 RCA output configuration in settings (assign zones to front/rear/sub)
+
+#### Fusion Apollo Amplifier
+
+**System Overview:**
+The Fusion Apollo amplifier provides high-power audio for speakers and subwoofer, delivering marine-grade performance with Class-D efficiency.
+
+**Components:**
+- **Amplifier:** Fusion Apollo Marine 6-Channel Amplifier
+  - **Model:** MS-AP61800 / 010-02284-65
+  - **Installation Manual:** [Fusion Apollo Multichannel Amplifiers Installation Instructions](https://static.garmin.com/pumac/Fusion_Apollo_Multichannel_Amplifiers_Install_EN-US.pdf)
+  - **Mounting:** TBD - cargo area or under rear seat (recommended for central speaker wire routing)
+  - **Power Source:** Direct from CONSTANT bus or rear battery (high current)
+  - **Class:** Class-D amplifier (high efficiency, low heat)
+  - **Total Power Output:** 1800W total rated power
+  - **Channel Configuration:**
+    - **6-Channel Mode:** 6x 150W RMS per channel @ 4Ω @ 14.4V input, <1% THD
+    - **Bridged Mode:** 3x 580W RMS @ 4Ω @ 14.4V input, <1% THD
+      - Each pair of channels is independently bridgeable (1+2, 3+4, 5+6)
+      - Can be configured as 6-channel, 5-channel, 4-channel, or 3-channel
+    - **Recommended Configuration (4 speakers + 1 subwoofer):**
+      - Channels 1+2 bridged: 580W RMS @ 4Ω for subwoofer
+      - Channels 3+4: 2x 150W RMS @ 4Ω for front door speakers
+      - Channels 5+6: 2x 150W RMS @ 4Ω for rear roll bar tower speakers
+  - **Bridge Adapters (Included):**
+    - Fusion includes bridge adapters with built-in magnets
+    - Magnets automatically trigger amplifier "High Power Mode" when bridging
+    - Adapters block unused speaker terminal wires for clean subwoofer bridging
+    - Adapter blocks one RCA input to create mono subwoofer channel
+  - **Fuse Rating:** 40-50A fast-acting fuse (TBD - verify with manual, estimated based on 6-channel vs 4-channel 30A)
+  - **Current Draw:** TBD - verify actual amperage (estimated 35-45A continuous, 60-70A peak at full volume)
+    - Class-D efficiency typically 70-85%, so ~40A continuous draw at full power (1800W ÷ 12V ÷ 0.75 efficiency ≈ 40A)
+  - **Protection Features:**
+    - Reverse voltage protection
+    - Input under/over voltage protection
+    - Over temperature protection
+    - Output short circuit protection
+    - Ignition Safety Protected (SAE J1171)
+  - **Operating Temperature:** 32°F to 122°F (0°C to 50°C)
+  - **Dimensions:** 11.69" W × 7.06" H × 2.13" D (with mounting bracket)
+  - **Weight:** 5.95 lbs (2.7 kg)
+  - **Features:**
+    - High-power mode adapters for bridging (included)
+    - IPX2 waterproof rating (marine-grade for dust/water resistance)
+    - Compatible with Fusion PartyBus for multi-zone audio
+    - DSP-enabled integration with MS-RA670 head unit
+    - Independent channel pair bridging for flexible configuration
+
+**Speaker Configuration:**
+- **Front Dash Speakers (Channels 3 & 4):** JL Audio M6-650X-S-GmTi-i (pair)
+  - **Model:** M6-650X-S-GmTi-i (6.5" 2-way coaxial marine speakers)
+  - **Product Page:** [JL Audio M6-650X-S-GmTi-i](https://www.jlaudio.com/products/m6-650x-s-gmti-i-marine-audio-coaxial-speakers-93715)
+  - **Type:** 2-way coaxial (integrated 0.8" silk dome tweeter - no separate tweeter installation needed)
+  - **Power Handling:** 75W RMS per speaker @ 4Ω (25-150W recommended amplifier power)
+  - **Amplifier Output:** 150W RMS per channel (channels 3 & 4)
+    - **Power Headroom:** 2:1 ratio (150W amp / 75W speaker) - excellent headroom for clean, undistorted power
+  - **Impedance:** 4Ω
+  - **Frequency Response:** 55-25,000 Hz (±3dB)
+  - **Sensitivity:** 89.5 dB @ 1W/1m
+  - **Features:**
+    - Integrated 0.8" pure silk dome tweeter (marine-treated, mounted on woofer)
+    - Multi-order 2-way passive crossover (built into speaker chassis)
+    - Automatic solid-state tweeter protection circuit
+    - Transflective RGB LED lighting (controlled separately from audio)
+    - Injection-molded mica-filled polypropylene woofer with synthetic rubber surround
+    - Gunmetal trim ring with titanium sport grille
+  - **Mounting:** Dashboard (custom 6.5" cutouts)
+    - TBD: Exact dash mounting locations (typical: dash end caps or kick panels)
+    - May require custom speaker pods or dash modification for flush mount
+- **Rear Roll Bar Tower Speakers (Channels 5 & 6):** JL Audio M6-650VEX-Mb-S-GmTi-i (pair)
+  - **Model:** M6-650VEX-Mb-S-GmTi-i (6.5" 2-way enclosed marine tower speakers)
+  - **Product Page:** [JL Audio M6-650VEX-Mb-S-GmTi-i](https://www.jlaudio.com/products/m6-650vex-mb-s-gmti-i-marine-audio-enclosed-speaker-systems-vex-93411)
+  - **Power Handling:** 75W RMS per speaker @ 4Ω
+  - **Amplifier Output:** 150W RMS per channel (channels 5 & 6)
+    - **Power Headroom:** 2:1 ratio (150W amp / 75W speaker) - excellent headroom for clean, undistorted power
+  - **Impedance:** 4Ω
+  - **Frequency Response:** 100-25,000 Hz
+  - **Sensitivity:** 89.5 dB
+  - **Features:**
+    - Built-in RGB LED lights (controlled separately from audio)
+    - 3/4" silk dome tweeters
+    - Injection-molded, mica-filled polypropylene woofers with synthetic rubber surrounds
+    - Enclosed design with weather-resistant enclosures for dust/water exposure
+  - **Dimensions:** 7-1/16" W × 7-5/16" H × 6-1/4" D
+  - **Mounting:** Roll bar/cage mount (wakeboard tower style clamps)
+- **Subwoofer (Channels 1+2 Bridged):** JL Audio M7-12IB-S-GmTi-i-4
+  - **Model:** M7-12IB-S-GmTi-i-4 (12" marine infinite baffle subwoofer with RGB LED)
+  - **Product Page:** [JL Audio M7-12IB-S-GmTi-i-4](https://www.garmin.com/p/1708661/pn/010-03288-00)
+  - **Power Handling:** 600W RMS @ 4Ω (recommended amplifier power: 200-600W)
+  - **Amplifier Output:** 580W RMS @ 4Ω (channels 1+2 bridged)
+    - **Power Match:** 580W / 600W = 97% - excellent match within recommended range
+  - **Impedance:** 4Ω
+  - **Sensitivity:** 86.7 dB @ 1W/1m
+  - **Frequency Response:**
+    - Free Air Resonance (FS): 35.34 Hz
+    - Sealed enclosure -3dB cutoff: 35.52 Hz
+    - Ported enclosure -3dB cutoff: 20.96 Hz
+  - **Type:** Infinite Baffle (IB) - designed to operate without dedicated enclosure
+    - Requires large air volume behind subwoofer (minimum 3 cu. ft. / 84.95 liters)
+    - Ideal for mounting in cargo area wall or under-seat location with access to large air space
+  - **Voice Coil:** 4" diameter (102mm)
+  - **Cone Material:** Injection-molded, mica-filled polypropylene with synthetic rubber surround
+  - **Features:**
+    - Transflective™ RGB LED lighting (controlled separately from audio via MLC-RW)
+    - Gunmetal trim ring with titanium sport grille
+    - Marine-grade construction (IPX rating TBD from spec sheet)
+  - **Dimensions:**
+    - Overall diameter: 14" (356mm)
+    - Overall depth: 9.39-9.42" (239-240mm)
+    - Mounting depth clearance: 7.94" (202mm)
+    - Mounting hole cutout: 12.0625" (306mm)
+    - Bolt hole circle: 12.813" (325mm)
+    - Frontal grille protrusion: 1.45-1.48"
+  - **Weight:** 25.35 lbs (11.5 kg)
+  - **Mounting:**
+    - Infinite baffle installation in cargo area wall or rear seat/tub wall
+    - Requires 12.0625" (306mm) circular cutout in mounting surface
+    - Must have access to at least 3 cu. ft. air space behind mounting surface
+    - Jeep LJ cargo area provides ideal infinite baffle environment (large enclosed volume)
+  - **Warranty:** 3 years
+
+**JL Audio LED Lighting System:**
+- **LED Controller:** JL Audio MLC-RW Marine LED Lighting Controller
+  - **Product Page:** [JL Audio MLC-RW](https://www.jlaudio.com/marine-audio-speakers-speaker-accessories-mlc-rw-99816)
+  - **Power Output:** 30A (400W) continuous output for LED circuits
+  - **Capacity:** Controls LEDs for up to 60 JL Audio marine speakers (with appropriate wiring)
+  - **Control:** WiFi app (LiteWave ITI for iOS/Android) + included rotary encoder
+  - **Technology:** PWM (Pulse Width Modulation) for efficient RGB LED control
+  - **Protection:** Over-current, short-circuit, voltage/temperature monitoring
+  - **Power Requirements:**
+    - Input Voltage: 12V DC
+    - Current Draw: Up to 30A (30A fuse or breaker required for full LED capacity)
+    - For 5 JL Audio speakers (4x M6 + 1x M7): Estimated 5-10A total LED draw
+  - **Mounting Configuration:**
+    - **MLC-RW Controller Unit:** Mount next to Fusion Apollo amplifier (behind dash or cargo area)
+      - Keeps LED controller and amplifier in same location for clean wiring
+    - **Rotary Encoder:** Dash-mounted with extension cable from MLC-RW unit
+      - Allows user-accessible LED control without accessing controller unit
+      - Extension cable from controller to dash location (typically near radio or center console)
+- **Integrated Speaker/LED Cable:** JL Audio XM-WHTMFC Multifunction Cable
+  - **Model:** XM-WHTMFC-25 or XM-WHTMFC-250 (25 ft or 250 ft spools)
+  - **Configuration:** Single cable with integrated speaker + LED wires
+    - 2x 16 AWG OFC copper speaker leads (audio signal)
+    - 4x 20 AWG OFC copper LED power leads (RGB + common for LED lighting)
+  - **Construction:** Fine-strand OFC, stannum-plated for corrosion resistance, marine-grade white PVC jacket
+  - **Use:** Single cable run from amplifier/MLC-RW to each speaker (audio + LED control)
+
+**Wiring Summary:**
+1. **Amplifier Power (+):** CONSTANT bus → 40A or 50A Blue Sea breaker → 6 AWG red wire → amplifier B+ terminal
+   - Direct connection to CONSTANT bus (rear battery) for high current
+   - Run dedicated 6 AWG wire from rear battery or CONSTANT bus bar to amplifier (1800W requires heavier gauge)
+   - Replace amplifier's included 40A inline fuse with centrally-located Blue Sea breaker for easier access
+2. **Amplifier Ground (-):** Amplifier ground terminal → 6 AWG black wire → chassis ground or rear battery negative
+   - Clean, solid ground critical for amplifier performance and noise reduction
+   - Keep ground wire <18 inches for best performance
+3. **MLC-RW LED Controller Power (+):** CONSTANT bus → Body RTMR spare circuit (30A) → MLC-RW power input
+   - MLC-RW rated for 30A output (400W), requires 30A fuse/breaker for full capacity
+   - For 5 speakers: estimated 5-10A actual draw, but 30A circuit allows full controller capacity
+   - Note: Body RTMR can accommodate additional fuse slots if needed
+4. **MLC-RW LED Controller Ground (-):** MLC-RW ground → chassis ground or dash ground point
+5. **Remote Turn-On:** MS-RA670 remote turn-on output → 18 AWG wire → amplifier remote terminal
+   - Radio sends 12V signal to turn on amplifier when radio is on
+   - Amplifier shuts off automatically when radio turns off
+6. **Audio Input (RCA):** MS-RA670 RCA outputs → shielded RCA cables → amplifier RCA inputs
+   - Zone 1 (Front): MS-RA670 Zone 1 L+R RCA → amplifier channels 3 & 4 (front dash speakers)
+   - Zone 2 (Rear): MS-RA670 Zone 2 L+R RCA → amplifier channels 5 & 6 (rear roll bar tower speakers)
+   - Subwoofer: MS-RA670 mono subwoofer RCA → amplifier channels 1 & 2 (bridged for sub)
+   - Zone 3: MS-RA670 Zone 3 L+R RCA available for future expansion
+7. **Speaker + LED Outputs (using JL Audio XM-WHTMFC integrated cable):**
+   - **Channel 3 (Front Left Dash):** XM-WHTMFC cable to speaker
+     - 16 AWG speaker leads: Amplifier Ch3 → speaker audio
+     - 20 AWG LED leads: MLC-RW RGB outputs → speaker LED (R/G/B/common)
+   - **Channel 4 (Front Right Dash):** XM-WHTMFC cable to speaker
+     - 16 AWG speaker leads: Amplifier Ch4 → speaker audio
+     - 20 AWG LED leads: MLC-RW RGB outputs → speaker LED (R/G/B/common)
+   - **Channel 5 (Rear Left Roll Bar):** XM-WHTMFC cable to speaker
+     - 16 AWG speaker leads: Amplifier Ch5 → speaker audio
+     - 20 AWG LED leads: MLC-RW RGB outputs → speaker LED (R/G/B/common)
+   - **Channel 6 (Rear Right Roll Bar):** XM-WHTMFC cable to speaker
+     - 16 AWG speaker leads: Amplifier Ch6 → speaker audio
+     - 20 AWG LED leads: MLC-RW RGB outputs → speaker LED (R/G/B/common)
+   - **Channels 1+2 (Bridged Subwoofer):** Standard 12-14 AWG speaker wire (no LED)
+
+**Circuit Protection:**
+- **Fuse:** 40A fast-acting fuse (per Fusion Apollo manual specifications)
+  - Amplifier includes inline fuse holder with 40A fuse
+  - **Recommendation:** Replace inline fuse with centrally-located Blue Sea circuit breaker
+- **Recommended:** Blue Sea 40A or 50A breaker at CONSTANT bus or rear battery location
+  - Easier reset than inline fuse (no need to access amplifier)
+  - Mount breaker at CONSTANT bus or rear battery for easy access
+  - Protects full power wire run from battery to amplifier
+  - Blue Sea 7178 (40A) or 7184 (50A) thermal circuit breaker recommended
+
+**Mounting Location Options:**
+1. **Behind Dashboard:** Near radio head unit
+   - Shortest RCA cable runs from MS-RA670 to amplifier
+   - Central location for speaker wire routing to dash and roll bar
+   - MLC-RW LED controller can mount next to amplifier in same location
+   - Adequate ventilation behind dash for Class-D amplifier (low heat)
+2. **Cargo Area:** Behind rear seat or on sidewall
+   - Easy access to speakers and subwoofer
+   - Requires longer power cables from rear battery
+   - Longer RCA cable runs from radio
+3. **Under Rear Seat:** Hidden installation
+   - Shorter power cables to rear battery
+   - Good heat dissipation with air circulation
+   - Moderate RCA cable lengths
+
+**Outstanding Items:**
+- [ ] Determine Fusion Apollo 6-channel amplifier mounting location (behind dash preferred, cargo area or under rear seat optional)
+- [ ] Verify amplifier current draw at operating power (music listening vs full test tone)
+- [ ] Select Blue Sea circuit breaker: 40A (7178) or 50A (7184) for amplifier power protection
+- [ ] Plan Blue Sea breaker mounting location at CONSTANT bus or rear battery for easy access
+- [ ] Remove amplifier's included 40A inline fuse and replace with centrally-located Blue Sea breaker
+- [ ] Confirm 6 AWG wire gauge is sufficient for power run from CONSTANT bus to amplifier
+- [ ] Determine amplifier ground connection point (chassis ground or direct to rear battery negative)
+- [ ] Verify ground wire length is <18 inches for best performance
+- [ ] Plan RCA cable routing from MS-RA670 to amplifier (shortest run if behind dash)
+- [ ] Determine speaker wire routing from amplifier to front dash and rear roll bar
+- [ ] Calculate exact XM-WHTMFC cable lengths needed for each speaker location
+- [ ] Determine subwoofer mounting orientation in cargo area wall (front-firing or downward-firing)
+- [ ] Verify Jeep LJ cargo area provides minimum 3 cu. ft. air space behind infinite baffle mount
+- [ ] Determine exact dash mounting locations for M6-650X-S-GmTi-i speakers (dash end caps or custom location)
+- [ ] Add Body RTMR circuit for MLC-RW LED controller (30A CONSTANT power)
+- [ ] Determine exact MLC-RW rotary encoder dash mounting location (near radio or center console)
+- [ ] Plan LED power cable routing from MLC-RW to all 5 speakers (4x tower/dash + 1x subwoofer)
+- [ ] Confirm XM-WHTMFC cable includes appropriate connectors for MLC-RW RGB output
+- [ ] Plan rotary encoder extension cable routing from MLC-RW unit to dash location
+
+#### Rugged Radio G1 GMRS Radio
+
+**System Overview:**
+The Rugged Radio G1 is a 50W GMRS (General Mobile Radio Service) two-way radio for vehicle-to-vehicle communication and group coordination. GMRS operates on UHF frequencies (462-467 MHz) and requires an FCC license (family license, no exam required).
+
+**Components:**
+- **Radio Unit:** Rugged Radio G1 GMRS Radio
+  - **Model:** G1-GMRS (50W output)
+  - **User Manual:** [Rugged Radio G1 Manual](https://cdn.shopify.com/s/files/1/0240/3280/4960/files/G1_Manual.pdf)
+  - **Mounting:**
+    - Location: Behind dash, next to STX intercom
+    - Universal mounting brackets included (vehicle-specific brackets sold separately)
+    - **IMPORTANT:** Do NOT mount near ignition box to avoid RF interference
+  - **Power Requirements:**
+    - Input Voltage: 12V DC (not compatible with 24V systems)
+    - **CRITICAL:** Power must connect directly to 12V battery (not through Body RTMR)
+      - Route all power cables directly to battery
+      - Do NOT connect inline with other components
+      - Do NOT tie to ignition, lights, or other power sources (causes ground loop noise)
+    - Fuse: 15A inline fuse (install within 18" of battery positive connection)
+    - Current Draw: 1-2A receive, 8-12A transmit at 50W (typical)
+  - **Features:**
+    - 50W output power (maximum allowed for GMRS)
+    - 16 GMRS channels + repeater inputs
+    - CTCSS/DCS privacy codes
+    - VOX (voice-activated transmission)
+    - Scan function
+    - IP67 waterproof rating with all-aluminum chassis
+    - RFI (Radio Frequency Interference) protection
+  - **Antenna:** Roof-mounted GMRS antenna (1/4 wave or 1/2 wave)
+    - Frequency: 462-467 MHz
+    - Mounting: Roof rack, fender, or NMO mount on roof
+    - Cable: RG58 or better coax (50Ω impedance)
+- **Intercom Integration:** Connects to Rugged Radio Intercom (see below)
+  - Allows driver/passengers to communicate via headsets
+  - Push-to-talk (PTT) button integration
+
+**Wiring Summary:**
+1. **Power (+):** Battery positive → inline fuse (15A) → G1 radio power input (12V DC)
+   - **CRITICAL:** Direct battery connection required (not through Body RTMR or other circuits)
+   - Run dedicated power wire from battery positive terminal to G1 radio
+   - Install 15A inline fuse holder within 18" of battery connection
+   - Do NOT connect to ignition, SWITCHED bus, or other power sources (causes ground loop noise)
+2. **Ground (-):** G1 ground → battery negative terminal (preferred) or chassis ground
+   - Direct battery negative connection recommended for best RF performance
+   - Clean ground critical for radio performance and noise reduction
+3. **Antenna:** G1 antenna output → coax cable → roof-mounted GMRS antenna
+   - Use quality coax (RG58 or better) to minimize signal loss
+   - Keep cable length <25 ft for best performance
+   - **IMPORTANT:** Route antenna cable away from power leads to avoid interference
+4. **Intercom Connection:** G1 radio RADIO port ↔ Rugged Radio STX intercom RADIO port
+   - Rugged Radio integration cable (specific cable for G1 GMRS to STX connection)
+   - Handles audio in/out, PTT, and mute functions automatically
+
+**Outstanding Items:**
+- [ ] Run dedicated power wire from battery positive to G1 radio (do NOT use Body RTMR or other circuits)
+- [ ] Install 15A inline fuse holder within 18" of battery positive connection
+- [ ] Run dedicated ground wire from G1 to battery negative terminal (preferred for best RF performance)
+- [ ] Verify G1 and STX mounting behind dash does NOT place units near ignition box (avoid RF interference)
+- [ ] Determine roof-mounted GMRS antenna mounting location and type (1/4 wave vs 1/2 wave)
+- [ ] Plan antenna coax cable routing away from power leads (avoid interference)
+- [ ] Verify coax cable type and quality (RG58 minimum, RG8 or LMR-400 preferred for long runs)
+- [ ] Order Rugged Radio integration cable for G1 GMRS to STX intercom RADIO port connection
+- [ ] Plan PTT button mounting location for driver (steering wheel, dash, or hand mic)
+- [ ] Consider vehicle-specific mounting brackets for G1 (universal brackets included, specific brackets sold separately)
+
+#### Rugged Radio Intercom System
+
+**System Overview:**
+The Rugged Radio STX Intercom allows driver and passengers to communicate via headsets, and integrates with the GMRS radio and Fusion head unit for external communication and music sharing.
+
+**Components:**
+- **Intercom Unit:** Rugged Radio STX 4-Place Intercom
+  - **Quick Start Guide:** [Rugged Radio STX Quick Start Guide](https://cdn.shopify.com/s/files/1/0240/3280/4960/files/STX_-_Quick_Start_Guide.pdf?v=1724339126)
+  - **Mounting:**
+    - Universal mounting brackets included (vehicle-specific brackets sold separately)
+    - Mount location: TBD - under dash or center console
+    - **IMPORTANT:** Do NOT mount near ignition box to avoid RF interference
+  - **Power Requirements:**
+    - Input Voltage: 9-16V DC (12V nominal)
+    - Current Draw: <2A typical
+    - **CRITICAL:** Power must connect directly to 12V battery (not through Body RTMR)
+      - Route all power cables directly to battery
+      - Do NOT connect inline with other components
+      - Do NOT tie to ignition, lights, or other power sources (causes ground loop noise)
+      - Do NOT remove factory fuses or modify power cables
+  - **Features:**
+    - 4 headset ports (driver + 3 passengers)
+    - VOX (voice-activated) or PTT (push-to-talk) mode per headset
+    - Individual volume controls per headset
+    - **RADIO port:** Connects to optional radio (G1 GMRS radio via Rugged Radio cable)
+    - **AUX port:** Connects to cell phones, audio recorders, and other devices (Fusion MS-RA670 audio output)
+    - **EXT port:** Optional modules available to connect up to 8 headsets (4-place can expand to 8-place)
+    - Music mute when radio transmits or intercom is active
+    - Compact form factor: 5.5" W × 3.5" D × 1.5" H
+- **Headsets:** Rugged Radio headsets with microphones
+  - **Type:** Over-ear or in-ear (behind-the-helmet style for off-road)
+  - **Quantity:** 4 headsets (driver + 3 passengers)
+  - **Connectors:** Rugged Radio proprietary push-to-connect headset jacks
+  - **Cable Length:**
+    - Front headsets: 6 ft cables (included with headsets)
+    - Rear headsets: Custom extended cables (user-provided, not addressed here per user request)
+- **PTT Buttons:** Push-to-talk buttons for GMRS radio transmission
+  - **Mounting:** Driver PTT on steering wheel or dash, passenger PTT on grab handle or dash
+  - **Wiring:** PTT button → STX intercom PTT input → G1 radio PTT output (via Rugged Radio integration cable)
+  - **Note:** STX has built-in PTT inputs on each headset port
+
+**Wiring Summary:**
+1. **Power (+):** Battery positive → inline fuse (3A-5A recommended) → STX red power wire (9-16V DC input)
+   - **CRITICAL:** Direct battery connection required (not through Body RTMR or other circuits)
+   - Run dedicated power wire from battery positive terminal to STX intercom
+   - Install inline fuse holder within 18" of battery connection
+   - Do NOT connect to ignition, SWITCHED bus, or other power sources (causes ground loop noise)
+2. **Ground (-):** STX black ground wire → battery negative terminal (preferred) or chassis ground
+   - Direct battery negative connection recommended for best audio quality
+   - Clean ground critical for preventing ground loop noise in audio system
+3. **Headset Connections:** 4 headset ports on STX unit
+   - Port 1 (Driver): Front left position, 6 ft cable
+   - Port 2 (Front Passenger): Front right position, 6 ft cable
+   - Port 3 (Rear Left Passenger): Custom extended cable to rear seat
+   - Port 4 (Rear Right Passenger): Custom extended cable to rear seat
+4. **Radio Integration:** STX ↔ G1 GMRS radio (audio in/out, PTT, mute)
+   - Rugged Radio integration cable (specific cable for G1 GMRS to STX connection)
+   - PTT handled automatically through integration cable
+   - Radio audio mixes into intercom when receiving
+   - Radio mutes music/intercom when transmitting
+5. **Aux Input:** Fusion MS-RA670 audio output → STX aux input (3.5mm or RCA cable)
+   - Music from radio plays through all headsets
+   - Auto-mutes when intercom is active or radio transmits
+6. **PTT Buttons (Optional):** External PTT buttons can be wired to STX PTT inputs
+   - Each headset port has dedicated PTT input terminal
+   - Driver PTT: Steering wheel or dash-mounted button → STX Port 1 PTT input
+   - Passenger PTT: Dash or grab handle-mounted buttons → STX Port 2/3/4 PTT inputs
+
+**Headset Port Mounting:**
+- **Front Headset Ports (Ports 1 & 2):** Mount STX unit under dash or center console
+  - 6 ft headset cables reach driver and front passenger positions
+- **Rear Headset Ports (Ports 3 & 4):** Custom extended cables from STX unit to rear seat
+  - User will run custom wires to rear passengers (not addressed here per user request)
+  - Suggest mounting remote headset jacks in rear grab handles or on roll bar
+
+**Outstanding Items:**
+- [ ] Determine STX mounting location (under dash or center console)
+- [ ] **IMPORTANT:** Ensure STX intercom is NOT mounted near ignition box (avoid RF interference)
+- [ ] Run dedicated power wire from battery positive to STX (do NOT use Body RTMR or other circuits)
+- [ ] Install inline fuse holder (3A-5A) within 18" of battery positive connection
+- [ ] Run dedicated ground wire from STX to battery negative terminal (preferred for best audio quality)
+- [ ] Plan headset port access (all 4 ports on STX unit, or extend rear ports to rear grab handles)
+- [ ] Determine if external PTT buttons will be used (or rely on headset-mounted PTT buttons)
+- [ ] Plan PTT button mounting locations (driver: steering wheel or dash, passengers: grab handles)
+- [ ] Order Rugged Radio integration cable for G1 GMRS to STX RADIO port connection
+- [ ] Determine aux input cable type for Fusion MS-RA670 to STX AUX port (3.5mm or RCA)
+- [ ] Plan cable routing for aux input from Fusion radio to STX intercom
+- [ ] Consider vehicle-specific mounting brackets for STX (universal brackets included, specific brackets sold separately)
+
+#### Ham Radio (Future)
+
+**System Overview:**
+Reserved circuit for future amateur (ham) radio installation. Ham radio requires an FCC license (Technician, General, or Amateur Extra) and provides long-range communication on VHF/UHF and HF frequencies.
+
+**Reserved Circuit:**
+- **Power:** Body RTMR F8 (15A fuse, CONSTANT power)
+  - 15A fuse supports up to ~180W output radios (most mobile ham radios are 50-100W)
+  - CONSTANT power allows radio to receive when vehicle is off
+
+**Potential Future Radio Types:**
+- **VHF/UHF Mobile Radio:** 2-meter (144 MHz) and 70-cm (440 MHz) dual-band radio
+  - Typical power: 50W VHF, 35W UHF
+  - Amperage: ~10A transmit, 1A receive
+  - Antenna: Roof-mounted dual-band whip (NMO mount)
+- **HF Mobile Radio:** Long-range HF radio (3-30 MHz)
+  - Typical power: 100W
+  - Amperage: ~15A transmit, 1-2A receive
+  - Antenna: Bumper-mounted or roof-rack-mounted HF antenna (requires tuner)
+
+**Outstanding Items:**
+- [ ] Determine if/when ham radio will be installed
+- [ ] Decide on VHF/UHF vs HF vs both (dual installation)
+- [ ] Verify 15A fuse is sufficient for chosen radio model
+- [ ] Determine antenna mounting location (roof, bumper, or rack)
+- [ ] Plan coax cable routing from radio to antenna
+- [ ] Determine if ham radio will integrate with Rugged Radio Intercom
+
+### SwitchPros Command Touch CT4
+
+**Model:** Command Touch CT4
+**Manual:** https://www.switchpros.com/wp-content/uploads/CT4-Rev-1.0.pdf
+**Mounting:** 1.5" steering column
+**Power Source:** TBD - likely Body RTMR SWITCHED circuit or direct from SwitchPros
+**Ground:** TBD - chassis ground or dash ground point
+
+**Functions:**
+
+- **Turn Signals:** Left and right turn signal activation
+  - Integrated with factory turn signal system or standalone
+  - GPS module enables auto-cancel after completing turn
+- **Horn Button:** Center button activates horn
+  - Requires horn relay integration (see below)
+- **License Plate Light Control:** TBD - integration with existing license plate lights
+- **GPS Module:** Auto-cancel turn signals after turn completion
+  - GPS module included with CT4
+  - Mounting: TBD - under dash or on firewall
+
+**Horn Relay Integration:**
+- **Horn Relay:** TBD - relay specifications (contact rating, coil voltage)
+  - **Trigger:** CT4 horn button → relay coil (low current, ~100-200mA)
+  - **Main Power:** Battery+ or SWITCHED bus → relay contacts → horn
+  - **Horn Load:** TBD - factory Jeep horn amperage (typically 3-6A)
+  - **Fuse/Protection:** TBD - inline fuse or breaker for horn circuit (10A typical)
+- **Horn Location:** Factory Jeep horn location (engine bay)
+
+**Turn Signal Integration:**
+- **Option 1: Factory Integration**
+  - CT4 triggers factory turn signal flasher and bulbs
+  - Wiring taps into existing turn signal circuits
+- **Option 2: Standalone System**
+  - CT4 controls separate turn signal LED lights (aftermarket)
+  - Independent from factory wiring
+
+**Outstanding Items:**
+
+- [ ] Determine Command Touch CT4 power source circuit (Body RTMR SWITCHED or SwitchPros output)
+- [ ] Determine Command Touch CT4 ground connection (chassis or dash ground point)
+- [ ] Decide on turn signal integration method (factory integration vs standalone)
+- [ ] Determine horn relay specifications (contact rating, coil voltage)
+- [ ] Determine horn circuit fuse/breaker size (typically 10A)
+- [ ] Verify factory horn amperage draw (typically 3-6A)
+- [ ] Determine if horn relay will be mounted in engine bay or cabin
+- [ ] Confirm horn relay trigger wiring from CT4 to relay coil
+- [ ] Determine license plate light control integration (if used)
+- [ ] Determine GPS module mounting location for auto-cancel turn signals (under dash or firewall)
+- [ ] Confirm Command Touch CT4 mounting on 1.5" steering column (verify Jeep LJ steering column diameter)
+
+---
+
+## 7. Zone 6: Cargo Area & Exterior
+
+### Camera Systems
+
+#### WolfBox Rearview Mirror Camera
+
+**System Overview:**
+The WolfBox system replaces the factory rearview mirror with a smart mirror that includes a front-facing dash camera and displays the rear backup camera feed.
+
+**Components:**
+- **Main Unit:** WolfBox rearview mirror with integrated display and front camera
+  - **Location:** Windshield mount (replaces factory rearview mirror)
+  - **Functions:**
+    - Front-facing dash camera (always recording when powered)
+    - Rear camera display (triggered by reverse gear or manual activation)
+    - Touchscreen display for settings and playback
+  - **Power:** Body RTMR F5 (10A fuse, CONSTANT power)
+    - Always-on power allows continuous dash cam recording (parking mode)
+    - Alternative: Could be SWITCHED power if parking mode not desired
+  - **Features:**
+    - Loop recording to SD card
+    - G-sensor for collision detection
+    - Night vision (front and rear cameras)
+    - Lane departure warnings (if equipped)
+  - **Display:** TBD - screen size (typically 9.66" or 12" models)
+- **Rear Camera:**
+  - **Location:** Mounted above license plate or rear tailgate
+  - **Trigger:** Engine RTMR F7 (reverse light circuit, 10A)
+    - When vehicle is in reverse, mirror automatically displays rear camera
+  - **Power:** Via cable from main WolfBox unit (powered camera, not separate power needed)
+  - **Cable Length:** TBD - verify cable length for routing from mirror to rear (typically 20-30 ft)
+  - **Mounting:** Above license plate or integrated into spare tire carrier
+
+**Wiring Summary:**
+1. **Main Unit Power (+):** CONSTANT bus → Body RTMR F5 (10A) → WolfBox mirror unit power input
+2. **Main Unit Ground (-):** WolfBox mirror ground → firewall ground stud or dash ground point
+3. **Reverse Trigger:** Engine RTMR F7 (reverse light circuit) → WolfBox reverse trigger input
+   - Camera automatically displays rear view when reverse signal is active
+4. **Rear Camera Power:** Main WolfBox unit → rear camera via included cable (powered by main unit)
+5. **Rear Camera Video:** Rear camera → main WolfBox unit via included cable
+
+**Cable Routing:**
+- **Main Unit to Rear Camera:** Route cable from windshield → along headliner → down A-pillar → under door sills → up tailgate or through rear cargo area to camera location
+- **Reverse Trigger Wire:** Tap into Engine RTMR F7 reverse light circuit → route to WolfBox mirror unit
+  - Can tap at reverse light switch location or at reverse light fixture
+  - 18-20 AWG wire, low current (signal only)
+
+**Outstanding Items:**
+- [ ] Determine specific WolfBox model number (9.66" vs 12" screen, features)
+- [ ] Confirm WolfBox power requirement is within 10A fuse capacity (typically 2-5A)
+- [ ] Verify if CONSTANT or SWITCHED power is preferred for parking mode dash cam functionality
+- [ ] Determine exact rear camera mounting location (above license plate vs spare tire carrier)
+- [ ] Verify rear camera cable length is sufficient for routing from mirror to rear
+- [ ] Determine reverse trigger wire tap location (reverse light switch or reverse light fixture)
+- [ ] Plan cable routing path from windshield to rear camera (along headliner, under door sills)
+- [ ] Determine ground connection point for WolfBox mirror unit (firewall stud or dash ground)
+- [ ] Verify WolfBox compatibility with existing windshield mount or if adapter needed
+
+#### Additional Camera Considerations (Future)
+
+**Potential Future Cameras:**
+- **Side Cameras:** For blind spot monitoring or trail spotting
+  - Would require additional camera inputs (WolfBox may support multi-camera with upgraded model)
+  - Power: Body RTMR spare circuits (CONSTANT power)
+- **Front Camera:** Separate from WolfBox integrated front camera
+  - For trail spotting or front bumper view during obstacles
+  - Would need separate display or integration with WolfBox system
+
+### Rear Lighting
+
+- **Rear Roll Bar Lights:** 4x KC Cyclone (2 on front roll bar, 2 on rear roll bar)
+  - Controlled by SwitchPros Button 4 (Dome Lights)
+  - Also controllable by rear seat switch (wiring TBD)
+- **License Plate Lights:** Controlled by Command Touch CT4
+- **Backup Lights:** Engine RTMR F7 (10A, 14 AWG)
+  - Also triggers WolfBox rear camera display
+- **Rear Lights:** 2x BD S1 Pro above license plate (SwitchPros Button 12)
+- **Rear Amber Chase:** BD OnX6 Arc (SwitchPros Button 7)
+
+**Outstanding Items:**
+
+- [ ] Determine wiring for rear seat switch control of rear roll bar lights
+- [ ] Confirm reverse trigger tap location for WolfBox camera (reverse light switch or fixture)
+- [ ] Verify WolfBox rear camera mounting above license plate does not interfere with BD S1 Pro lights
+
+### Recovery Equipment
+
+#### ARB Twin Compressor (Brushless)
+
+- **Model:** ARB CKBLTA12 Brushless Twin Motor Onboard 12V Air Compressor
+- **Installation Guide:** [ARB CKBLTA12 Installation PDF](https://store.arbusa.com/content/CKBLTA12%20INST.pdf)
+- **Maximum Amperage Draw:** 90A total (45A per motor × 2 motors)
+- **Fuse Configuration:** Dual 60A MIDI fuses via SafetyHub 150 (one per motor)
+  - **Motor 1:** SafetyHub MIDI-1 (60A) → 10 AWG power wire → compressor motor 1
+  - **Motor 2:** SafetyHub MIDI-2 (60A) → 10 AWG power wire → compressor motor 2
+  - SafetyHub mounted in engine compartment (close to CONSTANT bus bar)
+- **Features:**
+  - Smart Start feature with staggered power-on to reduce startup spike
+  - 100% duty cycle
+  - Maximum pressure: 150 PSI
+  - Air flow at 0 PSI: 9.18 CFM
+  - IP67 water resistant
+- **Control:** SwitchPros OUTPUT-11 (15A output, Button 11)
+  - OUTPUT-11 provides switched 12V control signal to compressor
+  - Compressor has internal relay/control that handles high-current motor switching
+  - 14 AWG wire from OUTPUT-11 to compressor control terminal
+- **Ground:** 8 AWG black wire from compressor to chassis ground or battery negative
+- **Location:** TBD - cargo area or under hood?
+
+**Wiring Summary:**
+1. **Motor 1 Power (+):** CONSTANT bus → SafetyHub (Blue Sea 100A breaker) → SafetyHub MIDI-1 (60A) → 10 AWG red wire → compressor motor 1 positive
+2. **Motor 2 Power (+):** CONSTANT bus → SafetyHub (Blue Sea 100A breaker) → SafetyHub MIDI-2 (60A) → 10 AWG red wire → compressor motor 2 positive
+3. **Ground (-):** Compressor negative terminal → 8 AWG black wire → chassis ground or battery negative
+4. **Control:** SwitchPros OUTPUT-11 (Button 11) → 14 AWG wire → compressor control terminal (switched 12V signal)
+
+**Outstanding Items:**
+
+- [ ] Determine ARB Twin Compressor exact mounting location (cargo area or under hood)
+- [ ] Determine routing for dual 10 AWG power wires from SafetyHub to compressor (one per motor)
+- [ ] Determine routing for 8 AWG ground wire from compressor to chassis ground
+- [ ] Determine routing for 14 AWG control wire from SwitchPros OUTPUT-11 to compressor
+- [ ] Confirm SafetyHub mounting location in engine compartment provides short runs to compressor
+- [ ] Verify ARB CKBLTA12 wiring harness connector pinout for motor 1, motor 2, and control terminals
+
+#### Winch
+
+- **Type/Model:** Warn Zeon 10-S
+- **Mounting Location:** Front bumper
+- **Pulling Capacity:** 10,000 lbs (4,536 kg)
+- **Motor:** 12V DC series wound
+- **Peak Amperage Draw:** ~400A (at full load/stall)
+- **Typical Operating Draw:** 100-250A (depending on load)
+- **Main Power Source:** Front battery (direct connection, no fuse/breaker)
+  - Cable: Dual 2/0 AWG (positive and negative) per Warn specifications
+  - Length: <10 feet from front battery to winch
+  - Protection: None - direct connection
+  - Route: Engine bay battery → through firewall/bumper → winch motor
+- **Contactor/Solenoid:** Warn Zeon 10-S integrated contactor (included with winch)
+  - Mounted on winch motor housing
+  - Rated for 400A+ switching
+- **Control:** 3-position dash switch (Button 4 on physical switch panel)
+  - **Position 1 (Off):** Winch completely disconnected
+  - **Position 2 (SwitchPros):** TBD - controlled remotely via SwitchPros (need to determine which output)
+  - **Position 3 (Manual):** Direct wired remote control
+    - Uses Warn factory wireless remote or wired remote
+    - Trigger wiring: From dash switch → SafetyHub ATC-1 (10A fuse) → winch contactor
+- **Control Wiring:**
+  - Trigger from 3-position selector to winch contactor: 14 AWG
+  - Fused through SafetyHub ATC-1 (10A)
+  - Routed: Dash switch → under dash → through firewall → winch contactor
+
+**Wiring Summary:**
+- **Main Power (+):** Front battery+ → 2/0 AWG red (direct, no breaker) → winch contactor → winch motor
+- **Main Power (-):** Front battery- → 2/0 AWG black → winch motor ground lug
+- **Control Trigger:** Dash 3-pos switch → SafetyHub ATC-1 (10A) → winch contactor trigger
+- **Remote Control:** Warn wireless/wired remote → winch control pack (if manual mode selected)
+
+**Outstanding Items:**
+
+- [ ] **Determine if/how Position 2 (SwitchPros control) will work** - which SwitchPros output to use for remote winch control?
+- [ ] Confirm exact routing path for 2/0 AWG cables through front bumper
+- [ ] Verify dash 3-position switch wiring diagram (positions: off/SwitchPros/manual)
+- [ ] Confirm winch contactor trigger wiring from SafetyHub ATC-1 to winch contactor
+- [ ] Determine Warn wireless/wired remote model and integration
+
+#### ARB Lockers
+
+- **Model (Front and Rear):** ARB RD116 Air Locker
+  - Dana 44, 30 spline, 3.92 & up air operated locking differential
+  - Solenoid amperage draw: ~2A per locker
+- **Front Locker Control:** SwitchPros OUTPUT-17 (low-side driver, 2A)
+- **Rear Locker Control:** SwitchPros OUTPUT-10 (15A output, 2A draw)
+- **Compressor:** Shared with ARB CKBLTA12 Twin Compressor above
+
+**Wiring:**
+- Each locker has a solenoid valve that controls air flow to engage/disengage the differential lock
+- Solenoid controlled by SwitchPros outputs (2A draw each)
+- Air lines run from compressor to each locker
+- Requires 8A minimum ignition/ACC power circuit for switch wiring
+
+**Axle Configuration:**
+- **Front Axle:** Dana 44, 30 spline, 5.38 gear ratio ✅ Compatible with RD116
+- **Rear Axle:** Dana 44, 30 spline, 5.38 gear ratio ✅ Compatible with RD116
+
+**Outstanding Items:**
+
+- [ ] Determine routing for ARB locker control wiring from SwitchPros to front/rear axles
+- [ ] Determine routing for air lines from compressor to front/rear lockers
+
+---
+
+## 8. Wire Routing & Physical Layout
+
+### Major Wire Runs
+
+#### Battery to Engine Bay Distribution
+
+- **Path:** TBD
+- **Cables:**
+  - 2/0 AWG red (alternator to battery+)
+  - 2/0 AWG black (battery- to chassis)
+  - 2/0 AWG (engine block to chassis)
+  - Large gauge to CONSTANT bus breaker
+  - Large gauge to SWITCHED bus breaker
+
+#### Firewall Penetrations
+
+- **Grommet 1:** TBD - Engine RTMR to cabin circuits
+- **Grommet 2:** TBD - Body RTMR to engine bay circuits
+- **Grommet 3:** Outside temperature probe wire (from BIM-17-2 module on firewall HDPE panel to grille area)
+- **Grommet 4 (NEW):** Rugged Radio G1 GMRS and STX Intercom battery power cables
+  - **G1 GMRS Power:** Battery positive → 15A inline fuse → through firewall → G1 radio (behind dash)
+  - **G1 GMRS Ground:** G1 radio → through firewall → battery negative
+  - **STX Intercom Power:** Battery positive → 3A-5A inline fuse → through firewall → STX intercom (behind dash)
+  - **STX Intercom Ground:** STX intercom → through firewall → battery negative
+  - **Wire Gauge:** TBD (14 AWG or 12 AWG for power, 14 AWG for ground recommended)
+  - **Grommet Size:** TBD - must accommodate 4 wires (2 power + 2 ground)
+  - **Note:** These devices require direct battery connection (not through Body RTMR) to prevent ground loop noise
+- **Cummins Harness Punch-through:** Dedicated penetration for Cummins R2.8 wiring harness (provided by Cummins)
+  - J1939 CAN High/Low wires tap into this harness location
+  - No additional firewall modification needed for J1939
+- **Wire Bundles:** TBD - list of all wires passing through each grommet
+
+**Dakota Digital Module Panel:**
+- **Location:** HDPE sheet mounted to firewall behind dashboard (cabin side)
+- **Components Mounted:**
+  - 01-2-J1939 (J1939 interface module)
+  - GPS-50-2 (GPS speed module)
+  - BIM-22-3 (TPMS module)
+  - BIM-17-2 (Compass/outside temp module)
+- **Main Harness:** Single BIM/IO cable from Dakota Digital 1996-03 main cluster → HDPE panel → all 4 BIM modules
+- **External Connections:**
+  - **J1939 CAN Bus:** Tap into Cummins harness punch-through (CAN High/Low) → route to 01-2-J1939 module on HDPE panel
+  - **GPS Antenna:** GPS-50-2 module to dash/windshield mounted antenna
+  - **Outside Temp Probe:** BIM-17-2 module through Grommet 3 to grille area
+
+#### Dash to Console
+
+- **Path:** TBD - under dash, along firewall?
+- **Circuits:** Switch panel wiring, USB power, radio wiring
+
+#### Cab to Cargo Area
+
+- **Path:** TBD - under seats? Through floor channels?
+- **Circuits:**
+  - Rear roll bar lights
+  - Rear switches
+  - Compressor power and control
+  - Rear locker control
+
+#### Roof/Roll Bar Wiring
+
+- **Path:** TBD - through A-pillar? Along roll bar?
+- **Circuits:**
+  - Roof light bars (center section, outer spots)
+  - Dome lights on front roll bar
+  - Rear roll bar lights
+
+### Ground Points
+
+#### Engine Bay
+
+- **Primary:** Battery negative to chassis (2/0 AWG) - location TBD
+- **Engine Block:** Engine block to chassis (2/0 AWG) - location TBD
+- **Accessories:** Dedicated ground stud on firewall or fender - TBD
+- **SwitchPros:** Direct to battery negative (per manufacturer spec)
+
+#### Cabin
+
+- **Firewall:** Ground stud for body electronics - TBD
+- **Floor Pan:** Ground point for seat electronics - TBD
+- **Dash:** Radio and instrument cluster grounds - TBD
+
+#### Cargo Area
+
+- **Frame Rails:** Ground points for rear lighting - TBD
+- **Tub Mounting Bolts:** Potential ground points - verify paint removal
+
+**Outstanding Items:**
+
+- [ ] Determine exact routing path for battery to engine bay distribution cables
+- [ ] Determine all firewall penetration locations (Grommet 1, Grommet 2 for general circuits, Grommet 4 for G1/STX battery cables)
+- [ ] Create complete wire bundle list for each firewall penetration
+- [ ] Determine wire gauge for Grommet 4 (G1/STX battery cables): 14 AWG or 12 AWG recommended
+- [ ] Determine grommet size for Grommet 4 (must accommodate 4 wires: 2 power + 2 ground)
+- [ ] Determine exact routing path from dash to console for switch panel wiring
+- [ ] Determine exact routing path from cab to cargo area (under seats or through floor channels)
+- [ ] Determine exact routing path for roof/roll bar wiring (through A-pillar or along roll bar)
+- [ ] Identify all specific ground point locations in engine bay
+- [ ] Identify all specific ground point locations in cabin
+- [ ] Identify all specific ground point locations in cargo area
+- [ ] Verify paint removal at all ground points for clean metal-to-metal contact
+- [ ] **Dakota Digital HDPE Panel:** Determine exact HDPE panel dimensions and mounting points on firewall
+- [ ] **Dakota Digital HDPE Panel:** Plan exact cable routing for BIM/IO harness from dash cluster to firewall HDPE panel
+- [ ] **Dakota Digital GPS:** Determine exact GPS antenna mounting location (dash top vs windshield mount) and cable routing
+- [ ] **Dakota Digital Temp Probe:** Determine exact grille area mounting location and wire routing through firewall (Grommet 3)
+- [ ] **Dakota Digital J1939:** Confirm J1939 CAN High/Low tap location at Cummins harness punch-through and routing to 01-2-J1939 module on HDPE panel
+
+---
+
+## 9. Project Management & Validation
+
+> **Note:** Zone-specific outstanding items are documented in each section above (Sections 1-8). This section focuses on project-level documentation, validation procedures, and overall system verification.
+
+---
+
+### Documentation Deliverables
+
+- [ ] **Create Load Calculation Spreadsheet**
+  - All circuits with amperage (continuous vs peak)
+  - Group by bus/breaker to verify protection device sizing
+  - Calculate worst-case simultaneous load scenarios
+  - Verify total system load vs 200A alternator capacity
+  - Include idle load, typical driving load, and maximum load conditions
+
+- [ ] **Create Wire Routing Diagram**
+  - Visual representation of all wire paths through vehicle
+  - Identify wire bundling opportunities for clean installation
+  - Plan all firewall penetrations with grommet specifications
+  - Document color coding scheme for entire system
+  - Show physical mounting locations for all major components
+
+- [ ] **Sync Draw.io Diagram with MDX Document**
+  - Currently out of sync - Draw.io shows different fuse assignments
+  - Update Draw.io to match current zone-based organization
+  - Create visual representations of each zone
+  - Add power flow diagrams for critical systems
+  - Include physical layout diagrams for RTMRs and bus bars
+
+- [ ] **Create Complete Parts List with Specific Part Numbers**
+  - **RTMRs:** Engine RTMR and Body RTMR with model numbers
+  - **Circuit Breakers:** Blue Sea models (100A, 60A/50A, 40A, etc.)
+  - **Bus Bars:** SWITCHED and CONSTANT bus specifications
+  - **Relays:** All relays with specifications and part numbers
+  - **Wire:** Complete list by gauge and color with total lengths
+  - **Connectors & Terminals:** All ring terminals, butt connectors, heat shrink
+  - **Fuses:** ATC/Mini blade fuse inventory by amperage
+  - **Grommets:** Firewall penetration grommets with sizes
+
+---
+
+### System Validation & Testing Plan
+
+#### Pre-Installation Testing
+
+- [ ] **Component Bench Testing**
+  - Bench test all relays for proper operation
+  - Verify all switches (DPDT, 3-position, etc.) function correctly
+  - Test all fuses and breakers for proper ratings
+  - Program and test SwitchPros RCR-Force 12 on bench before installation
+  - Verify Command Touch CT4 programming and function
+
+- [ ] **Wire Harness Continuity**
+  - Test continuity of all custom harnesses before installation
+  - Verify wire colors match documentation
+  - Check for any shorts or crossed connections
+  - Label all connectors clearly
+
+#### Installation Validation
+
+- [ ] **Electrical Testing During Installation**
+  - **Continuity Testing:** Verify all circuits from source to load before energizing
+  - **Voltage Drop Testing:** Test all major power runs under load
+    - Battery cables (<0.5V drop at full load)
+    - BCDC front-to-rear cables (<0.5V drop at 50A)
+    - Winch cables (<0.5V drop at 400A)
+    - All other high-current circuits
+  - **Ground Resistance Testing:** Verify all ground connections <0.1Ω
+    - Battery negative to chassis
+    - All auxiliary ground points
+    - Engine block ground to chassis
+  - **Insulation Testing:** Verify no shorts to ground before energizing
+
+- [ ] **Load Verification**
+  - Measure actual amperage draw of all circuits
+  - Compare measured values to designed values
+  - Verify fuse/breaker sizing is appropriate for actual loads
+  - Check for any unexpected current draws
+
+#### Functional Testing
+
+- [ ] **Critical Systems First**
+  - **Charging System:** Verify alternator charges both batteries, BCDC operates correctly
+  - **Starting System:** Verify starter operates with clutch depressed only
+  - **Engine Systems:** ECM, fuel system (ECM-controlled), cooling fans
+  - **Instrument Cluster:** Verify all J1939 data displays correctly (tach, oil pressure, coolant temp, CEL)
+
+- [ ] **Safety Systems**
+  - **Lighting:** All headlights, tail lights, brake lights, reverse lights, turn signals
+  - **Horn:** Command Touch CT4 horn button
+  - **Emergency Shutdown:** Verify ability to quickly disconnect power if needed
+
+- [ ] **Accessory Systems**
+  - **SwitchPros Outputs:** Test all 12 outputs individually
+  - **SafetyHub Circuits:** Test all MIDI and ATC fuses
+  - **Winch:** Test contactor trigger, verify manual/SwitchPros modes
+  - **ARB Systems:** Compressor, front/rear lockers
+  - **Lighting Accessories:** All rock lights, ditch lights, fog lights, roof lights
+
+- [ ] **Long-Term Validation**
+  - **Parasitic Draw Test:** Measure draw with vehicle off (should be minimal)
+  - **Heat Testing:** Verify no excessive heat at connections under load
+  - **Vibration Testing:** Check all connections after first off-road trip
+  - **Documentation Review:** Update any discrepancies found during testing
+
+---
+
+### Success Criteria
+
+**System is considered complete and validated when:**
+
+1. ✅ All zone-specific outstanding items (Sections 1-8) are resolved
+2. ✅ All documentation deliverables are completed
+3. ✅ All validation testing passes with no failures
+4. ✅ Vehicle starts reliably with clutch safety switch operational
+5. ✅ Charging system maintains both batteries properly
+6. ✅ All lighting and accessories function as designed
+7. ✅ No unexpected voltage drops or heat issues under load
+8. ✅ Dakota Digital displays all engine data correctly via J1939
+9. ✅ All circuits protected by appropriately sized fuses/breakers
+10. ✅ Complete as-built documentation matches actual installation

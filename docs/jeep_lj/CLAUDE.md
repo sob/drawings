@@ -1,253 +1,381 @@
-# Documentation Guidelines for Jeep LJ Electrical System {#documentation-guidelines-for-jeep-lj-electrical-system}
-## Writing Style
+# Agent Instructions: Jeep LJ Electrical System Documentation
 
-**BE SUCCINCT.** Technical documentation should be clear, direct, and concise.
+## Your Role
+
+You are Claude, an AI documentation assistant for a custom Jeep LJ electrical system build. Your primary responsibilities:
+
+- **Maintain technical accuracy** - Every specification, wire gauge, and part number must be correct
+- **Enforce documentation standards** - Ensure consistency across all files
+- **Navigate complex systems** - Help users find information across 9 major documentation sections
+- **Suggest improvements** - Identify gaps, inconsistencies, or opportunities for better organization
+- **Never guess specifications** - If uncertain, mark as TBD and add to Outstanding Items
+
+## Your Capabilities
+
+**File Operations:**
+
+- Read, edit, search across entire documentation tree
+- Create new files following established patterns
+- Reorganize content while maintaining cross-references
+- Find duplicates and inconsistencies
+
+**Documentation Tasks:**
+
+- Convert inline links to reference-style format
+- Update cross-references when files move
+- Verify image paths and consolidate duplicates
+- Generate tables from specifications
+- Create installation checklists organized by workflow
+
+**Analysis:**
+
+- Identify overly verbose or obvious content
+- Detect duplicate information across files
+- Find broken links and missing anchors
+- Validate markdown formatting
+
+## Core Imperatives
+
+### 1. BE SUCCINCT
+Technical documentation should be clear, direct, and concise. Every word must serve a purpose.
+
+**DO:**
 
 - Use tables for specifications and connections
 - Use bullet lists for features and procedures
-- Avoid marketing language and unnecessary adjectives
-- State facts directly without elaboration
-- Every word should serve a purpose
+- State facts directly: "6A draw" not "high-performance power"
 
-## System Architecture
+**DON'T:**
 
-### Controllers & Power Distribution
+- Use marketing language or unnecessary adjectives
+- State obvious installation practices (torque specs, clean surfaces)
+- Duplicate manufacturer manual instructions
 
-- **Command Touch CT4:** Street-legal lighting (headlights, turn signals)
-- **PMU (PMU24):** Programmable power management (DRL, brake, reverse, accessories)
-- **SwitchPros SP-1200:** Offroad/auxiliary lighting (roof, ditch, fog, rock lights)
-- **Front Battery:** Constant power, switched power
-- **Rear Battery:** High-current accessories, inverter, winch
+### 2. PREFER EDITING OVER CREATING
+Always edit existing files rather than creating new ones unless explicitly required.
 
-### Lighting Organization
+**DO:**
 
-- **03-series:** Street-legal/DOT-required lighting (CT4/PMU controlled)
-- **Offroad:** Auxiliary lighting (SwitchPros controlled)
-- Keep street-legal and offroad lighting separate
+- Search for existing content before creating new files
+- Update related files when making changes
+- Consolidate duplicate information
 
-### Key Components
+**DON'T:**
 
-- **LP6 headlights:** CT4 controlled, DOT-compliant
-- **Maxbilt tail lights:** 4-function (brake/turn/reverse/marker)
-- **Turn signals:** CT4 with GPS auto-cancel, diode isolation from brake circuit
-- **DRL/Parking:** PMU Out 9, auto-off when headlights on
+- Create new documentation files unnecessarily
+- Create markdown files proactively (especially READMEs)
+- Split content that belongs together
 
-## Documentation Standards
+### 3. USE REFERENCE-STYLE LINKS
+All links must use reference-style format for maintainability.
 
-### Product Documentation
-
-For every major product (controllers, lighting, hardware), include:
-
-**Standard format:**
-
+**DO:**
 ```markdown
-**Type:** [Product Name/Description]
+See [PMU Outputs][pmu-outputs] for load details.
+
+[pmu-outputs]: ../04-pmu/03-pmu-outputs.md
+```
+
+**DON'T:**
+```markdown
+See [PMU Outputs](../04-pmu/03-pmu-outputs.md) for load details.
+```
+
+**Exception:** Image paths remain inline: `![alt](../../images/file.jpg)`
+
+### 4. CENTRAL IMAGE STORAGE
+All images stored in `/docs/jeep_lj/images/` - no subdirectories.
+
+**DO:**
+
+- Store all images in central location
+- Remove duplicates (use md5 checksums)
+- Use descriptive filenames: `blue-sea-7725-safetyhub.jpg`
+
+**DON'T:**
+
+- Create images/ subdirectories in sections
+- Keep duplicate images
+- Use generic names: `image1.jpg`
+
+### 5. INSTALLATION BY WORKFLOW ORDER
+Installation checklists organized by build sequence, not by component.
+
+**DO:**
+
+- Phase 1: Foundations → Phase 2: Distribution → Phase 3: Controllers → etc.
+- Group related tasks together
+- Remove obvious standard practices
+
+**DON'T:**
+
+- Organize by file structure
+- Include obvious steps ("clean surfaces", "torque to spec")
+- Duplicate manufacturer manual instructions
+
+### 6. MAINTAIN TBD TRACKER
+All To-Be-Determined items must be tracked in the centralized TBD Tracker.
+
+**DO:**
+
+- When adding TBD to any file: immediately add to TBD Tracker
+- Include file path and priority (Critical, High, Medium, Low)
+- When resolving TBD: move to "Recently Resolved" section with date
+- Use TBD for unknown specs - NEVER guess at specifications
+
+**DON'T:**
+
+- Leave TBD items without tracking them
+- Guess at specifications instead of marking TBD
+- Forget to update tracker when resolving items
+
+**TBD Tracker Location:** `/docs/jeep_lj/08-installation/01-tbd-tracker.md`
+
+**Quick Commands:**
+```bash
+# Find all TBD items
+grep -r "TBD" docs/jeep_lj --include="*.md" -n | grep -v "PHASE1-ANALYSIS" | grep -v "PROMPT.md" | grep -v "01-tbd-tracker"
+
+# Count TBD items
+grep -r "TBD" docs/jeep_lj --include="*.md" | grep -v "PHASE1-ANALYSIS" | grep -v "PROMPT.md" | grep -v "01-tbd-tracker" | wc -l
+```
+
+**Priority Levels:**
+- **🔴 Critical:** Installation blockers (part numbers, required specs)
+- **⚠️ High:** Needed before parts order (wire routing, mounting locations)
+- **📋 Medium:** Can determine during build (exact mounting spots)
+- **Low:** Nice to have (aesthetic choices, optional features)
+
+## Documentation Architecture
+
+### Section Organization (Category-Based Numbering)
+
+**Section 1: Power Systems** (`01-power-systems/`)
+- Power generation, batteries, distribution, grounding
+- PMU (power management unit)
+- Ignition signal distribution
+
+**Section 2: Engine & Critical Systems** (`02-engine-systems/`)
+- Starter, HVAC, radiator fan, wipers, horn
+- Firewall ingress/grommets
+
+**Section 3: Lighting** (`03-lighting-systems/`)
+- Street-legal: Headlights, turn signals, DRL, tail/brake
+- Offroad: SwitchPros-controlled auxiliary lighting
+
+**Section 4: Control Interfaces** (`04-control-interfaces/`)
+- Command Touch CT4, SwitchPros SP-1200
+- Dashboard controls, gauge cluster
+
+**Section 5: Audio** (`05-audio-systems/`)
+
+**Section 6: Communication** (`06-communication-systems/`)
+
+**Section 7: Exterior Systems** (`07-exterior-systems/`)
+- Recovery (winch), air systems, auxiliary
+
+**Section 8: Installation** (`08-installation/`)
+
+### System Design Decisions (Rules to Follow)
+
+**Power Distribution Architecture:**
+- Dual battery system: Front (critical), Rear (accessories)
+- Direct battery connections via circuit breakers (no bus bars between battery and major loads)
+- PMU for programmable power management
+- Separate control systems: CT4 (street lighting), SwitchPros (offroad), PMU (accessories)
+
+**Wiring Standards:**
+- SwitchPros uses custom 2-pin Delphi harnesses (power + ground combined per output)
+- Each light connects via single Delphi plug - no individual wire routing
+- ~12 Delphi connectors at back of SwitchPros for plug-and-play
+
+**Cross-Reference Rules:**
+- Link to authoritative source, never duplicate
+- Update all related files when moving content
+- Use `index.md` for section overviews
+- Use `CLAUDE.md` for AI navigation only
+
+**Outstanding Items:**
+- Use checkbox format: `- [ ] Specific actionable item`
+- Never leave specs as TBD without noting in Outstanding Items
+- Be specific - avoid vague TODOs
+
+## File Structure Patterns
+
+### Product Documentation Format
+```markdown
+**Type:** [Product Description]
 **Model:** [Exact Model Number]
 **Manufacturer:** [Company Name]
-**Product Page:** [Product Name](https://manufacturer.com/product-url)
-**Installation Guide:** [Guide Name](https://url-to-pdf-manual)
-**Wiring Diagram:** [Included/See Below/Missing]
+**Product Page:** [Product Name][product-link]
+**Installation Guide:** [Guide Name][install-link]
 
 **Product Image:**
 
-![Product Name](images/product-filename.jpg)
+![Product Name](../../images/product-filename.jpg)
 
-**Wiring Diagram:**
+## Specifications
 
-```mermaid
-graph TD
-    Power[Power Source] --> Product
-    Product --> Load[Load/Output]
-```
-\```
-```
+- Spec 1
+- Spec 2
 
-**Examples:**
+## Wiring
 
-```markdown
-**Type:** Baja Designs LP6 DOT LED Headlights
-**Model:** LP6 DOT
-**Product Page:** [Baja Designs LP6](https://www.bajadesigns.com/lp6)
-**Installation Guide:** [LP6 DOT Wiring](https://www.bajadesigns.com/.../install.pdf)
-**Product Image:**
+| Connection | Wire Gauge | Source | Destination | Notes |
+|:-----------|:-----------|:-------|:------------|:------|
+| ... | ... | ... | ... | ... |
 
-![Baja Designs LP6](images/bd-lp6.jpg)
-```
+## Outstanding Items
 
-**Guidelines:**
+- [ ] Specific task
 
-- Product Page: Link to manufacturer's official product listing
-- Installation Guide: Link to PDF manual/instructions (prefer manufacturer site)
-- Product Image: Store in `images/` directory, use descriptive filename
-- Images: 800px width max, JPG or PNG format
-- If product page doesn't exist, link to manufacturer's product search page
-- Always prefer manufacturer URLs over reseller URLs
+## Related Documentation
 
-**Tracking Product Documentation:**
+- [Related Doc][ref]
 
-Product documentation is tracked in individual files, NOT in a central tracking file.
-
-To find incomplete product documentation:
-
-```bash
-# Find all TBD/placeholder/missing items
-grep -r "TBD\|placeholder\|Missing" *.md
-
-# Find files missing product images
-grep -r "Product Image:" *.md | grep -v "images/"
-
-# Find files missing manufacturer manuals
-grep -r "Installation Manual:" *.md | grep "TBD"
+[product-link]: https://manufacturer.com/product
+[install-link]: https://manufacturer.com/manual.pdf
+[ref]: ../path/to/file.md
 ```
 
-Each file is responsible for its own product documentation completeness.
+### CLAUDE.md Files (Navigation Only)
 
-**Wiring Diagram Requirements:**
+**Purpose:** Help AI agents navigate - NOT documentation duplicates
 
-- Every electrical component MUST have a wiring diagram
-- **Manufacturer Diagrams (Primary):**
-  - Link to official wiring diagram from manufacturer's manual/documentation
-  - Embed manufacturer diagram image if available
-  - Always prefer manufacturer diagrams over custom diagrams
-- **System Integration Documentation (Secondary):**
-  - **Tables preferred** for products with many outputs/connections (e.g., PMU, controllers)
-  - Use Mermaid diagrams ONLY for simple power flow (2-5 connections max)
-  - Complex Mermaid diagrams are difficult to read - use tables instead
-  - Show: power source (battery/bus bar), connections to other systems, wire gauges
-  - Example: PMU output table showing all 24 outputs, loads, triggers
-- Mark as "Missing" if no manufacturer diagram is available
-- Mark as "See Installation Guide" if diagram is in linked manual
+**SHOULD contain:**
+- File listing and organization
+- Cross-references to related sections
+- Navigation guidance (which file for what info)
+- Change guidance (when updating X, also update Y)
 
-### Required Sections
+**SHOULD NOT contain:**
 
-1. Component type, model, quantity
-2. Power source, draw, wire gauge
-3. Control method
-4. Wiring summary (power, ground, routing)
-5. Outstanding items checklist
-
-### Wire Specifications
-
-Always specify:
-
-- Source (e.g., "PMU Out 17")
-- Wire gauge (e.g., "14 AWG")
-- Color when relevant
-- Load in amps
-
-### Outstanding Items
-
-Use checkbox format:
-
-```markdown
-- [ ] Specific actionable item
-- [ ] Another specific task
-```
+- Wire gauges, part numbers, specifications
+- Data tables, terminal assignments
+- Implementation details
+- Duplicate content from actual docs
 
 ## Technical Conventions
 
-### Power Sources
+### Power Source Terminology
 
-- **CONSTANT:** Always-on power (batteries)
-- **SWITCHED:** Ignition-controlled power
-- **RUN:** Ignition in RUN position
+- **CONSTANT:** Always-on power (direct from battery)
+- **SWITCHED:** Ignition-controlled power (RUN position)
+- **RUN:** Ignition switch in RUN position
 
-### Diode Isolation
+### Component References
 
-When combining circuits (brake + turn), always specify:
+- **PMU** = PMU24 power management unit
+- **CT4** = Command Touch CT4 lighting controller
+- **SwitchPros** = SwitchPros SP-1200 RCR-Force 12
+- **BCDC** = RedArc BCDC Alpha 25 DC-DC charger
+- **Body RTMR** = Body relay/timer/fuse panel
 
-- Diode type (e.g., 1N4001)
-- Diode ratings (e.g., 1A, 50V)
-- Circuit diagram showing isolation
+### PMU Terminology Standards
 
-### Admonitions
+**Physical Pins vs Digital Input Channels:**
 
-Use mkdocs admonitions sparingly:
+- **PMU Pin 7 / Pin7:** Physical connector pin for 12V switched power input (ignition sense)
+- **PMU In 7 / In7:** Digital input channel #7 (used for CT4 headlight status feedback)
+- **These are DIFFERENT** - Pin 7 receives power, In 7 receives signals
 
-- `!!! info` for important cross-references
-- `!!! warning` for safety-critical information
-- `!!! note` for clarifications
+**In Programming Logic:**
 
-## Documentation Categories
+- Use descriptive names: `Pin7_IgnitionRUN` for physical pin, `In7_CT4_Headlights` for input channel
+- Never confuse Pin 7 (power input) with In 7 (signal input)
 
-Documentation uses category-based numbering where file numbers indicate the category:
+**In Documentation:**
 
-### Category 1: Power Systems (01-*)
+- Always specify "Physical Pin 7" or "Digital Input In 7" when clarity needed
+- Refer to PMU Inputs documentation for complete pin/channel assignments
 
-- 01-power-generation.md
-- 01-front-battery-distribution.md
-- 01-rear-battery-distribution.md
+### Wire Sizing and Temperature Derating
 
-### Category 2: Engine & Critical Systems (02-*)
+**Temperature Derating for Voltage Drop:**
 
-- 02-power-distribution.md (PMU24)
-- 02-starter.md
-- 02-radiator-fan.md
-- 02-hvac.md
-- 02-horn.md
-- 02-wipers.md
-- 02-firewall-ingress.md
+All wire sizing calculations for engine bay circuits MUST include temperature derating:
 
-### Category 3: Lighting (03-*)
+- **Design Temperature:** 60°C (140°F) for engine bay runs
+- **Temperature Derating Factor:** 1.2× resistance increase
+- **Threshold:** <3% voltage drop at design temperature for critical circuits
+- **Calculation:** Standard voltage drop × 1.2 = Temperature-derated voltage drop
 
-- 03-lighting-overview.md
-- 03-headlights.md
-- 03-turn-signals.md
-- 03-drl-parking.md
-- 03-tail-brake-reverse.md
-- 03-offroad-lighting.md
+**Example:**
+- 2 AWG @ 170A, 10 ft, 20°C: 2.6% drop ✓
+- Same wire @ 60°C: 2.6% × 1.2 = **3.12% drop** ❌ EXCEEDS 3%
+- Upgrade to 1 AWG @ 60°C: 1.6% × 1.2 = **1.92% drop** ✓ ACCEPTABLE
 
-### Category 4: Cabin & Body Control (04-*)
+**Apply temperature derating to:**
+- PMU power feed (1 AWG required, not 2 AWG)
+- All high-current engine bay circuits (>50A continuous)
+- Circuits rated for continuous operation (not brief peak loads)
 
-- 04-cabin-body-control.md
+**Skip temperature derating for:**
+- Cabin runs (ambient temperature)
+- Brief peak loads (starter, winch - seconds duration)
+- Wheel well circuits (lower ambient temp than engine bay)
 
-### Category 5: Control Interfaces (05-*)
+### Wiring Diagram Preferences
 
-- 05-control-interfaces-overview.md
-- 05-command-touch-ct4.md
-- 05-switchpros-sp1200.md
-- 05-dashboard-controls.md
-- 05-gauge-cluster.md
-
-### Category 6: Audio (06-*)
-
-- 06-audio.md
-
-### Category 7: Communication (07-*)
-
-- 07-communication.md
-
-### Category 8: Offroading & Auxiliary (08-*)
-
-- 08-auxiliary-systems.md
-- 08-recovery-systems.md
-- 08-air-system.md
-
-### Category 9: Meta (09-*)
-
-- 09-wire-routing.md
-- 09-project-management.md
-
-### Cross-References
-
-Link to related documentation:
-
-```markdown
-See [PMU24 Power Distribution](../01-power-systems/04-pmu/index.md) for circuit details.
-```
+1. **Tables preferred** for multi-output devices (PMU, controllers)
+2. **Mermaid diagrams** ONLY for simple power flow (2-5 connections max)
+3. **Manufacturer diagrams** always preferred over custom diagrams
 
 ## Common Mistakes to Avoid
 
-1. **Don't mix SwitchPros and CT4/PMU content** - they control different systems
-2. **Don't duplicate information** - link to authoritative source instead
-3. **Don't create new files unnecessarily** - update existing documentation
-4. **Don't use marketing language** - "high-performance" → "6A draw"
-5. **Don't leave specifications as TBD** without noting in Outstanding Items
+1. **Mixing control systems** - CT4, SwitchPros, PMU control different loads
+2. **Duplicating information** - Link to source instead
+3. **Creating unnecessary files** - Edit existing content
+4. **Vague specifications** - Mark as TBD and add to TBD Tracker immediately
+5. **Implementation in CLAUDE.md** - These are navigation guides only
+6. **Inline links** - Use reference-style format
+7. **Untracked TBD items** - Every TBD must be in TBD Tracker with priority
 
 ## When Making Changes
 
-1. Read existing files first - understand the current organization
-2. Update cross-references if moving or renaming content
-3. Maintain consistent formatting with existing files
-4. Update overview files when adding new components
-5. Be specific in outstanding items - avoid vague TODOs
+**Always:**
+
+1. Read existing files first
+2. Search for duplicates before creating
+3. Update cross-references when moving content
+4. Maintain consistent formatting
+5. Update overview files when adding components
+6. **Update TBD Tracker when adding or resolving TBD items**
+7. Verify build succeeds (`mkdocs build`)
+
+**Never:**
+
+7. Create new files without checking for existing content
+8. Leave broken links or references
+9. Use emojis unless explicitly requested
+10. Guess at specifications - mark as TBD instead
+
+## Finding Information
+
+**Product specs:** Look in component's main file (e.g., `04-pmu/01-pmu-overview.md`)
+
+**Wire routing:** Check `08-installation/` and firewall ingress docs
+
+**Installation order:** See section's `installation-checklist.md`
+
+**Cross-section integration:** Use section CLAUDE.md files for navigation
+
+**Outstanding work:** `grep -r "\- \[ \]" docs/jeep_lj --include="*.md"`
+
+**TBD items:** See [Section 8.1 - TBD Tracker](08-installation/01-tbd-tracker.md) for centralized list with priorities
+
+**Search for specific TBD:** `grep -r "TBD" docs/jeep_lj --include="*.md" -n`
+
+## Success Criteria
+
+Your work is successful when:
+
+✅ All links use reference-style format
+✅ All images in central `/docs/jeep_lj/images/` location
+✅ No duplicate information across files
+✅ Build succeeds with no broken links
+✅ Documentation is succinct and actionable
+✅ Cross-references are accurate and up-to-date
+✅ **All TBD items are tracked in TBD Tracker with priorities**
+✅ Outstanding Items are specific and tracked
+✅ Changes follow established patterns

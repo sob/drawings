@@ -15,29 +15,33 @@ This section covers all street-legal DOT-required lighting circuits controlled b
 
 ## Lighting Systems
 
-### [Headlights][headlights]
+### Headlights {#headlights-overview}
 - **Type:** Baja Designs LP6 DOT LED (complete replacement)
 - **Low Beam:** CT4 SW3 (3.6A total) - latching on/off
 - **High Beam:** CT4 SW4 (5.6A total) - momentary or latching
 - **DRL:** PMU Out 9 (0.8A total) - automatic with ignition, auto-off when headlights on
+- **See:** [Headlights][headlights] for complete specifications
 
-### [Turn Signals][turn-signals]
+### Turn Signals {#turn-signals-overview}
 - **Front:** Dedicated amber LED turn signals (CT4 SW1/SW2)
 - **Rear:** Integrated into Maxbilt Trail Tail lights (YELLOW wire)
 - **Features:** GPS auto-cancel, lane change mode, hazard function
+- **See:** [Turn Signals][turn-signals] for complete specifications
 
-### [Tail, Brake & Reverse Lights][tail-brake-reverse-lights]
+### Tail, Brake & Reverse Lights {#tail-brake-reverse-overview}
 - **Type:** Maxbilt Trail Tail LED (4-function)
 - **Brake:** PMU Out 17 (3A) - trigger via brake pedal switch
 - **Reverse:** PMU Out 18 (3A) - trigger via transmission switch, also activates WolfBox camera
 - **Turn:** CT4 SW1/SW2 (combined with brake via diode isolation)
 - **Marker/Parking:** PMU Out 9 (DRL/parking circuit)
+- **See:** [Tail, Brake & Reverse][tail-brake-reverse-lights] for complete specifications
 
-### [DRL & Parking Lights][drl-parking-lights]
+### DRL & Parking Lights {#drl-parking-overview}
 - **Circuit:** PMU Out 9 (8A capacity)
 - **Components:** LP6 DRL, license plate lights, front/rear markers
 - **Control:** Automatic with ignition, PMU logic disables when headlights on
 - **No external relay needed** - handled by PMU programming
+- **See:** [DRL & Parking Lights][drl-parking-lights] for complete specifications
 
 ## Power Sources
 

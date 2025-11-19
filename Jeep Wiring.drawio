@@ -1,0 +1,97 @@
+<mxfile host="65bd71144e">
+    <diagram id="V8qxVcvvZZbGaRCg4bAg" name="Page-1">
+        <mxGraphModel dx="328" dy="647" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="4" value="Engine Bay" style="rounded=0;whiteSpace=wrap;html=1;hachureGap=4;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=20;rotation=-90;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;textDirection=vertical-rl;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;" vertex="1" parent="1">
+                    <mxGeometry x="19.30000000000001" y="320.7" width="505.77" height="344.38" as="geometry"/>
+                </mxCell>
+                <mxCell id="50" value="F1" style="rounded=0;whiteSpace=wrap;html=1;overflow=visible;fontSize=10;fontFamily=Verdana;" vertex="1" parent="1">
+                    <mxGeometry x="330" y="270" width="90" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="51" value="F2" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fontFamily=Verdana;" vertex="1" parent="1">
+                    <mxGeometry x="330" y="318" width="90" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="53" value="F10" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fontFamily=Verdana;" vertex="1" parent="1">
+                    <mxGeometry x="330" y="700" width="90" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="55" value="F9" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fontFamily=Verdana;" vertex="1" parent="1">
+                    <mxGeometry x="330" y="652" width="90" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="56" value="F8" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fontFamily=Verdana;" vertex="1" parent="1">
+                    <mxGeometry x="330" y="604" width="90" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="57" value="F7" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fontFamily=Verdana;" vertex="1" parent="1">
+                    <mxGeometry x="330" y="557" width="90" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="58" value="F6" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fontFamily=Verdana;" vertex="1" parent="1">
+                    <mxGeometry x="330" y="509" width="90" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="59" value="F4" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fontFamily=Verdana;" vertex="1" parent="1">
+                    <mxGeometry x="330" y="461" width="90" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="60" value="F4" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fontFamily=Verdana;" vertex="1" parent="1">
+                    <mxGeometry x="330" y="413" width="90" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="61" value="F3" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fontFamily=Verdana;" vertex="1" parent="1">
+                    <mxGeometry x="330" y="366" width="90" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="62" value="Fuses &amp;amp; Relays" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;fontFamily=Verdana;fontSize=11;" vertex="1" parent="1">
+                    <mxGeometry x="470" y="250" width="210" height="420" as="geometry"/>
+                </mxCell>
+                <mxCell id="63" value="F1 - HVAC Blower (40A)" style="text;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontFamily=Verdana;fontSize=11;fillColor=default;strokeColor=default;" vertex="1" parent="62">
+                    <mxGeometry y="30" width="210" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="64" value="F2 - Exterior Lighting (40A)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontFamily=Verdana;fontSize=11;" vertex="1" parent="62">
+                    <mxGeometry y="60" width="210" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="65" value="F3 - Starter (60A)" style="text;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontFamily=Verdana;fontSize=11;" vertex="1" parent="62">
+                    <mxGeometry y="90" width="210" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="75" value="F4 - IOD Memory (50A)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontFamily=Verdana;fontSize=11;" vertex="1" parent="62">
+                    <mxGeometry y="120" width="210" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="74" value="F5 - AC Clutch (10A)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontFamily=Verdana;fontSize=11;" vertex="1" parent="62">
+                    <mxGeometry y="150" width="210" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="73" value="F6 - Oil Fan Cooler (10A)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontFamily=Verdana;fontSize=11;" vertex="1" parent="62">
+                    <mxGeometry y="180" width="210" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="72" value="F7 - Power Steering Cooler (10A)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontFamily=Verdana;fontSize=11;" vertex="1" parent="62">
+                    <mxGeometry y="210" width="210" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="71" value="F8 - &lt;i&gt;OPEN&lt;/i&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontFamily=Verdana;fontSize=11;" vertex="1" parent="62">
+                    <mxGeometry y="240" width="210" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="70" value="F9 - &lt;i&gt;OPEN&lt;/i&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontFamily=Verdana;fontSize=11;" vertex="1" parent="62">
+                    <mxGeometry y="270" width="210" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="69" value="F10 - &lt;i&gt;OPEN&lt;/i&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontFamily=Verdana;fontSize=11;" vertex="1" parent="62">
+                    <mxGeometry y="300" width="210" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="79" value="R1 - AC Magnetic Clutch (30A)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontFamily=Verdana;fontSize=11;" vertex="1" parent="62">
+                    <mxGeometry y="330" width="210" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="78" value="R2 - Starter (30A)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontFamily=Verdana;fontSize=11;" vertex="1" parent="62">
+                    <mxGeometry y="360" width="210" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="77" value="R3 - &lt;i&gt;OPEN&lt;/i&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontFamily=Verdana;fontSize=11;" vertex="1" parent="62">
+                    <mxGeometry y="390" width="210" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="80" value="R1" style="whiteSpace=wrap;html=1;aspect=fixed;fontFamily=Verdana;" vertex="1" parent="1">
+                    <mxGeometry x="130" y="280" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="81" value="R2" style="whiteSpace=wrap;html=1;aspect=fixed;fontFamily=Verdana;" vertex="1" parent="1">
+                    <mxGeometry x="130" y="386" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="82" value="R3" style="whiteSpace=wrap;html=1;aspect=fixed;fontFamily=Verdana;" vertex="1" parent="1">
+                    <mxGeometry x="130" y="490" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="83" value="Eaton 15305-3-2-4" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontStyle=1;fontSize=15;" vertex="1" parent="1">
+                    <mxGeometry x="130" y="700" width="132.18" height="30" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

@@ -1,14 +1,41 @@
-# Section 9: Installation & Project Management {#installation-project-management}
-Physical installation, wire routing, project planning, and validation procedures.
+---
+hide:
+  - toc
+---
+
+# Section 8: Installation & Project Management {#installation-project-management}
+
+Physical installation planning, tracking, and validation procedures.
 
 ## Contents
 
-- **[9.1 Wire Routing & Physical Layout][wire-routing-physical-layout]** - Cable management, harness routing, wire bundling, firewall penetrations, physical installation details
+- **[8.1 TBD Tracker][tbd-tracker]** - Outstanding items and completion tracking
+
+## Installation Resources
+
+**Power Systems Installation:**
+
+- [Section 1 Installation Checklist][section-1-install] - Complete power systems installation guide organized by workflow phases
+
+**Wire Routing:**
+
+- [Section 1.7 - Wire Routing][wire-routing] - Primary power cables, firewall penetrations, routing paths, ground points
+
+**Firewall Planning:**
+
+- [Section 2.7 - Firewall Ingress][firewall-ingress] - Detailed firewall penetration specifications and grommet assignments
 
 ## System Overview
 
-Installation documentation covering:
-- Physical wire routing from components to controllers
-- Harness bundling and protection
+Installation planning and tracking includes:
+
+- Outstanding items tracking (TBD Tracker)
+- Power systems installation checklist
+- Wire routing and bundling specifications
 - Firewall penetration planning
-- Cable management best practices
+- Testing and validation procedures
+
+[tbd-tracker]: 01-tbd-tracker.md
+[section-1-install]: ../01-power-systems/installation-checklist.md
+[wire-routing]: ../01-power-systems/07-wire-routing/index.md
+[firewall-ingress]: ../02-engine-systems/07-firewall-ingress.md

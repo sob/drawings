@@ -29,7 +29,7 @@ The Command Touch CT4 is a steering column-mounted controller that replaces the 
 
 The CT4 provides complete turn signal and headlight control:
 
-### Turn Signals
+### Turn Signals {#ct4-turn-signals}
 
 - **Front Turn Signals:** Amber LED turn signal lights (dedicated turn signal only)
   - Wired to CT4 SW1 (right) and SW2 (left) outputs
