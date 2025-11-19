@@ -1,4 +1,9 @@
-# 1.4.4 PMU Programming {#144-pmu-programming}
+---
+hide:
+  - toc
+---
+
+# 1.4.4 PMU Programming {#pmu-programming}
 PMU configuration examples, logic sequences, and implementation checklist.
 
 ## Programming Examples
@@ -6,22 +11,14 @@ PMU configuration examples, logic sequences, and implementation checklist.
 ### DRL Auto-Off Logic (Output 14)
 
 ```
-IF (In6_IgnitionRUN == ON) AND (In7_CT4_Headlights == OFF)
+IF (Pin7_IgnitionRUN == ON) AND (In7_CT4_Headlights == OFF)
   THEN Out14_DRL = ON
 ELSE Out14_DRL = OFF
 ```
 
 DRL on with ignition, off when headlights active.
 
-### Starter Safety Logic (Output 23)
-
-```
-IF (In5_IgnitionSTART == ON) AND (In4_ClutchSwitch == CLOSED)
-  THEN Out23_StarterRelay = ON
-ELSE Out23_StarterRelay = OFF
-```
-
-Starter requires ignition START + clutch depressed.
+**Note:** Pin 7 is the dedicated 12V switched input (physical pin), different from In 7 which is a digital input channel. See [PMU Inputs][pmu-inputs] for complete pin assignments.
 
 ### A/C Clutch Logic (Output 17)
 
@@ -61,6 +58,48 @@ DELAY Out8_PSFan = 1.5s
 
 Prevents voltage sag during ignition-on by staggering high-current load activation.
 
+### Battery Load Monitoring
+
+**Purpose:** Monitor battery voltage and current to track actual system load and verify alternator capacity.
+
+**Data Logging Configuration:**
+
+```
+LOG BatteryVoltage (continuous, 1 Hz)
+LOG TotalCurrent_PMU (continuous, 1 Hz)
+LOG AlternatorVoltage (if available)
+LOG EngineRPM (J1939_SPN190)
+```
+
+**Critical Voltage Thresholds:**
+
+- **14.2-14.4V** (engine running): Alternator charging normally
+- **13.8-14.1V** (engine running, high load): Alternator near capacity
+- **12.6-12.8V** (engine off): Fully charged battery at rest
+- **<12.5V** (engine running): Alternator undersized or failing
+- **<11.5V** (engine running): Critical - load exceeds alternator output
+
+**Monitoring Strategy:**
+
+1. **Baseline Testing:** Run engine at idle with all loads off - note voltage (should be 14.2-14.4V)
+2. **Progressive Load Testing:** Add loads incrementally (HVAC → fans → lights) and monitor voltage drop
+3. **Peak Load Testing:** Run all typical simultaneous loads and verify voltage stays >13.5V
+4. **Data Analysis:** Export PMU logs to identify which load combinations cause voltage sag
+
+**Warning Triggers:**
+
+```
+IF (BatteryVoltage < 12.5V) AND (EngineRPM > 1000)
+  THEN Trigger_Low_Voltage_Warning = ON
+```
+
+**Use Cases:**
+
+- Verify 200A alternator capacity under real-world loads
+- Identify which load combinations exceed alternator output
+- Monitor battery state of charge during off-grid camping
+- Track battery health over time (voltage recovery patterns)
+
 ## Configuration Software
 
 **Software:** ECUMaster PMU Configuration Software
@@ -69,7 +108,10 @@ Prevents voltage sag during ignition-on by staggering high-current load activati
 
 **Configuration File:** Export and backup PMU configuration file (.pmu format)
 
+**Backup Strategy:** Store configuration in git repository + printed copy of critical logic (DRL, fan control, starter safety)
+
 **Features:**
+
 - Visual output state monitoring
 - Real-time data logging
 - Logic programming interface
@@ -77,48 +119,20 @@ Prevents voltage sag during ignition-on by staggering high-current load activati
 - Output combining setup
 - Diagnostic LED configuration
 
-## Outstanding Items
+**Installation & Testing:** See [Section 1 Installation Checklist][installation]
 
-### PMU Installation
-- [ ] Determine PMU mounting location (firewall vs inner fender)
-- [ ] Verify PMU ground to Front Battery- via Pin 25 (10 AWG)
-
-### CAN Bus Integration
-- [ ] Tap J1939 CAN bus from Cummins body harness (same tap location as Dakota Digital):
-  - CAN High: T-tap → PMU Pin 23 or 24 (18-20 AWG twisted pair stub, <12" length)
-  - CAN Low: T-tap → PMU Pin 36 or 37 (18-20 AWG twisted pair stub, <12" length)
-- [ ] Verify PMU internal CAN termination is DISABLED (bus already terminated at both ends)
-- [ ] Verify 60Ω resistance across CAN High/Low with ignition off (confirms proper termination)
-- [ ] Configure PMU to read J1939 data (SPN 100, 110, 175, 190, etc.)
-- [ ] Program OUT 7 (oil cooler fan) to trigger based on J1939 SPN 175 (oil temp)
-- [ ] Program OUT 8 (PS cooler fan) to trigger based on J1939 SPN 110 (coolant temp)
-- [ ] Test J1939 communication and verify data accuracy with all devices connected
-
-### PMU Output Wiring
-- [ ] Route ignition switch RUN wire to PMU Pin 7 and In 6 (18 AWG)
-- [ ] Split ignition signal to CT4, SwitchPros, Fusion Radio, BCDC (18 AWG branches)
-- [ ] Route CT4 SW3 to PMU In 7 (DRL cutoff)
-- [ ] Wire radiator fan (GM 84100128) to PMU outputs OUT2+OUT3+OUT4 (3x 25A paralleled for 75A capacity)
-- [ ] Configure PMU24 to control radiator fan via ECM PWM signal (or temperature-based logic)
-- [ ] Determine radiator fan control strategy (ECM-controlled vs PMU24 temperature sensor)
-- [ ] Wire iBooster main power to PMU outputs OUT5+OUT6 (2x 25A paralleled for 50A capacity)
-- [ ] Wire iBooster ignition signal to PMU OUT19 (7A output, 5A load)
-
-### PMU Programming
-- [ ] Create PMU configuration file with all logic sequences
-- [ ] Test sequential load startup timing
-- [ ] Export and backup PMU configuration file
-- [ ] Verify all outputs operate correctly with programmed logic
-- [ ] Test DRL auto-off when headlights activated
-- [ ] Test starter safety (clutch + ignition START required)
-- [ ] Test A/C clutch engagement logic
-- [ ] Test CAN-based fan controls (oil cooler, PS cooler)
-- [ ] Verify voltage-based load shedding if implemented
+[installation]: ../installation-checklist.md#phase-3-controllers-physical-installation-main-power
 
 ## Related Documentation
 
-- [PMU Overview][141-pmu-overview] - Product specifications and capacity
-- [PMU Outputs][142-pmu-outputs] - Output configuration and load details
-- [PMU Inputs][143-pmu-inputs] - Input configuration and CAN bus integration
-- [Front Battery Distribution][zone-1-front-battery-tray--primary-distribution-engine-bay] - Power architecture and bus bars
-- [Gauge Cluster][dakota-digital-gauge-cluster] - Dakota Digital J1939 CAN bus tap location
+- [PMU Overview][pmu-overview] - Product specifications and capacity
+- [PMU Inputs][pmu-inputs] - Input configuration and CAN bus integration
+- [PMU Outputs][pmu-outputs] - Output configuration and load details
+- [Starter Battery Distribution][starter-battery-distribution] - PMU power source and circuit breaker
+- [Gauge Cluster][gauge-cluster] - Dakota Digital J1939 CAN bus tap location
+
+[pmu-overview]: 01-pmu-overview.md
+[pmu-inputs]: 02-pmu-inputs.md
+[pmu-outputs]: 03-pmu-outputs.md
+[starter-battery-distribution]: ../02-starter-battery-distribution/index.md
+[gauge-cluster]: ../../04-control-interfaces/04-gauge-cluster.md

@@ -1,3 +1,14 @@
+---
+hide:
+  - toc
+tags:
+  - product-details
+  - communication-systems
+  - radio
+  - gmrs
+  - rugged-radio
+---
+
 # Communication Systems {#communication-systems}
 ## System Overview
 
@@ -11,36 +22,53 @@ The communication systems provide essential radio communication capabilities inc
 The Rugged Radio G1 is a 50W GMRS (General Mobile Radio Service) two-way radio for vehicle-to-vehicle communication and group coordination. GMRS operates on UHF frequencies (462-467 MHz) and requires an FCC license (family license, no exam required).
 
 **Components:**
-- **Radio Unit:** Rugged Radio G1 GMRS Radio
-  - **Model:** G1-GMRS (50W output)
-  - **User Manual:** [Rugged Radio G1 Manual](https://cdn.shopify.com/s/files/1/0240/3280/4960/files/G1_Manual.pdf)
-  - **Mounting:**
-    - Location: Behind dash, next to STX intercom
-    - Universal mounting brackets included (vehicle-specific brackets sold separately)
-    - **IMPORTANT:** Do NOT mount near ignition box to avoid RF interference
-  - **Power Requirements:**
-    - Input Voltage: 12V DC (not compatible with 24V systems)
-    - **CRITICAL:** Power must connect directly to 12V battery (not through Body RTMR)
-      - Route all power cables directly to battery
-      - Do NOT connect inline with other components
-      - Do NOT tie to ignition, lights, or other power sources (causes ground loop noise)
-    - Fuse: 15A inline fuse (install within 18" of battery positive connection)
-    - Current Draw: 1-2A receive, 8-12A transmit at 50W (typical)
-  - **Features:**
-    - 50W output power (maximum allowed for GMRS)
-    - 16 GMRS channels + repeater inputs
-    - CTCSS/DCS privacy codes
-    - VOX (voice-activated transmission)
-    - Scan function
-    - IP67 waterproof rating with all-aluminum chassis
-    - RFI (Radio Frequency Interference) protection
-  - **Antenna:** Roof-mounted GMRS antenna (1/4 wave or 1/2 wave)
-    - Frequency: 462-467 MHz
-    - Mounting: Roof rack, fender, or NMO mount on roof
-    - Cable: RG58 or better coax (50© impedance)
-- **Intercom Integration:** Connects to Rugged Radio Intercom (see below)
-  - Allows driver/passengers to communicate via headsets
-  - Push-to-talk (PTT) button integration
+
+/// html | div.product-info
+
+**Radio Unit:** Rugged Radio G1 GMRS Radio
+
+**Model:** G1-GMRS (50W output)
+
+**User Manual:** [Rugged Radio G1 Manual](https://cdn.shopify.com/s/files/1/0240/3280/4960/files/G1_Manual.pdf)
+
+**Mounting:**
+
+- Location: Behind dash, next to STX intercom
+- Universal mounting brackets included (vehicle-specific brackets sold separately)
+- **IMPORTANT:** Do NOT mount near ignition box to avoid RF interference
+
+**Power Requirements:**
+
+- Input Voltage: 12V DC (not compatible with 24V systems)
+- **CRITICAL:** Power must connect directly to 12V battery (not through Body RTMR)
+  - Route all power cables directly to battery
+  - Do NOT connect inline with other components
+  - Do NOT tie to ignition, lights, or other power sources (causes ground loop noise)
+- Fuse: 15A inline fuse (install within 18" of battery positive connection)
+- Current Draw: 1-2A receive, 8-12A transmit at 50W (typical)
+
+**Features:**
+
+- 50W output power (maximum allowed for GMRS)
+- 16 GMRS channels + repeater inputs
+- CTCSS/DCS privacy codes
+- VOX (voice-activated transmission)
+- Scan function
+- IP67 waterproof rating with all-aluminum chassis
+- RFI (Radio Frequency Interference) protection
+
+**Antenna:** Roof-mounted GMRS antenna (1/4 wave or 1/2 wave)
+
+- Frequency: 462-467 MHz
+- Mounting: Roof rack, fender, or NMO mount on roof
+- Cable: RG58 or better coax (50© impedance)
+
+**Intercom Integration:** Connects to Rugged Radio Intercom (see below)
+
+- Allows driver/passengers to communicate via headsets
+- Push-to-talk (PTT) button integration
+
+///
 
 **Wiring Summary:**
 1. **Power (+):** Battery positive  inline fuse (15A)  G1 radio power input (12V DC)
@@ -48,7 +76,7 @@ The Rugged Radio G1 is a 50W GMRS (General Mobile Radio Service) two-way radio f
    - Run dedicated power wire from battery positive terminal through firewall (Grommet 4) to G1 radio
    - Firewall penetration: See [Firewall Ingress][firewall-penetrations-ingress-points]
    - Install 15A inline fuse holder within 18" of battery connection
-   - Do NOT connect to ignition, SWITCHED bus, or other power sources (causes ground loop noise)
+   - Do NOT connect to ignition or other switched power sources (causes ground loop noise)
 2. **Ground (-):** G1 ground  battery negative terminal (preferred) or chassis ground
    - Direct battery negative connection recommended for best RF performance
    - Clean ground critical for radio performance and noise reduction
@@ -121,7 +149,7 @@ The Rugged Radio STX Intercom allows driver and passengers to communicate via he
    - Run dedicated power wire from battery positive terminal through firewall (Grommet 4) to STX intercom
    - Firewall penetration: See [Firewall Ingress][firewall-penetrations-ingress-points]
    - Install inline fuse holder within 18" of battery connection
-   - Do NOT connect to ignition, SWITCHED bus, or other power sources (causes ground loop noise)
+   - Do NOT connect to ignition or other switched power sources (causes ground loop noise)
 2. **Ground (-):** STX black ground wire  battery negative terminal (preferred) or chassis ground
    - Direct battery negative connection recommended for best audio quality
    - Clean ground critical for preventing ground loop noise in audio system

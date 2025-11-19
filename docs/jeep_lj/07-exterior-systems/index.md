@@ -1,3 +1,8 @@
+---
+hide:
+  - toc
+---
+
 # Section 8: Exterior & Auxiliary Systems {#exterior-auxiliary-systems}
 Offroad equipment, recovery systems, and auxiliary mechanical/electrical systems.
 

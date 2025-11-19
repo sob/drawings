@@ -1,3 +1,13 @@
+---
+hide:
+  - toc
+tags:
+  - product-details
+  - engine-systems
+  - brake-system
+  - ibooster
+---
+
 # Brake Booster System - Bosch iBooster Gen 2 {#brake-booster-system-bosch-ibooster-gen-2}
 **Type:** Bosch iBooster Gen 2 (electric vacuum-independent brake booster)
 **Generation:** Gen 2 (eliminates secondary power circuit required by Gen 1)
@@ -12,15 +22,22 @@ The Bosch iBooster is an electromechanical brake booster that eliminates the nee
 
 ## Product Documentation
 
+/// html | div.product-info
+
 **Type:** Bosch iBooster Gen 2
+
 **Manufacturer:** Bosch Mobility
+
 **Product Page:** [Bosch iBooster](https://www.bosch-mobility.com/en/solutions/driving-safety/ibooster/)
 
 **Wiring Harness & Connectors:**
 
 **Manufacturer:** Tulay's Wire Werks
+
 **Product Page:** [Tulay's Wire Werks](https://tulayswirewerks.com/)
+
 **Gen 2 Universal Harness:** [Bosch iBooster Gen-2 Universal Wire Harness](https://tulayswirewerks.com/product/bosch-ibooster-gen-2-universal-wire-harness/)
+
 **Gen 2 Connector Kit:** [Bosch iBooster Gen-2 Connector Kit](https://tulayswirewerks.com/product/bosch-ibooster-gen-2-connector-kit/)
 
 **Installation Resources:**
@@ -28,6 +45,8 @@ The Bosch iBooster is an electromechanical brake booster that eliminates the nee
 - [Wiring the iBooster - EVcreate](https://www.evcreate.com/wiring-the-ibooster/)
 - [Installing the iBooster - EVcreate](https://www.evcreate.com/installing-the-ibooster/)
 - [iBooster Donor Vehicles - EVcreate](https://www.evcreate.com/ibooster-donor-vehicles/)
+
+///
 
 ## Component Specifications
 
@@ -218,5 +237,5 @@ This minimal configuration provides basic brake assist without ignition signal o
 ## Related Documentation
 
 - [PMU Power Distribution][pmu-power-distribution] - PMU OUT5+6 and OUT19 specifications
-- [Front Battery Distribution][zone-1-front-battery-tray--primary-distribution-engine-bay] - CONSTANT bus bar configuration
+- [Starter Battery Distribution][starter-battery-distribution] - CONSTANT bus bar configuration
 - [Firewall Ingress][firewall-penetrations-ingress-points] - iBooster mounting and wiring routing through firewall

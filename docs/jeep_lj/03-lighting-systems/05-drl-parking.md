@@ -1,3 +1,8 @@
+---
+hide:
+  - toc
+---
+
 # DRL & Parking Lights {#drl-parking-lights}
 **Control:** Automatic with ignition
 **Power Source:** PMU Out 9 (8A capacity, SWITCHED)

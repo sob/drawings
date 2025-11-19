@@ -1,3 +1,8 @@
+---
+hide:
+  - toc
+---
+
 # Technical Documentation
 
 Welcome to the technical documentation site for various in-depth projects.

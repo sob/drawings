@@ -1,3 +1,8 @@
+---
+hide:
+  - toc
+---
+
 # Offroad & Auxiliary Lighting {#offroad-auxiliary-lighting}
 Non-DOT-required lighting circuits controlled by the SwitchPros SP-1200 controller.
 
@@ -7,7 +12,7 @@ Non-DOT-required lighting circuits controlled by the SwitchPros SP-1200 controll
 ## System Overview
 
 **Controller:** SwitchPros RCR-Force 12 (SP-1200)
-- **Power:** CONSTANT bus (rear battery, 150A breaker)
+- **Power:** CONSTANT bus (aux battery, 150A breaker)
 - **Outputs:** 17 total (12 main + 5 low-side drivers)
 - **Control:** 12-button panel + Bluetooth app
 

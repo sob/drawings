@@ -1,9 +1,28 @@
+---
+hide:
+  - toc
+tags:
+  - product-details
+  - lighting
+  - tail-lights
+  - led
+---
+
 # Tail, Brake & Reverse Lights {#tail-brake-reverse-lights}
+
+/// html | div.product-info
+
 **Type:** Maxbilt Trail Tail LED (4-function: Brake, Turn, Marker, Reverse)
+
 **Manufacturer:** On The Rox Fabrication
+
 **Installation Guide:** [Maxbilt Tail Wiring](https://ontheroxfab.com/wp-content/uploads/2019/10/MaxBilt-Taillight-Installation-12-3-2020.pdf)
+
 **Quantity:** 2
+
 **Mounting:** Rear quarter panels or tailgate
+
+///
 
 ## Wire Functions
 

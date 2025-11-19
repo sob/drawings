@@ -1,9 +1,28 @@
+---
+hide:
+  - toc
+tags:
+  - product-details
+  - lighting
+  - headlights
+  - led
+---
+
 # Headlights {#headlights}
+
+/// html | div.product-info
+
 **Type:** Baja Designs LP6 DOT LED (complete headlight replacement)
+
 **Installation Guide:** [Baja Designs LP6 DOT Wiring](https://www.bajadesigns.com/wp-content/uploads/Installation%20Instructions/FGXX_18-7801-INS_001.pdf)
+
 **Quantity:** 2 (left and right)
+
 **Mounting:** Factory headlight buckets
+
 **Controller:** [Command Touch CT4][command-touch-ct4] SW3/SW4
+
+///
 
 ## Pin Configuration (Deutsch DT06-4S connector)
 
@@ -17,14 +36,14 @@
 ## Low Beam
 
 - **Control:** Pull CT4 lever (latching on/off)
-- **Power:** Front Battery (40A) → CT4 → SW3 output (10A internal fusing)
+- **Power:** Starter Battery (40A) → CT4 → SW3 output (10A internal fusing)
 - **Disabled:** When ignition off (via ignition signal)
 - **Load:** 3.6A total (both lights in parallel)
 
 ## High Beam
 
 - **Control:** Push CT4 lever (momentary or latching - programmable)
-- **Power:** Front Battery (40A) → CT4 → SW4 output (10A internal fusing)
+- **Power:** Starter Battery (40A) → CT4 → SW4 output (10A internal fusing)
 - **Mutual Exclusivity:** CT4 automatically disables low beam when high beam activates
 - **Disabled:** When ignition off
 - **Load:** 5.6A total (both lights in parallel)

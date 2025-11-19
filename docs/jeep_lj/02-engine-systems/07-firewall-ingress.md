@@ -1,3 +1,8 @@
+---
+hide:
+  - toc
+---
+
 # Firewall Penetrations & Ingress Points {#firewall-penetrations-ingress-points}
 Centralized reference for all firewall penetration points, wire routing, and grommet specifications.
 
@@ -49,38 +54,20 @@ All electrical penetrations through the firewall must be properly sized and seal
 
 - [Engine Systems][pmu-power-distribution] - Clutch and brake switch wiring
 
-### Grommet 3: Body RTMR SWITCHED Power Feed
+### Grommet 3: Reserved
 
-**Location:** TBD - engine bay side near SWITCHED bus bar
-**Direction:** Engine bay (SWITCHED bus) → Cabin (Body RTMR)
+**Status:** No longer required - Body RTMR receives CONSTANT power directly from aux battery via circuit breaker in wheel well
 
-**Wire Bundle:**
-
-- SWITCHED bus power feed to Body RTMR (40A maximum load)
-  - Wire gauge: 8 AWG minimum (40A continuous at 10-12 ft run)
-  - Voltage drop: <2.5% at 40A with 8 AWG over 12 ft
-  - Protection: Inline fuse or breaker at SWITCHED bus (50A recommended)
-  - Destination: Body RTMR SWITCHED input terminal
-
-**Body RTMR SWITCHED Circuits Breakdown:**
-- WolfBox camera/mirror: 10A (F5)
-- Driver heated seat: 15A (F6)
-- Passenger heated seat: 15A (F7)
-- **Total:** 40A maximum (actual simultaneous load typically lower)
+**Note:** Body RTMR circuits (WolfBox camera, heated seats, USB, radio) are now on CONSTANT power with manual/trigger control. No firewall penetration needed for Body RTMR power feed.
 - **Note:** Radio amplifier (15A, F3) on CONSTANT power (remote wire from deck triggers amp)
 
 **Outstanding Items:**
 
-- [ ] Determine exact Grommet 3 location on firewall (near SWITCHED bus bar preferred)
-- [ ] Determine wire gauge for SWITCHED feed (8 AWG recommended for 40A at 10-12 ft)
-- [ ] Determine inline fuse/breaker size and location for Body RTMR SWITCHED feed (50A recommended)
-- [ ] Route wire through firewall with proper grommet and sealing
-- [ ] Determine grommet size (8 AWG single wire)
+- [ ] Grommet 3 no longer required (Body RTMR powered from aux battery)
 
 **Related Documentation:**
 
 - [Body RTMR][body-rtmr] - Body RTMR specifications and circuit breakdown
-- [Front Battery Distribution][zone-1-front-battery-tray--primary-distribution-engine-bay] - SWITCHED bus bar configuration
 
 ### Grommet 5: Dakota Digital Outside Temperature Probe {#grommet-3-dakota-digital-outside-temperature-probe}
 
@@ -104,7 +91,7 @@ All electrical penetrations through the firewall must be properly sized and seal
 
 ### Grommet 6: Communication Devices (G1 GMRS, STX Intercom, Ham Radio) {#grommet-4-rugged-radio-g1-gmrs-stx-intercom-battery-cables}
 
-**Location:** TBD - near front battery/SafetyHub location
+**Location:** TBD - near starter battery/SafetyHub location
 **Direction:** Engine bay (SafetyHub/battery) → Cabin (radios behind dash)
 
 **Wire Bundle:**
@@ -136,7 +123,7 @@ All electrical penetrations through the firewall must be properly sized and seal
 - [ ] Determine exact Grommet 6 location on firewall (near SafetyHub/battery preferred)
 - [ ] Confirm wire gauge: 14 AWG for G1/STX, 10 AWG for Ham Radio
 - [ ] Determine grommet size (must accommodate 6 wires: 3 power + 3 ground)
-- [ ] Determine SafetyHub mounting location (near front battery)
+- [ ] Determine SafetyHub mounting location (near starter battery)
 
 **Related Documentation:**
 
@@ -199,8 +186,8 @@ All electrical penetrations through the firewall must be properly sized and seal
 ### Engine Bay Side (Exterior)
 
 - **PMU:** Firewall-mounted programmable power distribution unit for engine circuits
-  - Power source: Front Battery CONSTANT bus (SWITCHED logic via Pin 7 ignition sense)
-  - Ground: Front battery negative bus via pin 25 - 10 AWG
+  - Power source: Starter Battery CONSTANT bus (SWITCHED logic via Pin 7 ignition sense)
+  - Ground: Starter battery negative bus via pin 25 - 10 AWG
   - See [Engine Systems][pmu-power-distribution] for complete specifications
 
 ### Cabin Side (Interior)
@@ -248,7 +235,6 @@ All electrical penetrations through the firewall must be properly sized and seal
 
 - [ ] Determine exact location for Grommet 1 (PMU to cabin)
 - [ ] Determine exact location for Grommet 2 (Cabin to engine bay - near pedals)
-- [ ] Determine exact location for Grommet 3 (Body RTMR SWITCHED power feed - near SWITCHED bus)
 - [ ] Determine exact location for Grommet 5 (Dakota Digital temp probe)
 - [ ] Determine exact location for Grommet 6 (G1/STX battery cables - near battery)
 
@@ -283,4 +269,6 @@ All electrical penetrations through the firewall must be properly sized and seal
 - [Engine Systems][pmu-power-distribution] - PMU power distribution and clutch/brake switches
 - [Gauge Cluster][dakota-digital-gauge-cluster] - Dakota Digital modules and HDPE panel
 - [Communication & Camera][communication-systems] - G1 GMRS and STX intercom battery wiring
-- [Wire Routing & Layout][wire-routing-physical-layout] - Overall wire routing strategy
+- [Wire Routing & Layout][wire-routing] - Overall wire routing strategy
+
+[wire-routing]: ../01-power-systems/07-wire-routing/index.md

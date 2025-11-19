@@ -1,3 +1,8 @@
+---
+hide:
+  - toc
+---
+
 # Section 3: Lighting Systems {#lighting-systems-index}
 Complete vehicle lighting: street-legal/DOT-required lighting and auxiliary/offroad lighting systems.
 

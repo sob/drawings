@@ -1,3 +1,13 @@
+---
+hide:
+  - toc
+tags:
+  - product-details
+  - audio-systems
+  - head-unit
+  - fusion
+---
+
 # Audio Systems {#audio-systems}
 ### Communication Systems {#audio-communication-systems}
 
@@ -7,33 +17,51 @@
 The dash-mounted radio head unit provides AM/FM radio, Bluetooth connectivity, and NMEA 2000 integration for marine-grade performance in off-road conditions.
 
 **Components:**
-- **Radio Head Unit:** Fusion MS-RA670 Marine Entertainment System
-  - **Manual:** [Fusion MS-RA670 Installation Manual](https://pdf.crutchfieldonline.com/ImageBank/v20190610170100/Manuals/917/917RA670.PDF)
-  - **Location:** Dashboard center console (factory radio location)
-  - **Power Requirements:**
-    - **Constant Power (Memory):** Yellow wire - 12V constant (battery direct)
-    - **Switched Power (Ignition):** Red wire - 12V switched (on with ignition)
-    - **Fuse Rating:** 15A (per manual specifications)
-    - **Combined Circuit:** Body RTMR F2 (20A fuse, SWITCHED power with constant power tap)
-  - **Features:**
-    - AM/FM radio with RDS
-    - Bluetooth audio streaming and hands-free calling
-    - Multi-zone audio (3 zones + subwoofer)
-    - DSP (Digital Signal Processing) with presets
-    - NMEA 2000 integration (future expansion for GPS/depth/wind data)
-    - PartyBus networking (link multiple Fusion units)
-    - IPX7 waterproof rating (marine-grade for off-road dust/water resistance)
-    - USB audio playback
-  - **RCA Pre-Outs (to Fusion Apollo amplifier):**
-    - Zone 1: Left + Right RCA outputs (to amplifier channels 3 & 4 for front dash speakers)
-    - Zone 2: Left + Right RCA outputs (to amplifier channels 5 & 6 for rear roll bar speakers)
-    - Zone 3: Left + Right RCA outputs (available for future expansion)
-    - Subwoofer: Mono RCA output (to amplifier channels 1+2 bridged for subwoofer)
-  - **Speaker Outputs:** 4x 50W RMS (not used - amplifier powers all speakers)
-  - **Antenna:** Factory Jeep AM/FM antenna (mounted on fender or windshield)
-    - Motorola connector (standard automotive antenna)
-  - **Display:** 2.7" full-color TFT display with sunlight viewability
-  - **Load:** 15A maximum (per manual specifications)
+
+/// html | div.product-info
+
+**Radio Head Unit:** Fusion MS-RA670 Marine Entertainment System
+
+**Manual:** [Fusion MS-RA670 Installation Manual](https://pdf.crutchfieldonline.com/ImageBank/v20190610170100/Manuals/917/917RA670.PDF)
+
+**Location:** Dashboard center console (factory radio location)
+
+**Power Requirements:**
+
+- **Constant Power (Memory):** Yellow wire - 12V constant (battery direct)
+- **Switched Power (Ignition):** Red wire - 12V switched (on with ignition)
+- **Fuse Rating:** 15A (per manual specifications)
+- **Combined Circuit:** Body RTMR F2 (20A fuse, SWITCHED power with constant power tap)
+
+**Features:**
+
+- AM/FM radio with RDS
+- Bluetooth audio streaming and hands-free calling
+- Multi-zone audio (3 zones + subwoofer)
+- DSP (Digital Signal Processing) with presets
+- NMEA 2000 integration (future expansion for GPS/depth/wind data)
+- PartyBus networking (link multiple Fusion units)
+- IPX7 waterproof rating (marine-grade for off-road dust/water resistance)
+- USB audio playback
+
+**RCA Pre-Outs (to Fusion Apollo amplifier):**
+
+- Zone 1: Left + Right RCA outputs (to amplifier channels 3 & 4 for front dash speakers)
+- Zone 2: Left + Right RCA outputs (to amplifier channels 5 & 6 for rear roll bar speakers)
+- Zone 3: Left + Right RCA outputs (available for future expansion)
+- Subwoofer: Mono RCA output (to amplifier channels 1+2 bridged for subwoofer)
+
+**Speaker Outputs:** 4x 50W RMS (not used - amplifier powers all speakers)
+
+**Antenna:** Factory Jeep AM/FM antenna (mounted on fender or windshield)
+
+- Motorola connector (standard automotive antenna)
+
+**Display:** 2.7" full-color TFT display with sunlight viewability
+
+**Load:** 15A maximum (per manual specifications)
+
+///
 
 **Wiring:**
 1. **Constant Power (Yellow wire):** CONSTANT bus  Body RTMR F2 (20A)  MS-RA670 constant power (memory)
@@ -64,8 +92,7 @@ Since the MS-RA670 requires both constant power (memory/clock) and switched powe
 - New spare Body RTMR circuit (CONSTANT bus, 15A)  MS-RA670 yellow wire only (memory)
 
 **Outstanding Items:**
-- [ ] Decide on power wiring configuration (Option 1: dual power via F2, or Option 2: separate circuits)
-- [ ] Verify if Body RTMR F2 can support both CONSTANT and SWITCHED power inputs (or if separate circuit needed)
+- [ ] Verify radio ignition trigger wire connection for on/off control
 - [ ] Determine ground connection point for MS-RA670 (firewall stud or dash ground)
 - [ ] Plan wiring for Bluetooth microphone mounting location (near driver for hands-free calling)
 - [ ] Determine if NMEA 2000 integration will be used (future GPS/depth/wind data display on radio)
@@ -82,7 +109,7 @@ The Fusion Apollo amplifier provides high-power audio for speakers and subwoofer
   - **Model:** MS-AP61800 / 010-02284-65
   - **Installation Manual:** [Fusion Apollo Multichannel Amplifiers Installation Instructions](https://static.garmin.com/pumac/Fusion_Apollo_Multichannel_Amplifiers_Install_EN-US.pdf)
   - **Mounting:** TBD - cargo area or under rear seat (recommended for central speaker wire routing)
-  - **Power Source:** Direct from CONSTANT bus or rear battery (high current)
+  - **Power Source:** Direct from CONSTANT bus or aux battery (high current)
   - **Class:** Class-D amplifier (high efficiency, low heat)
   - **Total Power Output:** 1800W total rated power
   - **Channel Configuration:**
@@ -219,10 +246,10 @@ The Fusion Apollo amplifier provides high-power audio for speakers and subwoofer
 
 **Wiring Summary:**
 1. **Amplifier Power (+):** CONSTANT bus  40A Blue Sea breaker  6 AWG red wire  amplifier B+ terminal
-   - Direct connection to CONSTANT bus (rear battery) for high current
-   - Run dedicated 6 AWG wire from rear battery or CONSTANT bus bar to amplifier (1800W requires heavier gauge)
+   - Direct connection to CONSTANT bus (aux battery) for high current
+   - Run dedicated 6 AWG wire from aux battery or CONSTANT bus bar to amplifier (1800W requires heavier gauge)
    - Replace amplifier's included 40A inline fuse with centrally-located Blue Sea breaker for easier access
-2. **Amplifier Ground (-):** Amplifier ground terminal  6 AWG black wire  chassis ground or rear battery negative
+2. **Amplifier Ground (-):** Amplifier ground terminal  6 AWG black wire  chassis ground or aux battery negative
    - Clean, solid ground critical for amplifier performance and noise reduction
    - Keep ground wire <18 inches for best performance
 3. **MLC-RW LED Controller Power (+):** CONSTANT bus  Body RTMR spare circuit (30A)  MLC-RW power input
@@ -257,9 +284,9 @@ The Fusion Apollo amplifier provides high-power audio for speakers and subwoofer
 - **Fuse:** 40A fast-acting fuse (per Fusion Apollo manual specifications)
   - Amplifier includes inline fuse holder with 40A fuse
   - **Recommendation:** Replace inline fuse with centrally-located Blue Sea circuit breaker
-- **Recommended:** Blue Sea 40A breaker at CONSTANT bus or rear battery location
+- **Recommended:** Blue Sea 40A breaker at CONSTANT bus or aux battery location
   - Easier reset than inline fuse (no need to access amplifier)
-  - Mount breaker at CONSTANT bus or rear battery for easy access
+  - Mount breaker at CONSTANT bus or aux battery for easy access
   - Protects full power wire run from battery to amplifier
   - Blue Sea 7178 (40A) or 7184 (50A) thermal circuit breaker recommended
 
@@ -271,10 +298,10 @@ The Fusion Apollo amplifier provides high-power audio for speakers and subwoofer
    - Adequate ventilation behind dash for Class-D amplifier (low heat)
 2. **Cargo Area:** Behind rear seat or on sidewall
    - Easy access to speakers and subwoofer
-   - Requires longer power cables from rear battery
+   - Requires longer power cables from aux battery
    - Longer RCA cable runs from radio
 3. **Under Rear Seat:** Hidden installation
-   - Shorter power cables to rear battery
+   - Shorter power cables to aux battery
    - Good heat dissipation with air circulation
    - Moderate RCA cable lengths
 
@@ -282,10 +309,10 @@ The Fusion Apollo amplifier provides high-power audio for speakers and subwoofer
 - [ ] Determine Fusion Apollo 6-channel amplifier mounting location (behind dash preferred, cargo area or under rear seat optional)
 - [ ] Verify amplifier current draw at operating power (music listening vs full test tone)
 - [ ] Select Blue Sea circuit breaker: 40A (7178) for amplifier power protection
-- [ ] Plan Blue Sea breaker mounting location at CONSTANT bus or rear battery for easy access
+- [ ] Plan Blue Sea breaker mounting location at CONSTANT bus or aux battery for easy access
 - [ ] Remove amplifier's included 40A inline fuse and replace with centrally-located Blue Sea breaker
 - [ ] Confirm 6 AWG wire gauge is sufficient for power run from CONSTANT bus to amplifier
-- [ ] Determine amplifier ground connection point (chassis ground or direct to rear battery negative)
+- [ ] Determine amplifier ground connection point (chassis ground or direct to aux battery negative)
 - [ ] Verify ground wire length is <18 inches for best performance
 - [ ] Plan RCA cable routing from MS-RA670 to amplifier (shortest run if behind dash)
 - [ ] Determine speaker wire routing from amplifier to front dash and rear roll bar

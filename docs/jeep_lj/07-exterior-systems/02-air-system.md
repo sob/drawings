@@ -1,3 +1,14 @@
+---
+hide:
+  - toc
+tags:
+  - product-details
+  - exterior-systems
+  - air-compressor
+  - air-lockers
+  - arb
+---
+
 # Air System - ARB Compressor & Lockers {#air-system-arb-compressor-lockers}
 ## System Overview
 
@@ -7,13 +18,21 @@ The air system consists of an ARB Twin Compressor (brushless), 1-gallon air tank
 
 ### Specifications
 
-- **Model:** ARB CKBLTA12 Brushless Twin Motor Onboard 12V Air Compressor
-- **Installation Guide:** [ARB CKBLTA12 Installation PDF](https://store.arbusa.com/content/CKBLTA12%20INST.pdf)
-- **Maximum Amperage Draw:** 90A total (45A per motor × 2 motors)
-- **Fuse Configuration:** Dual 60A MIDI fuses via SafetyHub 150 (one per motor)
-  - **Motor 1:** SafetyHub MIDI-1 (60A) → 10 AWG power wire → compressor motor 1
-  - **Motor 2:** SafetyHub MIDI-2 (60A) → 10 AWG power wire → compressor motor 2
-  - SafetyHub mounted in engine compartment (close to CONSTANT bus bar)
+/// html | div.product-info
+
+**Model:** ARB CKBLTA12 Brushless Twin Motor Onboard 12V Air Compressor
+
+**Installation Guide:** [ARB CKBLTA12 Installation PDF](https://store.arbusa.com/content/CKBLTA12%20INST.pdf)
+
+**Maximum Amperage Draw:** 90A total (45A per motor × 2 motors)
+
+**Fuse Configuration:** Dual 60A MIDI fuses via SafetyHub 150 (one per motor)
+
+- **Motor 1:** SafetyHub MIDI-1 (60A) → 10 AWG power wire → compressor motor 1
+- **Motor 2:** SafetyHub MIDI-2 (60A) → 10 AWG power wire → compressor motor 2
+- SafetyHub mounted in engine compartment (close to CONSTANT bus bar)
+
+///
 
 ### Features
 
@@ -30,7 +49,7 @@ The air system consists of an ARB Twin Compressor (brushless), 1-gallon air tank
   - Compressor has internal relay/control that handles high-current motor switching
   - 14 AWG wire from OUTPUT-11 to compressor control terminal
 - **Ground:** 8 AWG black wire from compressor to chassis ground or battery negative
-- **Location:** Under passenger seat (cabin, rear battery area)
+- **Location:** Under passenger seat (cabin, aux battery area)
 
 ### Wiring Summary
 
@@ -201,7 +220,7 @@ Compressor fills tank to 150 PSI → pressure switch opens → compressor stops
 ### Power Flow Diagram
 
 ```
-CONSTANT Bus (Rear Battery)
+CONSTANT Bus (Aux Battery)
     │
     ├─→ SafetyHub 150 (Blue Sea 100A breaker)
     │       ├─→ MIDI-1 (60A) → 10 AWG → Compressor Motor 1

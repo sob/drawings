@@ -1,6 +1,11 @@
+---
+hide:
+  - toc
+---
+
 # Turn Signals {#turn-signals}
 **Controller:** [Command Touch CT4][command-touch-ct4] (SW1 = right turn, SW2 = left turn)
-**Power Source:** Front battery CONSTANT (via CT4 40A fuse)
+**Power Source:** Starter battery CONSTANT (via CT4 40A fuse)
 **Features:** GPS auto-cancel, lane change mode, hazard function
 
 ## Front Turn Signals

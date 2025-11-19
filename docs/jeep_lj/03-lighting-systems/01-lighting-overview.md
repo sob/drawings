@@ -1,3 +1,8 @@
+---
+hide:
+  - toc
+---
+
 # Vehicle Lighting Overview {#vehicle-lighting-overview}
 This section covers all street-legal DOT-required lighting circuits controlled by the Command Touch CT4 and PMU.
 
@@ -6,7 +11,7 @@ This section covers all street-legal DOT-required lighting circuits controlled b
 **Controller:** [Command Touch CT4][command-touch-ct4] - Steering column-mounted multifunction controller
 - Turn signal control (left/right) with GPS auto-cancel
 - Headlight control (low/high beam)
-- Powered by Front Battery CONSTANT (40A fuse) + Ignition RUN signal
+- Powered by Starter Battery CONSTANT (40A fuse) + Ignition RUN signal
 
 **Power Distribution:** [PMU][pmu-power-distribution] - Programmable power management
 - DRL/Parking lights (Out 9)
@@ -47,7 +52,7 @@ This section covers all street-legal DOT-required lighting circuits controlled b
 
 | Circuit | Power Source | Capacity | Load |
 |:--------|:-------------|:---------|:-----|
-| CT4 Controller | Front Battery CONSTANT | 40A | Powers all CT4 outputs |
+| CT4 Controller | Starter Battery CONSTANT | 40A | Powers all CT4 outputs |
 | Headlights Low/High | CT4 SW3/SW4 | 10A each | 3.6A / 5.6A |
 | DRL/Parking | PMU Out 9 | 15A | ~8A |
 | Brake Lights | PMU Out 17 | 7A | ~3A |

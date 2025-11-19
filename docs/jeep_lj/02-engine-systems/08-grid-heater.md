@@ -1,4 +1,17 @@
+---
+hide:
+  - toc
+tags:
+  - product-details
+  - engine-systems
+  - grid-heater
+  - cummins
+---
+
 # 2.9 Grid Heater System {#29-grid-heater-system}
+
+/// html | div.product-info
+
 **Type:** Cold-start air intake heater
 
 **Relay:** Cummins Part# 5467024 (OEM R2.8 relay)
@@ -6,6 +19,8 @@
 **Control:** Direct ECM control (no PMU involvement)
 
 **Function:** Cold-start aid for ambient temperatures below ~50°F
+
+///
 
 ## System Architecture
 
@@ -16,8 +31,8 @@
 
 2. **Grid Heater Relay (Cummins 5467024):**
    - Coil Power: ECM pins 46/21 (~1A) - direct connection
-   - Main Power: Direct from Front Battery+ via fusible link (bypasses all bus bars and PMU)
-   - Main Ground: Front Battery- or NEGATIVE bus
+   - Main Power: Direct from Starter Battery+ via fusible link (bypasses all bus bars and PMU)
+   - Main Ground: Starter Battery- or NEGATIVE bus
    - Output: 40-80A to grid heater element
    - Protection: Integrated fusible link
 
@@ -34,8 +49,8 @@
 flowchart LR
     ECM["Cummins ECM<br/>Pins 46/21"]
     RELAY["Grid Heater Relay<br/>Cummins 5467024"]
-    BATT["Front Battery+<br/>(Direct Connection)"]
-    GND["Front Battery-"]
+    BATT["Starter Battery+<br/>(Direct Connection)"]
+    GND["Starter Battery-"]
     ELEMENT["Grid Heater Element<br/>40-80A"]
 
     ECM -->|"~1A coil control"| RELAY
@@ -61,7 +76,6 @@ flowchart LR
 
 **Bypasses all distribution systems:**
 - Does NOT use CONSTANT bus bar
-- Does NOT use SWITCHED bus bar
 - Does NOT use PMU outputs
 - Direct battery connection with fusible link protection
 
@@ -70,12 +84,12 @@ flowchart LR
 ## Related Documentation
 
 - [PMU Power Distribution][pmu-power-distribution] - Engine bay power management
-- [Front Battery Distribution][zone-1-front-battery-tray--primary-distribution-engine-bay] - Direct battery connections
+- [Starter Battery Distribution][starter-battery-distribution] - Direct battery connections
 
 ## Outstanding Items
 
 - [ ] Wire ECM pins 46/21 directly to grid heater relay coil (Cummins 5467024)
-- [ ] Install fusible link from Front Battery+ to grid heater relay main power terminal
-- [ ] Connect grid heater relay ground to Front Battery- or NEGATIVE bus
+- [ ] Install fusible link from Starter Battery+ to grid heater relay main power terminal
+- [ ] Connect grid heater relay ground to Starter Battery- or NEGATIVE bus
 - [ ] Verify grid heater relay mounting location (engine bay, near intake manifold)
 - [ ] Test grid heater operation in cold conditions (below 50°F ambient)

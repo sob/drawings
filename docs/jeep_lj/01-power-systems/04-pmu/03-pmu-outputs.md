@@ -1,4 +1,9 @@
-# 1.4.2 PMU Outputs {#142-pmu-outputs}
+---
+hide:
+  - toc
+---
+
+# 1.4.3 PMU Outputs {#pmu-outputs}
 Complete configuration of all 24 PMU outputs, load allocations, and combined output configurations.
 
 ## PMU24 Output Configuration {#pmu-output-wiring-diagram}
@@ -11,19 +16,19 @@ Complete configuration of all 24 PMU outputs, load allocations, and combined out
 | **Out 2**        | **Radiator Fan (combined)**  | Combined  | Auto (ECM PWM control)         | Combined with OUT3 + OUT4           | GM 84100128 - 30-60A, requires 3x 25A outputs     |
 | **Out 3**        | **Radiator Fan (combined)**  | Combined  | Auto (ECM PWM control)         | Combined with OUT2 + OUT4           | GM 84100128 - 30-60A, requires 3x 25A outputs     |
 | **Out 4**        | **Radiator Fan (combined)**  | Combined  | Auto (ECM PWM control)         | Combined with OUT2 + OUT3           | GM 84100128 - 30-60A, requires 3x 25A outputs     |
-| **Out 5**        | **iBooster Main (combined)** | Combined  | CONSTANT (always on)           | Combined with OUT6                  | Bosch iBooster - 40A peak, requires 2x 25A outputs|
-| **Out 6**        | **iBooster Main (combined)** | Combined  | CONSTANT (always on)           | Combined with OUT5                  | Bosch iBooster - 40A peak, requires 2x 25A outputs|
+| **Out 5**        | **iBooster Main (combined)** | Combined  | CONSTANT (always on)           | Combined with OUT6 + OUT9           | Bosch iBooster - 40A peak, requires 3x 25A outputs for thermal margin|
+| **Out 6**        | **iBooster Main (combined)** | Combined  | CONSTANT (always on)           | Combined with OUT5 + OUT9           | Bosch iBooster - 40A peak, requires 3x 25A outputs for thermal margin|
 | **Out 7**        | Oil Cooler Fan               | ~15A      | Auto (CAN temp monitoring)     | ECM J1939 engine oil temp (SPN 175) | Programmable temp thresholds via CAN              |
 | **Out 8**        | PS Cooler Fan                | ~15A      | Auto (CAN temp monitoring)     | ECM J1939 coolant temp (SPN 110)    | Programmable temp thresholds via CAN              |
-| **Out 9**        | **[Available]**              | -         | -                              | -                                   | Future expansion (25A high-current)               |
+| **Out 9**        | **iBooster Main (combined)** | Combined  | CONSTANT (always on)           | Combined with OUT5 + OUT6           | Bosch iBooster - 40A peak, requires 3x 25A outputs for thermal margin|
 | **Out 10**       | **[Available]**              | -         | -                              | -                                   | Future expansion (25A high-current)               |
 
 ### 15A High-Side Outputs (OUT11-OUT16)
 
 | Output           | Circuit                      | Load      | Control Type                   | Trigger/Input                       | Notes                                             |
 |:-----------------|:-----------------------------|:----------|:-------------------------------|:------------------------------------|:--------------------------------------------------|
-| **Out 11**       | WS-51C Wiper Controller      | 15A       | Auto (ignition ON)             | Ignition signal (In 6)              | See [Wipers][windshield-wiper-control-system]                        |
-| **Out 12**       | Dakota Digital Cluster       | ~15A      | Auto (ignition RUN)            | Ignition signal (Pin 7/In 6)        | See [Gauge Cluster][dakota-digital-gauge-cluster]          |
+| **Out 11**       | WS-51C Wiper Controller      | 15A       | Auto (ignition ON)             | Ignition signal (Pin 7)             | See [Wipers][windshield-wiper-control-system]                        |
+| **Out 12**       | Dakota Digital Cluster       | ~15A      | Auto (ignition RUN)            | Ignition signal (Pin 7)             | See [Gauge Cluster][dakota-digital-gauge-cluster]          |
 | **Out 13**       | Command Touch CT4            | ~10A      | CONSTANT (always on)           | Works with ignition off (hazards)   | Critical safety system - hazards/turn signals     |
 | **Out 14**       | DRL/Parking Lights           | ~8A       | Auto (ignition) with logic     | Ignition ON + headlight status      | See [DRL & Parking Lights][drl-parking-lights]    |
 | **Out 15**       | **[Available]**              | -         | -                              | -                                   | Future expansion (15A)                            |
@@ -31,148 +36,74 @@ Complete configuration of all 24 PMU outputs, load allocations, and combined out
 
 ### 7A High-Side Outputs (OUT17-OUT24)
 
+**Note:** OUT17-24 are dual-purpose - configurable as 7A outputs OR 0-20V analog inputs. See [PMU Inputs][pmu-inputs] for analog input configuration.
+
 | Output           | Circuit                      | Load      | Control Type                   | Trigger/Input                       | Notes                                             |
 |:-----------------|:-----------------------------|:----------|:-------------------------------|:------------------------------------|:--------------------------------------------------|
 | **Out 17**       | A/C Clutch                   | 3-5A      | Auto (A/C request)             | Factory TJ A/C button signal (In 9) | See [HVAC System][hvac-system]                     |
 | **Out 18**       | Horn                         | 5.4A      | External input                 | Horn button (steering wheel)        | PIAA horns (2.7A × 2), works with ignition off    |
-| **Out 19**       | iBooster Ignition Signal     | ~5A       | Auto (ignition RUN)            | Ignition signal (Pin 7/In 6)        | Gen 2 iBooster - See [Brake Booster][brake-booster-system-bosch-ibooster-gen-2] |
+| **Out 19**       | iBooster Ignition Signal     | ~5A       | Auto (ignition RUN)            | Ignition signal (Pin 7)             | Gen 2 iBooster - See [Brake Booster][brake-booster-system-bosch-ibooster-gen-2] |
 | **Out 20**       | **[Available]**              | -         | -                              | -                                   | Gen 2 iBooster doesn't need secondary power       |
 | **Out 21**       | Brake Lights                 | ~3A       | External input                 | Brake switch signal (In 2)          | See [Tail, Brake & Reverse][tail-brake-reverse-lights]    |
 | **Out 22**       | Reverse Lights               | ~3A       | External input                 | Trans reverse switch (In 3)         | See [Tail, Brake & Reverse][tail-brake-reverse-lights]    |
-| **Out 23**       | Starter Control Relay Coil   | ~1A       | Auto (ignition START + clutch) | Ignition switch + clutch switch     | See [Starter System][starter-system-cummins-r28]               |
+| **Out 23**       | **[Available]**              | -         | -                              | -                                   | Starter uses direct control - see [Starter System][starter-system-cummins-r28] |
 | **Out 24**       | **[Available]**              | -         | -                              | -                                   | Future expansion (7A output)                      |
 
-## Output Summary
+## Combined Outputs
 
-| Output Tier | Total | Used | Available | Notes |
-|-------------|-------|------|-----------|-------|
-| 25A (OUT1-10) | 10 | 8 | 2 | Radiator fan (3), iBooster main (2), HVAC (1), fans (2) |
-| 15A (OUT11-16) | 6 | 4 | 2 | Wipers, cluster, CT4, DRL |
-| 7A (OUT17-24) | 8 | 6 | 2 | iBooster ignition (1), A/C, horn, lights (3), starter (1) |
-| **Total** | **24** | **18** | **6** | **Peak load: ~215A theoretical** |
+**Radiator Fan (OUT2+3+4):** GM 84100128, 30-60A peak, 3×25A outputs paralleled
 
-## Combined Output Configurations
+**iBooster Main (OUT5+6+9):** Bosch Gen 2, 40A peak, 3×25A outputs paralleled for thermal margin, CONSTANT power
 
-### Radiator Fan (OUT2+OUT3+OUT4)
+**Combining Rules:**
 
-**Load:** GM 84100128 Camaro radiator fan
-**Current:** 30-60A (peak), 30-40A average
-**Configuration:** 3x 25A outputs paralleled = 75A capacity
+- Only same-rated outputs can be combined (25A + 25A ✓, 25A + 15A ✗)
+- **Thermal limits:** Two adjacent 2.8 terminals = 38A max @ 23°C, derates at higher temperatures
+- **Engine bay operation:** Single 2.8 terminal @ 40°C = 23A max (outputs derate with temperature)
+- **Load balancing:** Avoid placing heavily loaded outputs adjacent to each other
+- Use proper terminal crimping and wire gauge to maximize current capacity
 
-See [Radiator Fan][radiator-fan-system] for complete specifications.
+## Thermal Analysis
 
-### iBooster Main Power (OUT5+OUT6)
+**High-Current Outputs (Thermal Concerns):**
 
-**Load:** Bosch iBooster Gen 2 main power
-**Current:** 40A peak, 0.25A idle, 12mA standby
-**Configuration:** 2x 25A outputs paralleled = 50A capacity
-**Power Type:** CONSTANT (always on for safety)
+| Outputs | Load | Terminal Rating | Utilization @ 40°C | Status | Notes |
+|:--------|:-----|:----------------|:-------------------|:-------|:------|
+| **OUT5+6+9** | 40A peak | 75A (3×25A @ 40°C) | 53% @ 40°C | ✓ OK | 3 outputs provide adequate thermal margin even at high temps |
+| **OUT1** | 20A | 23A (single @ 40°C) | 87% | ⚠️ Acceptable | Close to thermal limit - avoid adjacent to OUT2-4 |
+| **OUT2-3-4** | 60A peak | 69A (3×23A @ 40°C) | 87% | ⚠️ Monitor | Requires balanced load across all 3 outputs - verify ECM PWM balancing |
+| **OUT11** | 15A | 19A (1.5 terminal) | 79% | ✓ OK | Avoid adjacent to OUT12 if possible |
+| **OUT12** | 15A | 19A (1.5 terminal) | 79% | ✓ OK | Avoid adjacent to OUT11 if possible |
 
-See [Brake Booster][brake-booster-system-bosch-ibooster-gen-2] for complete specifications.
+**Installation Notes:**
 
-### Output Combining Rules
+- PMU thermal protection will shut down overloaded outputs
+- Monitor output temperatures during initial testing (PMU displays thermal status)
+- Verify radiator fan ECM balances load evenly across OUT2-3-4
+- iBooster 40A peak is brief (motor inrush) - continuous load should be <30A
 
-**Key constraint:** Only outputs with same rating can be combined
-- 25A + 25A = ✅ Valid (e.g., OUT5 + OUT6)
-- 25A + 15A = ❌ Invalid (different output classes)
-- Outputs must be configured in PMU software as combined
+!!! warning "Thermal Analysis Pending"
+    Complete thermal analysis and output placement verification will be performed during initial installation and testing. Monitor PMU LED indicators and thermal status during first engine runs under various load conditions. Adjust output assignments if thermal issues occur.
 
-## Load Analysis
+**Grounding Architecture:**
 
-**Peak theoretical load:** ~220A (all outputs at max simultaneously)
-- Radiator fan: 60A peak
-- iBooster: 40A peak (during braking)
-- HVAC blower: 20A
-- All other loads: ~100A
+- **PMU uses high-side outputs** (switches positive power to loads)
+- **Each load grounds separately** (chassis ground, battery ground, or ground bus)
+- **Pin 25 is reference ground ONLY** (<100mA logic/CAN reference)
+- **Output current does NOT return through Pin 25** - returns through individual load grounds
+- See [Grounding Architecture][grounding] for load ground connections
 
-**Realistic continuous load:** ~120-150A (typical operation)
-- iBooster idles at 0.25A (only 40A during active braking)
-- Radiator fan: 30-40A average
-- HVAC and accessories: ~80-110A
-
-**Peak with braking:** ~190A (iBooster at 40A during braking, radiator fan at 40A average)
-
-**PMU24 Capacity: 170A continuous**
-- Adequate with proper load management
-- Brief peaks above 170A acceptable (iBooster braking events short duration)
-- Realistic continuous load well within 170A limit
-
-## Output Wiring Diagram (Simplified - High Current Loads)
-
-```mermaid
-flowchart TB
-    CONSTBUS["CONSTANT Bus Bar<br/>Front Battery"]
-    IGN_RUN["Ignition Switch<br/>RUN Position"]
-    PMU24["PMU24<br/>ECUMaster PMU24 DL<br/>24 Outputs, 170A continuous"]
-    NEGBUS["NEGATIVE Bus Bar<br/>Pin 25 - 10 AWG"]
-
-    subgraph HIGH_CURRENT["High Current Loads (25A Outputs)"]
-        OUT1["OUT1: HVAC Blower<br/>20A"]
-        RAD_FAN["OUT2+3+4: Radiator Fan<br/>60A peak (combined)"]
-        IBOOSTER["OUT5+6: iBooster Main<br/>40A peak (combined)"]
-        OUT7["OUT7: Oil Fan<br/>15A"]
-        OUT8["OUT8: PS Fan<br/>15A"]
-    end
-
-    subgraph MED_CURRENT["Medium Loads (15A Outputs)"]
-        OUT11["OUT11: Wipers<br/>15A"]
-        OUT12["OUT12: Cluster<br/>15A"]
-        OUT13["OUT13: CT4<br/>10A"]
-        OUT14["OUT14: DRL<br/>8A"]
-    end
-
-    subgraph LOW_CURRENT["Low Loads (7A Outputs)"]
-        OUT17["OUT17: A/C Clutch<br/>5A"]
-        OUT18["OUT18: Horn<br/>5.4A"]
-        OUT19["OUT19: iBooster Ign<br/>5A"]
-        OUT20["OUT20: [Available]<br/>-"]
-        OUT21["OUT21: Brake Lights<br/>3A"]
-        OUT22["OUT22: Reverse<br/>3A"]
-        OUT23["OUT23: Starter Relay<br/>1A"]
-    end
-
-    CONSTBUS -->|2 AWG Main Power| PMU24
-    IGN_RUN -->|18 AWG Pin 7 Sense| PMU24
-    PMU24 -->|Pin 25 - 10 AWG| NEGBUS
-
-    PMU24 --> HIGH_CURRENT
-    PMU24 --> MED_CURRENT
-    PMU24 --> LOW_CURRENT
-
-    style CONSTBUS fill:#ffd93d,color:#000
-    style NEGBUS fill:#ffd93d,color:#000
-    style PMU24 fill:#d1d5db,color:#000
-    style IGN_RUN fill:#d1d5db,color:#000
-    style OUT1 fill:#d1d5db,color:#000
-    style RAD_FAN fill:#d1d5db,color:#000
-    style IBOOSTER fill:#d1d5db,color:#000
-    style OUT7 fill:#d1d5db,color:#000
-    style OUT8 fill:#d1d5db,color:#000
-    style OUT11 fill:#d1d5db,color:#000
-    style OUT12 fill:#d1d5db,color:#000
-    style OUT13 fill:#d1d5db,color:#000
-    style OUT14 fill:#d1d5db,color:#000
-    style OUT17 fill:#d1d5db,color:#000
-    style OUT18 fill:#d1d5db,color:#000
-    style OUT19 fill:#d1d5db,color:#000
-    style OUT20 fill:#d1d5db,color:#000
-    style OUT21 fill:#d1d5db,color:#000
-    style OUT22 fill:#d1d5db,color:#000
-    style OUT23 fill:#d1d5db,color:#000
-```
-
-**Note:** This diagram shows major loads only. Outputs 9, 10, 15, 16, 20, 24 available for future expansion.
-
-## Additional Notes
-
-- Engine RTMR eliminated - PMU provides all engine bay power distribution
-- PSC Full Hydro Steering uses belt-driven mechanical pump (no electrical power required)
-- Grid heater controlled directly by ECM - no PMU involvement (See [Grid Heater][29-grid-heater-system])
-- iBooster requires CONSTANT power for safety (brake assist works with engine off)
+[grounding]: ../05-grounding/index.md
 
 ## Related Documentation
 
-- [PMU Overview][141-pmu-overview] - Product specifications and capacity
-- [PMU Inputs][143-pmu-inputs] - Input configuration and triggers
-- [PMU Programming][144-pmu-programming] - Logic configuration for outputs
-- [Front Battery Distribution][zone-1-front-battery-tray--primary-distribution-engine-bay] - CONSTANT bus and power architecture
+- [PMU Overview][pmu-overview] - Product specifications and capacity
+- [PMU Inputs][pmu-inputs] - Input configuration and triggers
+- [PMU Programming][pmu-programming] - Logic configuration for outputs
+- [Starter Battery Distribution][starter-battery-distribution] - PMU power source and circuit breaker
+
+[pmu-overview]: 01-pmu-overview.md
+[pmu-inputs]: 02-pmu-inputs.md
+[pmu-programming]: 04-pmu-programming.md
+[starter-battery-distribution]: ../02-starter-battery-distribution/index.md
+[29-grid-heater-system]: ../../02-engine-systems/08-grid-heater.md

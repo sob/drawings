@@ -1,3 +1,8 @@
+---
+hide:
+  - toc
+---
+
 # Dashboard Physical Controls {#dashboard-physical-controls}
 This section documents physical switches mounted in the dashboard area (separate from the SwitchPros control panel).
 

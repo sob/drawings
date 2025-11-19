@@ -1,10 +1,20 @@
+---
+hide:
+  - toc
+tags:
+  - product-details
+  - exterior-systems
+  - winch
+  - recovery
+---
+
 # Recovery Systems {#recovery-systems}
 ## System Overview
 
 The recovery systems provide essential off-road and emergency recovery capabilities, centered around the Warn Zeon 10-S winch. These systems are designed for reliable operation in extreme conditions with proper power distribution and control integration.
 
 !!! info "Air System Moved"
-    ARB Twin Compressor and Air Lockers documentation has been moved to [Air System][air-system-arb-compressor-lockers]
+    ARB Twin Compressor and Air Lockers documentation has been moved to [Air System][air-system]
 
 ---
 
@@ -12,20 +22,30 @@ The recovery systems provide essential off-road and emergency recovery capabilit
 
 ### Warn Zeon 10-S
 
+/// html | div.product-info
+
 **Model:** Warn Zeon 10-S
+
 **Mounting Location:** Front bumper
+
 **Pulling Capacity:** 10,000 lbs (4,536 kg)
+
 **Motor:** 12V DC series wound
+
+///
 
 ### Electrical Specifications
 
-- **Peak Amperage Draw:** ~400A (at full load/stall)
-- **Typical Operating Draw:** 100-250A (depending on load)
-- **Main Power Source:** Front battery (direct connection, no fuse/breaker)
-  - **Cable:** Dual 2/0 AWG (positive and negative) per Warn specifications
-  - **Length:** <10 feet from front battery to winch
+- **Peak Amperage Draw:** 400-480A (at full load/stall - brief periods only)
+- **Typical Operating Draw:** 80-250A (most recovery operations)
+- **Main Power Source:** Aux battery (passenger wheel well - direct connection, no fuse/breaker)
+  - **Cable:** Dual 1/0 AWG (positive and negative) - optimized for 26 ft total circuit length
+  - **Length:** 13 ft one-way from aux battery to winch (26 ft total circuit - see [Wire Distance Reference][wire-distance])
+  - **System Voltage:** 13.8V (alternator charging - engine running during winch operations)
+  - **Voltage Drop @ 250A typical:** 4.92% (0.68V drop, 13.12V at winch) - excellent for normal recovery
+  - **Voltage Drop @ 400A peak:** 7.87% (1.09V drop, 12.71V at winch) - acceptable for brief stall/heavy load
   - **Protection:** None - direct connection (winch-rated contactor handles switching)
-  - **Route:** Engine bay battery → through firewall/bumper → winch motor
+  - **Route:** Passenger wheel well → along frame rail → through bumper → winch motor
 
 ### Contactor/Solenoid
 
@@ -55,10 +75,10 @@ The recovery systems provide essential off-road and emergency recovery capabilit
 ### Wiring Details
 
 **Main Power Wiring:**
-- **Positive (+):** Front battery+ → 2/0 AWG red wire (direct, no breaker) → winch contactor → winch motor
-- **Negative (-):** Front battery- → 2/0 AWG black wire → winch motor ground lug
-- **Cable Run:** <10 feet total length
-- **Routing:** Engine bay → through firewall grommet or bumper passage → front bumper winch mount
+- **Positive (+):** Aux battery+ (passenger wheel well) → 1/0 AWG red wire (direct, no breaker) → winch contactor → winch motor
+- **Negative (-):** Aux battery- (passenger wheel well) → 1/0 AWG black wire → winch motor ground lug
+- **Cable Run:** 13 ft one-way (26 ft total circuit length - see [Wire Distance Reference][wire-distance])
+- **Routing:** Passenger wheel well → along frame rail → through bumper passage → front bumper winch mount
 
 **Control Wiring:**
 - **Trigger Circuit:** Dash 3-position switch → SafetyHub ATC-1 (10A fuse) → winch contactor trigger input
@@ -72,21 +92,22 @@ The recovery systems provide essential off-road and emergency recovery capabilit
 
 ### Wiring Summary
 
-| Circuit | Source | Protection | Wire Gauge | Destination | Function |
-|---------|--------|------------|------------|-------------|----------|
-| Main Power (+) | Front Battery+ | None (direct) | 2/0 AWG | Winch Contactor → Motor | High-current power |
-| Main Power (-) | Front Battery- | None | 2/0 AWG | Winch Motor Ground | High-current return |
-| Control Trigger | Dash 3-pos Switch | SafetyHub ATC-1 (10A) | 14 AWG | Winch Contactor | Low-current trigger |
-| Remote Control | Warn Remote | Internal to winch | Per Warn specs | Winch Control Pack | Directional control |
+| Circuit | Source | Distance | Protection | Wire Gauge | Destination | Function |
+|---------|--------|----------|------------|------------|-------------|----------|
+| Main Power (+) | Aux Battery+ (passenger wheel well) | 13 ft one-way | None (direct) | 1/0 AWG | Winch Contactor → Motor | High-current power |
+| Main Power (-) | Aux Battery- (passenger wheel well) | 13 ft one-way | None | 1/0 AWG | Winch Motor Ground | High-current return |
+| Control Trigger | Dash 3-pos Switch | Short | SafetyHub ATC-1 (10A) | 14 AWG | Winch Contactor | Low-current trigger |
+| Remote Control | Warn Remote | N/A | Internal to winch | Per Warn specs | Winch Control Pack | Directional control |
 
 ### Installation Considerations
 
 **Power Cable Routing:**
-- Route 2/0 AWG cables from front battery through firewall or bumper opening
-- Keep cables as short as possible (<10 feet total)
+- Route 1/0 AWG cables from aux battery (passenger wheel well) along frame rail to front bumper
+- 13 ft one-way routing distance (26 ft total circuit - see [Wire Distance Reference][wire-distance])
 - Protect cables from sharp edges and heat sources
 - Use proper grommets where cables pass through metal panels
 - Secure cables with appropriate clamps to prevent chafing
+- Keep cables away from exhaust components and moving parts
 
 **Contactor Location:**
 - Factory mounted on winch motor housing
@@ -108,7 +129,7 @@ The recovery systems provide essential off-road and emergency recovery capabilit
     - Monitor battery voltage during extended winch operations
 
 !!! warning "Electrical Safety"
-    - 2/0 AWG cables carry extremely high current (up to 400A)
+    - 1/0 AWG cables carry extremely high current (up to 400A)
     - Ensure all connections are tight and properly crimped
     - Never disconnect battery while winch is under load
     - Verify proper fuse sizing for control circuit (10A)
@@ -117,15 +138,26 @@ The recovery systems provide essential off-road and emergency recovery capabilit
 ### Outstanding Items
 
 - [ ] **Determine if/how Position 2 (SwitchPros control) will work** - which SwitchPros output to use for remote winch control?
-- [ ] Confirm exact routing path for 2/0 AWG cables through front bumper
+- [ ] Confirm exact routing path for 1/0 AWG cables from passenger wheel well along frame rail
 - [ ] Verify dash 3-position switch wiring diagram (positions: off/SwitchPros/manual)
 - [ ] Confirm winch contactor trigger wiring from SafetyHub ATC-1 to winch contactor
 - [ ] Determine Warn wireless/wired remote model and integration
-- [ ] Verify proper crimp connectors for 2/0 AWG cable terminations
-- [ ] Determine firewall grommet size and location for winch power cables
-- [ ] Plan cable protection method through bumper area
+- [ ] Verify proper crimp connectors for 1/0 AWG cable terminations (battery lugs, winch terminals)
+- [ ] Plan cable protection method along frame rail and through bumper area
 - [ ] Verify winch mounting hardware and front bumper compatibility
-- [ ] Confirm battery terminal lugs are rated for 2/0 AWG cable
+- [ ] Confirm battery terminal lugs are rated for 1/0 AWG cable
+
+## Related Documentation
+
+- [Aux Battery Distribution][aux-battery] - Winch power source (passenger wheel well)
+- [Wire Distance Reference][wire-distance] - Winch to battery routing distance (13 ft one-way, 26 ft circuit)
+- [SafetyHub][safetyhub] - Winch contactor trigger circuit protection
+- [Air System][air-system] - ARB compressor and air lockers
+
+[aux-battery]: ../01-power-systems/03-aux-battery-distribution/index.md
+[wire-distance]: ../01-power-systems/01-power-generation/05-wire-distance-reference.md
+[safetyhub]: ../01-power-systems/02-starter-battery-distribution/04-safetyhub.md
+[air-system]: 02-air-system.md
 
 ---
 
@@ -143,5 +175,5 @@ The recovery systems provide essential off-road and emergency recovery capabilit
 **Integration Opportunities:**
 - **Wireless Winch Control Integration:** Integrate with vehicle's audio/communication system for voice commands
 - **Winch Load Monitoring:** Add amp meter or load sensor to monitor winch current draw
-- **Remote Battery Monitoring:** Monitor front battery voltage during winch operations from inside cabin
+- **Remote Battery Monitoring:** Monitor starter battery voltage during winch operations from inside cabin
 - **Automatic Winch Cut-off:** Integrate with battery voltage monitoring to prevent over-discharge

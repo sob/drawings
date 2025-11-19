@@ -1,3 +1,8 @@
+---
+hide:
+  - toc
+---
+
 # Horn {#horn}
 **Type:** PIAA horns (dual horn setup)
 **Location:** Engine bay
@@ -25,13 +30,13 @@
 ## Wiring Configuration
 
 ```
-Front Battery CONSTANT → PMU → Out 18 → PIAA Horns (5.4A) → Chassis Ground
+Starter Battery CONSTANT → PMU → Out 18 → PIAA Horns (5.4A) → Chassis Ground
                           ↑
                       Horn Button → In 1 (trigger)
 ```
 
 **Power Flow:**
-1. Front Battery+ → CONSTANT bus → PMU
+1. Starter Battery+ → CONSTANT bus → PMU
 2. Horn button (steering wheel) → PMU In 1 (trigger signal)
 3. PMU Out 18 activated when In 1 closes
 4. PMU Out 18 → PIAA horns (5.4A) → chassis ground (engine bay)
@@ -51,5 +56,5 @@ Front Battery CONSTANT → PMU → Out 18 → PIAA Horns (5.4A) → Chassis Grou
 ## Related Documentation
 
 - [PMU Power Distribution][pmu-power-distribution] - PMU Out 18 circuit and programming
-- [Front Battery Distribution][zone-1-front-battery-tray--primary-distribution-engine-bay] - CONSTANT bus bar
+- [Starter Battery Distribution][starter-battery-distribution] - CONSTANT bus bar
 - [Firewall Ingress][firewall-penetrations-ingress-points] - Horn button trigger wire routing

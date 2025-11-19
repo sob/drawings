@@ -1,3 +1,8 @@
+---
+hide:
+  - toc
+---
+
 # Windshield Wiper Control System {#windshield-wiper-control-system}
 **Controller:** Ron Francis WS-51C
 **Installation Manual:** [Ron Francis WS-51C Instructions](https://s3.amazonaws.com/cdn.ronfrancis.com/downloads/INSTRUCTIONS/WS51C-INST.pdf)
@@ -160,13 +165,13 @@ Use one washer pump to feed both front and rear via fluid line T-split:
 ## Power Flow
 
 ### Front Wiper System
-1. **Module Power:** SWITCHED bus → PMU Out 10 (15A) → WS-51C power input → chassis ground
+1. **Module Power:** CONSTANT power (starter battery) → PMU Out 10 (15A) → WS-51C power input → chassis ground
 2. **Front Wiper Motor:** WS-51C high/low outputs → front wiper motor high/low speed terminals → motor ground
 3. **Control Switch:** Dash wiper switch → control signal wires → WS-51C control inputs
 4. **Park Position:** Wiper motor park switch → WS-51C park input (auto-shutoff at rest position)
 
 ### Rear Wiper System (Synchronized)
-1. **Rear Wiper Power:** SWITCHED bus → PMU Out 12 (15A) → rear wiper motor → chassis ground
+1. **Rear Wiper Power:** CONSTANT power (starter battery) → PMU Out 12 (15A) → rear wiper motor → chassis ground
 2. **Synchronization Logic:** PMU monitors Out 10 state → activates Out 12 when Out 10 is active
 3. **Automatic Operation:** Front wipers on (any mode) → rear wiper on automatically
 
@@ -179,7 +184,7 @@ Use one washer pump to feed both front and rear via fluid line T-split:
 
 ### Front Wiper Circuit
 
-1. **Power (+):** SWITCHED bus → PMU Out 10 (15A capacity) → WS-51C red power wire (12V input)
+1. **Power (+):** CONSTANT power (starter battery) → PMU Out 10 (15A capacity) → WS-51C red power wire (12V input)
 2. **Ground (-):** WS-51C black ground wire → chassis ground or firewall ground point
 3. **Front Wiper Motor Outputs:**
    - **Low Speed:** WS-51C low speed output → wiper motor low speed terminal
@@ -192,7 +197,7 @@ Use one washer pump to feed both front and rear via fluid line T-split:
 
 ### Rear Wiper Circuit
 
-1. **Power (+):** SWITCHED bus → PMU Out 12 (15A capacity) → rear wiper motor power terminal (12V input)
+1. **Power (+):** CONSTANT power (starter battery) → PMU Out 12 (15A capacity) → rear wiper motor power terminal (12V input)
 2. **Ground (-):** Rear wiper motor ground terminal → chassis ground (rear hardtop ground location)
 3. **Control Logic:** PMU internal programming (Out 10 state monitoring → Out 12 activation)
 4. **No Manual Switch Required:** Automatic synchronization with front wipers via PMU
@@ -235,7 +240,7 @@ The WS-51C wiper control system replaces the following TIPM functions:
 
 ### ~~Rear Wiper System~~ (NOT IMPLEMENTED)
 - PMU OUT12, OUT13, OUT16 assigned to radiator fan instead
-- See [Front Battery Distribution][zone-1-front-battery-tray--primary-distribution-engine-bay] for radiator fan wiring
+- See [Starter Battery Distribution][starter-battery-distribution] for radiator fan wiring
 
 ### Washer Pump System
 - [ ] Determine washer pump configuration: Dual pumps (recommended) or single pump with T-fitting

@@ -1,3 +1,8 @@
+---
+hide:
+  - toc
+---
+
 # Section 2: Critical Systems {#critical-systems}
 Engine bay systems and critical vehicle subsystems required for safe vehicle operation.
 
@@ -14,12 +19,12 @@ Engine bay systems and critical vehicle subsystems required for safe vehicle ope
 
 ## System Overview
 
-Engine bay systems are powered primarily from the front battery via PMU24 programmable power distribution (see [1.4 - PMU][pmu-power-distribution]). The PMU provides intelligent power management with ignition-triggered circuits, overcurrent protection, and diagnostic capabilities.
+Engine bay systems are powered primarily from the starter battery via PMU24 programmable power distribution (see [1.4 - PMU][pmu-power-distribution]). The PMU provides intelligent power management with ignition-triggered circuits, overcurrent protection, and diagnostic capabilities.
 
 Critical safety systems (brake booster, starter) have direct battery connections for reliability.
 
 ## Related Documentation
 
 - **[1.4 - PMU Power Distribution][pmu-power-distribution]** - Engine bay power distribution and control
-- **[1.5 - Body RTMR][body-rtmr]** - Cabin convenience power distribution
-- **[1.6 - SafetyHub][safetyhub-150]** - High-current accessory fuse panel
+- **[1.3.4 - Body RTMR][body-rtmr]** - Cabin convenience power distribution
+- **[1.2.4 - SafetyHub](../01-power-systems/02-starter-battery-distribution/04-safetyhub.md)** - High-current accessory fuse panel

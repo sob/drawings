@@ -1,7 +1,24 @@
+---
+hide:
+  - toc
+tags:
+  - product-details
+  - engine-systems
+  - hvac
+  - climate-control
+---
+
 # HVAC System {#hvac-system}
+
+/// html | div.product-info
+
 **System:** Factory TJ (2005 LJ) HVAC System
+
 **Power Source:** PMU Out 1 (A/C clutch) and Out 3 (blower motor)
+
 **Control:** Factory TJ HVAC control panel
+
+///
 
 ## System Overview
 
@@ -147,9 +164,9 @@ Use heat/oil resistant vacuum line, secure all connections, route away from exha
 ### Blower Motor Circuit
 
 ```
-SWITCHED Bus (Front Battery)
+CONSTANT Power (Starter Battery)
         ↓
-PMU Out 3 (15A capacity, solid-state switching, constant power when ignition ON)
+PMU Out 3 (15A capacity, solid-state switching)
         ↓
 Factory Blower Motor Power Input
         ↓

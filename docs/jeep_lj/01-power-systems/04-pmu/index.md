@@ -1,64 +1,41 @@
-# 1.4 - PMU Power Distribution {#pmu-power-distribution}
-Engine bay power distribution is handled by the ECUMaster PMU24, a programmable power management unit replacing traditional relay/fuse panels.
+---
+hide:
+  - toc
+---
 
-## System Architecture
+# 1.4 PMU Power Distribution {#pmu-power-distribution}
 
-**PMU24 replaces:**
-- Traditional relay/fuse panel
-- DRL relay
-- Horn relay
-- Fan controllers
-- TIPM (Totally Integrated Power Module) functions
+Engine bay power distribution handled by ECUMaster PMU24, a programmable power management unit with 24 outputs replacing traditional relay/fuse panels.
 
-**Power source:** Front Battery CONSTANT bus (all outputs powered from CONSTANT)
+**Location:** Engine bay
 
-**Ground:** Front battery negative bus via PMU Pin 25 (10 AWG)
+## Power Connections
 
-**Control:** Programmable logic via PC software, ignition-aware outputs, CAN bus integration
-
-## Why PMU24 Instead of RTMR
-
-**Advantages over traditional relay/timer modules:**
-- Single integrated unit vs scattered relays
-- Programmable logic (complex conditional triggers)
-- Built-in overcurrent protection per output
-- Data logging (256MB memory, up to 500 Hz)
-- CAN bus integration for engine data
-- Diagnostic LED indicators for all outputs
-- Eliminates wiring complexity of individual relays
-
-**Engine RTMR eliminated:** PMU provides all engine bay power distribution with superior diagnostics and flexibility.
+| Connection | Source | Wire Gauge | Protection | Notes |
+|:-----------|:-------|:-----------|:-----------|:------|
+| **Main Power** | Starter battery+ | 2 AWG | 300A CB | Upgraded for motor inrush - See [Circuit Breakers][front-circuit-breakers] |
+| **Ground** | Starter battery- | 2 AWG | N/A | Critical for 170A continuous load - See [Grounding Architecture][grounding] |
+| **Ignition Sense** | Keyswitch RUN | 18 AWG | N/A | Dedicated wire - see [PMU Inputs][pmu-inputs] |
+| **CAN Bus** | Cummins ECM J1939 | 18-20 AWG twisted pair | N/A | Stub tap - see [PMU Inputs][pmu-inputs] |
 
 ## System Components
 
-### Direct Battery Connections (Bypass PMU)
-
-Critical systems with direct Front Battery+ connections:
-1. **Cummins ECM Power** - Direct to Front Battery+
-2. **Grid Heater Fusible Link** - Direct to Front Battery+ (40-80A) - See [Grid Heater][29-grid-heater-system]
-3. **Starter Main Solenoid** - Direct to Front Battery+ via 2/0 AWG - See [Starter System][starter-system-cummins-r28]
-
-### PMU24 Subsections
-
-- **[1.4.1 - Overview][141-pmu-overview]** - Product specifications, capacity analysis, features, mounting
-- **[1.4.2 - Outputs][142-pmu-outputs]** - 24-output configuration, load analysis, combined outputs
-- **[1.4.3 - Inputs][143-pmu-inputs]** - Digital/analog inputs, CAN bus integration, ignition distribution
-- **[1.4.4 - Programming][144-pmu-programming]** - Logic examples, sequential startup, configuration, outstanding items
+- **[1.4.1 - Overview][pmu-overview]** - Product specifications, capacity analysis, features, mounting
+- **[1.4.2 - Inputs][pmu-inputs]** - Digital/analog inputs, CAN bus integration, ignition distribution
+- **[1.4.3 - Outputs][pmu-outputs]** - 24-output configuration, load analysis, combined outputs
+- **[1.4.4 - Programming][pmu-programming]** - Logic examples, sequential startup, configuration, outstanding items
 
 ## Related Documentation
 
-**Engine Bay Subsystems:**
-- [HVAC System][hvac-system] - Blower motor and A/C compressor clutch (PMU Out 1, Out 17)
-- [Wiper System][windshield-wiper-control-system] - Ron Francis WS-51C controller (PMU Out 11)
-- [Radiator Fan][radiator-fan-system] - GM 84100128 Camaro radiator fan (PMU Out 2+3+4 combined, 30-60A)
-- [Starter System][starter-system-cummins-r28] - Two-stage starter system (PMU Out 23)
-- [Horn][horn] - PIAA horn specifications (PMU Out 18)
-- [Brake Booster][brake-booster-system-bosch-ibooster-gen-2] - Bosch iBooster Gen 2 (PMU Out 5+6, Out 19)
+- [Starter Battery Distribution][starter-battery-distribution] - PMU power source and circuit breaker
+- [Grounding Architecture][grounding] - PMU ground connection
+- [Firewall Ingress][firewall-ingress] - Wire routing through firewall
 
-**Control Interfaces:**
-- [Command Touch CT4][command-touch-ct4] - Steering column controller (PMU Out 13)
-- [Gauge Cluster][dakota-digital-gauge-cluster] - Dakota Digital J1939 integration
-
-**Power Distribution:**
-- [Front Battery Distribution][zone-1-front-battery-tray--primary-distribution-engine-bay] - SWITCHED/CONSTANT bus bars
-- [Firewall Ingress][firewall-penetrations-ingress-points] - Firewall penetrations and wire routing
+[pmu-overview]: 01-pmu-overview.md
+[pmu-inputs]: 02-pmu-inputs.md
+[pmu-outputs]: 03-pmu-outputs.md
+[pmu-programming]: 04-pmu-programming.md
+[front-circuit-breakers]: ../02-starter-battery-distribution/01-circuit-breakers.md
+[grounding]: ../05-grounding/index.md
+[starter-battery-distribution]: ../02-starter-battery-distribution/index.md
+[firewall-ingress]: ../../02-engine-systems/07-firewall-ingress.md

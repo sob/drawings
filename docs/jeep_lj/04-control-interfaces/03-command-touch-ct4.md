@@ -1,13 +1,36 @@
+---
+hide:
+  - toc
+tags:
+  - product-details
+  - control-interface
+  - controller
+  - turn-signals
+---
+
 # Command Touch CT4 {#command-touch-ct4}
+
+/// html | div.product-info
+
 **Model:** SwitchPros Command-Touch CT4
+
 **Manual:** https://www.switchpros.com/wp-content/uploads/CT4-Rev-1.0.pdf
+
 **Type:** Programmable steering column-mounted turn signal and accessory controller
+
 **Function:** Turn signals (left/right), headlight control, and auxiliary accessories
-**Power Source:** Front battery positive (40A fuse, battery power allows hazards when ignition off)
+
+**Power Source:** Starter battery positive (40A fuse, battery power allows hazards when ignition off)
+
 **Mounting Location:** Steering column
+
 **Ground:** Chassis ground (via ignition/ground harness)
+
 **IP Rating:** Designed for automotive use
+
 **GPS Module:** Included (enables automatic turn signal cancellation based on speed and steering angle)
+
+///
 
 ## Overview
 
@@ -90,7 +113,7 @@ See [PMU DRL Auto-Off Logic](#pmu-drl-auto-off-logic) section below for complete
 | Red        | SW2, DOWN  | Left Turn (CT4 output)  | Front/rear left turn signals   | 10A max per output                |
 | Orange     | SW3, PULL  | Headlights (low beam)   | LP6 Pin 1 (low beam, both lights) + DRL cutoff relay coil | 10A output, 3.6A load, disabled when ignition off |
 | Yellow     | SW4, PUSH  | High Beams              | LP6 Pin 4 (high beam, both lights) | 10A output, 5.6A load, disabled when ignition off |
-| Red (thick)| 12V Supply | Main power input        | Front battery CONSTANT (40A fuse) | Powers all SW outputs, allows hazards when ignition off |
+| Red (thick)| 12V Supply | Main power input        | Starter battery CONSTANT (40A fuse) | Powers all SW outputs, allows hazards when ignition off |
 | Black      | Ground     | Ground return           | Chassis ground or firewall ground stud | Via ignition/ground harness   |
 | White/Gray | Ignition   | Ignition signal input   | Ignition switch RUN output (18 AWG, splits to PMU In 6, SwitchPros, CT4) | Disables SW3/SW4 when ignition off, keeps SW1/SW2 active |
 
@@ -192,7 +215,7 @@ END
 
 ### Power & Ground
 
-- [ ] Install 40A fuse or circuit breaker between front battery positive and CT4 12V supply wire
+- [ ] Install 40A fuse or circuit breaker between starter battery positive and CT4 12V supply wire
 - [ ] Route 40A power wire from battery to steering column location
 - [ ] Connect CT4 ground to chassis ground or firewall ground stud
 - [ ] Verify ground connection is clean metal-to-metal contact
@@ -226,7 +249,7 @@ END
 ### Headlight Wiring
 
 - [ ] Route ignition signal from ignition switch RUN output (18 AWG) to CT4 ignition input (splits to PMU In 6, SwitchPros, CT4)
-- [ ] Route CT4 main power from Front Battery CONSTANT (40A fuse) to CT4 12V supply
+- [ ] Route CT4 main power from Starter Battery CONSTANT (40A fuse) to CT4 12V supply
 - [ ] Route CT4 SW3 output wire to LP6 Pin 1 (low beam, both lights in parallel, 14 AWG)
 - [ ] Route CT4 SW4 output wire to LP6 Pin 4 (high beam, both lights in parallel, 14 AWG)
 - [ ] Tap CT4 SW3 output wire to DRL cutoff relay coil (to disable DRL when headlights on)

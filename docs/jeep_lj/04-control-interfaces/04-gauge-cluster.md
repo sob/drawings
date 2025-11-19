@@ -1,7 +1,24 @@
+---
+hide:
+  - toc
+tags:
+  - product-details
+  - control-interface
+  - gauge-cluster
+  - digital-dash
+---
+
 # Dakota Digital Gauge Cluster {#dakota-digital-gauge-cluster}
+
+/// html | div.product-info
+
 **Model:** Dakota Digital 1996-03 TJ Style Gauge Cluster
+
 **Power Source:** PMU Out 14 (15A, auto-on with ignition RUN)
+
 **Ground:** Firewall ground stud
+
+///
 
 ## System Overview
 
