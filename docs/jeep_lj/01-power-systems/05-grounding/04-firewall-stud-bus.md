@@ -38,7 +38,7 @@ tags:
 | Stud 2 (5/16") | **[Available]** | - | - | - | Future high-current ground |
 | Terminal 1 (#10-24) | Command Touch CT4 | 14 AWG ✓ | ~3 ft | <1A | Steering column controller logic ground |
 | Terminal 2 (#10-24) | WS-51C Wiper Controller | 16 AWG ✓ | ~2 ft | ~5A | Dash wiper control - see [Wiper System][wiper-system] |
-| Terminal 3 (#10-24) | Body RTMR | 14 AWG ✓ | ~4 ft | ~10A | Body electronics ground |
+| Terminal 3 (#10-24) | BODY PDU | 14 AWG ✓ | ~4 ft | ~10A | Body electronics ground |
 | Terminal 4 (#10-24) | Dakota Digital Cluster | 16 AWG ✓ | ~2 ft | <1A | Instrument cluster logic ground |
 | Terminal 5 (#10-24) | Dakota Digital BIM | 16 AWG ✓ | ~2 ft | <1A | Body interface module |
 | Terminal 6 (#10-24) | Fusion MS-RA670 Head Unit | 14 AWG ✓ | ~2 ft | ~5A | Audio head unit - see [Audio System][audio-system] |
@@ -63,13 +63,13 @@ tags:
 
 - [Grounding Architecture Overview][grounding-architecture]
 - [Engine Bay Ground Bus][engine-bay-ground-bus]
-- [Body RTMR][body-rtmr]
+- [BODY PDU][body-rtmr]
 - [Audio System][audio-system]
 - [Wiper System][wiper-system]
 
 [grounding-architecture]: index.md
 [engine-bay-ground-bus]: 03-engine-bay-ground-bus.md
-[body-rtmr]: ../03-aux-battery-distribution/04-body-rtmr.md
+[body-rtmr]: ../03-aux-battery-distribution/04-body-pdu.md
 [audio-system]: ../../05-audio-systems/01-audio.md
 [wiper-system]: ../../02-engine-systems/04-wipers.md
 [bluesea-2105]: https://www.bluesea.com/products/2105/MaxiBus_250A_BusBar_-_Two_5_16in-18_Studs_and_Twelve_10-24_Screws

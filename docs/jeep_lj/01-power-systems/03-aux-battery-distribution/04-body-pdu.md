@@ -3,10 +3,10 @@ hide:
   - toc
 ---
 
-# 1.3.2 Body RTMR {#body-rtmr}
+# 1.3.2 BODY PDU {#body-rtmr}
 
 /// html | div.product-info
-![Bussmann LR-2 Body RTMR](../../images/bussmann-lr2-body-rtmr.jpg){ loading=lazy }
+![Bussmann LR-2 BODY PDU](../../images/bussmann-lr2-body-pdu.jpg){ loading=lazy }
 
 **Type:** Military-Spec Relay/Circuit Breaker Panel
 

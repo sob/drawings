@@ -60,7 +60,7 @@ hide:
 |:--------|:---------|:----------|:---------|:-----------|:------|
 | **Cummins Harness** | TBD | Engine ↔ Cabin | Engine harness, J1939 CAN | Factory | Dedicated punch-through with bulkhead connector |
 | **Grommet 1 (Engine RTMR)** | TBD (near PMU) | Engine → Cabin | PMU outputs to cabin loads | TBD | See [Firewall Ingress][firewall-ingress] |
-| **Grommet 2 (Body RTMR)** | TBD (near pedals) | Cabin → Engine | Body RTMR to engine circuits | TBD | See [Firewall Ingress][firewall-ingress] |
+| **Grommet 2 (BODY PDU)** | TBD (near pedals) | Cabin → Engine | BODY PDU to engine circuits | TBD | See [Firewall Ingress][firewall-ingress] |
 | **Grommet 5 (Temp Probe)** | TBD | Cabin → Grille | Outside temp sensor (BIM-17-2) | 1 pair | Dakota Digital module |
 | **Grommet 6 (RF Power)** | TBD (near battery) | Engine → Cabin | G1 GMRS, STX, Ham Radio | 6× 14 AWG | Direct battery power/ground |
 

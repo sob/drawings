@@ -40,7 +40,7 @@ The Rugged Radio G1 is a 50W GMRS (General Mobile Radio Service) two-way radio f
 **Power Requirements:**
 
 - Input Voltage: 12V DC (not compatible with 24V systems)
-- **CRITICAL:** Power must connect directly to 12V battery (not through Body RTMR)
+- **CRITICAL:** Power must connect directly to 12V battery (not through BODY PDU)
   - Route all power cables directly to battery
   - Do NOT connect inline with other components
   - Do NOT tie to ignition, lights, or other power sources (causes ground loop noise)
@@ -72,7 +72,7 @@ The Rugged Radio G1 is a 50W GMRS (General Mobile Radio Service) two-way radio f
 
 **Wiring Summary:**
 1. **Power (+):** Battery positive  inline fuse (15A)  G1 radio power input (12V DC)
-   - **CRITICAL:** Direct battery connection required (not through Body RTMR or other circuits)
+   - **CRITICAL:** Direct battery connection required (not through BODY PDU or other circuits)
    - Run dedicated power wire from battery positive terminal through firewall (Grommet 4) to G1 radio
    - Firewall penetration: See [Firewall Ingress][firewall-penetrations-ingress-points]
    - Install 15A inline fuse holder within 18" of battery connection
@@ -91,7 +91,7 @@ The Rugged Radio G1 is a 50W GMRS (General Mobile Radio Service) two-way radio f
    - Handles audio in/out, PTT, and mute functions automatically
 
 **Outstanding Items:**
-- [ ] Run dedicated power wire from battery positive to G1 radio (do NOT use Body RTMR or other circuits)
+- [ ] Run dedicated power wire from battery positive to G1 radio (do NOT use BODY PDU or other circuits)
 - [ ] Install 15A inline fuse holder within 18" of battery positive connection
 - [ ] Run dedicated ground wire from G1 to battery negative terminal (preferred for best RF performance)
 - [ ] Verify G1 and STX mounting behind dash does NOT place units near ignition box (avoid RF interference)
@@ -117,7 +117,7 @@ The Rugged Radio STX Intercom allows driver and passengers to communicate via he
   - **Power Requirements:**
     - Input Voltage: 9-16V DC (12V nominal)
     - Current Draw: <2A typical
-    - **CRITICAL:** Power must connect directly to 12V battery (not through Body RTMR)
+    - **CRITICAL:** Power must connect directly to 12V battery (not through BODY PDU)
       - Route all power cables directly to battery
       - Do NOT connect inline with other components
       - Do NOT tie to ignition, lights, or other power sources (causes ground loop noise)
@@ -145,7 +145,7 @@ The Rugged Radio STX Intercom allows driver and passengers to communicate via he
 
 **Wiring Summary:**
 1. **Power (+):** Battery positive  inline fuse (3A-5A recommended)  STX red power wire (9-16V DC input)
-   - **CRITICAL:** Direct battery connection required (not through Body RTMR or other circuits)
+   - **CRITICAL:** Direct battery connection required (not through BODY PDU or other circuits)
    - Run dedicated power wire from battery positive terminal through firewall (Grommet 4) to STX intercom
    - Firewall penetration: See [Firewall Ingress][firewall-penetrations-ingress-points]
    - Install inline fuse holder within 18" of battery connection
@@ -183,7 +183,7 @@ The Rugged Radio STX Intercom allows driver and passengers to communicate via he
 **Outstanding Items:**
 - [ ] Determine STX mounting location (under dash or center console)
 - [ ] **IMPORTANT:** Ensure STX intercom is NOT mounted near ignition box (avoid RF interference)
-- [ ] Run dedicated power wire from battery positive to STX (do NOT use Body RTMR or other circuits)
+- [ ] Run dedicated power wire from battery positive to STX (do NOT use BODY PDU or other circuits)
 - [ ] Install inline fuse holder (3A-5A) within 18" of battery positive connection
 - [ ] Run dedicated ground wire from STX to battery negative terminal (preferred for best audio quality)
 - [ ] Plan headset port access (all 4 ports on STX unit, or extend rear ports to rear grab handles)
@@ -200,7 +200,7 @@ The Rugged Radio STX Intercom allows driver and passengers to communicate via he
 Reserved circuit for future amateur (ham) radio installation. Ham radio requires an FCC license (Technician, General, or Amateur Extra) and provides long-range communication on VHF/UHF and HF frequencies.
 
 **Reserved Circuit:**
-- **Power:** Body RTMR F8 (15A fuse, CONSTANT power)
+- **Power:** BODY PDU F8 (15A fuse, CONSTANT power)
   - 15A fuse supports up to ~180W output radios (most mobile ham radios are 50-100W)
   - CONSTANT power allows radio to receive when vehicle is off
 
@@ -227,7 +227,7 @@ Reserved circuit for future amateur (ham) radio installation. Ham radio requires
 **Model:** Command Touch CT4
 **Manual:** https://www.switchpros.com/wp-content/uploads/CT4-Rev-1.0.pdf
 **Mounting:** 1.5" steering column
-**Power Source:** TBD - likely Body RTMR SWITCHED circuit or direct from SwitchPros
+**Power Source:** TBD - likely BODY PDU SWITCHED circuit or direct from SwitchPros
 **Ground:** TBD - chassis ground or dash ground point
 
 **Functions:**
@@ -260,7 +260,7 @@ Reserved circuit for future amateur (ham) radio installation. Ham radio requires
 
 **Outstanding Items:**
 
-- [ ] Determine Command Touch CT4 power source circuit (Body RTMR SWITCHED or SwitchPros output)
+- [ ] Determine Command Touch CT4 power source circuit (BODY PDU SWITCHED or SwitchPros output)
 - [ ] Determine Command Touch CT4 ground connection (chassis or dash ground point)
 - [ ] Decide on turn signal integration method (factory integration vs standalone)
 - [ ] Determine horn relay specifications (contact rating, coil voltage)
@@ -288,7 +288,7 @@ The WolfBox system replaces the factory rearview mirror with a smart mirror that
     - Front-facing dash camera (always recording when powered)
     - Rear camera display (triggered by reverse gear or manual activation)
     - Touchscreen display for settings and playback
-  - **Power:** Body RTMR F5 (10A fuse, CONSTANT power) - See [2.10 - Body RTMR][body-rtmr]
+  - **Power:** BODY PDU F5 (10A fuse, CONSTANT power) - See [2.10 - BODY PDU][body-rtmr]
     - Always-on power allows continuous dash cam recording (parking mode)
     - Alternative: Could be SWITCHED power if parking mode not desired
   - **Features:**
@@ -306,7 +306,7 @@ The WolfBox system replaces the factory rearview mirror with a smart mirror that
   - **Mounting:** Above license plate or integrated into spare tire carrier
 
 **Wiring Summary:**
-1. **Main Unit Power (+):** CONSTANT bus → Body RTMR F5 (10A) → WolfBox mirror unit power input
+1. **Main Unit Power (+):** CONSTANT bus → BODY PDU F5 (10A) → WolfBox mirror unit power input
 2. **Main Unit Ground (-):** WolfBox mirror ground → firewall ground stud or dash ground point
 3. **Reverse Trigger:** Engine RTMR F7 (reverse light circuit) → WolfBox reverse trigger input
    - Camera automatically displays rear view when reverse signal is active
@@ -336,7 +336,7 @@ The WolfBox system replaces the factory rearview mirror with a smart mirror that
 **Potential Future Cameras:**
 - **Side Cameras:** For blind spot monitoring or trail spotting
   - Would require additional camera inputs (WolfBox may support multi-camera with upgraded model)
-  - Power: Body RTMR spare circuits (CONSTANT power)
+  - Power: BODY PDU spare circuits (CONSTANT power)
 - **Front Camera:** Separate from WolfBox integrated front camera
   - For trail spotting or front bumper view during obstacles
   - Would need separate display or integration with WolfBox system

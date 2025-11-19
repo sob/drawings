@@ -14,7 +14,7 @@ hide:
 The AUX battery (passenger wheel well) provides power for high-current accessories and cabin systems:
 
 1. **Direct high-current** → Winch (recovery system)
-2. **CONSTANT Bus Bar** (Blue Sea 2104 PowerBar, 225A) - Feeds SwitchPros, Body RTMR
+2. **CONSTANT Bus Bar** (Blue Sea 2104 PowerBar, 225A) - Feeds SwitchPros, BODY PDU
 3. **Direct charging input** → BCDC Alpha 25 output
 
 See [CONSTANT Bus Bar][constant-bus] for complete bus bar specifications and [Circuit Breakers][circuit-breakers] for CB details.
@@ -36,7 +36,7 @@ See [CONSTANT Bus Bar][constant-bus] for complete bus bar specifications and [Ci
 | | **━━━ RECOVERY SYSTEMS ━━━** | | | | | | |
 | 2 | Warn VR EVO 10-S Winch | 1/0 AWG ✓ | 13 ft one-way | 13.12V (4.9%) @ 250A<br>12.71V (7.9%) @ 400A | None (see note) | 250A typical, 400A peak (brief) - see [Recovery Systems][recovery] | Active |
 | | **━━━ CONSTANT BUS BAR ━━━** | | | | | | |
-| 3 | CONSTANT Bus Bar | 1/0 AWG ✓ | ~3 ft | 13.68V (0.9%) | None | Feeds SwitchPros, Body RTMR (~169A max) | Active |
+| 3 | CONSTANT Bus Bar | 1/0 AWG ✓ | ~3 ft | 13.68V (0.9%) | None | Feeds SwitchPros, BODY PDU (~169A max) | Active |
 
 **Total Connections:** 3 (all active)
 
@@ -58,12 +58,12 @@ See [CONSTANT Bus Bar][constant-bus] for complete bus bar specifications and [Ci
 | Stud | Connection | Wire Gauge | Protection | Load | Notes |
 |:-----|:-----------|:-----------|:-----------|:-----|:------|
 | 1 | SwitchPros RCR-Force 12 | Per spec | 150A CB | ~100A max | Auxiliary lighting - see [SwitchPros][switchpros] |
-| 2 | Body RTMR | 6 AWG | 100A CB | ~69A max | Cabin circuits - see [Body RTMR][body-rtmr] |
+| 2 | BODY PDU | 6 AWG | 100A CB | ~69A max | Cabin circuits - see [BODY PDU][body-rtmr] |
 | 3-4 | **[Available]** | - | - | - | Future expansion (2 studs available) |
 
 **Utilization:** 2 of 4 studs used (2 available)
 
-**Total Load:** ~169A max (SwitchPros 100A + Body RTMR 69A)
+**Total Load:** ~169A max (SwitchPros 100A + BODY PDU 69A)
 
 **Wire Sizing:** 1/0 AWG feed rated 325A continuous - 0.9% voltage drop @ 169A max load (13.68V at bus)
 
@@ -90,7 +90,7 @@ See [CONSTANT Bus Bar][constant-bus] for complete bus bar specifications and [Ci
 
 - [CONSTANT Bus Bar][constant-bus] - Blue Sea 2104 PowerBar (225A, 4 studs)
 - [Circuit Breakers][circuit-breakers] - Protection for all AUX battery circuits
-- [Body RTMR][body-rtmr] - Body relay/fuse panel for cabin convenience circuits
+- [BODY PDU][body-rtmr] - Body relay/fuse panel for cabin convenience circuits
 
 ## Related Documentation
 
@@ -99,13 +99,13 @@ See [CONSTANT Bus Bar][constant-bus] for complete bus bar specifications and [Ci
 - [Circuit Breakers][circuit-breakers] - Protection for all CB-protected circuits
 - [START battery Distribution][starter-battery] - START battery system (BCDC input source)
 - [SwitchPros][switchpros] - Auxiliary lighting controller
-- [Body RTMR][body-rtmr] - Cabin convenience circuits
+- [BODY PDU][body-rtmr] - Cabin convenience circuits
 - [Recovery Systems][recovery] - Winch specifications and wiring
 - [Wire Distance Reference][wire-distance] - Measured routing distances
 
 [constant-bus]: 02-constant-bus.md
 [switchpros]: ../../04-control-interfaces/02-switchpros-sp1200.md
-[body-rtmr]: 04-body-rtmr.md
+[body-rtmr]: 04-body-pdu.md
 [power-gen]: ../01-power-generation/index.md
 [batteries]: ../01-power-generation/01-batteries.md
 [bcdc]: ../01-power-generation/03-bcdc.md

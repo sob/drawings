@@ -29,7 +29,7 @@ Multi-point grounding strategy with high-current grounds to frame rails and low-
 **Ground Distribution:**
 
 - **[1.6.3 - Engine Bay Ground Bus][engine-bay-ground-bus]** - Primary infrastructure hub (frame, engine, winch, PMU)
-- **[1.6.4 - Firewall Stud Bus][firewall-stud-bus]** - Cabin electronics (Body RTMR, cluster, audio, camera)
+- **[1.6.4 - Firewall Stud Bus][firewall-stud-bus]** - Cabin electronics (BODY PDU, cluster, audio, camera)
 - **[1.6.5 - SwitchPros Ground Bus][switchpros-ground-bus]** - Lighting and accessories (headlights, aux lights)
 
 ## Testing Requirements

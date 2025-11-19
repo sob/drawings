@@ -38,12 +38,12 @@ Section 1 documents the complete power generation and distribution architecture 
 **What's here:** Wheel well power distribution from AUX battery
 
 **Files:**
-- `01-circuit-breakers.md` - All AUX battery CBs (SwitchPros, Body RTMR)
-- `04-body-rtmr.md` - Body relay/fuse panel for cabin circuits
+- `01-circuit-breakers.md` - All AUX battery CBs (SwitchPros, BODY PDU)
+- `04-body-pdu.md` - Body relay/fuse panel for cabin circuits
 - `index.md` - AUX battery overview with terminal connection tables
 - `CLAUDE.md` - Navigation guide
 
-**When to use:** SwitchPros power source, Body RTMR circuits, AUX battery loads
+**When to use:** SwitchPros power source, BODY PDU circuits, AUX battery loads
 
 ### 1.4 PMU (`04-pmu/`)
 
@@ -127,7 +127,7 @@ Section 1 documents the complete power generation and distribution architecture 
 
 ### To Section 5 (Audio)
 
-**Fusion Radio:** Body RTMR F2 (memory), F3 (amp)
+**Fusion Radio:** BODY PDU F2 (memory), F3 (amp)
 
 **Find in:** `docs/jeep_lj/05-audio-systems/`
 
@@ -205,7 +205,7 @@ Section 1 documents the complete power generation and distribution architecture 
 **Power Architecture:**
 - Direct battery → circuit breaker → major load (no intermediate bus bars)
 - START battery: Critical systems (PMU, SafetyHub, starter, winch)
-- AUX battery: Accessories (SwitchPros, Body RTMR)
+- AUX battery: Accessories (SwitchPros, BODY PDU)
 
 **Grounding Architecture:**
 - Battery negative → Frame rail (2/0 AWG)
@@ -230,7 +230,7 @@ Section 1 documents the complete power generation and distribution architecture 
 **Power Controllers:**
 - PMU24: Programmable outputs (24 channels)
 - SafetyHub 100: Fused distribution (3× MIDI, 4× ATC)
-- Body RTMR: Relay/fuse panel (12 circuits)
+- BODY PDU: Relay/fuse panel (12 circuits)
 
 **Charging System:**
 - 270A alternator
@@ -239,7 +239,7 @@ Section 1 documents the complete power generation and distribution architecture 
 
 **Major Loads:**
 - START battery: PMU (~220A max), SafetyHub (~111A max), starter, winch
-- AUX battery: SwitchPros (~100A max), Body RTMR (~69A max)
+- AUX battery: SwitchPros (~100A max), BODY PDU (~69A max)
 
 **Ground System:**
 - 5 ground buses total (negative, engine bay, firewall, SwitchPros, AUX battery)

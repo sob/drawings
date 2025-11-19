@@ -59,7 +59,7 @@ Items that improve the design but don't block installation.
 | 3-Position Selector Switch Assignment | Which SwitchPros output controls | [Dashboard Controls][dash-controls] | Medium |
 | Speaker Mounting Locations | Dash end caps or kick panels | [Audio Systems][audio-systems] | Medium |
 | CB Radio Mount Location | Under dash or center console | [Communication][communication] | Medium |
-| WolfBox Power Source | Body RTMR or SwitchPros | [Communication][communication] | Medium |
+| WolfBox Power Source | BODY PDU or SwitchPros | [Communication][communication] | Medium |
 | WolfBox Ground | Chassis or dash ground point | [Communication][communication] | Medium |
 | WolfBox Mounting | Under dash or on firewall | [Communication][communication] | Medium |
 | Horn Relay Specs | Contact rating, coil voltage | [Communication][communication] | Medium |
@@ -97,7 +97,7 @@ Items that are estimated and need actual product specs to confirm.
 
 | Item | Description | File | Action Needed |
 |:-----|:------------|:-----|:--------------|
-| Heated Seat Load | Verify PRP EnduroTrek 15A/seat spec | [Body RTMR][body-rtmr] | Verify spec sheet |
+| Heated Seat Load | Verify PRP EnduroTrek 15A/seat spec | [BODY PDU][body-rtmr] | Verify spec sheet |
 | Fusion Amp Current | Verify 35-45A continuous rating | [Audio Systems][audio-systems] | Verify spec sheet |
 
 ---
@@ -108,8 +108,8 @@ Items completed since last update.
 
 | Item | Resolution | Date |
 |:-----|:-----------|:-----|
-| Body RTMR Model | Bussmann LR-2 (301-1C-C-R1) | 2025-11-18 |
-| Body RTMR Ground | Firewall Stud Bus Terminal 3 (14 AWG) | 2025-11-18 |
+| BODY PDU Model | Bussmann LR-2 (301-1C-C-R1) | 2025-11-18 |
+| BODY PDU Ground | Firewall Stud Bus Terminal 3 (14 AWG) | 2025-11-18 |
 | Alternator Part Number | Premier Power Welder HO-C28 | 2025-11-18 |
 
 ---
@@ -147,5 +147,5 @@ Items completed since last update.
 [turn-signals]: ../03-lighting-systems/03-turn-signals.md
 [offroad-lighting]: ../03-lighting-systems/06-offroad-lighting.md
 [recovery-systems]: ../07-exterior-systems/01-recovery-systems.md
-[body-rtmr]: ../01-power-systems/03-aux-battery-distribution/04-body-rtmr.md
+[body-rtmr]: ../01-power-systems/03-aux-battery-distribution/04-body-pdu.md
 [section-1-install]: ../01-power-systems/installation-checklist.md

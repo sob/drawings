@@ -56,18 +56,18 @@ All electrical penetrations through the firewall must be properly sized and seal
 
 ### Grommet 3: Reserved
 
-**Status:** No longer required - Body RTMR receives CONSTANT power directly from AUX battery via circuit breaker in wheel well
+**Status:** No longer required - BODY PDU receives CONSTANT power directly from AUX battery via circuit breaker in wheel well
 
-**Note:** Body RTMR circuits (WolfBox camera, heated seats, USB, radio) are now on CONSTANT power with manual/trigger control. No firewall penetration needed for Body RTMR power feed.
+**Note:** BODY PDU circuits (WolfBox camera, heated seats, USB, radio) are now on CONSTANT power with manual/trigger control. No firewall penetration needed for BODY PDU power feed.
 - **Note:** Radio amplifier (15A, F3) on CONSTANT power (remote wire from deck triggers amp)
 
 **Outstanding Items:**
 
-- [ ] Grommet 3 no longer required (Body RTMR powered from AUX battery)
+- [ ] Grommet 3 no longer required (BODY PDU powered from AUX battery)
 
 **Related Documentation:**
 
-- [Body RTMR][body-rtmr] - Body RTMR specifications and circuit breakdown
+- [BODY PDU][body-rtmr] - BODY PDU specifications and circuit breakdown
 
 ### Grommet 5: Dakota Digital Outside Temperature Probe {#grommet-3-dakota-digital-outside-temperature-probe}
 
@@ -242,7 +242,7 @@ All electrical penetrations through the firewall must be properly sized and seal
 
 - [ ] Complete wire bundle list for Grommet 1 (PMU cabin circuits)
 - [ ] Complete wire bundle list for Grommet 2 (clutch, brake, ignition signals)
-- [ ] Confirm wire gauge for Grommet 3 (Body RTMR SWITCHED: 8 AWG recommended for 40A)
+- [ ] Confirm wire gauge for Grommet 3 (BODY PDU SWITCHED: 8 AWG recommended for 40A)
 - [ ] Determine wire gauge for Grommet 5 (temp probe)
 - [ ] Confirm wire gauge for Grommet 6: 14 AWG for G1/STX, 10 AWG for Ham Radio
 

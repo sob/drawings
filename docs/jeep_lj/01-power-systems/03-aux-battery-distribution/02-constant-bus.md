@@ -44,17 +44,17 @@ Provides organized distribution for accessory circuits in the rear wheel well co
 |:-----|:-----------|:-----------|:---------|:---------------|:-----------|:-----|:------|
 | 1 | **AUX battery+ (INPUT)** | **1/0 AWG ✓** | **~3 ft** | **13.68V (0.9%)** | **None** | **~169A max** | **Power feed from battery - see [AUX battery][rear-battery]** |
 | 2 | SwitchPros RCR-Force 12 | 4 AWG ✓ | ~2 ft | 13.58V (0.7%) | 150A CB | ~100A max | Auxiliary lighting control - see [SwitchPros][switchpros] |
-| 3 | Body RTMR | 6 AWG ✓ | ~12 ft | 13.03V (4.9% @ 20°C) | 100A CB | ~69A max | Cabin convenience circuits - see [Body RTMR][body-rtmr] |
+| 3 | BODY PDU | 6 AWG ✓ | ~12 ft | 13.03V (4.9% @ 20°C) | 100A CB | ~69A max | Cabin convenience circuits - see [BODY PDU][body-rtmr] |
 | 4 | **[Available]** | - | - | - | - | - | Future expansion (1 stud available) |
 
 **Stud Utilization:** 3 of 4 used (1 available)
 
-**Total Load:** ~169A max (SwitchPros 100A + Body RTMR 69A)
+**Total Load:** ~169A max (SwitchPros 100A + BODY PDU 69A)
 
 **Wire Sizing:** 1/0 AWG feed rated 325A continuous - 0.9% voltage drop @ 169A max load (13.68V at bus)
 
 !!! info "Circuit Protection"
-    No circuit breaker between battery and CONSTANT bus. Each load has individual CB protection: SwitchPros (150A), Body RTMR (100A). See [Circuit Breakers][circuit-breakers].
+    No circuit breaker between battery and CONSTANT bus. Each load has individual CB protection: SwitchPros (150A), BODY PDU (100A). See [Circuit Breakers][circuit-breakers].
 
 ## Related Documentation
 
@@ -66,12 +66,12 @@ Provides organized distribution for accessory circuits in the rear wheel well co
 **Connected Systems:**
 
 - [SwitchPros RCR-Force 12][switchpros] - Auxiliary lighting controller
-- [Body RTMR][body-rtmr] - Cabin convenience circuits
+- [BODY PDU][body-rtmr] - Cabin convenience circuits
 - [Installation Checklist][installation] - Bus bar mounting procedure
 
 [product-link]: https://www.bluesea.com/products/2104/PowerBar_225A_BusBar_with_Four_1_4inch-20_Studs
 [rear-battery]: index.md
 [circuit-breakers]: 01-circuit-breakers.md
 [switchpros]: ../../04-control-interfaces/02-switchpros-sp1200.md
-[body-rtmr]: 04-body-rtmr.md
+[body-rtmr]: 04-body-pdu.md
 [installation]: ../installation-checklist.md#phase-2-power-distribution

@@ -26,5 +26,5 @@ Critical safety systems (brake booster, starter) have direct battery connections
 ## Related Documentation
 
 - **[1.4 - PMU Power Distribution][pmu-power-distribution]** - Engine bay power distribution and control
-- **[1.3.4 - Body RTMR][body-rtmr]** - Cabin convenience power distribution
+- **[1.3.4 - BODY PDU][body-rtmr]** - Cabin convenience power distribution
 - **[1.2.4 - SafetyHub](../01-power-systems/02-starter-battery-distribution/04-safetyhub.md)** - High-current accessory fuse panel

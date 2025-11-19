@@ -97,7 +97,7 @@ nav:
         - jeep_lj/01-power-systems/03-aux-battery-distribution/index.md
         - 1.3.1 - Circuit Breakers: jeep_lj/01-power-systems/03-aux-battery-distribution/01-circuit-breakers.md
         - 1.3.2 - CONSTANT Bus: jeep_lj/01-power-systems/03-aux-battery-distribution/02-constant-bus.md
-        - 1.3.4 - Body RTMR: jeep_lj/01-power-systems/03-aux-battery-distribution/04-body-rtmr.md
+        - 1.3.4 - BODY PDU: jeep_lj/01-power-systems/03-aux-battery-distribution/04-body-pdu.md
       - 1.4 - Power Management Unit:
         - jeep_lj/01-power-systems/04-pmu/index.md
         - 1.4.1 - PMU24 Overview: jeep_lj/01-power-systems/04-pmu/01-pmu-overview.md

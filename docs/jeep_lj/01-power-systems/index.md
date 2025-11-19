@@ -23,12 +23,12 @@ See [Power Generation](01-power-generation/index.md) for complete details on bat
 Both batteries use CONSTANT bus bars for organized distribution with individual circuit breaker protection:
 
 - **[START battery Distribution](02-starter-battery-distribution/index.md):** CONSTANT bus (Blue Sea 2107, 600A) feeds PMU, SafetyHub, BCDC
-- **[AUX battery Distribution](03-aux-battery-distribution/index.md):** CONSTANT bus (Blue Sea 2104, 225A) feeds SwitchPros, Body RTMR
+- **[AUX battery Distribution](03-aux-battery-distribution/index.md):** CONSTANT bus (Blue Sea 2104, 225A) feeds SwitchPros, BODY PDU
 
 The system replaces the factory TIPM with modular programmable controllers:
 
 - **[PMU24](04-pmu/index.md):** 24-channel programmable power management - engine bay critical circuits
-- **[Body RTMR](03-aux-battery-distribution/04-body-rtmr.md):** Cabin convenience circuits - radio, USB, heated seats, camera
+- **[BODY PDU](03-aux-battery-distribution/04-body-pdu.md):** Cabin convenience circuits - radio, USB, heated seats, camera
 - **[SafetyHub](02-starter-battery-distribution/04-safetyhub.md):** High-current safety circuits - ARB compressor, winch contactor
 
 Ground distribution architecture:

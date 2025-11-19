@@ -94,13 +94,13 @@ Organized by installation order for efficient build workflow.
 
 - [ ] Mount CONSTANT bus bar (Blue Sea 2104 PowerBar, 225A) in rear wheel well
 - [ ] Install 150A CB: AUX battery+ → CONSTANT bus → SwitchPros RCR-Force 12
-- [ ] Install 100A CB: CONSTANT bus → Body RTMR
+- [ ] Install 100A CB: CONSTANT bus → BODY PDU
 
 **CONSTANT Bus Wiring:**
 
 - [ ] Run 2/0 AWG: AUX battery+ → CONSTANT bus (~3 ft)
 - [ ] Run per spec: CONSTANT bus → 150A CB → SwitchPros RCR-Force 12
-- [ ] Run 8 AWG: CONSTANT bus → 100A CB → Body RTMR
+- [ ] Run 8 AWG: CONSTANT bus → 100A CB → BODY PDU
 
 ### BCDC Alpha 25 Installation
 
@@ -132,9 +132,9 @@ Organized by installation order for efficient build workflow.
 - [ ] Mount PMU (firewall or inner fender - accessible for LED/USB diagnostics)
 - [ ] Connect PMU ground reference to NEGATIVE bus via Pin 25 (per harness - logic/CAN reference only)
 
-### Body RTMR Physical Installation
+### BODY PDU Physical Installation
 
-- [ ] Determine Body RTMR part number
+- [ ] Determine BODY PDU part number
 - [ ] Mount under dash (passenger side)
 - [ ] Route CONSTANT power from AUX battery via 8 AWG, 100A circuit breaker
 
@@ -212,7 +212,7 @@ Organized by installation order for efficient build workflow.
 - [ ] Verify 60Ω resistance across CAN High/Low at ECM connector (harness disconnected, ignition off)
 - [ ] Configure PMU to read J1939 SPNs: 100, 110, 175, 190
 
-### Body RTMR Circuit Wiring
+### BODY PDU Circuit Wiring
 
 - [ ] Wire Fusion Radio memory (F2, 5A, 18 AWG, CONSTANT)
 - [ ] Wire Fusion Radio amp (F3, 15A, 14 AWG, CONSTANT)
@@ -279,7 +279,7 @@ Organized by installation order for efficient build workflow.
 ### System Integration Testing
 
 - [ ] Verify all PMU outputs operate correctly
-- [ ] Test all Body RTMR circuits
+- [ ] Test all BODY PDU circuits
 - [ ] Test SafetyHub circuits (ARB, winch trigger)
 - [ ] Verify SwitchPros Delphi connectors and outputs
 - [ ] Final voltage drop measurements under load

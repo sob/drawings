@@ -166,5 +166,5 @@ See [Firewall Ingress][firewall-penetrations-ingress-points] for complete firewa
 
 - [PMU Power Distribution][pmu-power-distribution] - PMU Out 14 power specifications and ignition control
 - [Engine Systems][pmu-power-distribution] - ECM J1939 CAN bus specifications
-- [Body RTMR][body-rtmr] - Body RTMR cabin convenience circuits
+- [BODY PDU][body-rtmr] - BODY PDU cabin convenience circuits
 - [Control Interfaces Overview][control-interfaces-overview] - All control interfaces

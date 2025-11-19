@@ -269,7 +269,7 @@ grep -r "TBD" docs/jeep_lj --include="*.md" | grep -v "PHASE1-ANALYSIS" | grep -
 - **CT4** = Command Touch CT4 lighting controller
 - **SwitchPros** = SwitchPros SP-1200 RCR-Force 12
 - **BCDC** = RedArc BCDC Alpha 25 DC-DC charger
-- **Body RTMR** = Body relay/timer/fuse panel
+- **BODY PDU** = Body relay/timer/fuse panel
 
 ### PMU Terminology Standards
 

@@ -45,7 +45,7 @@ Comprehensive review of dual battery electrical system documentation completed. 
 20. ✅ Alternator part number (Premier Power Welder HO-C28, 270A)
 21. ✅ Heated seat load specification (15A per seat, 30A total - conservative assumption)
 22. ✅ Heated seat relay specification (2× 20A SPST relays, VEC-integrated, individual control)
-23. ✅ Body RTMR part number (Eaton 31000 Series VEC - custom configuration)
+23. ✅ BODY PDU part number (Eaton 31000 Series VEC - custom configuration)
 
 **Key Technical Updates:**
 - Dual wheel well battery configuration: Driver (starter/critical), Passenger (house/accessories)
@@ -58,7 +58,7 @@ Comprehensive review of dual battery electrical system documentation completed. 
 - Starter/House CONSTANT bus bars: Blue Sea 2107 (600A) / 2104 (225A)
 - Ground bus: 6 of 8 studs used (25% expansion capacity)
 - Heated seats: 2× 20A SPST relays, VEC-integrated, independent control (15A per seat assumption)
-- Body RTMR: Eaton 31000 Series VEC (custom: 6 fused + 2 relay + 4 spare, IP65 sealed, firewall mounted)
+- BODY PDU: Eaton 31000 Series VEC (custom: 6 fused + 2 relay + 4 spare, IP65 sealed, firewall mounted)
 
 ---
 
@@ -68,7 +68,7 @@ Comprehensive review of dual battery electrical system documentation completed. 
 
 ### 📋 RECOMMENDATION #16: Body VEC Wire Gauge - IMPLEMENTED ✅
 
-**File:** `03-aux-battery-distribution/04-body-rtmr.md:98-119`
+**File:** `03-aux-battery-distribution/04-body-pdu.md:98-119`
 
 **Recommended Spec:** 6 AWG for 69A max load (now documented)
 
@@ -146,7 +146,7 @@ Comprehensive review of dual battery electrical system documentation completed. 
 | Load | Current | Circuit Protection | Wire Gauge | Distance | Status |
 |:-----|:--------|:-------------------|:-----------|:---------|:-------|
 | **SwitchPros RCR-Force 12** | 100A max | 150A CB ✓ | Per SwitchPros | Short | Active |
-| **Body RTMR CONSTANT** | 69A max | 100A CB ✓ | 8 AWG ⚠️ (should be 6 AWG) | ~12 ft | Active |
+| **BODY PDU CONSTANT** | 69A max | 100A CB ✓ | 8 AWG ⚠️ (should be 6 AWG) | ~12 ft | Active |
 | **Winch** | 250A typical, 400A peak (brief) | None | 1/0 AWG | 13 ft one-way | Active |
 | **BCDC Charging (output)** | 25A (input from START battery) | None | 6 AWG | 5-6 ft | Active |
 | **TOTAL (excl. winch)** | **~169A max continuous** | - | - | - | - |
@@ -184,7 +184,7 @@ All critical safety issues have been resolved:
 
 ### ⚠️ MODERATE CONCERNS
 
-**Body RTMR Power Wire Undersizing:**
+**BODY PDU Power Wire Undersizing:**
 - Current: 8 AWG with 7.8% voltage drop
 - Risk: Voltage sag, malfunction of convenience circuits
 - Recommendation: Upgrade to 6 AWG (4.9% drop)
@@ -229,7 +229,7 @@ All critical safety issues have been resolved:
 **Previously blocking items - now resolved:**
 
 1. ✅ **Alternator Part Number** - Premier Power Welder HO-C28, 270A
-2. ✅ **Body RTMR Part Number** - Eaton 31000 Series VEC (custom configuration)
+2. ✅ **BODY PDU Part Number** - Eaton 31000 Series VEC (custom configuration)
 3. ✅ **Heated Seat Specifications** - 15A per seat, 2× VEC-integrated relays
 
 **Build can proceed to parts ordering and installation!**
@@ -305,7 +305,7 @@ Your dual battery electrical system is **well-architected** overall, with excell
 **Total Load Summary (Updated for dual wheel well configuration):**
 - START battery (driver wheel well): ~265A continuous (PMU 220A + BCDC 25A + ECM/grid heater)
   - Peak: +400-600A when starter cranking (brief)
-- House battery (passenger wheel well): ~169A max (SwitchPros 100A + Body RTMR 69A)
+- House battery (passenger wheel well): ~169A max (SwitchPros 100A + BODY PDU 69A)
   - Peak: +400-480A when winch operating (brief)
 - **SYSTEM DEMAND: ~434A continuous** (both batteries, excluding starter/winch)
 - Alternator capacity: 270A
@@ -332,10 +332,10 @@ Your dual battery electrical system is **well-architected** overall, with excell
 | # | Severity | Issue | File Reference | Status |
 |:--|:---------|:------|:---------------|:-------|
 | 5 | ✅ RESOLVED | Alternator part number | 01-power-generation/02-alternator.md | ✅ Premier Power Welder HO-C28, 270A |
-| 14 | ✅ RESOLVED | Body RTMR part number | 03-aux-battery-distribution/04-body-rtmr.md | ✅ Eaton 31000 Series VEC (custom config) |
-| 15 | ✅ RESOLVED | Heated seat load specification | 03-aux-battery-distribution/04-body-rtmr.md | ✅ 15A per seat (conservative) |
-| 16 | ✅ RESOLVED | Body VEC wire gauge | 03-aux-battery-distribution/04-body-rtmr.md:98-119 | ✅ 6 AWG specified and documented |
-| 17 | ✅ RESOLVED | Heated seat relay specs | 03-aux-battery-distribution/04-body-rtmr.md:59-93 | ✅ 2× VEC-integrated relays, IP65 |
+| 14 | ✅ RESOLVED | BODY PDU part number | 03-aux-battery-distribution/04-body-pdu.md | ✅ Eaton 31000 Series VEC (custom config) |
+| 15 | ✅ RESOLVED | Heated seat load specification | 03-aux-battery-distribution/04-body-pdu.md | ✅ 15A per seat (conservative) |
+| 16 | ✅ RESOLVED | Body VEC wire gauge | 03-aux-battery-distribution/04-body-pdu.md:98-119 | ✅ 6 AWG specified and documented |
+| 17 | ✅ RESOLVED | Heated seat relay specs | 03-aux-battery-distribution/04-body-pdu.md:59-93 | ✅ 2× VEC-integrated relays, IP65 |
 | 25 | 📋 MONITORING | PMU thermal management | 04-pmu/03-pmu-outputs.md:80-83 | Monitor during operation |
 
 **Legend:**

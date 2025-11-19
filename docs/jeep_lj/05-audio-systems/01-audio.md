@@ -31,7 +31,7 @@ The dash-mounted radio head unit provides AM/FM radio, Bluetooth connectivity, a
 - **Constant Power (Memory):** Yellow wire - 12V constant (battery direct)
 - **Switched Power (Ignition):** Red wire - 12V switched (on with ignition)
 - **Fuse Rating:** 15A (per manual specifications)
-- **Combined Circuit:** Body RTMR F2 (20A fuse, SWITCHED power with constant power tap)
+- **Combined Circuit:** BODY PDU F2 (20A fuse, SWITCHED power with constant power tap)
 
 **Features:**
 
@@ -64,10 +64,10 @@ The dash-mounted radio head unit provides AM/FM radio, Bluetooth connectivity, a
 ///
 
 **Wiring:**
-1. **Constant Power (Yellow wire):** CONSTANT bus  Body RTMR F2 (20A)  MS-RA670 constant power (memory)
+1. **Constant Power (Yellow wire):** CONSTANT bus  BODY PDU F2 (20A)  MS-RA670 constant power (memory)
    - Note: F2 will need to source from CONSTANT bus (not SWITCHED bus) to provide both constant and switched power
    - Alternative: Run separate constant power wire from CONSTANT bus to radio, keep F2 on SWITCHED bus
-2. **Switched Power (Red wire):** SWITCHED bus  Body RTMR F2 (20A)  MS-RA670 switched power (ignition)
+2. **Switched Power (Red wire):** SWITCHED bus  BODY PDU F2 (20A)  MS-RA670 switched power (ignition)
    - Radio powers on/off with ignition
 3. **Ground (Black wire):** MS-RA670 ground  firewall ground stud or dash ground point
    - Clean ground critical for audio quality and noise reduction
@@ -80,7 +80,7 @@ The dash-mounted radio head unit provides AM/FM radio, Bluetooth connectivity, a
 6. **Bluetooth Microphone:** MS-RA670 microphone input  wired microphone mounted near driver (for hands-free calling)
 
 **Power Source Clarification:**
-Since the MS-RA670 requires both constant power (memory/clock) and switched power (on/off), Body RTMR F2 needs to be configured to provide both:
+Since the MS-RA670 requires both constant power (memory/clock) and switched power (on/off), BODY PDU F2 needs to be configured to provide both:
 
 **Option 1 (Recommended):** Modify F2 to support dual power
 - F2 constant power input from CONSTANT bus  MS-RA670 yellow wire (memory)
@@ -89,7 +89,7 @@ Since the MS-RA670 requires both constant power (memory/clock) and switched powe
 
 **Option 2:** Separate circuits
 - F2 (SWITCHED bus, 20A)  MS-RA670 red wire only (ignition power)
-- New spare Body RTMR circuit (CONSTANT bus, 15A)  MS-RA670 yellow wire only (memory)
+- New spare BODY PDU circuit (CONSTANT bus, 15A)  MS-RA670 yellow wire only (memory)
 
 **Outstanding Items:**
 - [ ] Verify radio ignition trigger wire connection for on/off control
@@ -252,10 +252,10 @@ The Fusion Apollo amplifier provides high-power audio for speakers and subwoofer
 2. **Amplifier Ground (-):** Amplifier ground terminal  6 AWG black wire  chassis ground or AUX battery negative
    - Clean, solid ground critical for amplifier performance and noise reduction
    - Keep ground wire <18 inches for best performance
-3. **MLC-RW LED Controller Power (+):** CONSTANT bus  Body RTMR spare circuit (30A)  MLC-RW power input
+3. **MLC-RW LED Controller Power (+):** CONSTANT bus  BODY PDU spare circuit (30A)  MLC-RW power input
    - MLC-RW rated for 30A output (400W), requires 30A fuse/breaker for full capacity
    - For 5 speakers: estimated 5-10A actual draw, but 30A circuit allows full controller capacity
-   - Note: Body RTMR can accommodate additional fuse slots if needed
+   - Note: BODY PDU can accommodate additional fuse slots if needed
 4. **MLC-RW LED Controller Ground (-):** MLC-RW ground  chassis ground or dash ground point
 5. **Remote Turn-On:** MS-RA670 remote turn-on output  18 AWG wire  amplifier remote terminal
    - Radio sends 12V signal to turn on amplifier when radio is on
@@ -320,7 +320,7 @@ The Fusion Apollo amplifier provides high-power audio for speakers and subwoofer
 - [ ] Determine subwoofer mounting orientation in cargo area wall (front-firing or downward-firing)
 - [ ] Verify Jeep LJ cargo area provides minimum 3 cu. ft. air space behind infinite baffle mount
 - [ ] Determine exact dash mounting locations for M6-650X-S-GmTi-i speakers (dash end caps or custom location)
-- [ ] Add Body RTMR circuit for MLC-RW LED controller (30A CONSTANT power)
+- [ ] Add BODY PDU circuit for MLC-RW LED controller (30A CONSTANT power)
 - [ ] Determine exact MLC-RW rotary encoder dash mounting location (near radio or center console)
 - [ ] Plan LED power cable routing from MLC-RW to all 5 speakers (4x tower/dash + 1x subwoofer)
 - [ ] Confirm XM-WHTMFC cable includes appropriate connectors for MLC-RW RGB output

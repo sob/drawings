@@ -16,7 +16,7 @@ All AUX battery positive circuits protected by Mechanical Products Series 17 cir
 | Circuit | Model | Rating | Reset Type | Power Path | Max Load | Sizing |
 |:--------|:------|:------:|:-----------|:-----------|:---------|:-------|
 | **SwitchPros RCR-Force 12** | Mechanical Products<br/>([174-S2-150-2][mp-150]) | 150A | Manual | AUX battery+<br/>└→ 150A CB<br/>&nbsp;&nbsp;&nbsp;└→ SwitchPros RCR-Force 12 | ~100A (all lighting outputs on) | 150% of max load |
-| **Body RTMR CONSTANT** | Mechanical Products<br/>([174-S2-100-2][mp-100]) | 100A | Manual | AUX battery+<br/>└→ 100A CB<br/>&nbsp;&nbsp;&nbsp;└→ Body RTMR | ~69A (radio, USB, camera, seats) | 145% of max load |
+| **BODY PDU CONSTANT** | Mechanical Products<br/>([174-S2-100-2][mp-100]) | 100A | Manual | AUX battery+<br/>└→ 100A CB<br/>&nbsp;&nbsp;&nbsp;└→ BODY PDU | ~69A (radio, USB, camera, seats) | 145% of max load |
 
 **All Circuit Breakers:**
 
@@ -32,12 +32,12 @@ All AUX battery positive circuits protected by Mechanical Products Series 17 cir
 
 - [AUX battery Distribution Overview][rear-battery]
 - [SwitchPros][switchpros] - Load details for SwitchPros circuit
-- [Body RTMR][body-rtmr] - Load details for Body RTMR circuit
+- [BODY PDU][body-rtmr] - Load details for BODY PDU circuit
 
 [mp-150]: https://www.waytekwire.com/item/49079/
 [mp-100]: https://www.waytekwire.com/item/49077/
 [rear-battery]: index.md
 [switchpros]: ../../04-control-interfaces/02-switchpros-sp1200.md
-[body-rtmr]: 04-body-rtmr.md
+[body-rtmr]: 04-body-pdu.md
 
 
