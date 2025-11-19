@@ -95,7 +95,7 @@ IF (BatteryVoltage < 12.5V) AND (EngineRPM > 1000)
 
 **Use Cases:**
 
-- Verify 200A alternator capacity under real-world loads
+- Verify 270A alternator capacity under real-world loads
 - Identify which load combinations exceed alternator output
 - Monitor battery state of charge during off-grid camping
 - Track battery health over time (voltage recovery patterns)

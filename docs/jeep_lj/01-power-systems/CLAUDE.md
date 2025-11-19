@@ -14,7 +14,7 @@ Section 1 documents the complete power generation and distribution architecture 
 
 **Files:**
 - `01-batteries.md` - Odyssey PC1500 specs (both front and rear)
-- `02-alternator.md` - 200A alternator
+- `02-alternator.md` - 270A alternator
 - `03-bcdc.md` - RedArc BCDC Alpha 25 DC-DC charger with solar input
 - `04-solar.md` - Cascadia 4x4 80W hood panel
 - `index.md` - Power generation overview
@@ -233,7 +233,7 @@ Section 1 documents the complete power generation and distribution architecture 
 - Body RTMR: Relay/fuse panel (12 circuits)
 
 **Charging System:**
-- 200A alternator
+- 270A alternator
 - BCDC Alpha 25: 25A DC-DC + solar input
 - 80W solar panel (hood-mounted)
 

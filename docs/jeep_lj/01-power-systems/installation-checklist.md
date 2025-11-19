@@ -118,7 +118,7 @@ Organized by installation order for efficient build workflow.
 
 ### Alternator
 
-- [ ] Determine alternator part number (200A for Cummins R2.8)
+- [ ] Install 270A alternator (Premier Power Welder HO-C28)
 - [ ] Route 2/0 AWG positive: Alternator → Starter Battery (shortest path)
 - [ ] Connect positive to starter battery terminal
 - [ ] Connect negative to NEGATIVE bus bar

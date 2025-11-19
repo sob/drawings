@@ -27,7 +27,7 @@ The starter battery negative terminal has direct connections to the negative bus
 See [Engine Bay Ground Bus](03-engine-bay-ground-bus.md) for complete bus bar configuration.
 
 **Primary Infrastructure:**
-- Front frame rail ground (2/0 AWG) - handles starter + 200A alternator return
+- Front frame rail ground (2/0 AWG) - handles starter + 270A alternator return
 - Engine block ground (2/0 AWG) - starter/alternator return path
 - Aux battery reference (2/0 AWG) - critical for BCDC operation
 
