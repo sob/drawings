@@ -17,8 +17,8 @@ Driver control interfaces: switches, controllers, and input devices for vehicle 
 ## System Overview
 
 **Primary Controllers:**
-- **SwitchPros SP-1200:** Auxiliary lighting and accessories (aux battery CONSTANT bus, 150A capacity)
-- **Command Touch CT4:** Turn signals and headlights (starter battery, PMU integration)
+- **SwitchPros SP-1200:** Auxiliary lighting and accessories (AUX battery CONSTANT bus, 150A capacity)
+- **Command Touch CT4:** Turn signals and headlights (START battery, PMU integration)
 - **Dakota Digital:** Gauge cluster with J1939 engine data (PMU Out 14, 15A)
 
 **Physical Controls:**

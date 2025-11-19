@@ -3,7 +3,7 @@ hide:
   - toc
 ---
 
-# 1.3 Aux Battery Distribution (Passenger Wheel Well) {#aux-battery-distribution}
+# 1.3 AUX battery Distribution (Passenger Wheel Well) {#aux-battery-distribution}
 
 /// html | div.product-info
 ![Odyssey PC1500 Battery Terminals](../../images/odyssey-pc1500.jpg){ loading=lazy }
@@ -11,7 +11,7 @@ hide:
 
 ## Overview
 
-The aux battery (passenger wheel well) provides power for high-current accessories and cabin systems:
+The AUX battery (passenger wheel well) provides power for high-current accessories and cabin systems:
 
 1. **Direct high-current** → Winch (recovery system)
 2. **CONSTANT Bus Bar** (Blue Sea 2104 PowerBar, 225A) - Feeds SwitchPros, Body RTMR
@@ -23,16 +23,16 @@ See [CONSTANT Bus Bar][constant-bus] for complete bus bar specifications and [Ci
     For complete battery specifications (capacity, dimensions, terminals, etc.), see [Section 1.1 - Battery System][batteries].
 
 !!! note "Battery Location"
-    Aux battery located in **passenger side rear wheel well** for optimal wire routing to winch and accessory systems. See [Wire Distance Reference][wire-distance] for measured routing distances.
+    AUX battery located in **passenger side rear wheel well** for optimal wire routing to winch and accessory systems. See [Wire Distance Reference][wire-distance] for measured routing distances.
 
-## Aux Battery Positive Terminal
+## AUX battery Positive Terminal
 
-**Aux Battery Positive Terminal Connections:**
+**AUX battery Positive Terminal Connections:**
 
 | # | Connection | Wire Gauge | Distance | Voltage @ Load | Protection | Destination/Notes | Status |
 |:--|:-----------|:-----------|:---------|:---------------|:-----------|:------------------|:-------|
 | | **━━━ CHARGING INPUT ━━━** | | | | | | |
-| 1 | BCDC Alpha 25 Output | 6 AWG ✓ | 5-6 ft | 13.68V (0.9%) | None | 25A DC-DC charging from starter battery - see [BCDC Alpha 25][bcdc] | Active |
+| 1 | BCDC Alpha 25 Output | 6 AWG ✓ | 5-6 ft | 13.68V (0.9%) | None | 25A DC-DC charging from START battery - see [BCDC Alpha 25][bcdc] | Active |
 | | **━━━ RECOVERY SYSTEMS ━━━** | | | | | | |
 | 2 | Warn VR EVO 10-S Winch | 1/0 AWG ✓ | 13 ft one-way | 13.12V (4.9%) @ 250A<br>12.71V (7.9%) @ 400A | None (see note) | 250A typical, 400A peak (brief) - see [Recovery Systems][recovery] | Active |
 | | **━━━ CONSTANT BUS BAR ━━━** | | | | | | |
@@ -51,7 +51,7 @@ See [CONSTANT Bus Bar][constant-bus] for complete bus bar specifications and [Ci
 
 **Capacity:** 225A continuous, 4× 3/8"-16 studs
 
-**Power Source:** Direct from aux battery positive via 1/0 AWG (~3 ft run)
+**Power Source:** Direct from AUX battery positive via 1/0 AWG (~3 ft run)
 
 **CONSTANT Bus Bar Connections:**
 
@@ -69,17 +69,17 @@ See [CONSTANT Bus Bar][constant-bus] for complete bus bar specifications and [Ci
 
 **Note:** No circuit breaker between battery and CONSTANT bus - each load has individual CB protection at appropriate rating.
 
-## Aux Battery Negative Terminal
+## AUX battery Negative Terminal
 
 !!! info "Complete Grounding Architecture"
     See [Section 1.5 - Grounding Architecture][grounding] for complete grounding system design, wire gauges, and architecture details.
 
-**Aux Battery Negative Terminal Connections:**
+**AUX battery Negative Terminal Connections:**
 
 | # | Connection | Wire Gauge | Distance | Routing/Notes | Status |
 |:--|:-----------|:-----------|:---------|:--------------|:-------|
-| 1 | **Rear Frame Rail Ground** | 2/0 AWG ✓ | ~3 ft | Primary ground for aux battery and CONSTANT bus | Active |
-| 2 | **Starter Battery Ground Reference** | 1/0 AWG ✓ | 5-6 ft | Critical for BCDC operation and fault current path | Active |
+| 1 | **Rear Frame Rail Ground** | 2/0 AWG ✓ | ~3 ft | Primary ground for AUX battery and CONSTANT bus | Active |
+| 2 | **START battery Ground Reference** | 1/0 AWG ✓ | 5-6 ft | Critical for BCDC operation and fault current path | Active |
 | 3 | **BCDC Alpha 25** | 6 AWG ✓ | Short | Direct connection per manufacturer spec | Active |
 | 4 | **Fusion Apollo Amp** | Per amp spec | <18" | Chassis ground OK if <18" run, direct connection preferred | Active |
 | 5 | **Warn VR EVO 10-S Winch** | 1/0 AWG ✓ | 13 ft one-way | Winch negative return - see [Recovery Systems][recovery] | Active |
@@ -89,7 +89,7 @@ See [CONSTANT Bus Bar][constant-bus] for complete bus bar specifications and [Ci
 ## System Components
 
 - [CONSTANT Bus Bar][constant-bus] - Blue Sea 2104 PowerBar (225A, 4 studs)
-- [Circuit Breakers][circuit-breakers] - Protection for all aux battery circuits
+- [Circuit Breakers][circuit-breakers] - Protection for all AUX battery circuits
 - [Body RTMR][body-rtmr] - Body relay/fuse panel for cabin convenience circuits
 
 ## Related Documentation
@@ -97,7 +97,7 @@ See [CONSTANT Bus Bar][constant-bus] for complete bus bar specifications and [Ci
 - [Power Generation][power-gen] - Battery and BCDC specifications
 - [Grounding Architecture][grounding] - Complete grounding system
 - [Circuit Breakers][circuit-breakers] - Protection for all CB-protected circuits
-- [Starter Battery Distribution][starter-battery] - Starter battery system (BCDC input source)
+- [START battery Distribution][starter-battery] - START battery system (BCDC input source)
 - [SwitchPros][switchpros] - Auxiliary lighting controller
 - [Body RTMR][body-rtmr] - Cabin convenience circuits
 - [Recovery Systems][recovery] - Winch specifications and wiring

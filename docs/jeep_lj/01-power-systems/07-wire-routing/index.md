@@ -7,15 +7,15 @@ hide:
 
 ## 🔧 Driver Wheel Well (START Battery)
 
-**High-current power distribution from starter battery:**
+**High-current power distribution from START battery:**
 
 | Circuit | Wire Gauge | Distance | Destination | Current | Notes |
 |:--------|:-----------|:---------|:------------|:--------|:------|
-| **Alternator charging input** | 2/0 AWG | 8 ft | FROM Alternator (engine) | 270A | Charges starter battery - see [Alternator][alternator] |
+| **Alternator charging input** | 2/0 AWG | 8 ft | FROM Alternator (engine) | 270A | Charges START battery - see [Alternator][alternator] |
 | **Starter motor power** | 2/0 AWG | 6 ft | TO Starter motor | 400-600A | Brief cranking load - see [Starter][starter] |
 | **CONSTANT bus feed** | 2×1/0 AWG | 5 ft | TO CONSTANT bus (firewall) | 356A max | Parallel conductors - see [CONSTANT Bus][constant-bus] |
 | **Primary ground** | 2/0 AWG | 8 ft | TO Engine bay ground bus | 600A+ peak | Primary return path |
-| **Battery cross-ground** | 1/0 AWG | 5-6 ft | TO Aux battery- (passenger) | BCDC reference | Critical for BCDC operation |
+| **Battery cross-ground** | 1/0 AWG | 5-6 ft | TO AUX battery- (passenger) | BCDC reference | Critical for BCDC operation |
 
 **Routing:** Frame rail along driver side, through wheel well to engine bay and firewall
 
@@ -23,7 +23,7 @@ hide:
 
 ## 🔋 Passenger Wheel Well (AUX Battery)
 
-**Power distribution from aux battery:**
+**Power distribution from AUX battery:**
 
 | Circuit | Wire Gauge | Distance | Destination | Current | Notes |
 |:--------|:-----------|:---------|:------------|:--------|:------|
@@ -31,7 +31,7 @@ hide:
 | **Warn Zeon 10-S Winch ground** | 1/0 AWG | 13 ft | TO Winch motor ground | 250A typ, 400A peak | Return path via frame rail |
 | **SwitchPros outputs** | Various | TBD | TO Engine bay/front | ~100A | Offroad lighting power - routing TBD |
 | **Primary ground** | 2/0 AWG | 3 ft | TO Rear frame rail | 569A peak | Winch + accessories return |
-| **Cross-ground reference** | 1/0 AWG | 5-6 ft | FROM Starter battery- (driver) | BCDC reference | Critical for BCDC operation |
+| **Cross-ground reference** | 1/0 AWG | 5-6 ft | FROM START battery- (driver) | BCDC reference | Critical for BCDC operation |
 
 **Routing:** Frame rail from passenger wheel well to front bumper (winch), rear to cargo, TBD to engine bay
 
@@ -43,8 +43,8 @@ hide:
 
 | Circuit | Wire Gauge | Distance | Source | Destination | Current | Notes |
 |:--------|:-----------|:---------|:-------|:------------|:--------|:------|
-| **Alternator to battery** | 2/0 AWG | 8 ft | Alternator | Starter battery+ | 270A | See Driver Wheel Well section |
-| **Starter motor** | 2/0 AWG | 6 ft | Starter battery+ | Starter motor | 400-600A | See Driver Wheel Well section |
+| **Alternator to battery** | 2/0 AWG | 8 ft | Alternator | START battery+ | 270A | See Driver Wheel Well section |
+| **Starter motor** | 2/0 AWG | 6 ft | START battery+ | Starter motor | 400-600A | See Driver Wheel Well section |
 | **Engine block ground** | 2/0 AWG | 8 ft | Engine block | Engine bay ground bus | 600A+ peak | Starter/alternator return |
 | **Frame ground** | 2/0 AWG | 3 ft | Engine bay ground bus | Front frame rail | 600A+ peak | Chassis ground point |
 
@@ -124,8 +124,8 @@ hide:
 
 | Location | Ground Bus | Wire Gauge | Connections | Notes |
 |:---------|:-----------|:-----------|:------------|:------|
-| 🔧 **Driver wheel well** | Engine bay ground bus | 2/0 AWG | Starter battery-, engine block, frame rail, aux battery | Primary ground hub |
-| 🔋 **Passenger wheel well** | Rear frame rail | 2/0 AWG | Aux battery- | Aux battery ground point |
+| 🔧 **Driver wheel well** | Engine bay ground bus | 2/0 AWG | START battery-, engine block, frame rail, AUX battery | Primary ground hub |
+| 🔋 **Passenger wheel well** | Rear frame rail | 2/0 AWG | AUX battery- | AUX battery ground point |
 | 🏠 **Firewall (cabin side)** | Firewall stud bus | 4 AWG max | Body electronics, sensors | Cabin electronics ground |
 | ⚙️ **Firewall (engine side)** | Engine bay ground bus | Various | PMU, controllers, accessories | Engine bay ground hub |
 | 🌐 **SwitchPros controller** | SwitchPros ground bus | 1 AWG | Lighting/aux loads | Dedicated lighting ground |
@@ -135,8 +135,8 @@ hide:
 ## Related Documentation
 
 - [Grounding Architecture][grounding] - Complete grounding system design
-- [Starter Battery Distribution][starter-battery] - Driver wheel well power
-- [Aux Battery Distribution][aux-battery] - Passenger wheel well power
+- [START battery Distribution][starter-battery] - Driver wheel well power
+- [AUX battery Distribution][aux-battery] - Passenger wheel well power
 - [CONSTANT Bus][constant-bus] - Engine bay distribution
 - [Alternator][alternator] - Charging system routing
 - [Starter][starter] - Starter motor routing

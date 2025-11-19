@@ -18,13 +18,13 @@ Organized by installation order for efficient build workflow.
 
 - [ ] Identify front frame rail ground point location
 - [ ] Identify rear frame rail ground point location
-- [ ] Install 2/0 AWG: Starter Battery- → Front Frame Rail
-- [ ] Install 2/0 AWG: Aux Battery- → Rear Frame Rail
+- [ ] Install 2/0 AWG: START battery- → Front Frame Rail
+- [ ] Install 2/0 AWG: AUX battery- → Rear Frame Rail
 - [ ] Install 2/0 AWG: Engine Block → Front Frame Rail
 
 **Battery Ground Reference:**
 
-- [ ] Route 2/0 AWG: Starter Battery- → Aux Battery- (8 ft measured routing distance - see [Wire Distance Reference][wire-distance])
+- [ ] Route 2/0 AWG: START battery- → AUX battery- (8 ft measured routing distance - see [Wire Distance Reference][wire-distance])
 
 **Firewall Ground Stud:**
 
@@ -32,17 +32,17 @@ Organized by installation order for efficient build workflow.
 
 **Ground Testing:**
 
-- [ ] Verify <0.1V drop: Starter battery- to front frame rail (engine @ 2000 RPM)
-- [ ] Verify <0.1V drop: Aux battery- to rear frame rail (engine @ 2000 RPM)
-- [ ] Verify <0.05V drop: Starter battery- to aux battery- (engine @ 2000 RPM)
-- [ ] Verify <0.05V drop: Starter battery- to aux battery- (BCDC charging @ 25A)
-- [ ] Verify <0.2V drop: Starter battery- to aux battery- (winch operation @ 400A)
+- [ ] Verify <0.1V drop: START battery- to front frame rail (engine @ 2000 RPM)
+- [ ] Verify <0.1V drop: AUX battery- to rear frame rail (engine @ 2000 RPM)
+- [ ] Verify <0.05V drop: START battery- to AUX battery- (engine @ 2000 RPM)
+- [ ] Verify <0.05V drop: START battery- to AUX battery- (BCDC charging @ 25A)
+- [ ] Verify <0.2V drop: START battery- to AUX battery- (winch operation @ 400A)
 
 ---
 
 ## Phase 2: Power Distribution
 
-### Starter Battery Bus Bars & Circuit Breakers
+### START battery Bus Bars & Circuit Breakers
 
 **Bus Bars:**
 
@@ -57,26 +57,26 @@ Organized by installation order for efficient build workflow.
 
 **CONSTANT Bus Wiring:**
 
-- [ ] Run 2/0 AWG: Starter Battery+ → CONSTANT bus (~5 ft)
+- [ ] Run 2/0 AWG: START battery+ → CONSTANT bus (~5 ft)
 - [ ] Run 1 AWG: CONSTANT bus → 300A CB → PMU main power (~7-10 ft, temp-derated for 60°C)
 - [ ] Run 4 AWG: CONSTANT bus → 150A CB → SafetyHub 100
 - [ ] Run 4 AWG: CONSTANT bus → 40A CB → BCDC input
 
 **NEGATIVE Bus Wiring:**
 
-- [ ] Run 2/0 AWG: Starter Battery- → NEGATIVE bus bar
+- [ ] Run 2/0 AWG: START battery- → NEGATIVE bus bar
 - [ ] Run 2/0 AWG: NEGATIVE bus → Engine block
 - [ ] Run 2/0 AWG: NEGATIVE bus → Chassis ground
-- [ ] Run 2/0 AWG: NEGATIVE bus → Aux battery (8 ft measured routing - see [Wire Distance Reference][wire-distance])
+- [ ] Run 2/0 AWG: NEGATIVE bus → AUX battery (8 ft measured routing - see [Wire Distance Reference][wire-distance])
 - [ ] Connect PMU ground reference (per harness) and relay grounds (14-16 AWG)
 
 **Direct Battery Connections (No Circuit Breaker):**
 
-- [ ] Connect ECM power/ground directly to starter battery terminals (12 AWG, Cummins harness)
-- [ ] Run 6-8 AWG: Starter Battery+ → Grid heater relay (via integrated fusible link, 40-80A)
-- [ ] Connect grid heater ground directly to Starter Battery-
-- [ ] Run 1/0 AWG: Aux Battery+ → Winch positive (13 ft one-way, direct connection - no CB)
-- [ ] Run 1/0 AWG: Aux Battery- → Winch negative (13 ft one-way, matches positive path)
+- [ ] Connect ECM power/ground directly to START battery terminals (12 AWG, Cummins harness)
+- [ ] Run 6-8 AWG: START battery+ → Grid heater relay (via integrated fusible link, 40-80A)
+- [ ] Connect grid heater ground directly to START battery-
+- [ ] Run 1/0 AWG: AUX battery+ → Winch positive (13 ft one-way, direct connection - no CB)
+- [ ] Run 1/0 AWG: AUX battery- → Winch negative (13 ft one-way, matches positive path)
 
 **Testing:**
 
@@ -84,32 +84,32 @@ Organized by installation order for efficient build workflow.
 - [ ] Measure voltage drop across main power cables under load
 - [ ] Measure ground resistance: NEGATIVE bus to battery- (<0.1 ohms)
 
-### Aux Battery Bus Bars & Circuit Breakers
+### AUX battery Bus Bars & Circuit Breakers
 
 **Inter-Battery Wiring:**
 
-- [ ] Route cables along frame rail with protection: Front → Aux battery area
+- [ ] Route cables along frame rail with protection: Front → AUX battery area
 
 **Bus Bars & Protection:**
 
 - [ ] Mount CONSTANT bus bar (Blue Sea 2104 PowerBar, 225A) in rear wheel well
-- [ ] Install 150A CB: Aux Battery+ → CONSTANT bus → SwitchPros RCR-Force 12
+- [ ] Install 150A CB: AUX battery+ → CONSTANT bus → SwitchPros RCR-Force 12
 - [ ] Install 100A CB: CONSTANT bus → Body RTMR
 
 **CONSTANT Bus Wiring:**
 
-- [ ] Run 2/0 AWG: Aux Battery+ → CONSTANT bus (~3 ft)
+- [ ] Run 2/0 AWG: AUX battery+ → CONSTANT bus (~3 ft)
 - [ ] Run per spec: CONSTANT bus → 150A CB → SwitchPros RCR-Force 12
 - [ ] Run 8 AWG: CONSTANT bus → 100A CB → Body RTMR
 
 ### BCDC Alpha 25 Installation
 
 - [ ] Mount BCDC in wheel well (water-protected, LED visibility access)
-- [ ] Run 4 AWG: Starter Battery+ → 40A CB → BCDC input (8 ft measured routing - see [Wire Distance Reference][wire-distance])
-- [ ] Run 4 AWG: BCDC output → Aux Battery+
-- [ ] Run 4 AWG: BCDC negative → Aux Battery- (per BCDC spec)
+- [ ] Run 4 AWG: START battery+ → 40A CB → BCDC input (8 ft measured routing - see [Wire Distance Reference][wire-distance])
+- [ ] Run 4 AWG: BCDC output → AUX battery+
+- [ ] Run 4 AWG: BCDC negative → AUX battery- (per BCDC spec)
 - [ ] Route ignition trigger from PMU to BCDC (18 AWG)
-- [ ] Install battery temperature sensor on aux battery
+- [ ] Install battery temperature sensor on AUX battery
 
 **BCDC Configuration & Testing:**
 
@@ -119,8 +119,8 @@ Organized by installation order for efficient build workflow.
 ### Alternator
 
 - [ ] Install 270A alternator (Premier Power Welder HO-C28)
-- [ ] Route 2/0 AWG positive: Alternator → Starter Battery (shortest path)
-- [ ] Connect positive to starter battery terminal
+- [ ] Route 2/0 AWG positive: Alternator → START battery (shortest path)
+- [ ] Connect positive to START battery terminal
 - [ ] Connect negative to NEGATIVE bus bar
 
 ---
@@ -136,18 +136,18 @@ Organized by installation order for efficient build workflow.
 
 - [ ] Determine Body RTMR part number
 - [ ] Mount under dash (passenger side)
-- [ ] Route CONSTANT power from aux battery via 8 AWG, 100A circuit breaker
+- [ ] Route CONSTANT power from AUX battery via 8 AWG, 100A circuit breaker
 
 ### SafetyHub Physical Installation
 
 - [ ] Mount SafetyHub 150 in engine bay
-- [ ] Connect power from starter battery via 150A CB
+- [ ] Connect power from START battery via 150A CB
 - [ ] Connect ground to NEGATIVE bus bar
 
 ### SwitchPros RCR-Force 12 Physical Installation
 
 - [ ] Mount SwitchPros controller
-- [ ] Connect power from aux battery via 150A CB
+- [ ] Connect power from AUX battery via 150A CB
 - [ ] Connect ground to lighting ground bus
 
 **SwitchPros Custom Harness Note:**

@@ -100,7 +100,7 @@ Complete configuration of all 24 PMU outputs, load allocations, and combined out
 - [PMU Overview][pmu-overview] - Product specifications and capacity
 - [PMU Inputs][pmu-inputs] - Input configuration and triggers
 - [PMU Programming][pmu-programming] - Logic configuration for outputs
-- [Starter Battery Distribution][starter-battery-distribution] - PMU power source and circuit breaker
+- [START battery Distribution][starter-battery-distribution] - PMU power source and circuit breaker
 
 [pmu-overview]: 01-pmu-overview.md
 [pmu-inputs]: 02-pmu-inputs.md

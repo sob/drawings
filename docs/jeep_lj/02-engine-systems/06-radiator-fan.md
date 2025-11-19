@@ -42,7 +42,7 @@ Camaro electric radiator fan controlled by R2.8 ECM via PWM signal. Provides var
 
 ## Power Flow
 
-1. **Fan Power:** CONSTANT power (starter battery) → PMU combined outputs (OUT2+3+4, 60A) → Junction → Camaro fan motor → chassis ground
+1. **Fan Power:** CONSTANT power (START battery) → PMU combined outputs (OUT2+3+4, 60A) → Junction → Camaro fan motor → chassis ground
    - OUT2, OUT3, OUT4 each use 10 AWG wire from PMU to junction point
    - Junction method: Terminal block or bus bar (near PMU preferred)
    - Junction to fan: 6 AWG minimum (handles combined 60A load)

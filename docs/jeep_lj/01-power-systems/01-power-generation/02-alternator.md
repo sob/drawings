@@ -38,7 +38,7 @@ tags:
 
 ## System Configuration
 
-**Primary Function:** Charges starter battery and powers vehicle electrical systems
+**Primary Function:** Charges START battery and powers vehicle electrical systems
 
 **Output Capacity:** 270A continuous (exceeds system maximum draw of ~326A with margin)
 
@@ -48,7 +48,7 @@ tags:
 
 | Connection | Wire Gauge | Destination | Distance | Notes |
 |:-----------|:-----------|:------------|:---------|:------|
-| Positive Output | 2/0 AWG | Starter Battery+ (driver wheel well) | 8 ft | **Required for 270A @ 60°C** - see calculations below |
+| Positive Output | 2/0 AWG | START battery+ (driver wheel well) | 8 ft | **Required for 270A @ 60°C** - see calculations below |
 | Ground | Via mounting | Engine block | N/A | Bonded via alternator mounting bolts |
 
 **Wire Sizing Calculation (Engine Bay @ 60°C):**
@@ -61,13 +61,13 @@ tags:
 
 Temperature derating factor: 1.2× resistance increase at 60°C vs 20°C (copper wire)
 
-**Ground Path:** Alternator case → Engine block → Frame rail (2/0 AWG) → Starter battery-
+**Ground Path:** Alternator case → Engine block → Frame rail (2/0 AWG) → START battery-
 
 See [Grounding Architecture][grounding] for complete system grounding.
 
 ## Load Analysis
 
-**Starter Battery System Peak Loads:**
+**START battery System Peak Loads:**
 - PMU24: 220A max
 - Starter: 400-600A (brief cranking only)
 - BCDC charging: 25A
@@ -76,7 +76,7 @@ See [Grounding Architecture][grounding] for complete system grounding.
 
 **Alternator Capacity:** 270A continuous
 
-**Note:** Peak loads exceeding alternator capacity are brief and supplemented by starter battery (850 CCA). Starter draws 400-600A only during brief cranking periods (not simultaneous with other high loads).
+**Note:** Peak loads exceeding alternator capacity are brief and supplemented by START battery (850 CCA). Starter draws 400-600A only during brief cranking periods (not simultaneous with other high loads).
 
 ## Outstanding Items
 
@@ -85,8 +85,8 @@ See [Grounding Architecture][grounding] for complete system grounding.
 
 ## Related Documentation
 
-- [Batteries][batteries] - Starter battery specifications (850 CCA)
-- [Starter Battery Distribution][starter-battery] - Alternator charging destination
+- [Batteries][batteries] - START battery specifications (850 CCA)
+- [START battery Distribution][starter-battery] - Alternator charging destination
 - [Grounding Architecture][grounding] - Alternator ground path
 - [Wire Distance Reference][wire-distance] - Alternator to battery routing distance
 

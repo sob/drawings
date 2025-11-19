@@ -7,7 +7,7 @@ hide:
 
 ## System Overview
 
-Dual Odyssey PC1500 batteries (850 CCA, 68 Ah each) with RedArc BCDC Alpha 25 isolation/charging and 270A alternator. Starter battery powers critical engine systems, aux battery powers accessories. Batteries operate independently when isolated, aux battery can assist starting via BCDC jump start mode. 80W hood solar panel maintains aux battery.
+Dual Odyssey PC1500 batteries (850 CCA, 68 Ah each) with RedArc BCDC Alpha 25 isolation/charging and 270A alternator. START battery powers critical engine systems, AUX battery powers accessories. Batteries operate independently when isolated, AUX battery can assist starting via BCDC jump start mode. 80W hood solar panel maintains AUX battery.
 
 ## Components
 

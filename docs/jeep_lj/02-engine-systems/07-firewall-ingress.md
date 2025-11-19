@@ -56,14 +56,14 @@ All electrical penetrations through the firewall must be properly sized and seal
 
 ### Grommet 3: Reserved
 
-**Status:** No longer required - Body RTMR receives CONSTANT power directly from aux battery via circuit breaker in wheel well
+**Status:** No longer required - Body RTMR receives CONSTANT power directly from AUX battery via circuit breaker in wheel well
 
 **Note:** Body RTMR circuits (WolfBox camera, heated seats, USB, radio) are now on CONSTANT power with manual/trigger control. No firewall penetration needed for Body RTMR power feed.
 - **Note:** Radio amplifier (15A, F3) on CONSTANT power (remote wire from deck triggers amp)
 
 **Outstanding Items:**
 
-- [ ] Grommet 3 no longer required (Body RTMR powered from aux battery)
+- [ ] Grommet 3 no longer required (Body RTMR powered from AUX battery)
 
 **Related Documentation:**
 
@@ -91,7 +91,7 @@ All electrical penetrations through the firewall must be properly sized and seal
 
 ### Grommet 6: Communication Devices (G1 GMRS, STX Intercom, Ham Radio) {#grommet-4-rugged-radio-g1-gmrs-stx-intercom-battery-cables}
 
-**Location:** TBD - near starter battery/SafetyHub location
+**Location:** TBD - near START battery/SafetyHub location
 **Direction:** Engine bay (SafetyHub/battery) → Cabin (radios behind dash)
 
 **Wire Bundle:**
@@ -123,7 +123,7 @@ All electrical penetrations through the firewall must be properly sized and seal
 - [ ] Determine exact Grommet 6 location on firewall (near SafetyHub/battery preferred)
 - [ ] Confirm wire gauge: 14 AWG for G1/STX, 10 AWG for Ham Radio
 - [ ] Determine grommet size (must accommodate 6 wires: 3 power + 3 ground)
-- [ ] Determine SafetyHub mounting location (near starter battery)
+- [ ] Determine SafetyHub mounting location (near START battery)
 
 **Related Documentation:**
 
@@ -186,8 +186,8 @@ All electrical penetrations through the firewall must be properly sized and seal
 ### Engine Bay Side (Exterior)
 
 - **PMU:** Firewall-mounted programmable power distribution unit for engine circuits
-  - Power source: Starter Battery CONSTANT bus (SWITCHED logic via Pin 7 ignition sense)
-  - Ground: Starter battery negative bus via pin 25 - 10 AWG
+  - Power source: START battery CONSTANT bus (SWITCHED logic via Pin 7 ignition sense)
+  - Ground: START battery negative bus via pin 25 - 10 AWG
   - See [Engine Systems][pmu-power-distribution] for complete specifications
 
 ### Cabin Side (Interior)

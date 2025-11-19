@@ -44,7 +44,7 @@ tags:
 
 ## Function
 
-80W panel maintains aux battery during extended stops via BCDC solar input. Full sun output: ~80W (6.7A), variable in partial sun.
+80W panel maintains AUX battery during extended stops via BCDC solar input. Full sun output: ~80W (6.7A), variable in partial sun.
 
 BCDC Green Power Priority uses solar first when available, combines with alternator when both sources present. See [BCDC Alpha 25][bcdc] for charging details.
 

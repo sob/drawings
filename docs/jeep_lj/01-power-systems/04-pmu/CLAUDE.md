@@ -38,7 +38,7 @@ Documents ECUMaster PMU24 programmable power management unit configuration and a
 
 ## Cross-Section References
 
-**To Starter Battery (1.2):** PMU power source via circuit breaker
+**To START battery (1.2):** PMU power source via circuit breaker
 
 **To Engine Systems (2):** Radiator fan, HVAC blower, starter relay, wipers, horn
 
@@ -56,7 +56,7 @@ Documents ECUMaster PMU24 programmable power management unit configuration and a
 
 **"What's the DRL auto-off logic?"** → `04-pmu-programming.md`
 
-**"Where does PMU get power?"** → Starter Battery (1.2) circuit breakers
+**"Where does PMU get power?"** → START battery (1.2) circuit breakers
 
 **"What inputs does PMU use?"** → `03-pmu-inputs.md`
 

@@ -54,7 +54,7 @@ tags:
 
 **Mounting:** Near SwitchPros controller (rear cabin area)
 
-**Ground Path:** Bus → chassis ground (1/0 AWG, handles ~100A total lighting load) → frame rail → starter battery negative bus
+**Ground Path:** Bus → chassis ground (1/0 AWG, handles ~100A total lighting load) → frame rail → START battery negative bus
 
 **Critical:** Clean metal-to-metal connection to chassis, accessible for lighting ground wires
 

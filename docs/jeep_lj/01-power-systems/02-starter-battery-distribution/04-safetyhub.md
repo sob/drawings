@@ -28,7 +28,7 @@ Provides high-current fused distribution for heavy-load accessories.
 
 **Location:** Engine bay
 
-**Power Source:** Starter battery via 150A CB - see [Circuit Breakers][circuit-breakers]
+**Power Source:** START battery via 150A CB - see [Circuit Breakers][circuit-breakers]
 
 ## Specifications
 
@@ -55,13 +55,13 @@ Provides high-current fused distribution for heavy-load accessories.
 **Total Load:** ~111A maximum (ARB 90A + GMRS 15A + Intercom 5A + Winch contactor 1A)
 
 !!! warning "Winch Motor Power"
-    Warn Zeon 10-S winch motor draws 400A peak directly from starter battery positive (no CB). Only the 1A contactor coil trigger is powered through SafetyHub ATC-1. See [Starter Battery Distribution][front-battery] for winch main power connection.
+    Warn Zeon 10-S winch motor draws 400A peak directly from START battery positive (no CB). Only the 1A contactor coil trigger is powered through SafetyHub ATC-1. See [START battery Distribution][front-battery] for winch main power connection.
 
 ## Related Documentation
 
 **Power Systems:**
 
-- [Starter Battery Distribution Overview][front-battery]
+- [START battery Distribution Overview][front-battery]
 - [Circuit Breakers][circuit-breakers] - 150A CB protection
 
 **Connected Systems:**

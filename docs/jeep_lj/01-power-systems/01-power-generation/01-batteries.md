@@ -36,16 +36,16 @@ tags:
 
 **Dual Battery Setup:** Two Odyssey PC1500 batteries (specifications above)
 
-- **Starter Battery (Driver Wheel Well):** Critical systems - Engine starting, PMU power, SafetyHub circuits, HVAC, radiator fan
-- **Aux Battery (Passenger Wheel Well):** Accessories - SwitchPros, Body RTMR, winch, audio system
+- **START battery (Driver Wheel Well):** Critical systems - Engine starting, PMU power, SafetyHub circuits, HVAC, radiator fan
+- **AUX battery (Passenger Wheel Well):** Accessories - SwitchPros, Body RTMR, winch, audio system
 - **Isolation:** RedArc BCDC Alpha 25 (independent operation when engine off)
-- **Jump Start:** BCDC jump start assist can parallel batteries if starter battery fails (both 850 CCA rated)
-- **Redundancy:** Vehicle operates on starter battery alone if aux battery system fails
+- **Jump Start:** BCDC jump start assist can parallel batteries if START battery fails (both 850 CCA rated)
+- **Redundancy:** Vehicle operates on START battery alone if AUX battery system fails
 
 ## Mounting
 
-- **Starter Battery:** Driver wheel well - enclosed compartment with access panel behind driver seat
-- **Aux Battery:** Passenger wheel well - enclosed compartment with access panel behind passenger seat
+- **START battery:** Driver wheel well - enclosed compartment with access panel behind driver seat
+- **AUX battery:** Passenger wheel well - enclosed compartment with access panel behind passenger seat
 
 **Installation Tasks:** See [Section 1 Installation Checklist][installation-checklist]
 

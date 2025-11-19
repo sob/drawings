@@ -36,14 +36,14 @@ tags:
 ## Low Beam
 
 - **Control:** Pull CT4 lever (latching on/off)
-- **Power:** Starter Battery (40A) → CT4 → SW3 output (10A internal fusing)
+- **Power:** START battery (40A) → CT4 → SW3 output (10A internal fusing)
 - **Disabled:** When ignition off (via ignition signal)
 - **Load:** 3.6A total (both lights in parallel)
 
 ## High Beam
 
 - **Control:** Push CT4 lever (momentary or latching - programmable)
-- **Power:** Starter Battery (40A) → CT4 → SW4 output (10A internal fusing)
+- **Power:** START battery (40A) → CT4 → SW4 output (10A internal fusing)
 - **Mutual Exclusivity:** CT4 automatically disables low beam when high beam activates
 - **Disabled:** When ignition off
 - **Load:** 5.6A total (both lights in parallel)

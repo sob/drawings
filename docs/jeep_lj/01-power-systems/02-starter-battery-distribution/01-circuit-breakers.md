@@ -7,17 +7,17 @@ hide:
 
 ## Overview
 
-All starter battery positive circuits protected by Mechanical Products Series 17 circuit breakers with direct battery connections.
+All START battery positive circuits protected by Mechanical Products Series 17 circuit breakers with direct battery connections.
 
-**Location:** Engine bay near starter battery
+**Location:** Engine bay near START battery
 
 ## Circuit Breaker Specifications
 
 | Circuit | Model | Rating | Reset Type | Power Path | Max Load | Sizing |
 |:--------|:------|:------:|:-----------|:-----------|:---------|:-------|
-| **PMU24** | Mechanical Products<br/>([174-S2-300-2][mp-300]) | 300A | Manual | Starter Battery+<br/>└→ 300A CB<br/>&nbsp;&nbsp;&nbsp;└→ PMU24 | ~220A theoretical (100-140A typical) | 136% of max load (handles motor inrush) |
-| **SafetyHub 100** | Mechanical Products<br/>([174-S2-150-2][mp-150]) | 150A | Manual | Starter Battery+<br/>└→ 150A CB<br/>&nbsp;&nbsp;&nbsp;└→ SafetyHub 100 | ~111A (ARB 90A + GMRS 15A + Intercom 5A + winch 1A) | 135% of max load |
-| **BCDC Input** | Mechanical Products<br/>([174-S2-040-2][mp-40]) | 40A | Manual | Starter Battery+<br/>└→ 40A CB<br/>&nbsp;&nbsp;&nbsp;└→ BCDC Alpha 25 | 25A BCDC output | 160% of max load |
+| **PMU24** | Mechanical Products<br/>([174-S2-300-2][mp-300]) | 300A | Manual | START battery+<br/>└→ 300A CB<br/>&nbsp;&nbsp;&nbsp;└→ PMU24 | ~220A theoretical (100-140A typical) | 136% of max load (handles motor inrush) |
+| **SafetyHub 100** | Mechanical Products<br/>([174-S2-150-2][mp-150]) | 150A | Manual | START battery+<br/>└→ 150A CB<br/>&nbsp;&nbsp;&nbsp;└→ SafetyHub 100 | ~111A (ARB 90A + GMRS 15A + Intercom 5A + winch 1A) | 135% of max load |
+| **BCDC Input** | Mechanical Products<br/>([174-S2-040-2][mp-40]) | 40A | Manual | START battery+<br/>└→ 40A CB<br/>&nbsp;&nbsp;&nbsp;└→ BCDC Alpha 25 | 25A BCDC output | 160% of max load |
 
 **All Circuit Breakers:**
 
@@ -31,7 +31,7 @@ All starter battery positive circuits protected by Mechanical Products Series 17
 
 ## Related Documentation
 
-- [Starter Battery Distribution Overview][front-battery]
+- [START battery Distribution Overview][front-battery]
 - [SafetyHub 100][safetyhub] - Load details for SafetyHub circuit
 - [PMU Outputs][pmu-outputs] - Load details for PMU circuit
 

@@ -21,29 +21,29 @@ Section 1 documents the complete power generation and distribution architecture 
 
 **When to use:** Battery specs, charging system details, solar integration
 
-### 1.2 Starter Battery Distribution (`02-starter-battery-distribution/`)
+### 1.2 START battery Distribution (`02-starter-battery-distribution/`)
 
-**What's here:** Engine bay power distribution from starter battery
+**What's here:** Engine bay power distribution from START battery
 
 **Files:**
-- `01-circuit-breakers.md` - All starter battery CBs (PMU, SafetyHub, BCDC input)
+- `01-circuit-breakers.md` - All START battery CBs (PMU, SafetyHub, BCDC input)
 - `04-safetyhub.md` - Blue Sea SafetyHub 100 fused distribution
-- `index.md` - Starter battery overview with terminal connection tables
+- `index.md` - START battery overview with terminal connection tables
 - `CLAUDE.md` - Navigation guide
 
 **When to use:** PMU power source, SafetyHub circuits, BCDC input protection, direct battery loads (winch, starter)
 
-### 1.3 Aux Battery Distribution (`03-aux-battery-distribution/`)
+### 1.3 AUX battery Distribution (`03-aux-battery-distribution/`)
 
-**What's here:** Wheel well power distribution from aux battery
+**What's here:** Wheel well power distribution from AUX battery
 
 **Files:**
-- `01-circuit-breakers.md` - All aux battery CBs (SwitchPros, Body RTMR)
+- `01-circuit-breakers.md` - All AUX battery CBs (SwitchPros, Body RTMR)
 - `04-body-rtmr.md` - Body relay/fuse panel for cabin circuits
-- `index.md` - Aux battery overview with terminal connection tables
+- `index.md` - AUX battery overview with terminal connection tables
 - `CLAUDE.md` - Navigation guide
 
-**When to use:** SwitchPros power source, Body RTMR circuits, aux battery loads
+**When to use:** SwitchPros power source, Body RTMR circuits, AUX battery loads
 
 ### 1.4 PMU (`04-pmu/`)
 
@@ -64,8 +64,8 @@ Section 1 documents the complete power generation and distribution architecture 
 **What's here:** Complete grounding system design
 
 **Files:**
-- `01-starter-battery-ground.md` - Direct starter battery negative connections
-- `02-aux-battery-ground.md` - Direct aux battery negative connections
+- `01-starter-battery-ground.md` - Direct START battery negative connections
+- `02-aux-battery-ground.md` - Direct AUX battery negative connections
 - `03-engine-bay-ground-bus.md` - Engine bay ground bus bar
 - `04-firewall-stud-bus.md` - Cabin electronics ground bus
 - `05-switchpros-ground-bus.md` - Lighting/accessories ground bus
@@ -119,7 +119,7 @@ Section 1 documents the complete power generation and distribution architecture 
 
 **Command Touch CT4:** PMU OUT13 (CONSTANT power)
 
-**SwitchPros SP-1200:** Aux battery power via 150A CB, custom harnesses
+**SwitchPros SP-1200:** AUX battery power via 150A CB, custom harnesses
 
 **Dakota Digital Cluster:** PMU OUT12
 
@@ -141,7 +141,7 @@ Section 1 documents the complete power generation and distribution architecture 
 
 ### To Section 7 (Exterior Systems)
 
-**Winch:** Direct starter battery connection (no CB), SafetyHub contactor trigger
+**Winch:** Direct START battery connection (no CB), SafetyHub contactor trigger
 
 **ARB Compressor:** SafetyHub MIDI-1/2 (twin motors)
 
@@ -150,7 +150,7 @@ Section 1 documents the complete power generation and distribution architecture 
 ## Common Navigation Scenarios
 
 **"Where does [component] get power?"**
-→ Check front or aux battery distribution `index.md` terminal tables
+→ Check front or AUX battery distribution `index.md` terminal tables
 
 **"What's connected to PMU OUT[X]?"**
 → See `04-pmu/02-pmu-outputs.md`
@@ -171,7 +171,7 @@ Section 1 documents the complete power generation and distribution architecture 
 
 ### Adding a New Load
 
-1. Determine power source (front or aux battery)
+1. Determine power source (front or AUX battery)
 2. Calculate circuit breaker sizing
 3. Update battery distribution `index.md` terminal table
 4. Update circuit breaker file if new CB needed
@@ -204,8 +204,8 @@ Section 1 documents the complete power generation and distribution architecture 
 
 **Power Architecture:**
 - Direct battery → circuit breaker → major load (no intermediate bus bars)
-- Starter battery: Critical systems (PMU, SafetyHub, starter, winch)
-- Aux battery: Accessories (SwitchPros, Body RTMR)
+- START battery: Critical systems (PMU, SafetyHub, starter, winch)
+- AUX battery: Accessories (SwitchPros, Body RTMR)
 
 **Grounding Architecture:**
 - Battery negative → Frame rail (2/0 AWG)
@@ -238,10 +238,10 @@ Section 1 documents the complete power generation and distribution architecture 
 - 80W solar panel (hood-mounted)
 
 **Major Loads:**
-- Starter battery: PMU (~220A max), SafetyHub (~111A max), starter, winch
-- Aux battery: SwitchPros (~100A max), Body RTMR (~69A max)
+- START battery: PMU (~220A max), SafetyHub (~111A max), starter, winch
+- AUX battery: SwitchPros (~100A max), Body RTMR (~69A max)
 
 **Ground System:**
-- 5 ground buses total (negative, engine bay, firewall, SwitchPros, aux battery)
-- 6 direct starter battery grounds
-- 5 direct aux battery grounds
+- 5 ground buses total (negative, engine bay, firewall, SwitchPros, AUX battery)
+- 6 direct START battery grounds
+- 5 direct AUX battery grounds

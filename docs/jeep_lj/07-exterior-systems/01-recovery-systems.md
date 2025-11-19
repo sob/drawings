@@ -38,9 +38,9 @@ The recovery systems provide essential off-road and emergency recovery capabilit
 
 - **Peak Amperage Draw:** 400-480A (at full load/stall - brief periods only)
 - **Typical Operating Draw:** 80-250A (most recovery operations)
-- **Main Power Source:** Aux battery (passenger wheel well - direct connection, no fuse/breaker)
+- **Main Power Source:** AUX battery (passenger wheel well - direct connection, no fuse/breaker)
   - **Cable:** Dual 1/0 AWG (positive and negative) - optimized for 26 ft total circuit length
-  - **Length:** 13 ft one-way from aux battery to winch (26 ft total circuit - see [Wire Distance Reference][wire-distance])
+  - **Length:** 13 ft one-way from AUX battery to winch (26 ft total circuit - see [Wire Distance Reference][wire-distance])
   - **System Voltage:** 13.8V (alternator charging - engine running during winch operations)
   - **Voltage Drop @ 250A typical:** 4.92% (0.68V drop, 13.12V at winch) - excellent for normal recovery
   - **Voltage Drop @ 400A peak:** 7.87% (1.09V drop, 12.71V at winch) - acceptable for brief stall/heavy load
@@ -75,8 +75,8 @@ The recovery systems provide essential off-road and emergency recovery capabilit
 ### Wiring Details
 
 **Main Power Wiring:**
-- **Positive (+):** Aux battery+ (passenger wheel well) → 1/0 AWG red wire (direct, no breaker) → winch contactor → winch motor
-- **Negative (-):** Aux battery- (passenger wheel well) → 1/0 AWG black wire → winch motor ground lug
+- **Positive (+):** AUX battery+ (passenger wheel well) → 1/0 AWG red wire (direct, no breaker) → winch contactor → winch motor
+- **Negative (-):** AUX battery- (passenger wheel well) → 1/0 AWG black wire → winch motor ground lug
 - **Cable Run:** 13 ft one-way (26 ft total circuit length - see [Wire Distance Reference][wire-distance])
 - **Routing:** Passenger wheel well → along frame rail → through bumper passage → front bumper winch mount
 
@@ -94,15 +94,15 @@ The recovery systems provide essential off-road and emergency recovery capabilit
 
 | Circuit | Source | Distance | Protection | Wire Gauge | Destination | Function |
 |---------|--------|----------|------------|------------|-------------|----------|
-| Main Power (+) | Aux Battery+ (passenger wheel well) | 13 ft one-way | None (direct) | 1/0 AWG | Winch Contactor → Motor | High-current power |
-| Main Power (-) | Aux Battery- (passenger wheel well) | 13 ft one-way | None | 1/0 AWG | Winch Motor Ground | High-current return |
+| Main Power (+) | AUX battery+ (passenger wheel well) | 13 ft one-way | None (direct) | 1/0 AWG | Winch Contactor → Motor | High-current power |
+| Main Power (-) | AUX battery- (passenger wheel well) | 13 ft one-way | None | 1/0 AWG | Winch Motor Ground | High-current return |
 | Control Trigger | Dash 3-pos Switch | Short | SafetyHub ATC-1 (10A) | 14 AWG | Winch Contactor | Low-current trigger |
 | Remote Control | Warn Remote | N/A | Internal to winch | Per Warn specs | Winch Control Pack | Directional control |
 
 ### Installation Considerations
 
 **Power Cable Routing:**
-- Route 1/0 AWG cables from aux battery (passenger wheel well) along frame rail to front bumper
+- Route 1/0 AWG cables from AUX battery (passenger wheel well) along frame rail to front bumper
 - 13 ft one-way routing distance (26 ft total circuit - see [Wire Distance Reference][wire-distance])
 - Protect cables from sharp edges and heat sources
 - Use proper grommets where cables pass through metal panels
@@ -149,7 +149,7 @@ The recovery systems provide essential off-road and emergency recovery capabilit
 
 ## Related Documentation
 
-- [Aux Battery Distribution][aux-battery] - Winch power source (passenger wheel well)
+- [AUX battery Distribution][aux-battery] - Winch power source (passenger wheel well)
 - [Wire Distance Reference][wire-distance] - Winch to battery routing distance (13 ft one-way, 26 ft circuit)
 - [SafetyHub][safetyhub] - Winch contactor trigger circuit protection
 - [Air System][air-system] - ARB compressor and air lockers
@@ -175,5 +175,5 @@ The recovery systems provide essential off-road and emergency recovery capabilit
 **Integration Opportunities:**
 - **Wireless Winch Control Integration:** Integrate with vehicle's audio/communication system for voice commands
 - **Winch Load Monitoring:** Add amp meter or load sensor to monitor winch current draw
-- **Remote Battery Monitoring:** Monitor starter battery voltage during winch operations from inside cabin
+- **Remote Battery Monitoring:** Monitor START battery voltage during winch operations from inside cabin
 - **Automatic Winch Cut-off:** Integrate with battery voltage monitoring to prevent over-discharge

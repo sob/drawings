@@ -30,8 +30,8 @@ This section documents all control interfaces in the Jeep LJ build - the switche
 
 All control interfaces integrate with the dual-battery electrical system:
 
-- **SwitchPros SP-1200:** Powered by CONSTANT bus (aux battery)
-- **Command Touch CT4:** Powered by starter battery CONSTANT, integrates with PMU
+- **SwitchPros SP-1200:** Powered by CONSTANT bus (AUX battery)
+- **Command Touch CT4:** Powered by START battery CONSTANT, integrates with PMU
 - **Dashboard switches:** Various power sources depending on function
 
 ## Related Documentation

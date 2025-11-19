@@ -1,20 +1,20 @@
-# Aux Battery Distribution - Navigation Guide
+# AUX battery Distribution - Navigation Guide
 
 ## What's Here
 
-Documents wheel well power distribution from the aux battery (Odyssey PC1500).
+Documents wheel well power distribution from the AUX battery (Odyssey PC1500).
 
 ## Files
 
-### `index.md` - Aux Battery Overview
+### `index.md` - AUX battery Overview
 
-**Contains:** Aux battery terminal connection table, direct load connections
+**Contains:** AUX battery terminal connection table, direct load connections
 
-**Use when:** Finding what connects to aux battery positive terminal
+**Use when:** Finding what connects to AUX battery positive terminal
 
 ### `01-circuit-breakers.md` - Circuit Breakers
 
-**Contains:** All aux battery circuit breaker specifications and ratings
+**Contains:** All AUX battery circuit breaker specifications and ratings
 
 **Use when:** Finding circuit breaker size for SwitchPros, Body RTMR, or other loads
 
@@ -38,25 +38,25 @@ Documents wheel well power distribution from the aux battery (Odyssey PC1500).
 
 **To BCDC (1.1.3):** BCDC output connection, charging details
 
-**To Grounding (1.5):** Aux battery negative connections, ground reference cable
+**To Grounding (1.5):** AUX battery negative connections, ground reference cable
 
-**To Starter Battery (1.2):** BCDC input circuit breaker
+**To START battery (1.2):** BCDC input circuit breaker
 
 ## Navigation Scenarios
 
 **"What circuit breaker protects SwitchPros?"** → `01-circuit-breakers.md`
 
-**"What connects to aux battery positive terminal?"** → `index.md` terminal table
+**"What connects to AUX battery positive terminal?"** → `index.md` terminal table
 
 **"What connects to the CONSTANT bus bar?"** → `02-constant-bus.md` stud assignments
 
 **"What's powered by Body RTMR?"** → `04-body-rtmr.md` circuit assignments
 
-**"How does aux battery get charged?"** → BCDC (1.1.3)
+**"How does AUX battery get charged?"** → BCDC (1.1.3)
 
 ## When Updating
 
-**Adding new aux battery load:**
+**Adding new AUX battery load:**
 
 1. Determine if direct battery connection or CONSTANT bus connection
 2. Update `index.md` terminal table OR `02-constant-bus.md` stud table

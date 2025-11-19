@@ -49,7 +49,7 @@ The air system consists of an ARB Twin Compressor (brushless), 1-gallon air tank
   - Compressor has internal relay/control that handles high-current motor switching
   - 14 AWG wire from OUTPUT-11 to compressor control terminal
 - **Ground:** 8 AWG black wire from compressor to chassis ground or battery negative
-- **Location:** Under passenger seat (cabin, aux battery area)
+- **Location:** Under passenger seat (cabin, AUX battery area)
 
 ### Wiring Summary
 
@@ -220,7 +220,7 @@ Compressor fills tank to 150 PSI → pressure switch opens → compressor stops
 ### Power Flow Diagram
 
 ```
-CONSTANT Bus (Aux Battery)
+CONSTANT Bus (AUX battery)
     │
     ├─→ SafetyHub 150 (Blue Sea 100A breaker)
     │       ├─→ MIDI-1 (60A) → 10 AWG → Compressor Motor 1

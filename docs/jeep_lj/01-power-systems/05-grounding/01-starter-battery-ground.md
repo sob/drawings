@@ -3,13 +3,13 @@ hide:
   - toc
 ---
 
-# 1.5.1 Starter Battery Ground {#front-battery-ground}
+# 1.5.1 START battery Ground {#front-battery-ground}
 
 ## Overview
 
-The starter battery negative terminal has direct connections to the negative bus bar and several components requiring direct battery ground (ECM, grid heater, radios).
+The START battery negative terminal has direct connections to the negative bus bar and several components requiring direct battery ground (ECM, grid heater, radios).
 
-## Starter Battery Negative Terminal Connections
+## START battery Negative Terminal Connections
 
 | Connection | Wire Gauge | Distance | Max Current | Voltage Drop | Status |
 |:-----------|:-----------|:---------|:------------|:-------------|:-------|
@@ -29,7 +29,7 @@ See [Engine Bay Ground Bus](03-engine-bay-ground-bus.md) for complete bus bar co
 **Primary Infrastructure:**
 - Front frame rail ground (2/0 AWG) - handles starter + 270A alternator return
 - Engine block ground (2/0 AWG) - starter/alternator return path
-- Aux battery reference (2/0 AWG) - critical for BCDC operation
+- AUX battery reference (2/0 AWG) - critical for BCDC operation
 
 ## Direct Connection Rationale
 
@@ -41,6 +41,6 @@ See [Engine Bay Ground Bus](03-engine-bay-ground-bus.md) for complete bus bar co
 
 - [Grounding Architecture Overview](index.md)
 - [Engine Bay Ground Bus](03-engine-bay-ground-bus.md)
-- [Starter Battery Distribution][front-battery]
+- [START battery Distribution][front-battery]
 
 [front-battery]: ../02-starter-battery-distribution/index.md

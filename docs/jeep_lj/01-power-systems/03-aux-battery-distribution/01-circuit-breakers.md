@@ -7,16 +7,16 @@ hide:
 
 ## Overview
 
-All aux battery positive circuits protected by Mechanical Products Series 17 circuit breakers with direct battery connections.
+All AUX battery positive circuits protected by Mechanical Products Series 17 circuit breakers with direct battery connections.
 
-**Location:** Rear wheel well near aux battery
+**Location:** Rear wheel well near AUX battery
 
 ## Circuit Breaker Specifications
 
 | Circuit | Model | Rating | Reset Type | Power Path | Max Load | Sizing |
 |:--------|:------|:------:|:-----------|:-----------|:---------|:-------|
-| **SwitchPros RCR-Force 12** | Mechanical Products<br/>([174-S2-150-2][mp-150]) | 150A | Manual | Aux Battery+<br/>└→ 150A CB<br/>&nbsp;&nbsp;&nbsp;└→ SwitchPros RCR-Force 12 | ~100A (all lighting outputs on) | 150% of max load |
-| **Body RTMR CONSTANT** | Mechanical Products<br/>([174-S2-100-2][mp-100]) | 100A | Manual | Aux Battery+<br/>└→ 100A CB<br/>&nbsp;&nbsp;&nbsp;└→ Body RTMR | ~69A (radio, USB, camera, seats) | 145% of max load |
+| **SwitchPros RCR-Force 12** | Mechanical Products<br/>([174-S2-150-2][mp-150]) | 150A | Manual | AUX battery+<br/>└→ 150A CB<br/>&nbsp;&nbsp;&nbsp;└→ SwitchPros RCR-Force 12 | ~100A (all lighting outputs on) | 150% of max load |
+| **Body RTMR CONSTANT** | Mechanical Products<br/>([174-S2-100-2][mp-100]) | 100A | Manual | AUX battery+<br/>└→ 100A CB<br/>&nbsp;&nbsp;&nbsp;└→ Body RTMR | ~69A (radio, USB, camera, seats) | 145% of max load |
 
 **All Circuit Breakers:**
 
@@ -30,7 +30,7 @@ All aux battery positive circuits protected by Mechanical Products Series 17 cir
 
 ## Related Documentation
 
-- [Aux Battery Distribution Overview][rear-battery]
+- [AUX battery Distribution Overview][rear-battery]
 - [SwitchPros][switchpros] - Load details for SwitchPros circuit
 - [Body RTMR][body-rtmr] - Load details for Body RTMR circuit
 

@@ -164,7 +164,7 @@ Use heat/oil resistant vacuum line, secure all connections, route away from exha
 ### Blower Motor Circuit
 
 ```
-CONSTANT Power (Starter Battery)
+CONSTANT Power (START battery)
         ↓
 PMU Out 3 (15A capacity, solid-state switching)
         ↓

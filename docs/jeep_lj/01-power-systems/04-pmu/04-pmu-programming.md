@@ -128,7 +128,7 @@ IF (BatteryVoltage < 12.5V) AND (EngineRPM > 1000)
 - [PMU Overview][pmu-overview] - Product specifications and capacity
 - [PMU Inputs][pmu-inputs] - Input configuration and CAN bus integration
 - [PMU Outputs][pmu-outputs] - Output configuration and load details
-- [Starter Battery Distribution][starter-battery-distribution] - PMU power source and circuit breaker
+- [START battery Distribution][starter-battery-distribution] - PMU power source and circuit breaker
 - [Gauge Cluster][gauge-cluster] - Dakota Digital J1939 CAN bus tap location
 
 [pmu-overview]: 01-pmu-overview.md

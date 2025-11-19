@@ -18,8 +18,8 @@ The electrical system is organized into zones for logical distribution and maint
 ### Power Systems
 
 - **[Power Generation](01-power-systems/01-power-generation/index.md)** - Batteries, alternator, BCDC, solar, grounding
-- **[Starter Battery Distribution](01-power-systems/02-starter-battery-distribution/index.md)** - Engine bay primary power distribution
-- **[Aux Battery Distribution](01-power-systems/03-aux-battery-distribution/index.md)** - Wheel well accessory power distribution
+- **[START battery Distribution](01-power-systems/02-starter-battery-distribution/index.md)** - Engine bay primary power distribution
+- **[AUX battery Distribution](01-power-systems/03-aux-battery-distribution/index.md)** - Wheel well accessory power distribution
 - **[Power Management Unit](01-power-systems/04-pmu/index.md)** - PMU24 programmable power management
 - **[Body RTMR](01-power-systems/03-aux-battery-distribution/04-body-rtmr.md)** - Body relay/fuse panel
 - **[SafetyHub](01-power-systems/02-starter-battery-distribution/04-safetyhub.md)** - Safety control system
@@ -77,8 +77,8 @@ The electrical system is organized into zones for logical distribution and maint
 
 ### Dual Battery System
 
-- **Starter Battery:** Engine bay - powers critical engine systems via PMU and SafetyHub
-- **Aux Battery:** Wheel well - powers accessories via CONSTANT bus
+- **START battery:** Engine bay - powers critical engine systems via PMU and SafetyHub
+- **AUX battery:** Wheel well - powers accessories via CONSTANT bus
 - **Battery Isolation:** RedArc BCDC Alpha 25 DC-DC charger with automatic jump-start assist
 
 See [Power Generation](01-power-systems/01-power-generation/index.md) for complete battery and charging system details.

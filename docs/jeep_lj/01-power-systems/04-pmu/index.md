@@ -13,8 +13,8 @@ Engine bay power distribution handled by ECUMaster PMU24, a programmable power m
 
 | Connection | Source | Wire Gauge | Protection | Notes |
 |:-----------|:-------|:-----------|:-----------|:------|
-| **Main Power** | Starter battery+ | 2 AWG | 300A CB | Upgraded for motor inrush - See [Circuit Breakers][front-circuit-breakers] |
-| **Ground** | Starter battery- | 2 AWG | N/A | Critical for 170A continuous load - See [Grounding Architecture][grounding] |
+| **Main Power** | START battery+ | 2 AWG | 300A CB | Upgraded for motor inrush - See [Circuit Breakers][front-circuit-breakers] |
+| **Ground** | START battery- | 2 AWG | N/A | Critical for 170A continuous load - See [Grounding Architecture][grounding] |
 | **Ignition Sense** | Keyswitch RUN | 18 AWG | N/A | Dedicated wire - see [PMU Inputs][pmu-inputs] |
 | **CAN Bus** | Cummins ECM J1939 | 18-20 AWG twisted pair | N/A | Stub tap - see [PMU Inputs][pmu-inputs] |
 
@@ -27,7 +27,7 @@ Engine bay power distribution handled by ECUMaster PMU24, a programmable power m
 
 ## Related Documentation
 
-- [Starter Battery Distribution][starter-battery-distribution] - PMU power source and circuit breaker
+- [START battery Distribution][starter-battery-distribution] - PMU power source and circuit breaker
 - [Grounding Architecture][grounding] - PMU ground connection
 - [Firewall Ingress][firewall-ingress] - Wire routing through firewall
 

@@ -36,17 +36,17 @@ tags:
 
 | Stud | Connection | Wire Gauge | Distance | Max Current | Notes |
 |:-----|:-----------|:-----------|:---------|:------------|:------|
-| 1 | Starter Battery- | 2/0 AWG ✓ | ~8 ft | 600A+ peak | Primary power return - starter + alternator |
+| 1 | START battery- | 2/0 AWG ✓ | ~8 ft | 600A+ peak | Primary power return - starter + alternator |
 | 2 | Engine block ground | 2/0 AWG ✓ | ~8 ft | 600A+ peak | Starter/alternator return path |
 | 3 | Front frame rail (main chassis) | 2/0 AWG ✓ | ~3 ft | 600A+ peak | Primary infrastructure ground |
-| 4 | Aux battery reference | 1/0 AWG ✓ | 5-6 ft | 75A max | Inter-battery reference (BCDC + fault current) |
+| 4 | AUX battery reference | 1/0 AWG ✓ | 5-6 ft | 75A max | Inter-battery reference (BCDC + fault current) |
 | 5 | PMU ground reference | Per harness | ~2 ft | <1A | Logic/CAN reference (Pin 25) - loads ground separately |
 | 6 | Relay/solenoid coil grounds | 14-18 AWG ✓ | Variable | ~3A total | Starter solenoid (~1.6A), horn relay |
 | 7-8 | **[Available]** | - | - | - | Future expansion (2 studs available) |
 
 **Utilization:** 6 of 8 studs used (2 available)
 
-**Direct Battery Connections:** ECM, grid heater, radios, winch, and BCDC connect directly to battery negative - see [Starter Battery Ground][front-battery-ground] and [Aux Battery Ground][rear-battery-ground]
+**Direct Battery Connections:** ECM, grid heater, radios, winch, and BCDC connect directly to battery negative - see [START battery Ground][front-battery-ground] and [AUX battery Ground][rear-battery-ground]
 
 ## Installation
 
@@ -59,9 +59,9 @@ tags:
 ## Related Documentation
 
 - [Grounding Architecture Overview][grounding-architecture]
-- [Starter Battery Ground][front-battery-ground]
-- [Aux Battery Ground][rear-battery-ground]
-- [Starter Battery Distribution][starter-battery-distribution]
+- [START battery Ground][front-battery-ground]
+- [AUX battery Ground][rear-battery-ground]
+- [START battery Distribution][starter-battery-distribution]
 
 [grounding-architecture]: index.md
 [front-battery-ground]: 01-starter-battery-ground.md

@@ -71,7 +71,7 @@ tags:
 - [PMU Inputs][pmu-inputs] - Input configuration and CAN bus integration
 - [PMU Outputs][pmu-outputs] - 24-output configuration and load details
 - [PMU Programming][pmu-programming] - Logic examples and configuration
-- [Starter Battery Distribution][starter-battery-distribution] - PMU power source (1/0 AWG, 8 ft) and circuit breaker
+- [START battery Distribution][starter-battery-distribution] - PMU power source (1/0 AWG, 8 ft) and circuit breaker
 - [Wire Distance Reference][wire-distance] - PMU to battery routing distance
 
 [pmu-inputs]: 02-pmu-inputs.md

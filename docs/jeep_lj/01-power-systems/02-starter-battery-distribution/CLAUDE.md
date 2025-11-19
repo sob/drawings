@@ -1,20 +1,20 @@
-# Starter Battery Distribution - Navigation Guide
+# START battery Distribution - Navigation Guide
 
 ## What's Here
 
-Documents starter battery power distribution from the driver wheel well (Odyssey PC1500).
+Documents START battery power distribution from the driver wheel well (Odyssey PC1500).
 
 ## Files
 
-### `index.md` - Starter Battery Overview
+### `index.md` - START battery Overview
 
-**Contains:** Starter battery terminal connection table, direct load connections
+**Contains:** START battery terminal connection table, direct load connections
 
-**Use when:** Finding what connects to starter battery positive terminal
+**Use when:** Finding what connects to START battery positive terminal
 
 ### `01-circuit-breakers.md` - Circuit Breakers
 
-**Contains:** All starter battery circuit breaker specifications and ratings
+**Contains:** All START battery circuit breaker specifications and ratings
 
 **Use when:** Finding circuit breaker size for PMU, SafetyHub, BCDC, or other loads
 
@@ -38,13 +38,13 @@ Documents starter battery power distribution from the driver wheel well (Odyssey
 
 **To BCDC (1.1.3):** BCDC input circuit breaker specifications
 
-**To Grounding (1.5):** Starter battery negative connections, engine bay ground bus
+**To Grounding (1.5):** START battery negative connections, engine bay ground bus
 
 ## Navigation Scenarios
 
 **"What circuit breaker protects the PMU?"** → `01-circuit-breakers.md`
 
-**"What connects to starter battery positive terminal?"** → `index.md` terminal table
+**"What connects to START battery positive terminal?"** → `index.md` terminal table
 
 **"What connects to the CONSTANT bus bar?"** → `02-constant-bus.md` stud assignments
 
@@ -54,7 +54,7 @@ Documents starter battery power distribution from the driver wheel well (Odyssey
 
 ## When Updating
 
-**Adding new starter battery load:**
+**Adding new START battery load:**
 
 1. Determine if direct battery connection or CONSTANT bus connection
 2. Update `index.md` terminal table OR `02-constant-bus.md` stud table

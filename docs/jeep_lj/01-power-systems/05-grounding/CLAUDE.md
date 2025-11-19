@@ -12,17 +12,17 @@ Documents complete grounding system including direct battery connections and gro
 
 **Use when:** Understanding overall grounding strategy
 
-### `01-starter-battery-ground.md` - Starter Battery Ground
+### `01-starter-battery-ground.md` - START battery Ground
 
-**Contains:** Direct starter battery negative terminal connections
+**Contains:** Direct START battery negative terminal connections
 
-**Use when:** Finding what connects directly to starter battery negative
+**Use when:** Finding what connects directly to START battery negative
 
-### `02-aux-battery-ground.md` - Aux Battery Ground
+### `02-aux-battery-ground.md` - AUX battery Ground
 
-**Contains:** Direct aux battery negative terminal connections
+**Contains:** Direct AUX battery negative terminal connections
 
-**Use when:** Finding what connects directly to aux battery negative
+**Use when:** Finding what connects directly to AUX battery negative
 
 ### `03-engine-bay-ground-bus.md` - Engine Bay Ground Bus
 

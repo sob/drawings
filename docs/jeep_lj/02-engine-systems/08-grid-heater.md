@@ -31,8 +31,8 @@ tags:
 
 2. **Grid Heater Relay (Cummins 5467024):**
    - Coil Power: ECM pins 46/21 (~1A) - direct connection
-   - Main Power: Direct from Starter Battery+ via fusible link (bypasses all bus bars and PMU)
-   - Main Ground: Starter Battery- or NEGATIVE bus
+   - Main Power: Direct from START battery+ via fusible link (bypasses all bus bars and PMU)
+   - Main Ground: START battery- or NEGATIVE bus
    - Output: 40-80A to grid heater element
    - Protection: Integrated fusible link
 
@@ -49,8 +49,8 @@ tags:
 flowchart LR
     ECM["Cummins ECM<br/>Pins 46/21"]
     RELAY["Grid Heater Relay<br/>Cummins 5467024"]
-    BATT["Starter Battery+<br/>(Direct Connection)"]
-    GND["Starter Battery-"]
+    BATT["START battery+<br/>(Direct Connection)"]
+    GND["START battery-"]
     ELEMENT["Grid Heater Element<br/>40-80A"]
 
     ECM -->|"~1A coil control"| RELAY
@@ -84,12 +84,12 @@ flowchart LR
 ## Related Documentation
 
 - [PMU Power Distribution][pmu-power-distribution] - Engine bay power management
-- [Starter Battery Distribution][starter-battery-distribution] - Direct battery connections
+- [START battery Distribution][starter-battery-distribution] - Direct battery connections
 
 ## Outstanding Items
 
 - [ ] Wire ECM pins 46/21 directly to grid heater relay coil (Cummins 5467024)
-- [ ] Install fusible link from Starter Battery+ to grid heater relay main power terminal
-- [ ] Connect grid heater relay ground to Starter Battery- or NEGATIVE bus
+- [ ] Install fusible link from START battery+ to grid heater relay main power terminal
+- [ ] Connect grid heater relay ground to START battery- or NEGATIVE bus
 - [ ] Verify grid heater relay mounting location (engine bay, near intake manifold)
 - [ ] Test grid heater operation in cold conditions (below 50°F ambient)

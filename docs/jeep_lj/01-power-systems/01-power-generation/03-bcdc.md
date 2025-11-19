@@ -39,14 +39,14 @@ tags:
 
 | Connection | Terminal Label | Wire Gauge | Terminal Size | Source/Destination | Notes |
 |:-----------|:---------------|:-----------|:--------------|:-------------------|:------|
-| Start Battery (+) | Red | 6 AWG | TBD | Starter battery positive (driver wheel well) | INPUT from alternator-charged battery - via 40A CB <br/>see [STARTER BATTERY CIRCUIT BREAKERS][starter-cbs] |
-| Auxiliary Battery (+) | Brown | 6 AWG | TBD | Aux battery positive (passenger wheel well) | OUTPUT to aux battery - 25A charging |
+| Start Battery (+) | Red | 6 AWG | TBD | START battery positive (driver wheel well) | INPUT from alternator-charged battery - via 40A CB <br/>see [STARTER BATTERY CIRCUIT BREAKERS][starter-cbs] |
+| Auxiliary Battery (+) | Brown | 6 AWG | TBD | AUX battery positive (passenger wheel well) | OUTPUT to AUX battery - 25A charging |
 | Solar (+) | Yellow | Per solar panel | TBD | Cascadia 4x4 80W panel | See [Solar Charging][solar] |
-| Ground (-) | Black | 6 AWG | TBD | Aux battery negative | Direct connection per BCDC spec |
+| Ground (-) | Black | 6 AWG | TBD | AUX battery negative | Direct connection per BCDC spec |
 | Ignition | Blue | 18 AWG | Spade | PMU ignition sense tap | Activates charging when engine running - see [PMU Inputs][pmu-inputs] |
-| Battery Temp Sensor | +/- (reversible) | Per sensor | 2-pin plug | Aux battery (AGM sensor) | **REQUIRED** - critical for AGM temperature-compensated charging, polarity reversible |
+| Battery Temp Sensor | +/- (reversible) | Per sensor | 2-pin plug | AUX battery (AGM sensor) | **REQUIRED** - critical for AGM temperature-compensated charging, polarity reversible |
 
-**Inter-Battery Cable Routing:** Starter battery (driver wheel well) → under vehicle along frame rail → aux battery (passenger wheel well) - 5-6 ft measured routing (see [Wire Distance Reference][wire-distance]). Use proper cable protection for under-vehicle routing.
+**Inter-Battery Cable Routing:** START battery (driver wheel well) → under vehicle along frame rail → AUX battery (passenger wheel well) - 5-6 ft measured routing (see [Wire Distance Reference][wire-distance]). Use proper cable protection for under-vehicle routing.
 
 **Wire Gauge Analysis (25A @ 5-6 ft measured routing):**
 
@@ -55,7 +55,7 @@ tags:
 
 **Recommendation:** 6 AWG provides excellent performance with <1% voltage drop for the measured 5-6 ft routing distance. Upgrading to 4 AWG offers minimal benefit (0.38% improvement) at increased cost and difficulty routing heavier cable.
 
-**Ground Reference:** Starter-to-aux battery ground cable (1/0 AWG) is **REQUIRED** for BCDC operation - provides reference ground for charging logic and fault current path. See [Grounding Architecture][grounding].
+**Ground Reference:** Starter-to-AUX battery ground cable (1/0 AWG) is **REQUIRED** for BCDC operation - provides reference ground for charging logic and fault current path. See [Grounding Architecture][grounding].
 
 **Critical:** Verify solar input polarity before connection - reverse polarity damages unit.
 
@@ -63,14 +63,14 @@ tags:
 
 The BCDC manages charging and isolation between starter and aux batteries:
 
-- **Normal Operation:** Charges aux battery from starter battery/alternator at 25A
+- **Normal Operation:** Charges AUX battery from START battery/alternator at 25A
 - **Solar Priority:** Uses solar input first when available (Green Power Priority)
-- **Jump Start Assist:** Parallels batteries if starter battery voltage drops critically
-- **Isolation:** Prevents aux battery from draining starter battery when engine off
+- **Jump Start Assist:** Parallels batteries if START battery voltage drops critically
+- **Isolation:** Prevents AUX battery from draining START battery when engine off
 
 ## Mounting
 
-- **Location:** Passenger wheel well near aux battery (water-protected, accessible for LED visibility)
+- **Location:** Passenger wheel well near AUX battery (water-protected, accessible for LED visibility)
 - **Installation:** See [Section 1 Installation Checklist][installation-checklist]
 
 **Critical:** Verify solar input polarity before connection - reverse polarity damages unit.

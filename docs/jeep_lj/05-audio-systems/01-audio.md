@@ -109,7 +109,7 @@ The Fusion Apollo amplifier provides high-power audio for speakers and subwoofer
   - **Model:** MS-AP61800 / 010-02284-65
   - **Installation Manual:** [Fusion Apollo Multichannel Amplifiers Installation Instructions](https://static.garmin.com/pumac/Fusion_Apollo_Multichannel_Amplifiers_Install_EN-US.pdf)
   - **Mounting:** TBD - cargo area or under rear seat (recommended for central speaker wire routing)
-  - **Power Source:** Direct from CONSTANT bus or aux battery (high current)
+  - **Power Source:** Direct from CONSTANT bus or AUX battery (high current)
   - **Class:** Class-D amplifier (high efficiency, low heat)
   - **Total Power Output:** 1800W total rated power
   - **Channel Configuration:**
@@ -246,10 +246,10 @@ The Fusion Apollo amplifier provides high-power audio for speakers and subwoofer
 
 **Wiring Summary:**
 1. **Amplifier Power (+):** CONSTANT bus  40A Blue Sea breaker  6 AWG red wire  amplifier B+ terminal
-   - Direct connection to CONSTANT bus (aux battery) for high current
-   - Run dedicated 6 AWG wire from aux battery or CONSTANT bus bar to amplifier (1800W requires heavier gauge)
+   - Direct connection to CONSTANT bus (AUX battery) for high current
+   - Run dedicated 6 AWG wire from AUX battery or CONSTANT bus bar to amplifier (1800W requires heavier gauge)
    - Replace amplifier's included 40A inline fuse with centrally-located Blue Sea breaker for easier access
-2. **Amplifier Ground (-):** Amplifier ground terminal  6 AWG black wire  chassis ground or aux battery negative
+2. **Amplifier Ground (-):** Amplifier ground terminal  6 AWG black wire  chassis ground or AUX battery negative
    - Clean, solid ground critical for amplifier performance and noise reduction
    - Keep ground wire <18 inches for best performance
 3. **MLC-RW LED Controller Power (+):** CONSTANT bus  Body RTMR spare circuit (30A)  MLC-RW power input
@@ -284,9 +284,9 @@ The Fusion Apollo amplifier provides high-power audio for speakers and subwoofer
 - **Fuse:** 40A fast-acting fuse (per Fusion Apollo manual specifications)
   - Amplifier includes inline fuse holder with 40A fuse
   - **Recommendation:** Replace inline fuse with centrally-located Blue Sea circuit breaker
-- **Recommended:** Blue Sea 40A breaker at CONSTANT bus or aux battery location
+- **Recommended:** Blue Sea 40A breaker at CONSTANT bus or AUX battery location
   - Easier reset than inline fuse (no need to access amplifier)
-  - Mount breaker at CONSTANT bus or aux battery for easy access
+  - Mount breaker at CONSTANT bus or AUX battery for easy access
   - Protects full power wire run from battery to amplifier
   - Blue Sea 7178 (40A) or 7184 (50A) thermal circuit breaker recommended
 
@@ -298,10 +298,10 @@ The Fusion Apollo amplifier provides high-power audio for speakers and subwoofer
    - Adequate ventilation behind dash for Class-D amplifier (low heat)
 2. **Cargo Area:** Behind rear seat or on sidewall
    - Easy access to speakers and subwoofer
-   - Requires longer power cables from aux battery
+   - Requires longer power cables from AUX battery
    - Longer RCA cable runs from radio
 3. **Under Rear Seat:** Hidden installation
-   - Shorter power cables to aux battery
+   - Shorter power cables to AUX battery
    - Good heat dissipation with air circulation
    - Moderate RCA cable lengths
 
@@ -309,10 +309,10 @@ The Fusion Apollo amplifier provides high-power audio for speakers and subwoofer
 - [ ] Determine Fusion Apollo 6-channel amplifier mounting location (behind dash preferred, cargo area or under rear seat optional)
 - [ ] Verify amplifier current draw at operating power (music listening vs full test tone)
 - [ ] Select Blue Sea circuit breaker: 40A (7178) for amplifier power protection
-- [ ] Plan Blue Sea breaker mounting location at CONSTANT bus or aux battery for easy access
+- [ ] Plan Blue Sea breaker mounting location at CONSTANT bus or AUX battery for easy access
 - [ ] Remove amplifier's included 40A inline fuse and replace with centrally-located Blue Sea breaker
 - [ ] Confirm 6 AWG wire gauge is sufficient for power run from CONSTANT bus to amplifier
-- [ ] Determine amplifier ground connection point (chassis ground or direct to aux battery negative)
+- [ ] Determine amplifier ground connection point (chassis ground or direct to AUX battery negative)
 - [ ] Verify ground wire length is <18 inches for best performance
 - [ ] Plan RCA cable routing from MS-RA670 to amplifier (shortest run if behind dash)
 - [ ] Determine speaker wire routing from amplifier to front dash and rear roll bar

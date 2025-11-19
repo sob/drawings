@@ -22,7 +22,7 @@ hide:
 
 **Mounting:** Firewall - body side (cabin), passenger side
 
-**Power Source:** CONSTANT power from aux battery via 6 AWG feed
+**Power Source:** CONSTANT power from AUX battery via 6 AWG feed
 
 **Configuration:** 8 circuit breaker positions + 8 relay positions
 
@@ -89,7 +89,7 @@ hide:
 
 **Control Flow:**
 ```
-Aux Battery CONSTANT Power (via 6 AWG) → LR-2 Internal Bus
+AUX battery CONSTANT Power (via 6 AWG) → LR-2 Internal Bus
                               ↓
                     Circuit Breaker (CB45/CB42)
                               ↓
@@ -109,11 +109,11 @@ Dash Switch (manual) ───────→ Relay Coil (K21/K22)
 - Better fault isolation (one seat failure doesn't affect other)
 
 !!! info "Communication Devices"
-    G1 GMRS Radio, STX Intercom, and Ham Radio are powered from [SafetyHub 100][safetyhub] (starter battery) as critical infrastructure, with direct grounds to starter battery to minimize RF noise.
+    G1 GMRS Radio, STX Intercom, and Ham Radio are powered from [SafetyHub 100][safetyhub] (START battery) as critical infrastructure, with direct grounds to START battery to minimize RF noise.
 
 ## Power Feed Wire Sizing
 
-**Recommended Specification:** 6 AWG feed from aux battery (passenger wheel well)
+**Recommended Specification:** 6 AWG feed from AUX battery (passenger wheel well)
 
 **Routing:** Passenger wheel well → through firewall → cabin side mounting (~10-12 ft estimated)
 
@@ -175,9 +175,9 @@ Dash Switch (manual) ───────→ Relay Coil (K21/K22)
 
 - [ ] Verify all circuit breakers and relays are functional in LR-2 unit
 - [ ] Identify pinout for J301-J306 Metri-Pack connectors (military TM manual or reverse engineering)
-- [ ] Determine LR-2 ground connection location (chassis ground or direct to aux battery)
-- [ ] **Route CONSTANT power feed from aux battery to LR-2** - **6 AWG** (4.7% voltage drop @ 69A)
-- [ ] **100A circuit breaker installed at aux battery** (145% of max load) - see [Circuit Breakers](01-circuit-breakers.md)
+- [ ] Determine LR-2 ground connection location (chassis ground or direct to AUX battery)
+- [ ] **Route CONSTANT power feed from AUX battery to LR-2** - **6 AWG** (4.7% voltage drop @ 69A)
+- [ ] **100A circuit breaker installed at AUX battery** (145% of max load) - see [Circuit Breakers](01-circuit-breakers.md)
 - [ ] Mount LR-2 on firewall (body side, passenger side)
 - [ ] Create custom wiring harnesses to adapt J301-J306 military connectors to civilian loads
 - [ ] Route heated seat dash switches to LR-2 relay control inputs (K21, K22)
@@ -193,7 +193,7 @@ Dash Switch (manual) ───────→ Relay Coil (K21/K22)
 
 ## Related Documentation
 
-- [Aux Battery Distribution][house-battery] - Power source and circuit breaker (passenger wheel well)
+- [AUX battery Distribution][house-battery] - Power source and circuit breaker (passenger wheel well)
 - [Circuit Breakers][circuit-breakers] - 100A CB protection for LR-2 power feed
 - [Dashboard Controls][dashboard] - Physical switch panel layout
 - [Audio Systems][audio] - Fusion radio specifications

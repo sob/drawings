@@ -7,7 +7,7 @@ tags:
   - bus-bar
 ---
 
-# 1.2.2 Starter Battery CONSTANT Bus Bar {#front-constant-bus}
+# 1.2.2 START battery CONSTANT Bus Bar {#front-constant-bus}
 
 /// html | div.product-info
 ![Blue Sea 2107 PowerBar](../../images/blue-sea-2107-powerbar.jpg){ loading=lazy }
@@ -28,7 +28,7 @@ Eliminates battery terminal crowding by providing central distribution for all c
 
 **Location:** Engine bay firewall (near PMU)
 
-**Power Source:** Starter battery via 2×1/0 AWG (~5 ft) - see [Starter Battery Distribution][front-battery]
+**Power Source:** START battery via 2×1/0 AWG (~5 ft) - see [START battery Distribution][front-battery]
 
 ## Specifications
 
@@ -42,11 +42,11 @@ Eliminates battery terminal crowding by providing central distribution for all c
 
 | Stud | Connection | Wire Gauge | Distance | Voltage @ Load | Protection | Load | Notes |
 |:-----|:-----------|:-----------|:---------|:---------------|:-----------|:-----|:------|
-| 1 | **Starter Battery+ (INPUT #1)** | **1/0 AWG ✓** | **~5 ft** | **13.82V (1.26% @ 60°C)** | **None** | **~356A max** | **First parallel feed - see [Starter Battery][front-battery]** |
+| 1 | **START battery+ (INPUT #1)** | **1/0 AWG ✓** | **~5 ft** | **13.82V (1.26% @ 60°C)** | **None** | **~356A max** | **First parallel feed - see [START battery][front-battery]** |
 | 2 | PMU24 | 1 AWG ✓ | ~2 ft | 13.76V (1.0% @ 60°C) | 300A CB | ~220A max | Always-on power management - see [PMU][pmu] |
 | 3 | SafetyHub 100 | 4 AWG ✓ | ~3 ft | 13.73V (1.2% @ 60°C) | 150A CB | ~111A max | Fused high-current accessories - see [SafetyHub][safetyhub] |
-| 4 | BCDC Input | 4 AWG ✓ | ~5 ft | 13.84V (0.4% @ 60°C) | 40A CB | 25A charging | Charges aux battery - see [BCDC][bcdc] |
-| 5 | **Starter Battery+ (INPUT #2)** | **1/0 AWG ✓** | **~5 ft** | **13.82V (1.26% @ 60°C)** | **None** | **~356A max** | **Second parallel feed - see [Starter Battery][front-battery]** |
+| 4 | BCDC Input | 4 AWG ✓ | ~5 ft | 13.84V (0.4% @ 60°C) | 40A CB | 25A charging | Charges AUX battery - see [BCDC][bcdc] |
+| 5 | **START battery+ (INPUT #2)** | **1/0 AWG ✓** | **~5 ft** | **13.82V (1.26% @ 60°C)** | **None** | **~356A max** | **Second parallel feed - see [START battery][front-battery]** |
 | 6-8 | **[Available]** | - | - | - | - | - | Future expansion (3 studs available) |
 
 **Stud Utilization:** 5 of 8 used (3 available)
@@ -69,7 +69,7 @@ Eliminates battery terminal crowding by providing central distribution for all c
 
 **Power Systems:**
 
-- [Starter Battery Distribution][front-battery] - Complete overview
+- [START battery Distribution][front-battery] - Complete overview
 - [Circuit Breakers][circuit-breakers] - CB specifications
 
 **Connected Systems:**

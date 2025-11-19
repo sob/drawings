@@ -16,13 +16,13 @@ tags:
 
 **Manual:** https://www.switchpros.com/wp-content/uploads/RCR-force-12-installation-guide-REV-1.9.pdf
 
-**Power Source:** 150A breaker from CONSTANT bus (aux battery)
+**Power Source:** 150A breaker from CONSTANT bus (AUX battery)
 
 **Power Module Location:** Engine bay (rated to 125°C, IP67)
 
 **Control Panel Location:** TBD - dash mount (4" L x 3" W x 0.375" H)
 
-**Ground:** 4 AWG to front frame rail or starter battery negative (per manufacturer spec - direct battery ground)
+**Ground:** 4 AWG to front frame rail or START battery negative (per manufacturer spec - direct battery ground)
 
 **IP Rating:** IP67 (both power module and control panel)
 
@@ -106,8 +106,8 @@ The SwitchPros SP-1200 is the main lighting and accessory controller for the Jee
 
 ## Power and Ground Connections
 
-- **Power:** 4 AWG wire from CONSTANT bus (aux battery) → 150A breaker → SwitchPros power module
-- **Ground:** 4 AWG wire from SwitchPros power module → Front frame rail or starter battery negative (direct battery ground per manufacturer spec)
+- **Power:** 4 AWG wire from CONSTANT bus (AUX battery) → 150A breaker → SwitchPros power module
+- **Ground:** 4 AWG wire from SwitchPros power module → Front frame rail or START battery negative (direct battery ground per manufacturer spec)
 
 ## Trigger Input Assignments
 
@@ -187,9 +187,9 @@ Program TRIGGER-3 to activate compressor when tank pressure drops below 135 PSI:
 
 - [ ] Determine exact SwitchPros power module mounting location in engine bay
   - IP67 rated, 125°C temperature rating suitable for engine bay
-  - Locate near CONSTANT bus or starter battery for short power/ground runs
+  - Locate near CONSTANT bus or START battery for short power/ground runs
 - [ ] Determine SwitchPros control panel mounting location on dash
-- [ ] Route 4 AWG ground wire from SwitchPros power module to front frame rail or starter battery negative
+- [ ] Route 4 AWG ground wire from SwitchPros power module to front frame rail or START battery negative
   - Short run in engine bay, per manufacturer spec for direct battery ground
 - [ ] Connect ignition signal from ignition switch RUN terminal to SwitchPros Pin 3 (IGNITION - LT BLUE)
   - 18 AWG wire, splits from main ignition signal distribution (see [PMU24][pmu-inputs])

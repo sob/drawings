@@ -30,13 +30,13 @@ hide:
 ## Wiring Configuration
 
 ```
-Starter Battery CONSTANT → PMU → Out 18 → PIAA Horns (5.4A) → Chassis Ground
+START battery CONSTANT → PMU → Out 18 → PIAA Horns (5.4A) → Chassis Ground
                           ↑
                       Horn Button → In 1 (trigger)
 ```
 
 **Power Flow:**
-1. Starter Battery+ → CONSTANT bus → PMU
+1. START battery+ → CONSTANT bus → PMU
 2. Horn button (steering wheel) → PMU In 1 (trigger signal)
 3. PMU Out 18 activated when In 1 closes
 4. PMU Out 18 → PIAA horns (5.4A) → chassis ground (engine bay)
@@ -56,5 +56,5 @@ Starter Battery CONSTANT → PMU → Out 18 → PIAA Horns (5.4A) → Chassis Gr
 ## Related Documentation
 
 - [PMU Power Distribution][pmu-power-distribution] - PMU Out 18 circuit and programming
-- [Starter Battery Distribution][starter-battery-distribution] - CONSTANT bus bar
+- [START battery Distribution][starter-battery-distribution] - CONSTANT bus bar
 - [Firewall Ingress][firewall-penetrations-ingress-points] - Horn button trigger wire routing
