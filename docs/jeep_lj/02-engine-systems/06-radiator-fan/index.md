@@ -7,115 +7,109 @@ hide:
 
 ## System Overview
 
-Electric radiator fan with automatic temperature control. Dakota Digital PAC-2800BT controller monitors coolant temperature via J1939 CAN bus and activates fan via 70A relay.
+Electric radiator fan with automatic PWM temperature control via PMU24.
 
 **Components:**
 
-- GM 84100128 Camaro electric radiator fan (brushless, 53A @ full speed)
-- Dakota Digital PAC-2800BT controller (Bluetooth programmable, cabin-mounted)
-- BIM-01-2 adapter (J1939 CAN bus translation)
-- External relay (Bosch-style, included with controller, engine bay-mounted)
+- GM 84100128 Camaro electric radiator fan (brushless PWM-capable, 53A @ full speed)
+- PMU24 outputs OUT2+3+4 combined (3×25A = 75A capacity)
 
 **Operation:**
 
-- ECM broadcasts coolant temp on J1939 CAN bus
-- BIM-01-2 translates J1939 messages for PAC-2800BT (cabin)
-- When temp exceeds setpoint: PAC-2800BT triggers ground to relay (engine bay)
-- Relay closes → fan runs at full speed
-- When temp drops: PAC-2800BT releases ground → relay opens → fan stops
+- ECM broadcasts coolant temp on J1939 CAN bus (SPN 110)
+- PMU reads temperature and adjusts fan speed via PWM:
+  - <185°F: Fan OFF (0%)
+  - 185-195°F: Low speed (30% = ~16A)
+  - 195-205°F: Medium speed (60% = ~32A)
+  - ≥205°F: Full speed (100% = 53A)
 
 **Power:**
 
-- **Controller:** Critical Cabin PDU (5A) → PAC-2800BT (cabin)
-- **Relay:** START battery CONSTANT bus (100A CB) → Relay Terminal 30 → Terminal 87 → Fan motor
+- **PMU OUT2+3+4** (75A capacity) → Fan motor via PWM control (4 AWG)
+- **PMU power source:** START battery via 300A CB (wheel well)
 
-**Note:** Main radiator fan only. Oil cooler and PS cooler fans controlled separately via PMU.
+**Benefits:**
+
+- Variable speed control reduces electrical load and noise
+- Integrated into PMU programming (no separate controller)
+- No external relay or circuit breaker needed
+- Quieter operation (low speed sufficient for most conditions)
+
+**Note:** Main radiator fan only. Oil cooler and PS cooler fans controlled separately via PMU OUT7+8.
 
 ## Programming
 
-**Via Bluetooth App (iOS/Android):**
+**Via PMU Setup Software:**
 
-1. Download Dakota Digital app
-2. Power controller and pair via Bluetooth
-3. Set temperature setpoints:
-   - **Activation:** TBD (typically 195-205°F)
-   - **Deactivation:** TBD (typically 185-195°F)
-4. Test and adjust during shakedown runs
+Temperature-based PWM control curve (see [PMU Programming][pmu-programming] for complete logic):
 
-**Recommended for R2.8:** 200°F activation, 190°F deactivation
+```
+IF (J1939_SPN110_CoolantTemp < 185°F) THEN Out234_RadiatorFan_PWM = 0%
+ELSEIF (J1939_SPN110_CoolantTemp < 195°F) THEN Out234_RadiatorFan_PWM = 30%
+ELSEIF (J1939_SPN110_CoolantTemp < 205°F) THEN Out234_RadiatorFan_PWM = 60%
+ELSEIF (J1939_SPN110_CoolantTemp >= 205°F) THEN Out234_RadiatorFan_PWM = 100%
+```
+
+Setpoints can be adjusted based on testing and climate conditions.
 
 ## Installation
 
 **Mounting:**
 
-- PAC-2800BT controller: Dakota Digital HDPE panel (cabin, with other Dakota Digital modules)
-- BIM-01-2 adapter: Same HDPE panel
-- External relay: Engine bay (near fan, weatherproof location)
-- 100A circuit breaker: Engine bay (near CONSTANT bus)
+- Fan motor: Radiator shroud (factory location or custom mount)
+- All control via PMU24 (engine bay mounted - see [PMU Overview][pmu-overview])
 
 **Power Wiring:**
 
-- **Controller:** Critical Cabin PDU Slot 1 (5A) → PAC-2800BT (16 AWG)
-- **Relay high-current:** START battery CONSTANT bus → 100A CB → Relay Terminal 30 (4 AWG)
-- **Relay output:** Terminal 87 → Fan motor (+) (4 AWG)
-- **Relay coil:** START battery CONSTANT bus → 100A CB → Terminal 86 (18 AWG, shares power with Terminal 30)
-- **Relay trigger:** PAC-2800BT → through firewall → Terminal 85 (18 AWG)
+- **PMU OUT2+3+4** → Fan motor (+) via 4 AWG
 - **Fan ground:** Fan motor (-) → Engine bay ground bus (4 AWG)
-
-**CAN Bus:**
-
-- BIM-01-2 adapter taps J1939 at Dakota Digital gauge cluster
-- BIM-01-2 3-wire cable provides power, ground, and data to PAC-2800BT
+- **Distance:** PMU to fan motor ~TBD ft
+- **Wire gauge:** 4 AWG minimum for 53A @ full speed
 
 **Testing:**
 
-- Program temperature setpoints via Bluetooth
-- Verify fan activation at setpoint
-- Check voltage at fan motor (>13V with engine running)
-- Verify relay trigger signal from controller
+- Program PMU temperature logic via PMU Setup software
+- Monitor PMU LED indicators for output status
+- Verify fan activation at temperature setpoints
+- Check voltage at fan motor under various PWM speeds
+- Adjust temperature setpoints if needed
 
 ## Wire Sizing
 
-**Fan Motor Circuit:** 4 AWG @ 53A, 26 ft total (relay to fan), 60°C: 3.4% drop (0.41V) ✅
+**Fan Motor Circuit (PMU to Fan):**
+- **Wire gauge:** 4 AWG minimum
+- **Full speed:** 53A @ 100% PWM, 4 AWG @ ~TBD ft, 60°C: TBD% drop
+- **Medium speed:** 32A @ 60% PWM
+- **Low speed:** 16A @ 30% PWM
+- **Average load:** Much lower than 53A due to variable speed operation
 
-**Relay Power Input:** 4 AWG (CONSTANT bus via 100A CB, ~3 ft)
-
-**Controller Power:** 16 AWG (Critical Cabin PDU, <1A, <2 ft)
-
-**Relay Trigger:** 18 AWG (cabin to engine bay, ~8 ft, low current)
-
-**Note:** Fan is brushless PWM-capable but runs full speed (53A) with on/off relay control.
+**Note:** Fan is brushless PWM-capable, now fully utilized with PMU PWM control.
 
 ## Components
 
-- **[2.6.1 Fan Motor][fan-motor]** - Camaro electric fan, power wiring, wire sizing
-- **[2.6.2 Fan Controller][fan-controller]** - Dakota Digital PAC-2800BT, CAN integration, relay control
+- **[2.6.1 Fan Motor][fan-motor]** - Camaro electric fan specifications
 
 ## Outstanding Items
 
-- [x] Source 100A circuit breaker for relay power - Mechanical Products 174-S2-100-2
-- [ ] Determine optimal temperature setpoints for R2.8
-- [ ] Test voltage drop under load at fan terminals
-- [ ] Confirm CAN tap location at Dakota Digital gauge cluster
-- [ ] Determine relay mounting location in engine bay
-- [ ] Determine firewall grommet for relay trigger wire
+- [ ] Determine optimal temperature setpoints for R2.8 (adjust PWM curve)
+- [ ] Measure exact PMU to fan motor distance for wire sizing
+- [ ] Test voltage drop under load at fan terminals (all PWM speeds)
+- [ ] Verify PMU PWM frequency compatibility with Camaro fan motor
+- [ ] Tune PWM curve based on real-world operating conditions
 
 ## Related Documentation
 
-- [Firewall Ingress][firewall-ingress] - Relay trigger wire through firewall
-- [Critical Cabin PDU][cabin-pdu] - Controller power source
-- [START battery CONSTANT Bus][constant-bus] - Relay power source (Terminal 30 + Terminal 86, Stud 6)
-- [Circuit Breakers][circuit-breakers] - 100A CB specifications
-- [PMU Outputs][pmu-outputs] - Oil cooler and PS cooler fans (PMU controlled)
-- [Dakota Digital Gauge Cluster][gauge-cluster] - J1939 CAN bus tap location
-- [Engine Bay Ground Bus][ground-bus] - Ground connection location
+- [PMU Overview][pmu-overview] - PMU24 specifications and mounting
+- [PMU Outputs][pmu-outputs] - OUT2+3+4 radiator fan assignment, OUT7+8 aux fans
+- [PMU Programming][pmu-programming] - Radiator fan PWM control logic
+- [START battery Distribution][front-battery] - PMU power source (300A CB)
+- [Engine Bay Ground Bus][ground-bus] - Fan motor ground connection
+- [Dakota Digital Gauge Cluster][gauge-cluster] - J1939 CAN bus source (SPN 110)
 
 [fan-motor]: 01-fan-motor.md
-[fan-controller]: 02-fan-controller.md
-[firewall-ingress]: ../07-firewall-ingress.md
-[cabin-pdu]: ../../01-power-systems/02-starter-battery-distribution/03-critical-cabin-pdu.md
-[constant-bus]: ../../01-power-systems/02-starter-battery-distribution/02-constant-bus.md
-[circuit-breakers]: ../../01-power-systems/02-starter-battery-distribution/01-circuit-breakers.md
+[pmu-overview]: ../../01-power-systems/04-pmu/01-pmu-overview.md
 [pmu-outputs]: ../../01-power-systems/04-pmu/03-pmu-outputs.md
+[pmu-programming]: ../../01-power-systems/04-pmu/04-pmu-programming.md
+[front-battery]: ../../01-power-systems/02-starter-battery-distribution/index.md
 [gauge-cluster]: ../../04-control-interfaces/04-gauge-cluster/index.md
 [ground-bus]: ../../01-power-systems/05-grounding/03-engine-bay-ground-bus.md

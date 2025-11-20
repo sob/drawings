@@ -69,7 +69,7 @@ All electrical penetrations through the firewall must be properly sized and seal
 
 - [BODY PDU][body-rtmr] - BODY PDU specifications and circuit breakdown
 
-### Grommet 4: Critical Cabin PDU Power Feed {#grommet-4-critical-cabin-pdu}
+### Grommet 4: [Available] {#grommet-4-available}
 
 **Location:** TBD - near CONSTANT bus (engine bay side)
 **Direction:** Engine bay (CONSTANT bus) → Cabin (Critical Cabin PDU)
@@ -98,8 +98,7 @@ All electrical penetrations through the firewall must be properly sized and seal
 
 **Related Documentation:**
 
-- [Critical Cabin PDU][cabin-pdu] - Blue Sea 5025 specifications and circuit assignments
-- [CONSTANT Bus][constant-bus] - Power source
+- [PMU Outputs][pmu-outputs] - Dakota Digital power source (OUT9)
 
 ### Grommet 5: PAC-2800BT Radiator Fan Relay Trigger {#grommet-5-pac-2800bt-relay-trigger}
 
@@ -131,7 +130,7 @@ All electrical penetrations through the firewall must be properly sized and seal
 **Related Documentation:**
 
 - [Radiator Fan System][radiator-fan] - Complete fan controller documentation
-- [Fan Controller][fan-controller] - Dakota Digital PAC-2800BT specifications
+- [Radiator Fan][radiator-fan] - PMU-controlled radiator fan
 
 ### Grommet 6: Dakota Digital Outside Temperature Probe {#grommet-6-dakota-digital-outside-temperature-probe}
 
@@ -341,6 +340,5 @@ All electrical penetrations through the firewall must be properly sized and seal
 
 [wire-routing]: ../01-power-systems/07-wire-routing/index.md
 [radiator-fan]: 06-radiator-fan/index.md
-[fan-controller]: 06-radiator-fan/02-fan-controller.md
-[cabin-pdu]: ../01-power-systems/02-starter-battery-distribution/03-critical-cabin-pdu.md
-[constant-bus]: ../01-power-systems/02-starter-battery-distribution/02-constant-bus.md
+[radiator-fan]: 06-radiator-fan/index.md
+[pmu-outputs]: ../01-power-systems/04-pmu/03-pmu-outputs.md

@@ -13,10 +13,11 @@ hide:
 
 The START battery (driver wheel well) provides power for critical engine and safety systems:
 
-1. **Direct high-current** → Starter, alternator, PMU (critical systems)
-2. **Direct low-current** → ECM, grid heater (no circuit breaker - fusible link)
+1. **Direct high-current** → Starter (no CB), alternator charging input (no CB)
+2. **Circuit breaker protected** → PMU (300A CB), SafetyHub (150A CB), BCDC (40A CB)
+3. **Direct low-current** → ECM, grid heater (fusible link protection)
 
-See [CONSTANT Bus Bar][constant-bus] for complete bus bar specifications and [Circuit Breakers][circuit-breakers] for CB details.
+See [Circuit Breakers][circuit-breakers] for complete CB specifications. All CBs mounted in wheel well within 7" of battery (code compliant).
 
 !!! info "Battery Specifications"
     For complete battery specifications (capacity, dimensions, terminals, etc.), see [Section 1.1 - Battery System][batteries].
@@ -34,13 +35,18 @@ See [CONSTANT Bus Bar][constant-bus] for complete bus bar specifications and [Ci
 | 1 | Alternator | 2/0 AWG ✓ | 8 ft | 13.996V (2.81% @ 60°C) | None | 270A alternator output charges START battery - see [Alternator][alternator] | Active |
 | | **━━━ CRITICAL SYSTEMS ━━━** | | | | | | |
 | 2 | Cummins R2.8 Starter | 2/0 AWG ✓ | 6 ft | 11.53V (3.9%) | None | 400-600A cranking current - see [Starter][starter] | Active |
-| | **━━━ CONSTANT BUS BAR ━━━** | | | | | | |
-| 3 | CONSTANT Bus Bar | 2×1/0 AWG ✓ | ~5 ft | 13.82V (1.26% @ 60°C) | None | Feeds PMU, SafetyHub, BCDC (~356A max) - see [CONSTANT Bus][constant-bus] | Active |
+| | **━━━ CIRCUIT BREAKER PROTECTED LOADS ━━━** | | | | | | |
+| 3 | PMU24 | 1/0 AWG ✓ | ~7 ft | 13.76V (1.7% @ 60°C) | 300A CB (wheel well) | Power management unit - see [PMU][pmu] | Active |
+| 4 | SafetyHub 150 | 2 AWG ✓ | ~7 ft | 13.67V (2.4% @ 60°C) | 150A CB (wheel well) | Fused distribution (ARB, comms) - see [SafetyHub][safetyhub] | Active |
+| 5 | BCDC Alpha 25 | 4 AWG ✓ | ~10 ft | 13.84V (1.2% @ 60°C) | 40A CB (wheel well) | DC-DC charger to AUX battery - see [BCDC][bcdc] | Active |
 | | **━━━ DIRECT CONNECTIONS ━━━** | | | | | | |
-| 4 | Cummins ECM | Per Cummins | Short | ~12V | Fusible link | Engine control module | Active |
-| 5 | Grid Heater Relay | Per Cummins | Short | ~12V | Fusible link | Powers grid heater element - see [Grid Heater][grid-heater] | Active |
+| 6 | Cummins ECM | Per Cummins | Short | ~12V | Fusible link | Engine control module | Active |
+| 7 | Grid Heater Relay | Per Cummins | Short | ~12V | Fusible link | Powers grid heater element - see [Grid Heater][grid-heater] | Active |
 
-**Total Connections:** 5 (all active)
+**Total Connections:** 7 (all active)
+
+!!! info "Circuit Breaker Locations"
+    All circuit breakers mounted in wheel well within 7" of battery positive terminal (ABYC/NEC code compliant). See [Circuit Breakers][circuit-breakers] for complete specifications.
 
 ## START battery Negative Terminal
 
@@ -64,14 +70,19 @@ See [CONSTANT Bus Bar][constant-bus] for complete bus bar specifications and [Ci
 ## Related Documentation
 
 - [Power Generation][power-gen] - Battery and alternator specifications
+- [Circuit Breakers][circuit-breakers] - Complete CB specifications (PMU, SafetyHub, BCDC)
 - [Grounding Architecture][grounding] - Complete grounding system
-- [PMU24][pmu] - Power management unit (critical systems)
+- [PMU24][pmu] - Power management unit (radiator fan, Dakota Digital, wipers, lights)
+- [SafetyHub 150][safetyhub] - Fused distribution (ARB, GMRS, intercom)
+- [BCDC Alpha 25][bcdc] - DC-DC charger to AUX battery
 - [Starter System][starter] - Starter specifications and wiring
 - [Alternator][alternator] - Charging system
 - [AUX battery Distribution][aux-battery] - Aux/accessory battery system
 - [Wire Distance Reference][wire-distance] - Measured routing distances
 
 [pmu]: ../04-pmu/index.md
+[safetyhub]: 04-safetyhub.md
+[bcdc]: ../01-power-generation/03-bcdc.md
 [batteries]: ../01-power-generation/01-batteries.md
 [grid-heater]: ../../02-engine-systems/08-grid-heater.md
 [grounding]: ../05-grounding/index.md
@@ -80,5 +91,4 @@ See [CONSTANT Bus Bar][constant-bus] for complete bus bar specifications and [Ci
 [starter]: ../../02-engine-systems/01-starter.md
 [alternator]: ../01-power-generation/02-alternator.md
 [wire-distance]: ../01-power-generation/05-wire-distance-reference.md
-[constant-bus]: 02-constant-bus.md
 [circuit-breakers]: 01-circuit-breakers.md

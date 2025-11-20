@@ -9,7 +9,7 @@ hide:
 
 Complete digital instrumentation system replacing factory TJ gauge cluster. HDX control module processes sensor inputs and BIM module data to drive analog/digital hybrid dashboard display.
 
-**Power:** [Critical Cabin PDU][critical-cabin-pdu] Slot 2 (10A fuse, <10A draw)
+**Power:** [PMU OUT9][pmu-outputs] (25A capacity, ~25A worst-case, ~12A typical)
 
 **Mounting:** Dashboard cluster in factory location, HDX control + BIM modules on HDPE firewall panel
 
@@ -29,7 +29,7 @@ Complete digital instrumentation system replacing factory TJ gauge cluster. HDX 
 
 ## Related Documentation
 
-- [Critical Cabin PDU][critical-cabin-pdu] - Power source
+- [PMU Outputs][pmu-outputs] - Power source (OUT9, 25A)
 - [Grounding Architecture][grounding] - Ground connections
 - [Firewall Ingress][firewall-ingress] - Wire routing
 - [Cummins R2.8 ECM][ecm] - J1939 integration
@@ -40,7 +40,7 @@ Complete digital instrumentation system replacing factory TJ gauge cluster. HDX 
 [bim-gps]: 04-bim-gps.md
 [bim-tpms]: 05-bim-tpms.md
 [bim-compass]: 06-bim-compass.md
-[critical-cabin-pdu]: ../../01-power-systems/02-starter-battery-distribution/03-critical-cabin-pdu.md
+[pmu-outputs]: ../../01-power-systems/04-pmu/03-pmu-outputs.md
 [grounding]: ../../01-power-systems/05-grounding/index.md
 [firewall-ingress]: ../../02-engine-systems/07-firewall-ingress.md
-[ecm]: ../../02-engine-systems/01-engine.md
+[ecm]: ../../02-engine-systems/index.md

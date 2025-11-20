@@ -28,7 +28,7 @@ Main control box for HDX instrument system. Processes sensor inputs, BIM module 
 
 **Mounting:** HDPE panel on firewall behind dashboard
 
-**Power:** [Critical Cabin PDU][critical-cabin-pdu] Slot 2 (10A fuse, CONSTANT power)
+**Power:** [PMU OUT9][pmu-outputs] (25A capacity, CONSTANT power)
 
 ## Specifications
 
@@ -131,7 +131,7 @@ All BIM modules connect via single daisy-chain harness from HDX control 3.5mm po
 - [Dakota Digital System Overview][gauge-system] - Complete system architecture
 - [Dashboard Cluster][dashboard-cluster] - HDX display specifications
 - [BIM Modules][bim-j1939] - Expansion module details
-- [Critical Cabin PDU][critical-cabin-pdu] - Power source
+- [PMU Outputs][pmu-outputs] - Power source (OUT9)
 - [Ignition Signal Distribution][ignition-bus] - Ignition power source
 - [Command Touch CT4][ct4] - Lighting signal sources (turn, high beam, etc.)
 - [Cummins R2.8 ECM][ecm] - WAIT/EX and ENGINE (CEL) signal sources
@@ -140,7 +140,7 @@ All BIM modules connect via single daisy-chain harness from HDX control 3.5mm po
 [gauge-system]: index.md
 [dashboard-cluster]: 02-dashboard-cluster.md
 [bim-j1939]: 03-bim-j1939.md
-[critical-cabin-pdu]: ../../01-power-systems/02-starter-battery-distribution/03-critical-cabin-pdu.md
+[pmu-outputs]: ../../01-power-systems/04-pmu/03-pmu-outputs.md
 [ignition-bus]: ../../01-power-systems/06-ignition-signal/index.md
 [ct4]: ../03-command-touch-ct4.md
 [ecm]: ../../02-engine-systems/index.md

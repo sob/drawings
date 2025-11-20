@@ -13,14 +13,14 @@ Complete configuration of all 24 PMU outputs, load allocations, and combined out
 | Output           | Circuit                      | Load      | Control Type                   | Trigger/Input                       | Notes                                             |
 |:-----------------|:-----------------------------|:----------|:-------------------------------|:------------------------------------|:--------------------------------------------------|
 | **Out 1**        | HVAC Blower Motor            | ~20A      | Auto (ignition ON)             | Constant power when ignition on     | See [HVAC System][hvac-system] - highest single load |
-| **Out 2**        | **[Available]**              | -         | -                              | -                                   | Future expansion (25A high-current) |
-| **Out 3**        | **[Available]**              | -         | -                              | -                                   | Future expansion (25A high-current) |
-| **Out 4**        | **[Available]**              | -         | -                              | -                                   | Future expansion (25A high-current) |
+| **Out 2**        | **Radiator Fan (combined)**  | Combined  | PWM (CAN temp monitoring)      | Combined with OUT3+4                | GM Camaro fan - 53A @ full speed, 3×25A outputs = 75A capacity |
+| **Out 3**        | **Radiator Fan (combined)**  | Combined  | PWM (CAN temp monitoring)      | Combined with OUT2+4                | GM Camaro fan - variable speed PWM control via J1939 coolant temp |
+| **Out 4**        | **Radiator Fan (combined)**  | Combined  | PWM (CAN temp monitoring)      | Combined with OUT2+3                | GM Camaro fan - replaces Dakota Digital PAC-2800BT + relay |
 | **Out 5**        | **iBooster Main (combined)** | Combined  | CONSTANT (always on)           | Combined with OUT6                  | Bosch iBooster - 40A peak, 2x 25A outputs = 50A capacity|
 | **Out 6**        | **iBooster Main (combined)** | Combined  | CONSTANT (always on)           | Combined with OUT5                  | Bosch iBooster - 40A peak, 2x 25A outputs = 50A capacity|
 | **Out 7**        | Oil Cooler Fan               | ~15A      | Auto (CAN temp monitoring)     | ECM J1939 engine oil temp (SPN 175) | Programmable temp thresholds via CAN              |
 | **Out 8**        | PS Cooler Fan                | ~15A      | Auto (CAN temp monitoring)     | ECM J1939 coolant temp (SPN 110)    | Programmable temp thresholds via CAN              |
-| **Out 9**        | **[Available]**              | -         | -                              | -                                   | Future expansion (25A high-current)               |
+| **Out 9**        | Dakota Digital Complete System | ~25A    | CONSTANT (always on)           | -                                   | HDX Control + Cluster + 4 BIM modules - replaces Critical Cabin PDU |
 | **Out 10**       | **[Available]**              | -         | -                              | -                                   | Future expansion (25A high-current)               |
 
 ### 15A High-Side Outputs (OUT11-OUT16)
@@ -31,7 +31,7 @@ Complete configuration of all 24 PMU outputs, load allocations, and combined out
 | **Out 12**       | **[Available]**              | -         | -                              | -                                   | Future expansion (15A)                            |
 | **Out 13**       | Command Touch CT4            | ~10A      | CONSTANT (always on)           | Works with ignition off (hazards)   | Critical safety system - hazards/turn signals     |
 | **Out 14**       | DRL/Parking Lights           | ~8A       | Auto (ignition) with logic     | Ignition ON + headlight status      | See [DRL & Parking Lights][drl-parking-lights]    |
-| **Out 15**       | **[Available]**              | -         | -                              | -                                   | Future expansion (15A)                            |
+| **Out 15**       | Winch Contactor Trigger      | 1A        | Manual (dash rocker switch)    | Dash rocker + remote parallel      | Winch contactor control - replaces SafetyHub ATC-1 |
 | **Out 16**       | **[Available]**              | -         | -                              | -                                   | Future expansion (15A)                            |
 
 ### 7A High-Side Outputs (OUT17-OUT24)
@@ -50,6 +50,8 @@ Complete configuration of all 24 PMU outputs, load allocations, and combined out
 | **Out 24**       | **[Available]**              | -         | -                              | -                                   | Future expansion (7A output)                      |
 
 ## Combined Outputs
+
+**Radiator Fan (OUT2+3+4):** GM Camaro electric fan, 53A @ full speed, 3×25A outputs paralleled = 75A capacity, PWM variable speed control
 
 **iBooster Main (OUT5+6):** Bosch Gen 2, 40A peak, 2×25A outputs paralleled = 50A capacity, CONSTANT power
 

@@ -25,14 +25,14 @@ hide:
 - **Current Draw:** 50-53A @ full speed (14.5V), 14A @ 50% duty (3400 CFM)
 - **Airflow (Installed):** 4188 CFM @ full speed (with radiator)
 - **Airflow (Free Air):** 5690 CFM @ full speed (14.5V)
-- **Control:** On/off via PAC-2800BT relay (no PWM - runs full speed when active)
+- **Control:** PWM via PMU OUT2+3+4 (variable speed 0-100%)
 - **Duty Cycle:** Intermittent (temperature-based)
 
 ## Wiring
 
 | Connection | Wire Gauge | Source | Destination | Distance | Voltage @ Load | Notes |
 |:-----------|:-----------|:-------|:------------|:---------|:---------------|:------|
-| **Fan Power (+)** | 4 AWG ✓ | PAC-2800BT relay (Terminal 87) | Fan motor (+) | ~13 ft | 13.46V (4.5% @ 60°C) | Runs full speed when relay closes |
+| **Fan Power (+)** | 4 AWG ✓ | PMU OUT2+3+4 | Fan motor (+) | ~TBD ft | TBD | Variable speed PWM control |
 | **Fan Ground (-)** | 4 AWG ✓ | Fan motor (-) | Engine bay ground bus | <3 ft | - | Short run to ground |
 
 **Wire Sizing (Engine Bay @ 60°C):**
@@ -41,7 +41,7 @@ hide:
 - Design capacity: 70A (relay rating) provides 32% safety margin
 - Temperature derating: 1.2× resistance increase at 60°C vs 20°C
 
-**Note:** Fan is brushless PWM-capable but PAC-2800BT provides on/off relay control only. Fan runs at full speed (53A) when relay closes, off when relay opens.
+**Note:** Fan is brushless PWM-capable and controlled by PMU with variable speed (30% low, 60% medium, 100% full speed).
 
 ## Mounting
 
@@ -58,12 +58,10 @@ hide:
 
 ## Related Documentation
 
-- [Radiator Fan System][radiator-fan] - Complete system overview
-- [Fan Controller][fan-controller] - Dakota Digital PAC-2800BT
-- [SafetyHub 150][safetyhub] - Power source
+- [Radiator Fan System][radiator-fan] - Complete system overview (PMU PWM control)
+- [PMU Outputs][pmu-outputs] - Power source (OUT2+3+4)
 - [Engine Bay Ground Bus][ground-bus] - Ground connection
 
 [radiator-fan]: index.md
-[fan-controller]: 02-fan-controller.md
-[safetyhub]: ../../01-power-systems/02-starter-battery-distribution/04-safetyhub.md
+[pmu-outputs]: ../../01-power-systems/04-pmu/03-pmu-outputs.md
 [ground-bus]: ../../01-power-systems/05-grounding/03-engine-bay-ground-bus.md

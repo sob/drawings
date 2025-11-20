@@ -53,14 +53,14 @@ tags:
 
 | Outputs | Rating | Total | Used | Available |
 |:--------|:------:|:-----:|:----:|:---------:|
-| 1-10 | 25A each | 10 | 8 | 2 |
-| 11-16 | 15A each | 6 | 4 | 2 |
+| 1-10 | 25A each | 10 | 9 | 1 |
+| 11-16 | 15A each | 6 | 5 | 1 |
 | 17-24 | 7A each | 8 | 5 | 3 |
-| **Total** | - | **24** | **17** | **7** |
+| **Total** | - | **24** | **19** | **5** |
 
-**Utilization:** 17 of 24 outputs used (71%)
+**Utilization:** 19 of 24 outputs used (79%)
 
-**Primary loads:** Radiator fan (3×25A), iBooster (2×25A + 1×7A), HVAC (25A), aux fans (2×25A), wipers (15A), cluster (15A), CT4 (15A), DRL (15A), A/C clutch (7A), horn (7A), lights (3×7A)
+**Primary loads:** Radiator fan (3×25A), iBooster (2×25A), HVAC (25A), aux fans (2×25A), Dakota Digital (25A), wipers (15A), winch trigger (15A), CT4 (15A), DRL (15A), iBooster ignition (7A), A/C clutch (7A), horn (7A), brake lights (7A), reverse lights (7A)
 
 **Load:** ~220A theoretical peak, ~120-150A typical continuous (well within 170A PMU limit)
 

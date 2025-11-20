@@ -13,7 +13,9 @@ hide:
 |:--------|:-----------|:---------|:------------|:--------|:------|
 | **Alternator charging input** | 2/0 AWG | 8 ft | FROM Alternator (engine) | 270A | Charges START battery - see [Alternator][alternator] |
 | **Starter motor power** | 2/0 AWG | 6 ft | TO Starter motor | 400-600A | Brief cranking load - see [Starter][starter] |
-| **CONSTANT bus feed** | 2×1/0 AWG | 5 ft | TO CONSTANT bus (firewall) | 356A max | Parallel conductors - see [CONSTANT Bus][constant-bus] |
+| **PMU24 power feed** | 1/0 AWG | 7 ft | TO PMU24 (engine bay) | 220A max | Via 300A CB - see [PMU][pmu] |
+| **SafetyHub 150 feed** | 2 AWG | 7 ft | TO SafetyHub (engine bay) | 110A max | Via 150A CB - see [SafetyHub][safetyhub] |
+| **BCDC input feed** | 4 AWG | 10 ft | TO BCDC (engine bay) | 27-29A | Via 40A CB - see [BCDC][bcdc] |
 | **Primary ground** | 2/0 AWG | 8 ft | TO Engine bay ground bus | 600A+ peak | Primary return path |
 | **Battery cross-ground** | 1/0 AWG | 5-6 ft | TO AUX battery- (passenger) | BCDC reference | Critical for BCDC operation |
 
@@ -137,7 +139,9 @@ hide:
 - [Grounding Architecture][grounding] - Complete grounding system design
 - [START battery Distribution][starter-battery] - Driver wheel well power
 - [AUX battery Distribution][aux-battery] - Passenger wheel well power
-- [CONSTANT Bus][constant-bus] - Engine bay distribution
+- [PMU][pmu] - Power management unit
+- [SafetyHub][safetyhub] - Fused distribution
+- [BCDC][bcdc] - DC-DC charger
 - [Alternator][alternator] - Charging system routing
 - [Starter][starter] - Starter motor routing
 - [Firewall Ingress][firewall-ingress] - Detailed firewall penetrations and grommet specifications
@@ -146,7 +150,9 @@ hide:
 [grounding]: ../05-grounding/index.md
 [starter-battery]: ../02-starter-battery-distribution/index.md
 [aux-battery]: ../03-aux-battery-distribution/index.md
-[constant-bus]: ../02-starter-battery-distribution/02-constant-bus.md
+[pmu]: ../04-pmu/index.md
+[safetyhub]: ../02-starter-battery-distribution/04-safetyhub.md
+[bcdc]: ../01-power-generation/03-bcdc.md
 [alternator]: ../01-power-generation/02-alternator.md
 [starter]: ../../02-engine-systems/01-starter.md
 [firewall-ingress]: ../../02-engine-systems/07-firewall-ingress.md
