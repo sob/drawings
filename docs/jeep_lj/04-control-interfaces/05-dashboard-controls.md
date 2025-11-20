@@ -6,34 +6,45 @@ hide:
 # Dashboard Physical Controls {#dashboard-physical-controls}
 This section documents physical switches mounted in the dashboard area (separate from the SwitchPros control panel).
 
-## Winch Control Switch
+## Winch Control Rocker Switch
 
 !!! info "Winch System Documentation"
     For complete winch specifications, wiring details, and recovery system information, see [Recovery Systems][recovery-systems].
 
-**Type:** 3-position dash switch
-**Location:** Dashboard (Button 4 on physical switch panel)
-**Function:** Controls winch operation mode
+**Type:** Center-off momentary rocker switch (SPDT or DPDT)
+**Location:** Dashboard physical switch panel
+**Function:** In-cab winch control (works in parallel with handheld remote)
 
 ### Switch Positions
 
-1. **Position 1 (Off):** Winch completely disconnected
-2. **Position 2 (SwitchPros):** TBD - controlled remotely via SwitchPros (need to determine which output)
-3. **Position 3 (Manual):** Direct wired remote control
-   - Uses Warn factory wireless remote or wired remote
-   - Trigger wiring: From dash switch → SafetyHub ATC-1 (10A fuse) → winch contactor
+- **UP (momentary):** Winch OUT (let out cable)
+- **CENTER:** Off (spring return to center)
+- **DOWN (momentary):** Winch IN (pull in cable)
+
+**Dual Control:** Dash rocker switch + handheld remote work simultaneously in parallel
 
 ### Wiring
 
-- **Control Trigger:** Dash 3-pos switch → SafetyHub ATC-1 (10A) → winch contactor trigger
-- **Wire Gauge:** 14 AWG (trigger circuit only, not main power)
-- **Routing:** Dash switch → under dash → through firewall → winch contactor
+**Power Source:**
+- **BODY PDU:** Available circuit breaker slot (10A fuse)
+- **System:** AUX battery powered (matches winch main power source)
+
+**Control Circuit:**
+- **Power:** BODY PDU (10A CB) → Dash rocker switch
+- **Outputs:** Rocker UP/DOWN → Winch contactor IN/OUT signals
+- **Wire Gauge:** 16-18 AWG (low-current control signals, ~2A max)
+- **Routing:** BODY PDU (cabin) → dash rocker → through firewall → winch contactor (front bumper)
+
+**Parallel Remote:**
+- Handheld remote (wireless or wired) connects in parallel at winch contactor
+- Both dash rocker AND remote can trigger IN/OUT independently
 
 ### Outstanding Items
 
-- [ ] Determine if/how Position 2 (SwitchPros control) will work - which SwitchPros output to use for remote winch control?
-- [ ] Verify dash 3-position switch wiring diagram (positions: off/SwitchPros/manual)
-- [ ] Confirm winch contactor trigger wiring from SafetyHub ATC-1 to winch contactor
+- [ ] Source center-off momentary rocker switch (SPDT or DPDT, 10A rated)
+- [ ] Assign BODY PDU circuit breaker slot for winch control (10A)
+- [ ] Determine firewall grommet routing for control wires
+- [ ] Verify winch contactor IN/OUT terminal connections for parallel wiring
 
 ## Rear Seat Switch
 

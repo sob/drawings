@@ -27,7 +27,7 @@ Electric radiator fan with automatic temperature control. Dakota Digital PAC-280
 **Power:**
 
 - **Controller:** Critical Cabin PDU (5A) → PAC-2800BT (cabin)
-- **Relay:** CONSTANT bus (80A CB) → Relay Terminal 30 → Terminal 87 → Fan motor
+- **Relay:** START battery CONSTANT bus (100A CB) → Relay Terminal 30 → Terminal 87 → Fan motor
 
 **Note:** Main radiator fan only. Oil cooler and PS cooler fans controlled separately via PMU.
 
@@ -51,14 +51,14 @@ Electric radiator fan with automatic temperature control. Dakota Digital PAC-280
 - PAC-2800BT controller: Dakota Digital HDPE panel (cabin, with other Dakota Digital modules)
 - BIM-01-2 adapter: Same HDPE panel
 - External relay: Engine bay (near fan, weatherproof location)
-- 80A circuit breaker: Engine bay (near CONSTANT bus)
+- 100A circuit breaker: Engine bay (near CONSTANT bus)
 
 **Power Wiring:**
 
 - **Controller:** Critical Cabin PDU Slot 1 (5A) → PAC-2800BT (16 AWG)
-- **Relay high-current:** CONSTANT bus → 80A CB → Relay Terminal 30 (4 AWG)
+- **Relay high-current:** START battery CONSTANT bus → 100A CB → Relay Terminal 30 (4 AWG)
 - **Relay output:** Terminal 87 → Fan motor (+) (4 AWG)
-- **Relay coil:** CONSTANT bus → 80A CB → Terminal 86 (18 AWG, shares power with Terminal 30)
+- **Relay coil:** START battery CONSTANT bus → 100A CB → Terminal 86 (18 AWG, shares power with Terminal 30)
 - **Relay trigger:** PAC-2800BT → through firewall → Terminal 85 (18 AWG)
 - **Fan ground:** Fan motor (-) → Engine bay ground bus (4 AWG)
 
@@ -78,7 +78,7 @@ Electric radiator fan with automatic temperature control. Dakota Digital PAC-280
 
 **Fan Motor Circuit:** 4 AWG @ 53A, 26 ft total (relay to fan), 60°C: 3.4% drop (0.41V) ✅
 
-**Relay Power Input:** 4 AWG (CONSTANT bus via 80A CB, ~3 ft)
+**Relay Power Input:** 4 AWG (CONSTANT bus via 100A CB, ~3 ft)
 
 **Controller Power:** 16 AWG (Critical Cabin PDU, <1A, <2 ft)
 
@@ -93,7 +93,7 @@ Electric radiator fan with automatic temperature control. Dakota Digital PAC-280
 
 ## Outstanding Items
 
-- [ ] Source 80A circuit breaker for relay power
+- [x] Source 100A circuit breaker for relay power - Mechanical Products 174-S2-100-2
 - [ ] Determine optimal temperature setpoints for R2.8
 - [ ] Test voltage drop under load at fan terminals
 - [ ] Confirm CAN tap location at Dakota Digital gauge cluster
@@ -104,7 +104,8 @@ Electric radiator fan with automatic temperature control. Dakota Digital PAC-280
 
 - [Firewall Ingress][firewall-ingress] - Relay trigger wire through firewall
 - [Critical Cabin PDU][cabin-pdu] - Controller power source
-- [CONSTANT Bus][constant-bus] - Relay power source (Terminal 30 + Terminal 86)
+- [START battery CONSTANT Bus][constant-bus] - Relay power source (Terminal 30 + Terminal 86, Stud 6)
+- [Circuit Breakers][circuit-breakers] - 100A CB specifications
 - [PMU Outputs][pmu-outputs] - Oil cooler and PS cooler fans (PMU controlled)
 - [Dakota Digital Gauge Cluster][gauge-cluster] - J1939 CAN bus tap location
 - [Engine Bay Ground Bus][ground-bus] - Ground connection location
@@ -114,6 +115,7 @@ Electric radiator fan with automatic temperature control. Dakota Digital PAC-280
 [firewall-ingress]: ../07-firewall-ingress.md
 [cabin-pdu]: ../../01-power-systems/02-starter-battery-distribution/03-critical-cabin-pdu.md
 [constant-bus]: ../../01-power-systems/02-starter-battery-distribution/02-constant-bus.md
+[circuit-breakers]: ../../01-power-systems/02-starter-battery-distribution/01-circuit-breakers.md
 [pmu-outputs]: ../../01-power-systems/04-pmu/03-pmu-outputs.md
-[gauge-cluster]: ../../04-control-interfaces/04-gauge-cluster.md
+[gauge-cluster]: ../../04-control-interfaces/04-gauge-cluster/index.md
 [ground-bus]: ../../01-power-systems/05-grounding/03-engine-bay-ground-bus.md

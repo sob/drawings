@@ -16,11 +16,11 @@ Complete configuration of all 24 PMU outputs, load allocations, and combined out
 | **Out 2**        | **[Available]**              | -         | -                              | -                                   | Future expansion (25A high-current) |
 | **Out 3**        | **[Available]**              | -         | -                              | -                                   | Future expansion (25A high-current) |
 | **Out 4**        | **[Available]**              | -         | -                              | -                                   | Future expansion (25A high-current) |
-| **Out 5**        | **iBooster Main (combined)** | Combined  | CONSTANT (always on)           | Combined with OUT6 + OUT9           | Bosch iBooster - 40A peak, requires 3x 25A outputs for thermal margin|
-| **Out 6**        | **iBooster Main (combined)** | Combined  | CONSTANT (always on)           | Combined with OUT5 + OUT9           | Bosch iBooster - 40A peak, requires 3x 25A outputs for thermal margin|
+| **Out 5**        | **iBooster Main (combined)** | Combined  | CONSTANT (always on)           | Combined with OUT6                  | Bosch iBooster - 40A peak, 2x 25A outputs = 50A capacity|
+| **Out 6**        | **iBooster Main (combined)** | Combined  | CONSTANT (always on)           | Combined with OUT5                  | Bosch iBooster - 40A peak, 2x 25A outputs = 50A capacity|
 | **Out 7**        | Oil Cooler Fan               | ~15A      | Auto (CAN temp monitoring)     | ECM J1939 engine oil temp (SPN 175) | Programmable temp thresholds via CAN              |
 | **Out 8**        | PS Cooler Fan                | ~15A      | Auto (CAN temp monitoring)     | ECM J1939 coolant temp (SPN 110)    | Programmable temp thresholds via CAN              |
-| **Out 9**        | **iBooster Main (combined)** | Combined  | CONSTANT (always on)           | Combined with OUT5 + OUT6           | Bosch iBooster - 40A peak, requires 3x 25A outputs for thermal margin|
+| **Out 9**        | **[Available]**              | -         | -                              | -                                   | Future expansion (25A high-current)               |
 | **Out 10**       | **[Available]**              | -         | -                              | -                                   | Future expansion (25A high-current)               |
 
 ### 15A High-Side Outputs (OUT11-OUT16)
@@ -51,13 +51,14 @@ Complete configuration of all 24 PMU outputs, load allocations, and combined out
 
 ## Combined Outputs
 
-**iBooster Main (OUT5+6+9):** Bosch Gen 2, 40A peak, 3×25A outputs paralleled for thermal margin, CONSTANT power
+**iBooster Main (OUT5+6):** Bosch Gen 2, 40A peak, 2×25A outputs paralleled = 50A capacity, CONSTANT power
 
 **Combining Rules:**
 
 - Only same-rated outputs can be combined (25A + 25A ✓, 25A + 15A ✗)
-- **Thermal limits:** Two adjacent 2.8 terminals = 38A max @ 23°C, derates at higher temperatures
-- **Engine bay operation:** Single 2.8 terminal @ 40°C = 23A max (outputs derate with temperature)
+- **Thermal limits:** Two adjacent 2.8mm terminals = 38A max @ 23°C for continuous loads
+- **Brief peak loads:** Thermal derating less critical for loads <5 seconds (e.g., brake booster)
+- **Engine bay operation:** Single 2.8mm terminal @ 40°C = 23A max continuous
 - **Load balancing:** Avoid placing heavily loaded outputs adjacent to each other
 - Use proper terminal crimping and wire gauge to maximize current capacity
 
@@ -67,16 +68,17 @@ Complete configuration of all 24 PMU outputs, load allocations, and combined out
 
 | Outputs | Load | Terminal Rating | Utilization @ 40°C | Status | Notes |
 |:--------|:-----|:----------------|:-------------------|:-------|:------|
-| **OUT5+6+9** | 40A peak | 75A (3×25A @ 40°C) | 53% @ 40°C | ✓ OK | 3 outputs provide adequate thermal margin even at high temps |
-| **OUT1** | 20A | 23A (single @ 40°C) | 87% | ⚠️ Acceptable | HVAC blower - highest single 25A load |
-| **OUT11** | 15A | 19A (1.5 terminal) | 79% | ✓ OK | Avoid adjacent to OUT12 if possible |
-| **OUT12** | 15A | 19A (1.5 terminal) | 79% | ✓ OK | Avoid adjacent to OUT11 if possible |
+| **OUT5+6** | 40A peak (brief) | 38A @ 23°C ambient<br/>32A @ 40°C ambient | 105% @ 40°C peak<br/>1% @ idle | ✓ OK | Brief peak (<5 sec) OK, 0.25A idle = minimal thermal buildup |
+| **OUT1** | 20A continuous | 23A (single @ 40°C) | 87% | ⚠️ Acceptable | HVAC blower - highest single 25A continuous load |
+| **OUT11** | 15A continuous | 19A (1.5mm terminal) | 79% | ✓ OK | Wiper controller - avoid adjacent to OUT12 if possible |
+| **OUT12** | 15A (if used) | 19A (1.5mm terminal) | 79% | ✓ OK | Available - avoid adjacent to OUT11 if possible |
 
 **Installation Notes:**
 
 - PMU thermal protection will shut down overloaded outputs
 - Monitor output temperatures during initial testing (PMU displays thermal status)
-- iBooster 40A peak is brief (motor inrush) - continuous load should be <30A
+- **iBooster thermal assessment:** 40A peak is brief (2-5 seconds during active braking), 0.25A idle (99% of time), minimal thermal concern
+- **Continuous loads** (HVAC, fans) require more conservative thermal margins than brief peaks
 
 !!! warning "Thermal Analysis Pending"
     Complete thermal analysis and output placement verification will be performed during initial installation and testing. Monitor PMU LED indicators and thermal status during first engine runs under various load conditions. Adjust output assignments if thermal issues occur.

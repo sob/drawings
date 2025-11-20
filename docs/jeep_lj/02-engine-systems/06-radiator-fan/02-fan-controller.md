@@ -59,16 +59,16 @@ hide:
 
 | Connection | Wire Gauge | Source | Destination | Distance | Voltage @ Load | Notes |
 |:-----------|:-----------|:-------|:------------|:---------|:---------------|:------|
-| **Relay Power Input (Green/Terminal 30)** | 4 AWG ✓ | CONSTANT bus via 80A CB | Relay Terminal 30 | ~3 ft | ~14.0V | High-current power input |
+| **Relay Power Input (Green/Terminal 30)** | 4 AWG ✓ | CONSTANT bus via 100A CB | Relay Terminal 30 | ~3 ft | ~14.0V | High-current power input |
 | **Relay Output (Black/Terminal 87)** | 4 AWG ✓ | Relay Terminal 87 | Fan motor (+) | ~13 ft | 13.46V | Switched output to fan |
-| **Relay Coil Power (Red/Terminal 86)** | 18 AWG ✓ | CONSTANT bus via 80A CB | Relay Terminal 86 | ~3 ft | ~14.0V | Coil +12V (shares power with Terminal 30) |
+| **Relay Coil Power (Red/Terminal 86)** | 18 AWG ✓ | CONSTANT bus via 100A CB | Relay Terminal 86 | ~3 ft | ~14.0V | Coil +12V (shares power with Terminal 30) |
 | **Relay Coil Trigger (White/Terminal 85)** | 18 AWG ✓ | Through firewall ← PAC-2800BT | Relay Terminal 85 | ~8 ft | - | Ground-trigger from controller |
 
 **Relay Operation:**
 
-- Terminal 30/Green (input): Always powered from CONSTANT bus (80A CB)
+- Terminal 30/Green (input): Always powered from CONSTANT bus (100A CB)
 - Terminal 87/Black (output): Switched to fan motor when relay energized
-- Terminal 86/Red (coil +12V): Powered from CONSTANT bus (80A CB, shares same source as Terminal 30)
+- Terminal 86/Red (coil +12V): Powered from CONSTANT bus (100A CB, shares same source as Terminal 30)
 - Terminal 85/White (coil trigger): Ground-trigger from PAC-2800BT when temp high
 - When temp exceeds setpoint: Controller triggers ground → relay closes → fan runs
 - When temp drops below setpoint: Controller releases ground → relay opens → fan stops
@@ -112,7 +112,7 @@ hide:
 
 ## Outstanding Items
 
-- [ ] Determine CONSTANT bus 80A CB mounting location
+- [ ] Determine CONSTANT bus 100A CB mounting location
 - [ ] Determine CAN tap location at Dakota Digital gauge cluster
 - [ ] Test Bluetooth pairing and app configuration
 - [ ] Verify BIM-01-2 adapter included or order separately
@@ -133,7 +133,7 @@ hide:
 [manual-link]: https://www.dakotadigital.com/index.cfm/page/ptype=product/product_id=1207/category_id=403/mode=prod/prd1207.htm
 [radiator-fan]: index.md
 [fan-motor]: 01-fan-motor.md
-[gauge-cluster]: ../../04-control-interfaces/04-gauge-cluster.md
+[gauge-cluster]: ../../04-control-interfaces/04-gauge-cluster/index.md
 [cabin-pdu]: ../../01-power-systems/02-starter-battery-distribution/03-critical-cabin-pdu.md
 [constant-bus]: ../../01-power-systems/02-starter-battery-distribution/02-constant-bus.md
 [firewall-ingress]: ../07-firewall-ingress.md

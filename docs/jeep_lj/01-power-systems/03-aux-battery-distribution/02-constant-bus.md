@@ -42,16 +42,16 @@ Provides organized distribution for accessory circuits in the rear wheel well co
 
 | Stud | Connection | Wire Gauge | Distance | Voltage @ Load | Protection | Load | Notes |
 |:-----|:-----------|:-----------|:---------|:---------------|:-----------|:-----|:------|
-| 1 | **AUX battery+ (INPUT)** | **1/0 AWG ✓** | **~3 ft** | **13.68V (0.9%)** | **None** | **~169A max** | **Power feed from battery - see [AUX battery][rear-battery]** |
+| 1 | **AUX battery+ (INPUT)** | **1/0 AWG ✓** | **~3 ft** | **13.74V (0.7%)** | **None** | **~154A max** | **Power feed from battery - see [AUX battery][rear-battery]** |
 | 2 | SwitchPros RCR-Force 12 | 4 AWG ✓ | ~2 ft | 13.58V (0.7%) | 150A CB | ~100A max | Auxiliary lighting control - see [SwitchPros][switchpros] |
-| 3 | BODY PDU | 6 AWG ✓ | ~12 ft | 13.03V (4.9% @ 20°C) | 100A CB | ~69A max | Cabin convenience circuits - see [BODY PDU][body-rtmr] |
+| 3 | BODY PDU | 6 AWG ✓ | ~12 ft | 13.47V (3.8% @ 20°C) | 100A CB | ~54A max | Cabin convenience circuits - see [BODY PDU][body-rtmr] |
 | 4 | **[Available]** | - | - | - | - | - | Future expansion (1 stud available) |
 
 **Stud Utilization:** 3 of 4 used (1 available)
 
-**Total Load:** ~169A max (SwitchPros 100A + BODY PDU 69A)
+**Total Load:** ~154A max (SwitchPros 100A + BODY PDU 54A)
 
-**Wire Sizing:** 1/0 AWG feed rated 325A continuous - 0.9% voltage drop @ 169A max load (13.68V at bus)
+**Wire Sizing:** 1/0 AWG feed rated 325A continuous - 0.7% voltage drop @ 154A max load (13.74V at bus)
 
 !!! info "Circuit Protection"
     No circuit breaker between battery and CONSTANT bus. Each load has individual CB protection: SwitchPros (150A), BODY PDU (100A). See [Circuit Breakers][circuit-breakers].

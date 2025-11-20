@@ -100,6 +100,14 @@ IF (BatteryVoltage < 12.5V) AND (EngineRPM > 1000)
 - Monitor battery state of charge during off-grid camping
 - Track battery health over time (voltage recovery patterns)
 
+### ARB Compressor Load Shedding
+
+**Purpose:** Automatically shed non-critical loads when ARB compressor runs (90A) to prevent exceeding 270A alternator capacity.
+
+**Summary:** Detects ARB activation and disables DRL (8A), A/C (5A), and conditionally oil/PS cooler fans (15A each) to reduce total load from 271A to 243A, providing +27A alternator margin during tire inflation.
+
+**See:** [ARB Load Shedding Logic][arb-load-shedding] for complete implementation details, load analysis, testing procedures, and operator guidelines.
+
 ## Configuration Software
 
 **Software:** ECUMaster PMU Configuration Software
@@ -134,5 +142,6 @@ IF (BatteryVoltage < 12.5V) AND (EngineRPM > 1000)
 [pmu-overview]: 01-pmu-overview.md
 [pmu-inputs]: 02-pmu-inputs.md
 [pmu-outputs]: 03-pmu-outputs.md
+[arb-load-shedding]: 05-pmu-arb-load-shedding.md
 [starter-battery-distribution]: ../02-starter-battery-distribution/index.md
-[gauge-cluster]: ../../04-control-interfaces/04-gauge-cluster.md
+[gauge-cluster]: ../../04-control-interfaces/04-gauge-cluster/index.md

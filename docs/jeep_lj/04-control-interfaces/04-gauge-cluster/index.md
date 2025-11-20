@@ -1,0 +1,46 @@
+---
+hide:
+  - toc
+---
+
+# 4.4 Dakota Digital HDX Gauge System {#dakota-digital-gauge-cluster}
+
+## Overview
+
+Complete digital instrumentation system replacing factory TJ gauge cluster. HDX control module processes sensor inputs and BIM module data to drive analog/digital hybrid dashboard display.
+
+**Power:** [Critical Cabin PDU][critical-cabin-pdu] Slot 2 (10A fuse, <10A draw)
+
+**Mounting:** Dashboard cluster in factory location, HDX control + BIM modules on HDPE firewall panel
+
+## System Components
+
+**Core:**
+
+- [HDX Control Module][hdx-control] - Main control box with Bluetooth configuration
+- [Dashboard Cluster][dashboard-cluster] - HDX-96J-TJ analog/digital display (black background)
+
+**Expansion Modules:**
+
+- [BIM-01-2-J1939][bim-j1939] - J1939 CAN interface for ECM data
+- [GPS-50-2][bim-gps] - GPS speedometer/compass/altimeter
+- [BIM-22-3][bim-tpms] - Tire pressure monitoring (4× wireless sensors)
+- [BIM-17-2][bim-compass] - Compass/outside temperature
+
+## Related Documentation
+
+- [Critical Cabin PDU][critical-cabin-pdu] - Power source
+- [Grounding Architecture][grounding] - Ground connections
+- [Firewall Ingress][firewall-ingress] - Wire routing
+- [Cummins R2.8 ECM][ecm] - J1939 integration
+
+[hdx-control]: 01-hdx-control.md
+[dashboard-cluster]: 02-dashboard-cluster.md
+[bim-j1939]: 03-bim-j1939.md
+[bim-gps]: 04-bim-gps.md
+[bim-tpms]: 05-bim-tpms.md
+[bim-compass]: 06-bim-compass.md
+[critical-cabin-pdu]: ../../01-power-systems/02-starter-battery-distribution/03-critical-cabin-pdu.md
+[grounding]: ../../01-power-systems/05-grounding/index.md
+[firewall-ingress]: ../../02-engine-systems/07-firewall-ingress.md
+[ecm]: ../../02-engine-systems/01-engine.md

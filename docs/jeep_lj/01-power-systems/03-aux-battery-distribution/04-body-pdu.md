@@ -46,12 +46,12 @@ hide:
 | CB44 | TRLR LIGHT | Fusion Radio (amplifier) | 15A | 14AWG | ~15A | - | Remote wire from deck triggers on/off |
 | CB48 | ARCT CRAN | USB Charging Ports | 20A | 14AWG | ~13A | - | 2x Powerwerx PanelUSB-75W always-on |
 | CB39 | TRLR BO STOP | WolfBox Camera/Mirror | 10A | 16AWG | ~10A | - | Dash cam + backup camera |
-| CB45 | IGNITION | Driver Heated Seat | 15A | 14AWG | 15A | K21 | Manual switch → relay K21 → seat element |
-| CB42 | 2WAY INTRCM | Passenger Heated Seat | 20A | 14AWG | 15A | K22 | Manual switch → relay K22 → seat element |
+| CB45 | IGNITION | Driver Heated Seat | 15A | 14AWG | 5A peak, 2A sustained | K21 | Manual switch → relay K21 → seat element |
+| CB42 | 2WAY INTRCM | Passenger Heated Seat | 20A | 14AWG | 5A peak, 2A sustained | K22 | Manual switch → relay K22 → seat element |
 | CB20 | RADIO | **[Available]** | 25A | - | - | - | High-current spare (future ham radio) |
-| CB43 | TRANS ECU | **[Available]** | 10A | - | - | - | Future expansion |
+| CB43 | TRANS ECU | Winch Control (dash rocker) | 10A | 18AWG | ~2A | - | Dash rocker + remote parallel control |
 
-**Circuit Breaker Utilization:** 6 of 8 used, 2 available
+**Circuit Breaker Utilization:** 7 of 8 used, 1 available
 
 ## Relay Configuration
 
@@ -68,7 +68,7 @@ hide:
 
 **Relay Utilization:** 2 of 8 used, 5 available (3 are 24V only)
 
-**Total Load:** ~69A maximum (Radio 16A + USB 13A + Camera 10A + Seats 30A)
+**Total Load:** ~56A maximum (Radio 16A + USB 13A + Camera 10A + Seats 10A peak + Winch control 2A, 48A sustained)
 
 **Control:** All circuits on CONSTANT power with trigger-wire or manual switch control for on/off
 
@@ -84,8 +84,8 @@ hide:
 - **Mounting:** Integrated inside Bussmann LR-2 sealed enclosure
 
 **Circuit Breaker Protection:**
-- **Driver Seat:** CB45 (15A) → Relay K21 → Driver seat element
-- **Passenger Seat:** CB42 (20A) → Relay K22 → Passenger seat element
+- **Driver Seat:** CB45 (15A) → Relay K21 → Driver seat element (5A peak, 2A sustained)
+- **Passenger Seat:** CB42 (20A) → Relay K22 → Passenger seat element (5A peak, 2A sustained)
 
 **Control Flow:**
 ```
@@ -117,10 +117,10 @@ Dash Switch (manual) ───────→ Relay Coil (K21/K22)
 
 **Routing:** Passenger wheel well → through firewall → cabin side mounting (~10-12 ft estimated)
 
-**Voltage Drop Analysis (69A max load, ~12 ft routing):**
-- 8 AWG @ 69A: **7.8% voltage drop** ❌ Too high for CONSTANT power circuits
-- 6 AWG @ 69A: **4.9% voltage drop** ✓ Acceptable for accessories
-- 4 AWG @ 69A: **3.1% voltage drop** ✓ Ideal
+**Voltage Drop Analysis (56A max load, ~12 ft routing):**
+- 8 AWG @ 56A: **6.3% voltage drop** ❌ Too high for CONSTANT power circuits
+- 6 AWG @ 56A: **4.0% voltage drop** ✓ Acceptable for accessories
+- 4 AWG @ 56A: **2.5% voltage drop** ✓ Ideal
 
 **Recommendation:** **6 AWG provides best balance** for this application
 - Reduces voltage drop to 4.9% (acceptable for non-critical CONSTANT loads)
@@ -176,7 +176,7 @@ Dash Switch (manual) ───────→ Relay Coil (K21/K22)
 - [ ] Verify all circuit breakers and relays are functional in LR-2 unit
 - [ ] Identify pinout for J301-J306 Metri-Pack connectors (military TM manual or reverse engineering)
 - [ ] Determine LR-2 ground connection location (chassis ground or direct to AUX battery)
-- [ ] **Route CONSTANT power feed from AUX battery to LR-2** - **6 AWG** (4.7% voltage drop @ 69A)
+- [ ] **Route CONSTANT power feed from AUX battery to LR-2** - **6 AWG** (4.0% voltage drop @ 56A peak)
 - [ ] **100A circuit breaker installed at AUX battery** (145% of max load) - see [Circuit Breakers](01-circuit-breakers.md)
 - [ ] Mount LR-2 on firewall (body side, passenger side)
 - [ ] Create custom wiring harnesses to adapt J301-J306 military connectors to civilian loads

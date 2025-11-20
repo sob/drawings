@@ -36,7 +36,7 @@ See [CONSTANT Bus Bar][constant-bus] for complete bus bar specifications and [Ci
 | | **━━━ RECOVERY SYSTEMS ━━━** | | | | | | |
 | 2 | Warn VR EVO 10-S Winch | 1/0 AWG ✓ | 13 ft one-way | 13.12V (4.9%) @ 250A<br>12.71V (7.9%) @ 400A | None (see note) | 250A typical, 400A peak (brief) - see [Recovery Systems][recovery] | Active |
 | | **━━━ CONSTANT BUS BAR ━━━** | | | | | | |
-| 3 | CONSTANT Bus Bar | 1/0 AWG ✓ | ~3 ft | 13.68V (0.9%) | None | Feeds SwitchPros, BODY PDU (~169A max) | Active |
+| 3 | CONSTANT Bus Bar | 1/0 AWG ✓ | ~3 ft | 13.74V (0.7%) | None | Feeds SwitchPros, BODY PDU (~154A max) | Active |
 
 **Total Connections:** 3 (all active)
 
@@ -58,14 +58,14 @@ See [CONSTANT Bus Bar][constant-bus] for complete bus bar specifications and [Ci
 | Stud | Connection | Wire Gauge | Protection | Load | Notes |
 |:-----|:-----------|:-----------|:-----------|:-----|:------|
 | 1 | SwitchPros RCR-Force 12 | Per spec | 150A CB | ~100A max | Auxiliary lighting - see [SwitchPros][switchpros] |
-| 2 | BODY PDU | 6 AWG | 100A CB | ~69A max | Cabin circuits - see [BODY PDU][body-rtmr] |
+| 2 | BODY PDU | 6 AWG | 100A CB | ~54A max | Cabin circuits - see [BODY PDU][body-rtmr] |
 | 3-4 | **[Available]** | - | - | - | Future expansion (2 studs available) |
 
 **Utilization:** 2 of 4 studs used (2 available)
 
-**Total Load:** ~169A max (SwitchPros 100A + BODY PDU 69A)
+**Total Load:** ~154A max (SwitchPros 100A + BODY PDU 54A)
 
-**Wire Sizing:** 1/0 AWG feed rated 325A continuous - 0.9% voltage drop @ 169A max load (13.68V at bus)
+**Wire Sizing:** 1/0 AWG feed rated 325A continuous - 0.7% voltage drop @ 154A max load (13.74V at bus)
 
 **Note:** No circuit breaker between battery and CONSTANT bus - each load has individual CB protection at appropriate rating.
 

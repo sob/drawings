@@ -105,6 +105,7 @@ nav:
         - 1.4.2 - Inputs: jeep_lj/01-power-systems/04-pmu/02-pmu-inputs.md
         - 1.4.3 - Outputs: jeep_lj/01-power-systems/04-pmu/03-pmu-outputs.md
         - 1.4.4 - Programming: jeep_lj/01-power-systems/04-pmu/04-pmu-programming.md
+        - 1.4.5 - ARB Load Shedding: jeep_lj/01-power-systems/04-pmu/05-pmu-arb-load-shedding.md
       - 1.5 - Grounding Architecture:
         - jeep_lj/01-power-systems/05-grounding/index.md
         - 1.5.1 - START Battery Ground: jeep_lj/01-power-systems/05-grounding/01-starter-battery-ground.md
@@ -140,7 +141,14 @@ nav:
       - 4.1 - Overview: jeep_lj/04-control-interfaces/01-overview.md
       - 4.2 - SwitchPros SP-1200: jeep_lj/04-control-interfaces/02-switchpros-sp1200.md
       - 4.3 - Command Touch CT4: jeep_lj/04-control-interfaces/03-command-touch-ct4.md
-      - 4.4 - Digital Gauge Cluster: jeep_lj/04-control-interfaces/04-gauge-cluster.md
+      - 4.4 - Dakota Digital HDX:
+        - jeep_lj/04-control-interfaces/04-gauge-cluster/index.md
+        - 4.4.1 - HDX Control: jeep_lj/04-control-interfaces/04-gauge-cluster/01-hdx-control.md
+        - 4.4.2 - Dashboard Cluster: jeep_lj/04-control-interfaces/04-gauge-cluster/02-dashboard-cluster.md
+        - 4.4.3 - BIM J1939: jeep_lj/04-control-interfaces/04-gauge-cluster/03-bim-j1939.md
+        - 4.4.4 - BIM GPS: jeep_lj/04-control-interfaces/04-gauge-cluster/04-bim-gps.md
+        - 4.4.5 - BIM TPMS: jeep_lj/04-control-interfaces/04-gauge-cluster/05-bim-tpms.md
+        - 4.4.6 - BIM Compass: jeep_lj/04-control-interfaces/04-gauge-cluster/06-bim-compass.md
       - 4.5 - Dashboard Switches: jeep_lj/04-control-interfaces/05-dashboard-controls.md
     - Stereo Systems:
       - jeep_lj/05-audio-systems/index.md

@@ -42,29 +42,30 @@ Eliminates battery terminal crowding by providing central distribution for all c
 
 | Stud | Connection | Wire Gauge | Distance | Voltage @ Load | Protection | Load | Notes |
 |:-----|:-----------|:-----------|:---------|:---------------|:-----------|:-----|:------|
-| 1 | **START battery+ (INPUT #1)** | **1/0 AWG ✓** | **~5 ft** | **13.82V (1.26% @ 60°C)** | **None** | **~356A max** | **First parallel feed - see [START battery][front-battery]** |
+| 1 | **START battery+ (INPUT #1)** | **1/0 AWG ✓** | **~5 ft** | **13.75V (1.76% @ 60°C)** | **None** | **~419A max** | **First parallel feed - see [START battery][front-battery]** |
 | 2 | PMU24 | 1 AWG ✓ | ~2 ft | 13.76V (1.0% @ 60°C) | 300A CB | ~220A max | Always-on power management - see [PMU][pmu] |
 | 3 | SafetyHub 150 | 4 AWG ✓ | ~3 ft | 13.73V (1.2% @ 60°C) | 150A CB | ~111A max | Fused high-current accessories - see [SafetyHub][safetyhub] |
 | 4 | BCDC Input | 4 AWG ✓ | ~5 ft | 13.84V (0.4% @ 60°C) | 40A CB | 25A charging | Charges AUX battery - see [BCDC][bcdc] |
 | 5 | Critical Cabin PDU | 6 AWG ✓ | ~8 ft | TBD | 40A CB | <10A | Dakota Digital modules - see [Critical Cabin PDU][cabin-pdu] |
-| 6-7 | **[Available]** | - | - | - | - | - | Future expansion (2 studs available) |
-| 8 | **START battery+ (INPUT #2)** | **1/0 AWG ✓** | **~5 ft** | **13.82V (1.26% @ 60°C)** | **None** | **~356A max** | **Second parallel feed - see [START battery][front-battery]** |
+| 6 | Radiator Fan Relay | 4 AWG ✓ | ~3 ft | 13.59V (3.4% @ 60°C) | 100A CB | 53A | GM Camaro electric fan - see [Radiator Fan][radiator-fan] |
+| 7 | **[Available]** | - | - | - | - | - | Future expansion (1 stud available) |
+| 8 | **START battery+ (INPUT #2)** | **1/0 AWG ✓** | **~5 ft** | **13.75V (1.76% @ 60°C)** | **None** | **~419A max** | **Second parallel feed - see [START battery][front-battery]** |
 
-**Stud Utilization:** 6 of 8 used (2 available)
+**Stud Utilization:** 7 of 8 used (1 available)
 
-**Total Load:** ~366A max (PMU 220A + SafetyHub 111A + BCDC 25A + Cabin PDU 10A)
+**Total Load:** ~419A max (PMU 220A + SafetyHub 111A + BCDC 25A + Cabin PDU 10A + Radiator Fan 53A)
 
 **Wire Sizing (Engine Bay @ 60°C):**
-- **Input Feed:** 2×1/0 AWG @ 356A, 5 ft, 60°C: **1.26% voltage drop** (0.18V) ✅ Excellent performance
+- **Input Feed:** 2×1/0 AWG @ 419A, 5 ft, 60°C: **1.76% voltage drop** (0.247V) ✅ Excellent performance
   - 2×1/0 AWG combined: 211,200 circular mils (60% more than single 2/0)
   - 2×1/0 AWG rated: 500A+ @ 60°C (2× 250A per conductor)
-  - Safety margin: 500A / 356A = 140% ✅ Substantial headroom
-  - Voltage at bus: 14.0V - 0.18V = **13.82V**
+  - Safety margin: 500A / 419A = 119% ✅ Adequate headroom
+  - Voltage at bus: 14.0V - 0.247V = **13.75V**
 - **Temperature derating:** 1.2× resistance increase at 60°C vs 20°C (copper wire)
 - **Previous design (single 2/0 AWG):** 2.0% drop @ 60°C - upgraded for improved performance
 
 !!! info "Circuit Protection"
-    No circuit breaker between battery and CONSTANT bus. Each load has individual CB protection: PMU (300A), SafetyHub (150A), BCDC (40A). See [Circuit Breakers][circuit-breakers].
+    No circuit breaker between battery and CONSTANT bus. Each load has individual CB protection: PMU (300A), SafetyHub (150A), Radiator Fan (80A), BCDC (40A), Cabin PDU (40A). See [Circuit Breakers][circuit-breakers].
 
 ## Related Documentation
 
@@ -79,6 +80,7 @@ Eliminates battery terminal crowding by providing central distribution for all c
 - [SafetyHub 150][safetyhub] - Fused distribution
 - [BCDC Alpha 25][bcdc] - DC-DC charger
 - [Critical Cabin PDU][cabin-pdu] - Dakota Digital modules distribution
+- [Radiator Fan System][radiator-fan] - Electric cooling fan
 - [Installation Checklist][installation] - Bus bar mounting procedure
 
 [product-link]: https://www.bluesea.com/products/2107/PowerBar_600A_BusBar_with_Four_5_16inch-18_Studs_and_Four_1_4inch-20_Studs
@@ -88,4 +90,5 @@ Eliminates battery terminal crowding by providing central distribution for all c
 [safetyhub]: 04-safetyhub.md
 [bcdc]: ../01-power-generation/03-bcdc.md
 [cabin-pdu]: 03-critical-cabin-pdu.md
+[radiator-fan]: ../../02-engine-systems/06-radiator-fan/index.md
 [installation]: ../installation-checklist.md#phase-2-power-distribution

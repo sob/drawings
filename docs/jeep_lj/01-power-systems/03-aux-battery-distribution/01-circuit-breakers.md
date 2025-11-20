@@ -16,7 +16,7 @@ All AUX battery positive circuits protected by Mechanical Products Series 17 cir
 | Circuit | Model | Rating | Reset Type | Power Path | Max Load | Sizing |
 |:--------|:------|:------:|:-----------|:-----------|:---------|:-------|
 | **SwitchPros RCR-Force 12** | Mechanical Products<br/>([174-S2-150-2][mp-150]) | 150A | Manual | AUX battery+<br/>└→ 150A CB<br/>&nbsp;&nbsp;&nbsp;└→ SwitchPros RCR-Force 12 | ~100A (all lighting outputs on) | 150% of max load |
-| **BODY PDU CONSTANT** | Mechanical Products<br/>([174-S2-100-2][mp-100]) | 100A | Manual | AUX battery+<br/>└→ 100A CB<br/>&nbsp;&nbsp;&nbsp;└→ BODY PDU | ~69A (radio, USB, camera, seats) | 145% of max load |
+| **BODY PDU CONSTANT** | Mechanical Products<br/>([174-S2-100-2][mp-100]) | 100A | Manual | AUX battery+<br/>└→ 100A CB<br/>&nbsp;&nbsp;&nbsp;└→ BODY PDU | ~54A max (radio 16A, USB 13A, camera 10A, seats 10A peak) | 185% of max load |
 
 **All Circuit Breakers:**
 

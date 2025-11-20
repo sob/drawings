@@ -49,7 +49,7 @@ The electrical system is organized into zones for logical distribution and maint
 - **[Overview](04-control-interfaces/01-overview.md)** - Control systems overview
 - **[SwitchPros SP-1200](04-control-interfaces/02-switchpros-sp1200.md)** - SwitchPros lighting controller
 - **[Command Touch CT4](04-control-interfaces/03-command-touch-ct4.md)** - Command Touch control panel
-- **[Digital Gauge Cluster](04-control-interfaces/04-gauge-cluster.md)** - Dakota Digital gauge cluster
+- **[Digital Gauge Cluster](04-control-interfaces/04-gauge-cluster/index.md)** - Dakota Digital gauge cluster
 - **[Dashboard Switches](04-control-interfaces/05-dashboard-controls.md)** - Physical dashboard controls
 
 ### Stereo Systems
