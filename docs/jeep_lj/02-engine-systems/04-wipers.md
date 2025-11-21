@@ -6,14 +6,14 @@ hide:
 # Windshield Wiper Control System {#windshield-wiper-control-system}
 **Controller:** Ron Francis WS-51C
 **Installation Manual:** [Ron Francis WS-51C Instructions](https://s3.amazonaws.com/cdn.ronfrancis.com/downloads/INSTRUCTIONS/WS51C-INST.pdf)
-**Power Source:** PMU Out 10 (15A capacity, SWITCHED power)
+**Power Source:** PMU Out 11 (15A capacity, SWITCHED power)
 **Wiper Motor:** Factory Jeep TJ/LJ wiper motor
 
 ## Overview
 
 Ron Francis WS-51C replaces TIPM wiper functions. Provides delay/intermittent control for factory front wiper motor. Includes integrated washer pump control with auto-wipe feature.
 
-**Note:** Rear wiper system is not currently implemented in this build. PMU Out 12 is assigned to radiator fan (combined with OUT13 and OUT16).
+**Note:** Rear wiper system is not currently implemented in this build. PMU Out 12 is assigned to Ham Radio (iCom IC-2730A, 13A).
 
 ## Components
 
@@ -22,7 +22,7 @@ Ron Francis WS-51C replaces TIPM wiper functions. Provides delay/intermittent co
 - **Mounting:** TBD - under dash or near wiper motor (accessible location for adjustments)
 - **Power Requirements:**
   - Input Voltage: 12V DC
-  - PMU Output: PMU Out 10 (15A capacity, SWITCHED power)
+  - PMU Output: PMU Out 11 (15A capacity, SWITCHED power)
   - Typical wiper motor draw: 3-5A low speed, 6-8A high speed
 - **Features:**
   - Off / Mist / Delay / Low / High functions
@@ -89,16 +89,16 @@ Ron Francis WS-51C replaces TIPM wiper functions. Provides delay/intermittent co
 **PMU Programming Logic:**
 
 ```
-IF (PMU Out 10 == ACTIVE)
+IF (PMU Out 11 == ACTIVE)
   THEN PMU Out 12 = ON
 ELSE PMU Out 12 = OFF
 ```
 
 **How It Works:**
-1. Turn on front wipers (any speed: delay/low/high) → PMU Out 10 energizes
-2. PMU detects Out 10 active → automatically energizes Out 12
+1. Turn on front wipers (any speed: delay/low/high) → PMU Out 11 energizes
+2. PMU detects Out 11 active → automatically energizes Out 12
 3. Rear wiper runs continuously while front wipers are on
-4. Turn off front wipers → Out 10 de-energizes → Out 12 de-energizes → rear wiper parks
+4. Turn off front wipers → Out 11 de-energizes → Out 12 de-energizes → rear wiper parks
 
 **Benefits:**
 - ✅ Automatic synchronization - no separate rear wiper switch needed
@@ -165,7 +165,7 @@ Use one washer pump to feed both front and rear via fluid line T-split:
 ## Power Flow
 
 ### Front Wiper System
-1. **Module Power:** CONSTANT power (START battery) → PMU Out 10 (15A) → WS-51C power input → chassis ground
+1. **Module Power:** CONSTANT power (START battery) → PMU Out 11 (15A) → WS-51C power input → chassis ground
 2. **Front Wiper Motor:** WS-51C high/low outputs → front wiper motor high/low speed terminals → motor ground
 3. **Control Switch:** Dash wiper switch → control signal wires → WS-51C control inputs
 4. **Park Position:** Wiper motor park switch → WS-51C park input (auto-shutoff at rest position)
@@ -184,7 +184,7 @@ Use one washer pump to feed both front and rear via fluid line T-split:
 
 ### Front Wiper Circuit
 
-1. **Power (+):** CONSTANT power (START battery) → PMU Out 10 (15A capacity) → WS-51C red power wire (12V input)
+1. **Power (+):** CONSTANT power (START battery) → PMU Out 11 (15A capacity) → WS-51C red power wire (12V input)
 2. **Ground (-):** WS-51C black ground wire → chassis ground or firewall ground point
 3. **Front Wiper Motor Outputs:**
    - **Low Speed:** WS-51C low speed output → wiper motor low speed terminal
@@ -232,15 +232,15 @@ The WS-51C wiper control system replaces the following TIPM functions:
 - [ ] Determine WS-51C mounting location (under dash or near wiper motor)
 - [ ] Verify factory front wiper motor compatibility (single motor, two-speed with park)
 - [ ] Determine front wiper switch mounting location (dash or column-mount)
-- [ ] Confirm front wiper motor power draw (verify PMU Out 10 sizing at 15A)
-- [ ] Plan wire routing: PMU Out 10 → WS-51C → front wiper motor → dash switch
+- [ ] Confirm front wiper motor power draw (verify PMU Out 11 sizing at 15A)
+- [ ] Plan wire routing: PMU Out 11 → WS-51C → front wiper motor → dash switch
 - [ ] Verify front wiper motor ground point (cowl or firewall area)
 - [ ] Order WS-51C module and wiper switch
-- [ ] Configure PMU Out 10 to activate with ignition (In 6)
+- [ ] Configure PMU Out 11 to activate with ignition (Pin 7)
 
 ### ~~Rear Wiper System~~ (NOT IMPLEMENTED)
-- PMU OUT12, OUT13, OUT16 assigned to radiator fan instead
-- See [START battery Distribution][starter-battery-distribution] for radiator fan wiring
+- PMU OUT12 assigned to Ham Radio (iCom IC-2730A, 13A)
+- See [PMU Outputs][pmu-outputs] for complete output allocation
 
 ### Washer Pump System
 - [ ] Determine washer pump configuration: Dual pumps (recommended) or single pump with T-fitting

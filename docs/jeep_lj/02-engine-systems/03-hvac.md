@@ -14,7 +14,7 @@ tags:
 
 **System:** Factory TJ (2005 LJ) HVAC System
 
-**Power Source:** PMU Out 1 (A/C clutch) and Out 3 (blower motor)
+**Power Source:** PMU Out 17 (A/C clutch) and Out 5 (blower motor)
 
 **Control:** Factory TJ HVAC control panel
 
@@ -42,24 +42,24 @@ Factory 2005 TJ HVAC system with heater and A/C. Uses vacuum-operated mode doors
 
 - **Type:** Factory TJ blower motor (integrated in HVAC box)
 - **Speed Control:** 4-speed resistor pack (Off, Low, Med, High)
-- **Power:** PMU Out 3 (15A capacity, ~20A at max speed)
+- **Power:** PMU Out 5 (25A capacity, ~20A at max speed)
 - **Control:** Factory dash rotary switch → resistor pack
 - **Load:** 3-5A (low), 10-15A (med), ~20A (high)
 - **Ground:** Chassis ground at HVAC box mounting point
 
-**Speed Control:** Dash rotary switch selects resistor (Low/Med) or bypasses (High). PMU Out 3 provides power when ignition ON.
+**Speed Control:** Dash rotary switch selects resistor (Low/Med) or bypasses (High). PMU Out 5 provides power when ignition ON.
 
 ### A/C Compressor Clutch
 
 - **Type:** R2.8 Cummins A/C compressor clutch
-- **Power:** PMU Out 1 (15A capacity)
+- **Power:** PMU Out 17 (7A capacity, sufficient for 3-5A clutch load)
 - **Trigger Source:** Factory TJ A/C button on dash panel
 - **Load:** 3-5A typical for clutch coil
-- **Protection:** PMU Out 1 integrated overcurrent protection
+- **Protection:** PMU Out 17 integrated overcurrent protection
 
 **PMU Integration:**
 - Factory A/C switch signal → PMU In 9
-- PMU Out 1 activates A/C clutch when:
+- PMU Out 17 activates A/C clutch when:
   - A/C button pressed (In 9 active)
   - Battery voltage adequate (optional logic)
   - Optional: A/C pressure switch OK
@@ -166,7 +166,7 @@ Use heat/oil resistant vacuum line, secure all connections, route away from exha
 ```
 CONSTANT Power (START battery)
         ↓
-PMU Out 3 (15A capacity, solid-state switching)
+PMU Out 5 (25A capacity, solid-state switching)
         ↓
 Factory Blower Motor Power Input
         ↓
@@ -188,7 +188,7 @@ PMU In 9 (A/C request signal, 12V when button pressed)
         ↓
 PMU Logic (check battery voltage, optional)
         ↓
-PMU Out 1 (15A capacity, solid-state switching)
+PMU Out 17 (7A capacity, solid-state switching)
         ↓
 A/C Compressor Clutch Coil (3-5A)
         ↓
@@ -230,12 +230,12 @@ No PMU outputs consumed - entirely vacuum-operated
 - [ ] Verify factory TJ HVAC system is complete and functional
 - [ ] Install vacuum system: R2.8 manifold → check valve → reservoir → firewall → dash
 - [ ] Test vacuum system for leaks
-- [ ] Connect PMU Out 1 to A/C compressor clutch
-- [ ] Connect PMU Out 3 to blower motor power
+- [ ] Connect PMU Out 17 to A/C compressor clutch
+- [ ] Connect PMU Out 5 to blower motor power
 - [ ] Route A/C button signal to PMU In 9
-- [ ] Program PMU: In 9 active → Out 1 (with voltage check)
+- [ ] Program PMU: In 9 active → Out 17 (with voltage check)
 - [ ] Test all functions: temperature, mode, blower speeds, A/C, heater
-- [ ] Monitor PMU current draw on Out 1 and Out 3
+- [ ] Monitor PMU current draw on Out 17 and Out 5
 
 ## Related Documentation
 
