@@ -79,41 +79,60 @@ ELSE:
 ### WITHOUT Load Shedding (Sunny Day)
 
 ```
-PMU typical:        100A
+PMU typical:        106A  (See PMU load breakdown below, excludes radiator fan)
 ARB compressor:      90A
-Radiator fan:        53A
+Radiator fan:        53A  (full speed, worst case - separate from PMU total)
 BCDC (with solar):   18A  (solar contributes 6.7A, alternator 18.3A)
 Cabin PDU:           10A
 ─────────────────────────
-Total:              271A
+Total:              277A
 Alternator:         270A
-Deficit:             -1A  ❌
-Battery Voltage:    ~13.5V (marginal)
+Deficit:             -7A  ❌ MARGINAL
+Battery Voltage:    ~13.3V (slight discharge)
 ```
+
+**PMU 106A Typical Breakdown (radiator fan counted separately above):**
+- iBooster idle: 0.25A (40A peak brief during braking)
+- HVAC blower: 20A
+- GMRS standby: 1A (15A transmit brief)
+- Oil/PS fans: 0A (temp-triggered, not continuous)
+- Dakota Digital: 25A
+- Wiper: 0-15A (intermittent, assume 7A average)
+- Ham standby: 1A (13A transmit brief)
+- CT4: 10A
+- DRL: 8A
+- iBooster ignition: 5A
+- STX Intercom: 5A
+- A/C clutch: 5A (seasonal)
+- Brake/reverse lights: 3A (average during driving)
+- Winch trigger: 0A (manual only)
+- **Total PMU circuits (excluding radiator fan): ~106A**
 
 ### WITH Load Shedding (Minimum - 28A shed)
 
 ```
-PMU reduced:         72A  (was 100A, shed DRL + A/C = 13A, plus fans idle = 15A)
+PMU reduced:         78A  (was 106A, shed DRL + A/C = 13A, plus fans idle = 15A)
 ARB compressor:      90A
-Radiator fan:        53A
+Radiator fan:        53A  (full speed maintained)
 BCDC (with solar):   18A
 Cabin PDU:           10A
 ─────────────────────────
-Total:              243A
+Total:              249A
 Alternator:         270A
-Margin:             +27A  ✅
-Battery Voltage:    ~14.0V (good)
+Margin:             +21A  ✅
+Battery Voltage:    ~13.9V (good)
 ```
+
+**Note:** Even with corrected PMU baseline (106A vs 100A), minimum load shedding still provides adequate margin.
 
 ### WITH Load Shedding (Maximum - 43A shed)
 
 **When oil and coolant temps allow both cooler fans to be disabled:**
 
 ```
-PMU reduced:         57A  (was 100A, shed 43A total)
+PMU reduced:         63A  (was 106A, shed 43A total: DRL+A/C+oil fan+PS fan)
 ARB compressor:      90A
-Radiator fan:        53A
+Radiator fan:        53A  (full speed maintained)
 BCDC (with solar):   18A
 Cabin PDU:           10A
 ─────────────────────────
