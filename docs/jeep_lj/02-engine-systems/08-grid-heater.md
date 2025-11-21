@@ -33,12 +33,12 @@ tags:
    - Coil Power: ECM pins 46/21 (~1A) - direct connection
    - Main Power: Direct from START battery+ via fusible link (bypasses all bus bars and PMU)
    - Main Ground: START battery- or NEGATIVE bus
-   - Output: 40-80A to grid heater element
+   - Output: 80A to grid heater element (design value - verify via resistance measurement during installation)
    - Protection: Integrated fusible link
 
 3. **Grid Heater Element:**
    - Location: Intake manifold
-   - Power: 40-80A from relay
+   - Power: 80A from relay (design value)
    - Duty Cycle: 3-5 seconds during cold start (ECM controlled)
 
 ## Wiring Summary
@@ -92,4 +92,5 @@ flowchart LR
 - [ ] Install fusible link from START battery+ to grid heater relay main power terminal
 - [ ] Connect grid heater relay ground to START battery- or NEGATIVE bus
 - [ ] Verify grid heater relay mounting location (engine bay, near intake manifold)
+- [ ] **VERIFY:** Measure grid heater element resistance during installation to confirm 80A design value (should be ~0.15Ω @ 12V)
 - [ ] Test grid heater operation in cold conditions (below 50°F ambient)

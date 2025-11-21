@@ -16,6 +16,7 @@ All AUX battery positive circuits protected by Mechanical Products Series 17 cir
 | Circuit | Model | Rating | Reset Type | Power Path | Max Load | Sizing |
 |:--------|:------|:------:|:-----------|:-----------|:---------|:-------|
 | **SwitchPros RCR-Force 12** | Mechanical Products<br/>([174-S2-150-2][mp-150]) | 150A | Manual | AUX battery+<br/>└→ 150A CB<br/>&nbsp;&nbsp;&nbsp;└→ SwitchPros RCR-Force 12 | ~100A (all lighting outputs on) | 150% of max load |
+| **SafetyHub 150 (Recovery)** | Mechanical Products<br/>([174-S2-150-2][mp-150b]) | 150A | Manual | AUX battery+<br/>└→ 150A CB<br/>&nbsp;&nbsp;&nbsp;└→ SafetyHub 150 | ~100A (ARB 90A + Winch Trigger 10A) | Future-proofed to SafetyHub max capacity |
 | **BODY PDU CONSTANT** | Mechanical Products<br/>([174-S2-100-2][mp-100]) | 100A | Manual | AUX battery+<br/>└→ 100A CB<br/>&nbsp;&nbsp;&nbsp;└→ BODY PDU | ~54A max (radio 16A, USB 13A, camera 10A, seats 10A peak) | 185% of max load |
 
 **All Circuit Breakers:**
@@ -32,12 +33,15 @@ All AUX battery positive circuits protected by Mechanical Products Series 17 cir
 
 - [AUX battery Distribution Overview][rear-battery]
 - [SwitchPros][switchpros] - Load details for SwitchPros circuit
+- [SafetyHub 150][safetyhub] - Load details for SafetyHub circuit (ARB compressor, winch trigger)
 - [BODY PDU][body-rtmr] - Load details for BODY PDU circuit
 
 [mp-150]: https://www.waytekwire.com/item/49079/
+[mp-150b]: https://www.waytekwire.com/item/49079/
 [mp-100]: https://www.waytekwire.com/item/49077/
 [rear-battery]: index.md
 [switchpros]: ../../04-control-interfaces/02-switchpros-sp1200.md
+[safetyhub]: 04-safetyhub.md
 [body-rtmr]: 04-body-pdu.md
 
 

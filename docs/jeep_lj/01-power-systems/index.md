@@ -29,7 +29,7 @@ The system replaces the factory TIPM with modular programmable controllers:
 
 - **[PMU24](04-pmu/index.md):** 24-channel programmable power management - engine bay critical circuits
 - **[BODY PDU](03-aux-battery-distribution/04-body-pdu.md):** Cabin convenience circuits - radio, USB, heated seats, camera
-- **[SafetyHub](02-starter-battery-distribution/04-safetyhub.md):** High-current safety circuits - ARB compressor, winch contactor
+- **[SafetyHub](03-aux-battery-distribution/04-safetyhub.md):** High-current safety circuits - ARB compressor, winch contactor
 
 Ground distribution architecture:
 

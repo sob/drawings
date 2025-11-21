@@ -40,12 +40,9 @@ The Rugged Radio G1 is a 50W GMRS (General Mobile Radio Service) two-way radio f
 **Power Requirements:**
 
 - Input Voltage: 12V DC (not compatible with 24V systems)
-- **CRITICAL:** Power must connect directly to 12V battery (not through BODY PDU)
-  - Route all power cables directly to battery
-  - Do NOT connect inline with other components
-  - Do NOT tie to ignition, lights, or other power sources (causes ground loop noise)
-- Fuse: 15A inline fuse (install within 18" of battery positive connection)
-- Current Draw: 1-2A receive, 8-12A transmit at 50W (typical)
+- **Power Source:** PMU OUT6 (25A capacity, CONSTANT power) - see [PMU Outputs][pmu-outputs]
+- **Ground:** Direct START battery negative (RF grounding requirement)
+- Current Draw: 1-2A receive, up to 15A transmit at 50W (max)
 
 **Features:**
 
@@ -91,9 +88,8 @@ The Rugged Radio G1 is a 50W GMRS (General Mobile Radio Service) two-way radio f
    - Handles audio in/out, PTT, and mute functions automatically
 
 **Outstanding Items:**
-- [ ] Run dedicated power wire from battery positive to G1 radio (do NOT use BODY PDU or other circuits)
-- [ ] Install 15A inline fuse holder within 18" of battery positive connection
-- [ ] Run dedicated ground wire from G1 to battery negative terminal (preferred for best RF performance)
+- [ ] Run power wire from PMU OUT6 to G1 radio mounting location (via firewall)
+- [ ] Run dedicated ground wire from G1 to START battery negative terminal (14 AWG, via firewall)
 - [ ] Verify G1 and STX mounting behind dash does NOT place units near ignition box (avoid RF interference)
 - [ ] Determine roof-mounted GMRS antenna mounting location and type (1/4 wave vs 1/2 wave)
 - [ ] Plan antenna coax cable routing away from power leads (avoid interference)

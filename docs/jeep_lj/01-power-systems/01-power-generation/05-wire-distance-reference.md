@@ -22,7 +22,7 @@ Measured wire routing distances between major electrical components for voltage 
 |:-----|:---|:---------|:------|
 | **Alternator** | **START battery** (driver wheel well) | 8 ft | Primary charging path |
 | **Starter** | **START battery** (driver wheel well) | 6 ft | Cranking power |
-| **PMU24** | **START battery** (driver wheel well) | 8 ft | Critical systems power |
+| **PMU24** | **START battery** (driver wheel well) | 7 ft | Critical systems power |
 | **BCDC Alpha 25** | START battery ↔ AUX battery | 5-6 ft | Inter-battery charging |
 | **Winch** (front bumper) | **AUX battery** (passenger wheel well) | 13 ft | Recovery system power |
 | **OEM Battery** (engine bay) | **Starter** | 4 ft | Reference: original configuration |
@@ -36,7 +36,7 @@ Wire gauges optimized for performance at measured routing distances:
 | Circuit | Distance | Wire Gauge | Max Current | Voltage Drop @ Temp | Notes |
 |:--------|:---------|:-----------|:------------|:--------------------|:------|
 | **Alternator → START battery** | 8 ft | 2/0 AWG | 270A | 2.81% @ 60°C | Charging system - temp derating applied |
-| **PMU24 Power Feed** | 7 ft total | 1 AWG | 220A | 1.72% @ 60°C | Via CONSTANT bus (2×1/0 AWG 5ft + 1 AWG 2ft) |
+| **PMU24 Power Feed** | 7 ft | 2/0 AWG | 220A | 2.40% @ 60°C | Direct connection via 250A CB - upgraded from 1/0 AWG |
 | **Starter Motor** | 6 ft | 2/0 AWG | 400-600A | <3% @ 20°C | Brief cranking load - minimal temp effect |
 | **BCDC Inter-Battery** | 5-6 ft | 6 AWG | 25A | 0.75% @ 20°C | Under-vehicle routing, lower ambient temp |
 | **Winch → AUX battery** | 13 ft one-way (26 ft circuit) | 1/0 AWG | 250A typical, 400A peak | 6.3% @ 250A, 10.1% @ 400A @ 20°C | Wheel well routing, system voltage 13.8V (engine running) |

@@ -7,9 +7,9 @@ hide:
 
 **Purpose:** Central tracking for all To-Be-Determined items across the Jeep LJ electrical system documentation.
 
-**Last Updated:** 2025-11-19
+**Last Updated:** 2025-11-21
 
-**Total Open Items:** 40
+**Total Open Items:** 41
 
 ---
 
@@ -19,9 +19,9 @@ Items that prevent build completion or system operation.
 
 | Item | Description | File | Priority |
 |:-----|:------------|:-----|:---------|
+| **BCDC Temperature Sensor Install** | Document installation location and verify included sensor specs (comes with BCDC) | [BCDC][bcdc] | High |
+| **Wire Routing Protection** | Specify split loom, heat sleeve, p-clamps, grommets for all major cables | [Wire Routing][wire-routing] | Critical |
 | BCDC Wire Lengths | Actual routing distances for wire sizing | [BCDC][bcdc] | High |
-| Radiator Fan Load | Actual amperage (20-40A range) | [Radiator Fan][radiator-fan] | High |
-| Radiator Fan Protection | CB/fuse size based on fan specs | [Radiator Fan][radiator-fan] | High |
 
 ---
 
@@ -31,6 +31,8 @@ Items needed before installation begins but not system-critical.
 
 | Item | Description | File | Priority |
 |:-----|:------------|:-----|:---------|
+| **PMU PWM Frequency** | Verify ECUMaster PMU24 PWM frequency compatible with GM Camaro fan motor (100-1000 Hz optimal) | [PMU][pmu-outputs] | High |
+| **AUX Battery CONSTANT Bus CB** | Consider adding 200A CB between battery and bus for cable fault protection | [AUX Battery][aux-battery] | High |
 | Grommet 1 Location | Engine bay side near PMU | [Firewall Ingress][firewall-ingress] | High |
 | Grommet 2 Location | Cabin side near pedal area | [Firewall Ingress][firewall-ingress] | High |
 | Grommet 5 Location | Path from firewall to grille area | [Firewall Ingress][firewall-ingress] | High |
@@ -97,6 +99,7 @@ Items that are estimated and need actual product specs to confirm.
 
 | Item | Description | File | Action Needed |
 |:-----|:------------|:-----|:--------------|
+| **Grid Heater Current** | Design value 80A - verify via element resistance measurement during installation (~0.15Ω @ 12V) | [Grid Heater][grid-heater] | Measure resistance |
 | Heated Seat Load | Verify PRP EnduroTrek 15A/seat spec | [BODY PDU][body-rtmr] | Verify spec sheet |
 | Fusion Amp Current | Verify 35-45A continuous rating | [Audio Systems][audio-systems] | Verify spec sheet |
 
@@ -108,6 +111,13 @@ Items completed since last update.
 
 | Item | Resolution | Date |
 |:-----|:-----------|:-----|
+| SafetyHub Location | Consolidated to single SafetyHub 150 on AUX battery (ARB compressor, winch trigger); communications moved to PMU | 2025-11-21 |
+| Radiator Fan Distance | 6 ft estimated (firewall to radiator), 4 AWG wire sizing confirmed (3.2% drop @ 53A full speed) | 2025-11-21 |
+| Radiator Fan Load | GM Camaro fan 53A @ 100% PWM (variable speed: 16A @ 30%, 32A @ 60%, 53A @ 100%) | 2025-11-21 |
+| Radiator Fan Protection | PMU OUT2+3+4 has integrated overcurrent/thermal protection, no external CB needed | 2025-11-21 |
+| PMU iBooster Thermal | Resolved via non-adjacent combining: OUT1+10 (46A @ 40°C) vs OUT5+6 adjacent (32A @ 40°C) | 2025-11-21 |
+| Grid Heater Current | Design value 80A (moved to Verification for field measurement) | 2025-11-21 |
+| BCDC Temperature Sensor | Included with BCDC unit (2-pin reversible, moved to High Priority for install documentation) | 2025-11-21 |
 | BODY PDU Model | Bussmann LR-2 (301-1C-C-R1) | 2025-11-18 |
 | BODY PDU Ground | Firewall Stud Bus Terminal 3 (14 AWG) | 2025-11-18 |
 | Alternator Part Number | Premier Power Welder HO-C28 | 2025-11-18 |
@@ -123,12 +133,12 @@ Items completed since last update.
 
 | Priority | Count |
 |:---------|:------|
-| 🔴 Critical | 3 |
-| ⚠️ High | 10 |
+| 🔴 Critical | 1 |
+| ⚠️ High | 12 |
 | 📋 Medium | 18 |
 | 📝 Low | 11 |
-| 🔍 Verify | 2 |
-| **TOTAL** | **40** |
+| 🔍 Verify | 3 |
+| **TOTAL** | **41** |
 
 ## Related Documentation
 
@@ -149,3 +159,6 @@ Items completed since last update.
 [recovery-systems]: ../07-exterior-systems/01-recovery-systems.md
 [body-rtmr]: ../01-power-systems/03-aux-battery-distribution/04-body-pdu.md
 [section-1-install]: ../01-power-systems/installation-checklist.md
+[pmu-outputs]: ../01-power-systems/04-pmu/03-pmu-outputs.md
+[grid-heater]: ../02-engine-systems/08-grid-heater.md
+[aux-battery]: ../01-power-systems/03-aux-battery-distribution/index.md

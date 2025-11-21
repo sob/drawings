@@ -22,7 +22,7 @@ The electrical system is organized into zones for logical distribution and maint
 - **[AUX battery Distribution](01-power-systems/03-aux-battery-distribution/index.md)** - Wheel well accessory power distribution
 - **[Power Management Unit](01-power-systems/04-pmu/index.md)** - PMU24 programmable power management
 - **[BODY PDU](01-power-systems/03-aux-battery-distribution/04-body-pdu.md)** - Body relay/fuse panel
-- **[SafetyHub](01-power-systems/02-starter-battery-distribution/04-safetyhub.md)** - Safety control system
+- **[SafetyHub](01-power-systems/03-aux-battery-distribution/04-safetyhub.md)** - Safety control system
 
 ### Critical Systems
 
@@ -89,7 +89,7 @@ Complete replacement of factory TIPM with modular power distribution:
 
 - **[PMU24](01-power-systems/04-pmu/index.md):** Programmable 24-channel power management unit
 - **[BODY PDU](01-power-systems/03-aux-battery-distribution/04-body-pdu.md):** Body relay/fuse panel for cabin accessories
-- **[SafetyHub](01-power-systems/02-starter-battery-distribution/04-safetyhub.md):** 12-channel advanced safety controller
+- **[SafetyHub](01-power-systems/03-aux-battery-distribution/04-safetyhub.md):** 12-channel advanced safety controller
 - **[Ron Francis WS-51C](02-engine-systems/04-wipers.md):** Wiper control system
 
 ### Major Systems

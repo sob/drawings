@@ -16,7 +16,7 @@ Documents START battery power distribution from the driver wheel well (Odyssey P
 
 **Contains:** All START battery circuit breaker specifications and ratings
 
-**Use when:** Finding circuit breaker size for PMU, SafetyHub, BCDC, or other loads
+**Use when:** Finding circuit breaker size for PMU, BCDC, or other loads
 
 ### `02-constant-bus.md` - CONSTANT Bus Bar
 
@@ -24,17 +24,9 @@ Documents START battery power distribution from the driver wheel well (Odyssey P
 
 **Use when:** Finding CONSTANT bus bar capacity, available studs, or what connects to the bus
 
-### `04-safetyhub.md` - SafetyHub 150
-
-**Contains:** Blue Sea SafetyHub 150 product details and fuse assignments
-
-**Use when:** Finding SafetyHub specifications or fuse assignments
-
 ## Cross-Section References
 
-**To PMU (1.4):** PMU power source via circuit breaker - see `01-circuit-breakers.md`
-
-**To SafetyHub loads:** Communication systems (Section 6), Recovery systems (Section 7)
+**To PMU (1.4):** PMU power source via circuit breaker - see `01-circuit-breakers.md`, communication loads now PMU-powered
 
 **To BCDC (1.1.3):** BCDC input circuit breaker specifications
 
@@ -48,9 +40,9 @@ Documents START battery power distribution from the driver wheel well (Odyssey P
 
 **"What connects to the CONSTANT bus bar?"** → `02-constant-bus.md` stud assignments
 
-**"What's powered by SafetyHub?"** → `04-safetyhub.md` fuse assignments
-
 **"Where does BCDC get power?"** → `02-constant-bus.md` → `01-circuit-breakers.md`
+
+**"Where do radios/intercom get power?"** → PMU outputs (Section 1.4) - OUT6 (GMRS), OUT12 (Ham), OUT20 (Intercom)
 
 ## When Updating
 
@@ -60,8 +52,3 @@ Documents START battery power distribution from the driver wheel well (Odyssey P
 2. Update `index.md` terminal table OR `02-constant-bus.md` stud table
 3. Add circuit breaker in `01-circuit-breakers.md` if needed
 4. Update grounding files (Section 1.5)
-
-**Changing SafetyHub fuses:**
-
-1. Update `04-safetyhub.md` fuse table
-2. Update affected system docs (Sections 6, 7)

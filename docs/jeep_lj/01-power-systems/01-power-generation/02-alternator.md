@@ -71,10 +71,17 @@ See [Grounding Architecture][grounding] for complete system grounding.
 - PMU24: 220A max
 - Starter: 400-600A (brief cranking only)
 - BCDC charging: 25A
-- ECM + Grid Heater: TBD
-- **Total:** ~265A continuous (excluding starter)
+- ECM + Grid Heater: 80A (brief, 3-5 sec during cold start only - see [Grid Heater][grid-heater])
+- **Total:** ~325A theoretical peak, ~265A typical continuous (grid heater operates only during cold start)
 
 **Alternator Capacity:** 270A continuous
+
+**Load Overlap Analysis:**
+- Grid heater (80A) operates during cold start (3-5 seconds, <50°F ambient)
+- During cold start, PMU load is minimal (engine not yet running at full electrical load)
+- Theoretical peak of 325A (PMU 220A + BCDC 25A + Grid Heater 80A) will not occur in practice
+- Grid heater timing does not overlap with high PMU loads
+- **Alternator capacity adequate** - worst-case continuous load is ~265A
 
 **Note:** Peak loads exceeding alternator capacity are brief and supplemented by START battery (850 CCA). Starter draws 400-600A only during brief cranking periods (not simultaneous with other high loads).
 
@@ -95,3 +102,4 @@ See [Grounding Architecture][grounding] for complete system grounding.
 [starter-battery]: ../02-starter-battery-distribution/index.md
 [grounding]: ../05-grounding/index.md
 [wire-distance]: 05-wire-distance-reference.md
+[grid-heater]: ../../02-engine-systems/08-grid-heater.md

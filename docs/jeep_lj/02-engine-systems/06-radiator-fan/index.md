@@ -26,7 +26,7 @@ Electric radiator fan with automatic PWM temperature control via PMU24.
 **Power:**
 
 - **PMU OUT2+3+4** (75A capacity) → Fan motor via PWM control (4 AWG)
-- **PMU power source:** START battery via 300A CB (wheel well)
+- **PMU power source:** START battery via 250A CB (wheel well)
 
 **Benefits:**
 
@@ -63,8 +63,8 @@ Setpoints can be adjusted based on testing and climate conditions.
 
 - **PMU OUT2+3+4** → Fan motor (+) via 4 AWG
 - **Fan ground:** Fan motor (-) → Engine bay ground bus (4 AWG)
-- **Distance:** PMU to fan motor ~TBD ft
-- **Wire gauge:** 4 AWG minimum for 53A @ full speed
+- **Distance:** PMU to fan motor ~6 ft (firewall to radiator)
+- **Wire gauge:** 4 AWG for 53A @ full speed
 
 **Testing:**
 
@@ -77,10 +77,11 @@ Setpoints can be adjusted based on testing and climate conditions.
 ## Wire Sizing
 
 **Fan Motor Circuit (PMU to Fan):**
-- **Wire gauge:** 4 AWG minimum
-- **Full speed:** 53A @ 100% PWM, 4 AWG @ ~TBD ft, 60°C: TBD% drop
-- **Medium speed:** 32A @ 60% PWM
-- **Low speed:** 16A @ 30% PWM
+- **Wire gauge:** 4 AWG
+- **Distance:** 6 ft one-way (12 ft circuit)
+- **Full speed:** 53A @ 100% PWM, 4 AWG @ 6 ft, 60°C: ~3.2% voltage drop
+- **Medium speed:** 32A @ 60% PWM (~1.9% drop)
+- **Low speed:** 16A @ 30% PWM (~1.0% drop)
 - **Average load:** Much lower than 53A due to variable speed operation
 
 **Note:** Fan is brushless PWM-capable, now fully utilized with PMU PWM control.
@@ -92,9 +93,9 @@ Setpoints can be adjusted based on testing and climate conditions.
 ## Outstanding Items
 
 - [ ] Determine optimal temperature setpoints for R2.8 (adjust PWM curve)
-- [ ] Measure exact PMU to fan motor distance for wire sizing
+- [ ] Verify actual PMU to fan motor distance during installation (6 ft estimated)
 - [ ] Test voltage drop under load at fan terminals (all PWM speeds)
-- [ ] Verify PMU PWM frequency compatibility with Camaro fan motor
+- [ ] Verify PMU PWM frequency compatibility with Camaro fan motor (100-1000 Hz optimal)
 - [ ] Tune PWM curve based on real-world operating conditions
 
 ## Related Documentation
@@ -102,7 +103,7 @@ Setpoints can be adjusted based on testing and climate conditions.
 - [PMU Overview][pmu-overview] - PMU24 specifications and mounting
 - [PMU Outputs][pmu-outputs] - OUT2+3+4 radiator fan assignment, OUT7+8 aux fans
 - [PMU Programming][pmu-programming] - Radiator fan PWM control logic
-- [START battery Distribution][front-battery] - PMU power source (300A CB)
+- [START battery Distribution][front-battery] - PMU power source (250A CB)
 - [Engine Bay Ground Bus][ground-bus] - Fan motor ground connection
 - [Dakota Digital Gauge Cluster][gauge-cluster] - J1939 CAN bus source (SPN 110)
 

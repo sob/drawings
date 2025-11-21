@@ -13,8 +13,8 @@ hide:
 |:--------|:-----------|:---------|:------------|:--------|:------|
 | **Alternator charging input** | 2/0 AWG | 8 ft | FROM Alternator (engine) | 270A | Charges START battery - see [Alternator][alternator] |
 | **Starter motor power** | 2/0 AWG | 6 ft | TO Starter motor | 400-600A | Brief cranking load - see [Starter][starter] |
-| **PMU24 power feed** | 1/0 AWG | 7 ft | TO PMU24 (engine bay) | 220A max | Via 300A CB - see [PMU][pmu] |
-| **SafetyHub 150 feed** | 2 AWG | 7 ft | TO SafetyHub (engine bay) | 110A max | Via 150A CB - see [SafetyHub][safetyhub] |
+| **PMU24 power feed** | 2/0 AWG | 7 ft | TO PMU24 (engine bay) | 220A max | Via 250A CB - see [PMU][pmu] |
+| **SafetyHub 150 feed (Recovery)** | 4 AWG | 3 ft | TO SafetyHub (passenger wheel well) | 150A max (100A current) | Via 150A CB - future-proofed - see [AUX SafetyHub][aux-safetyhub] |
 | **BCDC input feed** | 4 AWG | 10 ft | TO BCDC (engine bay) | 27-29A | Via 40A CB - see [BCDC][bcdc] |
 | **Primary ground** | 2/0 AWG | 8 ft | TO Engine bay ground bus | 600A+ peak | Primary return path |
 | **Battery cross-ground** | 1/0 AWG | 5-6 ft | TO AUX battery- (passenger) | BCDC reference | Critical for BCDC operation |
@@ -31,6 +31,7 @@ hide:
 |:--------|:-----------|:---------|:------------|:--------|:------|
 | **Warn Zeon 10-S Winch power** | 1/0 AWG | 13 ft | TO Front bumper winch | 250A typ, 400A peak | Direct connection (no CB) - see [Recovery Systems][recovery-systems] |
 | **Warn Zeon 10-S Winch ground** | 1/0 AWG | 13 ft | TO Winch motor ground | 250A typ, 400A peak | Return path via frame rail |
+| **SafetyHub 150 feed (Recovery)** | 4 AWG | 3 ft | TO SafetyHub (passenger wheel well) | 150A max (100A current) | Via 150A CB - future-proofed - see [AUX SafetyHub][aux-safetyhub] |
 | **SwitchPros outputs** | Various | TBD | TO Engine bay/front | ~100A | Offroad lighting power - routing TBD |
 | **Primary ground** | 2/0 AWG | 3 ft | TO Rear frame rail | 569A peak | Winch + accessories return |
 | **Cross-ground reference** | 1/0 AWG | 5-6 ft | FROM START battery- (driver) | BCDC reference | Critical for BCDC operation |
@@ -151,7 +152,8 @@ hide:
 [starter-battery]: ../02-starter-battery-distribution/index.md
 [aux-battery]: ../03-aux-battery-distribution/index.md
 [pmu]: ../04-pmu/index.md
-[safetyhub]: ../02-starter-battery-distribution/04-safetyhub.md
+[safetyhub]: ../03-aux-battery-distribution/04-safetyhub.md
+[aux-safetyhub]: ../03-aux-battery-distribution/04-safetyhub.md
 [bcdc]: ../01-power-generation/03-bcdc.md
 [alternator]: ../01-power-generation/02-alternator.md
 [starter]: ../../02-engine-systems/01-starter.md

@@ -166,7 +166,7 @@ BODY PDU (10A CB) → Dash Rocker Switch ⟷ Handheld Remote (parallel) → Winc
 
 [aux-battery]: ../01-power-systems/03-aux-battery-distribution/index.md
 [wire-distance]: ../01-power-systems/01-power-generation/05-wire-distance-reference.md
-[safetyhub]: ../01-power-systems/02-starter-battery-distribution/04-safetyhub.md
+[safetyhub]: ../01-power-systems/03-aux-battery-distribution/04-safetyhub.md
 [air-system]: 02-air-system.md
 
 ---

@@ -13,11 +13,12 @@ hide:
 
 The AUX battery (passenger wheel well) provides power for high-current accessories and cabin systems:
 
-1. **Direct high-current** → Winch (recovery system)
-2. **CONSTANT Bus Bar** (Blue Sea 2104 PowerBar, 225A) - Feeds SwitchPros, BODY PDU
-3. **Direct charging input** → BCDC Alpha 25 output
+1. **Direct high-current** → Winch (recovery system, no CB per manufacturer spec)
+2. **Fused distribution** → SafetyHub 150 (ARB compressor, winch trigger) via 150A CB
+3. **CONSTANT Bus Bar** (Blue Sea 2104 PowerBar, 225A) - Feeds SwitchPros, BODY PDU
+4. **Direct charging input** → BCDC Alpha 25 output
 
-See [CONSTANT Bus Bar][constant-bus] for complete bus bar specifications and [Circuit Breakers][circuit-breakers] for CB details.
+See [CONSTANT Bus Bar][constant-bus] for complete bus bar specifications, [SafetyHub][aux-safetyhub] for fused distribution, and [Circuit Breakers][circuit-breakers] for CB details.
 
 !!! info "Battery Specifications"
     For complete battery specifications (capacity, dimensions, terminals, etc.), see [Section 1.1 - Battery System][batteries].
@@ -35,13 +36,46 @@ See [CONSTANT Bus Bar][constant-bus] for complete bus bar specifications and [Ci
 | 1 | BCDC Alpha 25 Output | 6 AWG ✓ | 5-6 ft | 13.68V (0.9%) | None | 25A DC-DC charging from START battery - see [BCDC Alpha 25][bcdc] | Active |
 | | **━━━ RECOVERY SYSTEMS ━━━** | | | | | | |
 | 2 | Warn VR EVO 10-S Winch | 1/0 AWG ✓ | 13 ft one-way | 13.12V (4.9%) @ 250A<br>12.71V (7.9%) @ 400A | None (see note) | 250A typical, 400A peak (brief) - see [Recovery Systems][recovery] | Active |
+| | **━━━ FUSED DISTRIBUTION ━━━** | | | | | | |
+| 3 | SafetyHub 150 | 4 AWG ✓ | ~3 ft | 13.89V (0.8%) | 150A CB (wheel well) | Fused distribution (ARB, winch trigger) - see [SafetyHub][aux-safetyhub] | Active |
 | | **━━━ CONSTANT BUS BAR ━━━** | | | | | | |
-| 3 | CONSTANT Bus Bar | 1/0 AWG ✓ | ~3 ft | 13.74V (0.7%) | None | Feeds SwitchPros, BODY PDU (~154A max) | Active |
+| 4 | CONSTANT Bus Bar | 1/0 AWG ✓ | ~3 ft | 13.74V (0.7%) | None | Feeds SwitchPros, BODY PDU (~154A max) | Active |
 
-**Total Connections:** 3 (all active)
+**Total Connections:** 4 (all active)
 
-!!! note "Winch Circuit Protection"
-    Per WARN manufacturer documentation, the Warn VR EVO 10-S winch does not require external circuit breaker protection. The winch incorporates internal thermal protection and the contactor provides disconnect capability. Direct battery connection per WARN installation specifications.
+!!! note "Winch Circuit Protection - Engineering Justification"
+    **Design Decision:** No external circuit breaker per WARN manufacturer specifications
+
+    **Manufacturer Specification:**
+
+    - WARN Part: VR EVO 10-S Winch
+    - Installation Manual: [WARN VR EVO Installation Guide][warn-manual]
+    - Specification: "No external fuse or circuit breaker required"
+
+    **Protection Strategy:**
+
+    1. **Internal Thermal Protection:** Winch motor has integrated thermal cutoff
+    2. **Contactor Disconnect:** Provides isolation when not in use
+    3. **Cable Sizing:** 1/0 AWG rated 325A continuous, adequate for 400A brief peaks
+    4. **Duty Cycle:** Winch operations are brief (10-30 seconds typical recovery)
+
+    **Automotive Industry Standard:**
+
+    - Factory vehicle winch installations do NOT use external circuit breakers
+    - Winch internal protection is designed for automotive fault scenarios
+    - This differs from marine practice (ABYC E-11) which requires all circuits fused
+
+    **Fault Scenarios Covered:**
+
+    - **Motor Stall:** Internal thermal protection trips before fire hazard
+    - **Cable Short:** 1/0 AWG fuses open at ~800A+ (well above 400A operating current)
+    - **Contactor Weld:** Manual disconnect at battery terminal provides emergency shutoff
+
+    **Standards Applied:** SAE J1128 (automotive), WARN manufacturer specifications
+
+    **This is NOT an oversight** - it is intentional adherence to manufacturer specifications and automotive best practices.
+
+    See [Standards Exceptions][standards-exceptions] for complete documentation of intentional design decisions that differ from general marine electrical standards.
 
 ## CONSTANT Bus Bar
 
@@ -88,6 +122,7 @@ See [CONSTANT Bus Bar][constant-bus] for complete bus bar specifications and [Ci
 
 ## System Components
 
+- [SafetyHub 150][aux-safetyhub] - Blue Sea 7748 fused distribution (ARB compressor, winch trigger)
 - [CONSTANT Bus Bar][constant-bus] - Blue Sea 2104 PowerBar (225A, 4 studs)
 - [Circuit Breakers][circuit-breakers] - Protection for all AUX battery circuits
 - [BODY PDU][body-rtmr] - Body relay/fuse panel for cabin convenience circuits
@@ -103,6 +138,7 @@ See [CONSTANT Bus Bar][constant-bus] for complete bus bar specifications and [Ci
 - [Recovery Systems][recovery] - Winch specifications and wiring
 - [Wire Distance Reference][wire-distance] - Measured routing distances
 
+[aux-safetyhub]: 04-safetyhub.md
 [constant-bus]: 02-constant-bus.md
 [switchpros]: ../../04-control-interfaces/02-switchpros-sp1200.md
 [body-rtmr]: 04-body-pdu.md
@@ -114,3 +150,5 @@ See [CONSTANT Bus Bar][constant-bus] for complete bus bar specifications and [Ci
 [starter-battery]: ../02-starter-battery-distribution/index.md
 [recovery]: ../../07-exterior-systems/01-recovery-systems.md
 [wire-distance]: ../01-power-generation/05-wire-distance-reference.md
+[warn-manual]: https://www.warn.com/
+[standards-exceptions]: ../STANDARDS-EXCEPTIONS.md

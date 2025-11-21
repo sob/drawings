@@ -200,7 +200,7 @@ Dash Switch (manual) ───────→ Relay Coil (K21/K22)
 - [Firewall Ingress][firewall] - Power feed routing through firewall
 
 [ebay-listing]: https://www.ebay.com/itm/224625878742
-[safetyhub]: ../02-starter-battery-distribution/04-safetyhub.md
+[safetyhub]: 04-safetyhub.md
 [house-battery]: index.md
 [circuit-breakers]: 01-circuit-breakers.md
 [dashboard]: ../../04-control-interfaces/05-dashboard-controls.md

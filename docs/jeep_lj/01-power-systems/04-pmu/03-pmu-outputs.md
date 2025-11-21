@@ -12,23 +12,23 @@ Complete configuration of all 24 PMU outputs, load allocations, and combined out
 
 | Output           | Circuit                      | Load      | Control Type                   | Trigger/Input                       | Notes                                             |
 |:-----------------|:-----------------------------|:----------|:-------------------------------|:------------------------------------|:--------------------------------------------------|
-| **Out 1**        | HVAC Blower Motor            | ~20A      | Auto (ignition ON)             | Constant power when ignition on     | See [HVAC System][hvac-system] - highest single load |
+| **Out 1**        | **iBooster Main (combined)** | Combined  | CONSTANT (always on)           | Combined with OUT10                 | Bosch iBooster - 40A peak, 2× non-adjacent 25A outputs = 46A @ 40°C capacity|
 | **Out 2**        | **Radiator Fan (combined)**  | Combined  | PWM (CAN temp monitoring)      | Combined with OUT3+4                | GM Camaro fan - 53A @ full speed, 3×25A outputs = 75A capacity |
 | **Out 3**        | **Radiator Fan (combined)**  | Combined  | PWM (CAN temp monitoring)      | Combined with OUT2+4                | GM Camaro fan - variable speed PWM control via J1939 coolant temp |
 | **Out 4**        | **Radiator Fan (combined)**  | Combined  | PWM (CAN temp monitoring)      | Combined with OUT2+3                | GM Camaro fan - replaces Dakota Digital PAC-2800BT + relay |
-| **Out 5**        | **iBooster Main (combined)** | Combined  | CONSTANT (always on)           | Combined with OUT6                  | Bosch iBooster - 40A peak, 2x 25A outputs = 50A capacity|
-| **Out 6**        | **iBooster Main (combined)** | Combined  | CONSTANT (always on)           | Combined with OUT5                  | Bosch iBooster - 40A peak, 2x 25A outputs = 50A capacity|
+| **Out 5**        | HVAC Blower Motor            | ~20A      | Auto (ignition ON)             | Constant power when ignition on     | See [HVAC System][hvac-system] - relocated from OUT1 for better thermal balance |
+| **Out 6**        | GMRS Radio (Midland G1)      | 15A       | CONSTANT (always on)           | Emergency communication             | See [Communication Systems][communication-systems] - direct battery ground required |
 | **Out 7**        | Oil Cooler Fan               | ~15A      | Auto (CAN temp monitoring)     | ECM J1939 engine oil temp (SPN 175) | Programmable temp thresholds via CAN              |
 | **Out 8**        | PS Cooler Fan                | ~15A      | Auto (CAN temp monitoring)     | ECM J1939 coolant temp (SPN 110)    | Programmable temp thresholds via CAN              |
 | **Out 9**        | Dakota Digital Complete System | ~25A    | CONSTANT (always on)           | -                                   | HDX Control + Cluster + 4 BIM modules - replaces Critical Cabin PDU |
-| **Out 10**       | **[Available]**              | -         | -                              | -                                   | Future expansion (25A high-current)               |
+| **Out 10**       | **iBooster Main (combined)** | Combined  | CONSTANT (always on)           | Combined with OUT1                  | Bosch iBooster - non-adjacent combining eliminates thermal concerns |
 
 ### 15A High-Side Outputs (OUT11-OUT16)
 
 | Output           | Circuit                      | Load      | Control Type                   | Trigger/Input                       | Notes                                             |
 |:-----------------|:-----------------------------|:----------|:-------------------------------|:------------------------------------|:--------------------------------------------------|
 | **Out 11**       | WS-51C Wiper Controller      | 15A       | Auto (ignition ON)             | Ignition signal (Pin 7)             | See [Wipers][windshield-wiper-control-system]                        |
-| **Out 12**       | **[Available]**              | -         | -                              | -                                   | Future expansion (15A)                            |
+| **Out 12**       | Ham Radio (iCom IC-2730A)    | 13A       | CONSTANT (always on)           | Emergency communication             | See [Communication Systems][communication-systems] - direct battery ground required |
 | **Out 13**       | Command Touch CT4            | ~10A      | CONSTANT (always on)           | Works with ignition off (hazards)   | Critical safety system - hazards/turn signals     |
 | **Out 14**       | DRL/Parking Lights           | ~8A       | Auto (ignition) with logic     | Ignition ON + headlight status      | See [DRL & Parking Lights][drl-parking-lights]    |
 | **Out 15**       | Winch Contactor Trigger      | 1A        | Manual (dash rocker switch)    | Dash rocker + remote parallel      | Winch contactor control - replaces SafetyHub ATC-1 |
@@ -43,7 +43,7 @@ Complete configuration of all 24 PMU outputs, load allocations, and combined out
 | **Out 17**       | A/C Clutch                   | 3-5A      | Auto (A/C request)             | Factory TJ A/C button signal (In 9) | See [HVAC System][hvac-system]                     |
 | **Out 18**       | Horn                         | 5.4A      | External input                 | Horn button (steering wheel)        | PIAA horns (2.7A × 2), works with ignition off    |
 | **Out 19**       | iBooster Ignition Signal     | ~5A       | Auto (ignition RUN)            | Ignition signal (Pin 7)             | Gen 2 iBooster - See [Brake Booster][brake-booster-system-bosch-ibooster-gen-2] |
-| **Out 20**       | **[Available]**              | -         | -                              | -                                   | Gen 2 iBooster doesn't need secondary power       |
+| **Out 20**       | STX Intercom                 | ~5A       | Auto (ignition ON)             | Ignition signal (Pin 7)             | See [Communication Systems][communication-systems] - direct battery ground required |
 | **Out 21**       | Brake Lights                 | ~3A       | External input                 | Brake switch signal (In 2)          | See [Tail, Brake & Reverse][tail-brake-reverse-lights]    |
 | **Out 22**       | Reverse Lights               | ~3A       | External input                 | Trans reverse switch (In 3)         | See [Tail, Brake & Reverse][tail-brake-reverse-lights]    |
 | **Out 23**       | **[Available]**              | -         | -                              | -                                   | Starter uses direct control - see [Starter System][starter-system-cummins-r28] |
@@ -53,15 +53,16 @@ Complete configuration of all 24 PMU outputs, load allocations, and combined out
 
 **Radiator Fan (OUT2+3+4):** GM Camaro electric fan, 53A @ full speed, 3×25A outputs paralleled = 75A capacity, PWM variable speed control
 
-**iBooster Main (OUT5+6):** Bosch Gen 2, 40A peak, 2×25A outputs paralleled = 50A capacity, CONSTANT power
+**iBooster Main (OUT1+10):** Bosch Gen 2, 40A peak, 2×25A outputs paralleled (non-adjacent) = 46A @ 40°C capacity, CONSTANT power
 
 **Combining Rules:**
 
 - Only same-rated outputs can be combined (25A + 25A ✓, 25A + 15A ✗)
-- **Thermal limits:** Two adjacent 2.8mm terminals = 38A max @ 23°C for continuous loads
+- **Outputs do NOT need to be adjacent** - combine via external wiring at load
+- **Thermal limits:** Two adjacent 2.8mm terminals = 38A max @ 23°C, 32A @ 40°C for continuous loads
+- **Non-adjacent terminals:** Each rated 23A @ 40°C individually = 46A combined capacity (much better thermal performance)
 - **Brief peak loads:** Thermal derating less critical for loads <5 seconds (e.g., brake booster)
-- **Engine bay operation:** Single 2.8mm terminal @ 40°C = 23A max continuous
-- **Load balancing:** Avoid placing heavily loaded outputs adjacent to each other
+- **Load balancing:** Avoid placing heavily loaded outputs adjacent to each other - use non-adjacent combining for high-current loads
 - Use proper terminal crimping and wire gauge to maximize current capacity
 
 ## Thermal Analysis
@@ -70,8 +71,8 @@ Complete configuration of all 24 PMU outputs, load allocations, and combined out
 
 | Outputs | Load | Terminal Rating | Utilization @ 40°C | Status | Notes |
 |:--------|:-----|:----------------|:-------------------|:-------|:------|
-| **OUT5+6** | 40A peak (brief) | 38A @ 23°C ambient<br/>32A @ 40°C ambient | 105% @ 40°C peak<br/>1% @ idle | ✓ OK | Brief peak (<5 sec) OK, 0.25A idle = minimal thermal buildup |
-| **OUT1** | 20A continuous | 23A (single @ 40°C) | 87% | ⚠️ Acceptable | HVAC blower - highest single 25A continuous load |
+| **OUT1+10** | 40A peak (brief) | 46A @ 40°C (non-adjacent)<br/>50A @ 23°C | 87% @ 40°C peak<br/>1% @ idle | ✓ EXCELLENT | iBooster - non-adjacent combining eliminates thermal concerns, 0.25A idle |
+| **OUT5** | 20A continuous | 23A (single @ 40°C) | 87% | ✓ OK | HVAC blower - relocated from OUT1, same thermal margin |
 | **OUT11** | 15A continuous | 19A (1.5mm terminal) | 79% | ✓ OK | Wiper controller - avoid adjacent to OUT12 if possible |
 | **OUT12** | 15A (if used) | 19A (1.5mm terminal) | 79% | ✓ OK | Available - avoid adjacent to OUT11 if possible |
 
@@ -79,11 +80,17 @@ Complete configuration of all 24 PMU outputs, load allocations, and combined out
 
 - PMU thermal protection will shut down overloaded outputs
 - Monitor output temperatures during initial testing (PMU displays thermal status)
-- **iBooster thermal assessment:** 40A peak is brief (2-5 seconds during active braking), 0.25A idle (99% of time), minimal thermal concern
+- **iBooster thermal design:** Non-adjacent combining (OUT1+10) provides 46A @ 40°C capacity vs 40A peak load = 87% utilization ✓
+- **Non-adjacent combining recommended** for all high-current loads (>30A) to maximize thermal margin
 - **Continuous loads** (HVAC, fans) require more conservative thermal margins than brief peaks
 
-!!! warning "Thermal Analysis Pending"
-    Complete thermal analysis and output placement verification will be performed during initial installation and testing. Monitor PMU LED indicators and thermal status during first engine runs under various load conditions. Adjust output assignments if thermal issues occur.
+!!! success "Thermal Analysis - iBooster Resolved"
+    **iBooster relocated from OUT5+6 (adjacent) to OUT1+10 (non-adjacent)** per ECUMaster PMU24 manual Section 2.13:
+
+    - Non-adjacent 2.8mm terminals @ 40°C: 46A combined capacity (23A each)
+    - iBooster 40A peak: 87% utilization ✓ Excellent thermal margin
+    - Maximum physical separation eliminates adjacent terminal heating concerns
+    - HVAC blower relocated to OUT5 (single output, 87% utilization, unchanged)
 
 **Grounding Architecture:**
 

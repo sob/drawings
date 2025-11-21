@@ -223,6 +223,51 @@ Section 1 documents the complete power generation and distribution architecture 
 - Reference-style links in all documentation
 - Images in central `/docs/jeep_lj/images/` location
 
+## Standards Exceptions (Intentional Design Decisions)
+
+**IMPORTANT:** Some design decisions intentionally differ from general marine electrical standards (ABYC E-11) because this is an **automotive off-road build**, not a marine vessel.
+
+**See [STANDARDS-EXCEPTIONS.md][standards-exceptions] for complete documentation.**
+
+**Key Intentional Decisions (NOT oversights):**
+
+1. **Winch: No external circuit breaker**
+   - Per WARN manufacturer specifications
+   - Internal thermal protection + contactor disconnect
+   - Standard automotive practice (factory winch installations have no CB)
+   - **Do NOT flag as missing protection**
+
+2. **Starter: No external circuit breaker**
+   - Cable sizing as protection for brief cranking loads (automotive standard)
+   - Optional timer relay for stuck solenoid scenario
+   - **Do NOT flag as critical safety issue**
+
+3. **Grid Heater: Direct battery connection**
+   - Fusible link protection (integrated in relay)
+   - Brief high-current load (3-5 seconds)
+   - Per Cummins manufacturer specifications
+
+4. **Alternator: No output circuit breaker**
+   - Standard automotive practice (all factory vehicles)
+   - Alternator is self-limiting (cannot exceed 270A rated output)
+
+5. **BCDC: Circuit breaker at battery only**
+   - CB within 7" of battery terminal (code compliant)
+   - No additional CB at BCDC required
+
+**Standards Applied:**
+- **Primary:** SAE J1128 (automotive electrical systems)
+- **Selective:** ABYC E-11 (marine - dual battery architecture, accessory circuits only)
+- **Always:** Manufacturer specifications take precedence
+
+**When reviewing this documentation:**
+- Apply automotive standards (SAE J1128), not blanket marine rules
+- Verify manufacturer specifications before flagging "missing protection"
+- Differentiate brief peak loads (starter, winch) from continuous duty circuits
+- Check STANDARDS-EXCEPTIONS.md before flagging intentional design decisions
+
+[standards-exceptions]: STANDARDS-EXCEPTIONS.md
+
 ## Quick Reference
 
 **Total Batteries:** 2 (Odyssey PC1500, 850 CCA, 68 Ah each)
