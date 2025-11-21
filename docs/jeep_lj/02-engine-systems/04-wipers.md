@@ -172,7 +172,7 @@ Use one washer pump to feed both front and rear via fluid line T-split:
 
 ### Rear Wiper System (Synchronized)
 1. **Rear Wiper Power:** CONSTANT power (START battery) → PMU Out 12 (15A) → rear wiper motor → chassis ground
-2. **Synchronization Logic:** PMU monitors Out 10 state → activates Out 12 when Out 10 is active
+2. **Synchronization Logic:** PMU monitors Out 11 state → activates Out 12 when Out 11 is active
 3. **Automatic Operation:** Front wipers on (any mode) → rear wiper on automatically
 
 ### Washer System (Both Front and Rear)
@@ -199,7 +199,7 @@ Use one washer pump to feed both front and rear via fluid line T-split:
 
 1. **Power (+):** CONSTANT power (START battery) → PMU Out 12 (15A capacity) → rear wiper motor power terminal (12V input)
 2. **Ground (-):** Rear wiper motor ground terminal → chassis ground (rear hardtop ground location)
-3. **Control Logic:** PMU internal programming (Out 10 state monitoring → Out 12 activation)
+3. **Control Logic:** PMU internal programming (Out 11 state monitoring → Out 12 activation)
 4. **No Manual Switch Required:** Automatic synchronization with front wipers via PMU
 
 ### Washer Pump Circuit

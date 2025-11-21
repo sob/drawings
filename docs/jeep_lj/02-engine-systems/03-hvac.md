@@ -106,8 +106,8 @@ Factory 2005 TJ HVAC system with heater and A/C. Uses vacuum-operated mode doors
 
 | Output | Circuit | Connection | Load | Notes |
 |:-------|:--------|:-----------|:-----|:------|
-| **Out 1** | A/C Clutch | A/C compressor clutch coil | 3-5A | Triggered by PMU In 9 (A/C button on factory panel) |
-| **Out 3** | Blower Motor Power | Factory blower motor power feed | ~20A | Constant power when ignition on, resistor pack controls speed |
+| **Out 17** | A/C Clutch | A/C compressor clutch coil | 3-5A | Triggered by PMU In 9 (A/C button on factory panel) |
+| **Out 5** | Blower Motor Power | Factory blower motor power feed | ~20A | Constant power when ignition on, resistor pack controls speed |
 
 **PMU Inputs:**
 
@@ -128,8 +128,8 @@ Factory TJ HVAC Control Panel
 
 PMU
         |
-        ├─ Out 1 (A/C Clutch) ─────→ A/C Compressor Clutch Coil
-        └─ Out 3 (Blower Power) ───→ Factory Blower Motor → Resistor Pack → Blower Motor
+        ├─ Out 17 (A/C Clutch) ────→ A/C Compressor Clutch Coil
+        └─ Out 5 (Blower Power) ───→ Factory Blower Motor → Resistor Pack → Blower Motor
 
 R2.8 Engine
         |
