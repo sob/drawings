@@ -47,8 +47,8 @@ Provides fused distribution for recovery and auxiliary systems powered by the AU
 
 | Slot | Fuse | Circuit | Wire Gauge | Distance | Voltage @ Load | Load | Notes |
 |:-----|:-----|:--------|:-----------|:---------|:---------------|:-----|:------|
-| MIDI-1 | 60A | [ARB Compressor][air-system] Motor 1 | 10 AWG ✓ | ~12 ft | 13.53V (2.0%) | 45A | Passenger wheel well → cargo → under passenger seat |
-| MIDI-2 | 60A | [ARB Compressor][air-system] Motor 2 | 10 AWG ✓ | ~12 ft | 13.53V (2.0%) | 45A | Passenger wheel well → cargo → under passenger seat |
+| MIDI-1 | 60A | [ARB Compressor][air-system] Motor 1 | 6 AWG ✓ | ~12 ft | 11.56V (3.6%) | 45A | Passenger wheel well → cargo → under passenger seat |
+| MIDI-2 | 60A | [ARB Compressor][air-system] Motor 2 | 6 AWG ✓ | ~12 ft | 11.56V (3.6%) | 45A | Passenger wheel well → cargo → under passenger seat |
 | MIDI-3 | - | **[Available]** | - | - | - | - | - |
 | ATC-1 | 15A | Winch Contactor Trigger | 14 AWG ✓ | ~13 ft | 13.70V (0.8%) | 10A | Passenger wheel well → front bumper via frame rail |
 | ATC-2 | - | **[Available]** | - | - | - | - | - |
