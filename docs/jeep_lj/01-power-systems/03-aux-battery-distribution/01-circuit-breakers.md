@@ -42,6 +42,6 @@ All AUX battery positive circuits protected by Mechanical Products Series 17 cir
 [rear-battery]: index.md
 [switchpros]: ../../04-control-interfaces/02-switchpros-sp1200.md
 [safetyhub]: 04-safetyhub.md
-[body-rtmr]: 04-body-pdu.md
+[body-rtmr]: 03-body-pdu.md
 
 

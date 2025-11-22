@@ -5,27 +5,50 @@ hide:
 
 # 1.4.5 PMU ARB Load Shedding Logic {#pmu-arb-load-shedding}
 
-Automatic load management during ARB compressor operation to prevent exceeding alternator capacity.
+Automatic load management during ARB compressor operation to preserve AUX battery capacity and maintain system voltage.
+
+## Dual Battery Architecture
+
+**Critical Understanding:** ARB compressor draws from **AUX battery**, NOT directly from alternator:
+
+- **ARB Compressor (90A):** Powered by AUX battery via SafetyHub 150
+- **BCDC Charging (50A max):** Replenishes AUX battery from alternator
+- **Net AUX battery drain:** 90A - 50A = 40A during compressor operation
+
+The alternator is NOT overloaded during ARB operation. The 50A BCDC significantly reduces net discharge rate, making extended air-up practical. Load shedding provides additional margin and maintains optimal voltage.
 
 ## Purpose
 
-Manage alternator capacity when ARB twin compressor runs (90A load). Automatically sheds non-critical loads to prevent exceeding 270A alternator capacity during tire inflation and air system use.
+Preserve AUX battery capacity during extended ARB compressor operation by shedding non-critical START battery loads. This maximizes BCDC charging rate and reduces overall system stress.
+
+**Secondary Goal:** Maintain comfortable voltage levels (>13.0V at START battery) for consistent PMU and accessory operation.
 
 ## Problem Statement
 
-**Alternator Capacity Issue:**
+**AUX Battery Depletion During Extended Air-Up:**
 
-ARB compressor (90A) + radiator fan (53A) + PMU typical loads (100A) + BCDC (18-25A) + cabin PDU (10A) = **271-278A total**, which exceeds 270A alternator capacity by 1-8A during extended tire inflation operations.
+```
+ARB compressor draw:        90A  (from AUX battery)
+Other AUX loads:             5A  (camera, radio, USB)
+BCDC charging rate:         50A  (to AUX battery)
+─────────────────────────────────
+Net AUX battery drain:      45A
 
-**Impact:**
-- Battery supplements deficit during tire inflation
-- Voltage drops below optimal charging range (14.2-14.4V → 13.5-13.8V)
-- Repeated deep draws reduce battery lifespan
-- System voltage may trigger low-voltage warnings
+AUX battery capacity:       68Ah
+Time to 50% SOC:           ~45 minutes continuous
+Time to 20% SOC:           ~73 minutes continuous
+```
+
+The 50A BCDC makes extended air-up practical without battery concerns. Load shedding provides additional margin and maintains optimal voltage for electronics.
+
+**Impact Without Load Shedding:**
+- Minor: AUX battery still has comfortable margin at 50A BCDC
+- START battery loads reduce BCDC charging efficiency slightly
+- Load shedding maximizes available margin for extended sessions
 
 ## Solution Overview
 
-Detect ARB compressor activation and automatically disable non-critical loads to maintain system voltage above 13.0V and stay within alternator capacity.
+Detect ARB compressor activation and disable non-critical START battery loads to maximize BCDC charging rate and maintain optimal system voltage.
 
 **Load Shedding Strategy:**
 - Shed cosmetic loads first (DRL)
@@ -74,73 +97,73 @@ ELSE:
 | PS Cooler Fan (OUT8) | 15A | Low - if coolant temp <210°F | Temperature-dependent |
 | **Total Saved** | **28-43A** | - | - |
 
-## Before/After Comparison
+## AUX Battery Impact Analysis
 
-### WITHOUT Load Shedding (Sunny Day)
+**See [AUX Battery Load Analysis][aux-load-analysis] for complete scenario details.**
 
-```
-PMU typical:        106A  (See PMU load breakdown below, excludes radiator fan)
-ARB compressor:      90A
-Radiator fan:        53A  (full speed, worst case - separate from PMU total)
-BCDC (with solar):   18A  (solar contributes 6.7A, alternator 18.3A)
-Cabin PDU:           10A
-─────────────────────────
-Total:              277A
-Alternator:         270A
-Deficit:             -7A  ❌ MARGINAL
-Battery Voltage:    ~13.3V (slight discharge)
-```
-
-**PMU 106A Typical Breakdown (radiator fan counted separately above):**
-- iBooster idle: 0.25A (40A peak brief during braking)
-- HVAC blower: 20A
-- GMRS standby: 1A (15A transmit brief)
-- Oil/PS fans: 0A (temp-triggered, not continuous)
-- Dakota Digital: 25A
-- Wiper: 0-15A (intermittent, assume 7A average)
-- Ham standby: 1A (13A transmit brief)
-- CT4: 10A
-- DRL: 8A
-- iBooster ignition: 5A
-- STX Intercom: 5A
-- A/C clutch: 5A (seasonal)
-- Brake/reverse lights: 3A (average during driving)
-- Winch trigger: 0A (manual only)
-- **Total PMU circuits (excluding radiator fan): ~106A**
-
-### WITH Load Shedding (Minimum - 28A shed)
+### WITHOUT Load Shedding
 
 ```
-PMU reduced:         78A  (was 106A, shed DRL + A/C = 13A, plus fans idle = 15A)
-ARB compressor:      90A
-Radiator fan:        53A  (full speed maintained)
-BCDC (with solar):   18A
-Cabin PDU:           10A
-─────────────────────────
-Total:              249A
-Alternator:         270A
-Margin:             +21A  ✅
-Battery Voltage:    ~13.9V (good)
+ARB compressor draw:     90A   (from AUX battery)
+Other AUX loads:          5A   (camera, radio memory, USB)
+─────────────────────────────
+Total AUX draw:          95A
+
+BCDC charging:           50A   (to AUX battery)
+─────────────────────────────
+Net AUX drain:           45A
+
+Time to 50% SOC:         45 minutes
 ```
 
-**Note:** Even with corrected PMU baseline (106A vs 100A), minimum load shedding still provides adequate margin.
+**Alternator Load (START battery):** See [START Battery Load Analysis][start-load-analysis]
+- PMU + radiator fan + BCDC = ~165A typical
+- Alternator: 270A
+- **Margin: +105A** ✅ Alternator is NOT the constraint
 
-### WITH Load Shedding (Maximum - 43A shed)
+### WITH Load Shedding (Minimum - 13A shed from START)
 
-**When oil and coolant temps allow both cooler fans to be disabled:**
+Shedding DRL (8A) and A/C clutch (5A) from PMU reduces START battery load, allowing maximum BCDC output:
 
 ```
-PMU reduced:         63A  (was 106A, shed 43A total: DRL+A/C+oil fan+PS fan)
-ARB compressor:      90A
-Radiator fan:        53A  (full speed maintained)
-BCDC (with solar):   18A
-Cabin PDU:           10A
-─────────────────────────
-Total:              228A
-Alternator:         270A
-Margin:             +42A  ✅ Excellent
-Battery Voltage:    ~14.2V (excellent)
+START battery:
+PMU reduced:          93A   (was 106A, shed DRL + A/C)
+Radiator fan:         35A   (moderate, stationary)
+BCDC at full rate:    50A   (maximized)
+─────────────────────────────
+START total:         178A
+Alternator:          270A
+Margin:              +92A   ✅
+
+AUX battery:
+ARB compressor:       90A
+Other AUX loads:       5A
+BCDC charging:        50A   (full rate maintained)
+─────────────────────────────
+Net AUX drain:        45A   (unchanged - BCDC still maxed)
 ```
+
+**Primary benefit:** Ensures BCDC maintains full 50A output even if START battery voltage sags.
+
+### WITH Load Shedding (Maximum - 43A shed from START)
+
+**When oil/coolant temps allow disabling cooler fans:**
+
+```
+START battery:
+PMU reduced:          63A   (shed DRL + A/C + oil fan + PS fan)
+Radiator fan:         35A   (moderate)
+BCDC at full rate:    50A
+─────────────────────────────
+START total:         148A
+Alternator:          270A
+Margin:             +122A   ✅ Excellent
+
+AUX battery:
+Net AUX drain:        45A   (unchanged)
+```
+
+**Benefit:** Maximum alternator headroom, stable voltage for all electronics.
 
 ## Implementation Details
 
@@ -288,8 +311,12 @@ LOG SwitchPros_OUT11_ARB (state or trigger input)
 
 ## Related Documentation
 
+**Load Analysis:**
+- [START Battery Load Analysis][start-load-analysis] - Alternator scenarios
+- [AUX Battery Load Analysis][aux-load-analysis] - ARB impact scenarios
+
 **Power Systems:**
-- [Alternator Specifications][alternator] - 270A capacity, load analysis
+- [Alternator Specifications][alternator] - 270A capacity
 - [PMU Overview][pmu-overview] - PMU capacity and limitations
 - [PMU Outputs][pmu-outputs] - Individual output assignments
 - [PMU Programming][pmu-programming] - Other programming examples
@@ -298,12 +325,11 @@ LOG SwitchPros_OUT11_ARB (state or trigger input)
 - [Air System][air-system] - ARB twin compressor specifications (90A total load)
 - [SwitchPros][switchpros] - OUTPUT-11 control integration
 
-**Analysis:**
-- `/docs/ANALYSIS-2025-11-19-CURRENT.md` Section 1.1 - Detailed alternator capacity analysis
-
 [alternator]: ../01-power-generation/02-alternator.md
 [pmu-overview]: 01-pmu-overview.md
 [pmu-outputs]: 03-pmu-outputs.md
 [pmu-programming]: 04-pmu-programming.md
 [air-system]: ../../07-exterior-systems/02-air-system.md
 [switchpros]: ../../04-control-interfaces/02-switchpros-sp1200.md
+[start-load-analysis]: ../02-starter-battery-distribution/02-load-analysis.md
+[aux-load-analysis]: ../03-aux-battery-distribution/05-load-analysis.md

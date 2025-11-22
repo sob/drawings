@@ -69,7 +69,7 @@ tags:
 
 [grounding-architecture]: index.md
 [engine-bay-ground-bus]: 03-engine-bay-ground-bus.md
-[body-rtmr]: ../03-aux-battery-distribution/04-body-pdu.md
+[body-rtmr]: ../03-aux-battery-distribution/03-body-pdu.md
 [audio-system]: ../../05-audio-systems/01-audio.md
 [wiper-system]: ../../02-engine-systems/04-wipers.md
 [bluesea-2105]: https://www.bluesea.com/products/2105/MaxiBus_250A_BusBar_-_Two_5_16in-18_Studs_and_Twelve_10-24_Screws

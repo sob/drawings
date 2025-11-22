@@ -157,7 +157,7 @@ Items completed since last update.
 [turn-signals]: ../03-lighting-systems/03-turn-signals.md
 [offroad-lighting]: ../03-lighting-systems/06-offroad-lighting.md
 [recovery-systems]: ../07-exterior-systems/01-recovery-systems.md
-[body-rtmr]: ../01-power-systems/03-aux-battery-distribution/04-body-pdu.md
+[body-rtmr]: ../01-power-systems/03-aux-battery-distribution/03-body-pdu.md
 [section-1-install]: ../01-power-systems/installation-checklist.md
 [pmu-outputs]: ../01-power-systems/04-pmu/03-pmu-outputs.md
 [grid-heater]: ../02-engine-systems/08-grid-heater.md

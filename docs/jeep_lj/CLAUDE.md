@@ -268,7 +268,7 @@ grep -r "TBD" docs/jeep_lj --include="*.md" | grep -v "PHASE1-ANALYSIS" | grep -
 - **PMU** = PMU24 power management unit
 - **CT4** = Command Touch CT4 lighting controller
 - **SwitchPros** = SwitchPros SP-1200 RCR-Force 12
-- **BCDC** = RedArc BCDC Alpha 25 DC-DC charger
+- **BCDC** = RedArc BCDC Alpha 50 DC-DC charger
 - **BODY PDU** = Body relay/timer/fuse panel
 
 ### PMU Terminology Standards
@@ -320,6 +320,60 @@ All wire sizing calculations for engine bay circuits MUST include temperature de
 1. **Tables preferred** for multi-output devices (PMU, controllers)
 2. **Mermaid diagrams** ONLY for simple power flow (2-5 connections max)
 3. **Manufacturer diagrams** always preferred over custom diagrams
+
+### Load Analysis Guidelines
+
+**Dual Battery Architecture:**
+
+This vehicle uses isolated dual batteries:
+
+- **START Battery:** Charged by alternator (270A), powers PMU and engine systems
+- **AUX Battery:** Charged by BCDC (50A max), powers SwitchPros and accessories
+- **BCDC is the ONLY link** between batteries during normal operation
+
+**When analyzing loads, ALWAYS:**
+
+1. Identify which battery powers the circuit (START vs AUX)
+2. Analyze each battery's loads separately
+3. Use realistic scenarios (daily driving, offroad, airing up, recovery)
+4. Account for duty cycles (brief peaks vs continuous loads)
+5. Consider mutually exclusive activities (can't brake hard while winching)
+6. Reference the load analysis documents:
+   - [START Battery Load Analysis][start-load-analysis]
+   - [AUX Battery Load Analysis][aux-load-analysis]
+
+**NEVER create "theoretical worst case" scenarios:**
+
+- Do NOT sum all loads at peak simultaneously
+- Do NOT combine mutually exclusive activities (braking + winching + radio TX)
+- Do NOT add AUX battery loads to alternator calculations
+- Do NOT flag alternator "undersizing" based on impossible scenarios
+
+**Correct approach:**
+
+- Analyze realistic scenarios that could actually occur
+- Flag concerns ONLY if a specific realistic scenario exceeds capacity
+- Consider user behavior (engine RPM during air-up, breaks during recovery)
+
+**Example - WRONG:**
+```
+PMU max: 253A + SwitchPros max: 127A + ARB: 90A + Winch: 400A = 870A
+Alternator: 270A = CRITICAL UNDERSIZING ❌
+```
+
+**Example - CORRECT:**
+```
+START Battery Scenario (Offroad):
+PMU typical: 115A + Radiator fan: 53A + BCDC: 50A = 218A
+Alternator: 270A = 52A margin ✅
+
+AUX Battery Scenario (Night Offroad):
+SwitchPros: 70A, BCDC charging: 50A
+Net drain: 20A, Time to 50% SOC: 102 minutes ✅
+```
+
+[start-load-analysis]: 01-power-systems/02-starter-battery-distribution/02-load-analysis.md
+[aux-load-analysis]: 01-power-systems/03-aux-battery-distribution/05-load-analysis.md
 
 ## Common Mistakes to Avoid
 

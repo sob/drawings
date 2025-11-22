@@ -24,7 +24,7 @@ Documents wheel well power distribution from the AUX battery (Odyssey PC1500).
 
 **Use when:** Finding CONSTANT bus bar capacity, available studs, or what connects to the bus
 
-### `04-body-pdu.md` - BODY PDU
+### `03-body-pdu.md` - BODY PDU
 
 **Contains:** Body relay/timer/fuse panel specifications and circuit assignments
 
@@ -50,7 +50,7 @@ Documents wheel well power distribution from the AUX battery (Odyssey PC1500).
 
 **"What connects to the CONSTANT bus bar?"** → `02-constant-bus.md` stud assignments
 
-**"What's powered by BODY PDU?"** → `04-body-pdu.md` circuit assignments
+**"What's powered by BODY PDU?"** → `03-body-pdu.md` circuit assignments
 
 **"How does AUX battery get charged?"** → BCDC (1.1.3)
 
@@ -65,5 +65,5 @@ Documents wheel well power distribution from the AUX battery (Odyssey PC1500).
 
 **Changing BODY PDU circuits:**
 
-1. Update `04-body-pdu.md` circuit table
+1. Update `03-body-pdu.md` circuit table
 2. Update affected system docs (Section 5)

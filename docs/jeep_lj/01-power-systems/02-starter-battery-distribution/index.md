@@ -14,7 +14,7 @@ hide:
 The START battery (driver wheel well) provides power for critical engine and safety systems:
 
 1. **Direct high-current** → Starter (no CB), alternator charging input (no CB)
-2. **Circuit breaker protected** → PMU (250A CB), BCDC (40A CB)
+2. **Circuit breaker protected** → PMU (250A CB), BCDC (80A CB)
 3. **Direct low-current** → ECM, grid heater (fusible link protection)
 
 See [Circuit Breakers][circuit-breakers] for complete CB specifications. All CBs mounted in wheel well within 7" of battery (code compliant).
@@ -37,7 +37,7 @@ See [Circuit Breakers][circuit-breakers] for complete CB specifications. All CBs
 | 2 | Cummins R2.8 Starter | 2/0 AWG ✓ | 6 ft | 11.53V (3.9%) | None | 400-600A cranking current - see [Starter][starter] | Active |
 | | **━━━ CIRCUIT BREAKER PROTECTED LOADS ━━━** | | | | | | |
 | 3 | PMU24 | 2/0 AWG ✓ | ~7 ft | 14.05V (2.4% @ 60°C) | 250A CB (wheel well) | Power management unit - see [PMU][pmu] | Active |
-| 4 | BCDC Alpha 25 | 4 AWG ✓ | ~10 ft | 13.84V (1.2% @ 60°C) | 40A CB (wheel well) | DC-DC charger to AUX battery - see [BCDC][bcdc] | Active |
+| 4 | BCDC Alpha 50 | 4 AWG ✓ | ~6 ft | 13.89V (0.94%) | 80A CB (wheel well) | DC-DC charger to AUX battery - see [BCDC][bcdc] | Active |
 | | **━━━ DIRECT CONNECTIONS ━━━** | | | | | | |
 | 6 | Cummins ECM | Per Cummins | Short | ~12V | Fusible link | Engine control module | Active |
 | 7 | Grid Heater Relay | Per Cummins | Short | ~12V | Fusible link | Powers grid heater element - see [Grid Heater][grid-heater] | Active |
@@ -73,7 +73,7 @@ See [Circuit Breakers][circuit-breakers] for complete CB specifications. All CBs
 - [Grounding Architecture][grounding] - Complete grounding system
 - [PMU24][pmu] - Power management unit (radiator fan, Dakota Digital, wipers, lights)
 - **REMOVED:** SafetyHub relocated to AUX battery distribution - see [1.3 AUX Battery Distribution][aux-battery]
-- [BCDC Alpha 25][bcdc] - DC-DC charger to AUX battery
+- [BCDC Alpha 50][bcdc] - DC-DC charger to AUX battery
 - [Starter System][starter] - Starter specifications and wiring
 - [Alternator][alternator] - Charging system
 - [AUX battery Distribution][aux-battery] - Aux/accessory battery system

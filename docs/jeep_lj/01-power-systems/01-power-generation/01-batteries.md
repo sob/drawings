@@ -38,7 +38,7 @@ tags:
 
 - **START battery (Driver Wheel Well):** Critical systems - Engine starting, PMU power, SafetyHub circuits, HVAC, radiator fan
 - **AUX battery (Passenger Wheel Well):** Accessories - SwitchPros, BODY PDU, winch, audio system
-- **Isolation:** RedArc BCDC Alpha 25 (independent operation when engine off)
+- **Isolation:** RedArc BCDC Alpha 50 (independent operation when engine off)
 - **Jump Start:** BCDC jump start assist can parallel batteries if START battery fails (both 850 CCA rated)
 - **Redundancy:** Vehicle operates on START battery alone if AUX battery system fails
 

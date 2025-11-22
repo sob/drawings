@@ -73,5 +73,5 @@ Provides organized distribution for accessory circuits in the rear wheel well co
 [rear-battery]: index.md
 [circuit-breakers]: 01-circuit-breakers.md
 [switchpros]: ../../04-control-interfaces/02-switchpros-sp1200.md
-[body-rtmr]: 04-body-pdu.md
+[body-rtmr]: 03-body-pdu.md
 [installation]: ../installation-checklist.md#phase-2-power-distribution

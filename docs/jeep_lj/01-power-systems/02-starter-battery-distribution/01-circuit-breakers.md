@@ -16,9 +16,9 @@ All START battery positive circuits protected by Mechanical Products Series 17 c
 | Circuit | Model | Rating | Reset Type | Power Path | Max Load | Sizing |
 |:--------|:------|:------:|:-----------|:-----------|:---------|:-------|
 | **PMU24** | Mechanical Products<br/>([174-S2-250-2][mp-250]) | 250A | Manual | START battery+<br/>└→ 250A CB<br/>&nbsp;&nbsp;&nbsp;└→ PMU24 | ~253A theoretical peak (140-170A typical) | 99% of max load (with all radios transmitting + full radiator fan) |
-| **BCDC Input** | Mechanical Products<br/>([174-S2-040-2][mp-40]) | 40A | Manual | START battery+<br/>└→ 40A CB<br/>&nbsp;&nbsp;&nbsp;└→ BCDC Alpha 25 | 27-29A BCDC input | 138-148% of max load |
+| **BCDC Input** | Mechanical Products<br/>([174-S2-080-2][mp-80]) | 80A | Manual | START battery+<br/>└→ 80A CB<br/>&nbsp;&nbsp;&nbsp;└→ BCDC Alpha 50 | 50-55A BCDC input | 145-160% of max load |
 
-**Total Circuit Breakers:** 2 (PMU 250A, BCDC 40A)
+**Total Circuit Breakers:** 2 (PMU 250A, BCDC 80A)
 
 **Eliminated:** SafetyHub 150A CB (communication loads moved to PMU OUT6/12/20), Radiator Fan 100A CB (now PMU controlled), Critical Cabin PDU 40A CB (Dakota Digital now PMU controlled)
 
@@ -36,11 +36,11 @@ All START battery positive circuits protected by Mechanical Products Series 17 c
 
 - [START battery Distribution Overview][front-battery]
 - [PMU Outputs][pmu-outputs] - Load details for PMU circuit (radiator fan, Dakota Digital, communication systems, etc.)
-- [BCDC Alpha 25][bcdc] - DC-DC charger specifications
+- [BCDC Alpha 50][bcdc] - DC-DC charger specifications
 - [Communication Systems][comms] - Radio and intercom specifications (now PMU powered)
 
 [mp-250]: https://www.waytekwire.com/item/49082/
-[mp-40]: https://www.waytekwire.com/item/48981/
+[mp-80]: https://www.waytekwire.com/item/49015/
 [front-battery]: index.md
 [pmu-outputs]: ../04-pmu/03-pmu-outputs.md
 [bcdc]: ../01-power-generation/03-bcdc.md

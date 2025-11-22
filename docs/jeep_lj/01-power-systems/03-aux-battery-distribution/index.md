@@ -16,7 +16,7 @@ The AUX battery (passenger wheel well) provides power for high-current accessori
 1. **Direct high-current** → Winch (recovery system, no CB per manufacturer spec)
 2. **Fused distribution** → SafetyHub 150 (ARB compressor, winch trigger) via 150A CB
 3. **CONSTANT Bus Bar** (Blue Sea 2104 PowerBar, 225A) - Feeds SwitchPros, BODY PDU
-4. **Direct charging input** → BCDC Alpha 25 output
+4. **Direct charging input** → BCDC Alpha 50 output
 
 See [CONSTANT Bus Bar][constant-bus] for complete bus bar specifications, [SafetyHub][aux-safetyhub] for fused distribution, and [Circuit Breakers][circuit-breakers] for CB details.
 
@@ -33,7 +33,7 @@ See [CONSTANT Bus Bar][constant-bus] for complete bus bar specifications, [Safet
 | # | Connection | Wire Gauge | Distance | Voltage @ Load | Protection | Destination/Notes | Status |
 |:--|:-----------|:-----------|:---------|:---------------|:-----------|:------------------|:-------|
 | | **━━━ CHARGING INPUT ━━━** | | | | | | |
-| 1 | BCDC Alpha 25 Output | 6 AWG ✓ | 5-6 ft | 13.68V (0.9%) | None | 25A DC-DC charging from START battery - see [BCDC Alpha 25][bcdc] | Active |
+| 1 | BCDC Alpha 50 Output | 4 AWG ✓ | 5-6 ft | 13.89V (0.94%) | None | 50A DC-DC charging from START battery - see [BCDC Alpha 50][bcdc] | Active |
 | | **━━━ RECOVERY SYSTEMS ━━━** | | | | | | |
 | 2 | Warn VR EVO 10-S Winch | 1/0 AWG ✓ | 13 ft one-way | 13.12V (4.9%) @ 250A<br>12.71V (7.9%) @ 400A | None (see note) | 250A typical, 400A peak (brief) - see [Recovery Systems][recovery] | Active |
 | | **━━━ FUSED DISTRIBUTION ━━━** | | | | | | |
@@ -114,7 +114,7 @@ See [CONSTANT Bus Bar][constant-bus] for complete bus bar specifications, [Safet
 |:--|:-----------|:-----------|:---------|:--------------|:-------|
 | 1 | **Rear Frame Rail Ground** | 2/0 AWG ✓ | ~3 ft | Primary ground for AUX battery and CONSTANT bus | Active |
 | 2 | **START battery Ground Reference** | 1/0 AWG ✓ | 5-6 ft | Critical for BCDC operation and fault current path | Active |
-| 3 | **BCDC Alpha 25** | 6 AWG ✓ | Short | Direct connection per manufacturer spec | Active |
+| 3 | **BCDC Alpha 50** | 4 AWG ✓ | Short | Direct connection per manufacturer spec | Active |
 | 4 | **Fusion Apollo Amp** | Per amp spec | <18" | Chassis ground OK if <18" run, direct connection preferred | Active |
 | 5 | **Warn VR EVO 10-S Winch** | 1/0 AWG ✓ | 13 ft one-way | Winch negative return - see [Recovery Systems][recovery] | Active |
 
@@ -141,7 +141,7 @@ See [CONSTANT Bus Bar][constant-bus] for complete bus bar specifications, [Safet
 [aux-safetyhub]: 04-safetyhub.md
 [constant-bus]: 02-constant-bus.md
 [switchpros]: ../../04-control-interfaces/02-switchpros-sp1200.md
-[body-rtmr]: 04-body-pdu.md
+[body-rtmr]: 03-body-pdu.md
 [power-gen]: ../01-power-generation/index.md
 [batteries]: ../01-power-generation/01-batteries.md
 [bcdc]: ../01-power-generation/03-bcdc.md

@@ -39,7 +39,7 @@ Section 1 documents the complete power generation and distribution architecture 
 
 **Files:**
 - `01-circuit-breakers.md` - All AUX battery CBs (SwitchPros, BODY PDU)
-- `04-body-pdu.md` - Body relay/fuse panel for cabin circuits
+- `03-body-pdu.md` - Body relay/fuse panel for cabin circuits
 - `index.md` - AUX battery overview with terminal connection tables
 - `CLAUDE.md` - Navigation guide
 
