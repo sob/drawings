@@ -132,9 +132,13 @@ Organized by installation order for efficient build workflow.
 
 ### BODY PDU Physical Installation
 
-- [ ] Determine BODY PDU part number
-- [ ] Mount under dash (passenger side)
-- [ ] Route CONSTANT power from AUX battery via 8 AWG, 100A circuit breaker
+- [ ] Verify all circuit breakers and relays are functional in LR-2 unit
+- [ ] Replace 24V relays (K40, K42, K53) with 12V relays
+- [ ] Mount LR-2 on firewall (body side, passenger side)
+- [ ] Route CONSTANT power from AUX battery via 6 AWG, 100A circuit breaker
+- [ ] Create custom wiring harnesses to adapt J301-J306 military connectors to civilian loads
+- [ ] Route heated seat dash switches to LR-2 relay control inputs (K21, K22)
+- [ ] Label repurposed circuits on LR-2 enclosure (match CB positions to new functions)
 
 ### SwitchPros RCR-Force 12 Physical Installation
 

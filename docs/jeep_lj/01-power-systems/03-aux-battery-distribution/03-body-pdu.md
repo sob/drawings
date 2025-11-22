@@ -62,11 +62,11 @@ hide:
 | K27 | TRAILER BO STOP | **[Available]** | 12V | - | Future expansion |
 | K30 | TRAILER REAR LEFT | **[Available]** | 12V | - | Future expansion |
 | K31 | TRAILER REAR RIGHT | **[Available]** | 12V | - | Future expansion |
-| K53 | RADIO | **[Available]** | 24V | - | Not usable (24V coil) |
-| K40 | START DISABEL | **[Available]** | 24V | - | Not usable (24V coil) |
-| K42 | ENGINE PTO | **[Available]** | 24V | - | Not usable (24V coil) |
+| K53 | RADIO | **[Available]** | 24V→12V | - | Replace with 12V relay |
+| K40 | START DISABEL | **[Available]** | 24V→12V | - | Replace with 12V relay |
+| K42 | ENGINE PTO | **[Available]** | 24V→12V | - | Replace with 12V relay |
 
-**Relay Utilization:** 2 of 8 used, 5 available (3 are 24V only)
+**Relay Utilization:** 2 of 8 used, 6 available (3 require 12V relay replacement)
 
 **Total Load:** ~56A maximum (Radio 16A + USB 13A + Camera 10A + Seats 10A peak + Winch control 2A, 48A sustained)
 
@@ -77,15 +77,9 @@ hide:
 
 ## Outstanding Items
 
-- [ ] Verify all circuit breakers and relays are functional in LR-2 unit
 - [ ] Identify pinout for J301-J306 Metri-Pack connectors (military TM manual or reverse engineering)
 - [ ] Determine LR-2 ground connection location (chassis ground or direct to AUX battery)
-- [ ] Mount LR-2 on firewall (body side, passenger side)
-- [ ] Create custom wiring harnesses to adapt J301-J306 military connectors to civilian loads
-- [ ] Route heated seat dash switches to LR-2 relay control inputs (K21, K22)
-- [ ] Verify 12V relays (K21, K22, K27, K30, K31) function correctly - replace if needed
-- [ ] Label repurposed circuits on LR-2 enclosure (match CB positions to new functions)
-- [ ] Test 24V relays (K40, K42, K53) - confirm not usable in 12V system
+- [ ] Determine replacement 12V relay part numbers for K40, K42, K53 (currently 24V coils)
 
 **Design Notes:**
 - Heated seat current: 5A peak, 2A sustained per seat (verified with vendor)
