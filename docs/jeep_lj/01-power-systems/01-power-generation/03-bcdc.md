@@ -99,9 +99,9 @@ The BCDC includes a battery temperature sensor (2-pin, polarity reversible) that
 
 **Installation Location:**
 
-- **Mount Position:** AUX battery negative terminal
+- **Mount Position:** AUX battery positive terminal
 - **Attachment:** Ring terminal under battery terminal bolt
-- **Why Terminal:** Most accurate battery temperature reading, direct thermal contact
+- **Why Positive Terminal:** Measures both voltage and temperature at the battery for accurate charge control
 
 **Why Required:**
 
@@ -112,7 +112,7 @@ The BCDC includes a battery temperature sensor (2-pin, polarity reversible) that
 
 **Installation Notes:**
 
-1. Install ring terminal on AUX battery negative terminal bolt
+1. Install ring terminal on AUX battery positive terminal bolt
 2. Route sensor cable to BCDC (short run - both in passenger wheel well)
 3. Plug into BCDC temperature sensor port (2-pin connector)
 
