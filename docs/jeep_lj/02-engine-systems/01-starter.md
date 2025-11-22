@@ -105,8 +105,9 @@ Ignition START → Clutch Switch → Cole Hersee 24213 Coil → Ground
 
 ## Outstanding Items
 
-- [ ] Determine ignition START wire routing through firewall (Grommet 2)
-- [ ] Verify exact firewall mounting location for Cole Hersee 24213 solenoid
+None - design complete. See [installation checklist][install-checklist] for build tasks.
+
+[install-checklist]: ../01-power-systems/installation-checklist.md
 
 ## Related Documentation
 

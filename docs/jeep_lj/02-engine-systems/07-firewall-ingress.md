@@ -82,11 +82,12 @@ Factory Cummins interior harness includes:
 
 | Circuit | PMU Input | Wire Gauge | Notes |
 |:--------|:----------|:-----------|:------|
-| Clutch safety switch | Digital input | 18 AWG | Starter interlock |
+| Ignition START | - | 16 AWG | To clutch switch (starter interlock input) |
+| Clutch safety switch | Digital input | 18 AWG | Starter interlock output to Cole Hersee 24213 |
 | Brake light switch | Digital input | 18 AWG | Brake light activation |
 | A/C request | Digital input | 18 AWG | A/C clutch enable signal |
 
-**Estimated wire count:** 3-4 wires (18 AWG signals)
+**Estimated wire count:** 4-5 wires (16-18 AWG signals)
 
 **Grommet size:** 3/8" ID
 
