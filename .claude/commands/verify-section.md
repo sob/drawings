@@ -1,3 +1,8 @@
+---
+description: Audit a documentation section for quality and consistency
+argument-hint: <section-path>
+---
+
 # Verify Documentation Section
 
 Audit the specified documentation section for quality and consistency issues.

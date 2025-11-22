@@ -1,3 +1,7 @@
+---
+description: Check wire gauge, length, and rating consistency
+---
+
 # Verify Wire Specifications
 
 Check wire gauge, length, and rating consistency across all documentation.

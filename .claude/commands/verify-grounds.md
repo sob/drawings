@@ -1,3 +1,7 @@
+---
+description: Cross-check PMU outputs have documented ground paths
+---
+
 # Verify Ground Connections
 
 Cross-check that all PMU outputs have documented ground paths and ground buses are consistent.

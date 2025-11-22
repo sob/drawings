@@ -1,3 +1,7 @@
+---
+description: Trace power from batteries through distribution to loads
+---
+
 # Verify Power Distribution Paths
 
 Trace power from batteries through distribution to loads, checking for consistency.

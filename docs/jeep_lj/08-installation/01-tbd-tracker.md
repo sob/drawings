@@ -9,7 +9,7 @@ hide:
 
 **Last Updated:** 2025-11-22
 
-**Total Open Items:** 32
+**Total Open Items:** 41
 
 ---
 
@@ -44,7 +44,6 @@ Items that improve the design but don't block installation.
 
 | Item | Description | File | Priority |
 |:-----|:------------|:-----|:---------|
-| Radiator Fan Mounting | Physical location on radiator | [Radiator Fan][radiator-fan] | Medium |
 | Firewall Grommet Circuits | Complete wire bundle lists | [Wire Routing][wire-routing] | Medium |
 | Passenger Wheel Well Routing | SwitchPros outputs path | [Wire Routing][wire-routing] | Medium |
 | Dash to Console Routing | Switch panels, USB, radio | [Wire Routing][wire-routing] | Medium |
@@ -62,6 +61,10 @@ Items that improve the design but don't block installation.
 | WolfBox Cable Length | Mirror to rear routing (20-30 ft) | [Communication][communication] | Medium |
 | Turn Signal Mounting | Front fenders or bumper | [Turn Signals][turn-signals] | Medium |
 | Winch 3-Position Switch Assignment | Which SwitchPros output controls | [Recovery Systems][recovery-systems] | Medium |
+| Cummins Harness Wire Count | Wire bundle specification for engine harness | [Wire Routing][wire-routing] | Medium |
+| RF Power Grommet Location | Grommet 6 location near battery for radio power | [Wire Routing][wire-routing] | Medium |
+| Solar Panel Wire Gauge | Wire sizing for Cascadia 4x4 80W panel connection | [BCDC][bcdc] | Medium |
+| Radiator Fan Wire Length | Wire length from PMU to fan (~6 ft estimated) | [Radiator Fan][radiator-fan] | Medium |
 
 ---
 
@@ -82,6 +85,7 @@ Items that can be determined during build.
 | RGB Controller | For rock light color/pattern selection | [Offroad Lighting][offroad-lighting] | Low |
 | Recovery Board Storage | MaxTrax storage location | [Recovery Systems][recovery-systems] | Low |
 | Hi-Lift Jack Mount | Hood, bumper, or rear swing-out | [Recovery Systems][recovery-systems] | Low |
+| BIM Module Current Draw | Current draw for BIM-17-2, BIM-11-2, BIM-12-2, BIM-13-2 (powered via BIM cable) | [Gauge Cluster][gauge-cluster] | Low |
 
 ---
 
@@ -91,7 +95,7 @@ Items that are estimated and need actual product specs to confirm.
 
 | Item | Description | File | Action Needed |
 |:-----|:------------|:-----|:--------------|
-| **Grid Heater Current** | Design value 80A - verify via element resistance measurement during installation (~0.15Ω @ 12V) | [Grid Heater][grid-heater] | Measure resistance |
+| Grid Heater Current | Design value 80A - verify via element resistance measurement during installation (~0.15Ω @ 12V) | [Grid Heater][grid-heater] | Measure resistance |
 | Fusion Amp Current | Verify 35-45A continuous rating | [Audio Systems][audio-systems] | Verify spec sheet |
 
 ---
@@ -102,6 +106,7 @@ Items completed since last update.
 
 | Item | Resolution | Date |
 |:-----|:-----------|:-----|
+| Radiator Fan Mounting | Radiator shroud (documented in fan motor specs) | 2025-11-22 |
 | Heated Seat Load | Verified with vendor: 5A peak, 2A sustained per seat (not 15A) | 2025-11-22 |
 | SafetyHub Location | Consolidated to single SafetyHub 150 on AUX battery (ARB compressor, winch trigger); communications moved to PMU | 2025-11-21 |
 | AUX Battery CONSTANT Bus CB | Resolved by connecting SafetyHub to CONSTANT bus - each load (SwitchPros, SafetyHub, BODY PDU) has individual CB protection | 2025-11-22 |
@@ -132,10 +137,10 @@ Items completed since last update.
 |:---------|:------|
 | 🔴 Critical | 0 |
 | ⚠️ High | 6 |
-| 📋 Medium | 18 |
-| 📝 Low | 11 |
-| 🔍 Verify | 3 |
-| **TOTAL** | **32** |
+| 📋 Medium | 21 |
+| 📝 Low | 12 |
+| 🔍 Verify | 2 |
+| **TOTAL** | **41** |
 
 ## Related Documentation
 
@@ -143,6 +148,7 @@ Items completed since last update.
 - [Section 1.7 Wire Routing][wire-routing] - Wire routing organized by location
 
 [bcdc]: ../01-power-systems/01-power-generation/03-bcdc.md
+[gauge-cluster]: ../04-control-interfaces/04-gauge-cluster/index.md
 [radiator-fan]: ../02-engine-systems/06-radiator-fan/index.md
 [wiper-system]: ../02-engine-systems/04-wipers.md
 [firewall-ingress]: ../02-engine-systems/07-firewall-ingress.md
