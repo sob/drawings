@@ -88,12 +88,12 @@ See [CONSTANT Bus Bar][constant-bus] for complete bus bar specifications, [Safet
 
 | Stud | Connection | Wire Gauge | Protection | Load | Notes |
 |:-----|:-----------|:-----------|:-----------|:-----|:------|
-| 1 | SwitchPros RCR-Force 12 | 4 AWG | 150A CB | ~100A max | Auxiliary lighting - see [SwitchPros][switchpros] |
-| 2 | SafetyHub 150 | 4 AWG | 150A CB | ~100A max | ARB compressor, winch trigger - see [SafetyHub][aux-safetyhub] |
-| 3 | BODY PDU | 6 AWG | 100A CB | ~54A max | Cabin circuits - see [BODY PDU][body-rtmr] |
-| 4 | **[Available]** | - | - | - | Future expansion (1 stud available) |
+| 1 | **AUX battery+ (INPUT)** | 1/0 AWG | None | ~254A max | Power feed from battery |
+| 2 | SwitchPros RCR-Force 12 | 4 AWG | 150A CB | ~100A max | Auxiliary lighting - see [SwitchPros][switchpros] |
+| 3 | SafetyHub 150 | 4 AWG | 150A CB | ~100A max | ARB compressor, winch trigger - see [SafetyHub][aux-safetyhub] |
+| 4 | BODY PDU | 6 AWG | 100A CB | ~54A max | Cabin circuits - see [BODY PDU][body-rtmr] |
 
-**Utilization:** 3 of 4 studs used (1 available)
+**Utilization:** 4 of 4 studs used (0 available)
 
 **Total Load:** ~254A max (SwitchPros 100A + SafetyHub 100A + BODY PDU 54A)
 

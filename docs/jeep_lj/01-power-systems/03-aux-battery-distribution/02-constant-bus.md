@@ -44,10 +44,10 @@ Provides organized distribution for accessory circuits in the rear wheel well co
 |:-----|:-----------|:-----------|:---------|:---------------|:-----------|:-----|:------|
 | 1 | **AUX battery+ (INPUT)** | **1/0 AWG ✓** | **~3 ft** | **13.67V (0.9%)** | **None** | **~254A max** | **Power feed from battery - see [AUX battery][rear-battery]** |
 | 2 | SwitchPros RCR-Force 12 | 4 AWG ✓ | ~2 ft | 13.51V (0.8%) | 150A CB | ~100A max | Auxiliary lighting control - see [SwitchPros][switchpros] |
-| 3 | BODY PDU | 6 AWG ✓ | ~12 ft | 13.40V (4.0% @ 20°C) | 100A CB | ~54A max | Cabin convenience circuits - see [BODY PDU][body-rtmr] |
-| 4 | SafetyHub 150 | 4 AWG ✓ | ~2 ft | 13.51V (0.8%) | 150A CB | ~100A max | ARB compressor, winch trigger - see [SafetyHub][safetyhub] |
+| 3 | SafetyHub 150 | 4 AWG ✓ | ~2 ft | 13.51V (0.8%) | 150A CB | ~100A max | ARB compressor, winch trigger - see [SafetyHub][safetyhub] |
+| 4 | BODY PDU | 6 AWG ✓ | ~12 ft | 13.40V (4.0% @ 20°C) | 100A CB | ~54A max | Cabin convenience circuits - see [BODY PDU][body-rtmr] |
 
-**Stud Utilization:** 4 of 4 used (0 available)
+**Stud Utilization:** 4 of 4 used (0 available for future expansion)
 
 **Total Load:** ~254A max (SwitchPros 100A + BODY PDU 54A + SafetyHub 100A)
 
