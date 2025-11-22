@@ -10,44 +10,44 @@ Complete configuration of all 24 PMU outputs, load allocations, and combined out
 
 ### 25A High-Side Outputs (OUT1-OUT10)
 
-| Output           | Circuit                      | Load      | Control Type                   | Trigger/Input                       | Notes                                             |
-|:-----------------|:-----------------------------|:----------|:-------------------------------|:------------------------------------|:--------------------------------------------------|
-| **Out 1**        | **iBooster Main (combined)** | Combined  | CONSTANT (always on)           | Combined with OUT10                 | Bosch iBooster - 40A peak, 2× non-adjacent 25A outputs = 46A @ 40°C capacity|
-| **Out 2**        | **Radiator Fan (combined)**  | Combined  | PWM (CAN temp monitoring)      | Combined with OUT3+4                | GM Camaro fan - 53A @ full speed, 3×25A outputs = 75A capacity |
-| **Out 3**        | **Radiator Fan (combined)**  | Combined  | PWM (CAN temp monitoring)      | Combined with OUT2+4                | GM Camaro fan - variable speed PWM control via J1939 coolant temp |
-| **Out 4**        | **Radiator Fan (combined)**  | Combined  | PWM (CAN temp monitoring)      | Combined with OUT2+3                | GM Camaro fan - replaces Dakota Digital PAC-2800BT + relay |
-| **Out 5**        | HVAC Blower Motor            | ~20A      | Auto (ignition ON)             | Constant power when ignition on     | See [HVAC System][hvac-system] - relocated from OUT1 for better thermal balance |
-| **Out 6**        | GMRS Radio (Midland G1)      | 15A       | CONSTANT (always on)           | Emergency communication             | See [Communication Systems][communication-systems] - direct battery ground required |
-| **Out 7**        | Oil Cooler Fan               | ~15A      | Auto (CAN temp monitoring)     | ECM J1939 engine oil temp (SPN 175) | Programmable temp thresholds via CAN              |
-| **Out 8**        | PS Cooler Fan                | ~15A      | Auto (CAN temp monitoring)     | ECM J1939 coolant temp (SPN 110)    | Programmable temp thresholds via CAN              |
-| **Out 9**        | Dakota Digital Complete System | ~25A    | CONSTANT (always on)           | -                                   | HDX Control + Cluster + 4 BIM modules - replaces Critical Cabin PDU |
-| **Out 10**       | **iBooster Main (combined)** | Combined  | CONSTANT (always on)           | Combined with OUT1                  | Bosch iBooster - non-adjacent combining eliminates thermal concerns |
+| Output | Circuit | Load | Ground | Control Type | Notes |
+|:-------|:--------|:-----|:-------|:-------------|:------|
+| **Out 1** | **iBooster Main (combined)** | Combined | [Engine Bay Bus][engine-ground] Stud 7 | CONSTANT | Combined with OUT10, 40A peak |
+| **Out 2** | **Radiator Fan (combined)** | Combined | Fan housing → engine block | PWM (CAN temp) | Combined with OUT3+4, 53A max |
+| **Out 3** | **Radiator Fan (combined)** | Combined | Fan housing → engine block | PWM (CAN temp) | Combined with OUT2+4 |
+| **Out 4** | **Radiator Fan (combined)** | Combined | Fan housing → engine block | PWM (CAN temp) | Combined with OUT2+3 |
+| **Out 5** | HVAC Blower Motor | ~20A | Factory HVAC ground | Auto (ignition ON) | See [HVAC System][hvac-system] |
+| **Out 6** | GMRS Radio (Midland G1) | 15A | [Direct START battery-][starter-battery-distribution] | CONSTANT | RF noise isolation |
+| **Out 7** | Oil Cooler Fan | ~15A | [Engine Bay Bus][engine-ground] Stud 8 | Auto (CAN temp) | SPN 175 oil temp trigger |
+| **Out 8** | PS Cooler Fan | ~15A | [Engine Bay Bus][engine-ground] Stud 8 | Auto (CAN temp) | SPN 110 coolant temp trigger |
+| **Out 9** | Dakota Digital System | ~25A | [Firewall Stud Bus][firewall-ground] T4-5 | CONSTANT | Cluster + 4 BIM modules |
+| **Out 10** | **iBooster Main (combined)** | Combined | [Engine Bay Bus][engine-ground] Stud 7 | CONSTANT | Combined with OUT1 |
 
 ### 15A High-Side Outputs (OUT11-OUT16)
 
-| Output           | Circuit                      | Load      | Control Type                   | Trigger/Input                       | Notes                                             |
-|:-----------------|:-----------------------------|:----------|:-------------------------------|:------------------------------------|:--------------------------------------------------|
-| **Out 11**       | WS-51C Wiper Controller      | 15A       | Auto (ignition ON)             | Ignition signal (Pin 7)             | See [Wipers][windshield-wiper-control-system]                        |
-| **Out 12**       | Ham Radio (iCom IC-2730A)    | 13A       | CONSTANT (always on)           | Emergency communication             | See [Communication Systems][communication-systems] - direct battery ground required |
-| **Out 13**       | Command Touch CT4            | ~10A      | CONSTANT (always on)           | Works with ignition off (hazards)   | Critical safety system - hazards/turn signals     |
-| **Out 14**       | DRL/Parking Lights           | ~8A       | Auto (ignition) with logic     | Ignition ON + headlight status      | See [DRL & Parking Lights][drl-parking-lights]    |
-| **Out 15**       | Winch Contactor Trigger      | 1A        | Manual (dash rocker switch)    | Dash rocker + remote parallel      | Winch contactor control - replaces SafetyHub ATC-1 |
-| **Out 16**       | **[Available]**              | -         | -                              | -                                   | Future expansion (15A)                            |
+| Output | Circuit | Load | Ground | Control Type | Notes |
+|:-------|:--------|:-----|:-------|:-------------|:------|
+| **Out 11** | WS-51C Wiper Controller | 15A | [Firewall Stud Bus][firewall-ground] T2 | Auto (ignition ON) | See [Wipers][windshield-wiper-control-system] |
+| **Out 12** | Ham Radio (iCom IC-2730A) | 13A | [Direct START battery-][starter-battery-distribution] | CONSTANT | RF noise isolation |
+| **Out 13** | Command Touch CT4 | ~10A | [Firewall Stud Bus][firewall-ground] T1 | CONSTANT | Hazards/turn signals |
+| **Out 14** | DRL/Parking Lights | ~8A | [SwitchPros Ground Bus][switchpros-ground] | Auto (ignition) | See [DRL & Parking][drl-parking-lights] |
+| **Out 15** | Winch Contactor Trigger | 1A | Via winch contactor | Manual (dash rocker) | Control signal only |
+| **Out 16** | **[Available]** | - | - | - | Future expansion (15A) |
 
 ### 7A High-Side Outputs (OUT17-OUT24)
 
 **Note:** OUT17-24 are dual-purpose - configurable as 7A outputs OR 0-20V analog inputs. See [PMU Inputs][pmu-inputs] for analog input configuration.
 
-| Output           | Circuit                      | Load      | Control Type                   | Trigger/Input                       | Notes                                             |
-|:-----------------|:-----------------------------|:----------|:-------------------------------|:------------------------------------|:--------------------------------------------------|
-| **Out 17**       | A/C Clutch                   | 3-5A      | Auto (A/C request)             | Factory TJ A/C button signal (In 9) | See [HVAC System][hvac-system]                     |
-| **Out 18**       | Horn                         | 5.4A      | External input                 | Horn button (steering wheel)        | PIAA horns (2.7A × 2), works with ignition off    |
-| **Out 19**       | iBooster Ignition Signal     | ~5A       | Auto (ignition RUN)            | Ignition signal (Pin 7)             | Gen 2 iBooster - See [Brake Booster][brake-booster-system-bosch-ibooster-gen-2] |
-| **Out 20**       | STX Intercom                 | ~5A       | Auto (ignition ON)             | Ignition signal (Pin 7)             | See [Communication Systems][communication-systems] - direct battery ground required |
-| **Out 21**       | Brake Lights                 | ~3A       | External input                 | Brake switch signal (In 2)          | See [Tail, Brake & Reverse][tail-brake-reverse-lights]    |
-| **Out 22**       | Reverse Lights               | ~3A       | External input                 | Trans reverse switch (In 3)         | See [Tail, Brake & Reverse][tail-brake-reverse-lights]    |
-| **Out 23**       | **[Available]**              | -         | -                              | -                                   | Starter uses direct control - see [Starter System][starter-system-cummins-r28] |
-| **Out 24**       | **[Available]**              | -         | -                              | -                                   | Future expansion (7A output)                      |
+| Output | Circuit | Load | Ground | Control Type | Notes |
+|:-------|:--------|:-----|:-------|:-------------|:------|
+| **Out 17** | A/C Clutch | 3-5A | Factory A/C ground | Auto (A/C request) | See [HVAC System][hvac-system] |
+| **Out 18** | Horn | 5.4A | [Engine Bay Bus][engine-ground] Stud 6 | External input | PIAA horns (2.7A × 2) |
+| **Out 19** | iBooster Ignition Signal | ~5A | [Engine Bay Bus][engine-ground] Stud 7 | Auto (ignition RUN) | Same ground as iBooster main |
+| **Out 20** | STX Intercom | ~5A | [Direct START battery-][starter-battery-distribution] | Auto (ignition ON) | RF noise isolation |
+| **Out 21** | Brake Lights | ~3A | [SwitchPros Ground Bus][switchpros-ground] | External input | Shared tail light ground |
+| **Out 22** | Reverse Lights | ~3A | [SwitchPros Ground Bus][switchpros-ground] | External input | Shared tail light ground |
+| **Out 23** | **[Available]** | - | - | - | Future expansion (7A) |
+| **Out 24** | **[Available]** | - | - | - | Future expansion (7A) |
 
 ## Combined Outputs
 
@@ -113,4 +113,13 @@ Complete configuration of all 24 PMU outputs, load allocations, and combined out
 [pmu-inputs]: 02-pmu-inputs.md
 [pmu-programming]: 04-pmu-programming.md
 [starter-battery-distribution]: ../02-starter-battery-distribution/index.md
-[29-grid-heater-system]: ../../02-engine-systems/08-grid-heater.md
+[engine-ground]: ../05-grounding/01-engine-bay-ground-bus.md
+[firewall-ground]: ../05-grounding/02-firewall-stud-bus.md
+[switchpros-ground]: ../05-grounding/03-switchpros-ground-bus.md
+[hvac-system]: ../../02-engine-systems/03-hvac.md
+[windshield-wiper-control-system]: ../../02-engine-systems/04-wipers.md
+[communication-systems]: ../../06-communication-systems/01-communication.md
+[drl-parking-lights]: ../../03-lighting-systems/05-drl-parking.md
+[tail-brake-reverse-lights]: ../../03-lighting-systems/04-tail-brake-reverse.md
+[brake-booster-system-bosch-ibooster-gen-2]: ../../02-engine-systems/02-brake-booster.md
+[starter-system-cummins-r28]: ../../02-engine-systems/01-starter.md

@@ -39,14 +39,14 @@ tags:
 | Terminal 1 (#10-24) | SwitchPros controller | 14 AWG ✓ | ~2 ft | <1A | Controller logic ground (via harness) |
 | Terminal 2 (#10-24) | Headlights (LP6) - pair 1 | 16 AWG ✓ | ~10 ft | ~8A | See [Headlights][headlights] |
 | Terminal 3 (#10-24) | Headlights (LP6) - pair 2 | 16 AWG ✓ | ~10 ft | ~8A | See [Headlights][headlights] |
-| Terminal 4 (#10-24) | Tail/brake/reverse lights | 16 AWG ✓ | ~12 ft | ~5A | See [Tail/Brake/Reverse][tail-lights] |
-| Terminal 5 (#10-24) | Roof lights | 16 AWG ✓ | ~8 ft | ~10A | Auxiliary lighting |
-| Terminal 6 (#10-24) | Ditch lights | 16 AWG ✓ | ~8 ft | ~8A | Auxiliary lighting |
-| Terminal 7 (#10-24) | Rock lights | 16 AWG ✓ | ~6 ft | ~5A | Auxiliary lighting |
-| Terminal 8 (#10-24) | **[Available]** | - | - | - | Future lighting ground |
+| Terminal 4 (#10-24) | Tail/brake/reverse (PMU OUT21+22) | 16 AWG ✓ | ~12 ft | ~6A | Integrated unit, single ground wire |
+| Terminal 5 (#10-24) | DRL/Parking (PMU OUT14) | 16 AWG ✓ | ~10 ft | ~8A | Front marker/DRL lights |
+| Terminal 6 (#10-24) | Roof lights | 16 AWG ✓ | ~8 ft | ~10A | Auxiliary lighting |
+| Terminal 7 (#10-24) | Ditch lights | 16 AWG ✓ | ~8 ft | ~8A | Auxiliary lighting |
+| Terminal 8 (#10-24) | Rock lights | 16 AWG ✓ | ~6 ft | ~5A | Auxiliary lighting |
 | Terminals 9-12 (#10-24) | **[Available]** | - | - | - | Future expansion (4 terminals) |
 
-**Utilization:** 8 of 14 used (1 stud + 7 terminals used, 1 stud + 5 terminals available)
+**Utilization:** 9 of 14 used (1 stud + 8 terminals used, 1 stud + 4 terminals available)
 
 **Purpose:** Lighting ground return for all SwitchPros-controlled loads
 
