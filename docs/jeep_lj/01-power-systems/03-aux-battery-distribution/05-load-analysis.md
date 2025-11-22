@@ -1,7 +1,4 @@
 ---
-hide:
-  - toc
----
 
 # 1.3.5 AUX Battery Load Analysis {#aux-battery-load-analysis}
 
@@ -63,9 +60,9 @@ All circuits powered by AUX battery (charged by BCDC at 50A max):
 
 | Circuit | Load | Reason |
 |:--------|-----:|:-------|
-| Fusion Radio memory (CB30) | 1A | Clock/presets |
-| USB Charging (CB48) | 2A | Phone charging |
-| WolfBox Camera (CB39) | 2A | Always recording |
+| **Fusion Radio memory (CB30)** | **1A** | Clock/presets |
+| **USB Charging (CB48)** | **2A** | Phone charging |
+| **WolfBox Camera (CB39)** | **2A** | Always recording |
 | **TOTAL** | **5A** | |
 
 **BCDC Charging:** 30-50A typical
@@ -82,14 +79,14 @@ All circuits powered by AUX battery (charged by BCDC at 50A max):
 
 | Circuit | Load | Reason |
 |:--------|-----:|:-------|
-| Fog Lights (OUTPUT-3) | 9A | Visibility |
-| Rear Lights (OUTPUT-12) | 5A | License plate area |
-| Fusion Radio memory (CB30) | 1A | Always on |
-| Fusion Radio amp (CB44) | 10A | Music moderate |
-| USB Charging (CB48) | 5A | Devices |
-| WolfBox Camera (CB39) | 2A | Always recording |
-| Driver Heated Seat (CB45) | 3A | Cycling |
-| Passenger Heated Seat (CB42) | 3A | Cycling |
+| **Fog Lights (OUTPUT-3)** | **9A** | Visibility |
+| **Rear Lights (OUTPUT-12)** | **5A** | License plate area |
+| **Fusion Radio memory (CB30)** | **1A** | Always on |
+| **Fusion Radio amp (CB44)** | **10A** | Music moderate |
+| **USB Charging (CB48)** | **5A** | Devices |
+| **WolfBox Camera (CB39)** | **2A** | Always recording |
+| **Driver Heated Seat (CB45)** | **3A** | Cycling |
+| **Passenger Heated Seat (CB42)** | **3A** | Cycling |
 | **TOTAL** | **38A** | |
 
 **BCDC Charging:** 50A (full rate)
@@ -108,16 +105,16 @@ All circuits powered by AUX battery (charged by BCDC at 50A max):
 
 | Circuit | Load | Reason |
 |:--------|-----:|:-------|
-| Roof Center (OUTPUT-1) | 31A | Primary forward |
-| Ditch Lights (OUTPUT-2) | 12A | Peripheral |
-| Fog Lights (OUTPUT-3) | 9A | Close range |
-| Rock Lights (OUTPUT-6) | 3A | Obstacle spotting |
-| Rear Chase (OUTPUT-7) | 6A | Following vehicles |
-| Front Locker (OUTPUT-17) | 2A | Engaged |
-| Rear Locker (OUTPUT-10) | 2A | Engaged |
-| Fusion Radio memory (CB30) | 1A | Always on |
-| USB Charging (CB48) | 2A | Phone |
-| WolfBox Camera (CB39) | 2A | Recording |
+| **Roof Center (OUTPUT-1)** | **31A** | Primary forward |
+| **Ditch Lights (OUTPUT-2)** | **12A** | Peripheral |
+| **Fog Lights (OUTPUT-3)** | **9A** | Close range |
+| **Rock Lights (OUTPUT-6)** | **3A** | Obstacle spotting |
+| **Rear Chase (OUTPUT-7)** | **6A** | Following vehicles |
+| **Front Locker (OUTPUT-17)** | **2A** | Engaged |
+| **Rear Locker (OUTPUT-10)** | **2A** | Engaged |
+| **Fusion Radio memory (CB30)** | **1A** | Always on |
+| **USB Charging (CB48)** | **2A** | Phone |
+| **WolfBox Camera (CB39)** | **2A** | Recording |
 | **TOTAL** | **70A** | |
 
 **BCDC Charging:** 50A (full rate)
@@ -136,12 +133,12 @@ All circuits powered by AUX battery (charged by BCDC at 50A max):
 
 | Circuit | Load | Reason |
 |:--------|-----:|:-------|
-| ARB Compressor Motor 1 (MIDI-1) | 45A | Running |
-| ARB Compressor Motor 2 (MIDI-2) | 45A | Running |
-| Compressor Control (OUTPUT-11) | 15A | Control signal |
-| Fusion Radio memory (CB30) | 1A | Always on |
-| USB Charging (CB48) | 2A | Phone |
-| WolfBox Camera (CB39) | 2A | Recording |
+| **ARB Compressor Motor 1 (MIDI-1)** | **45A** | Running |
+| **ARB Compressor Motor 2 (MIDI-2)** | **45A** | Running |
+| **Compressor Control (OUTPUT-11)** | **15A** | Control signal |
+| **Fusion Radio memory (CB30)** | **1A** | Always on |
+| **USB Charging (CB48)** | **2A** | Phone |
+| **WolfBox Camera (CB39)** | **2A** | Recording |
 | **TOTAL** | **110A** | |
 
 **BCDC Charging:** 50A (full rate)
@@ -162,12 +159,12 @@ All circuits powered by AUX battery (charged by BCDC at 50A max):
 
 | Circuit | Load | Reason |
 |:--------|-----:|:-------|
-| ARB Compressor Motor 1 (MIDI-1) | 45A | Running |
-| ARB Compressor Motor 2 (MIDI-2) | 45A | Running |
-| Compressor Control (OUTPUT-11) | 15A | Control signal |
-| Fusion Radio memory (CB30) | 1A | Always on |
-| USB Charging (CB48) | 2A | Phone |
-| WolfBox Camera (CB39) | 2A | Recording |
+| **ARB Compressor Motor 1 (MIDI-1)** | **45A** | Running |
+| **ARB Compressor Motor 2 (MIDI-2)** | **45A** | Running |
+| **Compressor Control (OUTPUT-11)** | **15A** | Control signal |
+| **Fusion Radio memory (CB30)** | **1A** | Always on |
+| **USB Charging (CB48)** | **2A** | Phone |
+| **WolfBox Camera (CB39)** | **2A** | Recording |
 | **TOTAL** | **110A** | |
 
 **BCDC Charging:** 50A (full rate)
@@ -191,11 +188,11 @@ All circuits powered by AUX battery (charged by BCDC at 50A max):
 
 | Circuit | Load | Reason |
 |:--------|-----:|:-------|
-| Winch Motor | 250A | Moderate pull |
-| Winch Trigger (ATC-1) | 10A | Contactor coil |
-| Winch Control (CB43) | 2A | Dash rocker |
-| Fusion Radio memory (CB30) | 1A | Always on |
-| WolfBox Camera (CB39) | 2A | Recording |
+| **Winch Motor** | **250A** | Moderate pull |
+| **Winch Trigger (ATC-1)** | **10A** | Contactor coil |
+| **Winch Control (CB43)** | **2A** | Dash rocker |
+| **Fusion Radio memory (CB30)** | **1A** | Always on |
+| **WolfBox Camera (CB39)** | **2A** | Recording |
 | **TOTAL** | **265A** | |
 
 **BCDC Charging:** 50A (full rate)
@@ -214,12 +211,12 @@ All circuits powered by AUX battery (charged by BCDC at 50A max):
 
 | Circuit | Load | Reason |
 |:--------|-----:|:-------|
-| Dome Lights (OUTPUT-4) | 4A | Camp lighting |
-| Rock Lights (OUTPUT-6) | 3A | Ground lighting |
-| Party Lights (OUTPUT-8) | 6A | Ambiance |
-| Fusion Radio memory (CB30) | 1A | Always on |
-| Fusion Radio amp (CB44) | 8A | Music |
-| USB Charging (CB48) | 10A | Multiple devices |
+| **Dome Lights (OUTPUT-4)** | **4A** | Camp lighting |
+| **Rock Lights (OUTPUT-6)** | **3A** | Ground lighting |
+| **Party Lights (OUTPUT-8)** | **6A** | Ambiance |
+| **Fusion Radio memory (CB30)** | **1A** | Always on |
+| **Fusion Radio amp (CB44)** | **8A** | Music |
+| **USB Charging (CB48)** | **10A** | Multiple devices |
 | **TOTAL** | **32A** | |
 
 **BCDC Charging:** 0A (engine off)

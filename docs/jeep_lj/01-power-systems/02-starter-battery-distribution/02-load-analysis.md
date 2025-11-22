@@ -1,7 +1,4 @@
 ---
-hide:
-  - toc
----
 
 # 1.2.2 START Battery Load Analysis {#start-battery-load-analysis}
 
@@ -47,20 +44,20 @@ All circuits powered by START battery (alternator charging):
 
 | Circuit | Load | Reason |
 |:--------|-----:|:-------|
-| iBooster (OUT1+10) | 0.25A | Idle - no braking |
-| Radiator Fan (OUT2+3+4) | 16A | Low speed - highway airflow |
-| HVAC Blower (OUT5) | 10A | Medium speed |
-| GMRS Radio (OUT6) | 1A | Standby |
+| **iBooster (OUT1+10)** | **0.25A** | Idle - no braking |
+| **Radiator Fan (OUT2+3+4)** | **16A** | Low speed - highway airflow |
+| **HVAC Blower (OUT5)** | **10A** | Medium speed |
+| **GMRS Radio (OUT6)** | **1A** | Standby |
 | Oil Cooler Fan (OUT7) | 0A | Temp normal |
 | PS Cooler Fan (OUT8) | 0A | Temp normal |
-| Dakota Digital (OUT9) | 25A | Always on |
+| **Dakota Digital (OUT9)** | **25A** | Always on |
 | Wiper (OUT11) | 0A | Dry weather |
-| Ham Radio (OUT12) | 1A | Standby |
-| CT4 (OUT13) | 10A | Running lights |
-| DRL (OUT14) | 8A | Daytime |
-| iBooster Ignition (OUT19) | 5A | Always on |
-| STX Intercom (OUT20) | 1A | Standby |
-| BCDC Charger | 30A | Maintaining AUX |
+| **Ham Radio (OUT12)** | **1A** | Standby |
+| **CT4 (OUT13)** | **10A** | Running lights |
+| **DRL (OUT14)** | **8A** | Daytime |
+| **iBooster Ignition (OUT19)** | **5A** | Always on |
+| **STX Intercom (OUT20)** | **1A** | Standby |
+| **BCDC Charger** | **30A** | Maintaining AUX |
 | **TOTAL** | **107A** | |
 
 **Alternator Load:** 107A of 270A capacity = **40% utilization** ✅ Excellent
@@ -73,22 +70,22 @@ All circuits powered by START battery (alternator charging):
 
 | Circuit | Load | Reason |
 |:--------|-----:|:-------|
-| iBooster (OUT1+10) | 5A | Average - frequent braking |
-| Radiator Fan (OUT2+3+4) | 42A | High speed - no airflow, hot |
-| HVAC Blower (OUT5) | 20A | Max speed for A/C |
-| GMRS Radio (OUT6) | 1A | Standby |
-| Oil Cooler Fan (OUT7) | 15A | Hot - active |
-| PS Cooler Fan (OUT8) | 15A | Hot - active |
-| Dakota Digital (OUT9) | 25A | Always on |
+| **iBooster (OUT1+10)** | **5A** | Average - frequent braking |
+| **Radiator Fan (OUT2+3+4)** | **42A** | High speed - no airflow, hot |
+| **HVAC Blower (OUT5)** | **20A** | Max speed for A/C |
+| **GMRS Radio (OUT6)** | **1A** | Standby |
+| **Oil Cooler Fan (OUT7)** | **15A** | Hot - active |
+| **PS Cooler Fan (OUT8)** | **15A** | Hot - active |
+| **Dakota Digital (OUT9)** | **25A** | Always on |
 | Wiper (OUT11) | 0A | Dry weather |
-| Ham Radio (OUT12) | 1A | Standby |
-| CT4 (OUT13) | 10A | Running lights |
-| DRL (OUT14) | 8A | Daytime |
-| A/C Clutch (OUT17) | 5A | A/C on |
-| iBooster Ignition (OUT19) | 5A | Always on |
-| STX Intercom (OUT20) | 1A | Standby |
-| Brake Lights (OUT21) | 1A | Average - traffic |
-| BCDC Charger | 40A | Higher rate |
+| **Ham Radio (OUT12)** | **1A** | Standby |
+| **CT4 (OUT13)** | **10A** | Running lights |
+| **DRL (OUT14)** | **8A** | Daytime |
+| **A/C Clutch (OUT17)** | **5A** | A/C on |
+| **iBooster Ignition (OUT19)** | **5A** | Always on |
+| **STX Intercom (OUT20)** | **1A** | Standby |
+| **Brake Lights (OUT21)** | **1A** | Average - traffic |
+| **BCDC Charger** | **40A** | Higher rate |
 | **TOTAL** | **194A** | |
 
 **Alternator Load:** 194A of 270A capacity = **72% utilization** ✅ Good
@@ -101,20 +98,20 @@ All circuits powered by START battery (alternator charging):
 
 | Circuit | Load | Reason |
 |:--------|-----:|:-------|
-| iBooster (OUT1+10) | 2A | Occasional braking |
-| Radiator Fan (OUT2+3+4) | 53A | Max speed - no airflow |
-| HVAC Blower (OUT5) | 15A | Moderate |
-| GMRS Radio (OUT6) | 5A | Occasional TX |
-| Oil Cooler Fan (OUT7) | 15A | Hot - active |
-| PS Cooler Fan (OUT8) | 15A | Hot - active |
-| Dakota Digital (OUT9) | 25A | Always on |
+| **iBooster (OUT1+10)** | **2A** | Occasional braking |
+| **Radiator Fan (OUT2+3+4)** | **53A** | Max speed - no airflow |
+| **HVAC Blower (OUT5)** | **15A** | Moderate |
+| **GMRS Radio (OUT6)** | **5A** | Occasional TX |
+| **Oil Cooler Fan (OUT7)** | **15A** | Hot - active |
+| **PS Cooler Fan (OUT8)** | **15A** | Hot - active |
+| **Dakota Digital (OUT9)** | **25A** | Always on |
 | Wiper (OUT11) | 0A | Dry |
-| Ham Radio (OUT12) | 1A | Standby |
-| CT4 (OUT13) | 10A | Running lights |
-| DRL (OUT14) | 8A | Daytime |
-| iBooster Ignition (OUT19) | 5A | Always on |
-| STX Intercom (OUT20) | 3A | Occasional TX |
-| BCDC Charger | 50A | Full rate - supporting SwitchPros |
+| **Ham Radio (OUT12)** | **1A** | Standby |
+| **CT4 (OUT13)** | **10A** | Running lights |
+| **DRL (OUT14)** | **8A** | Daytime |
+| **iBooster Ignition (OUT19)** | **5A** | Always on |
+| **STX Intercom (OUT20)** | **3A** | Occasional TX |
+| **BCDC Charger** | **50A** | Full rate - supporting SwitchPros |
 | **TOTAL** | **207A** | |
 
 **Alternator Load:** 207A of 270A capacity = **77% utilization** ✅ Good
@@ -129,21 +126,21 @@ All circuits powered by START battery (alternator charging):
 
 | Circuit | Load | Reason |
 |:--------|-----:|:-------|
-| iBooster (OUT1+10) | 40A | Peak braking assist |
-| Radiator Fan (OUT2+3+4) | 20A | Normal - highway airflow |
-| HVAC Blower (OUT5) | 15A | Defrost |
-| GMRS Radio (OUT6) | 1A | Standby |
+| **iBooster (OUT1+10)** | **40A** | Peak braking assist |
+| **Radiator Fan (OUT2+3+4)** | **20A** | Normal - highway airflow |
+| **HVAC Blower (OUT5)** | **15A** | Defrost |
+| **GMRS Radio (OUT6)** | **1A** | Standby |
 | Oil Cooler Fan (OUT7) | 0A | Temp normal |
 | PS Cooler Fan (OUT8) | 0A | Temp normal |
-| Dakota Digital (OUT9) | 25A | Always on |
-| Wiper (OUT11) | 15A | High speed |
-| Ham Radio (OUT12) | 1A | Standby |
-| CT4 (OUT13) | 10A | Headlights |
+| **Dakota Digital (OUT9)** | **25A** | Always on |
+| **Wiper (OUT11)** | **15A** | High speed |
+| **Ham Radio (OUT12)** | **1A** | Standby |
+| **CT4 (OUT13)** | **10A** | Headlights |
 | DRL (OUT14) | 0A | Off - headlights on |
-| iBooster Ignition (OUT19) | 5A | Always on |
-| STX Intercom (OUT20) | 1A | Standby |
-| Brake Lights (OUT21) | 3A | Braking |
-| BCDC Charger | 30A | Normal rate |
+| **iBooster Ignition (OUT19)** | **5A** | Always on |
+| **STX Intercom (OUT20)** | **1A** | Standby |
+| **Brake Lights (OUT21)** | **3A** | Braking |
+| **BCDC Charger** | **30A** | Normal rate |
 | **TOTAL** | **166A** | |
 
 **Duration:** iBooster peak lasts 2-5 seconds only
@@ -158,21 +155,21 @@ All circuits powered by START battery (alternator charging):
 
 | Circuit | Load | Reason |
 |:--------|-----:|:-------|
-| iBooster (OUT1+10) | 0.25A | Idle |
-| Radiator Fan (OUT2+3+4) | 35A | Moderate - no airflow |
-| HVAC Blower (OUT5) | 10A | Comfortable |
-| GMRS Radio (OUT6) | 1A | Standby |
+| **iBooster (OUT1+10)** | **0.25A** | Idle |
+| **Radiator Fan (OUT2+3+4)** | **35A** | Moderate - no airflow |
+| **HVAC Blower (OUT5)** | **10A** | Comfortable |
+| **GMRS Radio (OUT6)** | **1A** | Standby |
 | Oil Cooler Fan (OUT7) | 0A | Temp stable |
 | PS Cooler Fan (OUT8) | 0A | Temp stable |
-| Dakota Digital (OUT9) | 25A | Always on |
+| **Dakota Digital (OUT9)** | **25A** | Always on |
 | Wiper (OUT11) | 0A | Off |
-| Ham Radio (OUT12) | 1A | Standby |
-| CT4 (OUT13) | 10A | Parking lights |
+| **Ham Radio (OUT12)** | **1A** | Standby |
+| **CT4 (OUT13)** | **10A** | Parking lights |
 | DRL (OUT14) | 0A | Off - parked |
-| A/C Clutch (OUT17) | 5A | If summer |
-| iBooster Ignition (OUT19) | 5A | Always on |
-| STX Intercom (OUT20) | 1A | Standby |
-| BCDC Charger | 30A | Normal rate |
+| **A/C Clutch (OUT17)** | **5A** | If summer |
+| **iBooster Ignition (OUT19)** | **5A** | Always on |
+| **STX Intercom (OUT20)** | **1A** | Standby |
+| **BCDC Charger** | **30A** | Normal rate |
 | **TOTAL** | **123A** | |
 
 **Alternator Load:** 123A of 270A capacity = **46% utilization** ✅ Excellent
