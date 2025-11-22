@@ -9,7 +9,7 @@ hide:
 
 **Last Updated:** 2025-11-22
 
-**Total Open Items:** 36
+**Total Open Items:** 32
 
 ---
 
@@ -29,12 +29,8 @@ Items needed before installation begins but not system-critical.
 
 | Item | Description | File | Priority |
 |:-----|:------------|:-----|:---------|
-| Grommet 1 Location | Engine bay side near PMU | [Firewall Ingress][firewall-ingress] | High |
-| Grommet 2 Location | Cabin side near pedal area | [Firewall Ingress][firewall-ingress] | High |
-| Grommet 5 Location | Path from firewall to grille area | [Firewall Ingress][firewall-ingress] | High |
-| Grommet 6 Location | Near START battery/SafetyHub | [Firewall Ingress][firewall-ingress] | High |
-| Firewall Ground Stud Wire | Wire gauge for all cabin grounds | [Firewall Ingress][firewall-ingress] | High |
-| Firewall Ground Stud Location | Physical location on firewall | [Firewall Ingress][firewall-ingress] | High |
+| Grommet Locations | 3 grommets TBD during mockup (PMU outputs, cabin inputs, temp probe) | [Firewall Ingress][firewall-ingress] | High |
+| Firewall Ground Stud Location | Physical location on cabin side firewall | [Firewall Ingress][firewall-ingress] | High |
 | Dakota Digital Panel Mounting | HDPE sheet dimensions and location | [Wire Routing][wire-routing] | High |
 | SwitchPros Control Panel Location | Dash mount location (4" x 3") | [SwitchPros][switchpros] | High |
 | Fusion Amp Mounting | Cargo area or under rear seat | [Audio Systems][audio-systems] | High |
@@ -135,11 +131,11 @@ Items completed since last update.
 | Priority | Count |
 |:---------|:------|
 | 🔴 Critical | 0 |
-| ⚠️ High | 8 |
+| ⚠️ High | 6 |
 | 📋 Medium | 18 |
 | 📝 Low | 11 |
 | 🔍 Verify | 3 |
-| **TOTAL** | **36** |
+| **TOTAL** | **32** |
 
 ## Related Documentation
 
