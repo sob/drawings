@@ -92,7 +92,6 @@ Items that are estimated and need actual product specs to confirm.
 | Item | Description | File | Action Needed |
 |:-----|:------------|:-----|:--------------|
 | **Grid Heater Current** | Design value 80A - verify via element resistance measurement during installation (~0.15Ω @ 12V) | [Grid Heater][grid-heater] | Measure resistance |
-| Heated Seat Load | Verify PRP EnduroTrek 15A/seat spec | [BODY PDU][body-rtmr] | Verify spec sheet |
 | Fusion Amp Current | Verify 35-45A continuous rating | [Audio Systems][audio-systems] | Verify spec sheet |
 
 ---
@@ -103,6 +102,7 @@ Items completed since last update.
 
 | Item | Resolution | Date |
 |:-----|:-----------|:-----|
+| Heated Seat Load | Verified with vendor: 5A peak, 2A sustained per seat (not 15A) | 2025-11-22 |
 | SafetyHub Location | Consolidated to single SafetyHub 150 on AUX battery (ARB compressor, winch trigger); communications moved to PMU | 2025-11-21 |
 | AUX Battery CONSTANT Bus CB | Resolved by connecting SafetyHub to CONSTANT bus - each load (SwitchPros, SafetyHub, BODY PDU) has individual CB protection | 2025-11-22 |
 | Wire Routing Protection | Added comprehensive wire protection standards section covering split loom, heat sleeve, p-clamps, grommets by location | 2025-11-22 |

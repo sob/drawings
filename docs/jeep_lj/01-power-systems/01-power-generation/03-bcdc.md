@@ -79,8 +79,6 @@ See [AUX Battery Load Analysis][aux-load-analysis] for complete scenario details
 - **Location:** Passenger wheel well near AUX battery (water-protected, accessible for LED visibility)
 - **Installation:** See [Section 1 Installation Checklist][installation-checklist]
 
-**Critical:** Verify solar input polarity before connection - reverse polarity damages unit.
-
 ## Temperature Sensor Installation
 
 The BCDC includes a battery temperature sensor (2-pin, polarity reversible) that is **REQUIRED** for proper AGM charging.

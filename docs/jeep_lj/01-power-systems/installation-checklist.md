@@ -210,13 +210,12 @@ Organized by installation order for efficient build workflow.
 - [ ] Wire Fusion Radio amp (F3, 15A, 14 AWG, CONSTANT)
 - [ ] Wire USB ports (F4, 20A, 14 AWG, CONSTANT) - 2× Powerwerx PanelUSB-75W
 - [ ] Wire WolfBox camera (F5, 10A, 16 AWG, CONSTANT)
-- [ ] Wire heated seats (F6/F7, 15A each, 14 AWG, SWITCHED) via manual switches
+- [ ] Wire heated seats (CB45/CB42, 15A CB, 14 AWG, via relays K21/K22) - 5A peak, 2A sustained per seat
 
 **Verification:**
 
 - [ ] Verify Fusion radio current draw matches fuse ratings
 - [ ] Verify WolfBox model and 10A fuse adequate
-- [ ] Verify heated seat draw is 15A/seat (PRP EnduroTrek spec)
 
 ### SafetyHub Circuit Wiring
 
