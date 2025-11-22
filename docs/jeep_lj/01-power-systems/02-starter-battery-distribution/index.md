@@ -27,11 +27,11 @@ See [Circuit Breakers][circuit-breakers] for complete CB specifications. All CBs
 | Circuit | Destination | Wire Gauge | Distance | Current | Voltage Drop | Protection |
 |:--------|:------------|:-----------|:---------|:--------|:-------------|:-----------|
 | [Alternator][alternator] | Engine bay | 2/0 AWG | 8 ft | 270A | 2.81% @ 60°C | None |
-| [Starter][starter] | Engine bay | 2/0 AWG | 6 ft | 400-600A | 1.9-3.9% | None |
+| [Starter][starter] | Engine bay | 2/0 AWG | 6 ft | 400-600A | 1.9-3.9% @ 20°C | None |
 | [PMU24][pmu] | Engine bay | 2/0 AWG | ~7 ft | 250A max | 2.4% @ 60°C | 250A CB |
 | ECM | Engine bay | Per Cummins | Short | <5A | Negligible | Fusible link |
 | [Grid Heater][grid-heater] | Engine bay | Per Cummins | Short | ~80A | Negligible | Fusible link |
-| [BCDC Alpha 50][bcdc] | Passenger wheel well | 4 AWG | ~6 ft | 50A | 0.94% | 80A CB |
+| [BCDC Alpha 50][bcdc] | Passenger wheel well | 4 AWG | ~6 ft | 50A | 0.94% @ 20°C | 80A CB |
 
 All circuit breakers mounted within 7" of battery (ABYC/NEC compliant). See [Circuit Breakers][circuit-breakers].
 
@@ -39,13 +39,13 @@ All circuit breakers mounted within 7" of battery (ABYC/NEC compliant). See [Cir
 
 | Circuit | Destination | Wire Gauge | Distance | Current | Voltage Drop |
 |:--------|:------------|:-----------|:---------|:--------|:-------------|
-| [Engine Bay Ground Bus][engine-ground-bus] | Engine bay | 2/0 AWG | ~8 ft | 600A+ peak | <0.1V |
+| [Engine Bay Ground Bus][engine-ground-bus] | Engine bay | 2/0 AWG | ~8 ft | 600A+ peak | <0.1V @ 60°C |
 | ECM | Engine bay | 12 AWG | Short | <5A | Negligible |
 | [Grid Heater][grid-heater] | Engine bay | Per Cummins | Short | ~80A | Negligible |
-| [AUX Battery][aux-battery] | Passenger wheel well | 1/0 AWG | 5-6 ft | 75A max | <0.05V |
-| [G1 GMRS Radio][radios] | Dashboard | 10 AWG | ~8 ft | 15A TX | 1.2% |
-| [STX Intercom][radios] | Dashboard | 10 AWG | ~8 ft | 5A | 0.4% |
-| [Ham Radio][radios] | Dashboard | 10 AWG | ~8 ft | 13A TX | 1.0% |
+| [AUX Battery][aux-battery] | Passenger wheel well | 1/0 AWG | 5-6 ft | 75A max | <0.05V @ 20°C |
+| [G1 GMRS Radio][radios] | Dashboard | 10 AWG | ~8 ft | 15A TX | 1.2% @ 20°C |
+| [STX Intercom][radios] | Dashboard | 10 AWG | ~8 ft | 5A | 0.4% @ 20°C |
+| [Ham Radio][radios] | Dashboard | 10 AWG | ~8 ft | 13A TX | 1.0% @ 20°C |
 
 Radio grounds direct to battery for RF noise isolation. ECM/grid heater via Cummins harness to isolate from starter spikes.
 

@@ -27,18 +27,18 @@ See [CONSTANT Bus Bar][constant-bus] for complete bus bar specifications, [Safet
 | Circuit | Destination | Wire Gauge | Distance | Current | Voltage Drop | Protection |
 |:--------|:------------|:-----------|:---------|:--------|:-------------|:-----------|
 | [BCDC Alpha 50][bcdc] | Local | 4 AWG | Short | 50A | Negligible | None |
-| [CONSTANT Bus Bar][constant-bus] | Local | 1/0 AWG | ~3 ft | 254A max | 0.9% | None |
-| [Winch][recovery] | Front bumper | 1/0 AWG | 13 ft | 250-400A | 4.9-7.9% | [None][winch-protection] |
+| [CONSTANT Bus Bar][constant-bus] | Local | 1/0 AWG | ~3 ft | 254A max | 0.9% @ 20°C | None |
+| [Winch][recovery] | Front bumper | 1/0 AWG | 13 ft | 250-400A | 4.9-7.9% @ 20°C | [None][winch-protection] |
 
 ## AUX battery Negative Terminal (5 connections)
 
 | Circuit | Destination | Wire Gauge | Distance | Current | Voltage Drop |
 |:--------|:------------|:-----------|:---------|:--------|:-------------|
-| Rear Frame Rail | Local (chassis) | 2/0 AWG | ~3 ft | 654A peak | <0.1V |
+| Rear Frame Rail | Local (chassis) | 2/0 AWG | ~3 ft | 654A peak | <0.1V @ 20°C |
 | [BCDC Alpha 50][bcdc] | Local | 4 AWG | Short | 50A | Negligible |
 | [Fusion Apollo Amp][audio] | Local | Per spec | <18" | Per spec | Negligible |
-| [START Battery][starter-battery] | Driver wheel well | 1/0 AWG | 5-6 ft | 75A max | <0.05V |
-| [Winch][recovery] | Front bumper | 1/0 AWG | 13 ft | 250-400A | 4.9-7.9% |
+| [START Battery][starter-battery] | Driver wheel well | 1/0 AWG | 5-6 ft | 75A max | <0.05V @ 20°C |
+| [Winch][recovery] | Front bumper | 1/0 AWG | 13 ft | 250-400A | 4.9-7.9% @ 20°C |
 
 ## Related Documentation
 

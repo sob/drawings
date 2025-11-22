@@ -28,8 +28,6 @@ Provides organized distribution for accessory circuits in the rear wheel well co
 
 **Location:** Rear wheel well compartment (near battery)
 
-**Power Source:** AUX battery via 1/0 AWG (~3 ft) - see [AUX battery Distribution][rear-battery]
-
 ## Specifications
 
 - **Rating:** 225A continuous
@@ -38,23 +36,19 @@ Provides organized distribution for accessory circuits in the rear wheel well co
 - **Features:** Tin-plated copper, corrosion resistant
 - **Full Specs:** [Blue Sea 2104][product-link]
 
-## Load Distribution
-
-| Stud | Connection | Wire Gauge | Distance | Voltage @ Load | Protection | Load | Notes |
-|:-----|:-----------|:-----------|:---------|:---------------|:-----------|:-----|:------|
-| 1 | **AUX battery+ (INPUT)** | **1/0 AWG ✓** | **~3 ft** | **13.67V (0.9%)** | **None** | **~254A max** | **Power feed from battery - see [AUX battery][rear-battery]** |
-| 2 | SwitchPros RCR-Force 12 | 4 AWG ✓ | ~2 ft | 13.51V (0.8%) | 150A CB | ~100A max | Auxiliary lighting control - see [SwitchPros][switchpros] |
-| 3 | SafetyHub 150 | 4 AWG ✓ | ~2 ft | 13.51V (0.8%) | 150A CB | ~100A max | ARB compressor, winch trigger - see [SafetyHub][safetyhub] |
-| 4 | BODY PDU | 6 AWG ✓ | ~12 ft | 13.40V (4.0% @ 20°C) | 100A CB | ~54A max | Cabin convenience circuits - see [BODY PDU][body-rtmr] |
-
-**Stud Utilization:** 4 of 4 used (0 available for future expansion)
-
-**Total Load:** ~254A max (SwitchPros 100A + BODY PDU 54A + SafetyHub 100A)
-
-**Wire Sizing:** 1/0 AWG feed rated 325A continuous - 0.9% voltage drop @ 254A max load (13.67V at bus)
-
 !!! info "Circuit Protection"
     No circuit breaker between battery and CONSTANT bus. Each load has individual CB protection: SwitchPros (150A), SafetyHub (150A), BODY PDU (100A). See [Circuit Breakers][circuit-breakers].
+
+## Load Distribution
+
+| Stud | Connection | Wire Gauge | Distance | Voltage Drop | Protection | Load | Notes |
+|:-----|:-----------|:-----------|:---------|:-------------|:-----------|:-----|:------|
+| 1 | **AUX battery+ (INPUT)** | 1/0 AWG | ~3 ft | 0.9% @ 20°C | None | ~254A max | See [AUX battery][rear-battery] |
+| 2 | [SwitchPros][switchpros] | 4 AWG | ~2 ft | 0.8% @ 20°C | 150A CB | ~100A max | Auxiliary lighting |
+| 3 | [SafetyHub 150][safetyhub] | 4 AWG | ~2 ft | 0.8% @ 20°C | 150A CB | ~100A max | ARB compressor, winch trigger |
+| 4 | [BODY PDU][body-rtmr] | 6 AWG | ~12 ft | 4.0% @ 20°C | 100A CB | ~54A max | Cabin circuits |
+
+**Stud Utilization:** 4 of 4 used (0 available)
 
 ## Related Documentation
 
