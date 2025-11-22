@@ -201,55 +201,25 @@ This minimal configuration provides basic brake assist without ignition signal o
 
 ## Outstanding Items
 
-### Sourcing & Procurement
+None - design complete. See [installation checklist][install-checklist] for build tasks.
 
-- [ ] Source Bosch iBooster Gen 2 unit (Tesla Model 3/Y or 2018+ Honda Accord donor)
-- [ ] Verify Gen 2 identification (round booster, integrated mounting)
-- [ ] Source Gen 2 master cylinder compatible with iBooster
-- [ ] Source Gen 2 wiring harness or connectors (Tulay's Wire Werks or equivalent)
+**Design Decisions (Resolved):**
 
-### Installation Planning
+- **Donor vehicle:** Tesla Model 3
+- **Mounting location:** Factory brake booster location on firewall
+- **Chassis ground:** Firewall ground stud (same location as factory booster ground)
+- **PMU configuration:** See [PMU Outputs][pmu-outputs] - OUT1+10 CONSTANT, OUT19 ignition RUN
+- **Wiring harness:** [Tulay's Wire Werks Gen 2 Universal Harness][tulays-harness]
 
-- [ ] Determine firewall mounting location for Gen 2 iBooster (9.6" L × 7.5" W dimensions)
-- [ ] Plan brake line routing from master cylinder to front/rear brakes
-- [ ] Determine pedal travel sensor mounting and wiring routing
-- [ ] Plan main power wire routing: CONSTANT bus → PMU OUT1+10 → iBooster (10 AWG, 40A fused)
-- [ ] Plan ignition signal wire routing: Ignition RUN → PMU OUT19 → iBooster (20 AWG, 5A fused)
-- [ ] Determine chassis ground point for iBooster (10 AWG to firewall or frame)
-
-### PMU Software Configuration
-
-- [ ] Configure PMU OUT1+10 as combined outputs (non-adjacent, 46A capacity @ 40°C)
-- [ ] Set OUT1+10 to CONSTANT mode (always on, not switched)
-- [ ] Configure PMU OUT19 to activate with ignition RUN (Pin 7 trigger)
-- [ ] Verify 40A fuse on OUT1+10 combined output
-- [ ] Verify 5A fuse on OUT19 output
-- [ ] Test iBooster operation: main power, ignition signal, brake assist function
-
-### Wiring Tasks
-
-- [ ] Run 10 AWG red wire from CONSTANT bus → PMU OUT1+10 input terminals
-- [ ] Run 10 AWG red wire from PMU OUT1+10 combined output → iBooster main power connector (40A inline fuse)
-- [ ] Run 20 AWG green wire from ignition RUN signal → PMU OUT19 → iBooster ignition connector (5A inline fuse)
-- [ ] Run 10 AWG black wire from iBooster ground → chassis ground point (firewall or frame)
-- [ ] Connect pedal travel sensor per iBooster harness (integrated in Gen 2 unit)
-
-### Testing & Verification
-
-- [ ] Verify 12V CONSTANT at iBooster main power (ignition OFF and ON)
-- [ ] Verify 12V at iBooster ignition signal (ignition RUN only)
-- [ ] Verify chassis ground continuity (<0.1 ohms)
-- [ ] Test brake pedal feel with iBooster powered (ignition ON)
-- [ ] Test fail-safe standalone mode (disconnect ignition signal, verify basic assist)
-- [ ] Verify no abnormal current draw (12mA standby when ignition OFF)
-- [ ] Road test brake assist under various conditions (light braking, hard braking, engine off coasting)
+[install-checklist]: installation-checklist.md
+[tulays-harness]: https://tulayswirewerks.com/product/bosch-ibooster-gen-2-universal-wire-harness/
 
 ## Related Documentation
 
-- [PMU Power Distribution][pmu-power-distribution] - PMU OUT1+10 and OUT19 specifications
+- [PMU Outputs][pmu-outputs] - PMU OUT1+10 and OUT19 specifications
 - [START Battery Distribution][starter-battery-distribution] - CONSTANT bus bar configuration
 - [Firewall Ingress][firewall-penetrations-ingress-points] - iBooster mounting and wiring routing through firewall
 
-[pmu-power-distribution]: ../01-power-systems/04-pmu/index.md
+[pmu-outputs]: ../01-power-systems/04-pmu/03-pmu-outputs.md
 [starter-battery-distribution]: ../01-power-systems/02-starter-battery-distribution/index.md
 [firewall-penetrations-ingress-points]: 07-firewall-ingress.md

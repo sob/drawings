@@ -182,12 +182,12 @@ Organized by installation order for efficient build workflow.
 
 **High-Current Outputs (Combined):**
 
+- [ ] Wire iBooster main → OUT1+10 combined (46A capacity, non-adjacent)
 - [ ] Wire radiator fan → OUT2+3+4 combined (75A total capacity)
-- [ ] Wire iBooster main → OUT5+6 combined (50A total capacity)
 
 **Individual Outputs:**
 
-- [ ] Wire HVAC blower → OUT1 (20A)
+- [ ] Wire HVAC blower → OUT5 (20A)
 - [ ] Wire iBooster ignition → OUT19 (7A)
 - [ ] Wire oil cooler fan → OUT7 (15A)
 - [ ] Wire PS cooler fan → OUT8 (15A)
@@ -244,8 +244,8 @@ Organized by installation order for efficient build workflow.
 
 **Output Combining:**
 
+- [ ] Configure iBooster combining (OUT1+10, non-adjacent)
 - [ ] Configure radiator fan combining (OUT2+3+4)
-- [ ] Configure iBooster combining (OUT5+6)
 
 **Logic Programming:**
 
