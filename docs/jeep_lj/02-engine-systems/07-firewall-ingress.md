@@ -14,7 +14,7 @@ Centralized reference for all firewall penetration points and wire routing.
 | Penetration | Purpose | Direction | Key Circuits |
 |:------------|:--------|:----------|:-------------|
 | **Cummins Bulkhead** | Engine harness | Engine ↔ Cabin | ECM, J1939 CAN, accelerator pedal |
-| **Grommet 1** | PMU outputs to cabin | Engine → Cabin | Lights, horn, A/C signals |
+| **Grommet 1** | PMU outputs to cabin | Engine → Cabin | Lights, horn, radio power |
 | **Grommet 2** | Cabin inputs to PMU | Cabin → Engine | Clutch/brake switches |
 | **Grommet 3** | Dakota Digital temp probe | Cabin → Grille | Outside temp sensor |
 
@@ -62,10 +62,13 @@ Factory Cummins interior harness includes:
 | Brake lights | OUT21 | 16 AWG | To rear brake lights |
 | Reverse lights | OUT22 | 16 AWG | To rear reverse lights |
 | Horn trigger return | - | 18 AWG | Ground return from horn button |
+| G1 GMRS Radio power | OUT6 | 10 AWG | 15A fused at PMU |
+| STX Intercom power | OUT20 | 10 AWG | 5A fused at PMU |
+| Ham Radio power | OUT12 | 10 AWG | 25A fused at PMU (future) |
 
-**Estimated wire count:** 3-5 wires (16-18 AWG)
+**Estimated wire count:** 6-7 wires (10-18 AWG)
 
-**Grommet size:** 1/2" ID (with 20% spare capacity)
+**Grommet size:** 1" ID (with 20% spare capacity)
 
 ---
 
@@ -139,7 +142,7 @@ These systems are powered directly from AUX battery in passenger wheel well:
 | SafetyHub (ARB, winch trigger) | CONSTANT bus via 150A CB | Passenger wheel well |
 | BODY PDU (radio, USB, seats, camera) | CONSTANT bus via 100A CB | Under dash, powered from rear |
 | BCDC | START battery input, AUX battery output | Both in wheel wells |
-| Communication radios | PMU OUT6/12/20 | Engine bay to cabin via Grommet 1 |
+| Radio grounds | START battery negative | Cabin along tub side to driver wheel well |
 
 ---
 

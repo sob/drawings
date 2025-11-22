@@ -60,9 +60,9 @@ See [Circuit Breakers][circuit-breakers] for complete CB specifications. All CBs
 | 2 | **AUX battery Ground Reference** | 1/0 AWG ✓ | 5-6 ft | Critical for BCDC operation - see [Wire Distance][wire-distance] | Active |
 | 3 | **ECM Ground** | 12 AWG ✓ | Short | Cummins harness - direct connection prevents starter/alternator spike damage | Active |
 | 4 | **Grid Heater Ground** | Per Cummins spec | Short | Cummins harness - direct connection | Active |
-| 5 | **G1 GMRS Radio** | 14 AWG ✓ | Via firewall | Direct connection minimizes RF noise | Active |
-| 6 | **STX Intercom** | 14 AWG ✓ | Via firewall | Direct connection minimizes RF noise | Active |
-| 7 | **Ham Radio** | 10 AWG ✓ | Via firewall | Direct connection minimizes RF noise | Future |
+| 5 | **G1 GMRS Radio Ground** | 10 AWG ✓ | ~8 ft | Cabin along tub side (factory wiring path) → driver wheel well | Active |
+| 6 | **STX Intercom Ground** | 10 AWG ✓ | ~8 ft | Cabin along tub side (factory wiring path) → driver wheel well | Active |
+| 7 | **Ham Radio Ground** | 10 AWG ✓ | ~8 ft | Cabin along tub side (factory wiring path) → driver wheel well | Future |
 
 **Total Connections:** 7 (6 active + 1 future)
 
