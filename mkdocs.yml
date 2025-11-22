@@ -108,11 +108,9 @@ nav:
         - 1.4.5 - ARB Load Shedding: jeep_lj/01-power-systems/04-pmu/05-pmu-arb-load-shedding.md
       - 1.5 - Grounding Architecture:
         - jeep_lj/01-power-systems/05-grounding/index.md
-        - 1.5.1 - START Battery Ground: jeep_lj/01-power-systems/05-grounding/01-starter-battery-ground.md
-        - 1.5.2 - AUX Battery Ground: jeep_lj/01-power-systems/05-grounding/02-aux-battery-ground.md
-        - 1.5.3 - Engine Bay Ground Bus: jeep_lj/01-power-systems/05-grounding/03-engine-bay-ground-bus.md
-        - 1.5.4 - Firewall Stud Bus: jeep_lj/01-power-systems/05-grounding/04-firewall-stud-bus.md
-        - 1.5.5 - SwitchPros Ground Bus: jeep_lj/01-power-systems/05-grounding/05-switchpros-ground-bus.md
+        - 1.5.1 - Engine Bay Ground Bus: jeep_lj/01-power-systems/05-grounding/01-engine-bay-ground-bus.md
+        - 1.5.2 - Firewall Stud Bus: jeep_lj/01-power-systems/05-grounding/02-firewall-stud-bus.md
+        - 1.5.3 - SwitchPros Ground Bus: jeep_lj/01-power-systems/05-grounding/03-switchpros-ground-bus.md
       - 1.6 - Ignition Signal: jeep_lj/01-power-systems/06-ignition-signal/index.md
       - 1.7 - Wire Routing: jeep_lj/01-power-systems/07-wire-routing/index.md
     - Critical Systems:

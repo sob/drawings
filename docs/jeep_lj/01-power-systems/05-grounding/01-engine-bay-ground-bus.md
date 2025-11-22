@@ -34,15 +34,15 @@ tags:
 
 ## Stud Assignment
 
-| Stud | Connection | Wire Gauge | Distance | Max Current | Notes |
-|:-----|:-----------|:-----------|:---------|:------------|:------|
-| 1 | START battery- | 2/0 AWG ✓ | ~8 ft | 600A+ peak | Primary power return - starter + alternator |
-| 2 | Engine block ground | 2/0 AWG ✓ | ~8 ft | 600A+ peak | Starter/alternator return path |
-| 3 | Front frame rail (main chassis) | 2/0 AWG ✓ | ~3 ft | 600A+ peak | Primary infrastructure ground |
-| 4 | AUX battery reference | 1/0 AWG ✓ | 5-6 ft | 75A max | Inter-battery reference (BCDC + fault current) |
-| 5 | PMU ground reference | Per harness | ~2 ft | <1A | Logic/CAN reference (Pin 25) - loads ground separately |
-| 6 | Relay/solenoid coil grounds | 14-18 AWG ✓ | Variable | ~3A total | Starter solenoid (~1.6A), horn relay |
-| 7-8 | **[Available]** | - | - | - | Future expansion (2 studs available) |
+| Stud | Connection | Notes |
+|:-----|:-----------|:------|
+| 1 | START battery- | See [START Battery Distribution][front-battery-ground] for wire specs |
+| 2 | Engine block ground | 2/0 AWG, ~8 ft - starter/alternator return path |
+| 3 | Front frame rail (main chassis) | 2/0 AWG, ~3 ft - primary infrastructure ground |
+| 4 | AUX battery reference | See [START Battery Distribution][front-battery-ground] for wire specs |
+| 5 | PMU ground reference | Per harness - logic/CAN reference (Pin 25) |
+| 6 | Relay/solenoid coil grounds | 14-18 AWG - starter solenoid, horn relay |
+| 7-8 | **[Available]** | Future expansion (2 studs available) |
 
 **Utilization:** 6 of 8 studs used (2 available)
 
@@ -64,8 +64,8 @@ tags:
 - [START battery Distribution][starter-battery-distribution]
 
 [grounding-architecture]: index.md
-[front-battery-ground]: 01-starter-battery-ground.md
-[rear-battery-ground]: 02-aux-battery-ground.md
+[front-battery-ground]: ../02-starter-battery-distribution/index.md
+[rear-battery-ground]: ../03-aux-battery-distribution/index.md
 [starter-battery-distribution]: ../02-starter-battery-distribution/index.md
 [bluesea-2107]: https://www.bluesea.com/products/2107/PowerBar_-_600A_BusBar_-_Eight_3_8in-16_Studs
 [bluesea-busbar-guide]: https://www.bluesea.com/resources/108

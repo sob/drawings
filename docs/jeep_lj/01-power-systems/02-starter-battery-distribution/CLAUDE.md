@@ -52,3 +52,18 @@ Documents START battery power distribution from the driver wheel well (Odyssey P
 2. Update `index.md` terminal table OR `02-constant-bus.md` stud table
 3. Add circuit breaker in `01-circuit-breakers.md` if needed
 4. Update grounding files (Section 1.5)
+
+**Changing wire gauge or distance for a circuit:**
+
+This page is the **single source of truth** for wire specifications. When updating wire specs, you must also update all pages that reference the circuit:
+
+| Circuit | Also Update |
+|:--------|:------------|
+| Alternator | `01-power-generation/02-alternator.md` |
+| Starter | `02-engine-systems/01-starter.md` |
+| PMU24 | `04-pmu/01-pmu-overview.md` |
+| BCDC Alpha 50 | `01-power-generation/03-bcdc.md`, `03-aux-battery-distribution/index.md` |
+| Engine Bay Ground Bus | `05-grounding/01-engine-bay-ground-bus.md` |
+| Radio Grounds | `06-communication-systems/01-communication.md` |
+
+**If circuit passes through firewall:** Also update `02-engine-systems/07-firewall-ingress.md`

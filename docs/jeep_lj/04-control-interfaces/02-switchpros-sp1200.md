@@ -106,7 +106,9 @@ The SwitchPros SP-1200 is the main lighting and accessory controller for the Jee
 
 ## Power and Ground Connections
 
-- **Power:** 4 AWG wire from CONSTANT bus (AUX battery) → 150A breaker → SwitchPros power module
+See [AUX Battery Distribution][aux-battery] for power specifications.
+
+- **Power:** CONSTANT bus (AUX battery) → 150A breaker → SwitchPros power module
 - **Ground:** 4 AWG wire from SwitchPros power module → Front frame rail or START battery negative (direct battery ground per manufacturer spec)
 
 ## Trigger Input Assignments
@@ -215,3 +217,6 @@ Program TRIGGER-3 to activate compressor when tank pressure drops below 135 PSI:
 - [Control Interfaces Overview][control-interfaces-overview] - Main control interfaces overview
 - [Offroad Lighting][offroad-auxiliary-lighting] - Complete wiring details for all lighting circuits controlled by SwitchPros
 - [Air System][air-system-arb-compressor-lockers] - ARB locker and compressor wiring details
+- [AUX Battery Distribution][aux-battery] - Power feed specifications for SwitchPros
+
+[aux-battery]: ../01-power-systems/03-aux-battery-distribution/index.md

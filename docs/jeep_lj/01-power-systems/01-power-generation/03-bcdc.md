@@ -37,27 +37,21 @@ tags:
 
 ## Wiring
 
-| Connection | Terminal Label | Wire Gauge | Terminal Size | Source/Destination | Notes |
-|:-----------|:---------------|:-----------|:--------------|:-------------------|:------|
-| Start Battery (+) | Red | 4 AWG | M8 | START battery positive (driver wheel well) | INPUT from alternator-charged battery - via 80A CB <br/>see [STARTER BATTERY CIRCUIT BREAKERS][starter-cbs] |
-| Auxiliary Battery (+) | Brown | 4 AWG | M8 | AUX battery positive (passenger wheel well) | OUTPUT to AUX battery - 50A charging |
-| Solar (+) | Yellow | Per solar panel | TBD | Cascadia 4x4 80W panel | See [Solar Charging][solar] |
-| Ground (-) | Black | 4 AWG | M8 | AUX battery negative | Direct connection per BCDC spec |
-| Ignition | Blue | 18 AWG | Spade | PMU ignition sense tap | Activates charging when engine running - see [PMU Inputs][pmu-inputs] |
-| Battery Temp Sensor | +/- (reversible) | Per sensor | 2-pin plug | AUX battery (AGM sensor) | **REQUIRED** - critical for AGM temperature-compensated charging, polarity reversible |
+| Connection | Terminal Label | Terminal Size | Source/Destination | Notes |
+|:-----------|:---------------|:--------------|:-------------------|:------|
+| Start Battery (+) | Red | M8 | START battery positive | See [START Battery Distribution][starter-battery] for wire specs |
+| Auxiliary Battery (+) | Brown | M8 | AUX battery positive | See [AUX Battery Distribution][aux-battery] for wire specs |
+| Solar (+) | Yellow | TBD | Cascadia 4x4 80W panel | See [Solar Charging][solar] |
+| Ground (-) | Black | M8 | AUX battery negative | See [AUX Battery Distribution][aux-battery] for wire specs |
+| Ignition | Blue | Spade | PMU ignition sense tap | 18 AWG - see [PMU Inputs][pmu-inputs] |
+| Battery Temp Sensor | +/- (reversible) | 2-pin plug | AUX battery positive terminal | **REQUIRED** - AGM temperature-compensated charging |
 
-**Inter-Battery Cable Routing:** START battery (driver wheel well) → under vehicle along frame rail → AUX battery (passenger wheel well) - 5-6 ft measured routing (see [Wire Distance Reference][wire-distance]). Use proper cable protection for under-vehicle routing.
-
-**Wire Gauge Analysis (50A @ 5-6 ft measured routing):**
-
-- 6 AWG @ 50A, 6 ft: 1.5% voltage drop (0.18V) - Marginal
-- **4 AWG @ 50A, 6 ft: 0.94% voltage drop (0.11V)** - **Recommended** ✅
-
-**Recommendation:** 4 AWG required for 50A BCDC to maintain <1% voltage drop. Provides excellent charging efficiency and minimizes heat buildup during sustained high-current charging.
-
-**Ground Reference:** Starter-to-AUX battery ground cable (1/0 AWG) is **REQUIRED** for BCDC operation - provides reference ground for charging logic and fault current path. See [Grounding Architecture][grounding].
+See [START Battery Distribution][starter-battery] and [AUX Battery Distribution][aux-battery] for complete wire specifications (gauge, distance, routing, circuit breakers).
 
 **Critical:** Verify solar input polarity before connection - reverse polarity damages unit.
+
+[starter-battery]: ../02-starter-battery-distribution/index.md
+[aux-battery]: ../03-aux-battery-distribution/index.md
 
 ## Function
 

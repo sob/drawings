@@ -19,26 +19,25 @@ The AUX battery (passenger wheel well) provides power for high-current accessori
 
 See [CONSTANT Bus Bar][constant-bus] for complete bus bar specifications, [SafetyHub][aux-safetyhub] for fused distribution, and [Circuit Breakers][circuit-breakers] for CB details.
 
-!!! info "Battery Specifications"
-    For complete battery specifications (capacity, dimensions, terminals, etc.), see [Section 1.1 - Battery System][batteries].
-
-!!! note "Battery Location"
-    AUX battery located in **passenger side rear wheel well** for optimal wire routing to winch and accessory systems. See [Wire Distance Reference][wire-distance] for measured routing distances.
+!!! info "Single Source of Truth"
+    This page is the authoritative source for all AUX battery wire specs (gauge, distance, voltage drop). Component pages reference here. For battery specs see [Section 1.1][batteries]. For ground bus bars see [Section 1.5][grounding].
 
 ## AUX battery Positive Terminal
 
-**AUX battery Positive Terminal Connections:**
+### Wheel Well Local
 
-| # | Connection | Wire Gauge | Distance | Voltage @ Load | Protection | Destination/Notes | Status |
-|:--|:-----------|:-----------|:---------|:---------------|:-----------|:------------------|:-------|
-| | **━━━ CHARGING INPUT ━━━** | | | | | | |
-| 1 | BCDC Alpha 50 Output | 4 AWG ✓ | 5-6 ft | 13.89V (0.94%) | None | 50A DC-DC charging from START battery - see [BCDC Alpha 50][bcdc] | Active |
-| | **━━━ RECOVERY SYSTEMS ━━━** | | | | | | |
-| 2 | Warn VR EVO 10-S Winch | 1/0 AWG ✓ | 13 ft one-way | 13.12V (4.9%) @ 250A<br>12.71V (7.9%) @ 400A | None (see note) | 250A typical, 400A peak (brief) - see [Recovery Systems][recovery] | Active |
-| | **━━━ CONSTANT BUS BAR ━━━** | | | | | | |
-| 3 | CONSTANT Bus Bar | 1/0 AWG ✓ | ~3 ft | 13.67V (0.9%) | None | Feeds SwitchPros, SafetyHub, BODY PDU (~254A max) | Active |
+| Circuit | Wire Gauge | Distance | Current | Voltage Drop | Protection |
+|:--------|:-----------|:---------|:--------|:-------------|:-----------|
+| [BCDC Alpha 50][bcdc] (charging input) | 4 AWG | Short | 50A | Negligible | None |
+| [CONSTANT Bus Bar][constant-bus] | 1/0 AWG | ~3 ft | 254A max | 0.9% (13.67V) | None |
 
-**Total Connections:** 3 (all active)
+### Wheel Well to Front Bumper
+
+| Circuit | Wire Gauge | Distance | Current | Voltage Drop | Protection |
+|:--------|:-----------|:---------|:--------|:-------------|:-----------|
+| [Winch][recovery] Positive | 1/0 AWG | 13 ft | 250-400A | 4.9-7.9% @ peak | None (see note) |
+
+**Total Positive Connections:** 3 (all active)
 
 !!! note "Winch Circuit Protection - Engineering Justification"
     **Design Decision:** No external circuit breaker per WARN manufacturer specifications
@@ -74,79 +73,61 @@ See [CONSTANT Bus Bar][constant-bus] for complete bus bar specifications, [Safet
 
     See [Standards Exceptions][standards-exceptions] for complete documentation of intentional design decisions that differ from general marine electrical standards.
 
-## CONSTANT Bus Bar
-
-**Type:** Blue Sea 2104 PowerBar (225A BusBar)
-
-**Location:** Passenger wheel well compartment (near battery)
-
-**Capacity:** 225A continuous, 4× 3/8"-16 studs
-
-**Power Source:** Direct from AUX battery positive via 1/0 AWG (~3 ft run)
-
-**CONSTANT Bus Bar Connections:**
-
-| Stud | Connection | Wire Gauge | Protection | Load | Notes |
-|:-----|:-----------|:-----------|:-----------|:-----|:------|
-| 1 | **AUX battery+ (INPUT)** | 1/0 AWG | None | ~254A max | Power feed from battery |
-| 2 | SwitchPros RCR-Force 12 | 4 AWG | 150A CB | ~100A max | Auxiliary lighting - see [SwitchPros][switchpros] |
-| 3 | SafetyHub 150 | 4 AWG | 150A CB | ~100A max | ARB compressor, winch trigger - see [SafetyHub][aux-safetyhub] |
-| 4 | BODY PDU | 6 AWG | 100A CB | ~54A max | Cabin circuits - see [BODY PDU][body-rtmr] |
-
-**Utilization:** 4 of 4 studs used (0 available)
-
-**Total Load:** ~254A max (SwitchPros 100A + SafetyHub 100A + BODY PDU 54A)
-
-**Wire Sizing:** 1/0 AWG feed rated 325A continuous - 0.9% voltage drop @ 254A max load (13.67V at bus)
-
-**Note:** No circuit breaker between battery and CONSTANT bus - each load has individual CB protection at appropriate rating.
-
 ## AUX battery Negative Terminal
 
-!!! info "Complete Grounding Architecture"
-    See [Section 1.5 - Grounding Architecture][grounding] for complete grounding system design, wire gauges, and architecture details.
+### Wheel Well Local
 
-**AUX battery Negative Terminal Connections:**
+| Circuit | Wire Gauge | Distance | Current | Voltage Drop | Notes |
+|:--------|:-----------|:---------|:--------|:-------------|:------|
+| Rear Frame Rail Ground | 2/0 AWG | ~3 ft | 654A peak | <0.1V | Primary chassis ground |
+| [BCDC Alpha 50][bcdc] | 4 AWG | Short | 50A | Negligible | Direct per manufacturer spec |
+| [Fusion Apollo Amp][audio] | Per amp spec | <18" | Per spec | Negligible | Direct battery or chassis |
 
-| # | Connection | Wire Gauge | Distance | Routing/Notes | Status |
-|:--|:-----------|:-----------|:---------|:--------------|:-------|
-| 1 | **Rear Frame Rail Ground** | 2/0 AWG ✓ | ~3 ft | Primary ground for AUX battery and CONSTANT bus | Active |
-| 2 | **START battery Ground Reference** | 1/0 AWG ✓ | 5-6 ft | Critical for BCDC operation and fault current path | Active |
-| 3 | **BCDC Alpha 50** | 4 AWG ✓ | Short | Direct connection per manufacturer spec | Active |
-| 4 | **Fusion Apollo Amp** | Per amp spec | <18" | Chassis ground OK if <18" run, direct connection preferred | Active |
-| 5 | **Warn VR EVO 10-S Winch** | 1/0 AWG ✓ | 13 ft one-way | Winch negative return - see [Recovery Systems][recovery] | Active |
+### Wheel Well to Wheel Well (Under Vehicle)
 
-**Total Connections:** 5 (all active)
+| Circuit | Wire Gauge | Distance | Current | Voltage Drop | Notes |
+|:--------|:-----------|:---------|:--------|:-------------|:------|
+| [START Battery][starter-battery] Ground Reference | 1/0 AWG | 5-6 ft | 75A max | <0.05V | BCDC + fault path |
 
-## System Components
+### Wheel Well to Front Bumper
 
-- [SafetyHub 150][aux-safetyhub] - Blue Sea 7748 fused distribution (ARB compressor, winch trigger)
-- [CONSTANT Bus Bar][constant-bus] - Blue Sea 2104 PowerBar (225A, 4 studs)
-- [Circuit Breakers][circuit-breakers] - Protection for all AUX battery circuits
-- [BODY PDU][body-rtmr] - Body relay/fuse panel for cabin convenience circuits
+| Circuit | Wire Gauge | Distance | Current | Voltage Drop | Notes |
+|:--------|:-----------|:---------|:--------|:-------------|:------|
+| [Winch][recovery] Negative | 1/0 AWG | 13 ft | 250-400A | 4.9-7.9% @ peak | Matches positive run |
+
+**Total Negative Connections:** 5 (all active)
+
+### Direct Connection Rationale
+
+**Rear Frame Rail Ground (2/0 AWG):** Primary ground for AUX battery, must handle winch peak (400A) + CONSTANT bus loads (~254A) = 654A peak. 2/0 AWG required for high-current capacity.
+
+**Ground Reference to START Battery (1/0 AWG):** Critical for BCDC operation - ensures both batteries maintain same ground reference. Handles BCDC charging current (50A) and provides fault current path. 1/0 AWG rated 325A provides adequate safety margin.
+
+**BCDC Alpha 50 (4 AWG):** Manufacturer specification requires direct connection to battery negative for proper DC-DC charging operation and battery sensing.
+
+**Fusion Apollo Amp:** Direct battery ground minimizes voltage drop and noise. Manufacturer allows chassis ground only if run is less than 18 inches.
+
+**Winch (1/0 AWG):** Direct connection matches winch positive terminal routing. Provides symmetrical power/ground path for high-current loads (250A typical, 400A peak).
 
 ## Related Documentation
 
-- [Power Generation][power-gen] - Battery and BCDC specifications
-- [Grounding Architecture][grounding] - Complete grounding system
-- [Circuit Breakers][circuit-breakers] - Protection for all CB-protected circuits
-- [START battery Distribution][starter-battery] - START battery system (BCDC input source)
-- [SwitchPros][switchpros] - Auxiliary lighting controller
+- [CONSTANT Bus Bar][constant-bus] - Stud assignments and loads
+- [SafetyHub 150][aux-safetyhub] - ARB compressor, winch trigger
 - [BODY PDU][body-rtmr] - Cabin convenience circuits
-- [Recovery Systems][recovery] - Winch specifications and wiring
-- [Wire Distance Reference][wire-distance] - Measured routing distances
+- [Circuit Breakers][circuit-breakers] - CB specifications
+- [Grounding Architecture][grounding] - Ground bus bars
+- [START battery Distribution][starter-battery] - BCDC input source
+- [Recovery Systems][recovery] - Winch specifications
 
 [aux-safetyhub]: 04-safetyhub.md
 [constant-bus]: 02-constant-bus.md
-[switchpros]: ../../04-control-interfaces/02-switchpros-sp1200.md
 [body-rtmr]: 03-body-pdu.md
-[power-gen]: ../01-power-generation/index.md
 [batteries]: ../01-power-generation/01-batteries.md
 [bcdc]: ../01-power-generation/03-bcdc.md
 [circuit-breakers]: 01-circuit-breakers.md
 [grounding]: ../05-grounding/index.md
 [starter-battery]: ../02-starter-battery-distribution/index.md
 [recovery]: ../../07-exterior-systems/01-recovery-systems.md
-[wire-distance]: ../01-power-generation/05-wire-distance-reference.md
+[audio]: ../../05-audio-systems/index.md
 [warn-manual]: https://www.warn.com/
 [standards-exceptions]: ../STANDARDS-EXCEPTIONS.md

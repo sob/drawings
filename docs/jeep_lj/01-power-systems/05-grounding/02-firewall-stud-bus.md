@@ -68,7 +68,7 @@ tags:
 - [Wiper System][wiper-system]
 
 [grounding-architecture]: index.md
-[engine-bay-ground-bus]: 03-engine-bay-ground-bus.md
+[engine-bay-ground-bus]: 01-engine-bay-ground-bus.md
 [body-rtmr]: ../03-aux-battery-distribution/03-body-pdu.md
 [audio-system]: ../../05-audio-systems/01-audio.md
 [wiper-system]: ../../02-engine-systems/04-wipers.md

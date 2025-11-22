@@ -132,4 +132,4 @@ Setpoints can be adjusted based on testing and climate conditions.
 [pmu-programming]: ../../01-power-systems/04-pmu/04-pmu-programming.md
 [front-battery]: ../../01-power-systems/02-starter-battery-distribution/index.md
 [gauge-cluster]: ../../04-control-interfaces/04-gauge-cluster/index.md
-[ground-bus]: ../../01-power-systems/05-grounding/03-engine-bay-ground-bus.md
+[ground-bus]: ../../01-power-systems/05-grounding/01-engine-bay-ground-bus.md

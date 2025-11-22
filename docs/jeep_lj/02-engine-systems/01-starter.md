@@ -43,7 +43,7 @@ tags:
 
 **Control Method:** Two-stage relay system
 
-**Main Power Source:** START battery+ (2/0 AWG direct connection)
+**Main Power Source:** START battery+ direct connection (see [START Battery Distribution][starter-battery] for wire specs)
 
 **Control Solenoid:** Cole Hersee 24213 (85A continuous-duty)
 
@@ -53,15 +53,15 @@ tags:
 
 ## Wiring
 
-| Circuit | Source | Wire Gauge | Distance | Voltage @ Load | Destination | Current |
-|:--------|:-------|:-----------|:---------|:---------------|:------------|:--------|
-| Main Power | START battery+ | 2/0 AWG | 6 ft | 11.77V (1.9%) | Starter solenoid battery post (M8 terminal) | 400-600A |
-| Solenoid Power Tap | START battery post | 10 AWG | ~2 ft | 11.90V (0.8%) | Cole Hersee 24213 input (M8 terminal) | 30-75A |
-| Ignition Control | Ignition switch START | 16 AWG | ~10 ft | 11.96V (0.3%) | Clutch safety switch | ~1A |
-| Clutch Switch Output | Clutch switch | 16 AWG | ~3 ft | 11.98V (0.2%) | Cole Hersee 24213 coil+ | ~1.6A |
-| Solenoid Coil Ground | Cole Hersee 24213 coil- | 16 AWG | ~3 ft | 11.98V (0.2%) | Engine bay ground bus | ~1.6A |
-| Solenoid Output | Cole Hersee 24213 output | 10 AWG | ~2 ft | 11.90V (0.8%) | Starter solenoid switch post (6.3mm push-on) | 30-75A |
-| Ground Return | Starter case | 2/0 AWG equiv. | ~8 ft | 11.69V (2.6%) | Engine block → START battery- | 400-600A |
+| Circuit | Source | Destination | Current | Notes |
+|:--------|:-------|:------------|:--------|:------|
+| Main Power | START battery+ | Starter solenoid battery post | 400-600A | See [START Battery Distribution][starter-battery] for wire specs |
+| Solenoid Power Tap | START battery post | Cole Hersee 24213 input | 30-75A | 10 AWG, ~2 ft |
+| Ignition Control | Ignition switch START | Clutch safety switch | ~1A | 16 AWG, ~10 ft |
+| Clutch Switch Output | Clutch switch | Cole Hersee 24213 coil+ | ~1.6A | 16 AWG, ~3 ft |
+| Solenoid Coil Ground | Cole Hersee 24213 coil- | Engine bay ground bus | ~1.6A | 16 AWG, ~3 ft |
+| Solenoid Output | Cole Hersee 24213 output | Starter solenoid switch post | 30-75A | 10 AWG, ~2 ft |
+| Ground Return | Starter case | Engine block → START battery- | 400-600A | Via engine bay ground bus |
 
 ## Control Flow
 
@@ -118,7 +118,8 @@ Ignition START → Clutch Switch → Cole Hersee 24213 Coil → Ground
 
 [db-starter]: https://www.dbelectrical.com/products/starter-for-2-8-cummins-isf2-8-qsb3-9-30-qsb4-5-4996706-428000-7090.html
 [starter-battery-distribution]: ../01-power-systems/02-starter-battery-distribution/index.md
+[starter-battery]: ../01-power-systems/02-starter-battery-distribution/index.md
 [firewall-ingress]: 07-firewall-ingress.md
-[engine-bay-ground-bus]: ../01-power-systems/05-grounding/03-engine-bay-ground-bus.md
+[engine-bay-ground-bus]: ../01-power-systems/05-grounding/01-engine-bay-ground-bus.md
 [power-generation]: ../01-power-systems/01-power-generation/index.md
 [wire-distance]: ../01-power-systems/01-power-generation/05-wire-distance-reference.md

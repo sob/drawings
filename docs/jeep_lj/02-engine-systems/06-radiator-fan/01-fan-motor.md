@@ -64,4 +64,4 @@ hide:
 
 [radiator-fan]: index.md
 [pmu-outputs]: ../../01-power-systems/04-pmu/03-pmu-outputs.md
-[ground-bus]: ../../01-power-systems/05-grounding/03-engine-bay-ground-bus.md
+[ground-bus]: ../../01-power-systems/05-grounding/01-engine-bay-ground-bus.md

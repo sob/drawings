@@ -89,7 +89,7 @@ The Rugged Radio G1 is a 50W GMRS (General Mobile Radio Service) two-way radio f
 
 **Outstanding Items:**
 - [ ] Run power wire from PMU OUT6 to G1 radio mounting location (10 AWG, via firewall Grommet 1)
-- [ ] Run dedicated ground wire from G1 to START battery negative terminal (10 AWG, along tub to driver wheel well)
+- [ ] Run dedicated ground wire from G1 to START battery negative - See [START Battery Distribution][starter-battery] for ground wire specs
 - [ ] Verify G1 and STX mounting behind dash does NOT place units near ignition box (avoid RF interference)
 - [ ] Determine roof-mounted GMRS antenna mounting location and type (1/4 wave vs 1/2 wave)
 - [ ] Plan antenna coax cable routing away from power leads (avoid interference)
@@ -181,7 +181,7 @@ The Rugged Radio STX Intercom allows driver and passengers to communicate via he
 - [ ] **IMPORTANT:** Ensure STX intercom is NOT mounted near ignition box (avoid RF interference)
 - [ ] Run dedicated power wire from PMU OUT20 to STX (10 AWG, via firewall Grommet 1)
 - [ ] PMU output has integrated 5A protection - no inline fuse needed
-- [ ] Run dedicated ground wire from STX to START battery negative terminal (10 AWG, along tub to driver wheel well)
+- [ ] Run dedicated ground wire from STX to START battery negative - See [START Battery Distribution][starter-battery] for ground wire specs
 - [ ] Plan headset port access (all 4 ports on STX unit, or extend rear ports to rear grab handles)
 - [ ] Determine if external PTT buttons will be used (or rely on headset-mounted PTT buttons)
 - [ ] Plan PTT button mounting locations (driver: steering wheel or dash, passengers: grab handles)
@@ -200,7 +200,7 @@ Reserved circuit for future amateur (ham) radio installation. Ham radio requires
   - 15A capacity supports up to ~180W output radios (most mobile ham radios are 50-100W)
   - CONSTANT power allows radio to receive when vehicle is off
 - **Ground:** Direct START battery negative (RF grounding requirement)
-- **Wire Gauge:** 10 AWG for power (via firewall Grommet 1), 10 AWG for ground (along tub to driver wheel well)
+- **Wire Gauge:** 10 AWG for power (via firewall Grommet 1) - See [START Battery Distribution][starter-battery] for ground wire specs
 
 **Potential Future Radio Types:**
 - **VHF/UHF Mobile Radio:** 2-meter (144 MHz) and 70-cm (440 MHz) dual-band radio
@@ -338,3 +338,8 @@ The WolfBox system replaces the factory rearview mirror with a smart mirror that
 - **Front Camera:** Separate from WolfBox integrated front camera
   - For trail spotting or front bumper view during obstacles
   - Would need separate display or integration with WolfBox system
+
+[starter-battery]: ../01-power-systems/02-starter-battery-distribution/index.md
+[pmu-outputs]: ../01-power-systems/04-pmu/03-pmu-outputs.md
+[firewall-penetrations-ingress-points]: ../02-engine-systems/07-firewall-ingress.md
+[body-rtmr]: ../01-power-systems/03-aux-battery-distribution/03-body-pdu.md

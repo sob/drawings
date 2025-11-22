@@ -61,18 +61,16 @@ Section 1 documents the complete power generation and distribution architecture 
 
 ### 1.5 Grounding Architecture (`05-grounding/`)
 
-**What's here:** Complete grounding system design
+**What's here:** Ground bus bars (direct battery connections documented in 1.2/1.3)
 
 **Files:**
-- `01-starter-battery-ground.md` - Direct START battery negative connections
-- `02-aux-battery-ground.md` - Direct AUX battery negative connections
-- `03-engine-bay-ground-bus.md` - Engine bay ground bus bar
-- `04-firewall-stud-bus.md` - Cabin electronics ground bus
-- `05-switchpros-ground-bus.md` - Lighting/accessories ground bus
+- `01-engine-bay-ground-bus.md` - Engine bay ground bus bar
+- `02-firewall-stud-bus.md` - Cabin electronics ground bus
+- `03-switchpros-ground-bus.md` - Lighting/accessories ground bus
 - `index.md` - Grounding architecture overview
 - `CLAUDE.md` - Navigation guide
 
-**When to use:** Ground connection locations, ground bus assignments, testing voltage drop
+**When to use:** Ground bus assignments, testing voltage drop (direct battery grounds in 1.2/1.3)
 
 ### 1.6 Ignition Signal Distribution (`06-ignition-signal/`)
 

@@ -46,24 +46,16 @@ tags:
 
 ## Wiring
 
-| Connection | Wire Gauge | Destination | Distance | Notes |
-|:-----------|:-----------|:------------|:---------|:------|
-| Positive Output | 2/0 AWG | START battery+ (driver wheel well) | 8 ft | **Required for 270A @ 60°C** - see calculations below |
-| Ground | Via mounting | Engine block | N/A | Bonded via alternator mounting bolts |
+| Connection | Destination | Notes |
+|:-----------|:------------|:------|
+| Positive Output | START battery+ (driver wheel well) | See [START Battery Distribution][starter-battery] for wire specs |
+| Ground | Engine block | Bonded via alternator mounting bolts |
 
-**Wire Sizing Calculation (Engine Bay @ 60°C):**
-- Distance: 8 ft one-way, 16 ft circuit
-- Current: 270A continuous
-- Temperature: 60°C (140°F) engine bay ambient
-- **2/0 AWG @ 270A, 16 ft, 60°C: 2.81% voltage drop** (0.404V) ✅ Acceptable
-- Voltage at battery: 14.4V - 0.404V = **13.996V** (adequate for AGM charging)
-- **1/0 AWG @ 270A would yield 4.47% drop** (0.644V) ❌ Exceeds 3% threshold for critical charging circuits
+**Ground Path:** Alternator case → Engine block → Frame rail → START battery-
 
-Temperature derating factor: 1.2× resistance increase at 60°C vs 20°C (copper wire)
+See [START Battery Distribution][starter-battery] for complete wire specifications (gauge, distance, voltage drop calculations).
 
-**Ground Path:** Alternator case → Engine block → Frame rail (2/0 AWG) → START battery-
-
-See [Grounding Architecture][grounding] for complete system grounding.
+[starter-battery]: ../02-starter-battery-distribution/index.md
 
 ## Load Analysis
 
