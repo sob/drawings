@@ -227,15 +227,9 @@ No PMU outputs consumed - entirely vacuum-operated
 
 ## Outstanding Items
 
-- [ ] Verify factory TJ HVAC system is complete and functional
-- [ ] Install vacuum system: R2.8 manifold → check valve → reservoir → firewall → dash
-- [ ] Test vacuum system for leaks
-- [ ] Connect PMU Out 17 to A/C compressor clutch
-- [ ] Connect PMU Out 5 to blower motor power
-- [ ] Route A/C button signal to PMU In 9
-- [ ] Program PMU: In 9 active → Out 17 (with voltage check)
-- [ ] Test all functions: temperature, mode, blower speeds, A/C, heater
-- [ ] Monitor PMU current draw on Out 17 and Out 5
+None - design complete. See [installation checklist][install-checklist] for build tasks.
+
+[install-checklist]: installation-checklist.md
 
 ## Related Documentation
 

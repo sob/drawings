@@ -54,6 +54,7 @@ The Bosch iBooster is an electromechanical brake booster that eliminates the nee
 **Type:** Bosch iBooster Gen 2
 **Configuration:** Round booster design (vs Gen 1 square design)
 **Mounting:** Integrated mounting bolts in housing
+**Mounting Bolt Torque:** TBD ft-lb
 
 ### Physical Dimensions
 

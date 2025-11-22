@@ -51,7 +51,7 @@ Factory Cummins interior harness includes:
 
 ## Grommet 1: PMU Outputs to Cabin {#grommet-1}
 
-**Location:** TBD - engine bay side near PMU
+**Location:** Engine bay side near PMU (exact location determined during installation)
 
 **Direction:** Engine bay → Cabin
 
@@ -74,7 +74,7 @@ Factory Cummins interior harness includes:
 
 ## Grommet 2: Cabin Inputs to PMU {#grommet-2}
 
-**Location:** TBD - cabin side near pedal area
+**Location:** Cabin side near pedal area (exact location determined during installation)
 
 **Direction:** Cabin → Engine bay
 
@@ -95,7 +95,7 @@ Factory Cummins interior harness includes:
 
 ## Grommet 3: Dakota Digital Temp Probe {#grommet-3}
 
-**Location:** TBD - path from cabin to grille area
+**Location:** Path from cabin to grille area (exact location determined during installation)
 
 **Direction:** Cabin (HDPE panel) → Engine bay (grille)
 
@@ -128,7 +128,7 @@ Factory Cummins interior harness includes:
   - BIM-17-2 (Compass/outside temp)
 
 - **Firewall Ground Stud** - Central ground for cabin electronics
-  - Location: TBD
+  - Location: Determined during installation
   - Wire gauge: 10 AWG minimum (accommodates all cabin grounds)
 
 ---
@@ -149,11 +149,13 @@ These systems are powered directly from AUX battery in passenger wheel well:
 
 ## Outstanding Items
 
-- [ ] Determine Grommet 1 location (near PMU on engine bay side)
-- [ ] Determine Grommet 2 location (near pedal area on cabin side)
-- [ ] Determine Grommet 3 location (path to grille for temp probe)
-- [ ] Determine firewall ground stud location
-- [ ] Confirm J1939 CAN tap location at Cummins bulkhead
+None - design complete.
+
+**Resolved:**
+
+- **J1939 CAN tap:** At Cummins bulkhead connector
+- **Grommet locations:** Determined during installation (general areas documented above)
+- **Firewall ground stud:** Determined during installation
 
 ## Related Documentation
 

@@ -19,7 +19,7 @@ Ron Francis WS-51C replaces TIPM wiper functions. Provides delay/intermittent co
 
 ### Wiper Control Module (WS-51C)
 
-- **Mounting:** TBD - under dash or near wiper motor (accessible location for adjustments)
+- **Mounting:** Dash-mounted (integrated switch/controller)
 - **Power Requirements:**
   - Input Voltage: 12V DC
   - PMU Output: PMU Out 11 (15A capacity, SWITCHED power)
@@ -228,28 +228,17 @@ The WS-51C wiper control system replaces the following TIPM functions:
 
 ## Outstanding Items
 
-### Front Wiper System
-- [ ] Determine WS-51C mounting location (under dash or near wiper motor)
-- [ ] Verify factory front wiper motor compatibility (single motor, two-speed with park)
-- [ ] Determine front wiper switch mounting location (dash or column-mount)
-- [ ] Confirm front wiper motor power draw (verify PMU Out 11 sizing at 15A)
-- [ ] Plan wire routing: PMU Out 11 → WS-51C → front wiper motor → dash switch
-- [ ] Verify front wiper motor ground point (cowl or firewall area)
-- [ ] Order WS-51C module and wiper switch
-- [ ] Configure PMU Out 11 to activate with ignition (Pin 7)
+None - design complete. See [installation checklist][install-checklist] for build tasks.
 
-### ~~Rear Wiper System~~ (NOT IMPLEMENTED)
-- PMU OUT12 assigned to Ham Radio (iCom IC-2730A, 13A)
-- See [PMU Outputs][pmu-outputs] for complete output allocation
+**Resolved:**
 
-### Washer Pump System
-- [ ] Determine washer pump configuration: Dual pumps (recommended) or single pump with T-fitting
-- [ ] Source dual-pump washer reservoir (TJ hardtop factory part or aftermarket)
-- [ ] Plan washer pump wiring: WS-51C output → front pump + rear pump (parallel connection)
-- [ ] Route washer fluid lines: Reservoir (front) → rear hardtop nozzles
-- [ ] Verify WS-51C washer output can handle dual pump load (~6-10A total)
-- [ ] Test synchronized washer operation: Both front and rear spray when button pressed
-- [ ] Confirm WS-51C auto-wipe feature works with synchronized washer pumps
+- **WS-51C mounting:** Dash-mounted (integrated switch/controller)
+- **Rear wiper:** Not implemented - PMU OUT12 assigned to Ham Radio
+- **Washer pump:** Factory single pump for front washer only (no rear washer needed)
+
+See [installation checklist][install-checklist] for build tasks.
+
+[install-checklist]: installation-checklist.md
 
 ## Related Documentation
 

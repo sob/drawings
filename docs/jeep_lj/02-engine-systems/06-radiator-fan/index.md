@@ -111,11 +111,9 @@ Setpoints can be adjusted based on testing and climate conditions.
 
 ## Outstanding Items
 
-- [ ] Determine optimal temperature setpoints for R2.8 (adjust PWM curve)
-- [ ] Verify actual PMU to fan motor distance during installation (6 ft estimated)
-- [ ] Test voltage drop under load at fan terminals (all PWM speeds)
-- [ ] Tune PWM curve based on real-world operating conditions
-- [ ] Verify inverted duty cycle behavior during initial testing
+None - design complete. See [installation checklist][install-checklist] for build and tuning tasks.
+
+[install-checklist]: ../installation-checklist.md
 
 ## Related Documentation
 

@@ -88,9 +88,6 @@ flowchart LR
 
 ## Outstanding Items
 
-- [ ] Wire ECM pins 46/21 directly to grid heater relay coil (Cummins 5467024)
-- [ ] Install fusible link from START battery+ to grid heater relay main power terminal
-- [ ] Connect grid heater relay ground to START battery- or NEGATIVE bus
-- [ ] Verify grid heater relay mounting location (engine bay, near intake manifold)
-- [ ] **VERIFY:** Measure grid heater element resistance during installation to confirm 80A design value (should be ~0.15Ω @ 12V)
-- [ ] Test grid heater operation in cold conditions (below 50°F ambient)
+None - design complete. See [installation checklist][install-checklist] for build tasks.
+
+[install-checklist]: installation-checklist.md

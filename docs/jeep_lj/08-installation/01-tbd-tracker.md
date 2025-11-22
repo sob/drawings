@@ -9,7 +9,7 @@ hide:
 
 **Last Updated:** 2025-11-22
 
-**Total Open Items:** 41
+**Total Open Items:** 39
 
 ---
 
@@ -29,12 +29,11 @@ Items needed before installation begins but not system-critical.
 
 | Item | Description | File | Priority |
 |:-----|:------------|:-----|:---------|
-| Grommet Locations | 3 grommets TBD during mockup (PMU outputs, cabin inputs, temp probe) | [Firewall Ingress][firewall-ingress] | High |
-| Firewall Ground Stud Location | Physical location on cabin side firewall | [Firewall Ingress][firewall-ingress] | High |
 | Dakota Digital Panel Mounting | HDPE sheet dimensions and location | [Wire Routing][wire-routing] | High |
 | SwitchPros Control Panel Location | Dash mount location (4" x 3") | [SwitchPros][switchpros] | High |
 | Fusion Amp Mounting | Cargo area or under rear seat | [Audio Systems][audio-systems] | High |
 | Fusion Amp Current Draw | Verify 35-45A continuous, 60-70A peak | [Audio Systems][audio-systems] | High |
+| iBooster Mounting Bolt Torque | Torque spec for mounting bolts | [Brake Booster][ibooster] | High |
 
 ---
 
@@ -74,7 +73,6 @@ Items that can be determined during build.
 
 | Item | Description | File | Priority |
 |:-----|:------------|:-----|:---------|
-| Wiper Controller Mounting | Under dash or near wiper motor | [Wiper System][wiper-system] | Low |
 | Horn Button Type | Momentary or latching | [Dashboard Controls][dash-controls] | Low |
 | Speaker IPX Rating | Verify from spec sheet | [Audio Systems][audio-systems] | Low |
 | WolfBox Display Size | 9.66" or 12" model | [Communication][communication] | Low |
@@ -106,6 +104,9 @@ Items completed since last update.
 
 | Item | Resolution | Date |
 |:-----|:-----------|:-----|
+| Grommet Locations | Determined during installation (general areas documented) | 2025-11-22 |
+| Firewall Ground Stud Location | Determined during installation | 2025-11-22 |
+| Wiper Controller Mounting | Dash-mounted (WS-51C is integrated switch/controller) | 2025-11-22 |
 | Radiator Fan Mounting | Radiator shroud (documented in fan motor specs) | 2025-11-22 |
 | Heated Seat Load | Verified with vendor: 5A peak, 2A sustained per seat (not 15A) | 2025-11-22 |
 | SafetyHub Location | Consolidated to single SafetyHub 150 on AUX battery (ARB compressor, winch trigger); communications moved to PMU | 2025-11-21 |
@@ -136,11 +137,11 @@ Items completed since last update.
 | Priority | Count |
 |:---------|:------|
 | 🔴 Critical | 0 |
-| ⚠️ High | 6 |
+| ⚠️ High | 5 |
 | 📋 Medium | 21 |
-| 📝 Low | 12 |
+| 📝 Low | 11 |
 | 🔍 Verify | 2 |
-| **TOTAL** | **41** |
+| **TOTAL** | **39** |
 
 ## Related Documentation
 
@@ -164,4 +165,5 @@ Items completed since last update.
 [section-1-install]: ../01-power-systems/installation-checklist.md
 [pmu-outputs]: ../01-power-systems/04-pmu/03-pmu-outputs.md
 [grid-heater]: ../02-engine-systems/08-grid-heater.md
+[ibooster]: ../02-engine-systems/02-brake-booster.md
 [aux-battery]: ../01-power-systems/03-aux-battery-distribution/index.md

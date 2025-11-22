@@ -54,7 +54,9 @@ hide:
 
 ## Outstanding Items
 
-- [ ] Test voltage at fan terminals under load (target >13V with engine running)
+None - design complete. See [installation checklist][install-checklist] for build tasks.
+
+[install-checklist]: ../installation-checklist.md
 
 ## Related Documentation
 
