@@ -28,7 +28,7 @@ Provides fused distribution for recovery and auxiliary systems powered by the AU
 
 **Location:** Passenger wheel well (co-located with AUX battery and circuit breakers)
 
-**Power Source:** AUX battery via 150A CB - see [Circuit Breakers][circuit-breakers]
+**Power Source:** CONSTANT bus via 150A CB - see [Circuit Breakers][circuit-breakers]
 
 **Note:** Communications systems (GMRS, Intercom, Ham Radio) are powered via PMU outputs - see [PMU Outputs][pmu-outputs]
 

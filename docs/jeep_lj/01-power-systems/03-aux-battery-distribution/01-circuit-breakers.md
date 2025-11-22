@@ -7,17 +7,17 @@ hide:
 
 ## Overview
 
-All AUX battery positive circuits protected by Mechanical Products Series 17 circuit breakers with direct battery connections.
+All CONSTANT bus loads protected by Mechanical Products Series 17 circuit breakers.
 
-**Location:** Rear wheel well near AUX battery
+**Location:** Rear wheel well near CONSTANT bus bar
 
 ## Circuit Breaker Specifications
 
 | Circuit | Model | Rating | Reset Type | Power Path | Max Load | Sizing |
 |:--------|:------|:------:|:-----------|:-----------|:---------|:-------|
-| **SwitchPros RCR-Force 12** | Mechanical Products<br/>([174-S2-150-2][mp-150]) | 150A | Manual | AUX battery+<br/>└→ 150A CB<br/>&nbsp;&nbsp;&nbsp;└→ SwitchPros RCR-Force 12 | ~100A (all lighting outputs on) | 150% of max load |
-| **SafetyHub 150 (Recovery)** | Mechanical Products<br/>([174-S2-150-2][mp-150b]) | 150A | Manual | AUX battery+<br/>└→ 150A CB<br/>&nbsp;&nbsp;&nbsp;└→ SafetyHub 150 | ~100A (ARB 90A + Winch Trigger 10A) | Future-proofed to SafetyHub max capacity |
-| **BODY PDU CONSTANT** | Mechanical Products<br/>([174-S2-100-2][mp-100]) | 100A | Manual | AUX battery+<br/>└→ 100A CB<br/>&nbsp;&nbsp;&nbsp;└→ BODY PDU | ~54A max (radio 16A, USB 13A, camera 10A, seats 10A peak) | 185% of max load |
+| **SwitchPros RCR-Force 12** | Mechanical Products<br/>([174-S2-150-2][mp-150]) | 150A | Manual | CONSTANT bus<br/>└→ 150A CB<br/>&nbsp;&nbsp;&nbsp;└→ SwitchPros RCR-Force 12 | ~100A (all lighting outputs on) | 150% of max load |
+| **SafetyHub 150 (Recovery)** | Mechanical Products<br/>([174-S2-150-2][mp-150b]) | 150A | Manual | CONSTANT bus<br/>└→ 150A CB<br/>&nbsp;&nbsp;&nbsp;└→ SafetyHub 150 | ~100A (ARB 90A + Winch Trigger 10A) | Future-proofed to SafetyHub max capacity |
+| **BODY PDU** | Mechanical Products<br/>([174-S2-100-2][mp-100]) | 100A | Manual | CONSTANT bus<br/>└→ 100A CB<br/>&nbsp;&nbsp;&nbsp;└→ BODY PDU | ~54A max (radio 16A, USB 13A, camera 10A, seats 10A peak) | 185% of max load |
 
 **All Circuit Breakers:**
 

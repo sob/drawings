@@ -7,9 +7,9 @@ hide:
 
 **Purpose:** Central tracking for all To-Be-Determined items across the Jeep LJ electrical system documentation.
 
-**Last Updated:** 2025-11-21
+**Last Updated:** 2025-11-22
 
-**Total Open Items:** 41
+**Total Open Items:** 40
 
 ---
 
@@ -32,7 +32,6 @@ Items needed before installation begins but not system-critical.
 | Item | Description | File | Priority |
 |:-----|:------------|:-----|:---------|
 | **PMU PWM Frequency** | Verify ECUMaster PMU24 PWM frequency compatible with GM Camaro fan motor (100-1000 Hz optimal) | [PMU][pmu-outputs] | High |
-| **AUX Battery CONSTANT Bus CB** | Consider adding 200A CB between battery and bus for cable fault protection | [AUX Battery][aux-battery] | High |
 | Grommet 1 Location | Engine bay side near PMU | [Firewall Ingress][firewall-ingress] | High |
 | Grommet 2 Location | Cabin side near pedal area | [Firewall Ingress][firewall-ingress] | High |
 | Grommet 5 Location | Path from firewall to grille area | [Firewall Ingress][firewall-ingress] | High |
@@ -112,6 +111,7 @@ Items completed since last update.
 | Item | Resolution | Date |
 |:-----|:-----------|:-----|
 | SafetyHub Location | Consolidated to single SafetyHub 150 on AUX battery (ARB compressor, winch trigger); communications moved to PMU | 2025-11-21 |
+| AUX Battery CONSTANT Bus CB | Resolved by connecting SafetyHub to CONSTANT bus - each load (SwitchPros, SafetyHub, BODY PDU) has individual CB protection | 2025-11-22 |
 | Radiator Fan Distance | 6 ft estimated (firewall to radiator), 4 AWG wire sizing confirmed (3.2% drop @ 53A full speed) | 2025-11-21 |
 | Radiator Fan Load | GM Camaro fan 53A @ 100% PWM (variable speed: 16A @ 30%, 32A @ 60%, 53A @ 100%) | 2025-11-21 |
 | Radiator Fan Protection | PMU OUT2+3+4 has integrated overcurrent/thermal protection, no external CB needed | 2025-11-21 |
@@ -134,11 +134,11 @@ Items completed since last update.
 | Priority | Count |
 |:---------|:------|
 | 🔴 Critical | 1 |
-| ⚠️ High | 12 |
+| ⚠️ High | 11 |
 | 📋 Medium | 18 |
 | 📝 Low | 11 |
 | 🔍 Verify | 3 |
-| **TOTAL** | **41** |
+| **TOTAL** | **40** |
 
 ## Related Documentation
 

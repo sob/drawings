@@ -14,9 +14,8 @@ hide:
 The AUX battery (passenger wheel well) provides power for high-current accessories and cabin systems:
 
 1. **Direct high-current** → Winch (recovery system, no CB per manufacturer spec)
-2. **Fused distribution** → SafetyHub 150 (ARB compressor, winch trigger) via 150A CB
-3. **CONSTANT Bus Bar** (Blue Sea 2104 PowerBar, 225A) - Feeds SwitchPros, BODY PDU
-4. **Direct charging input** → BCDC Alpha 50 output
+2. **CONSTANT Bus Bar** (Blue Sea 2104 PowerBar, 225A) - Feeds SwitchPros, SafetyHub 150, BODY PDU
+3. **Direct charging input** → BCDC Alpha 50 output
 
 See [CONSTANT Bus Bar][constant-bus] for complete bus bar specifications, [SafetyHub][aux-safetyhub] for fused distribution, and [Circuit Breakers][circuit-breakers] for CB details.
 
@@ -36,12 +35,10 @@ See [CONSTANT Bus Bar][constant-bus] for complete bus bar specifications, [Safet
 | 1 | BCDC Alpha 50 Output | 4 AWG ✓ | 5-6 ft | 13.89V (0.94%) | None | 50A DC-DC charging from START battery - see [BCDC Alpha 50][bcdc] | Active |
 | | **━━━ RECOVERY SYSTEMS ━━━** | | | | | | |
 | 2 | Warn VR EVO 10-S Winch | 1/0 AWG ✓ | 13 ft one-way | 13.12V (4.9%) @ 250A<br>12.71V (7.9%) @ 400A | None (see note) | 250A typical, 400A peak (brief) - see [Recovery Systems][recovery] | Active |
-| | **━━━ FUSED DISTRIBUTION ━━━** | | | | | | |
-| 3 | SafetyHub 150 | 4 AWG ✓ | ~3 ft | 13.89V (0.8%) | 150A CB (wheel well) | Fused distribution (ARB, winch trigger) - see [SafetyHub][aux-safetyhub] | Active |
 | | **━━━ CONSTANT BUS BAR ━━━** | | | | | | |
-| 4 | CONSTANT Bus Bar | 1/0 AWG ✓ | ~3 ft | 13.74V (0.7%) | None | Feeds SwitchPros, BODY PDU (~154A max) | Active |
+| 3 | CONSTANT Bus Bar | 1/0 AWG ✓ | ~3 ft | 13.67V (0.9%) | None | Feeds SwitchPros, SafetyHub, BODY PDU (~254A max) | Active |
 
-**Total Connections:** 4 (all active)
+**Total Connections:** 3 (all active)
 
 !!! note "Winch Circuit Protection - Engineering Justification"
     **Design Decision:** No external circuit breaker per WARN manufacturer specifications
@@ -91,15 +88,16 @@ See [CONSTANT Bus Bar][constant-bus] for complete bus bar specifications, [Safet
 
 | Stud | Connection | Wire Gauge | Protection | Load | Notes |
 |:-----|:-----------|:-----------|:-----------|:-----|:------|
-| 1 | SwitchPros RCR-Force 12 | Per spec | 150A CB | ~100A max | Auxiliary lighting - see [SwitchPros][switchpros] |
-| 2 | BODY PDU | 6 AWG | 100A CB | ~54A max | Cabin circuits - see [BODY PDU][body-rtmr] |
-| 3-4 | **[Available]** | - | - | - | Future expansion (2 studs available) |
+| 1 | SwitchPros RCR-Force 12 | 4 AWG | 150A CB | ~100A max | Auxiliary lighting - see [SwitchPros][switchpros] |
+| 2 | SafetyHub 150 | 4 AWG | 150A CB | ~100A max | ARB compressor, winch trigger - see [SafetyHub][aux-safetyhub] |
+| 3 | BODY PDU | 6 AWG | 100A CB | ~54A max | Cabin circuits - see [BODY PDU][body-rtmr] |
+| 4 | **[Available]** | - | - | - | Future expansion (1 stud available) |
 
-**Utilization:** 2 of 4 studs used (2 available)
+**Utilization:** 3 of 4 studs used (1 available)
 
-**Total Load:** ~154A max (SwitchPros 100A + BODY PDU 54A)
+**Total Load:** ~254A max (SwitchPros 100A + SafetyHub 100A + BODY PDU 54A)
 
-**Wire Sizing:** 1/0 AWG feed rated 325A continuous - 0.7% voltage drop @ 154A max load (13.74V at bus)
+**Wire Sizing:** 1/0 AWG feed rated 325A continuous - 0.9% voltage drop @ 254A max load (13.67V at bus)
 
 **Note:** No circuit breaker between battery and CONSTANT bus - each load has individual CB protection at appropriate rating.
 
