@@ -9,7 +9,7 @@ hide:
 
 **Last Updated:** 2025-11-22
 
-**Total Open Items:** 37
+**Total Open Items:** 36
 
 ---
 
@@ -29,7 +29,6 @@ Items needed before installation begins but not system-critical.
 
 | Item | Description | File | Priority |
 |:-----|:------------|:-----|:---------|
-| **PMU PWM Frequency** | Verify ECUMaster PMU24 PWM frequency compatible with GM Camaro fan motor (100-1000 Hz optimal) | [PMU][pmu-outputs] | High |
 | Grommet 1 Location | Engine bay side near PMU | [Firewall Ingress][firewall-ingress] | High |
 | Grommet 2 Location | Cabin side near pedal area | [Firewall Ingress][firewall-ingress] | High |
 | Grommet 5 Location | Path from firewall to grille area | [Firewall Ingress][firewall-ingress] | High |
@@ -113,6 +112,7 @@ Items completed since last update.
 | Wire Routing Protection | Added comprehensive wire protection standards section covering split loom, heat sleeve, p-clamps, grommets by location | 2025-11-22 |
 | BCDC Temperature Sensor | Documented installation location (side of AUX battery case), sensor specs, and installation procedure | 2025-11-22 |
 | BCDC Wire Lengths | Updated to 4 AWG @ 5-6 ft for 50A BCDC (0.94% voltage drop) | 2025-11-22 |
+| PMU PWM Frequency | PMU24 supports 4-400 Hz on 25A outputs; GM brushless fan requires 100 Hz - compatible. Note: GM fans use inverted duty cycle. | 2025-11-22 |
 | Radiator Fan Distance | 6 ft estimated (firewall to radiator), 4 AWG wire sizing confirmed (3.2% drop @ 53A full speed) | 2025-11-21 |
 | Radiator Fan Load | GM Camaro fan 53A @ 100% PWM (variable speed: 16A @ 30%, 32A @ 60%, 53A @ 100%) | 2025-11-21 |
 | Radiator Fan Protection | PMU OUT2+3+4 has integrated overcurrent/thermal protection, no external CB needed | 2025-11-21 |
@@ -135,11 +135,11 @@ Items completed since last update.
 | Priority | Count |
 |:---------|:------|
 | 🔴 Critical | 0 |
-| ⚠️ High | 9 |
+| ⚠️ High | 8 |
 | 📋 Medium | 18 |
 | 📝 Low | 11 |
 | 🔍 Verify | 3 |
-| **TOTAL** | **37** |
+| **TOTAL** | **36** |
 
 ## Related Documentation
 

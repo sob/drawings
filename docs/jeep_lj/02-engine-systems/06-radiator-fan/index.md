@@ -37,17 +37,36 @@ Electric radiator fan with automatic PWM temperature control via PMU24.
 
 **Note:** Main radiator fan only. Oil cooler and PS cooler fans controlled separately via PMU OUT7+8.
 
+## PWM Frequency Configuration
+
+**PMU24 Capability:** 25A outputs support 4-400 Hz PWM frequency
+
+**GM Brushless Fan Requirement:** 100 Hz (modern GM/C7 Corvette style brushless fans)
+
+**Compatibility:** ✅ PMU24 supports required 100 Hz frequency
+
+!!! warning "Inverted Duty Cycle"
+    GM brushless fans use **inverted duty cycle** - high duty cycle = low fan speed:
+
+    - 75% duty = ~15% fan speed
+    - 10% duty = ~100% fan speed (full speed)
+    - Below 10% or above 90% duty = fan OFF
+
+    PMU programming must account for this inversion.
+
 ## Programming
 
 **Via PMU Setup Software:**
 
 Temperature-based PWM control curve (see [PMU Programming][pmu-programming] for complete logic):
 
+**Note:** Values shown are PMU output duty cycle. Due to inverted GM brushless fan logic, higher duty cycle = lower fan speed.
+
 ```
-IF (J1939_SPN110_CoolantTemp < 185°F) THEN Out234_RadiatorFan_PWM = 0%
-ELSEIF (J1939_SPN110_CoolantTemp < 195°F) THEN Out234_RadiatorFan_PWM = 30%
-ELSEIF (J1939_SPN110_CoolantTemp < 205°F) THEN Out234_RadiatorFan_PWM = 60%
-ELSEIF (J1939_SPN110_CoolantTemp >= 205°F) THEN Out234_RadiatorFan_PWM = 100%
+IF (J1939_SPN110_CoolantTemp < 185°F) THEN Out234_RadiatorFan_PWM = 100% (fan OFF)
+ELSEIF (J1939_SPN110_CoolantTemp < 195°F) THEN Out234_RadiatorFan_PWM = 70% (~30% fan)
+ELSEIF (J1939_SPN110_CoolantTemp < 205°F) THEN Out234_RadiatorFan_PWM = 40% (~60% fan)
+ELSEIF (J1939_SPN110_CoolantTemp >= 205°F) THEN Out234_RadiatorFan_PWM = 10% (full speed)
 ```
 
 Setpoints can be adjusted based on testing and climate conditions.
@@ -95,8 +114,8 @@ Setpoints can be adjusted based on testing and climate conditions.
 - [ ] Determine optimal temperature setpoints for R2.8 (adjust PWM curve)
 - [ ] Verify actual PMU to fan motor distance during installation (6 ft estimated)
 - [ ] Test voltage drop under load at fan terminals (all PWM speeds)
-- [ ] Verify PMU PWM frequency compatibility with Camaro fan motor (100-1000 Hz optimal)
 - [ ] Tune PWM curve based on real-world operating conditions
+- [ ] Verify inverted duty cycle behavior during initial testing
 
 ## Related Documentation
 
