@@ -87,6 +87,36 @@ See [AUX Battery Load Analysis][aux-load-analysis] for complete scenario details
 
 **Critical:** Verify solar input polarity before connection - reverse polarity damages unit.
 
+## Temperature Sensor Installation
+
+The BCDC includes a battery temperature sensor (2-pin, polarity reversible) that is **REQUIRED** for proper AGM charging.
+
+**Sensor Specifications:**
+
+- **Type:** NTC thermistor with 2-pin connector
+- **Cable Length:** ~6 ft (included with BCDC)
+- **Polarity:** Reversible - either orientation works
+
+**Installation Location:**
+
+- **Mount Position:** Side of AUX battery case, mid-height
+- **Attachment:** Adhesive pad (included) or cable tie to battery hold-down
+- **Avoid:** Top of battery (heat rises), terminals (electrical interference)
+
+**Why Required:**
+
+- AGM batteries are temperature-sensitive during charging
+- Overcharging at high temps causes thermal runaway risk
+- Undercharging at low temps leads to sulfation
+- BCDC adjusts charge voltage based on sensor reading (temperature compensation)
+
+**Installation Notes:**
+
+1. Clean battery case surface with isopropyl alcohol
+2. Apply adhesive pad to sensor, press firmly to battery side
+3. Route sensor cable to BCDC (short run - both in passenger wheel well)
+4. Plug into BCDC temperature sensor port (2-pin connector)
+
 [redarc-bcdc]: https://www.redarcelectronics.com/products/the-manager30
 [bcdc-install]: https://cdn.intelligencebank.com/au/share/yE9N/zJpl/NNRlJ/original/Install+Guide+BCDC+Alpha+50R+EN
 [bcdc-manual]: https://cdn.intelligencebank.com/au/share/yE9N/zJpl/l7ZzG/original/Instruction+Manual+BCDC+Alpha+50R+EN

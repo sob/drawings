@@ -9,7 +9,7 @@ hide:
 
 **Last Updated:** 2025-11-22
 
-**Total Open Items:** 40
+**Total Open Items:** 37
 
 ---
 
@@ -19,9 +19,7 @@ Items that prevent build completion or system operation.
 
 | Item | Description | File | Priority |
 |:-----|:------------|:-----|:---------|
-| **BCDC Temperature Sensor Install** | Document installation location and verify included sensor specs (comes with BCDC) | [BCDC][bcdc] | High |
-| **Wire Routing Protection** | Specify split loom, heat sleeve, p-clamps, grommets for all major cables | [Wire Routing][wire-routing] | Critical |
-| BCDC Wire Lengths | Actual routing distances for wire sizing | [BCDC][bcdc] | High |
+| *(None - all critical items resolved)* | | | |
 
 ---
 
@@ -112,6 +110,9 @@ Items completed since last update.
 |:-----|:-----------|:-----|
 | SafetyHub Location | Consolidated to single SafetyHub 150 on AUX battery (ARB compressor, winch trigger); communications moved to PMU | 2025-11-21 |
 | AUX Battery CONSTANT Bus CB | Resolved by connecting SafetyHub to CONSTANT bus - each load (SwitchPros, SafetyHub, BODY PDU) has individual CB protection | 2025-11-22 |
+| Wire Routing Protection | Added comprehensive wire protection standards section covering split loom, heat sleeve, p-clamps, grommets by location | 2025-11-22 |
+| BCDC Temperature Sensor | Documented installation location (side of AUX battery case), sensor specs, and installation procedure | 2025-11-22 |
+| BCDC Wire Lengths | Updated to 4 AWG @ 5-6 ft for 50A BCDC (0.94% voltage drop) | 2025-11-22 |
 | Radiator Fan Distance | 6 ft estimated (firewall to radiator), 4 AWG wire sizing confirmed (3.2% drop @ 53A full speed) | 2025-11-21 |
 | Radiator Fan Load | GM Camaro fan 53A @ 100% PWM (variable speed: 16A @ 30%, 32A @ 60%, 53A @ 100%) | 2025-11-21 |
 | Radiator Fan Protection | PMU OUT2+3+4 has integrated overcurrent/thermal protection, no external CB needed | 2025-11-21 |
@@ -133,12 +134,12 @@ Items completed since last update.
 
 | Priority | Count |
 |:---------|:------|
-| 🔴 Critical | 1 |
-| ⚠️ High | 11 |
+| 🔴 Critical | 0 |
+| ⚠️ High | 9 |
 | 📋 Medium | 18 |
 | 📝 Low | 11 |
 | 🔍 Verify | 3 |
-| **TOTAL** | **40** |
+| **TOTAL** | **37** |
 
 ## Related Documentation
 

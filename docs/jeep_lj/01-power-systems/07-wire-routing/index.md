@@ -5,6 +5,45 @@ hide:
 
 # 1.7 Wire Routing & Physical Layout {#wire-routing}
 
+## Wire Protection Standards
+
+All wire runs require appropriate protection based on location and environment:
+
+### Protection Methods
+
+| Method | Application | Products |
+|:-------|:------------|:---------|
+| **Split Loom** | General protection, bundling multiple wires | 1/4" to 1" diameter, slit for easy installation |
+| **Heat Sleeve** | Engine bay, exhaust proximity | Fiberglass sleeve rated 500°F+, 1/2" to 1" |
+| **Abrasion Sleeve** | Frame rail contact, sharp edges | Braided nylon or polyester |
+| **P-Clamps** | Securing runs to frame/body | Rubber-lined, stainless steel |
+| **Grommets** | Firewall/body penetrations | Rubber with appropriate ID for wire bundle |
+| **Heat Shrink** | Terminal connections, splice protection | Adhesive-lined marine grade |
+| **Spiral Wrap** | Areas needing frequent access | Allows wire additions without re-routing |
+
+### Protection by Location
+
+| Location | Primary Protection | Secondary Protection | Notes |
+|:---------|:-------------------|:---------------------|:------|
+| **Engine Bay** | Heat sleeve | Split loom | Within 12" of exhaust use heat sleeve |
+| **Frame Rails** | Split loom | P-clamps every 18" | Abrasion sleeve at metal contact points |
+| **Wheel Wells** | Split loom | Abrasion sleeve | Water exposure - seal all connections |
+| **Under Vehicle** | Split loom | P-clamps every 12" | Maximum protection from road debris |
+| **Firewall** | Grommets | Heat shrink at penetration | Seal grommets with RTV silicone |
+| **Interior** | Split loom or spiral wrap | Minimal | Behind panels, minimal exposure |
+
+### High-Current Cable Protection
+
+| Circuit | Wire Gauge | Protection Required |
+|:--------|:-----------|:--------------------|
+| Alternator → START battery | 2/0 AWG | Heat sleeve (engine bay) → split loom (frame) |
+| PMU power feed | 2/0 AWG | Heat sleeve entire run (engine bay exposure) |
+| BCDC inter-battery | 4 AWG | Split loom + P-clamps (under vehicle) |
+| Winch cables | 1/0 AWG | Split loom + abrasion sleeve (frame contact) |
+| Battery grounds | 2/0 AWG | Heat sleeve (engine) → split loom (frame) |
+
+---
+
 ## 🔧 Driver Wheel Well (START Battery)
 
 **High-current power distribution from START battery:**
@@ -14,8 +53,7 @@ hide:
 | **Alternator charging input** | 2/0 AWG | 8 ft | FROM Alternator (engine) | 270A | Charges START battery - see [Alternator][alternator] |
 | **Starter motor power** | 2/0 AWG | 6 ft | TO Starter motor | 400-600A | Brief cranking load - see [Starter][starter] |
 | **PMU24 power feed** | 2/0 AWG | 7 ft | TO PMU24 (engine bay) | 220A max | Via 250A CB - see [PMU][pmu] |
-| **SafetyHub 150 feed (Recovery)** | 4 AWG | 3 ft | TO SafetyHub (passenger wheel well) | 150A max (100A current) | Via 150A CB - future-proofed - see [AUX SafetyHub][aux-safetyhub] |
-| **BCDC input feed** | 4 AWG | 10 ft | TO BCDC (engine bay) | 27-29A | Via 40A CB - see [BCDC][bcdc] |
+| **BCDC input feed** | 4 AWG | 5-6 ft | TO BCDC (passenger wheel well) | 50-55A | Via 80A CB - see [BCDC][bcdc] |
 | **Primary ground** | 2/0 AWG | 8 ft | TO Engine bay ground bus | 600A+ peak | Primary return path |
 | **Battery cross-ground** | 1/0 AWG | 5-6 ft | TO AUX battery- (passenger) | BCDC reference | Critical for BCDC operation |
 
@@ -29,9 +67,10 @@ hide:
 
 | Circuit | Wire Gauge | Distance | Destination | Current | Notes |
 |:--------|:-----------|:---------|:------------|:--------|:------|
-| **Warn Zeon 10-S Winch power** | 1/0 AWG | 13 ft | TO Front bumper winch | 250A typ, 400A peak | Direct connection (no CB) - see [Recovery Systems][recovery-systems] |
-| **Warn Zeon 10-S Winch ground** | 1/0 AWG | 13 ft | TO Winch motor ground | 250A typ, 400A peak | Return path via frame rail |
-| **SafetyHub 150 feed (Recovery)** | 4 AWG | 3 ft | TO SafetyHub (passenger wheel well) | 150A max (100A current) | Via 150A CB - future-proofed - see [AUX SafetyHub][aux-safetyhub] |
+| **Warn VR EVO 10-S Winch power** | 1/0 AWG | 13 ft | TO Front bumper winch | 250A typ, 400A peak | Direct connection (no CB) - see [Recovery Systems][recovery-systems] |
+| **Warn VR EVO 10-S Winch ground** | 1/0 AWG | 13 ft | TO Winch motor ground | 250A typ, 400A peak | Return path via frame rail |
+| **CONSTANT bus bar** | 1/0 AWG | 3 ft | TO CONSTANT bus (passenger wheel well) | 254A max | Feeds SwitchPros, SafetyHub, BODY PDU |
+| **BCDC output** | 4 AWG | Short | FROM BCDC (passenger wheel well) | 50A | Charging input to AUX battery |
 | **SwitchPros outputs** | Various | TBD | TO Engine bay/front | ~100A | Offroad lighting power - routing TBD |
 | **Primary ground** | 2/0 AWG | 3 ft | TO Rear frame rail | 569A peak | Winch + accessories return |
 | **Cross-ground reference** | 1/0 AWG | 5-6 ft | FROM START battery- (driver) | BCDC reference | Critical for BCDC operation |
@@ -51,7 +90,7 @@ hide:
 | **Engine block ground** | 2/0 AWG | 8 ft | Engine block | Engine bay ground bus | 600A+ peak | Starter/alternator return |
 | **Frame ground** | 2/0 AWG | 3 ft | Engine bay ground bus | Front frame rail | 600A+ peak | Chassis ground point |
 
-**CONSTANT Bus Location:** Engine bay firewall (near PMU) - feeds PMU, SafetyHub, BCDC
+**BCDC Location:** Passenger wheel well (near AUX battery) - charges AUX battery from START battery/alternator
 
 ---
 
