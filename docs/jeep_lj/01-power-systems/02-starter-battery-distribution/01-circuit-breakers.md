@@ -20,8 +20,6 @@ All START battery positive circuits protected by Mechanical Products Series 17 c
 
 **Total Circuit Breakers:** 2 (PMU 250A, BCDC 80A)
 
-**Eliminated:** SafetyHub 150A CB (communication loads moved to PMU OUT6/12/20), Radiator Fan 100A CB (now PMU controlled), Critical Cabin PDU 40A CB (Dakota Digital now PMU controlled)
-
 **All Circuit Breakers:**
 
 - Manufacturer: Mechanical Products Series 17

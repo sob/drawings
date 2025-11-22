@@ -22,60 +22,32 @@ See [Circuit Breakers][circuit-breakers] for complete CB specifications. All CBs
 !!! info "Single Source of Truth"
     This page is the authoritative source for all START battery wire specs (gauge, distance, voltage drop). Component pages reference here. For battery specs see [Section 1.1][batteries]. For ground bus bars see [Section 1.5][grounding].
 
-## START battery Positive Terminal
+## START battery Positive Terminal (6 connections)
 
-### Wheel Well to Engine Bay
+| Circuit | Destination | Wire Gauge | Distance | Current | Voltage Drop | Protection |
+|:--------|:------------|:-----------|:---------|:--------|:-------------|:-----------|
+| [Alternator][alternator] | Engine bay | 2/0 AWG | 8 ft | 270A | 2.81% @ 60°C | None |
+| [Starter][starter] | Engine bay | 2/0 AWG | 6 ft | 400-600A | 1.9-3.9% | None |
+| [PMU24][pmu] | Engine bay | 2/0 AWG | ~7 ft | 250A max | 2.4% @ 60°C | 250A CB |
+| ECM | Engine bay | Per Cummins | Short | <5A | Negligible | Fusible link |
+| [Grid Heater][grid-heater] | Engine bay | Per Cummins | Short | ~80A | Negligible | Fusible link |
+| [BCDC Alpha 50][bcdc] | Passenger wheel well | 4 AWG | ~6 ft | 50A | 0.94% | 80A CB |
 
-| Circuit | Wire Gauge | Distance | Current | Voltage Drop | Protection |
-|:--------|:-----------|:---------|:--------|:-------------|:-----------|
-| [Alternator][alternator] (charging input) | 2/0 AWG | 8 ft | 270A | 2.81% @ 60°C (13.99V) | None |
-| [Starter][starter] | 2/0 AWG | 6 ft | 400-600A | 1.9-3.9% (11.5-11.8V) | None |
-| [PMU24][pmu] | 2/0 AWG | ~7 ft | 250A max | 2.4% @ 60°C (14.05V) | 250A CB |
-| ECM | Per Cummins | Short | <5A | Negligible | Fusible link |
-| [Grid Heater][grid-heater] Relay | Per Cummins | Short | ~80A | Negligible | Fusible link |
+All circuit breakers mounted within 7" of battery (ABYC/NEC compliant). See [Circuit Breakers][circuit-breakers].
 
-### Wheel Well to Wheel Well (Under Vehicle)
+## START battery Negative Terminal (7 connections)
 
-| Circuit | Wire Gauge | Distance | Current | Voltage Drop | Protection |
-|:--------|:-----------|:---------|:--------|:-------------|:-----------|
-| [BCDC Alpha 50][bcdc] | 4 AWG | ~6 ft | 50A | 0.94% (13.89V) | 80A CB |
+| Circuit | Destination | Wire Gauge | Distance | Current | Voltage Drop |
+|:--------|:------------|:-----------|:---------|:--------|:-------------|
+| [Engine Bay Ground Bus][engine-ground-bus] | Engine bay | 2/0 AWG | ~8 ft | 600A+ peak | <0.1V |
+| ECM | Engine bay | 12 AWG | Short | <5A | Negligible |
+| [Grid Heater][grid-heater] | Engine bay | Per Cummins | Short | ~80A | Negligible |
+| [AUX Battery][aux-battery] | Passenger wheel well | 1/0 AWG | 5-6 ft | 75A max | <0.05V |
+| [G1 GMRS Radio][radios] | Dashboard | 10 AWG | ~8 ft | 15A TX | 1.2% |
+| [STX Intercom][radios] | Dashboard | 10 AWG | ~8 ft | 5A | 0.4% |
+| [Ham Radio][radios] | Dashboard | 10 AWG | ~8 ft | 13A TX | 1.0% |
 
-**Total Positive Connections:** 6 (all active)
-
-!!! info "Circuit Breaker Locations"
-    All circuit breakers mounted in wheel well within 7" of battery positive terminal (ABYC/NEC code compliant). See [Circuit Breakers][circuit-breakers] for complete specifications.
-
-## START battery Negative Terminal
-
-### Wheel Well to Engine Bay
-
-| Circuit | Wire Gauge | Distance | Current | Voltage Drop | Notes |
-|:--------|:-----------|:---------|:--------|:-------------|:------|
-| [Engine Bay Ground Bus][engine-ground-bus] | 2/0 AWG | ~8 ft | 600A+ peak | <0.1V | Primary return path |
-| ECM Ground | 12 AWG | Short | <5A | Negligible | Cummins harness |
-| [Grid Heater][grid-heater] Ground | Per Cummins | Short | ~80A | Negligible | Cummins harness |
-
-### Wheel Well to Wheel Well (Under Vehicle)
-
-| Circuit | Wire Gauge | Distance | Current | Voltage Drop | Notes |
-|:--------|:-----------|:---------|:--------|:-------------|:------|
-| [AUX Battery][aux-battery] Ground Reference | 1/0 AWG | 5-6 ft | 75A max | <0.05V | BCDC + fault path |
-
-### Wheel Well to Dashboard (Along Tub)
-
-| Circuit | Wire Gauge | Distance | Current | Voltage Drop | Notes |
-|:--------|:-----------|:---------|:--------|:-------------|:------|
-| [G1 GMRS Radio][radios] Ground | 10 AWG | ~8 ft | 15A TX | 1.2% (0.17V) | RF ground requirement |
-| [STX Intercom][radios] Ground | 10 AWG | ~8 ft | 5A | 0.4% (0.06V) | RF ground requirement |
-| [Ham Radio][radios] Ground | 10 AWG | ~8 ft | 13A TX | 1.0% (0.14V) | Future - RF ground |
-
-**Total Negative Connections:** 7 (6 active + 1 future)
-
-### Direct Connection Rationale
-
-**ECM & Grid Heater:** Direct to battery via Cummins harness prevents voltage spikes from starter/alternator from damaging sensitive ECM electronics.
-
-**Radios (G1 GMRS, STX, Ham):** Direct to battery negative minimizes ground loop noise and RF interference. Critical for radio performance.
+Radio grounds direct to battery for RF noise isolation. ECM/grid heater via Cummins harness to isolate from starter spikes.
 
 ## Related Documentation
 

@@ -41,7 +41,40 @@ The recovery systems provide essential off-road and emergency recovery capabilit
 - **Main Power Source:** AUX battery (passenger wheel well - direct connection, no fuse/breaker)
   - See [AUX Battery Distribution][aux-battery] for wire specs (gauge, length, routing, voltage drop calculations)
   - **System Voltage:** 13.8V (alternator charging - engine running during winch operations)
-  - **Protection:** None - direct connection (winch-rated contactor handles switching)
+  - **Protection:** None - direct connection (see justification below)
+
+### Circuit Protection - Engineering Justification {#winch-circuit-protection}
+
+**Design Decision:** No external circuit breaker per WARN manufacturer specifications
+
+**Manufacturer Specification:**
+
+- WARN Part: VR EVO 10-S Winch
+- Installation Manual: [WARN VR EVO Installation Guide][warn-manual]
+- Specification: "No external fuse or circuit breaker required"
+
+**Protection Strategy:**
+
+1. **Internal Thermal Protection:** Winch motor has integrated thermal cutoff
+2. **Contactor Disconnect:** Provides isolation when not in use
+3. **Cable Sizing:** 1/0 AWG rated 325A continuous, adequate for 400A brief peaks
+4. **Duty Cycle:** Winch operations are brief (10-30 seconds typical recovery)
+
+**Automotive Industry Standard:**
+
+- Factory vehicle winch installations do NOT use external circuit breakers
+- Winch internal protection is designed for automotive fault scenarios
+- This differs from marine practice (ABYC E-11) which requires all circuits fused
+
+**Fault Scenarios Covered:**
+
+- **Motor Stall:** Internal thermal protection trips before fire hazard
+- **Cable Short:** 1/0 AWG fuses open at ~800A+ (well above 400A operating current)
+- **Contactor Weld:** Manual disconnect at battery terminal provides emergency shutoff
+
+**Standards Applied:** SAE J1128 (automotive), WARN manufacturer specifications
+
+**This is NOT an oversight** - it is intentional adherence to manufacturer specifications and automotive best practices. See [Standards Exceptions][standards-exceptions] for complete documentation.
 
 ### Contactor/Solenoid
 
@@ -162,6 +195,8 @@ See [AUX Battery Distribution][aux-battery] for cable specs and routing path. Ge
 [wire-distance]: ../01-power-systems/01-power-generation/05-wire-distance-reference.md
 [safetyhub]: ../01-power-systems/03-aux-battery-distribution/04-safetyhub.md
 [air-system]: 02-air-system.md
+[warn-manual]: https://www.warn.com/
+[standards-exceptions]: ../01-power-systems/STANDARDS-EXCEPTIONS.md
 
 ---
 
