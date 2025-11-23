@@ -1,4 +1,7 @@
 ---
+hide:
+  - toc
+---
 
 # 1.3.5 AUX Battery Load Analysis {#aux-battery-load-analysis}
 

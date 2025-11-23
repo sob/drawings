@@ -9,7 +9,7 @@ hide:
 
 **Last Updated:** 2025-11-22
 
-**Total Open Items:** 39
+**Total Open Items:** 43
 
 ---
 
@@ -64,6 +64,10 @@ Items that improve the design but don't block installation.
 | RF Power Grommet Location | Grommet 6 location near battery for radio power | [Wire Routing][wire-routing] | Medium |
 | Solar Panel Wire Gauge | Wire sizing for Cascadia 4x4 80W panel connection | [BCDC][bcdc] | Medium |
 | Radiator Fan Wire Length | Wire length from PMU to fan (~6 ft estimated) | [Radiator Fan][radiator-fan] | Medium |
+| Alternator Output Terminal Size | Terminal size for 1/0 AWG lug selection | [Alternator][alternator] | Medium |
+| Alternator Voltage Regulator Set Point | Verify 14.2-14.4V for AGM batteries | [Alternator][alternator] | Medium |
+| BODY PDU Metri-Pack Pinout | J301-J306 connector pinout (military TM or reverse engineering) | [BODY PDU][body-rtmr] | Medium |
+| BODY PDU 12V Relay Part Numbers | Replacement part numbers for K40, K42, K53 (currently 24V coils) | [BODY PDU][body-rtmr] | Medium |
 
 ---
 
@@ -138,10 +142,10 @@ Items completed since last update.
 |:---------|:------|
 | 🔴 Critical | 0 |
 | ⚠️ High | 5 |
-| 📋 Medium | 21 |
+| 📋 Medium | 25 |
 | 📝 Low | 11 |
 | 🔍 Verify | 2 |
-| **TOTAL** | **39** |
+| **TOTAL** | **43** |
 
 ## Related Documentation
 
@@ -167,3 +171,4 @@ Items completed since last update.
 [grid-heater]: ../02-engine-systems/08-grid-heater.md
 [ibooster]: ../02-engine-systems/02-brake-booster.md
 [aux-battery]: ../01-power-systems/03-aux-battery-distribution/index.md
+[alternator]: ../01-power-systems/01-power-generation/02-alternator.md

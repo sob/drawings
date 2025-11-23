@@ -1,4 +1,7 @@
 ---
+hide:
+  - toc
+---
 
 # 1.2.2 START Battery Load Analysis {#start-battery-load-analysis}
 

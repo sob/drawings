@@ -1,9 +1,13 @@
 ---
 hide:
   - toc
+tags:
+  - product-details
+  - power-distribution
+  - relay-panel
 ---
 
-# 1.3.2 BODY PDU {#body-rtmr}
+# 1.3.3 BODY PDU {#body-rtmr}
 
 /// html | div.product-info
 ![Bussmann LR-2 BODY PDU](../../images/bussmann-lr2-body-pdu.jpg){ loading=lazy }
