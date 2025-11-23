@@ -41,7 +41,7 @@ The electrical system is organized into zones for logical distribution and maint
 - **[Turn Signals](03-lighting-systems/03-turn-signals.md)** - Turn signal system
 - **[Tail, Brake & Reverse](03-lighting-systems/04-tail-brake-reverse.md)** - Rear lighting
 - **[DRL & Parking Lights](03-lighting-systems/05-drl-parking.md)** - Daytime running and parking lights
-- **[Offroad & Aux Lighting](03-lighting-systems/06-offroad-lighting.md)** - Auxiliary and offroad lighting
+- **[Offroad & Aux Lighting](03-lighting-systems/06-offroad-lighting/index.md)** - Auxiliary and offroad lighting
 
 ### Control Interfaces
 

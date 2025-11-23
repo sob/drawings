@@ -84,5 +84,5 @@ This section covers all street-legal DOT-required lighting circuits controlled b
 [turn-signals]: 03-turn-signals.md
 [tail-brake-reverse-lights]: 04-tail-brake-reverse.md
 [drl-parking-lights]: 05-drl-parking.md
-[offroad-auxiliary-lighting]: 06-offroad-lighting.md
+[offroad-auxiliary-lighting]: 06-offroad-lighting/index.md
 [control-interfaces-overview]: ../04-control-interfaces/index.md

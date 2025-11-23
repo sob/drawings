@@ -42,15 +42,21 @@ tags:
 
 ## Reverse Lights
 
-**Power:** PMU Out 18 (3A load, 14 AWG)
+**Power:** PMU Out 18 (~8A load, 14 AWG)
 **Trigger:** Transmission reverse switch → PMU In 3
-**Circuits:** Maxbilt WHITE + factory backup lights + WolfBox camera trigger (parallel)
+**Circuits:** Maxbilt WHITE + S1 Flush Mount + WolfBox camera trigger (parallel)
 
 **Wiring:**
 
 1. Transmission reverse signal → PMU In 3
-2. PMU Out 18 → backup lights + Maxbilt WHITE + WolfBox trigger (parallel)
+2. PMU Out 18 → Maxbilt WHITE + [S1 Flush Mount reverse lights][reverse-lights] + WolfBox trigger (parallel)
 3. Chassis ground
+
+**Load Breakdown:**
+
+- Maxbilt WHITE: ~3A
+- S1 Flush Mount (2x): 5A
+- WolfBox trigger: negligible
 
 ## Brake Lights
 
@@ -130,3 +136,4 @@ See [DRL/Parking Lights][drl-parking-lights] for circuit details.
 [command-touch-ct4]: ../04-control-interfaces/03-command-touch-ct4.md
 [drl-parking-lights]: 05-drl-parking.md
 [communication-systems]: ../06-communication-systems/index.md
+[reverse-lights]: 06-offroad-lighting/10-reverse-lights.md

@@ -132,7 +132,18 @@ nav:
       - 3.3 - Turn Signals: jeep_lj/03-lighting-systems/03-turn-signals.md
       - 3.4 - Tail, Brake & Reverse: jeep_lj/03-lighting-systems/04-tail-brake-reverse.md
       - 3.5 - DRL & Parking Lights: jeep_lj/03-lighting-systems/05-drl-parking.md
-      - 3.6 - Offroad & Aux Lighting: jeep_lj/03-lighting-systems/06-offroad-lighting.md
+      - 3.6 - Offroad Lighting:
+        - jeep_lj/03-lighting-systems/06-offroad-lighting/index.md
+        - Zone 1 - Fog Light: jeep_lj/03-lighting-systems/06-offroad-lighting/02-fog-lights.md
+        - Zone 2 - Ditch Lights: jeep_lj/03-lighting-systems/06-offroad-lighting/01-ditch-lights.md
+        - Zone 3+4 - Roof Lights: jeep_lj/03-lighting-systems/06-offroad-lighting/03-roof-lights.md
+        - Zone 6 - Rock Lights: jeep_lj/03-lighting-systems/06-offroad-lighting/06-rock-lights.md
+        - Zone 7 - Cargo Lights: jeep_lj/03-lighting-systems/06-offroad-lighting/07-cargo-lights.md
+        - Zone 8 - Reverse Lights: jeep_lj/03-lighting-systems/06-offroad-lighting/10-reverse-lights.md
+        - Zone 8 - Rear Work Lights: jeep_lj/03-lighting-systems/06-offroad-lighting/08-rear-lights.md
+        - Chase Light: jeep_lj/03-lighting-systems/06-offroad-lighting/04-chase-lights.md
+        - Dome Lights: jeep_lj/03-lighting-systems/06-offroad-lighting/05-dome-lights.md
+        - Party Lights: jeep_lj/03-lighting-systems/06-offroad-lighting/09-party-lights.md
     - Control Interfaces:
       - jeep_lj/04-control-interfaces/index.md
       - 4.1 - Overview: jeep_lj/04-control-interfaces/01-overview.md

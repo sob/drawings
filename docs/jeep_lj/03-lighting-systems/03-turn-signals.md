@@ -15,52 +15,48 @@ tags:
 
 **Features:** GPS auto-cancel, lane change mode, hazard function
 
-## Front Turn Signals
+## Front Turn Signals / Side Markers
 
-**Type:** Amber LED turn signal lights (dedicated turn signal only)
-**Quantity:** 2 (left and right)
-**Mounting Location:** Front fenders or bumper (TBD)
-**Wire Gauge:** 14 AWG from CT4 to junction, 16 AWG to each light
+![LED Side Marker](../images/led-side-marker.jpg){ loading=lazy width=200 }
 
-**Wiring:**
+**Type:** 2" LED side markers (amber) - dual function turn signal + marker
+**Quantity:** 2 (left and right fenders)
+**Functions:**
 
-- CT4 SW1 (brown wire) → Front right turn signal
-- CT4 SW2 (red wire) → Front left turn signal
+- **Turn Signal:** CT4 controlled (SW1 right, SW2 left)
+- **Side Marker:** PMU Out 9 (DRL/parking circuit)
 
-**Note:** Dedicated turn signals, NOT dual-function with parking lights
+### Wiring
+
+| Function | Source | Wire | Destination |
+|:---------|:-------|:-----|:------------|
+| Right Turn | CT4 SW1 | BROWN, 14 AWG | Right side marker |
+| Left Turn | CT4 SW2 | RED, 14 AWG | Left side marker |
+| Marker | PMU Out 9 | — | Both side markers (via DRL circuit) |
+
+**Dual-Function Notes:**
+
+- Turn signal input overrides marker function when flashing
+- Marker remains on steady when turn signal inactive
+- Diode isolation may be required to prevent backfeed between CT4 and PMU circuits
 
 ## Rear Turn Signals
 
 Rear turn signals are integrated into Maxbilt Trail Tail lights (YELLOW wire).
 See [Tail/Brake/Reverse Lights][tail-brake-reverse-lights] for complete wiring.
 
-## Front Side Markers (Parking - NOT Turn Signals)
-
-![LED Side Marker](../images/led-side-marker.jpg){ loading=lazy width=200 }
-
-**Type:** 2" LED side markers (amber)
-
-**Quantity:** 2 (left and right)
-
-**Function:** Parking/marker lights only
-
-**Control:** Automatic with ignition (DRL/parking circuit)
-
-**Power:** PMU Out 9 (shared with LP6 DRL, license plate, tail markers)
-
-See [DRL/Parking Lights][drl-parking-lights] for complete circuit details.
-
 ## Outstanding Items
 
-- [ ] Determine exact mounting location for front turn signals (fenders vs bumper)
-- [ ] Plan wire routing from CT4 to front turn signal locations
+- [ ] Confirm side marker model supports dual-function (turn + marker)
+- [ ] Determine if diode isolation needed between CT4 turn and PMU marker circuits
+- [ ] Plan wire routing from CT4 to fender side marker locations
 - [ ] Verify turn signal flash rate meets DOT requirements
 
 ## Related Documentation
 
 - [Command Touch CT4][command-touch-ct4] - Controller programming and wiring
 - [Tail/Brake/Reverse Lights][tail-brake-reverse-lights] - Rear turn signal integration
-- [DRL/Parking Lights][drl-parking-lights] - Front marker parking lights
+- [DRL/Parking Lights][drl-parking-lights] - Side marker parking circuit
 
 [command-touch-ct4]: ../04-control-interfaces/03-command-touch-ct4.md
 [tail-brake-reverse-lights]: 04-tail-brake-reverse.md

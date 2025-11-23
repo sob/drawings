@@ -21,7 +21,7 @@ The DRL/parking circuit (PMU Out 9) powers:
 
 1. LP6 Headlight DRL (Pin 3) - both lights
 2. License plate lights - both lights
-3. Front 2" LED side markers (parking) - both lights
+3. Front 2" LED side markers (dual-function: marker + turn signal) - both lights
 4. Maxbilt tail light RED wire (marker/parking) - both lights
 
 **Total Load:** ~8A (PMU Out 9 capacity: 15A)
@@ -80,7 +80,7 @@ END
 - DRL junction distributes to:
   - LP6 Pin 3 (DRL): 16 AWG to each light (0.8A total)
   - License plate lights: 16 AWG to each light
-  - Front LED side markers: 16 AWG to each light
+  - Front LED side markers (also receive CT4 turn signal): 16 AWG to each light
   - Maxbilt tail RED wire: 16 AWG to each light
 
 ## License Plate Lights

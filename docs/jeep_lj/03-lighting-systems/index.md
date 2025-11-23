@@ -35,4 +35,4 @@ Complete vehicle lighting: street-legal/DOT-required lighting and auxiliary/offr
 [turn-signals]: 03-turn-signals.md
 [tail-brake-reverse-lights]: 04-tail-brake-reverse.md
 [drl-parking-lights]: 05-drl-parking.md
-[offroad-auxiliary-lighting]: 06-offroad-lighting.md
+[offroad-auxiliary-lighting]: 06-offroad-lighting/index.md
