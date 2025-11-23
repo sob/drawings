@@ -36,10 +36,16 @@ See [Tail/Brake/Reverse Lights][tail-brake-reverse-lights] for complete wiring.
 
 ## Front Side Markers (Parking - NOT Turn Signals)
 
+![LED Side Marker](../images/led-side-marker.jpg){ loading=lazy width=200 }
+
 **Type:** 2" LED side markers (amber)
+
 **Quantity:** 2 (left and right)
+
 **Function:** Parking/marker lights only
+
 **Control:** Automatic with ignition (DRL/parking circuit)
+
 **Power:** PMU Out 9 (shared with LP6 DRL, license plate, tail markers)
 
 See [DRL/Parking Lights][drl-parking-lights] for complete circuit details.
