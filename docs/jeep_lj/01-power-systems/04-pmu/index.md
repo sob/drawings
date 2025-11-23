@@ -38,4 +38,4 @@ Engine bay power distribution handled by ECUMaster PMU24, a programmable power m
 [front-circuit-breakers]: ../02-starter-battery-distribution/01-circuit-breakers.md
 [grounding]: ../05-grounding/index.md
 [starter-battery-distribution]: ../02-starter-battery-distribution/index.md
-[firewall-ingress]: ../../02-engine-systems/07-firewall-ingress.md
+[firewall-ingress]: ../07-wire-routing/02-firewall-ingress.md

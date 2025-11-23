@@ -23,7 +23,7 @@ Physical installation planning, tracking, and validation procedures.
 
 **Firewall Planning:**
 
-- [Section 2.7 - Firewall Ingress][firewall-ingress] - Detailed firewall penetration specifications and grommet assignments
+- [Section 1.7.2 - Firewall Ingress][firewall-ingress] - Firewall penetration specifications and grommet assignments
 
 ## System Overview
 
@@ -38,4 +38,4 @@ Installation planning and tracking includes:
 [tbd-tracker]: 01-tbd-tracker.md
 [section-1-install]: ../01-power-systems/installation-checklist.md
 [wire-routing]: ../01-power-systems/07-wire-routing/index.md
-[firewall-ingress]: ../02-engine-systems/07-firewall-ingress.md
+[firewall-ingress]: ../01-power-systems/07-wire-routing/02-firewall-ingress.md

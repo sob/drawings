@@ -42,5 +42,5 @@ Complete digital instrumentation system replacing factory TJ gauge cluster. HDX 
 [bim-compass]: 06-bim-compass.md
 [pmu-outputs]: ../../01-power-systems/04-pmu/03-pmu-outputs.md
 [grounding]: ../../01-power-systems/05-grounding/index.md
-[firewall-ingress]: ../../02-engine-systems/07-firewall-ingress.md
+[firewall-ingress]: ../../01-power-systems/07-wire-routing/02-firewall-ingress.md
 [ecm]: ../../02-engine-systems/index.md

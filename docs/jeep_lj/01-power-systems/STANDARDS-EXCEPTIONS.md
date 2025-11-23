@@ -418,7 +418,7 @@ Before flagging as issues, verify these intentional design choices:
 [wire-distance]: 01-power-generation/05-wire-distance-reference.md
 [starter-system]: ../02-engine-systems/01-starter.md
 [starter-battery-distribution]: 02-starter-battery-distribution/index.md
-[grid-heater]: ../02-engine-systems/08-grid-heater.md
+[grid-heater]: ../02-engine-systems/07-grid-heater.md
 [alternator]: 01-power-generation/02-alternator.md
 [bcdc]: 01-power-generation/03-bcdc.md
 [starter-cbs]: 02-starter-battery-distribution/01-circuit-breakers.md

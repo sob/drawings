@@ -32,7 +32,12 @@ tags:
 
 **Weight:** 19 lbs
 
+**Mounting:** Engine block (PLGR mount)
+
+**Power Source:** START battery+ direct connection (2/0 AWG)
+
 **OEM Cross-Reference:**
+
 - Cummins: 4996706
 - Denso: 428000-7090, 438000-3110
 - Isuzu: 5-128000-980
@@ -120,7 +125,7 @@ None - design complete. See [installation checklist][install-checklist] for buil
 [db-starter]: https://www.dbelectrical.com/products/starter-for-2-8-cummins-isf2-8-qsb3-9-30-qsb4-5-4996706-428000-7090.html
 [starter-battery-distribution]: ../01-power-systems/02-starter-battery-distribution/index.md
 [starter-battery]: ../01-power-systems/02-starter-battery-distribution/index.md
-[firewall-ingress]: 07-firewall-ingress.md
+[firewall-ingress]: ../01-power-systems/07-wire-routing/02-firewall-ingress.md
 [engine-bay-ground-bus]: ../01-power-systems/05-grounding/01-engine-bay-ground-bus.md
 [power-generation]: ../01-power-systems/01-power-generation/index.md
 [wire-distance]: ../01-power-systems/01-power-generation/05-wire-distance-reference.md

@@ -14,11 +14,17 @@ tags:
 
 **Type:** Cold-start air intake heater
 
-**Relay:** Cummins Part# 5467024 (OEM R2.8 relay)
+**Model:** Grid Heater Relay
 
-**Control:** Direct ECM control (no PMU involvement)
+**Part Number:** Cummins 5467024
 
-**Function:** Cold-start aid for ambient temperatures below ~50°F
+**Manufacturer:** Cummins
+
+**Mounting:** Engine bay near intake manifold
+
+**Power Source:** START battery+ direct (via fusible link, 40-80A)
+
+**Control:** Direct ECM control (pins 46/21)
 
 ///
 

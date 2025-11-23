@@ -63,7 +63,7 @@ Radio grounds direct to battery for RF noise isolation. ECM/grid heater via Cumm
 [pmu]: ../04-pmu/index.md
 [bcdc]: ../01-power-generation/03-bcdc.md
 [batteries]: ../01-power-generation/01-batteries.md
-[grid-heater]: ../../02-engine-systems/08-grid-heater.md
+[grid-heater]: ../../02-engine-systems/07-grid-heater.md
 [grounding]: ../05-grounding/index.md
 [engine-ground-bus]: ../05-grounding/01-engine-bay-ground-bus.md
 [power-gen]: ../01-power-generation/index.md

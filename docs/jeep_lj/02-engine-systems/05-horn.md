@@ -10,12 +10,17 @@ tags:
 # 2.5 Horn System {#horn}
 
 /// html | div.product-info
+![PIAA 85115 Superior Bass Horn](../images/piaa-85115-horn.jpg){ loading=lazy }
 
 **Type:** Dual Tone Horns
 
-**Model:** PIAA Dual-Tone Horns
+**Model:** 85115
+
+**Part Number:** 85115
 
 **Manufacturer:** PIAA
+
+**Product Page:** [PIAA Superior Bass Horn 85115][piaa-horns]
 
 **Mounting:** Engine bay
 
@@ -59,11 +64,9 @@ START battery CONSTANT → PMU → Out 18 → PIAA Horns (5.4A) → Chassis Grou
 
 ## Outstanding Items
 
-- [ ] Mount PIAA horns in engine bay, ground to chassis
-- [ ] Run PMU Out 18 to horns (14 AWG for 5.4A load)
-- [ ] Run horn button trigger wire through firewall to PMU In 1
-- [ ] Configure PMU: In 1 closes → Out 18 activates
-- [ ] Test with ignition OFF (verify CONSTANT power)
+None - design complete. See [installation checklist][install-checklist] for build tasks.
+
+[install-checklist]: installation-checklist.md
 
 ## Related Documentation
 
@@ -71,6 +74,7 @@ START battery CONSTANT → PMU → Out 18 → PIAA Horns (5.4A) → Chassis Grou
 - [START Battery Distribution][starter-battery-distribution] - CONSTANT bus bar
 - [Firewall Ingress][firewall-ingress] - Horn button trigger wire routing
 
+[piaa-horns]: https://www.piaa.com/product/85115/
 [pmu-outputs]: ../01-power-systems/04-pmu/03-pmu-outputs.md
 [starter-battery-distribution]: ../01-power-systems/02-starter-battery-distribution/index.md
-[firewall-ingress]: 07-firewall-ingress.md
+[firewall-ingress]: ../01-power-systems/07-wire-routing/02-firewall-ingress.md

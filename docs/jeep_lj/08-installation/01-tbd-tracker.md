@@ -7,9 +7,9 @@ hide:
 
 **Purpose:** Central tracking for all To-Be-Determined items across the Jeep LJ electrical system documentation.
 
-**Last Updated:** 2025-11-22
+**Last Updated:** 2025-11-23
 
-**Total Open Items:** 43
+**Total Open Items:** 42
 
 ---
 
@@ -33,7 +33,6 @@ Items needed before installation begins but not system-critical.
 | SwitchPros Control Panel Location | Dash mount location (4" x 3") | [SwitchPros][switchpros] | High |
 | Fusion Amp Mounting | Cargo area or under rear seat | [Audio Systems][audio-systems] | High |
 | Fusion Amp Current Draw | Verify 35-45A continuous, 60-70A peak | [Audio Systems][audio-systems] | High |
-| iBooster Mounting Bolt Torque | Torque spec for mounting bolts | [Brake Booster][ibooster] | High |
 
 ---
 
@@ -108,6 +107,7 @@ Items completed since last update.
 
 | Item | Resolution | Date |
 |:-----|:-----------|:-----|
+| iBooster Mounting Bolt Torque | 16.5 Nm (12 ft-lb) - 2x nyloc nuts, 13mm per Tesla Model Y service manual | 2025-11-23 |
 | Grommet Locations | Determined during installation (general areas documented) | 2025-11-22 |
 | Firewall Ground Stud Location | Determined during installation | 2025-11-22 |
 | Wiper Controller Mounting | Dash-mounted (WS-51C is integrated switch/controller) | 2025-11-22 |
@@ -141,11 +141,11 @@ Items completed since last update.
 | Priority | Count |
 |:---------|:------|
 | 🔴 Critical | 0 |
-| ⚠️ High | 5 |
+| ⚠️ High | 4 |
 | 📋 Medium | 25 |
 | 📝 Low | 11 |
 | 🔍 Verify | 2 |
-| **TOTAL** | **43** |
+| **TOTAL** | **42** |
 
 ## Related Documentation
 
@@ -154,9 +154,9 @@ Items completed since last update.
 
 [bcdc]: ../01-power-systems/01-power-generation/03-bcdc.md
 [gauge-cluster]: ../04-control-interfaces/04-gauge-cluster/index.md
-[radiator-fan]: ../02-engine-systems/06-radiator-fan/index.md
+[radiator-fan]: ../02-engine-systems/06-radiator-fan.md
 [wiper-system]: ../02-engine-systems/04-wipers.md
-[firewall-ingress]: ../02-engine-systems/07-firewall-ingress.md
+[firewall-ingress]: ../01-power-systems/07-wire-routing/02-firewall-ingress.md
 [wire-routing]: ../01-power-systems/07-wire-routing/index.md
 [switchpros]: ../04-control-interfaces/02-switchpros-sp1200.md
 [dash-controls]: ../04-control-interfaces/05-dashboard-controls.md
@@ -168,7 +168,7 @@ Items completed since last update.
 [body-rtmr]: ../01-power-systems/03-aux-battery-distribution/03-body-pdu.md
 [section-1-install]: ../01-power-systems/installation-checklist.md
 [pmu-outputs]: ../01-power-systems/04-pmu/03-pmu-outputs.md
-[grid-heater]: ../02-engine-systems/08-grid-heater.md
+[grid-heater]: ../02-engine-systems/07-grid-heater.md
 [ibooster]: ../02-engine-systems/02-brake-booster.md
 [aux-battery]: ../01-power-systems/03-aux-battery-distribution/index.md
 [alternator]: ../01-power-systems/01-power-generation/02-alternator.md

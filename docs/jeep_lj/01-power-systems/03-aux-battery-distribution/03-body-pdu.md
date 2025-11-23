@@ -104,4 +104,4 @@ tags:
 [circuit-breakers]: 01-circuit-breakers.md
 [dashboard]: ../../04-control-interfaces/05-dashboard-controls.md
 [audio]: ../../05-audio-systems/01-audio.md
-[firewall]: ../../02-engine-systems/07-firewall-ingress.md
+[firewall]: ../07-wire-routing/02-firewall-ingress.md

@@ -103,6 +103,6 @@ See [PMU Programming][pmu-programming] for CAN-based logic examples.
 [pmu-overview]: 01-pmu-overview.md
 [pmu-outputs]: 03-pmu-outputs.md
 [pmu-programming]: 04-pmu-programming.md
-[firewall-ingress]: ../../02-engine-systems/07-firewall-ingress.md
+[firewall-ingress]: ../07-wire-routing/02-firewall-ingress.md
 [gauge-cluster]: ../../04-control-interfaces/04-gauge-cluster/index.md
 [ignition-signal]: ../06-ignition-signal/index.md

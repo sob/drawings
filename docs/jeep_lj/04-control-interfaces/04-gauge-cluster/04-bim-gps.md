@@ -94,4 +94,4 @@ GPS-based speedometer, compass, altimeter, and clock sync module. Eliminates nee
 [gauge-system]: index.md
 [dashboard-cluster]: 02-dashboard-cluster.md
 [bim-compass]: 06-bim-compass.md
-[firewall-ingress]: ../../02-engine-systems/07-firewall-ingress.md
+[firewall-ingress]: ../../01-power-systems/07-wire-routing/02-firewall-ingress.md

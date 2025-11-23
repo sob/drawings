@@ -17,8 +17,7 @@ Engine bay systems and critical vehicle subsystems required for safe vehicle ope
 - **[2.4 Wiper System][wipers]** - Ron Francis WS-51C electronic wiper controller
 - **[2.5 Horn System][horn]** - PIAA twin-tone horn with relay control
 - **[2.6 Radiator Fan][radiator-fan]** - Electric radiator cooling fan system
-- **[2.7 Firewall Ingress][firewall-ingress]** - Firewall penetrations, grommets, harness routing
-- **[2.8 Grid Heater][grid-heater]** - Cummins R2.8 cold-start grid heater relay and control
+- **[2.7 Grid Heater][grid-heater]** - Cummins R2.8 cold-start grid heater relay and control
 
 ## System Overview
 
@@ -37,9 +36,8 @@ Critical safety systems (brake booster, starter) have direct battery connections
 [hvac]: 03-hvac.md
 [wipers]: 04-wipers.md
 [horn]: 05-horn.md
-[radiator-fan]: 06-radiator-fan/index.md
-[firewall-ingress]: 07-firewall-ingress.md
-[grid-heater]: 08-grid-heater.md
+[radiator-fan]: 06-radiator-fan.md
+[grid-heater]: 07-grid-heater.md
 [pmu-power-distribution]: ../01-power-systems/04-pmu/index.md
 [body-pdu]: ../01-power-systems/03-aux-battery-distribution/03-body-pdu.md
 [safetyhub]: ../01-power-systems/03-aux-battery-distribution/04-safetyhub.md

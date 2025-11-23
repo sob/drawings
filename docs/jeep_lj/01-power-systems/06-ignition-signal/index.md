@@ -78,5 +78,5 @@ Distributes low-current 12V ignition sense signal from keyswitch RUN terminal to
 [power-overview]: ../index.md
 [pmu-inputs]: ../04-pmu/02-pmu-inputs.md
 [starter-system]: ../../02-engine-systems/01-starter.md
-[firewall-ingress]: ../../02-engine-systems/07-firewall-ingress.md
+[firewall-ingress]: ../07-wire-routing/02-firewall-ingress.md
 [bcdc]: ../01-power-generation/03-bcdc.md

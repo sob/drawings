@@ -341,5 +341,5 @@ The WolfBox system replaces the factory rearview mirror with a smart mirror that
 
 [starter-battery]: ../01-power-systems/02-starter-battery-distribution/index.md
 [pmu-outputs]: ../01-power-systems/04-pmu/03-pmu-outputs.md
-[firewall-penetrations-ingress-points]: ../02-engine-systems/07-firewall-ingress.md
+[firewall-penetrations-ingress-points]: ../01-power-systems/07-wire-routing/02-firewall-ingress.md
 [body-rtmr]: ../01-power-systems/03-aux-battery-distribution/03-body-pdu.md

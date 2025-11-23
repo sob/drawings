@@ -112,7 +112,9 @@ nav:
         - 1.5.2 - Firewall Stud Bus: jeep_lj/01-power-systems/05-grounding/02-firewall-stud-bus.md
         - 1.5.3 - SwitchPros Ground Bus: jeep_lj/01-power-systems/05-grounding/03-switchpros-ground-bus.md
       - 1.6 - Ignition Signal: jeep_lj/01-power-systems/06-ignition-signal/index.md
-      - 1.7 - Wire Routing: jeep_lj/01-power-systems/07-wire-routing/index.md
+      - 1.7 - Wire Routing:
+        - jeep_lj/01-power-systems/07-wire-routing/index.md
+        - 1.7.2 - Firewall Ingress: jeep_lj/01-power-systems/07-wire-routing/02-firewall-ingress.md
     - Critical Systems:
       - jeep_lj/02-engine-systems/index.md
       - 2.1 - Starter System: jeep_lj/02-engine-systems/01-starter.md
@@ -120,11 +122,8 @@ nav:
       - 2.3 - HVAC System: jeep_lj/02-engine-systems/03-hvac.md
       - 2.4 - Wiper System: jeep_lj/02-engine-systems/04-wipers.md
       - 2.5 - Horn System: jeep_lj/02-engine-systems/05-horn.md
-      - 2.6 - Radiator Fan:
-        - jeep_lj/02-engine-systems/06-radiator-fan/index.md
-        - 2.6.1 - Fan Motor: jeep_lj/02-engine-systems/06-radiator-fan/01-fan-motor.md
-      - 2.7 - Firewall Ingress: jeep_lj/02-engine-systems/07-firewall-ingress.md
-      - 2.8 - Grid Heater: jeep_lj/02-engine-systems/08-grid-heater.md
+      - 2.6 - Radiator Fan: jeep_lj/02-engine-systems/06-radiator-fan.md
+      - 2.7 - Grid Heater: jeep_lj/02-engine-systems/07-grid-heater.md
     - Lighting Systems:
       - jeep_lj/03-lighting-systems/index.md
       - 3.1 - Lighting Overview: jeep_lj/03-lighting-systems/01-lighting-overview.md
