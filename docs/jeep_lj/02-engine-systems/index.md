@@ -18,6 +18,7 @@ Engine bay systems and critical vehicle subsystems required for safe vehicle ope
 - **[2.5 Horn System][horn]** - PIAA twin-tone horn with relay control
 - **[2.6 Radiator Fan][radiator-fan]** - Electric radiator cooling fan system
 - **[2.7 Grid Heater][grid-heater]** - Cummins R2.8 cold-start grid heater relay and control
+- **[2.8 Fuel System][fuel-system]** - Lift pump control circuit (replaces factory PDC/PCM logic)
 
 ## System Overview
 
@@ -38,6 +39,7 @@ Critical safety systems (brake booster, starter) have direct battery connections
 [horn]: 05-horn.md
 [radiator-fan]: 06-radiator-fan.md
 [grid-heater]: 07-grid-heater.md
+[fuel-system]: 08-fuel-system.md
 [pmu-power-distribution]: ../01-power-systems/04-pmu/index.md
 [body-pdu]: ../01-power-systems/03-aux-battery-distribution/03-body-pdu.md
 [safetyhub]: ../01-power-systems/03-aux-battery-distribution/04-safetyhub.md

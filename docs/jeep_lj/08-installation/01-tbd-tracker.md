@@ -9,7 +9,7 @@ hide:
 
 **Last Updated:** 2025-11-23
 
-**Total Open Items:** 42
+**Total Open Items:** 43
 
 ---
 
@@ -29,6 +29,7 @@ Items needed before installation begins but not system-critical.
 
 | Item | Description | File | Priority |
 |:-----|:------------|:-----|:---------|
+| R2.8 ECM A/C Request Input | Verify if CM2220 has A/C request input for idle bump (optional) | [HVAC System][hvac] | High |
 | Dakota Digital Panel Mounting | HDPE sheet dimensions and location | [Wire Routing][wire-routing] | High |
 | SwitchPros Control Panel Location | Dash mount location (4" x 3") | [SwitchPros][switchpros] | High |
 | Fusion Amp Mounting | Cargo area or under rear seat | [Audio Systems][audio-systems] | High |
@@ -141,11 +142,11 @@ Items completed since last update.
 | Priority | Count |
 |:---------|:------|
 | 🔴 Critical | 0 |
-| ⚠️ High | 4 |
+| ⚠️ High | 5 |
 | 📋 Medium | 25 |
 | 📝 Low | 11 |
 | 🔍 Verify | 2 |
-| **TOTAL** | **42** |
+| **TOTAL** | **43** |
 
 ## Related Documentation
 
@@ -172,3 +173,5 @@ Items completed since last update.
 [ibooster]: ../02-engine-systems/02-brake-booster.md
 [aux-battery]: ../01-power-systems/03-aux-battery-distribution/index.md
 [alternator]: ../01-power-systems/01-power-generation/02-alternator.md
+[fuel-system]: ../02-engine-systems/08-fuel-system.md
+[hvac]: ../02-engine-systems/03-hvac.md
