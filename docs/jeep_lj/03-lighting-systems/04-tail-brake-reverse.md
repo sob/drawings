@@ -11,16 +11,23 @@ tags:
 # Tail, Brake & Reverse Lights {#tail-brake-reverse-lights}
 
 /// html | div.product-info
+![Maxbilt Trail Tail](../images/maxbilt-trail-tail.png){ loading=lazy }
 
-**Type:** Maxbilt Trail Tail LED (4-function: Brake, Turn, Marker, Reverse)
+**Type:** LED Tail Light (4-function: Brake, Turn, Marker, Reverse)
 
-**Manufacturer:** On The Rox Fabrication
+**Model:** Trail Tail
 
-**Installation Guide:** [Maxbilt Tail Wiring](https://ontheroxfab.com/wp-content/uploads/2019/10/MaxBilt-Taillight-Installation-12-3-2020.pdf)
+**Manufacturer:** On The Rox Fabrication (Maxbilt)
+
+**Product Page:** [Maxbilt Trail Tail LED Tail Lights][product-link]
+
+**Installation Guide:** [Maxbilt Tail Wiring][install-link]
 
 **Quantity:** 2
 
 **Mounting:** Rear quarter panels or tailgate
+
+**Power Source:** CT4 (turn), PMU Out 17 (brake), PMU Out 18 (reverse), PMU Out 9 (marker)
 
 ///
 
@@ -40,6 +47,7 @@ tags:
 **Circuits:** Maxbilt WHITE + factory backup lights + WolfBox camera trigger (parallel)
 
 **Wiring:**
+
 1. Transmission reverse signal → PMU In 3
 2. PMU Out 18 → backup lights + Maxbilt WHITE + WolfBox trigger (parallel)
 3. Chassis ground
@@ -51,6 +59,7 @@ tags:
 **Circuits:** Maxbilt YELLOW + factory third brake light (if retained)
 
 **Wiring:**
+
 1. Brake pedal switch → PMU In 2
 2. PMU Out 17 → diode → Maxbilt YELLOW (both tail lights)
 3. PMU Out 17 → factory third brake light (if retained)
@@ -63,7 +72,7 @@ Brake circuit integrates with turn signals via diode isolation (see below).
 
 **Diode Configuration:**
 
-```
+```text
      CT4 Left Turn (SW2) ──[Diode]──┬──→ Left Maxbilt YELLOW
                                      │
 PMU Out 17 Brake Circuit ──[Diode]──┴──→ Left Maxbilt YELLOW
@@ -74,10 +83,12 @@ PMU Out 17 Brake Circuit ──[Diode]──┴──→ Right Maxbilt YELLOW
 ```
 
 **Diode Specifications:**
+
 - 1N4001 or equivalent (1A, 50V minimum)
 - Prevents backfeed between circuits
 
 **Operation:**
+
 - Right turn active → right tail light flashes
 - Brake pressed → both tail lights solid
 - Right turn + brake → right flashes, left stays solid
@@ -112,3 +123,10 @@ See [DRL/Parking Lights][drl-parking-lights] for circuit details.
 - [Command Touch CT4][command-touch-ct4] - Turn signal control
 - [DRL/Parking Lights][drl-parking-lights] - Marker/parking circuit (RED wire)
 - [Communication & Camera][communication-systems] - WolfBox camera reverse trigger
+
+[product-link]: https://ontheroxfab.com/product/maxbilt-trail-tail-led-tail-lights/
+[install-link]: https://ontheroxfab.com/wp-content/uploads/2019/10/MaxBilt-Taillight-Installation-12-3-2020.pdf
+[pmu-power-distribution]: ../01-power-systems/04-pmu/index.md
+[command-touch-ct4]: ../04-control-interfaces/03-command-touch-ct4.md
+[drl-parking-lights]: 05-drl-parking.md
+[communication-systems]: ../06-communication-systems/index.md

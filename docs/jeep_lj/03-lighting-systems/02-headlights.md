@@ -11,16 +11,23 @@ tags:
 # Headlights {#headlights}
 
 /// html | div.product-info
+![Baja Designs LP6](../images/baja-designs-lp6.jpg){ loading=lazy }
 
-**Type:** Baja Designs LP6 DOT LED (complete headlight replacement)
+**Type:** DOT LED Headlight (complete replacement)
 
-**Installation Guide:** [Baja Designs LP6 DOT Wiring](https://www.bajadesigns.com/wp-content/uploads/Installation%20Instructions/FGXX_18-7801-INS_001.pdf)
+**Model:** LP6 DOT
+
+**Manufacturer:** Baja Designs
+
+**Product Page:** [LP6 Pair Driving/Combo LED][product-link]
+
+**Installation Guide:** [Baja Designs LP6 DOT Wiring][install-link]
 
 **Quantity:** 2 (left and right)
 
 **Mounting:** Factory headlight buckets
 
-**Controller:** [Command Touch CT4][command-touch-ct4] SW3/SW4
+**Power Source:** [Command Touch CT4][command-touch-ct4] SW3/SW4
 
 ///
 
@@ -67,3 +74,9 @@ tags:
 - [Command Touch CT4][command-touch-ct4] - Controller programming and wiring
 - [DRL/Parking Lights][drl-parking-lights] - DRL circuit and auto-off logic
 - [PMU24 Power Distribution][pmu-power-distribution] - PMU Out 9 DRL circuit
+
+[product-link]: https://www.bajadesigns.com/products/lp6-pair-driving-combo-led.html
+[install-link]: https://www.bajadesigns.com/wp-content/uploads/Installation%20Instructions/FGXX_18-7801-INS_001.pdf
+[command-touch-ct4]: ../04-control-interfaces/03-command-touch-ct4.md
+[drl-parking-lights]: 05-drl-parking.md
+[pmu-power-distribution]: ../01-power-systems/04-pmu/index.md

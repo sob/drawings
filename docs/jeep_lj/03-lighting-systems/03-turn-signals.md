@@ -1,11 +1,18 @@
 ---
 hide:
   - toc
+tags:
+  - product-details
+  - lighting
+  - turn-signals
 ---
 
 # Turn Signals {#turn-signals}
+
 **Controller:** [Command Touch CT4][command-touch-ct4] (SW1 = right turn, SW2 = left turn)
+
 **Power Source:** START battery CONSTANT (via CT4 40A fuse)
+
 **Features:** GPS auto-cancel, lane change mode, hazard function
 
 ## Front Turn Signals
@@ -16,6 +23,7 @@ hide:
 **Wire Gauge:** 14 AWG from CT4 to junction, 16 AWG to each light
 
 **Wiring:**
+
 - CT4 SW1 (brown wire) → Front right turn signal
 - CT4 SW2 (red wire) → Front left turn signal
 
@@ -47,3 +55,7 @@ See [DRL/Parking Lights][drl-parking-lights] for complete circuit details.
 - [Command Touch CT4][command-touch-ct4] - Controller programming and wiring
 - [Tail/Brake/Reverse Lights][tail-brake-reverse-lights] - Rear turn signal integration
 - [DRL/Parking Lights][drl-parking-lights] - Front marker parking lights
+
+[command-touch-ct4]: ../04-control-interfaces/03-command-touch-ct4.md
+[tail-brake-reverse-lights]: 04-tail-brake-reverse.md
+[drl-parking-lights]: 05-drl-parking.md

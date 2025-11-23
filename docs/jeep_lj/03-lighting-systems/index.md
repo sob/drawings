@@ -4,6 +4,7 @@ hide:
 ---
 
 # Section 3: Lighting Systems {#lighting-systems-index}
+
 Complete vehicle lighting: street-legal/DOT-required lighting and auxiliary/offroad lighting systems.
 
 ## Contents
@@ -18,11 +19,20 @@ Complete vehicle lighting: street-legal/DOT-required lighting and auxiliary/offr
 ## System Architecture
 
 **Street-Legal Lighting (03-series):**
+
 - Command Touch CT4: Headlights, turn signals
 - PMU: DRL, brake, reverse, marker lights
 - DOT-compliant, integrated with factory controls
 
 **Offroad/Auxiliary Lighting:**
+
 - SwitchPros SP-1200: All auxiliary lighting circuits
 - Roof lights, ditch lights, fog lights, rock lights, party lights
 - Independent from street-legal circuits
+
+[vehicle-lighting-overview]: 01-lighting-overview.md
+[headlights]: 02-headlights.md
+[turn-signals]: 03-turn-signals.md
+[tail-brake-reverse-lights]: 04-tail-brake-reverse.md
+[drl-parking-lights]: 05-drl-parking.md
+[offroad-auxiliary-lighting]: 06-offroad-lighting.md

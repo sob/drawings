@@ -1,11 +1,18 @@
 ---
 hide:
   - toc
+tags:
+  - lighting
+  - drl
+  - pmu-controlled
 ---
 
 # DRL & Parking Lights {#drl-parking-lights}
+
 **Control:** Automatic with ignition
+
 **Power Source:** PMU Out 9 (8A capacity, SWITCHED)
+
 **DRL Auto-Off:** PMU programming logic disables when CT4 SW3 activates headlights
 
 ## Circuit Components
@@ -25,7 +32,7 @@ The DRL/parking circuit (PMU Out 9) powers:
 
 **PMU Configuration:**
 
-```
+```text
 PMU Input 7 (In 7): CT4 SW3 headlight status signal
 PMU Input 6 (In 6): Ignition RUN signal
 PMU Output 9 (Out 9): DRL/Parking lights circuit
@@ -41,18 +48,21 @@ END
 ## Operation States
 
 **1. Ignition ON, Headlights OFF:**
+
 - PMU In 6 = ON (ignition RUN)
 - PMU In 7 = OFF (CT4 SW3 not active)
 - PMU Out 9 = ON
 - **Result:** All DRL/parking lights illuminated
 
 **2. Ignition ON, Headlights ON:**
+
 - PMU In 6 = ON (ignition RUN)
 - PMU In 7 = ON (CT4 SW3 active)
 - PMU Out 9 = OFF
 - **Result:** Headlights active, DRL off
 
 **3. Ignition OFF:**
+
 - PMU In 6 = OFF
 - PMU Out 9 = OFF (regardless of headlight status)
 - **Result:** All DRL/parking lights off
@@ -60,10 +70,12 @@ END
 ## Wiring
 
 **PMU Input Wiring:**
+
 - **In 6:** Ignition switch RUN output (shared with CT4, SwitchPros)
 - **In 7:** CT4 SW3 output (tapped from headlight low beam circuit)
 
 **PMU Output Wiring:**
+
 - **Out 9:** 14 AWG from PMU to DRL junction
 - DRL junction distributes to:
   - LP6 Pin 3 (DRL): 16 AWG to each light (0.8A total)
@@ -93,3 +105,8 @@ END
 - [Headlights][headlights] - LP6 DRL function (Pin 3)
 - [Tail/Brake/Reverse][tail-brake-reverse-lights] - Maxbilt RED wire (marker/parking)
 - [Turn Signals][turn-signals] - Front marker parking lights
+
+[pmu-power-distribution]: ../01-power-systems/04-pmu/index.md
+[headlights]: 02-headlights.md
+[tail-brake-reverse-lights]: 04-tail-brake-reverse.md
+[turn-signals]: 03-turn-signals.md
