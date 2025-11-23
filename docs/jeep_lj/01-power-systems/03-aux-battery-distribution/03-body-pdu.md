@@ -86,6 +86,7 @@ tags:
 - [ ] Determine replacement 12V relay part numbers for K40, K42, K53 (currently 24V coils)
 
 **Design Notes:**
+
 - Heated seat current: 5A peak, 2A sustained per seat (verified with vendor)
 - Military relays K21/K22 provide fault isolation and independent operation
 - J301-J306 connectors require custom harness fabrication

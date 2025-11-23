@@ -81,6 +81,7 @@ flowchart LR
 ## Power Distribution
 
 **Bypasses all distribution systems:**
+
 - Does NOT use CONSTANT bus bar
 - Does NOT use PMU outputs
 - Direct battery connection with fusible link protection

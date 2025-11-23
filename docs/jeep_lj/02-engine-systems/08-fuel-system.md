@@ -23,7 +23,7 @@ The Cummins R2.8 includes a **gear-driven mechanical fuel pump** mounted on the 
 
 ## Fuel Flow Path
 
-```
+```text
 Fuel Tank
     ↓
 Fuel pickup (in-tank)

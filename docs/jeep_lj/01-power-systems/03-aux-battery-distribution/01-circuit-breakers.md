@@ -43,5 +43,3 @@ All CONSTANT bus loads protected by Mechanical Products Series 17 circuit breake
 [switchpros]: ../../04-control-interfaces/02-switchpros-sp1200.md
 [safetyhub]: 04-safetyhub.md
 [body-rtmr]: 03-body-pdu.md
-
-

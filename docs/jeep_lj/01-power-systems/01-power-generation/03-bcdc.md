@@ -111,11 +111,7 @@ The BCDC includes a battery temperature sensor (2-pin, polarity reversible) that
 [redarc-bcdc]: https://www.redarcelectronics.com/products/the-manager30
 [bcdc-install]: https://cdn.intelligencebank.com/au/share/yE9N/zJpl/NNRlJ/original/Install+Guide+BCDC+Alpha+50R+EN
 [bcdc-manual]: https://cdn.intelligencebank.com/au/share/yE9N/zJpl/l7ZzG/original/Instruction+Manual+BCDC+Alpha+50R+EN
-[starter-cbs]: ../02-starter-battery-distribution/01-circuit-breakers.md
 [solar]: 04-solar.md
 [pmu-inputs]: ../04-pmu/02-pmu-inputs.md
-[grounding]: ../05-grounding/index.md
 [installation-checklist]: ../installation-checklist.md#phase-2-power-distribution
-[wire-distance]: 05-wire-distance-reference.md
-[tbd-tracker]: ../../08-installation/01-tbd-tracker.md
 [aux-load-analysis]: ../03-aux-battery-distribution/05-load-analysis.md

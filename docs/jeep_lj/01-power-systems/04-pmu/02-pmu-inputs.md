@@ -4,6 +4,7 @@ hide:
 ---
 
 # 1.4.2 PMU Inputs {#pmu-inputs}
+
 PMU input configuration including digital inputs, analog inputs, CAN bus integration, and ignition signal distribution.
 
 ## 12V Switched Input (Pin 7)
@@ -55,7 +56,7 @@ PMU24 taps into existing J1939 CAN bus as stub connection (no termination).
 
 ### Bus Topology
 
-```
+```text
 [ECM 120Ω] ←--+--+--→ [Cummins Body Harness End 120Ω]
                |  |
                |  [PMU24 - stub tap]

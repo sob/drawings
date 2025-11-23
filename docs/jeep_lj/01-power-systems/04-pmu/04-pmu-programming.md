@@ -4,13 +4,14 @@ hide:
 ---
 
 # 1.4.4 PMU Programming {#pmu-programming}
+
 PMU configuration examples, logic sequences, and implementation checklist.
 
 ## Programming Examples
 
 ### DRL Auto-Off Logic (Output 14)
 
-```
+```text
 IF (Pin7_IgnitionRUN == ON) AND (In7_CT4_Headlights == OFF)
   THEN Out14_DRL = ON
 ELSE Out14_DRL = OFF
@@ -22,7 +23,7 @@ DRL on with ignition, off when headlights active.
 
 ### A/C Clutch Logic (Output 17)
 
-```
+```text
 IF (In9_AC_Request == ON) AND (BatteryVoltage > 11.5V)
   THEN Out17_AC_Clutch = ON
 ELSE Out17_AC_Clutch = OFF
@@ -32,7 +33,7 @@ A/C engages when requested and voltage adequate.
 
 ### Oil Cooler Fan Control (Output 7) - CAN-based
 
-```
+```text
 IF (J1939_SPN175_OilTemp > 230°F) THEN Out7_OilFan = ON
 ELSEIF (J1939_SPN175_OilTemp < 220°F) THEN Out7_OilFan = OFF
 ```
@@ -41,7 +42,7 @@ ELSEIF (J1939_SPN175_OilTemp < 220°F) THEN Out7_OilFan = OFF
 
 ### PS Cooler Fan Control (Output 8) - CAN-based
 
-```
+```text
 IF (J1939_SPN110_CoolantTemp > 220°F) THEN Out8_PSFan = ON
 ELSEIF (J1939_SPN110_CoolantTemp < 210°F) THEN Out8_PSFan = OFF
 ```
@@ -50,7 +51,7 @@ ELSEIF (J1939_SPN110_CoolantTemp < 210°F) THEN Out8_PSFan = OFF
 
 ### Radiator Fan PWM Control (Output 2+3+4) - Variable Speed
 
-```
+```text
 // Temperature-based PWM curve for variable speed control
 IF (J1939_SPN110_CoolantTemp < 185°F) THEN Out234_RadiatorFan_PWM = 0%      // Fan OFF
 ELSEIF (J1939_SPN110_CoolantTemp < 195°F) THEN Out234_RadiatorFan_PWM = 30%  // Low speed
@@ -59,6 +60,7 @@ ELSEIF (J1939_SPN110_CoolantTemp >= 205°F) THEN Out234_RadiatorFan_PWM = 100% /
 ```
 
 **Benefits:**
+
 - **Variable speed:** 30% = ~16A, 60% = ~32A, 100% = 53A - reduces average electrical load
 - **PWM frequency:** 100-400 Hz (PMU supports 4-400 Hz on 25A outputs)
 - **Temperature source:** J1939 SPN 110 (coolant temp) - same as PS fan
@@ -69,7 +71,7 @@ ELSEIF (J1939_SPN110_CoolantTemp >= 205°F) THEN Out234_RadiatorFan_PWM = 100% /
 
 ### Sequential Load Startup
 
-```
+```text
 DELAY Out3_HVAC = 0.5s
 DELAY Out7_OilFan = 1.0s
 DELAY Out8_PSFan = 1.5s
@@ -83,7 +85,7 @@ Prevents voltage sag during ignition-on by staggering high-current load activati
 
 **Data Logging Configuration:**
 
-```
+```text
 LOG BatteryVoltage (continuous, 1 Hz)
 LOG TotalCurrent_PMU (continuous, 1 Hz)
 LOG AlternatorVoltage (if available)
@@ -107,7 +109,7 @@ LOG EngineRPM (J1939_SPN190)
 
 **Warning Triggers:**
 
-```
+```text
 IF (BatteryVoltage < 12.5V) AND (EngineRPM > 1000)
   THEN Trigger_Low_Voltage_Warning = ON
 ```

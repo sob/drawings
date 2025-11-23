@@ -4,6 +4,7 @@ hide:
 ---
 
 # 1.4.3 PMU Outputs {#pmu-outputs}
+
 Complete configuration of all 24 PMU outputs, load allocations, and combined output configurations.
 
 ## PMU24 Output Configuration {#pmu-output-wiring-diagram}
@@ -118,8 +119,4 @@ Complete configuration of all 24 PMU outputs, load allocations, and combined out
 [switchpros-ground]: ../05-grounding/03-switchpros-ground-bus.md
 [hvac-system]: ../../02-engine-systems/03-hvac.md
 [windshield-wiper-control-system]: ../../02-engine-systems/04-wipers.md
-[communication-systems]: ../../06-communication-systems/01-communication.md
 [drl-parking-lights]: ../../03-lighting-systems/05-drl-parking.md
-[tail-brake-reverse-lights]: ../../03-lighting-systems/04-tail-brake-reverse.md
-[brake-booster-system-bosch-ibooster-gen-2]: ../../02-engine-systems/02-brake-booster.md
-[starter-system-cummins-r28]: ../../02-engine-systems/01-starter.md

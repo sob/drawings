@@ -71,4 +71,3 @@ tags:
 [offroad-lighting]: ../../03-lighting-systems/06-offroad-lighting.md
 [bluesea-2105]: https://www.bluesea.com/products/2105/MaxiBus_250A_BusBar_-_Two_5_16in-18_Studs_and_Twelve_10-24_Screws
 [headlights]: ../../03-lighting-systems/02-headlights.md
-[tail-lights]: ../../03-lighting-systems/04-tail-brake-reverse.md

@@ -192,7 +192,6 @@ All wire runs require appropriate protection based on location and environment:
 [aux-battery]: ../03-aux-battery-distribution/index.md
 [pmu]: ../04-pmu/index.md
 [safetyhub]: ../03-aux-battery-distribution/04-safetyhub.md
-[aux-safetyhub]: ../03-aux-battery-distribution/04-safetyhub.md
 [bcdc]: ../01-power-generation/03-bcdc.md
 [alternator]: ../01-power-generation/02-alternator.md
 [starter]: ../../02-engine-systems/01-starter.md

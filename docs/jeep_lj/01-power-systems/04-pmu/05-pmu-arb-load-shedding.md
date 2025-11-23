@@ -27,7 +27,7 @@ Preserve AUX battery capacity during extended ARB compressor operation by sheddi
 
 **AUX Battery Depletion During Extended Air-Up:**
 
-```
+```text
 ARB compressor draw:        90A  (from AUX battery)
 Other AUX loads:             5A  (camera, radio, USB)
 BCDC charging rate:         50A  (to AUX battery)
@@ -42,6 +42,7 @@ Time to 20% SOC:           ~73 minutes continuous
 The 50A BCDC makes extended air-up practical without battery concerns. Load shedding provides additional margin and maintains optimal voltage for electronics.
 
 **Impact Without Load Shedding:**
+
 - Minor: AUX battery still has comfortable margin at 50A BCDC
 - START battery loads reduce BCDC charging efficiency slightly
 - Load shedding maximizes available margin for extended sessions
@@ -51,6 +52,7 @@ The 50A BCDC makes extended air-up practical without battery concerns. Load shed
 Detect ARB compressor activation and disable non-critical START battery loads to maximize BCDC charging rate and maintain optimal system voltage.
 
 **Load Shedding Strategy:**
+
 - Shed cosmetic loads first (DRL)
 - Shed comfort loads second (A/C)
 - Conditionally shed cooling loads if temperatures allow (oil/PS cooler fans)
@@ -58,7 +60,7 @@ Detect ARB compressor activation and disable non-critical START battery loads to
 
 ## Load Shedding Logic
 
-```
+```text
 // Monitor SwitchPros OUTPUT-11 state via shared CAN bus or hardwired trigger
 IF (SwitchPros_OUT11_ARB == ON) OR (BatteryVoltage < 13.0V AND EngineRPM > 1000):
 
@@ -103,7 +105,7 @@ ELSE:
 
 ### WITHOUT Load Shedding
 
-```
+```text
 ARB compressor draw:     90A   (from AUX battery)
 Other AUX loads:          5A   (camera, radio memory, USB)
 ─────────────────────────────
@@ -117,6 +119,7 @@ Time to 50% SOC:         45 minutes
 ```
 
 **Alternator Load (START battery):** See [START Battery Load Analysis][start-load-analysis]
+
 - PMU + radiator fan + BCDC = ~165A typical
 - Alternator: 270A
 - **Margin: +105A** ✅ Alternator is NOT the constraint
@@ -125,7 +128,7 @@ Time to 50% SOC:         45 minutes
 
 Shedding DRL (8A) and A/C clutch (5A) from PMU reduces START battery load, allowing maximum BCDC output:
 
-```
+```text
 START battery:
 PMU reduced:          93A   (was 106A, shed DRL + A/C)
 Radiator fan:         35A   (moderate, stationary)
@@ -149,7 +152,7 @@ Net AUX drain:        45A   (unchanged - BCDC still maxed)
 
 **When oil/coolant temps allow disabling cooler fans:**
 
-```
+```text
 START battery:
 PMU reduced:          63A   (shed DRL + A/C + oil fan + PS fan)
 Radiator fan:         35A   (moderate)
@@ -170,16 +173,19 @@ Net AUX drain:        45A   (unchanged)
 ### Detection Methods (Priority Order)
 
 **1. Hardwired Trigger (Preferred):**
+
 - Wire from SwitchPros OUTPUT-11 to PMU digital input
 - Direct, reliable detection
 - Lowest latency
 
 **2. CAN Bus Monitoring:**
+
 - If SwitchPros broadcasts output states on CAN
 - No additional wiring required
 - Slight latency
 
 **3. Voltage-Based Fallback:**
+
 - `IF (BatteryVoltage < 13.0V) AND (EngineRPM > 1000)`
 - Triggers on ANY high load (not just ARB)
 - Universal protection regardless of cause
@@ -188,7 +194,7 @@ Net AUX drain:        45A   (unchanged)
 
 **Critical:** Always verify temperatures before disabling cooler fans.
 
-```
+```text
 // Oil Cooler Fan
 IF (J1939_SPN175_OilTemp < 220°F):
   Safe to disable Out7_OilFan
@@ -242,7 +248,7 @@ ELSE:
 
 ### Initial Shakedown Testing
 
-**Test 1: ARB Load Shedding Activation**
+#### Test 1: ARB Load Shedding Activation
 
 1. Start engine, let idle stabilize
 2. Activate ARB (SwitchPros Button 11)
@@ -252,7 +258,7 @@ ELSE:
    - Dashboard indicator activates (if implemented)
    - Voltage stays >13.5V
 
-**Test 2: Temperature-Based Fan Shedding**
+#### Test 2: Temperature-Based Fan Shedding
 
 1. Start engine cold (<180°F coolant)
 2. Activate ARB
@@ -264,7 +270,7 @@ ELSE:
 6. **Verify:**
    - Cooler fans stay ON (engine protection priority)
 
-**Test 3: Load Restoration**
+#### Test 3: Load Restoration
 
 1. Activate ARB
 2. Verify loads shed
@@ -278,7 +284,7 @@ ELSE:
 
 **Enable PMU Continuous Logging:**
 
-```
+```text
 LOG BatteryVoltage (1 Hz)
 LOG TotalCurrent_PMU (1 Hz)
 LOG EngineRPM (J1939_SPN190)
@@ -299,12 +305,14 @@ LOG SwitchPros_OUT11_ARB (state or trigger input)
 ### Long-Term Monitoring
 
 **Track Over Time:**
+
 - Battery voltage during ARB use (should be consistent)
 - Frequency of load shedding activation
 - Any low-voltage warnings or failures
 - Battery state of charge recovery after ARB use
 
 **Adjust if Needed:**
+
 - Modify shed priority if testing shows different needs
 - Add/remove loads from shed list
 - Adjust temperature thresholds for cooler fans
@@ -312,16 +320,19 @@ LOG SwitchPros_OUT11_ARB (state or trigger input)
 ## Related Documentation
 
 **Load Analysis:**
+
 - [START Battery Load Analysis][start-load-analysis] - Alternator scenarios
 - [AUX Battery Load Analysis][aux-load-analysis] - ARB impact scenarios
 
 **Power Systems:**
+
 - [Alternator Specifications][alternator] - 270A capacity
 - [PMU Overview][pmu-overview] - PMU capacity and limitations
 - [PMU Outputs][pmu-outputs] - Individual output assignments
 - [PMU Programming][pmu-programming] - Other programming examples
 
 **ARB Compressor:**
+
 - [Air System][air-system] - ARB twin compressor specifications (90A total load)
 - [SwitchPros][switchpros] - OUTPUT-11 control integration
 

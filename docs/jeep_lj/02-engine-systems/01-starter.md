@@ -70,7 +70,7 @@ tags:
 
 ## Control Flow
 
-```
+```text
 Ignition START → Clutch Switch → Cole Hersee 24213 Coil → Ground
                                          ↓
                               Solenoid Closes (when clutch depressed)
@@ -85,24 +85,29 @@ Ignition START → Clutch Switch → Cole Hersee 24213 Coil → Ground
 ## Starter Motor Terminals
 
 **Battery Post (M8 x 1.25 thread, qty 2):**
+
 - Main power from START battery (2/0 AWG)
 - Power tap for control solenoid (10 AWG)
 
 **Switch Post (6.3mm flat male push-on):**
+
 - Trigger from Cole Hersee 24213 output (10 AWG, 30-75A)
 
 **Ground:**
+
 - Via starter mounting bolts to engine block
 
 ## Cole Hersee 24213 Solenoid
 
 **Specifications:**
+
 - Rating: 85A continuous duty
 - Coil Voltage: 12V DC
 - Coil Draw: ~1.6A
 - Mounting: Firewall (engine bay side)
 
 **Terminals:**
+
 - Large Stud 1 (Input): From START battery post (M8 terminal, 10 AWG)
 - Large Stud 2 (Output): To starter switch post (6.3mm female push-on, 10 AWG)
 - Small Terminal 1 (Coil+): From clutch switch (16-18 AWG)

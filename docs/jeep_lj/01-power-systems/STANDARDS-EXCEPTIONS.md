@@ -26,15 +26,17 @@ This document tracks intentional deviations from general electrical standards wh
 
 **Installation Manual:** [WARN Installation Guide][warn-manual]
 
-### Engineering Analysis
+### Winch Engineering Analysis
 
 **Load Characteristics:**
+
 - Typical: 250A continuous during recovery
 - Peak: 400A brief (winch stall or heavy load)
 - Duration: 10-30 seconds typical, 60 seconds maximum
 - Duty Cycle: Brief intermittent use (not continuous)
 
 **Wire Sizing:**
+
 - Wire: 1/0 AWG copper (325A continuous rating @ 60°C)
 - Distance: 13 ft one-way (26 ft total circuit)
 - Voltage drop @ 250A: 5.32% (0.638V) - acceptable for brief accessory loads
@@ -62,18 +64,21 @@ This document tracks intentional deviations from general electrical standards wh
    - Emergency shutoff capability
    - Maintenance safety
 
-### Comparison to Standards
+### Winch Standards Comparison
 
 **Marine (ABYC E-11):**
+
 - Would require 400A circuit breaker for all loads
 - **This is NOT a marine application** - automotive standards apply
 
 **Automotive (SAE J1128):**
+
 - Cable sizing acceptable for brief peak loads ✓
 - Manufacturer specifications take precedence ✓
 - Internal protection acceptable for factory-designed components ✓
 
 **Manufacturer (WARN):**
+
 - No external protection required ✓
 - Direct battery connection specified ✓
 - Internal protection designed for fault scenarios ✓
@@ -89,30 +94,34 @@ This document tracks intentional deviations from general electrical standards wh
 
 **Industry Standard Practice:** Winch manufacturers design internal protection for automotive fault scenarios, making external CBs redundant.
 
-### Fault Scenarios Covered
+### Winch Fault Scenarios Covered
 
 **Motor Stall (Extended Load):**
+
 - Internal thermal cutoff trips within 60-90 seconds
 - Prevents motor damage and fire hazard
 - Automatic protection without user intervention
 
 **Cable Short to Chassis:**
+
 - 1/0 AWG cable acts as self-fusing element
 - Fault current >800A required to fuse cable open
 - Short circuit current path through battery ground and chassis
 - Adequate protection for brief fault duration
 
 **Contactor Weld (Stuck Closed):**
+
 - Manual battery disconnect provides emergency stop
 - Winch will run until battery depletes or thermal cutoff trips
 - User can isolate at battery terminal
 
 **Normal Operating Conditions:**
+
 - 250-400A loads are within winch design parameters
 - Cable sizing adequate per voltage drop analysis
 - No fire hazard during normal recovery operations
 
-### Review Guidance
+### Winch Review Guidance
 
 **This is NOT an oversight or safety issue.**
 
@@ -126,6 +135,7 @@ It is intentional adherence to:
 **Do NOT flag as requiring correction in future reviews.**
 
 **Documentation References:**
+
 - [AUX Battery Distribution][aux-battery-distribution] - Winch connection details (line 37-75)
 - [Recovery Systems][recovery-systems] - Complete winch specifications
 - [Wire Distance Reference][wire-distance] - Winch cable routing distance
@@ -140,26 +150,30 @@ It is intentional adherence to:
 
 **Note:** Timer relay or slow-blow CB could be added for stuck solenoid protection (optional enhancement)
 
-### Manufacturer/Industry Standard
+### Starter Industry Standard
 
 **Automotive Practice:**
+
 - Starter circuits typically use cable sizing as protection
 - Brief cranking duration (2-5 seconds) does not require CB
 - Factory vehicles rarely include starter circuit breakers
 
 **Cummins R2.8:**
+
 - Starter current: 400-600A peak during cranking
 - Duration: 2-5 seconds normal cranking
 - No external CB specified in installation manual
 
-### Engineering Analysis
+### Starter Engineering Analysis
 
 **Load Characteristics:**
+
 - Peak: 400-600A during cranking
 - Duration: 2-5 seconds typical, 10 seconds maximum recommended
 - Duty Cycle: Brief intermittent (engine start only)
 
 **Wire Sizing:**
+
 - Wire: 2/0 AWG copper (375A continuous rating @ 60°C)
 - Distance: 6 ft one-way (12 ft total circuit)
 - Voltage drop @ 400A: 3.75% (0.450V) - adequate for brief cranking
@@ -183,47 +197,54 @@ It is intentional adherence to:
 ### Potential Fault Scenario: Stuck Solenoid
 
 **Risk:**
+
 - Starter solenoid welds closed or jams
 - 400-600A sustained until battery depletes
 - Cable heating, potential fire hazard
 
 **Mitigation Options:**
 
-**Option 1: Timer Relay (Recommended)**
+#### Option 1: Timer Relay (Recommended)
+
 - Install 10-second timer in Cole Hersee control circuit
 - Cuts power after 10 seconds continuous cranking
 - Prevents starter damage and cable overheating
 - Lower cost than 500A circuit breaker
 - **Status:** Recommended enhancement, not critical requirement
 
-**Option 2: 500A Slow-Blow Circuit Breaker**
+#### Option 2: 500A Slow-Blow Circuit Breaker
+
 - Allows brief 600A cranking peaks
 - Trips on sustained high current
 - Mechanical Products Series 17 available
 - **Status:** Alternative to timer relay
 
-**Option 3: Current Design (Cable Protection Only)**
+#### Option 3: Current Design (Cable Protection Only)
+
 - Adequate for brief normal cranking ✓
 - Relies on user awareness for stuck solenoid
 - Manual battery disconnect available
 - **Status:** Acceptable per automotive practice, enhancement recommended
 
-### Comparison to Standards
+### Starter Standards Comparison
 
 **Automotive (SAE J1128):**
+
 - Cable sizing acceptable for brief peak loads ✓
 - No CB required for starter circuits in factory vehicles ✓
 - Timer relay or slow-blow CB optional enhancement ✓
 
 **Marine (ABYC E-11):**
+
 - Would require circuit breaker or fuse
 - **This is NOT a marine application** - automotive standards apply
 
-### Review Guidance
+### Starter Review Guidance
 
 **Current design (no CB) is acceptable per automotive standards.**
 
 **Enhancement (timer relay) is recommended but not critical:**
+
 - Adds protection for stuck solenoid scenario
 - Low cost, simple implementation
 - Common in heavy-duty truck applications
@@ -233,6 +254,7 @@ It is intentional adherence to:
 **Consider implementing timer relay as build enhancement** - provides additional fault protection beyond baseline automotive practice.
 
 **Documentation References:**
+
 - [Starter System][starter-system] - Complete starter specifications and wiring (line 1-125)
 - [START Battery Distribution][starter-battery-distribution] - Starter power connection (line 37)
 
@@ -244,40 +266,45 @@ It is intentional adherence to:
 
 **Decision:** Direct battery connection with fusible link (no circuit breaker)
 
-### Manufacturer Specification
+### Grid Heater Manufacturer Specification
 
 **Cummins Installation:**
+
 - ECM controls grid heater relay directly
 - High current (40-80A) for brief duration (3-5 seconds)
 - Direct battery connection specified
 - Fusible link protection integrated
 
-### Engineering Analysis
+### Grid Heater Engineering Analysis
 
 **Load Characteristics:**
+
 - Current: 40-80A during cold start aid
 - Duration: 3-5 seconds (brief pulse)
 - Duty Cycle: Only during cold starts (<50°F ambient)
 - Frequency: Infrequent (cold weather only)
 
 **Protection Strategy:**
+
 - Integrated fusible link in relay assembly
 - ECM manages duty cycle and temperature thresholds
 - Brief duration eliminates thermal concerns
 - Direct connection minimizes voltage drop for effective heating
 
-### Comparison to Standards
+### Grid Heater Standards Comparison
 
 **Automotive (SAE J1128):**
+
 - Direct battery connection acceptable for brief high-current loads ✓
 - Manufacturer fusible link acceptable protection ✓
 - ECM control provides intelligent management ✓
 
 **Manufacturer (Cummins):**
+
 - Direct battery connection specified ✓
 - Integrated fusible link protection ✓
 
-### Review Guidance
+### Grid Heater Review Guidance
 
 **This is intentional per manufacturer specifications.**
 
@@ -286,6 +313,7 @@ Grid heater brief, high-current load characteristics make circuit breaker unnece
 **Do NOT flag as requiring circuit breaker.**
 
 **Documentation References:**
+
 - [Grid Heater System][grid-heater] - Complete grid heater specifications
 
 ---
@@ -296,7 +324,7 @@ Grid heater brief, high-current load characteristics make circuit breaker unnece
 
 **Decision:** No circuit breaker between alternator and battery
 
-### Industry Standard
+### Alternator Industry Standard
 
 **All automotive alternators connect directly to battery without circuit breaker:**
 
@@ -304,7 +332,7 @@ Grid heater brief, high-current load characteristics make circuit breaker unnece
 - Alternator has internal voltage regulation
 - Charging circuit protected by battery capacity and cable sizing
 
-### Engineering Analysis
+### Alternator Engineering Analysis
 
 **Why No Circuit Breaker Required:**
 
@@ -328,7 +356,7 @@ Grid heater brief, high-current load characteristics make circuit breaker unnece
    - Proven safe over millions of vehicles
    - Industry standard approach
 
-### Review Guidance
+### Alternator Review Guidance
 
 **This is standard automotive practice.**
 
@@ -337,6 +365,7 @@ Alternators NEVER use circuit breakers on output circuits in factory or aftermar
 **Do NOT flag as missing protection.**
 
 **Documentation References:**
+
 - [Alternator][alternator] - Alternator specifications and output connection
 
 ---
@@ -347,26 +376,29 @@ Alternators NEVER use circuit breakers on output circuits in factory or aftermar
 
 **Decision:** 40A circuit breaker at START battery terminal (not at BCDC)
 
-### Manufacturer Specification
+### BCDC Manufacturer Specification
 
 **RedArc Installation:**
+
 - Circuit breaker required within 7" of battery positive
 - No requirement for CB at BCDC input
 - 40A CB adequate for 25A charging current + inrush
 
-### Engineering Analysis
+### BCDC Engineering Analysis
 
 **Protection Location:**
+
 - CB at battery terminal (compliant with 7" requirement) ✓
 - Protects entire cable run from battery to BCDC ✓
 - No additional CB needed at BCDC end
 
 **Load Characteristics:**
+
 - Normal: 25A DC-DC charging
 - Peak: 27-29A (manufacturer spec)
 - 40A CB sized at 148% of max load (appropriate margin)
 
-### Review Guidance
+### BCDC Review Guidance
 
 **Circuit breaker AT BATTERY TERMINAL is correct protection point.**
 
@@ -375,6 +407,7 @@ No additional CB required at BCDC - entire circuit protected from battery termin
 **Do NOT flag as missing protection at BCDC.**
 
 **Documentation References:**
+
 - [BCDC Alpha 25][bcdc] - BCDC installation and protection requirements
 - [START Battery Circuit Breakers][starter-cbs] - 40A CB specification
 
@@ -392,6 +425,7 @@ No additional CB required at BCDC - entire circuit protected from battery termin
 **These are NOT oversights, errors, or safety issues.**
 
 **Marine standards (ABYC E-11) are referenced selectively:**
+
 - Applied to: Dual battery architecture, accessory circuits, grounding
 - **NOT applied to:** Starter, alternator, winch, grid heater (automotive components)
 

@@ -70,6 +70,7 @@ Ignition sense signal to CT4, SwitchPros, Fusion Radio, BCDC
 Some designs differ from marine standards (ABYC E-11) intentionally - this is automotive.
 
 **See [STANDARDS-EXCEPTIONS.md](STANDARDS-EXCEPTIONS.md)** before flagging:
+
 - Winch: No external CB (per WARN specs, internal thermal protection)
 - Starter: No external CB (cable sizing as protection)
 - Grid heater: Direct battery (fusible link in relay)

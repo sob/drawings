@@ -27,6 +27,7 @@ tags:
 ## Electrical Specifications
 
 **Power Output:**
+
 - **Maximum Power @ STC:** 80W
 - **Optimum Operating Voltage (Vmp):** 40.1V
 - **Optimum Operating Current (Imp):** 1.95A
@@ -67,6 +68,7 @@ tags:
 **BCDC Green Power Priority:** Solar input used first when available, alternator supplements to reach 50A total charging current. In full sun, solar contributes ~1.95A, reducing alternator load by same amount.
 
 **Charging Contribution:**
+
 - **Full sun:** ~1.95A to AUX battery (reduces alternator load from 50A to ~48A)
 - **Partial sun:** Variable 0.8-1.5A depending on conditions
 - **Overcast/Night:** 0A (BCDC uses alternator only)
@@ -80,6 +82,5 @@ See [BCDC Alpha 50][bcdc] for complete charging system details.
 **Critical:** Verify polarity before connection - reverse polarity damages BCDC.
 
 [cascadia-solar]: https://www.cascadia4x4.com/
-[extremeterrain-solar]: https://www.extremeterrain.com/cascadia-4x4-jeep-wrangler-vss-complete-hood-mounted-solar-system-80-watt-chf132cv.html
 [bcdc]: 03-bcdc.md
 [installation-checklist]: ../installation-checklist.md#phase-4-integration-wiring
