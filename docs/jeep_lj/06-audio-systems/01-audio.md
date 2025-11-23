@@ -9,6 +9,7 @@ tags:
 ---
 
 # Audio Systems {#audio-systems}
+
 ### Communication Systems {#audio-communication-systems}
 
 #### Radio Head Unit
@@ -64,6 +65,7 @@ The dash-mounted radio head unit provides AM/FM radio, Bluetooth connectivity, a
 ///
 
 **Wiring:**
+
 1. **Constant Power (Yellow wire):** CONSTANT bus  BODY PDU F2 (20A)  MS-RA670 constant power (memory)
    - Note: F2 will need to source from CONSTANT bus (not SWITCHED bus) to provide both constant and switched power
    - Alternative: Run separate constant power wire from CONSTANT bus to radio, keep F2 on SWITCHED bus
@@ -83,15 +85,18 @@ The dash-mounted radio head unit provides AM/FM radio, Bluetooth connectivity, a
 Since the MS-RA670 requires both constant power (memory/clock) and switched power (on/off), BODY PDU F2 needs to be configured to provide both:
 
 **Option 1 (Recommended):** Modify F2 to support dual power
+
 - F2 constant power input from CONSTANT bus  MS-RA670 yellow wire (memory)
 - F2 switched power input from SWITCHED bus  MS-RA670 red wire (ignition on/off)
 - Single 20A fuse protects both circuits (15A radio draw is within capacity)
 
 **Option 2:** Separate circuits
+
 - F2 (SWITCHED bus, 20A)  MS-RA670 red wire only (ignition power)
 - New spare BODY PDU circuit (CONSTANT bus, 15A)  MS-RA670 yellow wire only (memory)
 
 **Outstanding Items:**
+
 - [ ] Verify radio ignition trigger wire connection for on/off control
 - [ ] Determine ground connection point for MS-RA670 (firewall stud or dash ground)
 - [ ] Plan wiring for Bluetooth microphone mounting location (near driver for hands-free calling)
@@ -105,6 +110,7 @@ Since the MS-RA670 requires both constant power (memory/clock) and switched powe
 The Fusion Apollo amplifier provides high-power audio for speakers and subwoofer, delivering marine-grade performance with Class-D efficiency.
 
 **Components:**
+
 - **Amplifier:** Fusion Apollo Marine 6-Channel Amplifier
   - **Model:** MS-AP61800 / 010-02284-65
   - **Installation Manual:** [Fusion Apollo Multichannel Amplifiers Installation Instructions](https://static.garmin.com/pumac/Fusion_Apollo_Multichannel_Amplifiers_Install_EN-US.pdf)
@@ -146,6 +152,7 @@ The Fusion Apollo amplifier provides high-power audio for speakers and subwoofer
     - Independent channel pair bridging for flexible configuration
 
 **Speaker Configuration:**
+
 - **Front Dash Speakers (Channels 3 & 4):** JL Audio M6-650X-S-GmTi-i (pair)
   - **Model:** M6-650X-S-GmTi-i (6.5" 2-way coaxial marine speakers)
   - **Product Page:** [JL Audio M6-650X-S-GmTi-i](https://www.jlaudio.com/products/m6-650x-s-gmti-i-marine-audio-coaxial-speakers-93715)
@@ -219,6 +226,7 @@ The Fusion Apollo amplifier provides high-power audio for speakers and subwoofer
   - **Warranty:** 3 years
 
 **JL Audio LED Lighting System:**
+
 - **LED Controller:** JL Audio MLC-RW Marine LED Lighting Controller
   - **Product Page:** [JL Audio MLC-RW](https://www.jlaudio.com/marine-audio-speakers-speaker-accessories-mlc-rw-99816)
   - **Power Output:** 30A (400W) continuous output for LED circuits
@@ -245,6 +253,7 @@ The Fusion Apollo amplifier provides high-power audio for speakers and subwoofer
   - **Use:** Single cable run from amplifier/MLC-RW to each speaker (audio + LED control)
 
 **Wiring Summary:**
+
 1. **Amplifier Power (+):** CONSTANT bus  40A Blue Sea breaker  6 AWG red wire  amplifier B+ terminal
    - Direct connection to CONSTANT bus (AUX battery) for high current
    - Run dedicated 6 AWG wire from AUX battery or CONSTANT bus bar to amplifier (1800W requires heavier gauge)
@@ -281,6 +290,7 @@ The Fusion Apollo amplifier provides high-power audio for speakers and subwoofer
    - **Channels 1+2 (Bridged Subwoofer):** Standard 12-14 AWG speaker wire (no LED)
 
 **Circuit Protection:**
+
 - **Fuse:** 40A fast-acting fuse (per Fusion Apollo manual specifications)
   - Amplifier includes inline fuse holder with 40A fuse
   - **Recommendation:** Replace inline fuse with centrally-located Blue Sea circuit breaker
@@ -291,6 +301,7 @@ The Fusion Apollo amplifier provides high-power audio for speakers and subwoofer
   - Blue Sea 7178 (40A) or 7184 (50A) thermal circuit breaker recommended
 
 **Mounting Location Options:**
+
 1. **Behind Dashboard:** Near radio head unit
    - Shortest RCA cable runs from MS-RA670 to amplifier
    - Central location for speaker wire routing to dash and roll bar
@@ -306,6 +317,7 @@ The Fusion Apollo amplifier provides high-power audio for speakers and subwoofer
    - Moderate RCA cable lengths
 
 **Outstanding Items:**
+
 - [ ] Determine Fusion Apollo 6-channel amplifier mounting location (behind dash preferred, cargo area or under rear seat optional)
 - [ ] Verify amplifier current draw at operating power (music listening vs full test tone)
 - [ ] Select Blue Sea circuit breaker: 40A (7178) for amplifier power protection
@@ -325,4 +337,3 @@ The Fusion Apollo amplifier provides high-power audio for speakers and subwoofer
 - [ ] Plan LED power cable routing from MLC-RW to all 5 speakers (4x tower/dash + 1x subwoofer)
 - [ ] Confirm XM-WHTMFC cable includes appropriate connectors for MLC-RW RGB output
 - [ ] Plan rotary encoder extension cable routing from MLC-RW unit to dash location
-

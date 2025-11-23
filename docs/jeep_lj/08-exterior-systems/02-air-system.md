@@ -10,6 +10,7 @@ tags:
 ---
 
 # Air System - ARB Compressor & Lockers {#air-system-arb-compressor-lockers}
+
 ## System Overview
 
 The air system consists of an ARB Twin Compressor (brushless), 1-gallon air tank, and automatic pressure switch that powers both ARB air lockers and provides air for tire inflation, air tools, and other pneumatic accessories. The system features automatic pressure maintenance (135-150 PSI) via SwitchPros TRIGGER-3 integration, with manual override control via Button 11.
@@ -81,6 +82,7 @@ The air system consists of an ARB Twin Compressor (brushless), 1-gallon air tank
 **Ports:** 2 ports (input from compressor, output to manifold)
 
 **Purpose:**
+
 - Instant locker engagement (no waiting for compressor to build pressure)
 - Reduces compressor cycling frequency
 - Multiple locker uses per tank fill
@@ -97,6 +99,7 @@ The air system consists of an ARB Twin Compressor (brushless), 1-gallon air tank
 **Electrical:** Low-current switch (<1A)
 
 **Function:**
+
 - Monitors tank pressure continuously
 - Automatically activates compressor when pressure drops below 135 PSI
 - Automatically deactivates compressor when pressure reaches 150 PSI
@@ -108,6 +111,7 @@ The air system consists of an ARB Twin Compressor (brushless), 1-gallon air tank
 **Location:** Under passenger seat (with compressor and tank)
 
 **Port Assignments:**
+
 1. **Input:** Compressor output → manifold input
 2. **Output 1:** Manifold → Front locker solenoid (1/4" air line)
 3. **Output 2:** Manifold → Rear locker solenoid (1/4" air line)
@@ -132,6 +136,7 @@ Compressor fills tank to 150 PSI → pressure switch opens → compressor stops
 ```
 
 **SwitchPros Programming:**
+
 - **TRIGGER-3 Input:** Pressure switch signal (tank < 135 PSI activates trigger)
 - **OUTPUT-11 Logic:** Button 11 OR TRIGGER-3 → OUTPUT-11 (compressor)
 - **Manual Override:** Press Button 11 anytime to force compressor on (e.g., for tire inflation)
@@ -247,6 +252,7 @@ SwitchPros SP-1200
 ### Operational Sequence
 
 **System Startup (Automatic):**
+
 1. Vehicle ignition ON
 2. Pressure switch monitors tank pressure
 3. If tank pressure < 135 PSI:
@@ -257,6 +263,7 @@ SwitchPros SP-1200
 4. Tank maintains 135-150 PSI automatically without user intervention
 
 **Trail Use (Locker Engagement):**
+
 1. **Front Locker:**
    - Press Button 9 (OUTPUT-17)
    - Solenoid opens, pressurized air from tank → front locker
@@ -275,12 +282,14 @@ SwitchPros SP-1200
    - No user action required
 
 **Manual Compressor Override (Tire Inflation):**
+
 1. Press and hold Button 11 (latching mode)
 2. Compressor runs continuously regardless of tank pressure
 3. Use air chuck for tire inflation/deflation
 4. Press Button 11 again to return to automatic pressure control mode
 
 **Emergency/Backup Mode:**
+
 - If pressure switch fails: Manual Button 11 control still available
 - If tank pressure low: Lockers still work but may engage slower (direct compressor fill)
 

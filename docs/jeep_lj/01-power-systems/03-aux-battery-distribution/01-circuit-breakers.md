@@ -43,6 +43,6 @@ All CONSTANT bus loads protected by Mechanical Products Series 17 circuit breake
 [mp-150b]: https://www.waytekwire.com/item/49079/
 [mp-100]: https://www.waytekwire.com/item/49077/
 [rear-battery]: index.md
-[switchpros]: ../../04-control-interfaces/02-switchpros-sp1200.md
+[switchpros]: ../../05-control-interfaces/02-switchpros-sp1200.md
 [safetyhub]: 04-safetyhub.md
 [body-rtmr]: 03-body-pdu.md

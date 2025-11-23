@@ -4,6 +4,7 @@ hide:
 ---
 
 # Section 7: Communication Systems {#communication-systems-index}
+
 Two-way radio, CB, and communication equipment installation and wiring.
 
 ## Contents

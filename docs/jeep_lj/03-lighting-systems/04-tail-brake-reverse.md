@@ -133,7 +133,7 @@ See [DRL/Parking Lights][drl-parking-lights] for circuit details.
 [product-link]: https://ontheroxfab.com/product/maxbilt-trail-tail-led-tail-lights/
 [install-link]: https://ontheroxfab.com/wp-content/uploads/2019/10/MaxBilt-Taillight-Installation-12-3-2020.pdf
 [pmu-power-distribution]: ../01-power-systems/04-pmu/index.md
-[command-touch-ct4]: ../04-control-interfaces/03-command-touch-ct4.md
+[command-touch-ct4]: ../05-control-interfaces/03-command-touch-ct4.md
 [drl-parking-lights]: 05-drl-parking.md
-[communication-systems]: ../06-communication-systems/index.md
-[reverse-lights]: 06-offroad-lighting/10-reverse-lights.md
+[communication-systems]: ../07-communication-systems/index.md
+[reverse-lights]: ../04-offroad-lighting/10-reverse-lights.md

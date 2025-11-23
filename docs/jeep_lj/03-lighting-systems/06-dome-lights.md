@@ -1,7 +1,7 @@
 ---
 tags:
   - lighting
-  - offroad
+  - interior
   - switchpros-controlled
   - kc-hilites
 ---
@@ -45,8 +45,8 @@ Physical switch at rear left wheel well for rear dome control independent of Swi
 
 ## Related Documentation
 
-- [Offroad Lighting Overview][offroad-overview]
+- [Vehicle Lighting Overview][vehicle-lighting-overview]
 - [SwitchPros SP-1200][switchpros-sp-1200]
 
-[offroad-overview]: index.md
-[switchpros-sp-1200]: ../../04-control-interfaces/02-switchpros-sp1200.md
+[vehicle-lighting-overview]: 01-lighting-overview.md
+[switchpros-sp-1200]: ../05-control-interfaces/02-switchpros-sp1200.md

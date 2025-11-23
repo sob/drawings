@@ -10,13 +10,12 @@ tags:
 ---
 
 # Communication Systems {#communication-systems}
+
 ## System Overview
 
 The communication systems provide essential radio communication capabilities including GMRS for vehicle-to-vehicle communication, professional intercom systems for in-vehicle coordination, and future Ham radio expansion for long-distance emergency communication.
 
 ---
-
-
 
 **System Overview:**
 The Rugged Radio G1 is a 50W GMRS (General Mobile Radio Service) two-way radio for vehicle-to-vehicle communication and group coordination. GMRS operates on UHF frequencies (462-467 MHz) and requires an FCC license (family license, no exam required).
@@ -68,6 +67,7 @@ The Rugged Radio G1 is a 50W GMRS (General Mobile Radio Service) two-way radio f
 ///
 
 **Wiring Summary:**
+
 1. **Power (+):** Battery positive  inline fuse (15A)  G1 radio power input (12V DC)
    - **CRITICAL:** Direct battery connection required (not through BODY PDU or other circuits)
    - Run dedicated power wire from battery positive terminal through firewall (Grommet 4) to G1 radio
@@ -88,6 +88,7 @@ The Rugged Radio G1 is a 50W GMRS (General Mobile Radio Service) two-way radio f
    - Handles audio in/out, PTT, and mute functions automatically
 
 **Outstanding Items:**
+
 - [ ] Run power wire from PMU OUT6 to G1 radio mounting location (10 AWG, via firewall Grommet 1)
 - [ ] Run dedicated ground wire from G1 to START battery negative - See [START Battery Distribution][starter-battery] for ground wire specs
 - [ ] Verify G1 and STX mounting behind dash does NOT place units near ignition box (avoid RF interference)
@@ -104,6 +105,7 @@ The Rugged Radio G1 is a 50W GMRS (General Mobile Radio Service) two-way radio f
 The Rugged Radio STX Intercom allows driver and passengers to communicate via headsets, and integrates with the GMRS radio and Fusion head unit for external communication and music sharing.
 
 **Components:**
+
 - **Intercom Unit:** Rugged Radio STX 4-Place Intercom
   - **Quick Start Guide:** [Rugged Radio STX Quick Start Guide](https://cdn.shopify.com/s/files/1/0240/3280/4960/files/STX_-_Quick_Start_Guide.pdf?v=1724339126)
   - **Mounting:**
@@ -140,6 +142,7 @@ The Rugged Radio STX Intercom allows driver and passengers to communicate via he
   - **Note:** STX has built-in PTT inputs on each headset port
 
 **Wiring Summary:**
+
 1. **Power (+):** Battery positive  inline fuse (3A-5A recommended)  STX red power wire (9-16V DC input)
    - **CRITICAL:** Direct battery connection required (not through BODY PDU or other circuits)
    - Run dedicated power wire from battery positive terminal through firewall (Grommet 4) to STX intercom
@@ -170,6 +173,7 @@ The Rugged Radio STX Intercom allows driver and passengers to communicate via he
    - Passenger PTT: Dash or grab handle-mounted buttons  STX Port 2/3/4 PTT inputs
 
 **Headset Port Mounting:**
+
 - **Front Headset Ports (Ports 1 & 2):** Mount STX unit under dash or center console
   - 6 ft headset cables reach driver and front passenger positions
 - **Rear Headset Ports (Ports 3 & 4):** Custom extended cables from STX unit to rear seat
@@ -177,6 +181,7 @@ The Rugged Radio STX Intercom allows driver and passengers to communicate via he
   - Suggest mounting remote headset jacks in rear grab handles or on roll bar
 
 **Outstanding Items:**
+
 - [ ] Determine STX mounting location (under dash or center console)
 - [ ] **IMPORTANT:** Ensure STX intercom is NOT mounted near ignition box (avoid RF interference)
 - [ ] Run dedicated power wire from PMU OUT20 to STX (10 AWG, via firewall Grommet 1)
@@ -196,6 +201,7 @@ The Rugged Radio STX Intercom allows driver and passengers to communicate via he
 Reserved circuit for future amateur (ham) radio installation. Ham radio requires an FCC license (Technician, General, or Amateur Extra) and provides long-range communication on VHF/UHF and HF frequencies.
 
 **Reserved Circuit:**
+
 - **Power:** PMU OUT12 (15A capacity, CONSTANT power) - see [PMU Outputs][pmu-outputs]
   - 15A capacity supports up to ~180W output radios (most mobile ham radios are 50-100W)
   - CONSTANT power allows radio to receive when vehicle is off
@@ -203,6 +209,7 @@ Reserved circuit for future amateur (ham) radio installation. Ham radio requires
 - **Wire Gauge:** 10 AWG for power (via firewall Grommet 1) - See [START Battery Distribution][starter-battery] for ground wire specs
 
 **Potential Future Radio Types:**
+
 - **VHF/UHF Mobile Radio:** 2-meter (144 MHz) and 70-cm (440 MHz) dual-band radio
   - Typical power: 50W VHF, 35W UHF
   - Amperage: ~10A transmit, 1A receive
@@ -213,6 +220,7 @@ Reserved circuit for future amateur (ham) radio installation. Ham radio requires
   - Antenna: Bumper-mounted or roof-rack-mounted HF antenna (requires tuner)
 
 **Outstanding Items:**
+
 - [ ] Determine if/when ham radio will be installed
 - [ ] Decide on VHF/UHF vs HF vs both (dual installation)
 - [ ] Verify 15A fuse is sufficient for chosen radio model
@@ -223,7 +231,7 @@ Reserved circuit for future amateur (ham) radio installation. Ham radio requires
 ### SwitchPros Command Touch CT4
 
 **Model:** Command Touch CT4
-**Manual:** https://www.switchpros.com/wp-content/uploads/CT4-Rev-1.0.pdf
+**Manual:** <https://www.switchpros.com/wp-content/uploads/CT4-Rev-1.0.pdf>
 **Mounting:** 1.5" steering column
 **Power Source:** TBD - likely BODY PDU SWITCHED circuit or direct from SwitchPros
 **Ground:** TBD - chassis ground or dash ground point
@@ -241,6 +249,7 @@ Reserved circuit for future amateur (ham) radio installation. Ham radio requires
   - Mounting: TBD - under dash or on firewall
 
 **Horn Relay Integration:**
+
 - **Horn Relay:** TBD - relay specifications (contact rating, coil voltage)
   - **Trigger:** CT4 horn button  relay coil (low current, ~100-200mA)
   - **Main Power:** Battery+ or SWITCHED bus  relay contacts  horn
@@ -249,6 +258,7 @@ Reserved circuit for future amateur (ham) radio installation. Ham radio requires
 - **Horn Location:** Factory Jeep horn location (engine bay)
 
 **Turn Signal Integration:**
+
 - **Option 1: Factory Integration**
   - CT4 triggers factory turn signal flasher and bulbs
   - Wiring taps into existing turn signal circuits
@@ -280,6 +290,7 @@ Reserved circuit for future amateur (ham) radio installation. Ham radio requires
 The WolfBox system replaces the factory rearview mirror with a smart mirror that includes a front-facing dash camera and displays the rear backup camera feed.
 
 **Components:**
+
 - **Main Unit:** WolfBox rearview mirror with integrated display and front camera
   - **Location:** Windshield mount (replaces factory rearview mirror)
   - **Functions:**
@@ -304,6 +315,7 @@ The WolfBox system replaces the factory rearview mirror with a smart mirror that
   - **Mounting:** Above license plate or integrated into spare tire carrier
 
 **Wiring Summary:**
+
 1. **Main Unit Power (+):** CONSTANT bus → BODY PDU F5 (10A) → WolfBox mirror unit power input
 2. **Main Unit Ground (-):** WolfBox mirror ground → firewall ground stud or dash ground point
 3. **Reverse Trigger:** Engine RTMR F7 (reverse light circuit) → WolfBox reverse trigger input
@@ -312,12 +324,14 @@ The WolfBox system replaces the factory rearview mirror with a smart mirror that
 5. **Rear Camera Video:** Rear camera → main WolfBox unit via included cable
 
 **Cable Routing:**
+
 - **Main Unit to Rear Camera:** Route cable from windshield → along headliner → down A-pillar → under door sills → up tailgate or through rear cargo area to camera location
 - **Reverse Trigger Wire:** Tap into Engine RTMR F7 reverse light circuit → route to WolfBox mirror unit
   - Can tap at reverse light switch location or at reverse light fixture
   - 18-20 AWG wire, low current (signal only)
 
 **Outstanding Items:**
+
 - [ ] Determine specific WolfBox model number (9.66" vs 12" screen, features)
 - [ ] Confirm WolfBox power requirement is within 10A fuse capacity (typically 2-5A)
 - [ ] Verify if CONSTANT or SWITCHED power is preferred for parking mode dash cam functionality
@@ -332,6 +346,7 @@ The WolfBox system replaces the factory rearview mirror with a smart mirror that
 ### Additional Camera Considerations (Future)
 
 **Potential Future Cameras:**
+
 - **Side Cameras:** For blind spot monitoring or trail spotting
   - Would require additional camera inputs (WolfBox may support multi-camera with upgraded model)
   - Power: BODY PDU spare circuits (CONSTANT power)

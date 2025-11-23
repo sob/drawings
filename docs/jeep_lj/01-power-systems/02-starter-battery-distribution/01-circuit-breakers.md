@@ -45,4 +45,4 @@ All START battery positive circuits protected by Mechanical Products Series 17 c
 [front-battery]: index.md
 [pmu-outputs]: ../04-pmu/03-pmu-outputs.md
 [bcdc]: ../01-power-generation/03-bcdc.md
-[comms]: ../../06-communication-systems/01-communication.md
+[comms]: ../../07-communication-systems/01-communication.md

@@ -4,6 +4,7 @@ hide:
 ---
 
 # Section 6: Audio Systems {#audio-systems-index}
+
 Vehicle audio, entertainment, and communications equipment.
 
 ## Contents

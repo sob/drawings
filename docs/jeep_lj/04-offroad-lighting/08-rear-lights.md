@@ -39,5 +39,5 @@ See [SwitchPros SP-1200][switchpros-sp-1200] for wiring details.
 - [Reverse Lights][reverse-lights] - Separate PMU-controlled reverse lights
 
 [offroad-overview]: index.md
-[switchpros-sp-1200]: ../../04-control-interfaces/02-switchpros-sp1200.md
+[switchpros-sp-1200]: ../05-control-interfaces/02-switchpros-sp1200.md
 [reverse-lights]: 10-reverse-lights.md

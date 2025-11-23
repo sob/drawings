@@ -67,7 +67,7 @@ Provides organized distribution for accessory circuits in the rear wheel well co
 [product-link]: https://www.bluesea.com/products/2104/PowerBar_225A_BusBar_with_Four_1_4inch-20_Studs
 [rear-battery]: index.md
 [circuit-breakers]: 01-circuit-breakers.md
-[switchpros]: ../../04-control-interfaces/02-switchpros-sp1200.md
+[switchpros]: ../../05-control-interfaces/02-switchpros-sp1200.md
 [safetyhub]: 04-safetyhub.md
 [body-rtmr]: 03-body-pdu.md
 [installation]: ../installation-checklist.md#phase-2-power-distribution

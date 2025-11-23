@@ -103,6 +103,6 @@ tags:
 [safetyhub]: 04-safetyhub.md
 [house-battery]: index.md
 [circuit-breakers]: 01-circuit-breakers.md
-[dashboard]: ../../04-control-interfaces/05-dashboard-controls.md
-[audio]: ../../05-audio-systems/01-audio.md
+[dashboard]: ../../05-control-interfaces/05-dashboard-controls.md
+[audio]: ../../06-audio-systems/01-audio.md
 [firewall]: ../07-wire-routing/02-firewall-ingress.md

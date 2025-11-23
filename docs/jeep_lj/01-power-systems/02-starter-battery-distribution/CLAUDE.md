@@ -64,6 +64,6 @@ This page is the **single source of truth** for wire specifications. When updati
 | PMU24 | `04-pmu/01-pmu-overview.md` |
 | BCDC Alpha 50 | `01-power-generation/03-bcdc.md`, `03-aux-battery-distribution/index.md` |
 | Engine Bay Ground Bus | `05-grounding/01-engine-bay-ground-bus.md` |
-| Radio Grounds | `06-communication-systems/01-communication.md` |
+| Radio Grounds | `07-communication-systems/01-communication.md` |
 
 **If circuit passes through firewall:** Also update `02-engine-systems/07-firewall-ingress.md`

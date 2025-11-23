@@ -49,4 +49,4 @@ Physical switch at rear left wheel well for rock light control independent of Sw
 - [SwitchPros SP-1200][switchpros-sp-1200]
 
 [offroad-overview]: index.md
-[switchpros-sp-1200]: ../../04-control-interfaces/02-switchpros-sp1200.md
+[switchpros-sp-1200]: ../05-control-interfaces/02-switchpros-sp1200.md

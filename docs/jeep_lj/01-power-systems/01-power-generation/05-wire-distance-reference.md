@@ -63,6 +63,6 @@ Wire gauges optimized for performance at measured routing distances:
 [alternator]: 02-alternator.md
 [pmu]: ../04-pmu/index.md
 [starter]: ../../02-engine-systems/01-starter.md
-[recovery]: ../../07-exterior-systems/01-recovery-systems.md
+[recovery]: ../../08-exterior-systems/01-recovery-systems.md
 [starter-battery]: ../02-starter-battery-distribution/index.md
 [aux-battery]: ../03-aux-battery-distribution/index.md

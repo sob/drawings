@@ -282,7 +282,7 @@ For future reference if upgrading to LiFePO4:
 
 [bcdc]: ../01-power-generation/03-bcdc.md
 [safetyhub]: 04-safetyhub.md
-[switchpros]: ../../04-control-interfaces/02-switchpros-sp1200.md
+[switchpros]: ../../05-control-interfaces/02-switchpros-sp1200.md
 [body-pdu]: 03-body-pdu.md
 [start-load-analysis]: ../02-starter-battery-distribution/02-load-analysis.md
 [arb-load-shedding]: ../04-pmu/05-pmu-arb-load-shedding.md

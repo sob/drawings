@@ -49,5 +49,5 @@ Multi-function rear safety light for convoy visibility, plus integrated brake, t
 - [Tail/Brake/Reverse Lights][tail-brake-reverse]
 
 [offroad-overview]: index.md
-[switchpros-sp-1200]: ../../04-control-interfaces/02-switchpros-sp1200.md
-[tail-brake-reverse]: ../04-tail-brake-reverse.md
+[switchpros-sp-1200]: ../05-control-interfaces/02-switchpros-sp1200.md
+[tail-brake-reverse]: ../03-lighting-systems/04-tail-brake-reverse.md

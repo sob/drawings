@@ -82,8 +82,8 @@ Provides fused distribution for recovery and auxiliary systems powered by the AU
 
 [bluesea-7748]: https://www.bluesea.com/products/7748/SafetyHub_150_Fuse_Block
 [circuit-breakers]: 01-circuit-breakers.md
-[air-system]: ../../07-exterior-systems/02-air-system.md
-[recovery-systems]: ../../07-exterior-systems/01-recovery-systems.md
+[air-system]: ../../08-exterior-systems/02-air-system.md
+[recovery-systems]: ../../08-exterior-systems/01-recovery-systems.md
 [aux-battery]: index.md
 [pmu-outputs]: ../04-pmu/03-pmu-outputs.md
 [standards-exceptions]: ../STANDARDS-EXCEPTIONS.md

@@ -42,5 +42,5 @@ See [Tail/Brake/Reverse Lights][tail-brake-reverse] for PMU reverse circuit deta
 - [Rear Work Lights][rear-lights] - Separate SwitchPros-controlled rear lights
 
 [offroad-overview]: index.md
-[tail-brake-reverse]: ../04-tail-brake-reverse.md
+[tail-brake-reverse]: ../03-lighting-systems/04-tail-brake-reverse.md
 [rear-lights]: 08-rear-lights.md

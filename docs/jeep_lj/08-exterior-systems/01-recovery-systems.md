@@ -9,6 +9,7 @@ tags:
 ---
 
 # Recovery Systems {#recovery-systems}
+
 ## System Overview
 
 The recovery systems provide essential off-road and emergency recovery capabilities, centered around the Warn Zeon 10-S winch. These systems are designed for reliable operation in extreme conditions with proper power distribution and control integration.
@@ -88,6 +89,7 @@ The recovery systems provide essential off-road and emergency recovery capabilit
 **Dual Control Setup:** Dash rocker switch + handheld remote (both work simultaneously)
 
 **Dash Rocker Switch:**
+
 - **Type:** Center-off momentary rocker switch (SPDT or DPDT)
 - **Location:** Dashboard physical switch panel
 - **Function:**
@@ -98,12 +100,14 @@ The recovery systems provide essential off-road and emergency recovery capabilit
 - **Use case:** In-cab winch control (self-recovery, convenient operation from driver seat)
 
 **Handheld Remote:**
+
 - **Type:** Warn factory wireless remote or wired remote
 - **Function:** IN/OUT directional control (same as dash rocker)
 - **Connection:** Wired in parallel with dash rocker switch
 - **Use case:** Outside vehicle spotting (traditional winch operation with visual line of sight)
 
 **Control Architecture:**
+
 ```
 BODY PDU (10A CB) → Dash Rocker Switch ⟷ Handheld Remote (parallel) → Winch Contactor IN/OUT
                          ↑                      ↑
@@ -123,6 +127,7 @@ See [AUX Battery Distribution][aux-battery] for wire specs (gauge, length, routi
 - **Negative (-):** AUX battery- → winch motor ground lug
 
 **Control Wiring:**
+
 - **Power Source:** BODY PDU (available CB slot, 10A fuse) - AUX battery powered
 - **Dash Rocker:** BODY PDU → Dash rocker switch → Winch contactor IN/OUT signals
 - **Remote:** Wired in parallel with dash rocker (IN and OUT signals)
@@ -151,11 +156,13 @@ See [AUX Battery Distribution][aux-battery] for cable specs and routing path. Ge
 - Keep cables away from exhaust components and moving parts
 
 **Contactor Location:**
+
 - Factory mounted on winch motor housing
 - Ensure contactor is protected from direct water spray
 - Verify all connections are tight and corrosion-free
 
 **Control Switch Location:**
+
 - Dash-mounted 3-position switch (Button 4 on physical switch panel)
 - Easily accessible from driver's seat
 - Clear labeling for switch positions (Off/SwitchPros/Manual)
@@ -203,6 +210,7 @@ See [AUX Battery Distribution][aux-battery] for cable specs and routing path. Ge
 ## Future Recovery Expansion
 
 **Potential Additional Recovery Equipment:**
+
 - **Recovery Boards:** MaxTrax or similar traction boards (storage location TBD)
 - **Recovery Straps:** Tree savers, kinetic ropes (storage in cargo area)
 - **D-Rings/Shackles:** Bow shackles and D-rings (storage in cargo area)
@@ -212,6 +220,7 @@ See [AUX Battery Distribution][aux-battery] for cable specs and routing path. Ge
 - **Air Down/Up Kit:** ARB E-Z Deflator and tire inflation accessories (integrates with air compressor system)
 
 **Integration Opportunities:**
+
 - **Wireless Winch Control Integration:** Integrate with vehicle's audio/communication system for voice commands
 - **Winch Load Monitoring:** Add amp meter or load sensor to monitor winch current draw
 - **Remote Battery Monitoring:** Monitor START battery voltage during winch operations from inside cabin

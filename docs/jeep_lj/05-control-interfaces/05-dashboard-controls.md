@@ -4,6 +4,7 @@ hide:
 ---
 
 # Dashboard Physical Controls {#dashboard-physical-controls}
+
 This section documents physical switches mounted in the dashboard area (separate from the SwitchPros control panel).
 
 ## Winch Control Rocker Switch
@@ -26,16 +27,19 @@ This section documents physical switches mounted in the dashboard area (separate
 ### Wiring
 
 **Power Source:**
+
 - **BODY PDU:** Available circuit breaker slot (10A fuse)
 - **System:** AUX battery powered (matches winch main power source)
 
 **Control Circuit:**
+
 - **Power:** BODY PDU (10A CB) → Dash rocker switch
 - **Outputs:** Rocker UP/DOWN → Winch contactor IN/OUT signals
 - **Wire Gauge:** 16-18 AWG (low-current control signals, ~2A max)
 - **Routing:** BODY PDU (cabin) → dash rocker → through firewall → winch contactor (front bumper)
 
 **Parallel Remote:**
+
 - Handheld remote (wireless or wired) connects in parallel at winch contactor
 - Both dash rocker AND remote can trigger IN/OUT independently
 
@@ -55,11 +59,13 @@ This section documents physical switches mounted in the dashboard area (separate
 ### Wiring Options
 
 **Option 1: Parallel with SwitchPros Button 4**
+
 - Wire switch in parallel with OUTPUT-4 circuit
 - Allows rear passenger to turn on/off dome lights independently
 - Both switches can control the same lights
 
 **Option 2: Connected to TRIGGER input**
+
 - Wire to SwitchPros TRIGGER-1, TRIGGER-2, or TRIGGER-3
 - Allows SwitchPros to interpret rear seat switch as a remote trigger
 - More complex but allows for programmable behavior

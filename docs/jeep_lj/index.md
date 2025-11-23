@@ -41,28 +41,28 @@ The electrical system is organized into zones for logical distribution and maint
 - **[Turn Signals](03-lighting-systems/03-turn-signals.md)** - Turn signal system
 - **[Tail, Brake & Reverse](03-lighting-systems/04-tail-brake-reverse.md)** - Rear lighting
 - **[DRL & Parking Lights](03-lighting-systems/05-drl-parking.md)** - Daytime running and parking lights
-- **[Offroad & Aux Lighting](03-lighting-systems/06-offroad-lighting/index.md)** - Auxiliary and offroad lighting
+- **[Offroad & Aux Lighting](04-offroad-lighting/index.md)** - Auxiliary and offroad lighting
 
 ### Control Interfaces
 
-- **[Overview](04-control-interfaces/01-overview.md)** - Control systems overview
-- **[SwitchPros SP-1200](04-control-interfaces/02-switchpros-sp1200.md)** - SwitchPros lighting controller
-- **[Command Touch CT4](04-control-interfaces/03-command-touch-ct4.md)** - Command Touch control panel
-- **[Digital Gauge Cluster](04-control-interfaces/04-gauge-cluster/index.md)** - Dakota Digital gauge cluster
-- **[Dashboard Switches](04-control-interfaces/05-dashboard-controls.md)** - Physical dashboard controls
+- **[Overview](05-control-interfaces/01-overview.md)** - Control systems overview
+- **[SwitchPros SP-1200](05-control-interfaces/02-switchpros-sp1200.md)** - SwitchPros lighting controller
+- **[Command Touch CT4](05-control-interfaces/03-command-touch-ct4.md)** - Command Touch control panel
+- **[Digital Gauge Cluster](05-control-interfaces/04-gauge-cluster/index.md)** - Dakota Digital gauge cluster
+- **[Dashboard Switches](05-control-interfaces/05-dashboard-controls.md)** - Physical dashboard controls
 
 ### Stereo Systems
 
-- **[Audio Systems](05-audio-systems/01-audio.md)** - Fusion head unit, Apollo amplifier, JL Audio speakers and subwoofer
+- **[Audio Systems](06-audio-systems/01-audio.md)** - Fusion head unit, Apollo amplifier, JL Audio speakers and subwoofer
 
 ### Communications
 
-- **[Communication Systems](06-communication-systems/01-communication.md)** - GMRS radio, intercom, Command Touch CT4, WolfBox camera
+- **[Communication Systems](07-communication-systems/01-communication.md)** - GMRS radio, intercom, Command Touch CT4, WolfBox camera
 
 ### Auxiliary Systems
 
-- **[Recovery Systems](07-exterior-systems/01-recovery-systems.md)** - Warn Zeon 10-S winch and recovery equipment
-- **[Air System](07-exterior-systems/02-air-system.md)** - ARB Twin Compressor and air lockers
+- **[Recovery Systems](08-exterior-systems/01-recovery-systems.md)** - Warn Zeon 10-S winch and recovery equipment
+- **[Air System](08-exterior-systems/02-air-system.md)** - ARB Twin Compressor and air lockers
 
 ### Install Notes
 
@@ -93,18 +93,18 @@ Complete replacement of factory TIPM with modular power distribution:
 
 ### Major Systems
 
-- **[Lighting Control](04-control-interfaces/02-switchpros-sp1200.md):** SwitchPros SP-1200 for offroad and auxiliary lighting
-- **[Command Touch CT4](04-control-interfaces/03-command-touch-ct4.md):** Street-legal lighting and turn signal control
-- **[Audio System](05-audio-systems/01-audio.md):** Fusion Apollo 6-channel amp, JL Audio marine speakers with RGB LED
-- **[Communication](06-communication-systems/01-communication.md):** Rugged Radio G1 GMRS, STX 4-place intercom, Fusion MS-RA670 head unit
-- **[Recovery & Air](07-exterior-systems/01-recovery-systems.md):** Warn 10,000 lb winch, ARB air lockers, ARB Twin Air Compressor
+- **[Lighting Control](05-control-interfaces/02-switchpros-sp1200.md):** SwitchPros SP-1200 for offroad and auxiliary lighting
+- **[Command Touch CT4](05-control-interfaces/03-command-touch-ct4.md):** Street-legal lighting and turn signal control
+- **[Audio System](06-audio-systems/01-audio.md):** Fusion Apollo 6-channel amp, JL Audio marine speakers with RGB LED
+- **[Communication](07-communication-systems/01-communication.md):** Rugged Radio G1 GMRS, STX 4-place intercom, Fusion MS-RA670 head unit
+- **[Recovery & Air](08-exterior-systems/01-recovery-systems.md):** Warn 10,000 lb winch, ARB air lockers, ARB Twin Air Compressor
 
 ## Documentation Notes
 
 !!! info "Outstanding Items"
     Throughout this documentation, you'll find "Outstanding Items" checklists. These track design decisions, measurements, and tasks that need to be completed during installation.
 
-    **[View Global TBD Tracker](08-installation/01-tbd-tracker.md)** - Centralized tracking of all To-Be-Determined items with priorities
+    **[View Global TBD Tracker](09-installation/01-tbd-tracker.md)** - Centralized tracking of all To-Be-Determined items with priorities
 
 !!! warning "Work in Progress"
     This is a living document that evolves as the build progresses. Some specifications may be marked as TBD (To Be Determined) and will be updated during the build process.

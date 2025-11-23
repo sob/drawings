@@ -14,7 +14,7 @@ tags:
 
 **Model:** SwitchPros Command-Touch CT4
 
-**Manual:** https://www.switchpros.com/wp-content/uploads/CT4-Rev-1.0.pdf
+**Manual:** <https://www.switchpros.com/wp-content/uploads/CT4-Rev-1.0.pdf>
 
 **Type:** Programmable steering column-mounted turn signal and accessory controller
 
@@ -90,6 +90,7 @@ The CT4 provides complete turn signal and headlight control:
 ### DRL/Parking Lights
 
 Automatic ignition-controlled circuit that powers:
+
 - License plate lights
 - LP6 Headlight DRL function (Pin 3) - **via cutoff relay**
 - Front 2" LED side markers (parking function)
@@ -205,6 +206,7 @@ END
 - PMU Out 9 capacity: 15A (sufficient for 8A load)
 
 **Advantages over relay:**
+
 - No external relay hardware required
 - PMU monitors current draw and provides diagnostics
 - Programmable delays and soft-start capabilities

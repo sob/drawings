@@ -14,7 +14,7 @@ tags:
 
 **Model:** RCR-Force 12
 
-**Manual:** https://www.switchpros.com/wp-content/uploads/RCR-force-12-installation-guide-REV-1.9.pdf
+**Manual:** <https://www.switchpros.com/wp-content/uploads/RCR-force-12-installation-guide-REV-1.9.pdf>
 
 **Power Source:** 150A breaker from CONSTANT bus (AUX battery)
 
@@ -118,12 +118,14 @@ See [AUX Battery Distribution][aux-battery] for power specifications.
 Driver and passenger door switches wired in parallel to activate dome lights when either door opens.
 
 **Wiring:**
+
 ```
 Driver Door Switch (NO) ──┬──→ TRIGGER-1 (Pin 7, PINK)
 Passenger Door Switch (NO)─┘
 ```
 
 **Configuration:**
+
 - Program Button 4 to control OUTPUT-4 OR TRIGGER-1 → OUTPUT-4
 - Manual control: Press Button 4
 - Automatic control: Open driver or passenger door
@@ -136,17 +138,20 @@ Passenger Door Switch (NO)─┘
 Physical rocker switch mounted in rear cargo area for convenient access when loading/unloading.
 
 **Wiring:**
+
 ```
 Rear Cargo Rocker Switch (SPST) → TRIGGER-2 (Pin 8, PINK)
 ```
 
 **Configuration:**
+
 - Program TRIGGER-2 → OUTPUT-13 (cargo light)
 - No button assignment needed
 - Physical switch location: Rear cargo area (easily accessible from tailgate)
 - Switch type: SPST rocker or toggle switch
 
 **Benefits:**
+
 - Physical access from cargo area (don't need dashboard button or app)
 - Independent from other lighting circuits
 - Convenient when loading/unloading gear at night
@@ -156,6 +161,7 @@ Rear Cargo Rocker Switch (SPST) → TRIGGER-2 (Pin 8, PINK)
 ARB air tank pressure switch automatically activates compressor to maintain tank pressure between 135-150 PSI.
 
 **Wiring:**
+
 ```
 ARB Pressure Switch (180901) → TRIGGER-3 (Pin 17, PINK)
 ```
@@ -165,17 +171,20 @@ ARB Pressure Switch (180901) → TRIGGER-3 (Pin 17, PINK)
 Program TRIGGER-3 to activate compressor when tank pressure drops below 135 PSI:
 
 **SwitchPros Logic:**
+
 - **TRIGGER-3 OR Button 11 → OUTPUT-11 (compressor)**
 - When tank pressure < 135 PSI: TRIGGER-3 closes → OUTPUT-11 activates → compressor runs
 - When tank pressure = 150 PSI: TRIGGER-3 opens → OUTPUT-11 deactivates → compressor stops
 - Manual override: Button 11 can force compressor on regardless of tank pressure
 
 **Signal Source:**
+
 - ARB Pressure Switch model 180901 (cut-in: 135 PSI, cut-out: 150 PSI)
 - Mounted on air manifold under passenger seat
 - Low current signal wire (18 AWG from manifold to SwitchPros TRIGGER-3)
 
 **Benefits:**
+
 - Automatic pressure maintenance (no user intervention required)
 - Instant locker engagement (tank always pressurized)
 - Manual override available for tire inflation (Button 11)
@@ -183,6 +192,7 @@ Program TRIGGER-3 to activate compressor when tank pressure drops below 135 PSI:
 - Tank ready for use whenever needed
 
 **Related Documentation:**
+
 - See [Air System][air-system-arb-compressor-lockers] for complete ARB compressor, tank, and pressure switch specifications
 
 ## Outstanding Items

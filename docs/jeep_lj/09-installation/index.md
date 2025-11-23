@@ -3,13 +3,13 @@ hide:
   - toc
 ---
 
-# Section 8: Installation & Project Management {#installation-project-management}
+# Section 9: Installation & Project Management {#installation-project-management}
 
 Physical installation planning, tracking, and validation procedures.
 
 ## Contents
 
-- **[8.1 TBD Tracker][tbd-tracker]** - Outstanding items and completion tracking
+- **[9.1 TBD Tracker][tbd-tracker]** - Outstanding items and completion tracking
 
 ## Installation Resources
 

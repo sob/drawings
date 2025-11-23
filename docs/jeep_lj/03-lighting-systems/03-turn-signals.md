@@ -58,6 +58,6 @@ See [Tail/Brake/Reverse Lights][tail-brake-reverse-lights] for complete wiring.
 - [Tail/Brake/Reverse Lights][tail-brake-reverse-lights] - Rear turn signal integration
 - [DRL/Parking Lights][drl-parking-lights] - Side marker parking circuit
 
-[command-touch-ct4]: ../04-control-interfaces/03-command-touch-ct4.md
+[command-touch-ct4]: ../05-control-interfaces/03-command-touch-ct4.md
 [tail-brake-reverse-lights]: 04-tail-brake-reverse.md
 [drl-parking-lights]: 05-drl-parking.md

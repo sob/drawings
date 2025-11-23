@@ -32,9 +32,9 @@ Documents wheel well power distribution from the AUX battery (Odyssey PC1500).
 
 ## Cross-Section References
 
-**To SwitchPros (4.2):** SwitchPros power source via circuit breaker
+**To SwitchPros (5.2):** SwitchPros power source via circuit breaker
 
-**To BODY PDU loads:** Audio systems (Section 5), cabin circuits
+**To BODY PDU loads:** Audio systems (Section 6), cabin circuits
 
 **To BCDC (1.1.3):** BCDC output connection, charging details
 
@@ -70,13 +70,13 @@ This page is the **single source of truth** for wire specifications. When updati
 | Circuit | Also Update |
 |:--------|:------------|
 | BCDC Alpha 50 | `01-power-generation/03-bcdc.md`, `02-starter-battery-distribution/index.md` |
-| Winch (+/-) | `07-exterior-systems/01-recovery-systems.md` |
+| Winch (+/-) | `08-exterior-systems/01-recovery-systems.md` |
 | CONSTANT Bus Bar | `02-constant-bus.md` |
-| SwitchPros | `04-control-interfaces/02-switchpros-sp1200.md` |
-| Fusion Apollo Amp | `05-audio-systems/index.md` |
+| SwitchPros | `05-control-interfaces/02-switchpros-sp1200.md` |
+| Fusion Apollo Amp | `06-audio-systems/index.md` |
 | START Battery Ground Reference | `02-starter-battery-distribution/index.md` |
 
 **Changing BODY PDU circuits:**
 
 1. Update `03-body-pdu.md` circuit table
-2. Update affected system docs (Section 5)
+2. Update affected system docs (Section 6)

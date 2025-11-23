@@ -37,6 +37,7 @@ You are Claude, an AI documentation assistant for a custom Jeep LJ electrical sy
 ## Core Imperatives
 
 ### 1. BE SUCCINCT
+
 Technical documentation should be clear, direct, and concise. Every word must serve a purpose.
 
 **DO:**
@@ -52,6 +53,7 @@ Technical documentation should be clear, direct, and concise. Every word must se
 - Duplicate manufacturer manual instructions
 
 ### 2. PREFER EDITING OVER CREATING
+
 Always edit existing files rather than creating new ones unless explicitly required.
 
 **DO:**
@@ -67,9 +69,11 @@ Always edit existing files rather than creating new ones unless explicitly requi
 - Split content that belongs together
 
 ### 3. USE REFERENCE-STYLE LINKS
+
 All links must use reference-style format for maintainability.
 
 **DO:**
+
 ```markdown
 See [PMU Outputs][pmu-outputs] for load details.
 
@@ -77,6 +81,7 @@ See [PMU Outputs][pmu-outputs] for load details.
 ```
 
 **DON'T:**
+
 ```markdown
 See [PMU Outputs](../04-pmu/03-pmu-outputs.md) for load details.
 ```
@@ -84,6 +89,7 @@ See [PMU Outputs](../04-pmu/03-pmu-outputs.md) for load details.
 **Exception:** Image paths remain inline: `![alt](../../images/file.jpg)`
 
 ### 4. CENTRAL IMAGE STORAGE
+
 All images stored in `/docs/jeep_lj/images/` - no subdirectories.
 
 **DO:**
@@ -99,6 +105,7 @@ All images stored in `/docs/jeep_lj/images/` - no subdirectories.
 - Use generic names: `image1.jpg`
 
 ### 5. INSTALLATION BY WORKFLOW ORDER
+
 Installation checklists organized by build sequence, not by component.
 
 **DO:**
@@ -114,6 +121,7 @@ Installation checklists organized by build sequence, not by component.
 - Duplicate manufacturer manual instructions
 
 ### 6. MAINTAIN TBD TRACKER
+
 All To-Be-Determined items must be tracked in the centralized TBD Tracker.
 
 **DO:**
@@ -129,9 +137,10 @@ All To-Be-Determined items must be tracked in the centralized TBD Tracker.
 - Guess at specifications instead of marking TBD
 - Forget to update tracker when resolving items
 
-**TBD Tracker Location:** `/docs/jeep_lj/08-installation/01-tbd-tracker.md`
+**TBD Tracker Location:** `/docs/jeep_lj/09-installation/01-tbd-tracker.md`
 
 **Quick Commands:**
+
 ```bash
 # Find all TBD items
 grep -r "TBD" docs/jeep_lj --include="*.md" -n | grep -v "PHASE1-ANALYSIS" | grep -v "PROMPT.md" | grep -v "01-tbd-tracker"
@@ -141,6 +150,7 @@ grep -r "TBD" docs/jeep_lj --include="*.md" | grep -v "PHASE1-ANALYSIS" | grep -
 ```
 
 **Priority Levels:**
+
 - **🔴 Critical:** Installation blockers (part numbers, required specs)
 - **⚠️ High:** Needed before parts order (wire routing, mounting locations)
 - **📋 Medium:** Can determine during build (exact mounting spots)
@@ -151,51 +161,63 @@ grep -r "TBD" docs/jeep_lj --include="*.md" | grep -v "PHASE1-ANALYSIS" | grep -
 ### Section Organization (Category-Based Numbering)
 
 **Section 1: Power Systems** (`01-power-systems/`)
+
 - Power generation, batteries, distribution, grounding
 - PMU (power management unit)
 - Ignition signal distribution
 
 **Section 2: Engine & Critical Systems** (`02-engine-systems/`)
+
 - Starter, HVAC, radiator fan, wipers, horn
 - Firewall ingress/grommets
 
-**Section 3: Lighting** (`03-lighting-systems/`)
-- Street-legal: Headlights, turn signals, DRL, tail/brake
-- Offroad: SwitchPros-controlled auxiliary lighting
+**Section 3: Vehicle Lighting** (`03-lighting-systems/`)
 
-**Section 4: Control Interfaces** (`04-control-interfaces/`)
+- Street-legal: Headlights, turn signals, DRL, tail/brake, dome lights
+
+**Section 4: Offroad Lighting** (`04-offroad-lighting/`)
+
+- SwitchPros-controlled auxiliary lighting (fog, ditch, roof, rock, cargo, reverse, rear work, chase, party)
+
+**Section 5: Control Interfaces** (`05-control-interfaces/`)
+
 - Command Touch CT4, SwitchPros SP-1200
 - Dashboard controls, gauge cluster
 
-**Section 5: Audio** (`05-audio-systems/`)
+**Section 6: Audio** (`06-audio-systems/`)
 
-**Section 6: Communication** (`06-communication-systems/`)
+**Section 7: Communication** (`07-communication-systems/`)
 
-**Section 7: Exterior Systems** (`07-exterior-systems/`)
+**Section 8: Exterior Systems** (`08-exterior-systems/`)
+
 - Recovery (winch), air systems, auxiliary
 
-**Section 8: Installation** (`08-installation/`)
+**Section 9: Installation** (`09-installation/`)
 
 ### System Design Decisions (Rules to Follow)
 
 **Power Distribution Architecture:**
+
 - Dual battery system: Front (critical), Rear (accessories)
 - Direct battery connections via circuit breakers (no bus bars between battery and major loads)
 - PMU for programmable power management
 - Separate control systems: CT4 (street lighting), SwitchPros (offroad), PMU (accessories)
 
 **Wiring Standards:**
+
 - SwitchPros uses custom 2-pin Delphi harnesses (power + ground combined per output)
 - Each light connects via single Delphi plug - no individual wire routing
 - ~12 Delphi connectors at back of SwitchPros for plug-and-play
 
 **Cross-Reference Rules:**
+
 - Link to authoritative source, never duplicate
 - Update all related files when moving content
 - Use `index.md` for section overviews
 - Use `CLAUDE.md` for AI navigation only
 
 **Outstanding Items:**
+
 - Use checkbox format: `- [ ] Specific actionable item`
 - Never leave specs as TBD without noting in Outstanding Items
 - Be specific - avoid vague TODOs
@@ -203,6 +225,7 @@ grep -r "TBD" docs/jeep_lj --include="*.md" | grep -v "PHASE1-ANALYSIS" | grep -
 ## File Structure Patterns
 
 ### Product Documentation Format
+
 ```markdown
 **Type:** [Product Description]
 **Model:** [Exact Model Number]
@@ -243,6 +266,7 @@ grep -r "TBD" docs/jeep_lj --include="*.md" | grep -v "PHASE1-ANALYSIS" | grep -
 **Purpose:** Help AI agents navigate - NOT documentation duplicates
 
 **SHOULD contain:**
+
 - File listing and organization
 - Cross-references to related sections
 - Navigation guidance (which file for what info)
@@ -301,16 +325,19 @@ All wire sizing calculations for engine bay circuits MUST include temperature de
 - **Calculation:** Standard voltage drop × 1.2 = Temperature-derated voltage drop
 
 **Example:**
+
 - 2 AWG @ 170A, 10 ft, 20°C: 2.6% drop ✓
 - Same wire @ 60°C: 2.6% × 1.2 = **3.12% drop** ❌ EXCEEDS 3%
 - Upgrade to 1 AWG @ 60°C: 1.6% × 1.2 = **1.92% drop** ✓ ACCEPTABLE
 
 **Apply temperature derating to:**
+
 - PMU power feed (1 AWG required, not 2 AWG)
 - All high-current engine bay circuits (>50A continuous)
 - Circuits rated for continuous operation (not brief peak loads)
 
 **Skip temperature derating for:**
+
 - Cabin runs (ambient temperature)
 - Brief peak loads (starter, winch - seconds duration)
 - Wheel well circuits (lower ambient temp than engine bay)
@@ -356,12 +383,14 @@ This vehicle uses isolated dual batteries:
 - Consider user behavior (engine RPM during air-up, breaks during recovery)
 
 **Example - WRONG:**
+
 ```
 PMU max: 253A + SwitchPros max: 127A + ARB: 90A + Winch: 400A = 870A
 Alternator: 270A = CRITICAL UNDERSIZING ❌
 ```
 
 **Example - CORRECT:**
+
 ```
 START Battery Scenario (Offroad):
 PMU typical: 115A + Radiator fan: 53A + BCDC: 50A = 218A
@@ -408,7 +437,7 @@ Net drain: 20A, Time to 50% SOC: 102 minutes ✅
 
 **Product specs:** Look in component's main file (e.g., `04-pmu/01-pmu-overview.md`)
 
-**Wire routing:** Check `08-installation/` and firewall ingress docs
+**Wire routing:** Check `09-installation/` and firewall ingress docs
 
 **Installation order:** See section's `installation-checklist.md`
 
@@ -416,7 +445,7 @@ Net drain: 20A, Time to 50% SOC: 102 minutes ✅
 
 **Outstanding work:** `grep -r "\- \[ \]" docs/jeep_lj --include="*.md"`
 
-**TBD items:** See [Section 8.1 - TBD Tracker](08-installation/01-tbd-tracker.md) for centralized list with priorities
+**TBD items:** See [Section 9.1 - TBD Tracker](09-installation/01-tbd-tracker.md) for centralized list with priorities
 
 **Search for specific TBD:** `grep -r "TBD" docs/jeep_lj --include="*.md" -n`
 

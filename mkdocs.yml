@@ -125,52 +125,52 @@ nav:
       - 2.6 - Radiator Fan: jeep_lj/02-engine-systems/06-radiator-fan.md
       - 2.7 - Grid Heater: jeep_lj/02-engine-systems/07-grid-heater.md
       - 2.8 - Fuel System: jeep_lj/02-engine-systems/08-fuel-system.md
-    - Lighting Systems:
+    - Vehicle Lighting:
       - jeep_lj/03-lighting-systems/index.md
       - 3.1 - Lighting Overview: jeep_lj/03-lighting-systems/01-lighting-overview.md
       - 3.2 - Headlights: jeep_lj/03-lighting-systems/02-headlights.md
       - 3.3 - Turn Signals: jeep_lj/03-lighting-systems/03-turn-signals.md
       - 3.4 - Tail, Brake & Reverse: jeep_lj/03-lighting-systems/04-tail-brake-reverse.md
       - 3.5 - DRL & Parking Lights: jeep_lj/03-lighting-systems/05-drl-parking.md
-      - 3.6 - Offroad Lighting:
-        - jeep_lj/03-lighting-systems/06-offroad-lighting/index.md
-        - Zone 1 - Fog Light: jeep_lj/03-lighting-systems/06-offroad-lighting/02-fog-lights.md
-        - Zone 2 - Ditch Lights: jeep_lj/03-lighting-systems/06-offroad-lighting/01-ditch-lights.md
-        - Zone 3+4 - Roof Lights: jeep_lj/03-lighting-systems/06-offroad-lighting/03-roof-lights.md
-        - Zone 6 - Rock Lights: jeep_lj/03-lighting-systems/06-offroad-lighting/06-rock-lights.md
-        - Zone 7 - Cargo Lights: jeep_lj/03-lighting-systems/06-offroad-lighting/07-cargo-lights.md
-        - Zone 8 - Reverse Lights: jeep_lj/03-lighting-systems/06-offroad-lighting/10-reverse-lights.md
-        - Zone 8 - Rear Work Lights: jeep_lj/03-lighting-systems/06-offroad-lighting/08-rear-lights.md
-        - Chase Light: jeep_lj/03-lighting-systems/06-offroad-lighting/04-chase-lights.md
-        - Dome Lights: jeep_lj/03-lighting-systems/06-offroad-lighting/05-dome-lights.md
-        - Party Lights: jeep_lj/03-lighting-systems/06-offroad-lighting/09-party-lights.md
+      - 3.6 - Dome Lights: jeep_lj/03-lighting-systems/06-dome-lights.md
+    - Offroad Lighting:
+      - jeep_lj/04-offroad-lighting/index.md
+      - 4.1 - Zone 1 Fog Light: jeep_lj/04-offroad-lighting/02-fog-lights.md
+      - 4.2 - Zone 2 Ditch Lights: jeep_lj/04-offroad-lighting/01-ditch-lights.md
+      - 4.3 - Zone 3+4 Roof Lights: jeep_lj/04-offroad-lighting/03-roof-lights.md
+      - 4.4 - Zone 6 Rock Lights: jeep_lj/04-offroad-lighting/06-rock-lights.md
+      - 4.5 - Zone 7 Cargo Lights: jeep_lj/04-offroad-lighting/07-cargo-lights.md
+      - 4.6 - Zone 8 Reverse Lights: jeep_lj/04-offroad-lighting/10-reverse-lights.md
+      - 4.7 - Zone 8 Rear Work Lights: jeep_lj/04-offroad-lighting/08-rear-lights.md
+      - 4.8 - Chase Light: jeep_lj/04-offroad-lighting/04-chase-lights.md
+      - 4.9 - Party Lights: jeep_lj/04-offroad-lighting/09-party-lights.md
     - Control Interfaces:
-      - jeep_lj/04-control-interfaces/index.md
-      - 4.1 - Overview: jeep_lj/04-control-interfaces/01-overview.md
-      - 4.2 - SwitchPros SP-1200: jeep_lj/04-control-interfaces/02-switchpros-sp1200.md
-      - 4.3 - Command Touch CT4: jeep_lj/04-control-interfaces/03-command-touch-ct4.md
-      - 4.4 - Dakota Digital HDX:
-        - jeep_lj/04-control-interfaces/04-gauge-cluster/index.md
-        - 4.4.1 - HDX Control: jeep_lj/04-control-interfaces/04-gauge-cluster/01-hdx-control.md
-        - 4.4.2 - Dashboard Cluster: jeep_lj/04-control-interfaces/04-gauge-cluster/02-dashboard-cluster.md
-        - 4.4.3 - BIM J1939: jeep_lj/04-control-interfaces/04-gauge-cluster/03-bim-j1939.md
-        - 4.4.4 - BIM GPS: jeep_lj/04-control-interfaces/04-gauge-cluster/04-bim-gps.md
-        - 4.4.5 - BIM TPMS: jeep_lj/04-control-interfaces/04-gauge-cluster/05-bim-tpms.md
-        - 4.4.6 - BIM Compass: jeep_lj/04-control-interfaces/04-gauge-cluster/06-bim-compass.md
-      - 4.5 - Dashboard Switches: jeep_lj/04-control-interfaces/05-dashboard-controls.md
+      - jeep_lj/05-control-interfaces/index.md
+      - 5.1 - Overview: jeep_lj/05-control-interfaces/01-overview.md
+      - 5.2 - SwitchPros SP-1200: jeep_lj/05-control-interfaces/02-switchpros-sp1200.md
+      - 5.3 - Command Touch CT4: jeep_lj/05-control-interfaces/03-command-touch-ct4.md
+      - 5.4 - Dakota Digital HDX:
+        - jeep_lj/05-control-interfaces/04-gauge-cluster/index.md
+        - 5.4.1 - HDX Control: jeep_lj/05-control-interfaces/04-gauge-cluster/01-hdx-control.md
+        - 5.4.2 - Dashboard Cluster: jeep_lj/05-control-interfaces/04-gauge-cluster/02-dashboard-cluster.md
+        - 5.4.3 - BIM J1939: jeep_lj/05-control-interfaces/04-gauge-cluster/03-bim-j1939.md
+        - 5.4.4 - BIM GPS: jeep_lj/05-control-interfaces/04-gauge-cluster/04-bim-gps.md
+        - 5.4.5 - BIM TPMS: jeep_lj/05-control-interfaces/04-gauge-cluster/05-bim-tpms.md
+        - 5.4.6 - BIM Compass: jeep_lj/05-control-interfaces/04-gauge-cluster/06-bim-compass.md
+      - 5.5 - Dashboard Switches: jeep_lj/05-control-interfaces/05-dashboard-controls.md
     - Stereo Systems:
-      - jeep_lj/05-audio-systems/index.md
-      - 5.1 - Audio Systems: jeep_lj/05-audio-systems/01-audio.md
+      - jeep_lj/06-audio-systems/index.md
+      - 6.1 - Audio Systems: jeep_lj/06-audio-systems/01-audio.md
     - Communications:
-      - jeep_lj/06-communication-systems/index.md
-      - 6.1 - Communication Systems: jeep_lj/06-communication-systems/01-communication.md
+      - jeep_lj/07-communication-systems/index.md
+      - 7.1 - Communication Systems: jeep_lj/07-communication-systems/01-communication.md
     - Auxiliary Systems:
-      - jeep_lj/07-exterior-systems/index.md
-      - 7.1 - Recovery Systems: jeep_lj/07-exterior-systems/01-recovery-systems.md
-      - 7.2 - Air System: jeep_lj/07-exterior-systems/02-air-system.md
+      - jeep_lj/08-exterior-systems/index.md
+      - 8.1 - Recovery Systems: jeep_lj/08-exterior-systems/01-recovery-systems.md
+      - 8.2 - Air System: jeep_lj/08-exterior-systems/02-air-system.md
     - Install Notes:
-      - jeep_lj/08-installation/index.md
-      - 8.1 - TBD Tracker: jeep_lj/08-installation/01-tbd-tracker.md
+      - jeep_lj/09-installation/index.md
+      - 9.1 - TBD Tracker: jeep_lj/09-installation/01-tbd-tracker.md
   - Nissan NV 3500:
     - nissan_nv/index.md
   - Jeep Wrangler JKU:

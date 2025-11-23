@@ -77,6 +77,6 @@ tags:
 
 [product-link]: https://www.bajadesigns.com/products/lp6-pair-driving-combo-led.html
 [install-link]: https://www.bajadesigns.com/wp-content/uploads/Installation%20Instructions/FGXX_18-7801-INS_001.pdf
-[command-touch-ct4]: ../04-control-interfaces/03-command-touch-ct4.md
+[command-touch-ct4]: ../05-control-interfaces/03-command-touch-ct4.md
 [drl-parking-lights]: 05-drl-parking.md
 [pmu-power-distribution]: ../01-power-systems/04-pmu/index.md

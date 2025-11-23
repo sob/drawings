@@ -196,4 +196,4 @@ All wire runs require appropriate protection based on location and environment:
 [alternator]: ../01-power-generation/02-alternator.md
 [starter]: ../../02-engine-systems/01-starter.md
 [firewall-ingress]: 02-firewall-ingress.md
-[recovery-systems]: ../../07-exterior-systems/01-recovery-systems.md
+[recovery-systems]: ../../08-exterior-systems/01-recovery-systems.md

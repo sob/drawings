@@ -42,10 +42,10 @@ Ignition sense signal to CT4, SwitchPros, Fusion Radio, BCDC
 |:--------|:-----------------|:--------|
 | Engine Systems (2) | HVAC→OUT5, Fan→OUT2+3+4, Starter direct | `02-engine-systems/` |
 | Lighting (3) | DRL→OUT14, Brake→OUT21, Reverse→OUT22 | `03-lighting-systems/` |
-| Control Interfaces (4) | CT4→OUT13, Dakota→OUT9, SwitchPros→AUX 150A CB | `04-control-interfaces/` |
-| Audio (5) | Fusion→BODY PDU | `05-audio-systems/` |
-| Communication (6) | Radios→PMU OUT6/12/20 | `06-communication-systems/` |
-| Exterior (7) | Winch→AUX direct, ARB→SafetyHub MIDI | `07-exterior-systems/` |
+| Control Interfaces (4) | CT4→OUT13, Dakota→OUT9, SwitchPros→AUX 150A CB | `05-control-interfaces/` |
+| Audio (5) | Fusion→BODY PDU | `06-audio-systems/` |
+| Communication (6) | Radios→PMU OUT6/12/20 | `07-communication-systems/` |
+| Exterior (7) | Winch→AUX direct, ARB→SafetyHub MIDI | `08-exterior-systems/` |
 
 ## Common Navigation Scenarios
 

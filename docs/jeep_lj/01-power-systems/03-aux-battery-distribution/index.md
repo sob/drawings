@@ -58,6 +58,6 @@ See [CONSTANT Bus Bar][constant-bus] for complete bus bar specifications, [Safet
 [circuit-breakers]: 01-circuit-breakers.md
 [grounding]: ../05-grounding/index.md
 [starter-battery]: ../02-starter-battery-distribution/index.md
-[recovery]: ../../07-exterior-systems/01-recovery-systems.md
-[winch-protection]: ../../07-exterior-systems/01-recovery-systems.md#winch-circuit-protection
-[audio]: ../../05-audio-systems/index.md
+[recovery]: ../../08-exterior-systems/01-recovery-systems.md
+[winch-protection]: ../../08-exterior-systems/01-recovery-systems.md#winch-circuit-protection
+[audio]: ../../06-audio-systems/index.md

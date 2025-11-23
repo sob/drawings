@@ -4,6 +4,7 @@ hide:
 ---
 
 # Section 5: Control Interfaces {#control-interfaces}
+
 Driver control interfaces: switches, controllers, and input devices for vehicle system control.
 
 ## Contents
@@ -17,10 +18,12 @@ Driver control interfaces: switches, controllers, and input devices for vehicle 
 ## System Overview
 
 **Primary Controllers:**
+
 - **SwitchPros SP-1200:** Auxiliary lighting and accessories (AUX battery CONSTANT bus, 150A capacity)
 - **Command Touch CT4:** Turn signals and headlights (START battery, PMU integration)
 - **Dakota Digital:** Gauge cluster with J1939 engine data (PMU Out 14, 15A)
 
 **Physical Controls:**
+
 - **Dashboard switches:** Winch 3-position switch, other dash controls
 - **Rear seat switch:** Dome light control for rear passengers

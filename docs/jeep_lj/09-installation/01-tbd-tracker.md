@@ -133,7 +133,7 @@ Items completed since last update.
 ---
 
 !!! info "Maintenance Instructions"
-    For instructions on updating this tracker, priority definitions, and review schedules, see [Section 8 CLAUDE.md](CLAUDE.md).
+    For instructions on updating this tracker, priority definitions, and review schedules, see [Section 9 CLAUDE.md](CLAUDE.md).
 
 ---
 
@@ -154,24 +154,18 @@ Items completed since last update.
 - [Section 1.7 Wire Routing][wire-routing] - Wire routing organized by location
 
 [bcdc]: ../01-power-systems/01-power-generation/03-bcdc.md
-[gauge-cluster]: ../04-control-interfaces/04-gauge-cluster/index.md
+[gauge-cluster]: ../05-control-interfaces/04-gauge-cluster/index.md
 [radiator-fan]: ../02-engine-systems/06-radiator-fan.md
-[wiper-system]: ../02-engine-systems/04-wipers.md
-[firewall-ingress]: ../01-power-systems/07-wire-routing/02-firewall-ingress.md
 [wire-routing]: ../01-power-systems/07-wire-routing/index.md
-[switchpros]: ../04-control-interfaces/02-switchpros-sp1200.md
-[dash-controls]: ../04-control-interfaces/05-dashboard-controls.md
-[audio-systems]: ../05-audio-systems/01-audio.md
-[communication]: ../06-communication-systems/01-communication.md
+[switchpros]: ../05-control-interfaces/02-switchpros-sp1200.md
+[dash-controls]: ../05-control-interfaces/05-dashboard-controls.md
+[audio-systems]: ../06-audio-systems/01-audio.md
+[communication]: ../07-communication-systems/01-communication.md
 [turn-signals]: ../03-lighting-systems/03-turn-signals.md
-[offroad-lighting]: ../03-lighting-systems/06-offroad-lighting/index.md
-[recovery-systems]: ../07-exterior-systems/01-recovery-systems.md
+[offroad-lighting]: ../04-offroad-lighting/index.md
+[recovery-systems]: ../08-exterior-systems/01-recovery-systems.md
 [body-rtmr]: ../01-power-systems/03-aux-battery-distribution/03-body-pdu.md
 [section-1-install]: ../01-power-systems/installation-checklist.md
-[pmu-outputs]: ../01-power-systems/04-pmu/03-pmu-outputs.md
 [grid-heater]: ../02-engine-systems/07-grid-heater.md
-[ibooster]: ../02-engine-systems/02-brake-booster.md
-[aux-battery]: ../01-power-systems/03-aux-battery-distribution/index.md
 [alternator]: ../01-power-systems/01-power-generation/02-alternator.md
-[fuel-system]: ../02-engine-systems/08-fuel-system.md
 [hvac]: ../02-engine-systems/03-hvac.md
