@@ -20,6 +20,9 @@ All START battery positive circuits protected by Mechanical Products Series 17 c
 
 **Total Circuit Breakers:** 2 (PMU 250A, BCDC 80A)
 
+!!! info "PMU Circuit Breaker Sizing"
+    250A CB sized to protect 2/0 AWG wire (265A @ 60°C). Typical PMU load is 140-170A (56-68% of CB rating). The 253A theoretical peak requires all loads maxed simultaneously - not realistic in practice.
+
 **All Circuit Breakers:**
 
 - Manufacturer: Mechanical Products Series 17

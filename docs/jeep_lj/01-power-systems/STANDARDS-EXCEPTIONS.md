@@ -372,9 +372,9 @@ Alternators NEVER use circuit breakers on output circuits in factory or aftermar
 
 ## BCDC Charging Input - No Dedicated Circuit Breaker
 
-**Component:** RedArc BCDC Alpha 25 DC-DC Charger
+**Component:** RedArc BCDC Alpha 50 DC-DC Charger
 
-**Decision:** 40A circuit breaker at START battery terminal (not at BCDC)
+**Decision:** 80A circuit breaker at START battery terminal (not at BCDC)
 
 ### BCDC Manufacturer Specification
 
@@ -382,7 +382,7 @@ Alternators NEVER use circuit breakers on output circuits in factory or aftermar
 
 - Circuit breaker required within 7" of battery positive
 - No requirement for CB at BCDC input
-- 40A CB adequate for 25A charging current + inrush
+- 80A CB adequate for 50A charging current + inrush
 
 ### BCDC Engineering Analysis
 
@@ -394,9 +394,9 @@ Alternators NEVER use circuit breakers on output circuits in factory or aftermar
 
 **Load Characteristics:**
 
-- Normal: 25A DC-DC charging
-- Peak: 27-29A (manufacturer spec)
-- 40A CB sized at 148% of max load (appropriate margin)
+- Normal: 50A DC-DC charging
+- Peak: 50-55A (manufacturer spec)
+- 80A CB sized at 145-160% of max load (appropriate margin)
 
 ### BCDC Review Guidance
 
@@ -408,8 +408,8 @@ No additional CB required at BCDC - entire circuit protected from battery termin
 
 **Documentation References:**
 
-- [BCDC Alpha 25][bcdc] - BCDC installation and protection requirements
-- [START Battery Circuit Breakers][starter-cbs] - 40A CB specification
+- [BCDC Alpha 50][bcdc] - BCDC installation and protection requirements
+- [START Battery Circuit Breakers][starter-cbs] - 80A CB specification
 
 ---
 

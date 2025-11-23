@@ -52,13 +52,12 @@ Organized by installation order for efficient build workflow.
 **Circuit Breakers:**
 
 - [ ] Mount Mechanical Products 174-S2-250-2 250A (PMU main power)
-- [ ] Mount Mechanical Products 174-S2-040-2 40A (BCDC input)
+- [ ] Mount Mechanical Products 174-S2-080-2 80A (BCDC input)
 
-**CONSTANT Bus Wiring:**
+**START Battery Wiring:**
 
-- [ ] Run 2/0 AWG: START battery+ → CONSTANT bus (~5 ft)
-- [ ] Run 2/0 AWG: CONSTANT bus → 250A CB → PMU main power (~7 ft, temp-derated for 60°C)
-- [ ] Run 4 AWG: CONSTANT bus → 40A CB → BCDC input
+- [ ] Run 2/0 AWG: START battery+ → 250A CB → PMU main power (~7 ft, temp-derated for 60°C)
+- [ ] Run 4 AWG: START battery+ → 80A CB → BCDC input (~6 ft)
 
 **NEGATIVE Bus Wiring:**
 
@@ -91,19 +90,21 @@ Organized by installation order for efficient build workflow.
 **Bus Bars & Protection:**
 
 - [ ] Mount CONSTANT bus bar (Blue Sea 2104 PowerBar, 225A) in rear wheel well
-- [ ] Install 150A CB: AUX battery+ → CONSTANT bus → SwitchPros RCR-Force 12
+- [ ] Install 150A CB: CONSTANT bus → SwitchPros RCR-Force 12
+- [ ] Install 150A CB: CONSTANT bus → SafetyHub 150
 - [ ] Install 100A CB: CONSTANT bus → BODY PDU
 
 **CONSTANT Bus Wiring:**
 
-- [ ] Run 2/0 AWG: AUX battery+ → CONSTANT bus (~3 ft)
-- [ ] Run per spec: CONSTANT bus → 150A CB → SwitchPros RCR-Force 12
-- [ ] Run 8 AWG: CONSTANT bus → 100A CB → BODY PDU
+- [ ] Run 1/0 AWG: AUX battery+ → CONSTANT bus (~3 ft)
+- [ ] Run 2 AWG: CONSTANT bus → 150A CB → SwitchPros RCR-Force 12 (~2 ft)
+- [ ] Run 2 AWG: CONSTANT bus → 150A CB → SafetyHub 150 (~2 ft)
+- [ ] Run 2 AWG: CONSTANT bus → 100A CB → BODY PDU (~12 ft)
 
-### BCDC Alpha 25 Installation
+### BCDC Alpha 50 Installation
 
 - [ ] Mount BCDC in wheel well (water-protected, LED visibility access)
-- [ ] Run 4 AWG: START battery+ → 40A CB → BCDC input (8 ft measured routing - see [Wire Distance Reference][wire-distance])
+- [ ] Run 4 AWG: START battery+ → 80A CB → BCDC input (~6 ft - see [Wire Distance Reference][wire-distance])
 - [ ] Run 4 AWG: BCDC output → AUX battery+
 - [ ] Run 4 AWG: BCDC negative → AUX battery- (per BCDC spec)
 - [ ] Route ignition trigger from PMU to BCDC (18 AWG)
@@ -285,7 +286,7 @@ Organized by installation order for efficient build workflow.
 ## Reference Documentation
 
 - **PMU24:** [PMU User Manual v101.1.5][pmu-manual]
-- **BCDC Alpha 25:** [Installation Manual][bcdc-install]
+- **BCDC Alpha 50:** [Installation Manual][bcdc-install]
 - **Odyssey PC1500:** [Product Page][odyssey-pc1500]
 - **Blue Sea Systems:** Product-specific installation instructions per part number
 
