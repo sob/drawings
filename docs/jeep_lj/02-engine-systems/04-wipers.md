@@ -1,13 +1,31 @@
 ---
 hide:
   - toc
+tags:
+  - product-details
+  - engine-systems
+  - wipers
 ---
 
-# Windshield Wiper Control System {#windshield-wiper-control-system}
-**Controller:** Ron Francis WS-51C
-**Installation Manual:** [Ron Francis WS-51C Instructions](https://s3.amazonaws.com/cdn.ronfrancis.com/downloads/INSTRUCTIONS/WS51C-INST.pdf)
+# 2.4 Windshield Wiper Control System {#windshield-wiper-control-system}
+
+/// html | div.product-info
+
+**Type:** Electronic Wiper Controller
+
+**Model:** Ron Francis WS-51C
+
+**Manufacturer:** Ron Francis Wiring
+
+**Product Page:** [Ron Francis WS-51C][ws-51c-product]
+
+**Installation Manual:** [WS-51C Instructions][ws-51c-manual]
+
+**Mounting:** Dash-mounted (integrated switch/controller)
+
 **Power Source:** PMU Out 11 (15A capacity, SWITCHED power)
-**Wiper Motor:** Factory Jeep TJ/LJ wiper motor
+
+///
 
 ## Overview
 
@@ -242,5 +260,8 @@ See [installation checklist][install-checklist] for build tasks.
 
 ## Related Documentation
 
-- [Control Interfaces Overview][control-interfaces-overview] - Main control interfaces overview
-- [Engine Systems][pmu-power-distribution] - PMU fuse and relay specifications
+- [PMU Outputs][pmu-outputs] - PMU Out 11 specifications
+
+[ws-51c-product]: https://ronfrancis.com/products/wiper-system-ws-51c
+[ws-51c-manual]: https://s3.amazonaws.com/cdn.ronfrancis.com/downloads/INSTRUCTIONS/WS51C-INST.pdf
+[pmu-outputs]: ../01-power-systems/04-pmu/03-pmu-outputs.md

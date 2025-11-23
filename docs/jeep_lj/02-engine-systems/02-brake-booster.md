@@ -21,31 +21,21 @@ The Bosch iBooster is an electromechanical brake booster that eliminates the nee
 
 **Why Gen 2:** Gen 2 eliminates the secondary 5A constant power circuit required by Gen 1, simplifying wiring and freeing PMU OUT20 for other uses.
 
-## Product Documentation
-
 /// html | div.product-info
 
 **Type:** Bosch iBooster Gen 2
 
 **Manufacturer:** Bosch Mobility
 
-**Product Page:** [Bosch iBooster](https://www.bosch-mobility.com/en/solutions/driving-safety/ibooster/)
+**Product Page:** [Bosch iBooster][bosch-ibooster]
 
-**Wiring Harness & Connectors:**
+**Mounting:** Factory brake booster location on firewall
 
-**Manufacturer:** Tulay's Wire Werks
+**Power Source:** PMU Out 1+10 (main power), Out 19 (ignition signal)
 
-**Product Page:** [Tulay's Wire Werks](https://tulayswirewerks.com/)
+**Wiring Harness:** [Tulay's Wire Werks Gen 2 Universal Harness][tulays-harness]
 
-**Gen 2 Universal Harness:** [Bosch iBooster Gen-2 Universal Wire Harness](https://tulayswirewerks.com/product/bosch-ibooster-gen-2-universal-wire-harness/)
-
-**Gen 2 Connector Kit:** [Bosch iBooster Gen-2 Connector Kit](https://tulayswirewerks.com/product/bosch-ibooster-gen-2-connector-kit/)
-
-**Installation Resources:**
-
-- [Wiring the iBooster - EVcreate](https://www.evcreate.com/wiring-the-ibooster/)
-- [Installing the iBooster - EVcreate](https://www.evcreate.com/installing-the-ibooster/)
-- [iBooster Donor Vehicles - EVcreate](https://www.evcreate.com/ibooster-donor-vehicles/)
+**Connector Kit:** [Tulay's Wire Werks Gen 2 Connector Kit][tulays-connector]
 
 ///
 
@@ -212,8 +202,11 @@ None - design complete. See [installation checklist][install-checklist] for buil
 - **PMU configuration:** See [PMU Outputs][pmu-outputs] - OUT1+10 CONSTANT, OUT19 ignition RUN
 - **Wiring harness:** [Tulay's Wire Werks Gen 2 Universal Harness][tulays-harness]
 
-[install-checklist]: installation-checklist.md
-[tulays-harness]: https://tulayswirewerks.com/product/bosch-ibooster-gen-2-universal-wire-harness/
+## Installation Resources
+
+- [Wiring the iBooster - EVcreate][evcreate-wiring]
+- [Installing the iBooster - EVcreate][evcreate-install]
+- [iBooster Donor Vehicles - EVcreate][evcreate-donors]
 
 ## Related Documentation
 
@@ -221,6 +214,13 @@ None - design complete. See [installation checklist][install-checklist] for buil
 - [START Battery Distribution][starter-battery-distribution] - CONSTANT bus bar configuration
 - [Firewall Ingress][firewall-penetrations-ingress-points] - iBooster mounting and wiring routing through firewall
 
+[install-checklist]: installation-checklist.md
+[bosch-ibooster]: https://www.bosch-mobility.com/en/solutions/driving-safety/ibooster/
+[tulays-harness]: https://tulayswirewerks.com/product/bosch-ibooster-gen-2-universal-wire-harness/
+[tulays-connector]: https://tulayswirewerks.com/product/bosch-ibooster-gen-2-connector-kit/
+[evcreate-wiring]: https://www.evcreate.com/wiring-the-ibooster/
+[evcreate-install]: https://www.evcreate.com/installing-the-ibooster/
+[evcreate-donors]: https://www.evcreate.com/ibooster-donor-vehicles/
 [pmu-outputs]: ../01-power-systems/04-pmu/03-pmu-outputs.md
 [starter-battery-distribution]: ../01-power-systems/02-starter-battery-distribution/index.md
 [firewall-penetrations-ingress-points]: 07-firewall-ingress.md

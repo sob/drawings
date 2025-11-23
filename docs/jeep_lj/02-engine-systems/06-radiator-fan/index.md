@@ -1,6 +1,9 @@
 ---
 hide:
   - toc
+tags:
+  - engine-systems
+  - radiator-fan
 ---
 
 # 2.6 Radiator Fan System {#radiator-fan-system}

@@ -1,27 +1,39 @@
 ---
 hide:
   - toc
+tags:
+  - product-details
+  - engine-systems
+  - horn
 ---
 
-# Horn {#horn}
-**Type:** PIAA horns (dual horn setup)
-**Location:** Engine bay
-**Control:** Steering wheel button → PMU In 1 → PMU Out 18
-**Power Source:** PMU Out 18 (7A capacity, CONSTANT - always powered for safety)
+# 2.5 Horn System {#horn}
+
+/// html | div.product-info
+
+**Type:** Dual Tone Horns
+
+**Model:** PIAA Dual-Tone Horns
+
+**Manufacturer:** PIAA
+
+**Mounting:** Engine bay
+
+**Power Source:** PMU Out 18 (7A capacity, CONSTANT)
+
+///
 
 ## Specifications
 
-**Horns:** PIAA high-output dual horns
-- Current draw: 2.7A per horn × 2 = 5.4A total
-- Mounting: Engine bay
-- Ground: Chassis ground (engine bay)
+- **Current draw:** 2.7A per horn × 2 = 5.4A total
+- **Ground:** Chassis ground (engine bay)
 
-**Control Button:**
-- Type: Momentary push button (normally open)
-- Location: Steering wheel PTT bracket
-- Wiring: Button → PMU In 1
+## Control
+
+**Button:** Momentary push button (normally open) on steering wheel PTT bracket
 
 **PMU Configuration:**
+
 - Input: In 1 (horn button signal)
 - Output: Out 18 (7A capacity, powers horns directly)
 - Logic: When In 1 closes, Out 18 activates (no external relay needed)
@@ -55,6 +67,10 @@ START battery CONSTANT → PMU → Out 18 → PIAA Horns (5.4A) → Chassis Grou
 
 ## Related Documentation
 
-- [PMU Power Distribution][pmu-power-distribution] - PMU Out 18 circuit and programming
-- [START battery Distribution][starter-battery-distribution] - CONSTANT bus bar
-- [Firewall Ingress][firewall-penetrations-ingress-points] - Horn button trigger wire routing
+- [PMU Outputs][pmu-outputs] - PMU Out 18 circuit and programming
+- [START Battery Distribution][starter-battery-distribution] - CONSTANT bus bar
+- [Firewall Ingress][firewall-ingress] - Horn button trigger wire routing
+
+[pmu-outputs]: ../01-power-systems/04-pmu/03-pmu-outputs.md
+[starter-battery-distribution]: ../01-power-systems/02-starter-battery-distribution/index.md
+[firewall-ingress]: 07-firewall-ingress.md

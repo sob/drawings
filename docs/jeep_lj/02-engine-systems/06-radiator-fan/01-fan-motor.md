@@ -1,6 +1,10 @@
 ---
 hide:
   - toc
+tags:
+  - product-details
+  - engine-systems
+  - radiator-fan
 ---
 
 # 2.6.1 Fan Motor {#fan-motor}
@@ -32,7 +36,7 @@ hide:
 
 | Connection | Wire Gauge | Source | Destination | Distance | Voltage @ Load | Notes |
 |:-----------|:-----------|:-------|:------------|:---------|:---------------|:------|
-| **Fan Power (+)** | 4 AWG ✓ | PMU OUT2+3+4 | Fan motor (+) | ~TBD ft | TBD | Variable speed PWM control |
+| **Fan Power (+)** | 4 AWG ✓ | PMU OUT2+3+4 | Fan motor (+) | ~6 ft | 3.4% drop @ 53A | Variable speed PWM control |
 | **Fan Ground (-)** | 4 AWG ✓ | Fan motor (-) | Engine bay ground bus | <3 ft | - | Short run to ground |
 
 **Wire Sizing (Engine Bay @ 60°C):**

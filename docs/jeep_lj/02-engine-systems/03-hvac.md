@@ -229,8 +229,9 @@ No PMU outputs consumed - entirely vacuum-operated
 
 None - design complete. See [installation checklist][install-checklist] for build tasks.
 
-[install-checklist]: installation-checklist.md
-
 ## Related Documentation
 
-- [Engine Systems][pmu-power-distribution] - PMU specifications and output allocation
+- [PMU Outputs][pmu-outputs] - PMU specifications and output allocation
+
+[install-checklist]: installation-checklist.md
+[pmu-outputs]: ../01-power-systems/04-pmu/03-pmu-outputs.md

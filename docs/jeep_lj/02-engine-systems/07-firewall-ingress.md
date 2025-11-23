@@ -1,9 +1,12 @@
 ---
 hide:
   - toc
+tags:
+  - engine-systems
+  - wiring
 ---
 
-# Firewall Penetrations & Ingress Points {#firewall-penetrations-ingress-points}
+# 2.7 Firewall Penetrations & Ingress Points {#firewall-penetrations-ingress-points}
 
 Centralized reference for all firewall penetration points and wire routing.
 
