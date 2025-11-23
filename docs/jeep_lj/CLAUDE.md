@@ -384,14 +384,14 @@ This vehicle uses isolated dual batteries:
 
 **Example - WRONG:**
 
-```
+```text
 PMU max: 253A + SwitchPros max: 127A + ARB: 90A + Winch: 400A = 870A
 Alternator: 270A = CRITICAL UNDERSIZING ❌
 ```
 
 **Example - CORRECT:**
 
-```
+```text
 START Battery Scenario (Offroad):
 PMU typical: 115A + Radiator fan: 53A + BCDC: 50A = 218A
 Alternator: 270A = 52A margin ✅
@@ -428,10 +428,10 @@ Net drain: 20A, Time to 50% SOC: 102 minutes ✅
 
 **Never:**
 
-7. Create new files without checking for existing content
-8. Leave broken links or references
-9. Use emojis unless explicitly requested
-10. Guess at specifications - mark as TBD instead
+1. Create new files without checking for existing content
+2. Leave broken links or references
+3. Use emojis unless explicitly requested
+4. Guess at specifications - mark as TBD instead
 
 ## Finding Information
 

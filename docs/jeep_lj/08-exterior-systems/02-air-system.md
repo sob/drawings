@@ -123,7 +123,7 @@ The air system consists of an ARB Twin Compressor (brushless), 1-gallon air tank
 
 **Control Architecture:**
 
-```
+```text
 Air Tank Pressure Switch (ARB 180901)
     ↓ (trigger signal when pressure < 135 PSI)
 SwitchPros TRIGGER-3 (Pin 17, PINK wire)
@@ -158,7 +158,7 @@ Compressor fills tank to 150 PSI → pressure switch opens → compressor stops
 | Pressure Switch Power | Tank pressure (mechanical) | Switch contacts | N/A | N/A | Pressure sensing |
 | Compressor Control | SwitchPros OUTPUT-11 | Compressor control terminal | 14 AWG | OUTPUT-11 (15A) | Manual/auto compressor on/off |
 
-### Outstanding Items
+### Air Tank Outstanding Items
 
 - [ ] Order ARB 1-gallon air tank (171601)
 - [ ] Order ARB pressure switch (180901)
@@ -172,7 +172,7 @@ Compressor fills tank to 150 PSI → pressure switch opens → compressor stops
 
 ## ARB Air Lockers
 
-### Specifications
+### ARB Air Locker Specifications
 
 - **Model (Front and Rear):** ARB RD116 Air Locker
   - Dana 44, 30 spline, 3.92 & up air operated locking differential
@@ -212,7 +212,7 @@ Compressor fills tank to 150 PSI → pressure switch opens → compressor stops
 | Front Locker | OUTPUT-17 | 2A | Engages/disengages front diff lock |
 | Rear Locker | OUTPUT-10 | 2A | Engages/disengages rear diff lock |
 
-### Outstanding Items
+### ARB Locker Outstanding Items
 
 - [ ] Route ARB locker solenoid control wiring from SwitchPros to front/rear axles
 - [ ] Route air lines from manifold (under passenger seat) to front/rear axles
@@ -224,7 +224,7 @@ Compressor fills tank to 150 PSI → pressure switch opens → compressor stops
 
 ### Power Flow Diagram
 
-```
+```text
 CONSTANT Bus (AUX battery)
     │
     ├─→ SafetyHub 150 (Blue Sea 100A breaker)

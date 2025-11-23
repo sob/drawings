@@ -10,9 +10,9 @@ tags:
 
 # Audio Systems {#audio-systems}
 
-### Communication Systems {#audio-communication-systems}
+## Communication Systems {#audio-communication-systems}
 
-#### Radio Head Unit
+### Radio Head Unit
 
 **System Overview:**
 The dash-mounted radio head unit provides AM/FM radio, Bluetooth connectivity, and NMEA 2000 integration for marine-grade performance in off-road conditions.
@@ -104,7 +104,7 @@ Since the MS-RA670 requires both constant power (memory/clock) and switched powe
 - [ ] Configure MS-RA670 DSP settings for subwoofer crossover (typically 80-120 Hz low-pass filter)
 - [ ] Verify MS-RA670 Zone 1/2/3 RCA output configuration in settings (assign zones to front/rear/sub)
 
-#### Fusion Apollo Amplifier
+### Fusion Apollo Amplifier
 
 **System Overview:**
 The Fusion Apollo amplifier provides high-power audio for speakers and subwoofer, delivering marine-grade performance with Class-D efficiency.

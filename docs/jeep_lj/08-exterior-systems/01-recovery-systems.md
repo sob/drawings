@@ -108,7 +108,7 @@ The recovery systems provide essential off-road and emergency recovery capabilit
 
 **Control Architecture:**
 
-```
+```text
 BODY PDU (10A CB) → Dash Rocker Switch ⟷ Handheld Remote (parallel) → Winch Contactor IN/OUT
                          ↑                      ↑
                       UP = OUT              Remote OUT button

@@ -42,3 +42,12 @@ All control interfaces integrate with the dual-battery electrical system:
 - **[Engine Systems][pmu-power-distribution]** - PMU power distribution and engine bay subsystems
 - **[Horn][horn]** - PIAA horn system (engine bay component)
 - **[Wipers][windshield-wiper-control-system]** - Ron Francis WS-51C wiper controller (engine bay component)
+
+[switchpros-sp-1200-rcr-force-12]: 02-switchpros-sp1200.md
+[command-touch-ct4]: 03-command-touch-ct4.md
+[dashboard-physical-controls]: 05-dashboard-controls.md
+[vehicle-lighting-overview]: ../03-lighting-systems/01-lighting-overview.md
+[offroad-auxiliary-lighting]: ../04-offroad-lighting/index.md
+[pmu-power-distribution]: ../01-power-systems/04-pmu/index.md
+[horn]: ../02-engine-systems/05-horn.md
+[windshield-wiper-control-system]: ../02-engine-systems/04-wipers.md

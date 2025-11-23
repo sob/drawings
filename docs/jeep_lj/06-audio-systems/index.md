@@ -14,3 +14,5 @@ Vehicle audio, entertainment, and communications equipment.
 ## System Overview
 
 Audio system documentation covering head unit, amplification, speaker placement, and power distribution for entertainment systems.
+
+[audio-systems-index]: 01-audio.md

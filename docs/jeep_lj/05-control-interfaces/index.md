@@ -27,3 +27,9 @@ Driver control interfaces: switches, controllers, and input devices for vehicle 
 
 - **Dashboard switches:** Winch 3-position switch, other dash controls
 - **Rear seat switch:** Dome light control for rear passengers
+
+[control-interfaces-overview]: 01-overview.md
+[switchpros-sp-1200-rcr-force-12]: 02-switchpros-sp1200.md
+[command-touch-ct4]: 03-command-touch-ct4.md
+[dakota-digital-gauge-cluster]: 04-gauge-cluster/index.md
+[dashboard-physical-controls]: 05-dashboard-controls.md

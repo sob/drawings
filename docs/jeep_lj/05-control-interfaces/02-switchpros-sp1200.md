@@ -119,7 +119,7 @@ Driver and passenger door switches wired in parallel to activate dome lights whe
 
 **Wiring:**
 
-```
+```text
 Driver Door Switch (NO) ──┬──→ TRIGGER-1 (Pin 7, PINK)
 Passenger Door Switch (NO)─┘
 ```
@@ -139,7 +139,7 @@ Physical rocker switch mounted in rear cargo area for convenient access when loa
 
 **Wiring:**
 
-```
+```text
 Rear Cargo Rocker Switch (SPST) → TRIGGER-2 (Pin 8, PINK)
 ```
 
@@ -162,7 +162,7 @@ ARB air tank pressure switch automatically activates compressor to maintain tank
 
 **Wiring:**
 
-```
+```text
 ARB Pressure Switch (180901) → TRIGGER-3 (Pin 17, PINK)
 ```
 
@@ -230,3 +230,7 @@ Program TRIGGER-3 to activate compressor when tank pressure drops below 135 PSI:
 - [AUX Battery Distribution][aux-battery] - Power feed specifications for SwitchPros
 
 [aux-battery]: ../01-power-systems/03-aux-battery-distribution/index.md
+[air-system-arb-compressor-lockers]: ../08-exterior-systems/02-air-system.md
+[pmu-inputs]: ../01-power-systems/04-pmu/02-pmu-inputs.md
+[control-interfaces-overview]: 01-overview.md
+[offroad-auxiliary-lighting]: ../04-offroad-lighting/index.md

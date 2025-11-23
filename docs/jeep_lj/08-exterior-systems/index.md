@@ -27,3 +27,7 @@ Offroad equipment, recovery systems, and auxiliary mechanical/electrical systems
 - 2-gallon air tank (135-150 PSI)
 - ARB front/rear air lockers
 - Automatic pressure management via SwitchPros
+
+[recovery-systems]: 01-recovery-systems.md
+[air-system-arb-compressor-lockers]: 02-air-system.md
+[auxiliary-systems]: 03-auxiliary-systems.md

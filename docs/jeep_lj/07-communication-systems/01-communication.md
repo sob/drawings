@@ -99,7 +99,7 @@ The Rugged Radio G1 is a 50W GMRS (General Mobile Radio Service) two-way radio f
 - [ ] Plan PTT button mounting location for driver (steering wheel, dash, or hand mic)
 - [ ] Consider vehicle-specific mounting brackets for G1 (universal brackets included, specific brackets sold separately)
 
-#### Rugged Radio Intercom System
+### Rugged Radio Intercom System
 
 **System Overview:**
 The Rugged Radio STX Intercom allows driver and passengers to communicate via headsets, and integrates with the GMRS radio and Fusion head unit for external communication and music sharing.
@@ -195,7 +195,7 @@ The Rugged Radio STX Intercom allows driver and passengers to communicate via he
 - [ ] Plan cable routing for aux input from Fusion radio to STX intercom
 - [ ] Consider vehicle-specific mounting brackets for STX (universal brackets included, specific brackets sold separately)
 
-#### Ham Radio (Future)
+### Ham Radio (Future)
 
 **System Overview:**
 Reserved circuit for future amateur (ham) radio installation. Ham radio requires an FCC license (Technician, General, or Amateur Extra) and provides long-range communication on VHF/UHF and HF frequencies.

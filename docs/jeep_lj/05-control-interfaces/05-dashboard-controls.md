@@ -43,7 +43,7 @@ This section documents physical switches mounted in the dashboard area (separate
 - Handheld remote (wireless or wired) connects in parallel at winch contactor
 - Both dash rocker AND remote can trigger IN/OUT independently
 
-### Outstanding Items
+### Winch Control Outstanding Items
 
 - [ ] Source center-off momentary rocker switch (SPDT or DPDT, 10A rated)
 - [ ] Assign BODY PDU circuit breaker slot for winch control (10A)
@@ -58,19 +58,19 @@ This section documents physical switches mounted in the dashboard area (separate
 
 ### Wiring Options
 
-**Option 1: Parallel with SwitchPros Button 4**
+**Option 1 - Parallel with SwitchPros Button 4:**
 
 - Wire switch in parallel with OUTPUT-4 circuit
 - Allows rear passenger to turn on/off dome lights independently
 - Both switches can control the same lights
 
-**Option 2: Connected to TRIGGER input**
+**Option 2 - Connected to TRIGGER input:**
 
 - Wire to SwitchPros TRIGGER-1, TRIGGER-2, or TRIGGER-3
 - Allows SwitchPros to interpret rear seat switch as a remote trigger
 - More complex but allows for programmable behavior
 
-### Outstanding Items
+### Rear Seat Switch Outstanding Items
 
 - [ ] Determine rear seat switch type (momentary vs latching)
 - [ ] Determine rear seat switch mounting location
@@ -83,3 +83,7 @@ This section documents physical switches mounted in the dashboard area (separate
 - [Control Interfaces Overview][control-interfaces-overview] - Main control interfaces overview
 - [SwitchPros SP-1200][switchpros-sp-1200-rcr-force-12] - Main lighting controller
 - [Recovery Systems][recovery-systems] - Winch system complete documentation
+
+[recovery-systems]: ../08-exterior-systems/01-recovery-systems.md
+[control-interfaces-overview]: 01-overview.md
+[switchpros-sp-1200-rcr-force-12]: 02-switchpros-sp1200.md

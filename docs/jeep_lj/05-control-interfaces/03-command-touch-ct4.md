@@ -161,7 +161,7 @@ The CT4 includes a GPS module that enables intelligent automatic turn signal can
 
 **PMU Configuration:**
 
-```
+```text
 PMU Input 7 (In 7): CT4 SW3 headlight status signal (tapped from low beam circuit)
 PMU Input 6 (In 6): Ignition RUN signal
 PMU Output 9 (Out 9): DRL/Parking lights circuit
@@ -318,3 +318,7 @@ END
 - [Control Interfaces Overview][control-interfaces-overview] - Main control interfaces overview
 - [Vehicle Lighting][vehicle-lighting-overview] - Complete wiring details for all lighting circuits controlled by CT4
 - [Engine Systems][pmu-power-distribution] - PMU specifications and programming
+
+[control-interfaces-overview]: 01-overview.md
+[vehicle-lighting-overview]: ../03-lighting-systems/01-lighting-overview.md
+[pmu-power-distribution]: ../01-power-systems/04-pmu/index.md
