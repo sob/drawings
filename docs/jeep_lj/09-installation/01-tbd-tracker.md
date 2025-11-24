@@ -9,7 +9,7 @@ hide:
 
 **Last Updated:** 2025-11-24
 
-**Total Open Items:** 36
+**Total Open Items:** 40
 
 ---
 
@@ -148,10 +148,10 @@ Items completed since last update.
 |:---------|:------|
 | 🔴 Critical | 0 |
 | ⚠️ High | 5 |
-| 📋 Medium | 24 |
-| 📝 Low | 5 |
+| 📋 Medium | 26 |
+| 📝 Low | 7 |
 | 🔍 Verify | 2 |
-| **TOTAL** | **36** |
+| **TOTAL** | **40** |
 
 ## Related Documentation
 
