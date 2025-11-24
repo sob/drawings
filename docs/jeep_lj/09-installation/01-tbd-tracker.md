@@ -137,11 +137,6 @@ Items completed since last update.
 
 ---
 
-!!! info "Maintenance Instructions"
-For instructions on updating this tracker, priority definitions, and review schedules, see [Section 9 CLAUDE.md](CLAUDE.md).
-
----
-
 ## Summary by Priority
 
 | Priority    | Count  |

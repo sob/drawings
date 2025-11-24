@@ -43,6 +43,10 @@ theme:
 repo_url: https://github.com/sob/drawings
 edit_uri: edit/main/docs
 
+exclude_docs: |
+  ANALYZE/
+  **/CLAUDE.md
+
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
