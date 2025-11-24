@@ -114,4 +114,4 @@ The BCDC includes a battery temperature sensor (2-pin, polarity reversible) that
 [solar]: 04-solar.md
 [pmu-inputs]: ../04-pmu/02-pmu-inputs.md
 [installation-checklist]: ../installation-checklist.md#phase-2-power-distribution
-[aux-load-analysis]: ../03-aux-battery-distribution/05-load-analysis.md
+[aux-load-analysis]: ../08-load-analysis/03-aux-battery.md

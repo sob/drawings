@@ -81,6 +81,6 @@ See [START Battery Load Analysis][start-load-analysis] for complete scenario det
 
 [premier-alternator]: https://premierpowerwelder.com/shop/high-output-welding-alternators/cummins-alternators/cummins-r2-8-270-amps-high-output-welding-alternator/
 [batteries]: 01-batteries.md
-[start-load-analysis]: ../02-starter-battery-distribution/02-load-analysis.md
+[start-load-analysis]: ../08-load-analysis/02-start-battery.md
 [grounding]: ../05-grounding/index.md
 [wire-distance]: 05-wire-distance-reference.md

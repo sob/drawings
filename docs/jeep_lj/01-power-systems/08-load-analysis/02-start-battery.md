@@ -3,7 +3,7 @@ hide:
   - toc
 ---
 
-# 1.2.2 START Battery Load Analysis {#start-battery-load-analysis}
+# 1.8.2 START Battery Load Analysis {#start-battery-load-analysis}
 
 Scenario-based load analysis for START battery circuits (alternator-supplied).
 
@@ -218,4 +218,4 @@ The following high-current loads are **NOT** supplied by the alternator:
 [alternator]: ../01-power-generation/02-alternator.md
 [pmu-outputs]: ../04-pmu/03-pmu-outputs.md
 [bcdc]: ../01-power-generation/03-bcdc.md
-[aux-load-analysis]: ../03-aux-battery-distribution/05-load-analysis.md
+[aux-load-analysis]: 03-aux-battery.md

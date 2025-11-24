@@ -401,8 +401,8 @@ SwitchPros: 70A, BCDC charging: 50A
 Net drain: 20A, Time to 50% SOC: 102 minutes ✅
 ```
 
-[start-load-analysis]: 01-power-systems/02-starter-battery-distribution/02-load-analysis.md
-[aux-load-analysis]: 01-power-systems/03-aux-battery-distribution/05-load-analysis.md
+[start-load-analysis]: 01-power-systems/08-load-analysis/02-start-battery.md
+[aux-load-analysis]: 01-power-systems/08-load-analysis/03-aux-battery.md
 
 ## Common Mistakes to Avoid
 

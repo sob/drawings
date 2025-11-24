@@ -3,7 +3,7 @@ hide:
   - toc
 ---
 
-# 1.3.5 AUX Battery Load Analysis {#aux-battery-load-analysis}
+# 1.8.3 AUX Battery Load Analysis {#aux-battery-load-analysis}
 
 Scenario-based load analysis for AUX battery circuits (BCDC-charged at 50A max).
 
@@ -281,8 +281,8 @@ For future reference if upgrading to LiFePO4:
 - [PMU ARB Load Shedding][arb-load-shedding] - Load management during ARB operation
 
 [bcdc]: ../01-power-generation/03-bcdc.md
-[safetyhub]: 04-safetyhub.md
+[safetyhub]: ../03-aux-battery-distribution/04-safetyhub.md
 [switchpros]: ../../05-control-interfaces/02-switchpros-sp1200.md
-[body-pdu]: 03-body-pdu.md
-[start-load-analysis]: ../02-starter-battery-distribution/02-load-analysis.md
+[body-pdu]: ../03-aux-battery-distribution/03-body-pdu.md
+[start-load-analysis]: 02-start-battery.md
 [arb-load-shedding]: ../04-pmu/05-pmu-arb-load-shedding.md
