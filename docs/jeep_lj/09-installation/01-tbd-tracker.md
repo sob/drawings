@@ -33,7 +33,6 @@ Items needed before installation begins but not system-critical.
 | Dakota Digital Panel Mounting     | HDPE sheet dimensions and location                              | [Wire Routing][wire-routing]   | High     |
 | SwitchPros Control Panel Location | Dash mount location (4" x 3")                                   | [SwitchPros][switchpros]       | High     |
 | Fusion Amp Mounting               | Cargo area or under rear seat                                   | [Audio Systems][audio-systems] | High     |
-| Fusion Amp Current Draw           | Verify 35-45A continuous, 60-70A peak                           | [Audio Systems][audio-systems] | High     |
 
 ---
 
@@ -92,10 +91,9 @@ Items that can be determined during build.
 
 Items that are estimated and need actual product specs to confirm.
 
-| Item                | Description                                                                                     | File                           | Action Needed      |
-| :------------------ | :---------------------------------------------------------------------------------------------- | :----------------------------- | :----------------- |
-| Grid Heater Current | Design value 80A - verify via element resistance measurement during installation (~0.15Ω @ 12V) | [Grid Heater][grid-heater]     | Measure resistance |
-| Fusion Amp Current  | Verify 35-45A continuous rating                                                                 | [Audio Systems][audio-systems] | Verify spec sheet  |
+| Item                | Description                                                                                     | File                       | Action Needed      |
+| :------------------ | :---------------------------------------------------------------------------------------------- | :------------------------- | :----------------- |
+| Grid Heater Current | Design value 80A - verify via element resistance measurement during installation (~0.15Ω @ 12V) | [Grid Heater][grid-heater] | Measure resistance |
 
 ---
 
@@ -105,6 +103,7 @@ Items completed since last update.
 
 | Item                          | Resolution                                                                                                                    | Date       |
 | :---------------------------- | :---------------------------------------------------------------------------------------------------------------------------- | :--------- |
+| Fusion Amp Current Draw       | 6-ch MS-AP61800: 1.32A idle, 78A max, 125A electronic fuse                                                                    | 2025-11-24 |
 | WolfBox Model                 | G900 TriPro selected                                                                                                          | 2025-11-24 |
 | WolfBox Power Source          | BODY PDU F5 (10A, CONSTANT)                                                                                                   | 2025-11-24 |
 | WolfBox Mounting              | Windshield mount (replaces factory rearview mirror)                                                                           | 2025-11-24 |
@@ -142,11 +141,11 @@ Items completed since last update.
 | Priority    | Count  |
 | :---------- | :----- |
 | 🔴 Critical | 0      |
-| High        | 5      |
+| High        | 4      |
 | 📋 Medium   | 26     |
 | 📝 Low      | 7      |
-| 🔍 Verify   | 2      |
-| **TOTAL**   | **40** |
+| 🔍 Verify   | 1      |
+| **TOTAL**   | **38** |
 
 ## Related Documentation
 

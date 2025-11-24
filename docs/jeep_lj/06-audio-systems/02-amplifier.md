@@ -34,18 +34,19 @@ tags:
 
 ## Specifications
 
-| Spec           |                  Value |
-| :------------- | ---------------------: |
-| Total Power    |            1800W rated |
-| 6-Channel      |       6x 150W RMS @ 4Ω |
-| Bridged        |       3x 580W RMS @ 4Ω |
-| Class          |    D (high efficiency) |
-| Fuse Rating    |        40A fast-acting |
-| Current Draw   |      35-45A continuous |
-| Dimensions     | 11.69" × 7.06" × 2.13" |
-| Weight         |               5.95 lbs |
-| Waterproof     |                   IPX2 |
-| Operating Temp |          32°F to 122°F |
+| Spec              |                  Value |
+| :---------------- | ---------------------: |
+| Total Power       |            1800W rated |
+| 6-Channel         |       6x 150W RMS @ 4Ω |
+| Bridged           |       3x 580W RMS @ 4Ω |
+| Class             |    D (high efficiency) |
+| Fuse Rating       |   125A electronic fuse |
+| Current Draw Idle |       1.32A @ 14.4V in |
+| Current Draw Max  |                    78A |
+| Dimensions        | 11.69" x 7.06" x 2.13" |
+| Weight            |               5.95 lbs |
+| Waterproof        |                   IPX2 |
+| Operating Temp    |          32°F to 122°F |
 
 ## Channel Configuration
 
@@ -86,11 +87,11 @@ Fusion includes bridge adapters with built-in magnets:
 
 ## Circuit Protection
 
-Replace amplifier's inline 40A fuse with Blue Sea breaker:
+Amplifier has 125A internal electronic fuse (no replacement necessary). External protection at CONSTANT bus:
 
-- **Recommended:** Blue Sea 7178 (40A) or 7184 (50A)
+- **Recommended:** Blue Sea 7184 (50A) breaker
+- Protects wiring (78A max draw)
 - Mount at CONSTANT bus for easy access
-- Easier reset than inline fuse
 
 ## Mounting Options
 
@@ -101,8 +102,7 @@ Replace amplifier's inline 40A fuse with Blue Sea breaker:
 ## Outstanding Items
 
 - [ ] Determine mounting location (behind dash preferred)
-- [ ] Verify current draw at operating power
-- [ ] Select Blue Sea breaker: 40A (7178) or 50A (7184)
+- [ ] Select Blue Sea breaker: 50A (7184) recommended for 78A max
 - [ ] Plan breaker mounting at CONSTANT bus
 - [ ] Confirm 6 AWG sufficient for power run
 - [ ] Determine ground connection point
