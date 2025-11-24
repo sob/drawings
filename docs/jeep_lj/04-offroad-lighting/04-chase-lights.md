@@ -24,6 +24,8 @@ Multi-function rear safety light for convoy visibility, plus integrated brake, t
 
 **Manufacturer:** Baja Designs
 
+**Product Page:** [RTL-S 30"][product-link]
+
 **Quantity:** 1
 
 **Mounting:** Centered on rear roll cage
@@ -67,3 +69,4 @@ Multi-function rear safety light for convoy visibility, plus integrated brake, t
 [offroad-overview]: index.md
 [switchpros-sp-1200]: ../05-control-interfaces/02-switchpros-sp1200.md
 [tail-brake-reverse]: ../03-lighting-systems/04-tail-brake-reverse.md
+[product-link]: https://www.bajadesigns.com/products/rtl-led-rear-light-bar/?sku=103004

@@ -24,6 +24,8 @@ A-pillar mounted lights for peripheral and side illumination (Baja Designs Zone 
 
 **Manufacturer:** Baja Designs
 
+**Product Page:** [LP4 Pro Driving/Combo][product-link]
+
 **Quantity:** 2 (left and right A-pillars)
 
 **Mounting:** A-pillar brackets
@@ -67,3 +69,4 @@ Driving/Combo pattern provides peripheral illumination for:
 
 [offroad-overview]: index.md
 [switchpros-sp-1200]: ../05-control-interfaces/02-switchpros-sp1200.md
+[product-link]: https://www.bajadesigns.com/products/lp4-pro-led-auxiliary-light-pod-pair/297803/?sku=297803

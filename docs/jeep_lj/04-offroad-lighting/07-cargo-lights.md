@@ -23,6 +23,8 @@ Interior cargo area lighting controlled by physical switch (Baja Designs Zone 7)
 
 **Manufacturer:** Baja Designs
 
+**Product Page:** [S2 Sport Black Flush Mount][product-link]
+
 **Quantity:** 2 pods
 
 **Mounting:** TBD - cargo area (flush mount)
@@ -57,3 +59,4 @@ Rocker switch in cargo area for convenient access when loading/unloading from ta
 - [Offroad Lighting Overview][offroad-overview]
 
 [offroad-overview]: index.md
+[product-link]: https://www.bajadesigns.com/products/s2-sport-black-flush-mount-led-auxiliary-light-pod/?sku=541006

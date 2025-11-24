@@ -24,6 +24,8 @@ Primary forward illumination mounted on roof rack (Baja Designs Zone 3 + Zone 4)
 
 **Manufacturer:** Baja Designs
 
+**Product Page:** [XL Sport Linkable 8-Pod][product-link]
+
 **Quantity:** 8 pods total
 
 **Mounting:** Roof rack - physically linked, electrically split
@@ -67,3 +69,4 @@ See [SwitchPros SP-1200][switchpros-sp-1200] for wiring details.
 
 [offroad-overview]: index.md
 [switchpros-sp-1200]: ../05-control-interfaces/02-switchpros-sp1200.md
+[product-link]: https://www.bajadesigns.com/products/xl-sport-linkable-led-light-bar-universal/?sku=740006

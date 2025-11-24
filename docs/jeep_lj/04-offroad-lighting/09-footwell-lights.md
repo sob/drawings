@@ -8,9 +8,9 @@ tags:
   - audio-integrated
 ---
 
-# 4.9 Party Lights {#party-lights}
+# 4.9 Footwell Lights {#footwell-lights}
 
-RGB footwell lighting synced with stereo speaker LEDs via JL Audio MLC-RW controller.
+RGB interior lighting synced with stereo speaker LEDs via JL Audio MLC-RW controller.
 
 /// html | div.product-info
 ![LED4Life RGBW Rock Light Pod](../images/led4life-rgbw-rock-light-pod.jpg){ loading=lazy }

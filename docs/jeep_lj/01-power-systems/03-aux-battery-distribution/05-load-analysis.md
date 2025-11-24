@@ -21,7 +21,7 @@ All circuits powered by AUX battery (charged by BCDC at 50A max):
 | OUTPUT-5 | Roof Outer Spots (2x XL) | 0A | 12A | Night offroad | Spot pattern |
 | OUTPUT-6 | Rock Lights (6x Cyclone) | 0A | 3A | Night offroad | Under vehicle |
 | OUTPUT-7 | Rear Chase (OnX6 Arc) | 0A | 6A | Night offroad | Amber wide |
-| OUTPUT-8 | Party Lights (whip + footwell) | 0A | 6A | Social | RGB |
+| OUTPUT-8 | Available | 0A | 0A | — | Footwell lights on MLC-RW |
 | OUTPUT-10 | Rear Locker | 0A | 2A | Technical terrain | Solenoid |
 | OUTPUT-11 | Compressor Control | 0A | 15A | Control signal | To ARB |
 | OUTPUT-12 | Rear Lights (2x S1 Pro) | 0A | 5A | Night driving | License plate |
@@ -216,21 +216,21 @@ All circuits powered by AUX battery (charged by BCDC at 50A max):
 |:--------|-----:|:-------|
 | **Dome Lights (OUTPUT-4)** | **4A** | Camp lighting |
 | **Rock Lights (OUTPUT-6)** | **3A** | Ground lighting |
-| **Party Lights (OUTPUT-8)** | **6A** | Ambiance |
+| **Footwell Lights (MLC-RW)** | **1A** | Ambiance |
 | **Fusion Radio memory (CB30)** | **1A** | Always on |
 | **Fusion Radio amp (CB44)** | **8A** | Music |
 | **USB Charging (CB48)** | **10A** | Multiple devices |
-| **TOTAL** | **32A** | |
+| **TOTAL** | **27A** | |
 
 **BCDC Charging:** 0A (engine off)
 
 **Solar (daytime):** ~5-6A (80W panel)
 
-**Net Battery Effect (day):** -26A
+**Net Battery Effect (day):** -21A
 
-**Net Battery Effect (night):** -32A
+**Net Battery Effect (night):** -27A
 
-**Time to 50% SOC (no solar):** 34Ah / 32A = **64 minutes**
+**Time to 50% SOC (no solar):** 34Ah / 27A = **76 minutes**
 
 **Assessment:** ⚠️ Limited camp time on battery alone. For extended camping:
 

@@ -29,7 +29,7 @@ Lighting organized by [Baja Designs Zone System][bd-zones], optimized for specif
 | 8 | Reverse | 9,800 | 2x BD Squadron Pro | Clear | Driving/Combo |
 | 8 | Rear Work | 3,800 | 2x BD S1 Black | Clear | Work/Scene |
 | — | Chase/Safety | — | 1x BD RTL-S 30" | Amber | Rear-facing |
-| — | Party/Footwell | — | 4x LED4Life RGBW Pods | RGB | Flood |
+| — | Footwell | — | 4x LED4Life RGBW Pods | RGB | Flood |
 
 **Total Forward:** 88,800 lumens (white) + 8,000 lumens (amber)
 **Total Rear:** 7,600 lumens | **Rock:** 1,200 lumens
@@ -46,9 +46,13 @@ Lighting organized by [Baja Designs Zone System][bd-zones], optimized for specif
 | Cargo Lights | Physical switch | [Cargo Lights][cargo-lights] |
 | Reverse Lights | [PMU Out 18][tail-brake-reverse] | [Reverse Lights][reverse-lights] |
 | RTL-S Brake/Running | PMU/OEM | [Chase Lights][chase-lights] |
-| Party/Footwell | [JL Audio MLC-RW][audio-systems] | [Party Lights][party-lights] |
+| Footwell | [JL Audio MLC-RW][audio-systems] | [Footwell Lights][footwell-lights] |
 
 [tail-brake-reverse]: ../03-lighting-systems/04-tail-brake-reverse.md
+
+## Outstanding Items
+
+None - design complete. See individual product pages for component-specific items and [installation checklist][install-checklist] for build tasks.
 
 ## Related Documentation
 
@@ -59,8 +63,9 @@ Lighting organized by [Baja Designs Zone System][bd-zones], optimized for specif
 [switchpros-sp-1200]: ../05-control-interfaces/02-switchpros-sp1200.md
 [control-interfaces-overview]: ../05-control-interfaces/index.md
 [vehicle-lighting-overview]: ../03-lighting-systems/01-lighting-overview.md
+[install-checklist]: ../01-power-systems/installation-checklist.md
 [chase-lights]: 04-chase-lights.md
 [cargo-lights]: 07-cargo-lights.md
 [reverse-lights]: 10-reverse-lights.md
-[party-lights]: 09-party-lights.md
+[footwell-lights]: 09-footwell-lights.md
 [audio-systems]: ../06-audio-systems/01-audio.md

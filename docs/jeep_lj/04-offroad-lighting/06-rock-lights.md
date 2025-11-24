@@ -24,6 +24,8 @@ Underbody lighting for wheel wells and frame rails (Baja Designs Zone 6).
 
 **Manufacturer:** KC HiLiTES
 
+**Product Page:** [Cyclone V2][product-link]
+
 **Quantity:** 6 pods
 
 **Mounting:** Wheel wells and frame rails (4 front, 2 rear)
@@ -66,3 +68,4 @@ Physical switch at rear left wheel well for rock light control independent of Sw
 
 [offroad-overview]: index.md
 [switchpros-sp-1200]: ../05-control-interfaces/02-switchpros-sp1200.md
+[product-link]: https://www.kchilites.com/cyclone-v2-cyclone-v2-led-single-light.html?attr_pim_lenscolor=5730

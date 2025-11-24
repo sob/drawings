@@ -64,7 +64,7 @@ The SwitchPros SP-1200 is the main lighting and accessory controller for the Jee
   - Driver door switch + Passenger door switch (wired in parallel) → TRIGGER-1 → OUTPUT-4
   - Either door opening or Button 4 press activates dome lights
 - **Button 7:** RTL-S amber chase function only - brake/running/work functions powered separately
-- **Button 8:** Available for future use (party lights moved to JL Audio MLC-RW)
+- **Button 8:** Available for future use (footwell lights moved to JL Audio MLC-RW)
 - **Button 11:** OUTPUT-11 provides control signal to ARB compressor (main power is separate: CONSTANT bus → dual 60A fuses → compressor)
 - **Cargo Light:** Not assigned to button - controlled by rear rocker switch via TRIGGER-2 → OUTPUT-13
 - Total lighting draw if all on simultaneously: 73A (within 150A capacity)

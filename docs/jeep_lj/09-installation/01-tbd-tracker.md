@@ -7,9 +7,9 @@ hide:
 
 **Purpose:** Central tracking for all To-Be-Determined items across the Jeep LJ electrical system documentation.
 
-**Last Updated:** 2025-11-23
+**Last Updated:** 2025-11-24
 
-**Total Open Items:** 39
+**Total Open Items:** 40
 
 ---
 
@@ -43,6 +43,7 @@ Items that improve the design but don't block installation.
 
 | Item | Description | File | Priority |
 |:-----|:------------|:-----|:---------|
+| Cargo Light Mounting Location | TBD - cargo area (flush mount) - exact location | [Cargo Lights][cargo-lights] | Medium |
 | Firewall Grommet Circuits | Complete wire bundle lists | [Wire Routing][wire-routing] | Medium |
 | Passenger Wheel Well Routing | SwitchPros outputs path | [Wire Routing][wire-routing] | Medium |
 | Dash to Console Routing | Switch panels, USB, radio | [Wire Routing][wire-routing] | Medium |
@@ -145,10 +146,10 @@ Items completed since last update.
 |:---------|:------|
 | 🔴 Critical | 0 |
 | ⚠️ High | 5 |
-| 📋 Medium | 26 |
+| 📋 Medium | 27 |
 | 📝 Low | 6 |
 | 🔍 Verify | 2 |
-| **TOTAL** | **39** |
+| **TOTAL** | **40** |
 
 ## Related Documentation
 
@@ -165,9 +166,10 @@ Items completed since last update.
 [communication]: ../07-communication-systems/01-communication.md
 [turn-signals]: ../03-lighting-systems/03-turn-signals.md
 [offroad-lighting]: ../04-offroad-lighting/index.md
+[cargo-lights]: ../04-offroad-lighting/07-cargo-lights.md
 [fog-light]: ../04-offroad-lighting/02-fog-lights.md
 [reverse-lights]: ../04-offroad-lighting/10-reverse-lights.md
-[party-lights]: ../04-offroad-lighting/09-party-lights.md
+[footwell-lights]: ../04-offroad-lighting/09-footwell-lights.md
 [chase-light]: ../04-offroad-lighting/04-chase-lights.md
 [recovery-systems]: ../08-exterior-systems/01-recovery-systems.md
 [body-rtmr]: ../01-power-systems/03-aux-battery-distribution/03-body-pdu.md

@@ -24,6 +24,8 @@ Amber fog/dust light for improved visibility in poor conditions (Baja Designs Zo
 
 **Manufacturer:** Baja Designs
 
+**Product Page:** [S8 10" Wide Cornering Amber][product-link]
+
 **Quantity:** 1
 
 **Mounting:** Top of Motobilt bumper, centered
@@ -59,3 +61,4 @@ See [SwitchPros SP-1200][switchpros-sp-1200] for wiring details.
 
 [offroad-overview]: index.md
 [switchpros-sp-1200]: ../05-control-interfaces/02-switchpros-sp1200.md
+[product-link]: https://www.bajadesigns.com/products/s8-straight-led-light-bar/?sku=701014

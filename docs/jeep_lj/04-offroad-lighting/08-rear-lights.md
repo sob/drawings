@@ -24,6 +24,8 @@ Rear-facing auxiliary work lights mounted at license plate area (Baja Designs Zo
 
 **Manufacturer:** Baja Designs
 
+**Product Page:** [S1 Black LED Work/Scene][product-link]
+
 **Quantity:** 2 pods
 
 **Mounting:** Above license plate or spare tire carrier
@@ -62,3 +64,4 @@ See [SwitchPros SP-1200][switchpros-sp-1200] for wiring details.
 [offroad-overview]: index.md
 [switchpros-sp-1200]: ../05-control-interfaces/02-switchpros-sp1200.md
 [reverse-lights]: 10-reverse-lights.md
+[product-link]: https://www.bajadesigns.com/products/s1-black-led-auxiliary-light-pod-pair/387806/?sku=387806

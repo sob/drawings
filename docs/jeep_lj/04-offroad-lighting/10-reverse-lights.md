@@ -24,6 +24,8 @@ High-output reverse lights that activate automatically via PMU reverse circuit (
 
 **Manufacturer:** Baja Designs
 
+**Product Page:** [Squadron Pro Black][product-link]
+
 **Quantity:** 2 pods
 
 **Mounting:** Rear bumper or spare tire carrier
@@ -63,3 +65,4 @@ See [Tail/Brake/Reverse Lights][tail-brake-reverse] for PMU reverse circuit deta
 [offroad-overview]: index.md
 [tail-brake-reverse]: ../03-lighting-systems/04-tail-brake-reverse.md
 [rear-lights]: 08-rear-lights.md
+[product-link]: https://www.bajadesigns.com/products/squadron-pro-black-led-auxiliary-light-pod-pair-universal/?sku=497803
