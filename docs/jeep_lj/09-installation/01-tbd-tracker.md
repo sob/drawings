@@ -9,7 +9,7 @@ hide:
 
 **Last Updated:** 2025-11-23
 
-**Total Open Items:** 38
+**Total Open Items:** 39
 
 ---
 
@@ -68,6 +68,7 @@ Items that improve the design but don't block installation.
 | Alternator Voltage Regulator Set Point | Verify 14.2-14.4V for AGM batteries | [Alternator][alternator] | Medium |
 | BODY PDU Metri-Pack Pinout | J301-J306 connector pinout (military TM or reverse engineering) | [BODY PDU][body-rtmr] | Medium |
 | BODY PDU 12V Relay Part Numbers | Replacement part numbers for K40, K42, K53 (currently 24V coils) | [BODY PDU][body-rtmr] | Medium |
+| RTL-S Wiring Configuration | Which functions on SwitchPros vs PMU vs OEM (consider Button 8 for running/work) | [Chase Light][chase-light] | Medium |
 
 ---
 
@@ -144,10 +145,10 @@ Items completed since last update.
 |:---------|:------|
 | 🔴 Critical | 0 |
 | ⚠️ High | 5 |
-| 📋 Medium | 25 |
+| 📋 Medium | 26 |
 | 📝 Low | 6 |
 | 🔍 Verify | 2 |
-| **TOTAL** | **38** |
+| **TOTAL** | **39** |
 
 ## Related Documentation
 
@@ -167,6 +168,7 @@ Items completed since last update.
 [fog-light]: ../04-offroad-lighting/02-fog-lights.md
 [reverse-lights]: ../04-offroad-lighting/10-reverse-lights.md
 [party-lights]: ../04-offroad-lighting/09-party-lights.md
+[chase-light]: ../04-offroad-lighting/04-chase-lights.md
 [recovery-systems]: ../08-exterior-systems/01-recovery-systems.md
 [body-rtmr]: ../01-power-systems/03-aux-battery-distribution/03-body-pdu.md
 [section-1-install]: ../01-power-systems/installation-checklist.md

@@ -54,8 +54,8 @@ Multi-function rear safety light for convoy visibility, plus integrated brake, t
 ## Outstanding Items
 
 - [ ] Determine RTL-S mounting method on roll cage
+- [ ] **TBD: Determine RTL-S wiring configuration** - which functions on SwitchPros vs PMU vs OEM (consider Button 8 for running/work control)
 - [ ] Plan wiring for brake light integration with OEM circuit
-- [ ] Determine power source for running/work light functions
 - [ ] Verify RTL-S harness (640134) included or separate purchase
 
 ## Related Documentation
