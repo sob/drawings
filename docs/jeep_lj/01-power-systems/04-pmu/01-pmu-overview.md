@@ -47,6 +47,8 @@ tags:
 
 **Physical:** 131×112×33mm, 385g, -40°C to +125°C operating range
 
+**Grounding Note:** PMU is **high-side switching only** - it switches the positive wire to loads. Each load must have its own ground path back to the battery/chassis. The PMU's ground connection (14 AWG) is only for internal electronics reference, not load current return. This is why PMU doesn't require a heavy ground wire matching the 2/0 AWG power feed.
+
 **Configuration Software:** [PMU Setup v101.2.1][pmu-setup] | **Full Specs:** [PMU Manual][pmu-manual]
 
 ## Capacity Analysis

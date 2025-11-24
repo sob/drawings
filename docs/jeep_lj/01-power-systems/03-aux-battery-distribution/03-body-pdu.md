@@ -26,11 +26,11 @@ tags:
 
 **Mounting:** Firewall - body side (cabin), passenger side
 
-**Power Source:** CONSTANT power from AUX battery via 6 AWG feed
+**Power Source:** CONSTANT power from AUX battery via 2 AWG feed
 
 **Configuration:** 8 circuit breaker positions + 8 relay positions
 
-**Input:** Military-spec power studs (accepts up to 6 AWG wire)
+**Input:** Military-spec power studs (accepts up to 2 AWG wire)
 
 **Output:** J301-J306 Metri-Pack connectors (military-spec sealed)
 

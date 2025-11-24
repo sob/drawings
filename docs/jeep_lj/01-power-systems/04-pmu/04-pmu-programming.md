@@ -72,7 +72,7 @@ ELSEIF (J1939_SPN110_CoolantTemp >= 205°F) THEN Out234_RadiatorFan_PWM = 100% /
 ### Sequential Load Startup
 
 ```text
-DELAY Out3_HVAC = 0.5s
+DELAY Out5_HVAC = 0.5s
 DELAY Out7_OilFan = 1.0s
 DELAY Out8_PSFan = 1.5s
 ```

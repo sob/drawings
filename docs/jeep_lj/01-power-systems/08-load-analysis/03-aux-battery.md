@@ -14,9 +14,9 @@ All circuits powered by AUX battery (charged by BCDC at 50A max):
 | Source                 | Circuit                  | Typical | Peak | Duty Cycle        | Notes                     |
 | :--------------------- | :----------------------- | ------: | ---: | :---------------- | :------------------------ |
 | **SwitchPros Outputs** |                          |         |      |                   |                           |
-| OUTPUT-1               | Roof Center (6x BD XL)   |      0A |  31A | Night offroad     | Combo pattern             |
-| OUTPUT-2               | Ditch Lights (2x LP6)    |      0A |  12A | Night offroad     | Driving pattern           |
-| OUTPUT-3               | Fog Lights (3x Squadron) |      0A |   9A | Night/weather     | Amber SAE                 |
+| OUTPUT-1               | Roof Center (6x XL Sport)|      0A |  36A | Night offroad     | 4 combo + 2 wide          |
+| OUTPUT-2               | Ditch Lights (2x LP4 Pro)|      0A |   8A | Night offroad     | Driving pattern           |
+| OUTPUT-3               | Fog Light (1x S8 10")    |      0A |   6A | Night/weather     | Amber wide cornering      |
 | OUTPUT-4               | Dome Lights (4x Cyclone) |      0A |   4A | Doors open        | Manual + trigger          |
 | OUTPUT-5               | Roof Outer Spots (2x XL) |      0A |  12A | Night offroad     | Spot pattern              |
 | OUTPUT-6               | Rock Lights (6x Cyclone) |      0A |   3A | Night offroad     | Under vehicle             |
@@ -82,7 +82,7 @@ All circuits powered by AUX battery (charged by BCDC at 50A max):
 
 | Circuit                          |    Load | Reason             |
 | :------------------------------- | ------: | :----------------- |
-| **Fog Lights (OUTPUT-3)**        |  **9A** | Visibility         |
+| **Fog Light (OUTPUT-3)**         |  **6A** | Visibility         |
 | **Rear Lights (OUTPUT-12)**      |  **5A** | License plate area |
 | **Fusion Radio memory (CB30)**   |  **1A** | Always on          |
 | **Fusion Radio amp (CB44)**      | **10A** | Music moderate     |
@@ -90,11 +90,11 @@ All circuits powered by AUX battery (charged by BCDC at 50A max):
 | **WolfBox Camera (CB39)**        |  **2A** | Always recording   |
 | **Driver Heated Seat (CB45)**    |  **3A** | Cycling            |
 | **Passenger Heated Seat (CB42)** |  **3A** | Cycling            |
-| **TOTAL**                        | **38A** |                    |
+| **TOTAL**                        | **35A** |                    |
 
 **BCDC Charging:** 50A (full rate)
 
-**Net Battery Effect:** +12A (battery charging!)
+**Net Battery Effect:** +15A (battery charging!)
 
 **Battery SOC Trend:** Rising - battery maintains full charge even with high accessory use
 
@@ -108,9 +108,9 @@ All circuits powered by AUX battery (charged by BCDC at 50A max):
 
 | Circuit                        |    Load | Reason             |
 | :----------------------------- | ------: | :----------------- |
-| **Roof Center (OUTPUT-1)**     | **31A** | Primary forward    |
-| **Ditch Lights (OUTPUT-2)**    | **12A** | Peripheral         |
-| **Fog Lights (OUTPUT-3)**      |  **9A** | Close range        |
+| **Roof Center (OUTPUT-1)**     | **36A** | Primary forward    |
+| **Ditch Lights (OUTPUT-2)**    |  **8A** | Peripheral         |
+| **Fog Light (OUTPUT-3)**       |  **6A** | Close range        |
 | **Rock Lights (OUTPUT-6)**     |  **3A** | Obstacle spotting  |
 | **Rear Chase (OUTPUT-7)**      |  **6A** | Following vehicles |
 | **Front Locker (OUTPUT-17)**   |  **2A** | Engaged            |
@@ -118,13 +118,13 @@ All circuits powered by AUX battery (charged by BCDC at 50A max):
 | **Fusion Radio memory (CB30)** |  **1A** | Always on          |
 | **USB Charging (CB48)**        |  **2A** | Phone              |
 | **WolfBox Camera (CB39)**      |  **2A** | Recording          |
-| **TOTAL**                      | **70A** |                    |
+| **TOTAL**                      | **68A** |                    |
 
 **BCDC Charging:** 50A (full rate)
 
-**Net Battery Effect:** -20A (slow discharge)
+**Net Battery Effect:** -18A (slow discharge)
 
-**Time to 50% SOC:** 34Ah / 20A = **102 minutes** to reach 50% SOC
+**Time to 50% SOC:** 34Ah / 18A = **113 minutes** to reach 50% SOC
 
 **Assessment:** Excellent - 50A BCDC cuts discharge rate by more than half vs 25A. Extended night wheeling now practical without significant battery concerns.
 
@@ -246,12 +246,12 @@ All circuits powered by AUX battery (charged by BCDC at 50A max):
 | Scenario          | Total Draw | BCDC | Net Effect | Duration Limit | Status        |
 | :---------------- | :--------- | :--- | :--------- | :------------- | :------------ |
 | Daily Driving     | 5A         | 50A  | +45A       | Unlimited      | Fast charging |
-| Night Highway     | 38A        | 50A  | +12A       | Unlimited      | Charging!     |
-| Night Offroad     | 70A        | 50A  | -20A       | 102 minutes    | Excellent     |
+| Night Highway     | 35A        | 50A  | +15A       | Unlimited      | Charging!     |
+| Night Offroad     | 68A        | 50A  | -18A       | 113 minutes    | Excellent     |
 | Air Up (5-10 min) | 110A       | 50A  | -60A       | 10 minutes     | Excellent     |
 | Air Up Extended   | 110A       | 50A  | -60A       | 34 minutes     | Practical     |
 | Winch Recovery    | 265A       | 50A  | -215A      | 30-sec pulls   | Brief OK      |
-| Camp Mode         | 32A        | 0A   | -32A       | 64 minutes     | Limited       |
+| Camp Mode         | 27A        | 0A   | -27A       | 76 minutes     | Limited       |
 
 **Key Insight:** The 50A BCDC upgrade transforms AUX battery capability. Night highway driving now charges the battery. Night offroad runtime more than doubles (45→102 min). Extended air-up is now practical without battery concerns. Only engine-off camp mode remains limited by battery capacity.
 

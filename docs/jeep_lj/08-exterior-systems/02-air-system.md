@@ -29,8 +29,8 @@ The air system consists of an ARB Twin Compressor (brushless), 1-gallon air tank
 
 **Fuse Configuration:** Dual 60A MIDI fuses via SafetyHub 150 (one per motor)
 
-- **Motor 1:** SafetyHub MIDI-1 (60A) → 10 AWG power wire → compressor motor 1
-- **Motor 2:** SafetyHub MIDI-2 (60A) → 10 AWG power wire → compressor motor 2
+- **Motor 1:** SafetyHub MIDI-1 (60A) → 6 AWG power wire → compressor motor 1
+- **Motor 2:** SafetyHub MIDI-2 (60A) → 6 AWG power wire → compressor motor 2
 - SafetyHub mounted in engine compartment (close to CONSTANT bus bar)
 
 ///
@@ -49,21 +49,21 @@ The air system consists of an ARB Twin Compressor (brushless), 1-gallon air tank
   - OUTPUT-11 provides switched 12V control signal to compressor
   - Compressor has internal relay/control that handles high-current motor switching
   - 14 AWG wire from OUTPUT-11 to compressor control terminal
-- **Ground:** 8 AWG black wire from compressor to chassis ground or battery negative
+- **Ground:** 6 AWG black wire from compressor to chassis ground or battery negative
 - **Location:** Under passenger seat (cabin, AUX battery area)
 
 ### Wiring Summary
 
-1. **Motor 1 Power (+):** CONSTANT bus → SafetyHub (Blue Sea 100A breaker) → SafetyHub MIDI-1 (60A) → 10 AWG red wire → compressor motor 1 positive
-2. **Motor 2 Power (+):** CONSTANT bus → SafetyHub (Blue Sea 100A breaker) → SafetyHub MIDI-2 (60A) → 10 AWG red wire → compressor motor 2 positive
-3. **Ground (-):** Compressor negative terminal → 8 AWG black wire → chassis ground or battery negative
+1. **Motor 1 Power (+):** CONSTANT bus → SafetyHub (Blue Sea 100A breaker) → SafetyHub MIDI-1 (60A) → 6 AWG red wire → compressor motor 1 positive
+2. **Motor 2 Power (+):** CONSTANT bus → SafetyHub (Blue Sea 100A breaker) → SafetyHub MIDI-2 (60A) → 6 AWG red wire → compressor motor 2 positive
+3. **Ground (-):** Compressor negative terminal → 6 AWG black wire → chassis ground or battery negative
 4. **Control (Automatic):** Pressure switch (ARB 180901) → SwitchPros TRIGGER-3 (Pin 17) → OUTPUT-11 → compressor control (auto 135-150 PSI)
 5. **Control (Manual Override):** SwitchPros Button 11 → OUTPUT-11 → compressor control (manual on/off for tire inflation)
 
 ### Outstanding Items
 
-- [ ] Route dual 10 AWG power wires from SafetyHub (engine bay) to compressor (under passenger seat)
-- [ ] Route 8 AWG ground wire from compressor to nearest chassis ground point
+- [ ] Route dual 6 AWG power wires from SafetyHub (engine bay) to compressor (under passenger seat)
+- [ ] Route 6 AWG ground wire from compressor to nearest chassis ground point
 - [ ] Route 14 AWG control wire from SwitchPros OUTPUT-11 to compressor control terminal
 - [ ] Route pressure switch trigger wire from air tank to SwitchPros TRIGGER-3 (Pin 17, PINK)
 - [ ] Verify ARB CKBLTA12 wiring harness connector pinout for motor 1, motor 2, and control terminals
