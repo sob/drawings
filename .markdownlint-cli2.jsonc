@@ -1,0 +1,6 @@
+{
+  "ignores": [
+    "docs/ANALYZE/**",
+    "node_modules/**"
+  ]
+}
