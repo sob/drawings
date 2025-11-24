@@ -46,17 +46,17 @@ The SwitchPros SP-1200 is the main lighting and accessory controller for the Jee
 | Button |       Circuit       | Draw |                      Details                      |    Output Pin(s)     |
 | :----: | :-----------------: | :--: | :-----------------------------------------------: | :------------------: |
 |   1    | Roof Center Section | 36A  |      6x BD XL Sport (Driving/Combo Pattern)       |       OUTPUT-1       |
-|   2    |    Ditch Lights     |  8A  |      2x BD LP4 Pro (Wide Cornering Pattern)       |       OUTPUT-2       |
+|   2    |    Ditch Lights     |  8A  |      2x BD LP4 Pro (Driving/Combo Pattern)        |       OUTPUT-2       |
 |   3    |      Fog Light      |  6A  |        1x BD S8 10" (Amber, Wide Cornering)       |       OUTPUT-3       |
 |   4    |     Dome Lights     |  2A  |  4x KC Cyclone V2 (manual + door-triggered)       |       OUTPUT-4       |
 |   5    |  Roof Outer Spots   | 12A  |          2x BD XL Sport (Spot Pattern)            |       OUTPUT-5       |
 |   6    |     Rock Lights     |  3A  |              6x KC Cyclone V2 Lights              |       OUTPUT-6       |
 |   7    |    Chase Light      |  1A  |          BD RTL-S 30" (Amber chase mode)          |       OUTPUT-7       |
-|   8    |    Party Lights     |  6A  |      1x BD RGB Whip + 4x Footwell LED Strips      |       OUTPUT-8       |
+|   8    |      *AVAILABLE*    |  —   |                     Unassigned                    |       OUTPUT-8       |
 |   9    |    Front Locker     |  2A  |   ARB Locker (see [Air System][air-system-arb-compressor-lockers])   | OUTPUT-17 (low-side) |
 |   10   |     Rear Locker     |  2A  |   ARB Locker (see [Air System][air-system-arb-compressor-lockers])   |      OUTPUT-10       |
 |   11   |     Compressor      | 15A  |   ARB Twin Compressor (see [Air System][air-system-arb-compressor-lockers])   |      OUTPUT-11       |
-|   12   |   Rear Work Lights  |  5A  |        2x BD S1 Pro (Above License Plate)         |      OUTPUT-12       |
+|   12   |   Rear Work Lights  |  5A  |       2x BD S1 Black (Above License Plate)        |      OUTPUT-12       |
 
 **Notes:**
 
@@ -64,9 +64,10 @@ The SwitchPros SP-1200 is the main lighting and accessory controller for the Jee
   - Driver door switch + Passenger door switch (wired in parallel) → TRIGGER-1 → OUTPUT-4
   - Either door opening or Button 4 press activates dome lights
 - **Button 7:** RTL-S amber chase function only - brake/running/work functions powered separately
+- **Button 8:** Available for future use (party lights moved to JL Audio MLC-RW)
 - **Button 11:** OUTPUT-11 provides control signal to ARB compressor (main power is separate: CONSTANT bus → dual 60A fuses → compressor)
 - **Cargo Light:** Not assigned to button - controlled by rear rocker switch via TRIGGER-2 → OUTPUT-13
-- Total lighting draw if all on simultaneously: 79A (within 150A capacity)
+- Total lighting draw if all on simultaneously: 73A (within 150A capacity)
 
 ## Wiring Pinout
 
@@ -79,7 +80,7 @@ The SwitchPros SP-1200 is the main lighting and accessory controller for the Jee
 |  3  | IGNITION  |   LT BLUE   |   -    |      -      | Connect to ignition signal |  -   |      For auto-off features       |
 |  4  |  LIGHTS   |    WHITE    |   -    |      -      | Connect to parking lights  |  -   |       For DRL integration        |
 |  5  | OUTPUT-7  |   PURPLE    | 14 AWG |     15A     | Chase Light (amber)        |  1A  |  RTL-S amber chase function only |
-|  6  | OUTPUT-8  |    GREY     | 14 AWG |     15A     | Party Lights               |  6A  |                                  |
+|  6  | OUTPUT-8  |    GREY     | 14 AWG |     15A     | *AVAILABLE*                |  —   |                                  |
 |  7  | TRIGGER-1 |    PINK     |   -    |      -      | Door switches (driver + passenger) | - | Triggers OUTPUT-4 (dome lights) when doors open |
 |  8  | TRIGGER-2 |    PINK     |   -    |      -      | Rear cargo rocker switch   |  -   | Triggers OUTPUT-13 (cargo light) |
 |  9  | OUTPUT-9  |    WHITE    | 14 AWG | 30A (2x15A) | SPARE (can combine 9+10)   |  -   |                                  |
