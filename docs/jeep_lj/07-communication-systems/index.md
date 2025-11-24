@@ -1,18 +1,61 @@
 ---
+tags:
+  - communication-systems
 hide:
   - toc
 ---
 
 # Section 7: Communication Systems {#communication-systems-index}
 
-Two-way radio, CB, and communication equipment installation and wiring.
+Radio communication and camera systems for vehicle-to-vehicle coordination and situational awareness.
 
-## Contents
+## System Components
 
-- **[7.1 Communication Systems][communication-systems-index]** - Ham radio, CB radio, antennas, PTT controls, and wiring
+| Component | Model | Power | Control |
+|:----------|:------|------:|:--------|
+| [GMRS Radio][gmrs-radio] | Rugged Radio G1 | 15A TX | PMU OUT6 |
+| [Intercom][intercom] | Rugged Radio STX | 2A | PMU OUT20 |
+| [Ham Radio][ham-radio] | Future | 15A | PMU OUT12 (reserved) |
+| [Dash Camera][dash-camera] | WolfBox Mirror | 5A | BODY PDU F5 |
 
-## System Overview
+**Total System Power:** ~22A peak (radio transmitting + intercom + camera)
 
-Communication systems including radio equipment, antenna mounting, RF grounding, and integration with vehicle electrical systems.
+## Signal Flow
 
-[communication-systems-index]: 01-communication.md
+```
+Rugged Radio G1 GMRS
+    │
+    └─► RADIO port ──► STX Intercom RADIO port
+                            │
+                            ├─► Headset Port 1 ──► Driver headset
+                            ├─► Headset Port 2 ──► Front passenger headset
+                            ├─► Headset Port 3 ──► Rear left headset
+                            ├─► Headset Port 4 ──► Rear right headset
+                            │
+                            └─► AUX port ◄── Fusion MS-RA670 audio
+
+WolfBox Mirror Camera
+    │
+    ├─► Front camera (integrated) ──► SD card recording
+    └─► Rear camera ──► Display on reverse
+```
+
+## Outstanding Items
+
+None - see individual component pages for specific items.
+
+## Related Documentation
+
+- [PMU Outputs][pmu-outputs] - Radio and intercom power circuits
+- [BODY PDU][body-pdu] - Camera power circuit
+- [Audio Systems][audio-systems] - Fusion head unit for intercom AUX input
+- [Command Touch CT4][ct4] - Turn signal and horn controller
+
+[gmrs-radio]: 01-gmrs-radio.md
+[intercom]: 02-intercom.md
+[ham-radio]: 03-ham-radio.md
+[dash-camera]: 04-dash-camera.md
+[pmu-outputs]: ../01-power-systems/04-pmu/03-pmu-outputs.md
+[body-pdu]: ../01-power-systems/03-aux-battery-distribution/03-body-pdu.md
+[audio-systems]: ../06-audio-systems/index.md
+[ct4]: ../05-control-interfaces/03-command-touch-ct4.md

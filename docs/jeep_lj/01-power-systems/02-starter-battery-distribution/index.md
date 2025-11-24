@@ -70,5 +70,5 @@ Radio grounds direct to battery for RF noise isolation. ECM/grid heater via Cumm
 [aux-battery]: ../03-aux-battery-distribution/index.md
 [starter]: ../../02-engine-systems/01-starter.md
 [alternator]: ../01-power-generation/02-alternator.md
-[radios]: ../../07-communication-systems/01-communication.md
+[radios]: ../../07-communication-systems/index.md
 [circuit-breakers]: 01-circuit-breakers.md

@@ -9,7 +9,7 @@ hide:
 
 **Last Updated:** 2025-11-24
 
-**Total Open Items:** 40
+**Total Open Items:** 36
 
 ---
 
@@ -51,14 +51,13 @@ Items that improve the design but don't block installation.
 | Roof/Roll Bar Routing | Light bars, dome lights | [Wire Routing][wire-routing] | Medium |
 | 3-Position Selector Switch Assignment | Which SwitchPros output controls | [Dashboard Controls][dash-controls] | Medium |
 | Speaker Mounting Locations | Dash end caps or kick panels | [Audio Systems][audio-systems] | Medium |
-| CB Radio Mount Location | Under dash or center console | [Communication][communication] | Medium |
-| WolfBox Power Source | BODY PDU or SwitchPros | [Communication][communication] | Medium |
-| WolfBox Ground | Chassis or dash ground point | [Communication][communication] | Medium |
-| WolfBox Mounting | Under dash or on firewall | [Communication][communication] | Medium |
-| Horn Relay Specs | Contact rating, coil voltage | [Communication][communication] | Medium |
-| Horn Load | Factory Jeep horn amperage (3-6A) | [Communication][communication] | Medium |
-| Horn Circuit Protection | Inline fuse/breaker (10A typical) | [Communication][communication] | Medium |
+| STX Intercom Mounting | Under dash or center console | [Communication][communication] | Medium |
+| WolfBox Rear Camera Mount | Above license plate vs spare tire carrier | [Communication][communication] | Medium |
 | WolfBox Cable Length | Mirror to rear routing (20-30 ft) | [Communication][communication] | Medium |
+| GMRS Antenna Location | Roof rack, fender, or NMO mount | [Communication][communication] | Medium |
+| Horn Relay Specs | Contact rating, coil voltage | [CT4][ct4] | Medium |
+| Horn Load | Factory Jeep horn amperage (3-6A) | [CT4][ct4] | Medium |
+| Horn Circuit Protection | Inline fuse/breaker (10A typical) | [CT4][ct4] | Medium |
 | Turn Signal Mounting | Front fenders or bumper | [Turn Signals][turn-signals] | Medium |
 | Winch 3-Position Switch Assignment | Which SwitchPros output controls | [Recovery Systems][recovery-systems] | Medium |
 | Cummins Harness Wire Count | Wire bundle specification for engine harness | [Wire Routing][wire-routing] | Medium |
@@ -79,9 +78,8 @@ Items that can be determined during build.
 
 | Item | Description | File | Priority |
 |:-----|:------------|:-----|:---------|
-| Horn Button Type | Momentary or latching | [Dashboard Controls][dash-controls] | Low |
+| Horn Button Type | Momentary or latching | [CT4][ct4] | Low |
 | Speaker IPX Rating | Verify from spec sheet | [Audio Systems][audio-systems] | Low |
-| WolfBox Display Size | 9.66" or 12" model | [Communication][communication] | Low |
 | WolfBox License Plate Integration | With existing license plate lights | [Communication][communication] | Low |
 | Rear Seat Switch | Parallel wiring for passenger control | [Offroad Lighting][offroad-lighting] | Low |
 | Recovery Board Storage | MaxTrax storage location | [Recovery Systems][recovery-systems] | Low |
@@ -107,6 +105,10 @@ Items completed since last update.
 
 | Item | Resolution | Date |
 |:-----|:-----------|:-----|
+| WolfBox Model | G900 TriPro selected | 2025-11-24 |
+| WolfBox Power Source | BODY PDU F5 (10A, CONSTANT) | 2025-11-24 |
+| WolfBox Mounting | Windshield mount (replaces factory rearview mirror) | 2025-11-24 |
+| WolfBox Ground | Dash ground point | 2025-11-24 |
 | S8 10" Amber Part Number | 701014 - Baja Designs S8 10" Wide Cornering Amber | 2025-11-23 |
 | Cargo Area Lighting Type | BD Squadron Sport Flood (2 pods, 3,000 lumens total) | 2025-11-23 |
 | Cargo Area Light Quantity | 2 BD Squadron Sport pods | 2025-11-23 |
@@ -146,10 +148,10 @@ Items completed since last update.
 |:---------|:------|
 | 🔴 Critical | 0 |
 | ⚠️ High | 5 |
-| 📋 Medium | 27 |
-| 📝 Low | 6 |
+| 📋 Medium | 24 |
+| 📝 Low | 5 |
 | 🔍 Verify | 2 |
-| **TOTAL** | **40** |
+| **TOTAL** | **36** |
 
 ## Related Documentation
 
@@ -163,7 +165,7 @@ Items completed since last update.
 [switchpros]: ../05-control-interfaces/02-switchpros-sp1200.md
 [dash-controls]: ../05-control-interfaces/05-dashboard-controls.md
 [audio-systems]: ../06-audio-systems/index.md
-[communication]: ../07-communication-systems/01-communication.md
+[communication]: ../07-communication-systems/index.md
 [turn-signals]: ../03-lighting-systems/03-turn-signals.md
 [offroad-lighting]: ../04-offroad-lighting/index.md
 [cargo-lights]: ../04-offroad-lighting/07-cargo-lights.md
@@ -177,3 +179,4 @@ Items completed since last update.
 [grid-heater]: ../02-engine-systems/07-grid-heater.md
 [alternator]: ../01-power-systems/01-power-generation/02-alternator.md
 [hvac]: ../02-engine-systems/03-hvac.md
+[ct4]: ../05-control-interfaces/03-command-touch-ct4.md
