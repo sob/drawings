@@ -11,20 +11,20 @@ Marine-grade audio system with multi-zone control and RGB LED lighting integrati
 
 ## System Components
 
-| Component | Model | Power | Control |
-|:----------|:------|------:|:--------|
-| [Head Unit][head-unit] | Fusion MS-RA670 | 15A | BODY PDU F2 |
-| [Amplifier][amplifier] | Fusion Apollo MS-AP61800 | 40A | CONSTANT bus CB |
-| [Front Speakers][speakers] | JL Audio M6-650X-S-GmTi-i | — | Amp Ch 3+4 |
-| [Rear Speakers][speakers] | JL Audio M6-650VEX-Mb-S-GmTi-i | — | Amp Ch 5+6 |
-| [Subwoofer][subwoofer] | JL Audio M7-12IB-S-GmTi-i-4 | — | Amp Ch 1+2 bridged |
-| [LED Controller][led-controller] | JL Audio MLC-RW | 10A | BODY PDU (30A) |
+| Component                        | Model                          | Power | Control            |
+| :------------------------------- | :----------------------------- | ----: | :----------------- |
+| [Head Unit][head-unit]           | Fusion MS-RA670                |   15A | BODY PDU F2        |
+| [Amplifier][amplifier]           | Fusion Apollo MS-AP61800       |   40A | CONSTANT bus CB    |
+| [Front Speakers][speakers]       | JL Audio M6-650X-S-GmTi-i      |     — | Amp Ch 3+4         |
+| [Rear Speakers][speakers]        | JL Audio M6-650VEX-Mb-S-GmTi-i |     — | Amp Ch 5+6         |
+| [Subwoofer][subwoofer]           | JL Audio M7-12IB-S-GmTi-i-4    |     — | Amp Ch 1+2 bridged |
+| [LED Controller][led-controller] | JL Audio MLC-RW                |   10A | BODY PDU (30A)     |
 
 **Total System Power:** ~65A peak (40A amp + 15A head unit + 10A LED)
 
 ## Signal Flow
 
-```
+```text
 MS-RA670 Head Unit
     │
     ├─► Zone 1 RCA ──► Amp Ch 3+4 ──► Front Dash Speakers

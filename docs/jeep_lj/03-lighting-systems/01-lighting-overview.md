@@ -57,13 +57,13 @@ This section covers all street-legal DOT-required lighting circuits controlled b
 
 ## Power Sources
 
-| Circuit | Power Source | Capacity | Load |
-|:--------|:-------------|:---------|:-----|
-| CT4 Controller | START battery CONSTANT | 40A | Powers all CT4 outputs |
-| Headlights Low/High | CT4 SW3/SW4 | 10A each | 3.6A / 5.6A |
-| DRL/Parking | PMU Out 9 | 15A | ~8A |
-| Brake Lights | PMU Out 17 | 7A | ~3A |
-| Reverse Lights | PMU Out 18 | 7A | ~3A |
+| Circuit             | Power Source           | Capacity | Load                   |
+| :------------------ | :--------------------- | :------- | :--------------------- |
+| CT4 Controller      | START battery CONSTANT | 40A      | Powers all CT4 outputs |
+| Headlights Low/High | CT4 SW3/SW4            | 10A each | 3.6A / 5.6A            |
+| DRL/Parking         | PMU Out 9              | 15A      | ~8A                    |
+| Brake Lights        | PMU Out 17             | 7A       | ~3A                    |
+| Reverse Lights      | PMU Out 18             | 7A       | ~3A                    |
 
 ## Key Features
 

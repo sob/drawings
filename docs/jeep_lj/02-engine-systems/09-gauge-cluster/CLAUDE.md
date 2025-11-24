@@ -6,15 +6,15 @@ Dakota Digital HDX instrumentation: control module, dashboard cluster, and 4 BIM
 
 ## Files
 
-| File | Contains | Use When |
-|:-----|:---------|:---------|
-| `index.md` | System architecture, power distribution | Finding power/wiring summary |
-| `01-hdx-control.md` | Control box specs, BIM connectivity | Finding BIM daisy-chain or config |
-| `02-dashboard-cluster.md` | HDX-96J-TJ gauge display | Finding gauge ranges or display features |
-| `03-bim-j1939.md` | J1939 CAN interface | Understanding ECM data integration |
-| `04-bim-gps.md` | GPS speedometer module | Finding antenna placement |
-| `05-bim-tpms.md` | TPMS wireless sensors | Finding sensor installation |
-| `06-bim-compass.md` | Compass/temperature module | Finding temp probe mounting |
+| File                      | Contains                                | Use When                                 |
+| :------------------------ | :-------------------------------------- | :--------------------------------------- |
+| `index.md`                | System architecture, power distribution | Finding power/wiring summary             |
+| `01-hdx-control.md`       | Control box specs, BIM connectivity     | Finding BIM daisy-chain or config        |
+| `02-dashboard-cluster.md` | HDX-96J-TJ gauge display                | Finding gauge ranges or display features |
+| `03-bim-j1939.md`         | J1939 CAN interface                     | Understanding ECM data integration       |
+| `04-bim-gps.md`           | GPS speedometer module                  | Finding antenna placement                |
+| `05-bim-tpms.md`          | TPMS wireless sensors                   | Finding sensor installation              |
+| `06-bim-compass.md`       | Compass/temperature module              | Finding temp probe mounting              |
 
 ## Cross-Section References
 

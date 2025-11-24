@@ -36,13 +36,13 @@ Amber fog/dust light for improved visibility in poor conditions (Baja Designs Zo
 
 ## Specifications
 
-| Spec | Value |
-|:-----|------:|
-| Lens | Amber |
+| Spec         |                Value |
+| :----------- | -------------------: |
+| Lens         |                Amber |
 | Beam Pattern | Wide Cornering (42°) |
-| Output | 8,000 lumens |
-| Draw | 6A |
-| Profile | 2.13" slim |
+| Output       |         8,000 lumens |
+| Draw         |                   6A |
+| Profile      |           2.13" slim |
 
 ## Control
 

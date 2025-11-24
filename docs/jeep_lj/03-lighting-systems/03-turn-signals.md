@@ -28,11 +28,11 @@ tags:
 
 ### Wiring
 
-| Function | Source | Wire | Destination |
-|:---------|:-------|:-----|:------------|
-| Right Turn | CT4 SW1 | BROWN, 14 AWG | Right side marker |
-| Left Turn | CT4 SW2 | RED, 14 AWG | Left side marker |
-| Marker | PMU Out 9 | — | Both side markers (via DRL circuit) |
+| Function   | Source    | Wire          | Destination                         |
+| :--------- | :-------- | :------------ | :---------------------------------- |
+| Right Turn | CT4 SW1   | BROWN, 14 AWG | Right side marker                   |
+| Left Turn  | CT4 SW2   | RED, 14 AWG   | Left side marker                    |
+| Marker     | PMU Out 9 | —             | Both side markers (via DRL circuit) |
 
 **Dual-Function Notes:**
 

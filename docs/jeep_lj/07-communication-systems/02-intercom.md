@@ -32,12 +32,12 @@ tags:
 
 ## Specifications
 
-| Spec | Value |
-|:-----|------:|
+| Spec          |                            Value |
+| :------------ | -------------------------------: |
 | Headset Ports | 4 (expandable to 8 via EXT port) |
-| Input Voltage | 9-16V DC |
-| Current Draw | <2A typical |
-| Dimensions | 5.5" × 3.5" × 1.5" |
+| Input Voltage |                         9-16V DC |
+| Current Draw  |                      <2A typical |
+| Dimensions    |               5.5" × 3.5" × 1.5" |
 
 ## Features
 
@@ -50,30 +50,30 @@ tags:
 
 ## Ports
 
-| Port | Function | Connection |
-|:-----|:---------|:-----------|
-| RADIO | Two-way radio integration | G1 GMRS via integration cable |
-| AUX | External audio input | Fusion MS-RA670 (3.5mm or RCA) |
-| EXT | Expansion modules | Optional 4-place expansion |
-| Headset 1-4 | Headset connections | Push-to-connect jacks |
+| Port        | Function                  | Connection                     |
+| :---------- | :------------------------ | :----------------------------- |
+| RADIO       | Two-way radio integration | G1 GMRS via integration cable  |
+| AUX         | External audio input      | Fusion MS-RA670 (3.5mm or RCA) |
+| EXT         | Expansion modules         | Optional 4-place expansion     |
+| Headset 1-4 | Headset connections       | Push-to-connect jacks          |
 
 ## Headset Configuration
 
-| Port | Position | Cable Length |
-|:-----|:---------|:-------------|
-| Port 1 | Driver | 6 ft (included) |
+| Port   | Position        | Cable Length    |
+| :----- | :-------------- | :-------------- |
+| Port 1 | Driver          | 6 ft (included) |
 | Port 2 | Front passenger | 6 ft (included) |
-| Port 3 | Rear left | Custom extended |
-| Port 4 | Rear right | Custom extended |
+| Port 3 | Rear left       | Custom extended |
+| Port 4 | Rear right      | Custom extended |
 
 ## Wiring
 
-| Connection | Wire | Source | Notes |
-|:-----------|:-----|:-------|:------|
-| Power (+) | 10 AWG | PMU OUT20 | Via firewall Grommet 1 |
-| Ground (−) | 10 AWG | START battery neg | Direct for audio quality |
-| G1 Radio | Integration cable | G1 RADIO port | Audio/PTT/mute |
-| Aux Audio | 3.5mm or RCA | Fusion MS-RA670 | Music to headsets |
+| Connection | Wire              | Source            | Notes                    |
+| :--------- | :---------------- | :---------------- | :----------------------- |
+| Power (+)  | 10 AWG            | PMU OUT20         | Via firewall Grommet 1   |
+| Ground (−) | 10 AWG            | START battery neg | Direct for audio quality |
+| G1 Radio   | Integration cable | G1 RADIO port     | Audio/PTT/mute           |
+| Aux Audio  | 3.5mm or RCA      | Fusion MS-RA670   | Music to headsets        |
 
 ## Installation Notes
 

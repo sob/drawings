@@ -50,11 +50,11 @@ tags:
 
 ## Wiring
 
-| Connection | Wire Gauge | Source | Destination | Distance | Notes |
-|:-----------|:-----------|:-------|:------------|:---------|:------|
-| **Constant** | 18 AWG ✓ | Critical Cabin PDU Slot 6 | BIM-17-2 power | ~1-2 ft | BIM CONSTANT power |
-| **BIM/IO** | Proprietary | HDX control box | BIM-17-2 input | Varies | Data via daisy-chain |
-| **Temp Probe** | Sensor wire | BIM-17-2 | SEN-15-1 (grille area) | ~6-8 ft | Through firewall Grommet 6 |
+| Connection     | Wire Gauge  | Source                    | Destination            | Distance | Notes                      |
+| :------------- | :---------- | :------------------------ | :--------------------- | :------- | :------------------------- |
+| **Constant**   | 18 AWG ✓    | Critical Cabin PDU Slot 6 | BIM-17-2 power         | ~1-2 ft  | BIM CONSTANT power         |
+| **BIM/IO**     | Proprietary | HDX control box           | BIM-17-2 input         | Varies   | Data via daisy-chain       |
+| **Temp Probe** | Sensor wire | BIM-17-2                  | SEN-15-1 (grille area) | ~6-8 ft  | Through firewall Grommet 6 |
 
 **Firewall Penetration:**
 
@@ -73,13 +73,13 @@ tags:
 
 **Note:** GPS-50-2 also provides compass functionality. Redundant with BIM-17-2 compass if both modules are used.
 
-| Feature | BIM-17-2 Compass | GPS-50-2 Compass |
-|:--------|:-----------------|:-----------------|
-| Directions | 8-point (N, NE, E, etc.) | Digital heading |
-| Source | Internal compass module | GPS satellite-based |
-| Accuracy | 1° internal resolution | GPS-dependent |
-| Stationary | Works when stopped | Requires vehicle movement |
-| Calibration | Automatic | Automatic |
+| Feature     | BIM-17-2 Compass         | GPS-50-2 Compass          |
+| :---------- | :----------------------- | :------------------------ |
+| Directions  | 8-point (N, NE, E, etc.) | Digital heading           |
+| Source      | Internal compass module  | GPS satellite-based       |
+| Accuracy    | 1° internal resolution   | GPS-dependent             |
+| Stationary  | Works when stopped       | Requires vehicle movement |
+| Calibration | Automatic                | Automatic                 |
 
 **Recommendation:**
 

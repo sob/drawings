@@ -51,12 +51,12 @@ tags:
 
 ## Capacity Analysis
 
-| Outputs | Rating | Total | Used | Available |
-|:--------|:------:|:-----:|:----:|:---------:|
-| 1-10 | 25A each | 10 | 10 | 0 |
-| 11-16 | 15A each | 6 | 6 | 0 |
-| 17-24 | 7A each | 8 | 6 | 2 |
-| **Total** | - | **24** | **22** | **2** |
+| Outputs   |  Rating  | Total  |  Used  | Available |
+| :-------- | :------: | :----: | :----: | :-------: |
+| 1-10      | 25A each |   10   |   10   |     0     |
+| 11-16     | 15A each |   6    |   6    |     0     |
+| 17-24     | 7A each  |   8    |   6    |     2     |
+| **Total** |    -     | **24** | **22** |   **2**   |
 
 **Utilization:** 22 of 24 outputs used (92%)
 

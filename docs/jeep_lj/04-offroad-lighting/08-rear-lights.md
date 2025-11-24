@@ -36,13 +36,13 @@ Rear-facing auxiliary work lights mounted at license plate area (Baja Designs Zo
 
 ## Specifications
 
-| Spec | Value |
-|:-----|------:|
-| Beam Pattern | Work/Scene |
-| Lens | Clear |
-| Output | 1,900 lumens each (3,800 total) |
-| Draw | 2.5A each (5A total) |
-| Size | 2" square |
+| Spec         |                           Value |
+| :----------- | ------------------------------: |
+| Beam Pattern |                      Work/Scene |
+| Lens         |                           Clear |
+| Output       | 1,900 lumens each (3,800 total) |
+| Draw         |            2.5A each (5A total) |
+| Size         |                       2" square |
 
 ## Control
 

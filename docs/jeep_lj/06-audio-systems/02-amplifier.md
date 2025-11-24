@@ -34,28 +34,28 @@ tags:
 
 ## Specifications
 
-| Spec | Value |
-|:-----|------:|
-| Total Power | 1800W rated |
-| 6-Channel | 6x 150W RMS @ 4Ω |
-| Bridged | 3x 580W RMS @ 4Ω |
-| Class | D (high efficiency) |
-| Fuse Rating | 40A fast-acting |
-| Current Draw | 35-45A continuous |
-| Dimensions | 11.69" × 7.06" × 2.13" |
-| Weight | 5.95 lbs |
-| Waterproof | IPX2 |
-| Operating Temp | 32°F to 122°F |
+| Spec           |                  Value |
+| :------------- | ---------------------: |
+| Total Power    |            1800W rated |
+| 6-Channel      |       6x 150W RMS @ 4Ω |
+| Bridged        |       3x 580W RMS @ 4Ω |
+| Class          |    D (high efficiency) |
+| Fuse Rating    |        40A fast-acting |
+| Current Draw   |      35-45A continuous |
+| Dimensions     | 11.69" × 7.06" × 2.13" |
+| Weight         |               5.95 lbs |
+| Waterproof     |                   IPX2 |
+| Operating Temp |          32°F to 122°F |
 
 ## Channel Configuration
 
-| Channel | Mode | Output | Load |
-|:--------|:-----|-------:|:-----|
-| Ch 1+2 | Bridged | 580W RMS | Subwoofer |
-| Ch 3 | Stereo | 150W RMS | Front Left |
-| Ch 4 | Stereo | 150W RMS | Front Right |
-| Ch 5 | Stereo | 150W RMS | Rear Left |
-| Ch 6 | Stereo | 150W RMS | Rear Right |
+| Channel | Mode    |   Output | Load        |
+| :------ | :------ | -------: | :---------- |
+| Ch 1+2  | Bridged | 580W RMS | Subwoofer   |
+| Ch 3    | Stereo  | 150W RMS | Front Left  |
+| Ch 4    | Stereo  | 150W RMS | Front Right |
+| Ch 5    | Stereo  | 150W RMS | Rear Left   |
+| Ch 6    | Stereo  | 150W RMS | Rear Right  |
 
 ## Protection Features
 
@@ -75,14 +75,14 @@ Fusion includes bridge adapters with built-in magnets:
 
 ## Wiring
 
-| Connection | Wire | Source | Notes |
-|:-----------|:-----|:-------|:------|
-| Power (+) | 6 AWG | CONSTANT bus | Via 40A Blue Sea breaker |
-| Ground (−) | 6 AWG | Chassis/AUX neg | <18" length |
-| Remote | 18 AWG | MS-RA670 | Turn-on signal |
-| RCA Zone 1 | Shielded | MS-RA670 | Ch 3+4 (front) |
-| RCA Zone 2 | Shielded | MS-RA670 | Ch 5+6 (rear) |
-| RCA Sub | Shielded | MS-RA670 | Ch 1+2 (bridged) |
+| Connection | Wire     | Source          | Notes                    |
+| :--------- | :------- | :-------------- | :----------------------- |
+| Power (+)  | 6 AWG    | CONSTANT bus    | Via 40A Blue Sea breaker |
+| Ground (−) | 6 AWG    | Chassis/AUX neg | <18" length              |
+| Remote     | 18 AWG   | MS-RA670        | Turn-on signal           |
+| RCA Zone 1 | Shielded | MS-RA670        | Ch 3+4 (front)           |
+| RCA Zone 2 | Shielded | MS-RA670        | Ch 5+6 (rear)            |
+| RCA Sub    | Shielded | MS-RA670        | Ch 1+2 (bridged)         |
 
 ## Circuit Protection
 

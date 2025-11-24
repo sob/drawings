@@ -11,10 +11,10 @@ Scenario-based load analysis for the dual battery electrical system.
 
 The Jeep LJ uses a dual battery architecture with isolated power domains:
 
-| Battery | Location | Charging | Primary Loads |
-|:--------|:---------|:---------|:--------------|
-| **START** | Driver wheel well | Alternator (270A) | PMU, engine systems, BCDC |
-| **AUX** | Passenger wheel well | BCDC (50A) + Solar (6A) | SwitchPros, SafetyHub, BODY PDU |
+| Battery   | Location             | Charging                | Primary Loads                   |
+| :-------- | :------------------- | :---------------------- | :------------------------------ |
+| **START** | Driver wheel well    | Alternator (270A)       | PMU, engine systems, BCDC       |
+| **AUX**   | Passenger wheel well | BCDC (50A) + Solar (6A) | SwitchPros, SafetyHub, BODY PDU |
 
 **Key Principle:** The BCDC is the only connection between batteries during normal operation. AUX battery loads do NOT draw from the alternator directly.
 
@@ -51,60 +51,60 @@ Alternator: 270A = CRITICAL UNDERSIZING ❌
 ```text
 START Battery Scenario (Offroad):
 PMU typical: 115A + Radiator fan: 53A + BCDC: 50A = 218A
-Alternator: 270A = 52A margin ✅
+Alternator: 270A = 52A margin
 
 AUX Battery Scenario (Night Offroad):
 SwitchPros: 70A, BCDC charging: 50A
-Net drain: 20A, Time to 50% SOC: 102 minutes ✅
+Net drain: 20A, Time to 50% SOC: 102 minutes
 ```
 
 ### Load Categories
 
-| Category | Characteristic | Analysis Approach |
-|:---------|:---------------|:------------------|
-| **Continuous** | Always on when operating | Include in all scenarios |
-| **Intermittent** | Cycles on/off | Use average or typical duty |
-| **Peak** | Brief bursts (seconds) | Note duration, don't add to continuous |
-| **Seasonal** | A/C, heated seats | Include in relevant scenarios only |
-| **Mutually Exclusive** | Braking vs accelerating | Never combine |
+| Category               | Characteristic           | Analysis Approach                      |
+| :--------------------- | :----------------------- | :------------------------------------- |
+| **Continuous**         | Always on when operating | Include in all scenarios               |
+| **Intermittent**       | Cycles on/off            | Use average or typical duty            |
+| **Peak**               | Brief bursts (seconds)   | Note duration, don't add to continuous |
+| **Seasonal**           | A/C, heated seats        | Include in relevant scenarios only     |
+| **Mutually Exclusive** | Braking vs accelerating  | Never combine                          |
 
 ## Load Exclusions
 
 These loads are **NOT** included in running alternator calculations:
 
-| Load | Current | Reason |
-|:-----|:--------|:-------|
-| Starter | 400-600A | Cranking only (engine off) |
-| Grid Heater | 250A | 3-5 sec cold start only |
-| Winch | 400A | AUX battery (isolated) |
-| ARB Compressor | 90A | AUX battery (isolated) |
-| SwitchPros lights | 100A+ | AUX battery (isolated) |
+| Load              | Current  | Reason                     |
+| :---------------- | :------- | :------------------------- |
+| Starter           | 400-600A | Cranking only (engine off) |
+| Grid Heater       | 250A     | 3-5 sec cold start only    |
+| Winch             | 400A     | AUX battery (isolated)     |
+| ARB Compressor    | 90A      | AUX battery (isolated)     |
+| SwitchPros lights | 100A+    | AUX battery (isolated)     |
 
 ## Summary Results
 
 ### START Battery (Alternator-Supplied)
 
-| Scenario | Total Load | Alternator | Utilization | Status |
-|:---------|:-----------|:-----------|:------------|:-------|
-| Highway Driving | 107A | 270A | 40% | ✅ Excellent |
-| Hot City Driving | 194A | 270A | 72% | ✅ Good |
-| Offroad Trail | 207A | 270A | 77% | ✅ Good |
-| Emergency Braking | 166A | 270A | 61% | ✅ Excellent |
-| Parked Idling | 123A | 270A | 46% | ✅ Excellent |
+| Scenario          | Total Load | Alternator | Utilization | Status    |
+| :---------------- | :--------- | :--------- | :---------- | :-------- |
+| Highway Driving   | 107A       | 270A       | 40%         | Excellent |
+| Hot City Driving  | 194A       | 270A       | 72%         | Good      |
+| Offroad Trail     | 207A       | 270A       | 77%         | Good      |
+| Emergency Braking | 166A       | 270A       | 61%         | Excellent |
+| Parked Idling     | 123A       | 270A       | 46%         | Excellent |
 
-**Worst Case:** 207A (offroad) = 63A margin ✅
+**Worst Case:** 207A (offroad) = 63A margin
 
 ### AUX Battery (BCDC-Charged)
 
-| Scenario | Total Draw | BCDC | Net Effect | Duration Limit | Status |
-|:---------|:-----------|:-----|:-----------|:---------------|:-------|
-| Daily Driving | 5A | 50A | +45A | Unlimited | ✅ Charging |
-| Night Highway | 38A | 50A | +12A | Unlimited | ✅ Charging |
-| Night Offroad | 70A | 50A | -20A | 102 min | ✅ Excellent |
-| Air Up (5-10 min) | 110A | 50A | -60A | 10 min | ✅ Excellent |
-| Air Up Extended | 110A | 50A | -60A | 34 min | ✅ Practical |
-| Winch Recovery | 265A | 50A | -215A | 30-sec pulls | ✅ Brief OK |
-| Camp Mode | 27A | 0A | -27A | 76 min | ⚠️ Limited |
+| Scenario          | Total Draw | BCDC | Net Effect | Duration Limit | Status    |
+| :---------------- | :--------- | :--- | :--------- | :------------- | :-------- |
+| Daily Driving     | 5A         | 50A  | +45A       | Unlimited      | Charging  |
+| Night Highway     | 38A        | 50A  | +12A       | Unlimited      | Charging  |
+| Night Offroad     | 70A        | 50A  | -20A       | 102 min        | Excellent |
+| Air Up (5-10 min) | 110A       | 50A  | -60A       | 10 min         | Excellent |
+| Air Up Extended   | 110A       | 50A  | -60A       | 34 min         | Practical |
+| Winch Recovery    | 265A       | 50A  | -215A      | 30-sec pulls   | Brief OK  |
+| Camp Mode         | 27A        | 0A   | -27A       | 76 min         | Limited   |
 
 **Key Insight:** 50A BCDC enables night highway charging and 102-minute night offroad runtime.
 

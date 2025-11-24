@@ -144,19 +144,19 @@ Compressor fills tank to 150 PSI → pressure switch opens → compressor stops
 
 **Operational Modes:**
 
-| Mode | Control Method | Use Case |
-|------|---------------|----------|
-| **Automatic** | Pressure switch via TRIGGER-3 | Normal operation - system maintains pressure automatically |
-| **Manual Override** | Button 11 (latching mode) | Tire inflation - keep compressor running continuously |
-| **Off** | Button 11 off + tank > 135 PSI | Compressor idle, tank maintains pressure for locker use |
+| Mode                | Control Method                 | Use Case                                                   |
+| ------------------- | ------------------------------ | ---------------------------------------------------------- |
+| **Automatic**       | Pressure switch via TRIGGER-3  | Normal operation - system maintains pressure automatically |
+| **Manual Override** | Button 11 (latching mode)      | Tire inflation - keep compressor running continuously      |
+| **Off**             | Button 11 off + tank > 135 PSI | Compressor idle, tank maintains pressure for locker use    |
 
 ### Wiring Details
 
-| Circuit | Source | Destination | Wire Gauge | Protection | Function |
-|---------|--------|-------------|------------|------------|----------|
-| Pressure Switch Trigger | Pressure switch signal terminal | SwitchPros TRIGGER-3 (Pin 17) | 18 AWG | None (low current) | Auto compressor control |
-| Pressure Switch Power | Tank pressure (mechanical) | Switch contacts | N/A | N/A | Pressure sensing |
-| Compressor Control | SwitchPros OUTPUT-11 | Compressor control terminal | 14 AWG | OUTPUT-11 (15A) | Manual/auto compressor on/off |
+| Circuit                 | Source                          | Destination                   | Wire Gauge | Protection         | Function                      |
+| ----------------------- | ------------------------------- | ----------------------------- | ---------- | ------------------ | ----------------------------- |
+| Pressure Switch Trigger | Pressure switch signal terminal | SwitchPros TRIGGER-3 (Pin 17) | 18 AWG     | None (low current) | Auto compressor control       |
+| Pressure Switch Power   | Tank pressure (mechanical)      | Switch contacts               | N/A        | N/A                | Pressure sensing              |
+| Compressor Control      | SwitchPros OUTPUT-11            | Compressor control terminal   | 14 AWG     | OUTPUT-11 (15A)    | Manual/auto compressor on/off |
 
 ### Air Tank Outstanding Items
 
@@ -196,7 +196,7 @@ Compressor fills tank to 150 PSI → pressure switch opens → compressor stops
 ### Air Line Routing
 
 !!! info "Air Line Installation"
-    Air lines from compressor must be routed to both front and rear axles with proper protection from heat, abrasion, and road debris.
+Air lines from compressor must be routed to both front and rear axles with proper protection from heat, abrasion, and road debris.
 
 - **Front Locker Air Line:** Compressor → along frame rail → through front axle housing to RD116 solenoid
 - **Rear Locker Air Line:** Compressor → along frame rail → through rear axle housing to RD116 solenoid
@@ -206,11 +206,11 @@ Compressor fills tank to 150 PSI → pressure switch opens → compressor stops
 
 ### Control Integration
 
-| Component | SwitchPros Output | Current Draw | Function |
-|-----------|------------------|--------------|----------|
-| ARB Compressor | OUTPUT-11 | Control signal only (~100mA) | Powers compressor on/off |
-| Front Locker | OUTPUT-17 | 2A | Engages/disengages front diff lock |
-| Rear Locker | OUTPUT-10 | 2A | Engages/disengages rear diff lock |
+| Component      | SwitchPros Output | Current Draw                 | Function                           |
+| -------------- | ----------------- | ---------------------------- | ---------------------------------- |
+| ARB Compressor | OUTPUT-11         | Control signal only (~100mA) | Powers compressor on/off           |
+| Front Locker   | OUTPUT-17         | 2A                           | Engages/disengages front diff lock |
+| Rear Locker    | OUTPUT-10         | 2A                           | Engages/disengages rear diff lock  |
 
 ### ARB Locker Outstanding Items
 
@@ -295,17 +295,9 @@ SwitchPros SP-1200
 
 ### Safety Considerations
 
-!!! warning "Locker Operation"
-    - Only engage lockers at low speeds (typically <5 mph)
-    - Disengage lockers before returning to normal speeds
-    - Never engage lockers on dry pavement
-    - Ensure adequate air pressure before engaging lockers
+!!! warning "Locker Operation" - Only engage lockers at low speeds (typically <5 mph) - Disengage lockers before returning to normal speeds - Never engage lockers on dry pavement - Ensure adequate air pressure before engaging lockers
 
-!!! warning "Compressor Operation"
-    - Monitor compressor duty cycle during extended use
-    - Allow cooling periods if running continuously for tire inflation
-    - Check air line connections regularly for leaks
-    - Drain moisture from tank/system periodically
+!!! warning "Compressor Operation" - Monitor compressor duty cycle during extended use - Allow cooling periods if running continuously for tire inflation - Check air line connections regularly for leaks - Drain moisture from tank/system periodically
 
 ## Future Expansion Options
 

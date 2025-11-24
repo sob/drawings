@@ -34,7 +34,7 @@ tags:
 - **Open Circuit Voltage (Voc):** 46.8V
 - **Short Circuit Current (Isc):** 2.23A
 
-**BCDC Compatibility:** ✅ Voc 46.8V within BCDC solar input range (9-48V, just under 48V upper limit)
+**BCDC Compatibility:** Voc 46.8V within BCDC solar input range (9-48V, just under 48V upper limit)
 
 ## Physical Specifications
 

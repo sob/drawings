@@ -35,11 +35,11 @@ Interior cargo area lighting controlled by physical switch (Baja Designs Zone 7)
 
 ## Specifications
 
-| Spec | Value |
-|:-----|------:|
-| Beam Pattern | Work/Scene |
-| Lens | Clear |
-| Draw | ~2A each (4A total) |
+| Spec         |               Value |
+| :----------- | ------------------: |
+| Beam Pattern |          Work/Scene |
+| Lens         |               Clear |
+| Draw         | ~2A each (4A total) |
 
 ## Control
 

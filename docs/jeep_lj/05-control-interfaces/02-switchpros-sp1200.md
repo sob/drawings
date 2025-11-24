@@ -43,20 +43,20 @@ The SwitchPros SP-1200 is the main lighting and accessory controller for the Jee
 
 ## Control Panel Layout
 
-| Button |       Circuit       | Draw |                      Details                      |    Output Pin(s)     |
-| :----: | :-----------------: | :--: | :-----------------------------------------------: | :------------------: |
-|   1    | Roof Center Section | 36A  |      6x BD XL Sport (Driving/Combo Pattern)       |       OUTPUT-1       |
-|   2    |    Ditch Lights     |  8A  |      2x BD LP4 Pro (Driving/Combo Pattern)        |       OUTPUT-2       |
-|   3    |      Fog Light      |  6A  |        1x BD S8 10" (Amber, Wide Cornering)       |       OUTPUT-3       |
-|   4    |     Dome Lights     |  2A  |  4x KC Cyclone V2 (manual + door-triggered)       |       OUTPUT-4       |
-|   5    |  Roof Outer Spots   | 12A  |          2x BD XL Sport (Spot Pattern)            |       OUTPUT-5       |
-|   6    |     Rock Lights     |  3A  |              6x KC Cyclone V2 Lights              |       OUTPUT-6       |
-|   7    |    Chase Light      |  1A  |          BD RTL-S 30" (Amber chase mode)          |       OUTPUT-7       |
-|   8    |      *AVAILABLE*    |  —   |                     Unassigned                    |       OUTPUT-8       |
-|   9    |    Front Locker     |  2A  |   ARB Locker (see [Air System][air-system-arb-compressor-lockers])   | OUTPUT-17 (low-side) |
-|   10   |     Rear Locker     |  2A  |   ARB Locker (see [Air System][air-system-arb-compressor-lockers])   |      OUTPUT-10       |
-|   11   |     Compressor      | 15A  |   ARB Twin Compressor (see [Air System][air-system-arb-compressor-lockers])   |      OUTPUT-11       |
-|   12   |   Rear Work Lights  |  5A  |       2x BD S1 Black (Above License Plate)        |      OUTPUT-12       |
+| Button |       Circuit       | Draw |                                  Details                                  |    Output Pin(s)     |
+| :----: | :-----------------: | :--: | :-----------------------------------------------------------------------: | :------------------: |
+|   1    | Roof Center Section | 36A  |                  6x BD XL Sport (Driving/Combo Pattern)                   |       OUTPUT-1       |
+|   2    |    Ditch Lights     |  8A  |                   2x BD LP4 Pro (Driving/Combo Pattern)                   |       OUTPUT-2       |
+|   3    |      Fog Light      |  6A  |                   1x BD S8 10" (Amber, Wide Cornering)                    |       OUTPUT-3       |
+|   4    |     Dome Lights     |  2A  |                4x KC Cyclone V2 (manual + door-triggered)                 |       OUTPUT-4       |
+|   5    |  Roof Outer Spots   | 12A  |                       2x BD XL Sport (Spot Pattern)                       |       OUTPUT-5       |
+|   6    |     Rock Lights     |  3A  |                          6x KC Cyclone V2 Lights                          |       OUTPUT-6       |
+|   7    |     Chase Light     |  1A  |                      BD RTL-S 30" (Amber chase mode)                      |       OUTPUT-7       |
+|   8    |     _AVAILABLE_     |  —   |                                Unassigned                                 |       OUTPUT-8       |
+|   9    |    Front Locker     |  2A  |     ARB Locker (see [Air System][air-system-arb-compressor-lockers])      | OUTPUT-17 (low-side) |
+|   10   |     Rear Locker     |  2A  |     ARB Locker (see [Air System][air-system-arb-compressor-lockers])      |      OUTPUT-10       |
+|   11   |     Compressor      | 15A  | ARB Twin Compressor (see [Air System][air-system-arb-compressor-lockers]) |      OUTPUT-11       |
+|   12   |  Rear Work Lights   |  5A  |                   2x BD S1 Black (Above License Plate)                    |      OUTPUT-12       |
 
 **Notes:**
 
@@ -73,37 +73,37 @@ The SwitchPros SP-1200 is the main lighting and accessory controller for the Jee
 
 ### 20-Pin Harness Connector
 
-| Pin |   Label   |    Color    | Gauge  |  Max Load   | Assigned Circuit           | Load |              Notes               |
-| :-: | :-------: | :---------: | :----: | :---------: | -------------------------- | :--: | :------------------------------: |
-|  1  | OUTPUT-5  |    GREEN    | 14 AWG |     15A     | Roof Outer Spots           | 12A  |                                  |
-|  2  | OUTPUT-6  |    BLUE     | 14 AWG |     15A     | Rock Lights                |  3A  |                                  |
-|  3  | IGNITION  |   LT BLUE   |   -    |      -      | Connect to ignition signal |  -   |      For auto-off features       |
-|  4  |  LIGHTS   |    WHITE    |   -    |      -      | Connect to parking lights  |  -   |       For DRL integration        |
-|  5  | OUTPUT-7  |   PURPLE    | 14 AWG |     15A     | Chase Light (amber)        |  1A  |  RTL-S amber chase function only |
-|  6  | OUTPUT-8  |    GREY     | 14 AWG |     15A     | *AVAILABLE*                |  —   |                                  |
-|  7  | TRIGGER-1 |    PINK     |   -    |      -      | Door switches (driver + passenger) | - | Triggers OUTPUT-4 (dome lights) when doors open |
-|  8  | TRIGGER-2 |    PINK     |   -    |      -      | Rear cargo rocker switch   |  -   | Triggers OUTPUT-13 (cargo light) |
-|  9  | OUTPUT-9  |    WHITE    | 14 AWG | 30A (2x15A) | SPARE (can combine 9+10)   |  -   |                                  |
-| 10  | OUTPUT-9B |    WHITE    | 14 AWG |      -      | SPARE (fused with 9)       |  -   |                                  |
-| 11  | OUTPUT-10 |     TAN     | 14 AWG |     15A     | Rear Locker                |  2A  |                                  |
-| 12  | OUTPUT-11 |    BROWN    | 14 AWG |     15A     | Compressor control         | 15A  | Control signal to compressor     |
-| 13  | OUTPUT-12 |     RED     | 14 AWG |     15A     | Rear Work Lights           |  5A  |                                  |
-| 14  |  GROUND   |    BLACK    |   -    |      -      | Direct to battery negative |  -   |   Critical - direct connection   |
-| 15  | OUTPUT-13 |   ORANGE    | 14 AWG |     15A     | Cargo Light                |  5A  | Triggered by rear rocker switch (TRIGGER-2) |
-| 16  | OUTPUT-14 |   YELLOW    | 14 AWG |     15A     | SPARE                      |  -   |                                  |
-| 17  | TRIGGER-3 |    PINK     |   -    |      -      | ARB pressure switch        |  -   | Auto compressor control          |
-| 18  | OUTPUT-17 |  LT GREEN   |   -    |     2A      | Front Locker (low-side)    |  2A  |       Low-side switch only       |
-| 19  | OUTPUT-15 | GREEN/BLACK | 14 AWG |     15A     | SPARE                      |  -   |                                  |
-| 20  | OUTPUT-16 | BLUE/BLACK  | 14 AWG |     15A     | SPARE                      |  -   |                                  |
+| Pin |   Label   |    Color    | Gauge  |  Max Load   | Assigned Circuit                   | Load |                      Notes                      |
+| :-: | :-------: | :---------: | :----: | :---------: | ---------------------------------- | :--: | :---------------------------------------------: |
+|  1  | OUTPUT-5  |    GREEN    | 14 AWG |     15A     | Roof Outer Spots                   | 12A  |                                                 |
+|  2  | OUTPUT-6  |    BLUE     | 14 AWG |     15A     | Rock Lights                        |  3A  |                                                 |
+|  3  | IGNITION  |   LT BLUE   |   -    |      -      | Connect to ignition signal         |  -   |              For auto-off features              |
+|  4  |  LIGHTS   |    WHITE    |   -    |      -      | Connect to parking lights          |  -   |               For DRL integration               |
+|  5  | OUTPUT-7  |   PURPLE    | 14 AWG |     15A     | Chase Light (amber)                |  1A  |         RTL-S amber chase function only         |
+|  6  | OUTPUT-8  |    GREY     | 14 AWG |     15A     | _AVAILABLE_                        |  —   |                                                 |
+|  7  | TRIGGER-1 |    PINK     |   -    |      -      | Door switches (driver + passenger) |  -   | Triggers OUTPUT-4 (dome lights) when doors open |
+|  8  | TRIGGER-2 |    PINK     |   -    |      -      | Rear cargo rocker switch           |  -   |        Triggers OUTPUT-13 (cargo light)         |
+|  9  | OUTPUT-9  |    WHITE    | 14 AWG | 30A (2x15A) | SPARE (can combine 9+10)           |  -   |                                                 |
+| 10  | OUTPUT-9B |    WHITE    | 14 AWG |      -      | SPARE (fused with 9)               |  -   |                                                 |
+| 11  | OUTPUT-10 |     TAN     | 14 AWG |     15A     | Rear Locker                        |  2A  |                                                 |
+| 12  | OUTPUT-11 |    BROWN    | 14 AWG |     15A     | Compressor control                 | 15A  |          Control signal to compressor           |
+| 13  | OUTPUT-12 |     RED     | 14 AWG |     15A     | Rear Work Lights                   |  5A  |                                                 |
+| 14  |  GROUND   |    BLACK    |   -    |      -      | Direct to battery negative         |  -   |          Critical - direct connection           |
+| 15  | OUTPUT-13 |   ORANGE    | 14 AWG |     15A     | Cargo Light                        |  5A  |   Triggered by rear rocker switch (TRIGGER-2)   |
+| 16  | OUTPUT-14 |   YELLOW    | 14 AWG |     15A     | SPARE                              |  -   |                                                 |
+| 17  | TRIGGER-3 |    PINK     |   -    |      -      | ARB pressure switch                |  -   |             Auto compressor control             |
+| 18  | OUTPUT-17 |  LT GREEN   |   -    |     2A      | Front Locker (low-side)            |  2A  |              Low-side switch only               |
+| 19  | OUTPUT-15 | GREEN/BLACK | 14 AWG |     15A     | SPARE                              |  -   |                                                 |
+| 20  | OUTPUT-16 | BLUE/BLACK  | 14 AWG |     15A     | SPARE                              |  -   |                                                 |
 
 ### 4-Pin Harness (High Current Outputs)
 
-| Pin |  Label   | Color  | Gauge | Max Load | Assigned Circuit    | Load |        Notes         |
-| :-: | :------: | :----: | :---: | :------: | ------------------- | :--: | :------------------: |
-|  1  | OUTPUT-1 | BROWN  | 10AWG |   35A    | Roof Center Section | 36A  | At capacity          |
-|  2  | OUTPUT-2 |  RED   | 10AWG |   35A    | Ditch Lights        |  8A  |                      |
-|  3  | OUTPUT-3 | ORANGE | 10AWG |   35A    | Fog Light           |  6A  |                      |
-|  4  | OUTPUT-4 | YELLOW | 10AWG |   35A    | Dome Lights         |  2A  |                      |
+| Pin |  Label   | Color  | Gauge | Max Load | Assigned Circuit    | Load |    Notes    |
+| :-: | :------: | :----: | :---: | :------: | ------------------- | :--: | :---------: |
+|  1  | OUTPUT-1 | BROWN  | 10AWG |   35A    | Roof Center Section | 36A  | At capacity |
+|  2  | OUTPUT-2 |  RED   | 10AWG |   35A    | Ditch Lights        |  8A  |             |
+|  3  | OUTPUT-3 | ORANGE | 10AWG |   35A    | Fog Light           |  6A  |             |
+|  4  | OUTPUT-4 | YELLOW | 10AWG |   35A    | Dome Lights         |  2A  |             |
 
 ## Power and Ground Connections
 

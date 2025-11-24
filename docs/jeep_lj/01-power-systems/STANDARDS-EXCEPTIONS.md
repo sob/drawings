@@ -127,10 +127,10 @@ This document tracks intentional deviations from general electrical standards wh
 
 It is intentional adherence to:
 
-1. ✅ Manufacturer specifications (WARN)
-2. ✅ Automotive standards (SAE J1128)
-3. ✅ Industry standard practice (factory winch installations)
-4. ✅ Engineering analysis (load, wire sizing, fault scenarios)
+1. Manufacturer specifications (WARN)
+2. Automotive standards (SAE J1128)
+3. Industry standard practice (factory winch installations)
+4. Engineering analysis (load, wire sizing, fault scenarios)
 
 **Do NOT flag as requiring correction in future reviews.**
 
@@ -425,12 +425,12 @@ No additional CB required at BCDC - entire circuit protected from battery termin
 
 **Why This Is Safe:**
 
-The CB is sized for *device capacity*, not actual load. Actual loads are well within wire rating:
+The CB is sized for _device capacity_, not actual load. Actual loads are well within wire rating:
 
-| Device | Device Max | Actual Load | Wire Rating | Load % of Wire |
-|:-------|:-----------|:------------|:------------|:---------------|
-| SwitchPros | 150A | ~82A | 130A | 63% |
-| SafetyHub | 150A | 100A | 130A | 77% |
+| Device     | Device Max | Actual Load | Wire Rating | Load % of Wire |
+| :--------- | :--------- | :---------- | :---------- | :------------- |
+| SwitchPros | 150A       | ~82A        | 130A        | 63%            |
+| SafetyHub  | 150A       | 100A        | 130A        | 77%            |
 
 **SwitchPros Actual Load Breakdown:**
 
@@ -501,10 +501,10 @@ The CB is sized for *device capacity*, not actual load. Actual loads are well wi
 
 The apparent CB > wire mismatch is intentional:
 
-1. ✅ Actual loads (82-100A) well within wire rating (130A)
-2. ✅ CB sized for device capacity and inrush tolerance
-3. ✅ Fault protection adequate (CB trips before wire damage)
-4. ✅ Intermittent duty cycle (not continuous operation)
+1. Actual loads (82-100A) well within wire rating (130A)
+2. CB sized for device capacity and inrush tolerance
+3. Fault protection adequate (CB trips before wire damage)
+4. Intermittent duty cycle (not continuous operation)
 
 **Do NOT flag as requiring wire upgrade or CB downgrade.**
 
@@ -521,10 +521,10 @@ The apparent CB > wire mismatch is intentional:
 
 **All decisions documented above are intentional and based on:**
 
-1. ✅ **Manufacturer Specifications** - Following OEM installation requirements
-2. ✅ **Automotive Standards (SAE J1128)** - Primary standard for automotive electrical systems
-3. ✅ **Industry Practice** - Factory vehicle precedents and proven approaches
-4. ✅ **Engineering Analysis** - Load characteristics, wire sizing, fault scenarios
+1. **Manufacturer Specifications** - Following OEM installation requirements
+2. **Automotive Standards (SAE J1128)** - Primary standard for automotive electrical systems
+3. **Industry Practice** - Factory vehicle precedents and proven approaches
+4. **Engineering Analysis** - Load characteristics, wire sizing, fault scenarios
 
 **These are NOT oversights, errors, or safety issues.**
 

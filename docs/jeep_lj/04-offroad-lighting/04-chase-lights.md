@@ -38,12 +38,12 @@ Multi-function rear safety light for convoy visibility, plus integrated brake, t
 
 ## Functions
 
-| Function | Color | Draw | Control |
-|:---------|:------|-----:|:--------|
-| Running Light | Red | 0.8A | PMU/Ignition |
-| Brake Light | Red | 1.45A | OEM brake circuit |
+| Function           | Color |       Draw | Control             |
+| :----------------- | :---- | ---------: | :------------------ |
+| Running Light      | Red   |       0.8A | PMU/Ignition        |
+| Brake Light        | Red   |      1.45A | OEM brake circuit   |
 | Turn/Chase Signals | Amber | 0.36A each | SwitchPros Button 7 |
-| Work Light | White | 1.3A | PMU/Ignition |
+| Work Light         | White |       1.3A | PMU/Ignition        |
 
 **Max Draw:** ~4A
 

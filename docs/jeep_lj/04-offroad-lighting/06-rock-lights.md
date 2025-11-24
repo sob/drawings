@@ -36,11 +36,11 @@ Underbody lighting for wheel wells and frame rails (Baja Designs Zone 6).
 
 ## Specifications
 
-| Spec | Value |
-|:-----|------:|
+| Spec   |                         Value |
+| :----- | ----------------------------: |
 | Output | 200 lumens each (1,200 total) |
-| Draw | 0.5A each (3A total) |
-| Size | 2.4" diameter round |
+| Draw   |          0.5A each (3A total) |
+| Size   |           2.4" diameter round |
 
 ## Control
 

@@ -60,16 +60,16 @@ GPS-based speedometer, compass, altimeter, and clock sync module. Eliminates nee
 - Extended cable for remote mounting
 
 !!! warning "Critical System - Sky View Required"
-    GPS speedometer is legally required for on-road operation. Ensure antenna has clear view of sky for reliable GPS signal. Obstructions (metal dash, windshield tint, etc.) may degrade signal quality.
+GPS speedometer is legally required for on-road operation. Ensure antenna has clear view of sky for reliable GPS signal. Obstructions (metal dash, windshield tint, etc.) may degrade signal quality.
 
 ## Wiring
 
-| Connection | Source | Destination | Wire Gauge | Notes |
-|:-----------|:-------|:------------|:-----------|:------|
-| **Constant** | Critical Cabin PDU Slot 4 | GPS-50-2 power | 18 AWG ✓ | BIM CONSTANT power |
-| **BIM/IO** | HDX control box | GPS-50-2 input | Proprietary | Data via daisy-chain |
-| **GPS Antenna** | GPS-50-2 module | Dash/windshield mount | Coax cable | Included antenna cable |
-| **Outside Temp** | GPS-50-2 (optional) | SEN-15-1 probe | Sensor wire | If used instead of BIM-17-2 |
+| Connection       | Source                    | Destination           | Wire Gauge  | Notes                       |
+| :--------------- | :------------------------ | :-------------------- | :---------- | :-------------------------- |
+| **Constant**     | Critical Cabin PDU Slot 4 | GPS-50-2 power        | 18 AWG ✓    | BIM CONSTANT power          |
+| **BIM/IO**       | HDX control box           | GPS-50-2 input        | Proprietary | Data via daisy-chain        |
+| **GPS Antenna**  | GPS-50-2 module           | Dash/windshield mount | Coax cable  | Included antenna cable      |
+| **Outside Temp** | GPS-50-2 (optional)       | SEN-15-1 probe        | Sensor wire | If used instead of BIM-17-2 |
 
 **Antenna Routing:**
 

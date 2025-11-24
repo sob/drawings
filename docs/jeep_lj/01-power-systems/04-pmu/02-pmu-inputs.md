@@ -23,17 +23,17 @@ See [Ignition Signal Distribution](#ignition-signal-distribution) for complete w
 
 **Note:** Pin 7 (physical 12V switched input above) is separate from In 7 (digital input channel below). Use "Pin7" in programming for ignition sense, "In7" for headlight status.
 
-| Input    | Function             | Source                       | Connected to Output       | Notes                                                                           |
-|:---------|:---------------------|:-----------------------------|:--------------------------|:--------------------------------------------------------------------------------|
-| **In 1** | Horn Button          | Steering wheel button        | Out 18 (Horn)             | Normally open, closes when pressed                                              |
-| **In 2** | Brake Switch         | Brake pedal switch           | Out 21 (Brake Lights)     | Normally open, closes when pedal pressed                                        |
-| **In 3** | Reverse Switch       | AX15 trans switch            | Out 22 (Reverse Lights)   | Normally open, closes in reverse gear                                           |
-| **In 4** | **[Available]**      | -                            | -                         | Available for future expansion                                                  |
-| **In 5** | **[Available]**      | -                            | -                         | Available for future expansion                                                  |
-| **In 6** | **[Available]**      | -                            | -                         | Available for future expansion                                                  |
-| **In 7** | CT4 SW3 (Headlights) | CT4 lever pull               | Out 14 (DRL) logic        | 12V when headlights active, disables DRL                                        |
-| **In 8** | **[Available]**      | -                            | -                         | Available for future expansion  |
-| **In 9** | A/C Request          | Factory TJ A/C button signal | Out 17 (A/C Clutch)       | 12V when factory dash A/C button pressed                                        |
+| Input    | Function             | Source                       | Connected to Output     | Notes                                    |
+| :------- | :------------------- | :--------------------------- | :---------------------- | :--------------------------------------- |
+| **In 1** | Horn Button          | Steering wheel button        | Out 18 (Horn)           | Normally open, closes when pressed       |
+| **In 2** | Brake Switch         | Brake pedal switch           | Out 21 (Brake Lights)   | Normally open, closes when pedal pressed |
+| **In 3** | Reverse Switch       | AX15 trans switch            | Out 22 (Reverse Lights) | Normally open, closes in reverse gear    |
+| **In 4** | **[Available]**      | -                            | -                       | Available for future expansion           |
+| **In 5** | **[Available]**      | -                            | -                       | Available for future expansion           |
+| **In 6** | **[Available]**      | -                            | -                       | Available for future expansion           |
+| **In 7** | CT4 SW3 (Headlights) | CT4 lever pull               | Out 14 (DRL) logic      | 12V when headlights active, disables DRL |
+| **In 8** | **[Available]**      | -                            | -                       | Available for future expansion           |
+| **In 9** | A/C Request          | Factory TJ A/C button signal | Out 17 (A/C Clutch)     | 12V when factory dash A/C button pressed |
 
 **Note:** Starter system uses traditional direct control (keyswitch → clutch switch → relay) independent of PMU. See [Starter System][starter].
 
@@ -41,10 +41,10 @@ See [Ignition Signal Distribution](#ignition-signal-distribution) for complete w
 
 ## Analog Inputs
 
-| Input    | Physical Pin | Range | Function        | Notes                                |
-|:---------|:-------------|:------|:----------------|:-------------------------------------|
-| **An 1-8** | Dedicated | 0-5V | **[Available]** | 8 dedicated analog inputs for custom sensors |
-| **An 9-16** | OUT17-24 | 0-20V | **[Configured as outputs]** | Dual-purpose pins - currently used as OUT17-24 |
+| Input       | Physical Pin | Range | Function                    | Notes                                          |
+| :---------- | :----------- | :---- | :-------------------------- | :--------------------------------------------- |
+| **An 1-8**  | Dedicated    | 0-5V  | **[Available]**             | 8 dedicated analog inputs for custom sensors   |
+| **An 9-16** | OUT17-24     | 0-20V | **[Configured as outputs]** | Dual-purpose pins - currently used as OUT17-24 |
 
 **Current Configuration:** An 9-16 configured as outputs (OUT17-24). See [PMU Outputs][pmu-outputs] for output assignments.
 
@@ -74,12 +74,12 @@ PMU24 taps into existing J1939 CAN bus as stub connection (no termination).
 
 ### J1939 Data Used
 
-| SPN | Parameter | PMU Use |
-|:---:|:----------|:--------|
-| **175** | Engine Oil Temp | Oil cooler fan control (OUT 7) |
-| **110** | Engine Coolant Temp | PS cooler fan control (OUT 8) |
-| **190** | Engine Speed (RPM) | Data logging |
-| **100** | Engine Oil Pressure | Data logging |
+|   SPN   | Parameter           | PMU Use                        |
+| :-----: | :------------------ | :----------------------------- |
+| **175** | Engine Oil Temp     | Oil cooler fan control (OUT 7) |
+| **110** | Engine Coolant Temp | PS cooler fan control (OUT 8)  |
+| **190** | Engine Speed (RPM)  | Data logging                   |
+| **100** | Engine Oil Pressure | Data logging                   |
 
 See [PMU Programming][pmu-programming] for CAN-based logic examples.
 

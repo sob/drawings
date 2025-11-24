@@ -11,12 +11,12 @@ Engine bay power distribution handled by ECUMaster PMU24, a programmable power m
 
 ## Power Connections
 
-| Connection | Source | Wire Gauge | Protection | Notes |
-|:-----------|:-------|:-----------|:-----------|:------|
-| **Main Power** | START battery+ | 2/0 AWG | 250A CB | Optimized for 220A max load with proper protection coordination - See [Circuit Breakers][front-circuit-breakers] |
-| **Ground** | START battery- | 2/0 AWG | N/A | Matches power wire gauge for 220A max load - See [Grounding Architecture][grounding] |
-| **Ignition Sense** | Keyswitch RUN | 18 AWG | N/A | Dedicated wire - see [PMU Inputs][pmu-inputs] |
-| **CAN Bus** | Cummins ECM J1939 | 18-20 AWG twisted pair | N/A | Stub tap - see [PMU Inputs][pmu-inputs] |
+| Connection         | Source            | Wire Gauge             | Protection | Notes                                                                                                            |
+| :----------------- | :---------------- | :--------------------- | :--------- | :--------------------------------------------------------------------------------------------------------------- |
+| **Main Power**     | START battery+    | 2/0 AWG                | 250A CB    | Optimized for 220A max load with proper protection coordination - See [Circuit Breakers][front-circuit-breakers] |
+| **Ground**         | START battery-    | 2/0 AWG                | N/A        | Matches power wire gauge for 220A max load - See [Grounding Architecture][grounding]                             |
+| **Ignition Sense** | Keyswitch RUN     | 18 AWG                 | N/A        | Dedicated wire - see [PMU Inputs][pmu-inputs]                                                                    |
+| **CAN Bus**        | Cummins ECM J1939 | 18-20 AWG twisted pair | N/A        | Stub tap - see [PMU Inputs][pmu-inputs]                                                                          |
 
 ## System Components
 

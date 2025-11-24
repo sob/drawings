@@ -12,12 +12,12 @@ All firewall penetration points for wire routing between engine bay and cabin.
 
 ## Summary
 
-| Penetration | Size | Direction | Circuits |
-|:------------|:-----|:----------|:---------|
-| Cummins Bulkhead | 2" dia | Engine ↔ Cabin | ECM harness, J1939 CAN, accelerator pedal |
-| Grommet 1 | 1" ID | Engine → Cabin | PMU outputs (lights, radio power) |
-| Grommet 2 | 3/8" ID | Cabin → Engine | PMU inputs (switches, ignition sense) |
-| Grommet 3 | 1/4" ID | Cabin → Grille | Dakota Digital outside temp probe |
+| Penetration      | Size    | Direction        | Circuits                                  |
+| :--------------- | :------ | :--------------- | :---------------------------------------- |
+| Cummins Bulkhead | 2" dia  | Engine <-> Cabin | ECM harness, J1939 CAN, accelerator pedal |
+| Grommet 1        | 1" ID   | Engine -> Cabin  | PMU outputs (lights, radio power)         |
+| Grommet 2        | 3/8" ID | Cabin -> Engine  | PMU inputs (switches, ignition sense)     |
+| Grommet 3        | 1/4" ID | Cabin -> Grille  | Dakota Digital outside temp probe         |
 
 ---
 
@@ -33,14 +33,14 @@ All firewall penetration points for wire routing between engine bay and cabin.
 
 **Size:** 1" ID grommet (20% spare capacity)
 
-| Circuit | PMU | Gauge |
-|:--------|:----|:------|
-| Brake lights | OUT21 | 16 AWG |
-| Reverse lights | OUT22 | 16 AWG |
-| GMRS Radio power | OUT6 | 10 AWG |
-| Ham Radio power | OUT12 | 10 AWG |
-| STX Intercom power | OUT20 | 14 AWG |
-| Horn trigger return | - | 18 AWG |
+| Circuit             | PMU   | Gauge  |
+| :------------------ | :---- | :----- |
+| Brake lights        | OUT21 | 16 AWG |
+| Reverse lights      | OUT22 | 16 AWG |
+| GMRS Radio power    | OUT6  | 10 AWG |
+| Ham Radio power     | OUT12 | 10 AWG |
+| STX Intercom power  | OUT20 | 14 AWG |
+| Horn trigger return | -     | 18 AWG |
 
 ---
 
@@ -48,12 +48,12 @@ All firewall penetration points for wire routing between engine bay and cabin.
 
 **Size:** 3/8" ID grommet
 
-| Circuit | PMU | Gauge |
-|:--------|:----|:------|
-| Ignition sense | Pin 7 | 18 AWG |
-| Brake switch | In 2 | 18 AWG |
-| A/C request | In 9 | 18 AWG |
-| Clutch switch output | - | 18 AWG |
+| Circuit              | PMU   | Gauge  |
+| :------------------- | :---- | :----- |
+| Ignition sense       | Pin 7 | 18 AWG |
+| Brake switch         | In 2  | 18 AWG |
+| A/C request          | In 9  | 18 AWG |
+| Clutch switch output | -     | 18 AWG |
 
 ---
 

@@ -91,13 +91,13 @@ ELSE:
 
 ## Load Reduction Analysis
 
-| Load Shed | Current Saved | Impact | When Disabled |
-|:----------|:--------------|:-------|:--------------|
-| DRL (OUT14) | 8A | Low - cosmetic only | Always when ARB runs |
-| A/C Clutch (OUT17) | 5A | Medium - comfort loss | Always when ARB runs |
-| Oil Cooler Fan (OUT7) | 15A | Low - if oil temp <220°F | Temperature-dependent |
-| PS Cooler Fan (OUT8) | 15A | Low - if coolant temp <210°F | Temperature-dependent |
-| **Total Saved** | **28-43A** | - | - |
+| Load Shed             | Current Saved | Impact                       | When Disabled         |
+| :-------------------- | :------------ | :--------------------------- | :-------------------- |
+| DRL (OUT14)           | 8A            | Low - cosmetic only          | Always when ARB runs  |
+| A/C Clutch (OUT17)    | 5A            | Medium - comfort loss        | Always when ARB runs  |
+| Oil Cooler Fan (OUT7) | 15A           | Low - if oil temp <220°F     | Temperature-dependent |
+| PS Cooler Fan (OUT8)  | 15A           | Low - if coolant temp <210°F | Temperature-dependent |
+| **Total Saved**       | **28-43A**    | -                            | -                     |
 
 ## AUX Battery Impact Analysis
 
@@ -122,7 +122,7 @@ Time to 50% SOC:         45 minutes
 
 - PMU + radiator fan + BCDC = ~165A typical
 - Alternator: 270A
-- **Margin: +105A** ✅ Alternator is NOT the constraint
+- **Margin: +105A** Alternator is NOT the constraint
 
 ### WITH Load Shedding (Minimum - 13A shed from START)
 
@@ -136,7 +136,7 @@ BCDC at full rate:    50A   (maximized)
 ─────────────────────────────
 START total:         178A
 Alternator:          270A
-Margin:              +92A   ✅
+Margin:              +92A
 
 AUX battery:
 ARB compressor:       90A
@@ -160,7 +160,7 @@ BCDC at full rate:    50A
 ─────────────────────────────
 START total:         148A
 Alternator:          270A
-Margin:             +122A   ✅ Excellent
+Margin:             +122A   Excellent
 
 AUX battery:
 Net AUX drain:        45A   (unchanged)
@@ -242,7 +242,7 @@ ELSE:
 4. **Avoid Simultaneous High Loads:**
    - ❌ ARB + winch (both 90A+ loads)
    - ❌ ARB + all accessories at idle
-   - ✅ ARB + normal driving loads at 1500+ RPM
+   - ARB + normal driving loads at 1500+ RPM
 
 ## Testing & Validation
 

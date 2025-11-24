@@ -33,13 +33,13 @@ tags:
 
 ## Specifications
 
-| Spec | Value |
-|:-----|:------|
-| Display | 10" ultrabright touchscreen |
-| GPS | 10 Hz receiver |
-| Rating | IP67 (dust/water) |
-| Connectivity | Bluetooth, Wi-Fi |
-| Maps | North/South America topographic |
+| Spec         | Value                           |
+| :----------- | :------------------------------ |
+| Display      | 10" ultrabright touchscreen     |
+| GPS          | 10 Hz receiver                  |
+| Rating       | IP67 (dust/water)               |
+| Connectivity | Bluetooth, Wi-Fi                |
+| Maps         | North/South America topographic |
 
 ## Features
 
@@ -53,20 +53,20 @@ tags:
 
 ## Integration
 
-| Feature | Connection | Notes |
-|:--------|:-----------|:------|
-| Smartphone | Bluetooth | Live weather, Tread app |
-| Headsets | Bluetooth | Audio navigation prompts |
-| inReach | Bluetooth | Satellite communication |
-| Group Ride Radio | Garmin accessory | Vehicle-to-vehicle tracking |
-| PowerSwitch | Garmin accessory | Digital switch control (not used - have SwitchPros) |
+| Feature          | Connection       | Notes                                               |
+| :--------------- | :--------------- | :-------------------------------------------------- |
+| Smartphone       | Bluetooth        | Live weather, Tread app                             |
+| Headsets         | Bluetooth        | Audio navigation prompts                            |
+| inReach          | Bluetooth        | Satellite communication                             |
+| Group Ride Radio | Garmin accessory | Vehicle-to-vehicle tracking                         |
+| PowerSwitch      | Garmin accessory | Digital switch control (not used - have SwitchPros) |
 
 ## Wiring
 
-| Connection | Wire | Source | Notes |
-|:-----------|:-----|:-------|:------|
-| Power (+) | Per harness | TBD | Bare wire power cable included |
-| Ground (−) | Per harness | TBD | Bare wire power cable included |
+| Connection | Wire        | Source | Notes                          |
+| :--------- | :---------- | :----- | :----------------------------- |
+| Power (+)  | Per harness | TBD    | Bare wire power cable included |
+| Ground (−) | Per harness | TBD    | Bare wire power cable included |
 
 ## Outstanding Items
 

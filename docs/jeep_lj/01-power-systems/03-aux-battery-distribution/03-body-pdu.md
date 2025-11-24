@@ -44,31 +44,31 @@ tags:
 
 ## Circuit Breaker Configuration
 
-| CB Position | Original Military Label | Repurposed Circuit | Size | Gauge | Load | Relay | Notes |
-|:------------|:-----------------------|:-------------------|:-----|:------|:-----|:------|:------|
-| CB30 | CHEM DETECT | Fusion Radio (memory) | 10A | 18AWG | ~1A | - | Memory/clock retention only |
-| CB44 | TRLR LIGHT | Fusion Radio (amplifier) | 15A | 14AWG | ~15A | - | Remote wire from deck triggers on/off |
-| CB48 | ARCT CRAN | USB Charging Ports | 20A | 14AWG | ~13A | - | 2x Powerwerx PanelUSB-75W always-on |
-| CB39 | TRLR BO STOP | WolfBox Camera/Mirror | 10A | 16AWG | ~10A | - | Dash cam + backup camera |
-| CB45 | IGNITION | Driver Heated Seat | 15A | 14AWG | 5A peak, 2A sustained | K21 | Manual switch → relay K21 → seat element |
-| CB42 | 2WAY INTRCM | Passenger Heated Seat | 20A | 14AWG | 5A peak, 2A sustained | K22 | Manual switch → relay K22 → seat element |
-| CB20 | RADIO | **[Available]** | 25A | - | - | - | High-current spare (future ham radio) |
-| CB43 | TRANS ECU | Winch Control (dash rocker) | 10A | 18AWG | ~2A | - | Dash rocker + remote parallel control |
+| CB Position | Original Military Label | Repurposed Circuit          | Size | Gauge | Load                  | Relay | Notes                                    |
+| :---------- | :---------------------- | :-------------------------- | :--- | :---- | :-------------------- | :---- | :--------------------------------------- |
+| CB30        | CHEM DETECT             | Fusion Radio (memory)       | 10A  | 18AWG | ~1A                   | -     | Memory/clock retention only              |
+| CB44        | TRLR LIGHT              | Fusion Radio (amplifier)    | 15A  | 14AWG | ~15A                  | -     | Remote wire from deck triggers on/off    |
+| CB48        | ARCT CRAN               | USB Charging Ports          | 20A  | 14AWG | ~13A                  | -     | 2x Powerwerx PanelUSB-75W always-on      |
+| CB39        | TRLR BO STOP            | WolfBox Camera/Mirror       | 10A  | 16AWG | ~10A                  | -     | Dash cam + backup camera                 |
+| CB45        | IGNITION                | Driver Heated Seat          | 15A  | 14AWG | 5A peak, 2A sustained | K21   | Manual switch → relay K21 → seat element |
+| CB42        | 2WAY INTRCM             | Passenger Heated Seat       | 20A  | 14AWG | 5A peak, 2A sustained | K22   | Manual switch → relay K22 → seat element |
+| CB20        | RADIO                   | **[Available]**             | 25A  | -     | -                     | -     | High-current spare (future ham radio)    |
+| CB43        | TRANS ECU               | Winch Control (dash rocker) | 10A  | 18AWG | ~2A                   | -     | Dash rocker + remote parallel control    |
 
 **Circuit Breaker Utilization:** 7 of 8 used, 1 available
 
 ## Relay Configuration
 
-| Relay Position | Original Military Label | Repurposed Function | Voltage | Control | Notes |
-|:---------------|:-----------------------|:-------------------|:--------|:--------|:------|
-| K21 | REAR LEFT LIGHT | Driver Heated Seat | 12V | Dash switch | Controls CB45 output to driver seat |
-| K22 | REAR RIGHT LIGHT | Passenger Heated Seat | 12V | Dash switch | Controls CB42 output to passenger seat |
-| K27 | TRAILER BO STOP | **[Available]** | 12V | - | Future expansion |
-| K30 | TRAILER REAR LEFT | **[Available]** | 12V | - | Future expansion |
-| K31 | TRAILER REAR RIGHT | **[Available]** | 12V | - | Future expansion |
-| K53 | RADIO | **[Available]** | 24V→12V | - | Replace with 12V relay |
-| K40 | START DISABEL | **[Available]** | 24V→12V | - | Replace with 12V relay |
-| K42 | ENGINE PTO | **[Available]** | 24V→12V | - | Replace with 12V relay |
+| Relay Position | Original Military Label | Repurposed Function   | Voltage | Control     | Notes                                  |
+| :------------- | :---------------------- | :-------------------- | :------ | :---------- | :------------------------------------- |
+| K21            | REAR LEFT LIGHT         | Driver Heated Seat    | 12V     | Dash switch | Controls CB45 output to driver seat    |
+| K22            | REAR RIGHT LIGHT        | Passenger Heated Seat | 12V     | Dash switch | Controls CB42 output to passenger seat |
+| K27            | TRAILER BO STOP         | **[Available]**       | 12V     | -           | Future expansion                       |
+| K30            | TRAILER REAR LEFT       | **[Available]**       | 12V     | -           | Future expansion                       |
+| K31            | TRAILER REAR RIGHT      | **[Available]**       | 12V     | -           | Future expansion                       |
+| K53            | RADIO                   | **[Available]**       | 24V→12V | -           | Replace with 12V relay                 |
+| K40            | START DISABEL           | **[Available]**       | 24V→12V | -           | Replace with 12V relay                 |
+| K42            | ENGINE PTO              | **[Available]**       | 24V→12V | -           | Replace with 12V relay                 |
 
 **Relay Utilization:** 2 of 8 used, 6 available (3 require 12V relay replacement)
 
@@ -77,7 +77,7 @@ tags:
 **Control:** All circuits on CONSTANT power with trigger-wire or manual switch control for on/off
 
 !!! info "Communication Devices"
-    G1 GMRS Radio, STX Intercom, and Ham Radio are powered from [SafetyHub 150][safetyhub] (START battery) as critical infrastructure, with direct grounds to START battery to minimize RF noise.
+G1 GMRS Radio, STX Intercom, and Ham Radio are powered from [SafetyHub 150][safetyhub] (START battery) as critical infrastructure, with direct grounds to START battery to minimize RF noise.
 
 ## Outstanding Items
 

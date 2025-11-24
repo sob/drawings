@@ -20,25 +20,25 @@ The AUX battery (passenger wheel well) provides power for high-current accessori
 See [CONSTANT Bus Bar][constant-bus] for complete bus bar specifications, [SafetyHub][aux-safetyhub] for fused distribution, and [Circuit Breakers][circuit-breakers] for CB details.
 
 !!! info "Single Source of Truth"
-    This page is the authoritative source for all AUX battery wire specs (gauge, distance, voltage drop). Component pages reference here. For battery specs see [Section 1.1][batteries]. For ground bus bars see [Section 1.5][grounding].
+This page is the authoritative source for all AUX battery wire specs (gauge, distance, voltage drop). Component pages reference here. For battery specs see [Section 1.1][batteries]. For ground bus bars see [Section 1.5][grounding].
 
 ## AUX battery Positive Terminal (3 connections)
 
-| Circuit | Destination | Wire Gauge | Distance | Current | Voltage Drop | Protection |
-|:--------|:------------|:-----------|:---------|:--------|:-------------|:-----------|
-| [BCDC Alpha 50][bcdc] | Local | 4 AWG | Short | 50A | Negligible | None |
-| [CONSTANT Bus Bar][constant-bus] | Local | 1/0 AWG | ~3 ft | 254A max | 0.9% @ 20°C | None |
-| [Winch][recovery] | Front bumper | 1/0 AWG | 13 ft | 250-400A | 4.9-7.9% @ 20°C | [None][winch-protection] |
+| Circuit                          | Destination  | Wire Gauge | Distance | Current  | Voltage Drop    | Protection               |
+| :------------------------------- | :----------- | :--------- | :------- | :------- | :-------------- | :----------------------- |
+| [BCDC Alpha 50][bcdc]            | Local        | 4 AWG      | Short    | 50A      | Negligible      | None                     |
+| [CONSTANT Bus Bar][constant-bus] | Local        | 1/0 AWG    | ~3 ft    | 254A max | 0.9% @ 20°C     | None                     |
+| [Winch][recovery]                | Front bumper | 1/0 AWG    | 13 ft    | 250-400A | 4.9-7.9% @ 20°C | [None][winch-protection] |
 
 ## AUX battery Negative Terminal (5 connections)
 
-| Circuit | Destination | Wire Gauge | Distance | Current | Voltage Drop |
-|:--------|:------------|:-----------|:---------|:--------|:-------------|
-| Rear Frame Rail | Local (chassis) | 2/0 AWG | ~3 ft | 654A peak | <0.1V @ 20°C |
-| [BCDC Alpha 50][bcdc] | Local | 4 AWG | Short | 50A | Negligible |
-| [Fusion Apollo Amp][audio] | Local | Per spec | <18" | Per spec | Negligible |
-| [START Battery][starter-battery] | Driver wheel well | 1/0 AWG | 5-6 ft | 75A max | <0.05V @ 20°C |
-| [Winch][recovery] | Front bumper | 1/0 AWG | 13 ft | 250-400A | 4.9-7.9% @ 20°C |
+| Circuit                          | Destination       | Wire Gauge | Distance | Current   | Voltage Drop    |
+| :------------------------------- | :---------------- | :--------- | :------- | :-------- | :-------------- |
+| Rear Frame Rail                  | Local (chassis)   | 2/0 AWG    | ~3 ft    | 654A peak | <0.1V @ 20°C    |
+| [BCDC Alpha 50][bcdc]            | Local             | 4 AWG      | Short    | 50A       | Negligible      |
+| [Fusion Apollo Amp][audio]       | Local             | Per spec   | <18"     | Per spec  | Negligible      |
+| [START Battery][starter-battery] | Driver wheel well | 1/0 AWG    | 5-6 ft   | 75A max   | <0.05V @ 20°C   |
+| [Winch][recovery]                | Front bumper      | 1/0 AWG    | 13 ft    | 250-400A  | 4.9-7.9% @ 20°C |
 
 ## Related Documentation
 

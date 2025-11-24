@@ -35,25 +35,25 @@ RGB interior lighting synced with stereo speaker LEDs via JL Audio MLC-RW contro
 
 ## Specifications
 
-| Spec | Value |
-|:-----|------:|
-| Wiring | Common anode (5-pin RGBW) |
-| Waterproof | IP68 |
+| Spec         |                       Value |
+| :----------- | --------------------------: |
+| Wiring       |   Common anode (5-pin RGBW) |
+| Waterproof   |                        IP68 |
 | Construction | Epoxy filled, aluminum body |
-| Wire Length | 14.5' per pod |
-| Price | ~$15 each |
+| Wire Length  |               14.5' per pod |
+| Price        |                   ~$15 each |
 
 ## Wiring
 
 Pods wire directly to MLC-RW outputs in parallel with JL Audio speaker LEDs:
 
-| LED4Life Wire | MLC-RW Wire | Function |
-|:--------------|:------------|:---------|
-| +12V | White | Common anode (+12V) |
-| R | Red | Red LED (−) |
-| G | Green | Green LED (−) |
-| B | Blue | Blue LED (−) |
-| W | *Not connected* | White LED (unused) |
+| LED4Life Wire | MLC-RW Wire     | Function            |
+| :------------ | :-------------- | :------------------ |
+| +12V          | White           | Common anode (+12V) |
+| R             | Red             | Red LED (−)         |
+| G             | Green           | Green LED (−)       |
+| B             | Blue            | Blue LED (−)        |
+| W             | _Not connected_ | White LED (unused)  |
 
 W channel capped off - MLC-RW is RGB only. RGB can produce white when all channels on.
 

@@ -37,16 +37,16 @@ Provides organized distribution for accessory circuits in the rear wheel well co
 - **Full Specs:** [Blue Sea 2104][product-link]
 
 !!! info "Circuit Protection"
-    No circuit breaker between battery and CONSTANT bus. Each load has individual CB protection: SwitchPros (150A), SafetyHub (150A), BODY PDU (100A). See [Circuit Breakers][circuit-breakers].
+No circuit breaker between battery and CONSTANT bus. Each load has individual CB protection: SwitchPros (150A), SafetyHub (150A), BODY PDU (100A). See [Circuit Breakers][circuit-breakers].
 
 ## Load Distribution
 
-| Stud | Connection | Wire Gauge | Distance | Voltage Drop | Protection | Load | Notes |
-|:-----|:-----------|:-----------|:---------|:-------------|:-----------|:-----|:------|
-| 1 | **AUX battery+ (INPUT)** | 1/0 AWG | ~3 ft | 0.9% @ 20°C | None | ~254A max | See [AUX battery][rear-battery] |
-| 2 | [SwitchPros][switchpros] | 2 AWG | ~2 ft | 0.4% @ 20°C | 150A CB | ~100A max | Auxiliary lighting |
-| 3 | [SafetyHub 150][safetyhub] | 2 AWG | ~2 ft | 0.4% @ 20°C | 150A CB | ~100A max | ARB compressor, winch trigger |
-| 4 | [BODY PDU][body-rtmr] | 2 AWG | ~12 ft | 1.2% @ 20°C | 100A CB | ~54A max | Cabin circuits |
+| Stud | Connection                 | Wire Gauge | Distance | Voltage Drop | Protection | Load      | Notes                           |
+| :--- | :------------------------- | :--------- | :------- | :----------- | :--------- | :-------- | :------------------------------ |
+| 1    | **AUX battery+ (INPUT)**   | 1/0 AWG    | ~3 ft    | 0.9% @ 20°C  | None       | ~254A max | See [AUX battery][rear-battery] |
+| 2    | [SwitchPros][switchpros]   | 2 AWG      | ~2 ft    | 0.4% @ 20°C  | 150A CB    | ~100A max | Auxiliary lighting              |
+| 3    | [SafetyHub 150][safetyhub] | 2 AWG      | ~2 ft    | 0.4% @ 20°C  | 150A CB    | ~100A max | ARB compressor, winch trigger   |
+| 4    | [BODY PDU][body-rtmr]      | 2 AWG      | ~12 ft   | 1.2% @ 20°C  | 100A CB    | ~54A max  | Cabin circuits                  |
 
 **Stud Utilization:** 4 of 4 used (0 available)
 

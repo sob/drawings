@@ -37,14 +37,14 @@ tags:
 
 ## Wiring
 
-| Connection | Terminal Label | Terminal Size | Source/Destination | Notes |
-|:-----------|:---------------|:--------------|:-------------------|:------|
-| Start Battery (+) | Red | M8 | START battery positive | See [START Battery Distribution][starter-battery] for wire specs |
-| Auxiliary Battery (+) | Brown | M8 | AUX battery positive | See [AUX Battery Distribution][aux-battery] for wire specs |
-| Solar (+) | Yellow | TBD | Cascadia 4x4 80W panel | See [Solar Charging][solar] |
-| Ground (-) | Black | M8 | AUX battery negative | See [AUX Battery Distribution][aux-battery] for wire specs |
-| Ignition | Blue | Spade | PMU ignition sense tap | 18 AWG - see [PMU Inputs][pmu-inputs] |
-| Battery Temp Sensor | +/- (reversible) | 2-pin plug | AUX battery positive terminal | **REQUIRED** - AGM temperature-compensated charging |
+| Connection            | Terminal Label   | Terminal Size | Source/Destination            | Notes                                                            |
+| :-------------------- | :--------------- | :------------ | :---------------------------- | :--------------------------------------------------------------- |
+| Start Battery (+)     | Red              | M8            | START battery positive        | See [START Battery Distribution][starter-battery] for wire specs |
+| Auxiliary Battery (+) | Brown            | M8            | AUX battery positive          | See [AUX Battery Distribution][aux-battery] for wire specs       |
+| Solar (+)             | Yellow           | TBD           | Cascadia 4x4 80W panel        | See [Solar Charging][solar]                                      |
+| Ground (-)            | Black            | M8            | AUX battery negative          | See [AUX Battery Distribution][aux-battery] for wire specs       |
+| Ignition              | Blue             | Spade         | PMU ignition sense tap        | 18 AWG - see [PMU Inputs][pmu-inputs]                            |
+| Battery Temp Sensor   | +/- (reversible) | 2-pin plug    | AUX battery positive terminal | **REQUIRED** - AGM temperature-compensated charging              |
 
 See [START Battery Distribution][starter-battery] and [AUX Battery Distribution][aux-battery] for complete wire specifications (gauge, distance, routing, circuit breakers).
 
@@ -66,11 +66,11 @@ The BCDC manages charging and isolation between starter and aux batteries:
 
 **Upgrade from 25A to 50A BCDC provides significant improvement for high-draw scenarios:**
 
-| Scenario | AUX Draw | 25A BCDC | 50A BCDC | Improvement |
-|:---------|:---------|:---------|:---------|:------------|
-| Night Offroad (full lights) | 70A | -45A drain | **-20A drain** | 2.3× longer runtime |
-| Airing Up Tires | 110A | -85A drain | **-60A drain** | 30% less battery impact |
-| Recovery after air-up | - | 34 min to recover 10Ah | **17 min** | Half the recovery time |
+| Scenario                    | AUX Draw | 25A BCDC               | 50A BCDC       | Improvement             |
+| :-------------------------- | :------- | :--------------------- | :------------- | :---------------------- |
+| Night Offroad (full lights) | 70A      | -45A drain             | **-20A drain** | 2.3× longer runtime     |
+| Airing Up Tires             | 110A     | -85A drain             | **-60A drain** | 30% less battery impact |
+| Recovery after air-up       | -        | 34 min to recover 10Ah | **17 min**     | Half the recovery time  |
 
 See [AUX Battery Load Analysis][aux-load-analysis] for complete scenario details.
 

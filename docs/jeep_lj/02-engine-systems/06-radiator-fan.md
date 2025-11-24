@@ -37,22 +37,22 @@ Brushless PWM electric fan with automatic temperature control via PMU24. J1939 C
 
 ## Temperature Control
 
-| Coolant Temp | Fan Speed | PMU Duty Cycle | Current |
-|:-------------|:----------|:---------------|:--------|
-| <185°F | OFF | 100% | 0A |
-| 185-195°F | Low (30%) | 70% | ~16A |
-| 195-205°F | Medium (60%) | 40% | ~32A |
-| ≥205°F | Full (100%) | 10% | 53A |
+| Coolant Temp | Fan Speed    | PMU Duty Cycle | Current |
+| :----------- | :----------- | :------------- | :------ |
+| <185°F       | OFF          | 100%           | 0A      |
+| 185-195°F    | Low (30%)    | 70%            | ~16A    |
+| 195-205°F    | Medium (60%) | 40%            | ~32A    |
+| ≥205°F       | Full (100%)  | 10%            | 53A     |
 
 !!! warning "Inverted Duty Cycle"
-    GM brushless fans use **inverted duty cycle** - high duty cycle = low fan speed. PMU programming must account for this inversion.
+GM brushless fans use **inverted duty cycle** - high duty cycle = low fan speed. PMU programming must account for this inversion.
 
 ## Wiring
 
-| Circuit | Wire Gauge | Source | Destination | Notes |
-|:--------|:-----------|:-------|:------------|:------|
-| Fan Power | 4 AWG | PMU OUT2+3+4 | Fan motor (+) | ~6 ft, 3.4% drop @ 53A |
-| Fan Ground | 4 AWG | Fan motor (-) | Engine Bay Bus | Short run |
+| Circuit    | Wire Gauge | Source        | Destination    | Notes                  |
+| :--------- | :--------- | :------------ | :------------- | :--------------------- |
+| Fan Power  | 4 AWG      | PMU OUT2+3+4  | Fan motor (+)  | ~6 ft, 3.4% drop @ 53A |
+| Fan Ground | 4 AWG      | Fan motor (-) | Engine Bay Bus | Short run              |
 
 See [PMU Outputs][pmu-outputs] for complete configuration and [PMU Programming][pmu-programming] for control logic.
 

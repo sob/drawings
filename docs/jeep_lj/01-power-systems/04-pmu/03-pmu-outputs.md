@@ -11,44 +11,44 @@ Complete configuration of all 24 PMU outputs, load allocations, and combined out
 
 ### 25A High-Side Outputs (OUT1-OUT10)
 
-| Output | Circuit | Load | Ground | Control Type | Notes |
-|:-------|:--------|:-----|:-------|:-------------|:------|
-| **Out 1** | **iBooster Main (combined)** | Combined | [Engine Bay Bus][engine-ground] Stud 7 | CONSTANT | Combined with OUT10, 40A peak |
-| **Out 2** | **Radiator Fan (combined)** | Combined | Fan housing → engine block | PWM (CAN temp) | Combined with OUT3+4, 53A max |
-| **Out 3** | **Radiator Fan (combined)** | Combined | Fan housing → engine block | PWM (CAN temp) | Combined with OUT2+4 |
-| **Out 4** | **Radiator Fan (combined)** | Combined | Fan housing → engine block | PWM (CAN temp) | Combined with OUT2+3 |
-| **Out 5** | HVAC Blower Motor | ~20A | Factory HVAC ground | Auto (ignition ON) | See [HVAC System][hvac-system] |
-| **Out 6** | GMRS Radio (Midland G1) | 15A | [Direct START battery-][starter-battery-distribution] | CONSTANT | RF noise isolation |
-| **Out 7** | Oil Cooler Fan | ~15A | [Engine Bay Bus][engine-ground] Stud 8 | Auto (CAN temp) | SPN 175 oil temp trigger |
-| **Out 8** | PS Cooler Fan | ~15A | [Engine Bay Bus][engine-ground] Stud 8 | Auto (CAN temp) | SPN 110 coolant temp trigger |
-| **Out 9** | Dakota Digital System | ~25A | [Firewall Stud Bus][firewall-ground] T4-5 | CONSTANT | Cluster + 4 BIM modules |
-| **Out 10** | **iBooster Main (combined)** | Combined | [Engine Bay Bus][engine-ground] Stud 7 | CONSTANT | Combined with OUT1 |
+| Output     | Circuit                      | Load     | Ground                                                | Control Type       | Notes                          |
+| :--------- | :--------------------------- | :------- | :---------------------------------------------------- | :----------------- | :----------------------------- |
+| **Out 1**  | **iBooster Main (combined)** | Combined | [Engine Bay Bus][engine-ground] Stud 7                | CONSTANT           | Combined with OUT10, 40A peak  |
+| **Out 2**  | **Radiator Fan (combined)**  | Combined | Fan housing → engine block                            | PWM (CAN temp)     | Combined with OUT3+4, 53A max  |
+| **Out 3**  | **Radiator Fan (combined)**  | Combined | Fan housing → engine block                            | PWM (CAN temp)     | Combined with OUT2+4           |
+| **Out 4**  | **Radiator Fan (combined)**  | Combined | Fan housing → engine block                            | PWM (CAN temp)     | Combined with OUT2+3           |
+| **Out 5**  | HVAC Blower Motor            | ~20A     | Factory HVAC ground                                   | Auto (ignition ON) | See [HVAC System][hvac-system] |
+| **Out 6**  | GMRS Radio (Midland G1)      | 15A      | [Direct START battery-][starter-battery-distribution] | CONSTANT           | RF noise isolation             |
+| **Out 7**  | Oil Cooler Fan               | ~15A     | [Engine Bay Bus][engine-ground] Stud 8                | Auto (CAN temp)    | SPN 175 oil temp trigger       |
+| **Out 8**  | PS Cooler Fan                | ~15A     | [Engine Bay Bus][engine-ground] Stud 8                | Auto (CAN temp)    | SPN 110 coolant temp trigger   |
+| **Out 9**  | Dakota Digital System        | ~25A     | [Firewall Stud Bus][firewall-ground] T4-5             | CONSTANT           | Cluster + 4 BIM modules        |
+| **Out 10** | **iBooster Main (combined)** | Combined | [Engine Bay Bus][engine-ground] Stud 7                | CONSTANT           | Combined with OUT1             |
 
 ### 15A High-Side Outputs (OUT11-OUT16)
 
-| Output | Circuit | Load | Ground | Control Type | Notes |
-|:-------|:--------|:-----|:-------|:-------------|:------|
-| **Out 11** | WS-51C Wiper Controller | 15A | [Firewall Stud Bus][firewall-ground] T2 | Auto (ignition ON) | See [Wipers][windshield-wiper-control-system] |
-| **Out 12** | Ham Radio (iCom IC-2730A) | 13A | [Direct START battery-][starter-battery-distribution] | CONSTANT | RF noise isolation |
-| **Out 13** | Command Touch CT4 | ~10A | [Firewall Stud Bus][firewall-ground] T1 | CONSTANT | Hazards/turn signals |
-| **Out 14** | DRL/Parking Lights | ~8A | [SwitchPros Ground Bus][switchpros-ground] | Auto (ignition) | See [DRL & Parking][drl-parking-lights] |
-| **Out 15** | Winch Contactor Trigger | 1A | Via winch contactor | Manual (dash rocker) | Control signal only |
-| **Out 16** | **[Available]** | - | - | - | Future expansion (15A) |
+| Output     | Circuit                   | Load | Ground                                                | Control Type         | Notes                                         |
+| :--------- | :------------------------ | :--- | :---------------------------------------------------- | :------------------- | :-------------------------------------------- |
+| **Out 11** | WS-51C Wiper Controller   | 15A  | [Firewall Stud Bus][firewall-ground] T2               | Auto (ignition ON)   | See [Wipers][windshield-wiper-control-system] |
+| **Out 12** | Ham Radio (iCom IC-2730A) | 13A  | [Direct START battery-][starter-battery-distribution] | CONSTANT             | RF noise isolation                            |
+| **Out 13** | Command Touch CT4         | ~10A | [Firewall Stud Bus][firewall-ground] T1               | CONSTANT             | Hazards/turn signals                          |
+| **Out 14** | DRL/Parking Lights        | ~8A  | [SwitchPros Ground Bus][switchpros-ground]            | Auto (ignition)      | See [DRL & Parking][drl-parking-lights]       |
+| **Out 15** | Winch Contactor Trigger   | 1A   | Via winch contactor                                   | Manual (dash rocker) | Control signal only                           |
+| **Out 16** | **[Available]**           | -    | -                                                     | -                    | Future expansion (15A)                        |
 
 ### 7A High-Side Outputs (OUT17-OUT24)
 
 **Note:** OUT17-24 are dual-purpose - configurable as 7A outputs OR 0-20V analog inputs. See [PMU Inputs][pmu-inputs] for analog input configuration.
 
-| Output | Circuit | Load | Ground | Control Type | Notes |
-|:-------|:--------|:-----|:-------|:-------------|:------|
-| **Out 17** | A/C Clutch | 3-5A | Factory A/C ground | Auto (A/C request) | See [HVAC System][hvac-system] |
-| **Out 18** | Horn | 5.4A | [Engine Bay Bus][engine-ground] Stud 6 | External input | PIAA horns (2.7A × 2) |
-| **Out 19** | iBooster Ignition Signal | ~5A | [Engine Bay Bus][engine-ground] Stud 7 | Auto (ignition RUN) | Same ground as iBooster main |
-| **Out 20** | STX Intercom | ~5A | [Direct START battery-][starter-battery-distribution] | Auto (ignition ON) | RF noise isolation |
-| **Out 21** | Brake Lights | ~3A | [SwitchPros Ground Bus][switchpros-ground] | External input | Shared tail light ground |
-| **Out 22** | Reverse Lights | ~3A | [SwitchPros Ground Bus][switchpros-ground] | External input | Shared tail light ground |
-| **Out 23** | **[Available]** | - | - | - | Future expansion (7A) |
-| **Out 24** | **[Available]** | - | - | - | Future expansion (7A) |
+| Output     | Circuit                  | Load | Ground                                                | Control Type        | Notes                          |
+| :--------- | :----------------------- | :--- | :---------------------------------------------------- | :------------------ | :----------------------------- |
+| **Out 17** | A/C Clutch               | 3-5A | Factory A/C ground                                    | Auto (A/C request)  | See [HVAC System][hvac-system] |
+| **Out 18** | Horn                     | 5.4A | [Engine Bay Bus][engine-ground] Stud 6                | External input      | PIAA horns (2.7A × 2)          |
+| **Out 19** | iBooster Ignition Signal | ~5A  | [Engine Bay Bus][engine-ground] Stud 7                | Auto (ignition RUN) | Same ground as iBooster main   |
+| **Out 20** | STX Intercom             | ~5A  | [Direct START battery-][starter-battery-distribution] | Auto (ignition ON)  | RF noise isolation             |
+| **Out 21** | Brake Lights             | ~3A  | [SwitchPros Ground Bus][switchpros-ground]            | External input      | Shared tail light ground       |
+| **Out 22** | Reverse Lights           | ~3A  | [SwitchPros Ground Bus][switchpros-ground]            | External input      | Shared tail light ground       |
+| **Out 23** | **[Available]**          | -    | -                                                     | -                   | Future expansion (7A)          |
+| **Out 24** | **[Available]**          | -    | -                                                     | -                   | Future expansion (7A)          |
 
 ## Combined Outputs
 
@@ -70,12 +70,12 @@ Complete configuration of all 24 PMU outputs, load allocations, and combined out
 
 **High-Current Outputs (Thermal Concerns):**
 
-| Outputs | Load | Terminal Rating | Utilization @ 40°C | Status | Notes |
-|:--------|:-----|:----------------|:-------------------|:-------|:------|
+| Outputs     | Load             | Terminal Rating                          | Utilization @ 40°C            | Status      | Notes                                                                     |
+| :---------- | :--------------- | :--------------------------------------- | :---------------------------- | :---------- | :------------------------------------------------------------------------ |
 | **OUT1+10** | 40A peak (brief) | 46A @ 40°C (non-adjacent)<br/>50A @ 23°C | 87% @ 40°C peak<br/>1% @ idle | ✓ EXCELLENT | iBooster - non-adjacent combining eliminates thermal concerns, 0.25A idle |
-| **OUT5** | 20A continuous | 23A (single @ 40°C) | 87% | ✓ OK | HVAC blower - relocated from OUT1, same thermal margin |
-| **OUT11** | 15A continuous | 19A (1.5mm terminal) | 79% | ✓ OK | Wiper controller - avoid adjacent to OUT12 if possible |
-| **OUT12** | 15A (if used) | 19A (1.5mm terminal) | 79% | ✓ OK | Available - avoid adjacent to OUT11 if possible |
+| **OUT5**    | 20A continuous   | 23A (single @ 40°C)                      | 87%                           | ✓ OK        | HVAC blower - relocated from OUT1, same thermal margin                    |
+| **OUT11**   | 15A continuous   | 19A (1.5mm terminal)                     | 79%                           | ✓ OK        | Wiper controller - avoid adjacent to OUT12 if possible                    |
+| **OUT12**   | 15A (if used)    | 19A (1.5mm terminal)                     | 79%                           | ✓ OK        | Available - avoid adjacent to OUT11 if possible                           |
 
 **Installation Notes:**
 
@@ -86,7 +86,7 @@ Complete configuration of all 24 PMU outputs, load allocations, and combined out
 - **Continuous loads** (HVAC, fans) require more conservative thermal margins than brief peaks
 
 !!! success "Thermal Analysis - iBooster Resolved"
-    **iBooster relocated from OUT5+6 (adjacent) to OUT1+10 (non-adjacent)** per ECUMaster PMU24 manual Section 2.13:
+**iBooster relocated from OUT5+6 (adjacent) to OUT1+10 (non-adjacent)** per ECUMaster PMU24 manual Section 2.13:
 
     - Non-adjacent 2.8mm terminals @ 40°C: 46A combined capacity (23A each)
     - iBooster 40A peak: 87% utilization ✓ Excellent thermal margin

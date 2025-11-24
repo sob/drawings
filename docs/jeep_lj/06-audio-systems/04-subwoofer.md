@@ -34,29 +34,29 @@ tags:
 
 ## Specifications
 
-| Spec | Value |
-|:-----|------:|
-| Power Handling | 600W RMS @ 4Ω |
-| Amplifier Output | 580W RMS (97% match) |
-| Impedance | 4Ω |
-| Sensitivity | 86.7 dB @ 1W/1m |
-| Free Air Resonance | 35.34 Hz |
-| Sealed -3dB | 35.52 Hz |
-| Ported -3dB | 20.96 Hz |
-| Voice Coil | 4" (102mm) |
-| Weight | 25.35 lbs |
-| Warranty | 3 years |
+| Spec               |                Value |
+| :----------------- | -------------------: |
+| Power Handling     |        600W RMS @ 4Ω |
+| Amplifier Output   | 580W RMS (97% match) |
+| Impedance          |                   4Ω |
+| Sensitivity        |      86.7 dB @ 1W/1m |
+| Free Air Resonance |             35.34 Hz |
+| Sealed -3dB        |             35.52 Hz |
+| Ported -3dB        |             20.96 Hz |
+| Voice Coil         |           4" (102mm) |
+| Weight             |            25.35 lbs |
+| Warranty           |              3 years |
 
 ## Dimensions
 
-| Measurement | Value |
-|:------------|------:|
-| Overall Diameter | 14" (356mm) |
-| Overall Depth | 9.39-9.42" |
-| Mounting Depth | 7.94" (202mm) |
-| Cutout Diameter | 12.0625" (306mm) |
-| Bolt Hole Circle | 12.813" (325mm) |
-| Grille Protrusion | 1.45-1.48" |
+| Measurement       |            Value |
+| :---------------- | ---------------: |
+| Overall Diameter  |      14" (356mm) |
+| Overall Depth     |       9.39-9.42" |
+| Mounting Depth    |    7.94" (202mm) |
+| Cutout Diameter   | 12.0625" (306mm) |
+| Bolt Hole Circle  |  12.813" (325mm) |
+| Grille Protrusion |       1.45-1.48" |
 
 ## Infinite Baffle Requirements
 
@@ -75,11 +75,11 @@ tags:
 
 ## Wiring
 
-| Connection | Wire | Notes |
-|:-----------|:-----|:------|
+| Connection  | Wire      | Notes                   |
+| :---------- | :-------- | :---------------------- |
 | Speaker (+) | 12-14 AWG | From amp Ch 1+2 bridged |
 | Speaker (−) | 12-14 AWG | From amp Ch 1+2 bridged |
-| LED | 20 AWG | RGB from MLC-RW |
+| LED         | 20 AWG    | RGB from MLC-RW         |
 
 Standard speaker wire (no XM-WHTMFC needed for subwoofer audio).
 

@@ -15,7 +15,7 @@ tags:
 The recovery systems provide essential off-road and emergency recovery capabilities, centered around the Warn Zeon 10-S winch. These systems are designed for reliable operation in extreme conditions with proper power distribution and control integration.
 
 !!! info "Air System Moved"
-    ARB Twin Compressor and Air Lockers documentation has been moved to [Air System][air-system]
+ARB Twin Compressor and Air Lockers documentation has been moved to [Air System][air-system]
 
 ---
 
@@ -137,12 +137,12 @@ See [AUX Battery Distribution][aux-battery] for wire specs (gauge, length, routi
 
 ### Wiring Summary
 
-| Circuit | Source | Protection | Wire Gauge | Destination | Function |
-|---------|--------|------------|------------|-------------|----------|
-| Main Power (+) | AUX battery+ | None (direct) | See [AUX Battery Distribution][aux-battery] for wire specs | Winch Contactor → Motor | High-current power |
-| Main Power (-) | AUX battery- | None | See [AUX Battery Distribution][aux-battery] for wire specs | Winch Motor Ground | High-current return |
-| Control Trigger | Dash 3-pos Switch | SafetyHub ATC-1 (10A) | 14 AWG | Winch Contactor | Low-current trigger |
-| Remote Control | Warn Remote | Internal to winch | Per Warn specs | Winch Control Pack | Directional control |
+| Circuit         | Source            | Protection            | Wire Gauge                                                 | Destination             | Function            |
+| --------------- | ----------------- | --------------------- | ---------------------------------------------------------- | ----------------------- | ------------------- |
+| Main Power (+)  | AUX battery+      | None (direct)         | See [AUX Battery Distribution][aux-battery] for wire specs | Winch Contactor → Motor | High-current power  |
+| Main Power (-)  | AUX battery-      | None                  | See [AUX Battery Distribution][aux-battery] for wire specs | Winch Motor Ground      | High-current return |
+| Control Trigger | Dash 3-pos Switch | SafetyHub ATC-1 (10A) | 14 AWG                                                     | Winch Contactor         | Low-current trigger |
+| Remote Control  | Warn Remote       | Internal to winch     | Per Warn specs                                             | Winch Control Pack      | Directional control |
 
 ### Installation Considerations
 
@@ -169,19 +169,9 @@ See [AUX Battery Distribution][aux-battery] for cable specs and routing path. Ge
 
 ### Safety Considerations
 
-!!! warning "Winch Safety"
-    - Never exceed winch rated capacity (10,000 lbs)
-    - Always use proper recovery techniques and safety equipment
-    - Keep hands and body clear of winch line under tension
-    - Use tree savers and recovery equipment rated for load
-    - Monitor battery voltage during extended winch operations
+!!! warning "Winch Safety" - Never exceed winch rated capacity (10,000 lbs) - Always use proper recovery techniques and safety equipment - Keep hands and body clear of winch line under tension - Use tree savers and recovery equipment rated for load - Monitor battery voltage during extended winch operations
 
-!!! warning "Electrical Safety"
-    - Winch power cables carry extremely high current (up to 400A)
-    - Ensure all connections are tight and properly crimped
-    - Never disconnect battery while winch is under load
-    - Verify proper fuse sizing for control circuit (10A)
-    - Check cable insulation regularly for damage
+!!! warning "Electrical Safety" - Winch power cables carry extremely high current (up to 400A) - Ensure all connections are tight and properly crimped - Never disconnect battery while winch is under load - Verify proper fuse sizing for control circuit (10A) - Check cable insulation regularly for damage
 
 ### Outstanding Items
 

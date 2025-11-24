@@ -30,13 +30,13 @@ Rearview mirror replacement with integrated front dash camera and rear backup ca
 
 ## Specifications
 
-| Spec | Value |
-|:-----|------:|
-| Front Camera | Integrated in mirror unit |
-| Rear Camera | License plate mount |
-| Display | Touchscreen (9.66" or 12") |
-| Current Draw | 2-5A typical |
-| Storage | SD card (loop recording) |
+| Spec         |                      Value |
+| :----------- | -------------------------: |
+| Front Camera |  Integrated in mirror unit |
+| Rear Camera  |        License plate mount |
+| Display      | Touchscreen (9.66" or 12") |
+| Current Draw |               2-5A typical |
+| Storage      |   SD card (loop recording) |
 
 ## Features
 
@@ -65,12 +65,12 @@ Rearview mirror replacement with integrated front dash camera and rear backup ca
 
 ## Wiring
 
-| Connection | Wire | Source | Notes |
-|:-----------|:-----|:-------|:------|
-| Power (+) | 18 AWG | BODY PDU F5 | 10A fuse, CONSTANT |
-| Ground (−) | 18 AWG | Dash ground | Firewall stud or local |
-| Reverse Trigger | 18 AWG | Reverse light circuit | Signal only |
-| Rear Camera | Included cable | Main unit | Power + video combined |
+| Connection      | Wire           | Source                | Notes                  |
+| :-------------- | :------------- | :-------------------- | :--------------------- |
+| Power (+)       | 18 AWG         | BODY PDU F5           | 10A fuse, CONSTANT     |
+| Ground (−)      | 18 AWG         | Dash ground           | Firewall stud or local |
+| Reverse Trigger | 18 AWG         | Reverse light circuit | Signal only            |
+| Rear Camera     | Included cable | Main unit             | Power + video combined |
 
 ## Cable Routing
 

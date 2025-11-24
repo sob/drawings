@@ -34,16 +34,16 @@ tags:
 
 ## Stud Assignment
 
-| Stud | Connection | Wire Gauge | Current | Notes |
-|:-----|:-----------|:-----------|:--------|:------|
-| 1 | START battery- | 2/0 AWG | 600A+ | See [START Battery Distribution][front-battery-ground] |
-| 2 | Engine block ground | 2/0 AWG | 600A+ | Starter/alternator return path |
-| 3 | Front frame rail (main chassis) | 2/0 AWG | 600A+ | Primary infrastructure ground |
-| 4 | AUX battery reference | 1/0 AWG | 75A | See [START Battery Distribution][front-battery-ground] |
-| 5 | PMU ground reference (Pin 25) | Per harness | <100mA | Logic/CAN reference only |
-| 6 | Horn + relay coil grounds | 14-18 AWG | ~10A | Horn (5.4A), starter solenoid coil |
-| 7 | iBooster (OUT1+10, OUT19) | 10 AWG | ~45A peak | Brake booster main + ignition signal |
-| 8 | Aux cooling fans (OUT7+8) | 12 AWG | ~30A | Oil cooler + PS cooler fans |
+| Stud | Connection                      | Wire Gauge  | Current   | Notes                                                  |
+| :--- | :------------------------------ | :---------- | :-------- | :----------------------------------------------------- |
+| 1    | START battery-                  | 2/0 AWG     | 600A+     | See [START Battery Distribution][front-battery-ground] |
+| 2    | Engine block ground             | 2/0 AWG     | 600A+     | Starter/alternator return path                         |
+| 3    | Front frame rail (main chassis) | 2/0 AWG     | 600A+     | Primary infrastructure ground                          |
+| 4    | AUX battery reference           | 1/0 AWG     | 75A       | See [START Battery Distribution][front-battery-ground] |
+| 5    | PMU ground reference (Pin 25)   | Per harness | <100mA    | Logic/CAN reference only                               |
+| 6    | Horn + relay coil grounds       | 14-18 AWG   | ~10A      | Horn (5.4A), starter solenoid coil                     |
+| 7    | iBooster (OUT1+10, OUT19)       | 10 AWG      | ~45A peak | Brake booster main + ignition signal                   |
+| 8    | Aux cooling fans (OUT7+8)       | 12 AWG      | ~30A      | Oil cooler + PS cooler fans                            |
 
 **Utilization:** 8 of 8 studs used (0 available)
 

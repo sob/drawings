@@ -73,7 +73,7 @@ Main control box for HDX instrument system. Processes sensor inputs, BIM module 
 ## Wiring
 
 | Connection               | Pin/Wire    | Source                       | Destination             | Notes                                            |
-|:-------------------------|:------------|:-----------------------------|:------------------------|:-------------------------------------------------|
+| :----------------------- | :---------- | :--------------------------- | :---------------------- | :----------------------------------------------- |
 | DIM ADJ - GND            | -           | -                            | -                       | Not used (dash dimming via DIM input instead)    |
 | DIM ADJ - SIG            | -           | -                            | -                       | Not used (dash dimming via DIM input instead)    |
 | **FUEL INPUT - GND**     | -           | Factory TJ fuel sender       | HDX fuel GND            | Sender ground                                    |

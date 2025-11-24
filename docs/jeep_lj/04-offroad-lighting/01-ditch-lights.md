@@ -36,12 +36,12 @@ A-pillar mounted lights for peripheral and side illumination (Baja Designs Zone 
 
 ## Specifications
 
-| Spec | Value |
-|:-----|------:|
-| Beam Pattern | Driving/Combo |
-| Lens | Clear |
-| Output | 4,400 lumens each (8,800 total) |
-| Draw | 4A each (8A total) |
+| Spec         |                           Value |
+| :----------- | ------------------------------: |
+| Beam Pattern |                   Driving/Combo |
+| Lens         |                           Clear |
+| Output       | 4,400 lumens each (8,800 total) |
+| Draw         |              4A each (8A total) |
 
 ## Control
 

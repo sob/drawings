@@ -34,14 +34,14 @@ Marine-grade coaxial speakers with integrated RGB LED lighting for front dash an
 
 ### Front Speaker Specifications
 
-| Spec | Value |
-|:-----|------:|
-| Power Handling | 75W RMS @ 4Ω |
-| Amplifier Output | 150W RMS (2:1 headroom) |
-| Impedance | 4Ω |
-| Frequency Response | 55-25,000 Hz (±3dB) |
-| Sensitivity | 89.5 dB @ 1W/1m |
-| Tweeter | 0.8" silk dome (integrated) |
+| Spec               |                       Value |
+| :----------------- | --------------------------: |
+| Power Handling     |                75W RMS @ 4Ω |
+| Amplifier Output   |     150W RMS (2:1 headroom) |
+| Impedance          |                          4Ω |
+| Frequency Response |         55-25,000 Hz (±3dB) |
+| Sensitivity        |             89.5 dB @ 1W/1m |
+| Tweeter            | 0.8" silk dome (integrated) |
 
 ### Front Speaker Features
 
@@ -77,14 +77,14 @@ Marine-grade coaxial speakers with integrated RGB LED lighting for front dash an
 
 ### Rear Speaker Specifications
 
-| Spec | Value |
-|:-----|------:|
-| Power Handling | 75W RMS @ 4Ω |
-| Amplifier Output | 150W RMS (2:1 headroom) |
-| Impedance | 4Ω |
-| Frequency Response | 100-25,000 Hz |
-| Sensitivity | 89.5 dB |
-| Dimensions | 7-1/16" × 7-5/16" × 6-1/4" |
+| Spec               |                      Value |
+| :----------------- | -------------------------: |
+| Power Handling     |               75W RMS @ 4Ω |
+| Amplifier Output   |    150W RMS (2:1 headroom) |
+| Impedance          |                         4Ω |
+| Frequency Response |              100-25,000 Hz |
+| Sensitivity        |                    89.5 dB |
+| Dimensions         | 7-1/16" × 7-5/16" × 6-1/4" |
 
 ### Rear Speaker Features
 
@@ -98,10 +98,10 @@ Marine-grade coaxial speakers with integrated RGB LED lighting for front dash an
 
 All speakers use JL Audio XM-WHTMFC integrated cable:
 
-| Wire | Gauge | Function |
-|:-----|:------|:---------|
+| Wire          | Gauge      | Function     |
+| :------------ | :--------- | :----------- |
 | Speaker leads | 16 AWG OFC | Audio signal |
-| LED leads | 20 AWG OFC | RGB + common |
+| LED leads     | 20 AWG OFC | RGB + common |
 
 Single cable run per speaker carries both audio and LED control.
 

@@ -33,7 +33,7 @@ Provides fused distribution for recovery and auxiliary systems powered by the AU
 **Note:** Communications systems (GMRS, Intercom, Ham Radio) are powered via PMU outputs - see [PMU Outputs][pmu-outputs]
 
 !!! note "Future-Proof Capacity"
-    Wire and CB sized for full 150A SafetyHub capacity (current load 100A). Provides 50A headroom for additional recovery or auxiliary systems.
+Wire and CB sized for full 150A SafetyHub capacity (current load 100A). Provides 50A headroom for additional recovery or auxiliary systems.
 
 ## Specifications
 
@@ -45,15 +45,15 @@ Provides fused distribution for recovery and auxiliary systems powered by the AU
 
 ## Circuit Configuration
 
-| Slot | Fuse | Circuit | Wire Gauge | Distance | Voltage @ Load | Load | Notes |
-|:-----|:-----|:--------|:-----------|:---------|:---------------|:-----|:------|
-| MIDI-1 | 60A | [ARB Compressor][air-system] Motor 1 | 6 AWG ✓ | ~12 ft | 11.56V (3.6%) | 45A | Passenger wheel well → cargo → under passenger seat |
-| MIDI-2 | 60A | [ARB Compressor][air-system] Motor 2 | 6 AWG ✓ | ~12 ft | 11.56V (3.6%) | 45A | Passenger wheel well → cargo → under passenger seat |
-| MIDI-3 | - | **[Available]** | - | - | - | - | - |
-| ATC-1 | 15A | Winch Contactor Trigger | 14 AWG ✓ | ~13 ft | 13.70V (0.8%) | 10A | Passenger wheel well → front bumper via frame rail |
-| ATC-2 | - | **[Available]** | - | - | - | - | - |
-| ATC-3 | - | **[Available]** | - | - | - | - | - |
-| ATC-4 | - | **[Available]** | - | - | - | - | - |
+| Slot   | Fuse | Circuit                              | Wire Gauge | Distance | Voltage @ Load | Load | Notes                                               |
+| :----- | :--- | :----------------------------------- | :--------- | :------- | :------------- | :--- | :-------------------------------------------------- |
+| MIDI-1 | 60A  | [ARB Compressor][air-system] Motor 1 | 6 AWG ✓    | ~12 ft   | 11.56V (3.6%)  | 45A  | Passenger wheel well → cargo → under passenger seat |
+| MIDI-2 | 60A  | [ARB Compressor][air-system] Motor 2 | 6 AWG ✓    | ~12 ft   | 11.56V (3.6%)  | 45A  | Passenger wheel well → cargo → under passenger seat |
+| MIDI-3 | -    | **[Available]**                      | -          | -        | -              | -    | -                                                   |
+| ATC-1  | 15A  | Winch Contactor Trigger              | 14 AWG ✓   | ~13 ft   | 13.70V (0.8%)  | 10A  | Passenger wheel well → front bumper via frame rail  |
+| ATC-2  | -    | **[Available]**                      | -          | -        | -              | -    | -                                                   |
+| ATC-3  | -    | **[Available]**                      | -          | -        | -              | -    | -                                                   |
+| ATC-4  | -    | **[Available]**                      | -          | -        | -              | -    | -                                                   |
 
 **Slot Utilization:** 3 of 7 used (2 MIDI + 1 ATC, 4 available)
 
@@ -64,7 +64,7 @@ Provides fused distribution for recovery and auxiliary systems powered by the AU
 **Future Capacity:** 50A additional capacity available (150A max - 100A current = 50A headroom)
 
 !!! info "Winch Main Power"
-    Winch motor power (400A peak) connects directly to AUX battery positive terminal with no external circuit breaker per WARN manufacturer specifications. See [STANDARDS-EXCEPTIONS.md][standards-exceptions] and [Recovery Systems][recovery-systems] for complete protection strategy.
+Winch motor power (400A peak) connects directly to AUX battery positive terminal with no external circuit breaker per WARN manufacturer specifications. See [STANDARDS-EXCEPTIONS.md][standards-exceptions] and [Recovery Systems][recovery-systems] for complete protection strategy.
 
 ## Related Documentation
 

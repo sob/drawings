@@ -33,12 +33,12 @@ tags:
 
 ## Wire Functions
 
-| Color | Function | Connection | Wire Gauge | Notes |
-|:------|:---------|:-----------|:-----------|:------|
-| BLACK | Ground | Chassis ground | 14-16 AWG | Clean metal-to-metal |
-| WHITE | Reverse | PMU Out 18 | 14 AWG | Parallel with factory backup lights |
-| YELLOW | Brake/Turn | CT4 + PMU Out 17 (via diodes) | 14 AWG | Combined function - see diode section |
-| RED | Marker/Parking | PMU Out 9 | 14 AWG | DRL/parking circuit |
+| Color  | Function       | Connection                    | Wire Gauge | Notes                                 |
+| :----- | :------------- | :---------------------------- | :--------- | :------------------------------------ |
+| BLACK  | Ground         | Chassis ground                | 14-16 AWG  | Clean metal-to-metal                  |
+| WHITE  | Reverse        | PMU Out 18                    | 14 AWG     | Parallel with factory backup lights   |
+| YELLOW | Brake/Turn     | CT4 + PMU Out 17 (via diodes) | 14 AWG     | Combined function - see diode section |
+| RED    | Marker/Parking | PMU Out 9                     | 14 AWG     | DRL/parking circuit                   |
 
 ## Reverse Lights
 

@@ -108,15 +108,15 @@ See [PMU DRL Auto-Off Logic](#pmu-drl-auto-off-logic) section below for complete
 
 **12-pin Connector on CT4:**
 
-| Wire Color | Label      | Function                | Connection Point               | Notes                             |
-| :--------- | :--------- | :---------------------- | :----------------------------- | :-------------------------------- |
-| Brown      | SW1, UP    | Right Turn (CT4 output) | Front/rear right turn signals  | 10A max per output                |
-| Red        | SW2, DOWN  | Left Turn (CT4 output)  | Front/rear left turn signals   | 10A max per output                |
-| Orange     | SW3, PULL  | Headlights (low beam)   | LP6 Pin 1 (low beam, both lights) + DRL cutoff relay coil | 10A output, 3.6A load, disabled when ignition off |
-| Yellow     | SW4, PUSH  | High Beams              | LP6 Pin 4 (high beam, both lights) | 10A output, 5.6A load, disabled when ignition off |
-| Red (thick)| 12V Supply | Main power input        | START battery CONSTANT (40A fuse) | Powers all SW outputs, allows hazards when ignition off |
-| Black      | Ground     | Ground return           | Chassis ground or firewall ground stud | Via ignition/ground harness   |
-| White/Gray | Ignition   | Ignition signal input   | Ignition switch RUN output (18 AWG, splits to PMU In 6, SwitchPros, CT4) | Disables SW3/SW4 when ignition off, keeps SW1/SW2 active |
+| Wire Color  | Label      | Function                | Connection Point                                                         | Notes                                                    |
+| :---------- | :--------- | :---------------------- | :----------------------------------------------------------------------- | :------------------------------------------------------- |
+| Brown       | SW1, UP    | Right Turn (CT4 output) | Front/rear right turn signals                                            | 10A max per output                                       |
+| Red         | SW2, DOWN  | Left Turn (CT4 output)  | Front/rear left turn signals                                             | 10A max per output                                       |
+| Orange      | SW3, PULL  | Headlights (low beam)   | LP6 Pin 1 (low beam, both lights) + DRL cutoff relay coil                | 10A output, 3.6A load, disabled when ignition off        |
+| Yellow      | SW4, PUSH  | High Beams              | LP6 Pin 4 (high beam, both lights)                                       | 10A output, 5.6A load, disabled when ignition off        |
+| Red (thick) | 12V Supply | Main power input        | START battery CONSTANT (40A fuse)                                        | Powers all SW outputs, allows hazards when ignition off  |
+| Black       | Ground     | Ground return           | Chassis ground or firewall ground stud                                   | Via ignition/ground harness                              |
+| White/Gray  | Ignition   | Ignition signal input   | Ignition switch RUN output (18 AWG, splits to PMU In 6, SwitchPros, CT4) | Disables SW3/SW4 when ignition off, keeps SW1/SW2 active |
 
 ## Programming Configuration
 

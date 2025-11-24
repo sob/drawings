@@ -31,7 +31,7 @@ Distributes low-current 12V ignition sense signal from keyswitch RUN terminal to
 **Function:** Signal distribution only (not a power bus)
 
 !!! info "Critical Systems Use Dedicated Wires"
-    Critical engine and power management systems use dedicated wires directly from the keyswitch, NOT this bus bar, for maximum reliability. This includes:
+Critical engine and power management systems use dedicated wires directly from the keyswitch, NOT this bus bar, for maximum reliability. This includes:
 
     - **PMU 12V Switched Input (Physical Pin 7):** Direct wire for ignition sense and power reference - see [PMU Inputs][pmu-inputs]
     - **Starter Control:** Direct keyswitch → clutch switch → relay path - see [Starter System][starter-system]
@@ -48,16 +48,16 @@ Distributes low-current 12V ignition sense signal from keyswitch RUN terminal to
 
 ## Stud/Terminal Assignment
 
-| Stud/Terminal | Connection | Wire Gauge | Distance | Max Current | Notes |
-|:--------------|:-----------|:-----------|:---------|:------------|:------|
-| **Stud 1 (5/16")** | **Keyswitch RUN (INPUT)** | **18 AWG ✓** | **Through Grommet 2** | **~80mA total** | **Already fused at keyswitch** |
-| Stud 2 (5/16") | **[Available]** | - | - | - | Future high-current signal |
-| Terminal 1 (#10-24) | Command Touch CT4 | 18 AWG ✓ | ~3 ft | ~20mA | Ignition sense for turn signal auto-cancel |
-| Terminal 2 (#10-24) | SwitchPros SP-1200 | 18 AWG ✓ | ~4 ft | ~20mA | Pin 3 (Lt Blue) - ignition sense |
-| Terminal 3 (#10-24) | Fusion MS-RA670 Radio | 18 AWG ✓ | ~2 ft | ~20mA | Yellow wire - ignition sense |
-| Terminal 4 (#10-24) | BCDC Alpha 50 | 18 AWG ✓ | ~12 ft | ~20mA | Blue wire - activates charging when engine running |
-| Terminal 5 (#10-24) | **[Available]** | - | - | - | Future ignition-switched device |
-| Terminals 6-12 (#10-24) | **[Available]** | - | - | - | Future expansion (7 terminals) |
+| Stud/Terminal           | Connection                | Wire Gauge   | Distance              | Max Current     | Notes                                              |
+| :---------------------- | :------------------------ | :----------- | :-------------------- | :-------------- | :------------------------------------------------- |
+| **Stud 1 (5/16")**      | **Keyswitch RUN (INPUT)** | **18 AWG ✓** | **Through Grommet 2** | **~80mA total** | **Already fused at keyswitch**                     |
+| Stud 2 (5/16")          | **[Available]**           | -            | -                     | -               | Future high-current signal                         |
+| Terminal 1 (#10-24)     | Command Touch CT4         | 18 AWG ✓     | ~3 ft                 | ~20mA           | Ignition sense for turn signal auto-cancel         |
+| Terminal 2 (#10-24)     | SwitchPros SP-1200        | 18 AWG ✓     | ~4 ft                 | ~20mA           | Pin 3 (Lt Blue) - ignition sense                   |
+| Terminal 3 (#10-24)     | Fusion MS-RA670 Radio     | 18 AWG ✓     | ~2 ft                 | ~20mA           | Yellow wire - ignition sense                       |
+| Terminal 4 (#10-24)     | BCDC Alpha 50             | 18 AWG ✓     | ~12 ft                | ~20mA           | Blue wire - activates charging when engine running |
+| Terminal 5 (#10-24)     | **[Available]**           | -            | -                     | -               | Future ignition-switched device                    |
+| Terminals 6-12 (#10-24) | **[Available]**           | -            | -                     | -               | Future expansion (7 terminals)                     |
 
 **Utilization:** 5 of 14 used (1 stud + 4 terminals used, 1 stud + 8 terminals available)
 

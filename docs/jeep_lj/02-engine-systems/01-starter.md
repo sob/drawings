@@ -58,15 +58,15 @@ tags:
 
 ## Wiring
 
-| Circuit | Source | Destination | Wire Gauge | Current | Notes |
-|:--------|:-------|:------------|:-----------|:--------|:------|
-| Main Power | START battery+ | Starter solenoid battery post | 2/0 AWG | 400-600A | See [START Battery Distribution][starter-battery] for wire specs |
-| Solenoid Power Tap | START battery post | Cole Hersee 24213 input | 10 AWG | 30-75A | ~2 ft |
-| Ignition Control | Ignition switch START | Clutch safety switch | 16 AWG | ~1A | ~10 ft |
-| Clutch Switch Output | Clutch switch | Cole Hersee 24213 coil+ | 16 AWG | ~1.6A | ~3 ft |
-| Solenoid Coil Ground | Cole Hersee 24213 coil- | Engine bay ground bus | 16 AWG | ~1.6A | ~3 ft |
-| Solenoid Output | Cole Hersee 24213 output | Starter solenoid switch post | 10 AWG | 30-75A | ~2 ft |
-| Ground Return | Starter case | Engine block → START battery- | 2/0 AWG | 400-600A | Via engine bay ground bus |
+| Circuit              | Source                   | Destination                   | Wire Gauge | Current  | Notes                                                            |
+| :------------------- | :----------------------- | :---------------------------- | :--------- | :------- | :--------------------------------------------------------------- |
+| Main Power           | START battery+           | Starter solenoid battery post | 2/0 AWG    | 400-600A | See [START Battery Distribution][starter-battery] for wire specs |
+| Solenoid Power Tap   | START battery post       | Cole Hersee 24213 input       | 10 AWG     | 30-75A   | ~2 ft                                                            |
+| Ignition Control     | Ignition switch START    | Clutch safety switch          | 16 AWG     | ~1A      | ~10 ft                                                           |
+| Clutch Switch Output | Clutch switch            | Cole Hersee 24213 coil+       | 16 AWG     | ~1.6A    | ~3 ft                                                            |
+| Solenoid Coil Ground | Cole Hersee 24213 coil-  | Engine bay ground bus         | 16 AWG     | ~1.6A    | ~3 ft                                                            |
+| Solenoid Output      | Cole Hersee 24213 output | Starter solenoid switch post  | 10 AWG     | 30-75A   | ~2 ft                                                            |
+| Ground Return        | Starter case             | Engine block → START battery- | 2/0 AWG    | 400-600A | Via engine bay ground bus                                        |
 
 ## Control Flow
 

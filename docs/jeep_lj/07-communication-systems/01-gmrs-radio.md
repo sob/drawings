@@ -33,14 +33,14 @@ tags:
 
 ## Specifications
 
-| Spec | Value |
-|:-----|------:|
-| Output Power | 50W (max allowed for GMRS) |
-| Frequency | 462-467 MHz (UHF) |
-| Channels | 16 GMRS + repeater inputs |
-| Current Draw | 1-2A receive, 15A transmit |
-| Waterproof | IP67 |
-| FCC License | Required (family license, no exam) |
+| Spec         |                              Value |
+| :----------- | ---------------------------------: |
+| Output Power |         50W (max allowed for GMRS) |
+| Frequency    |                  462-467 MHz (UHF) |
+| Channels     |          16 GMRS + repeater inputs |
+| Current Draw |         1-2A receive, 15A transmit |
+| Waterproof   |                               IP67 |
+| FCC License  | Required (family license, no exam) |
 
 ## Features
 
@@ -52,21 +52,21 @@ tags:
 
 ## Antenna
 
-| Spec | Value |
-|:-----|:------|
-| Type | 1/4 wave or 1/2 wave whip |
-| Frequency | 462-467 MHz |
-| Mounting | Roof rack, fender, or NMO mount |
-| Cable | RG58 minimum (50Ω impedance) |
+| Spec      | Value                           |
+| :-------- | :------------------------------ |
+| Type      | 1/4 wave or 1/2 wave whip       |
+| Frequency | 462-467 MHz                     |
+| Mounting  | Roof rack, fender, or NMO mount |
+| Cable     | RG58 minimum (50Ω impedance)    |
 
 ## Wiring
 
-| Connection | Wire | Source | Notes |
-|:-----------|:-----|:-------|:------|
-| Power (+) | 10 AWG | PMU OUT6 | Via firewall Grommet 1 |
-| Ground (−) | 10 AWG | START battery neg | Direct connection for RF performance |
-| Antenna | RG58 coax | Roof antenna | Route away from power leads |
-| Intercom | Integration cable | STX RADIO port | Audio/PTT/mute |
+| Connection | Wire              | Source            | Notes                                |
+| :--------- | :---------------- | :---------------- | :----------------------------------- |
+| Power (+)  | 10 AWG            | PMU OUT6          | Via firewall Grommet 1               |
+| Ground (−) | 10 AWG            | START battery neg | Direct connection for RF performance |
+| Antenna    | RG58 coax         | Roof antenna      | Route away from power leads          |
+| Intercom   | Integration cable | STX RADIO port    | Audio/PTT/mute                       |
 
 ## Installation Notes
 

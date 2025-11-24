@@ -13,35 +13,35 @@ Both batteries under significant load simultaneously:
 
 **START Battery (Alternator):**
 
-| Circuit | Load |
-|:--------|-----:|
-| Radiator Fan (max) | 53A |
-| HVAC Blower | 15A |
-| GMRS Radio (TX) | 5A |
-| Oil/PS Cooler Fans | 30A |
-| Dakota Digital | 25A |
-| CT4 (headlights) | 10A |
-| iBooster + Ignition | 7A |
-| STX Intercom | 3A |
-| BCDC (charging AUX) | 50A |
-| **START Total** | **198A** |
+| Circuit             |     Load |
+| :------------------ | -------: |
+| Radiator Fan (max)  |      53A |
+| HVAC Blower         |      15A |
+| GMRS Radio (TX)     |       5A |
+| Oil/PS Cooler Fans  |      30A |
+| Dakota Digital      |      25A |
+| CT4 (headlights)    |      10A |
+| iBooster + Ignition |       7A |
+| STX Intercom        |       3A |
+| BCDC (charging AUX) |      50A |
+| **START Total**     | **198A** |
 
 **AUX Battery (BCDC-Charged):**
 
-| Circuit | Load |
-|:--------|-----:|
-| Roof Lights (all) | 43A |
-| Ditch + Fog | 17A |
-| Rock + Chase | 9A |
-| Lockers | 4A |
-| Camera + USB | 4A |
-| **AUX Total** | **77A** |
+| Circuit           |    Load |
+| :---------------- | ------: |
+| Roof Lights (all) |     43A |
+| Ditch + Fog       |     17A |
+| Rock + Chase      |      9A |
+| Lockers           |      4A |
+| Camera + USB      |      4A |
+| **AUX Total**     | **77A** |
 
 **Analysis:**
 
-- START: 198A / 270A = **73% alternator utilization** ✅
+- START: 198A / 270A = **73% alternator utilization**
 - AUX: 77A - 50A BCDC = **-27A net discharge**
-- AUX runtime: 34Ah / 27A = **75 minutes** to 50% SOC ✅
+- AUX runtime: 34Ah / 27A = **75 minutes** to 50% SOC
 
 **Verdict:** System handles worst realistic case with margin on both batteries.
 
@@ -53,29 +53,29 @@ Winch recovery with engine idling:
 
 **START Battery:**
 
-| Circuit | Load |
-|:--------|-----:|
-| Radiator Fan (idle) | 25A |
-| Dakota Digital | 25A |
-| CT4 | 10A |
-| iBooster + Ignition | 5A |
-| BCDC | 50A |
-| **START Total** | **115A** |
+| Circuit             |     Load |
+| :------------------ | -------: |
+| Radiator Fan (idle) |      25A |
+| Dakota Digital      |      25A |
+| CT4                 |      10A |
+| iBooster + Ignition |       5A |
+| BCDC                |      50A |
+| **START Total**     | **115A** |
 
 **AUX Battery:**
 
-| Circuit | Load |
-|:--------|-----:|
-| Winch Motor | 250A |
-| Winch Trigger | 10A |
-| Camera | 2A |
+| Circuit       |     Load |
+| :------------ | -------: |
+| Winch Motor   |     250A |
+| Winch Trigger |      10A |
+| Camera        |       2A |
 | **AUX Total** | **262A** |
 
 **Analysis:**
 
-- START: 115A / 270A = **43% alternator** ✅
+- START: 115A / 270A = **43% alternator**
 - AUX: 262A - 50A = **-212A net discharge**
-- 30-sec pull: 212A × (30/3600)h = **1.8Ah** (3% of battery) ✅
+- 30-sec pull: 212A × (30/3600)h = **1.8Ah** (3% of battery)
 
 **Verdict:** Brief winch pulls have minimal impact. Multiple recoveries possible.
 
@@ -87,13 +87,13 @@ Overnight camping with minimal power:
 
 **AUX Battery Only (engine off):**
 
-| Circuit | Load |
-|:--------|-----:|
-| Dome/Rock Lights | 7A |
-| Radio (music) | 8A |
-| USB Charging | 10A |
-| Camera | 2A |
-| **Total** | **27A** |
+| Circuit          |    Load |
+| :--------------- | ------: |
+| Dome/Rock Lights |      7A |
+| Radio (music)    |      8A |
+| USB Charging     |     10A |
+| Camera           |      2A |
+| **Total**        | **27A** |
 
 **With Solar (daytime):** 27A - 6A = **-21A net**
 
@@ -119,29 +119,29 @@ ARB compressor running with engine idling:
 
 **START Battery:**
 
-| Circuit | Load |
-|:--------|-----:|
-| Radiator Fan (idle) | 25A |
-| Dakota Digital | 25A |
-| CT4 | 10A |
-| iBooster + Ignition | 5A |
-| BCDC | 50A |
-| **START Total** | **115A** |
+| Circuit             |     Load |
+| :------------------ | -------: |
+| Radiator Fan (idle) |      25A |
+| Dakota Digital      |      25A |
+| CT4                 |      10A |
+| iBooster + Ignition |       5A |
+| BCDC                |      50A |
+| **START Total**     | **115A** |
 
 **AUX Battery:**
 
-| Circuit | Load |
-|:--------|-----:|
-| ARB Compressor (both motors) | 90A |
-| Compressor Control | 15A |
-| Camera + USB | 4A |
-| **AUX Total** | **109A** |
+| Circuit                      |     Load |
+| :--------------------------- | -------: |
+| ARB Compressor (both motors) |      90A |
+| Compressor Control           |      15A |
+| Camera + USB                 |       4A |
+| **AUX Total**                | **109A** |
 
 **Analysis:**
 
-- START: 115A / 270A = **43% alternator** ✅
+- START: 115A / 270A = **43% alternator**
 - AUX: 109A - 50A = **-59A net discharge**
-- 10-minute air-up: 59A × (10/60)h = **9.8Ah** (14% of battery) ✅
+- 10-minute air-up: 59A × (10/60)h = **9.8Ah** (14% of battery)
 
 **Verdict:** Standard air-up has minimal battery impact. Battery recovers in ~12 minutes of driving.
 
@@ -149,12 +149,12 @@ ARB compressor running with engine idling:
 
 ## Summary
 
-| Scenario | START Load | START % | AUX Net | AUX Duration | Status |
-|:---------|:-----------|:--------|:--------|:-------------|:-------|
-| Night Offroad | 198A | 73% | -27A | 75 min | ✅ Good |
-| Recovery | 115A | 43% | -212A | 30-sec pulls | ✅ Brief OK |
-| Extended Camp | — | — | -27A | 76 min | ⚠️ Limited |
-| Airing Up | 115A | 43% | -59A | 10 min | ✅ Excellent |
+| Scenario      | START Load | START % | AUX Net | AUX Duration | Status    |
+| :------------ | :--------- | :------ | :------ | :----------- | :-------- |
+| Night Offroad | 198A       | 73%     | -27A    | 75 min       | Good      |
+| Recovery      | 115A       | 43%     | -212A   | 30-sec pulls | Brief OK  |
+| Extended Camp | —          | —       | -27A    | 76 min       | Limited   |
+| Airing Up     | 115A       | 43%     | -59A    | 10 min       | Excellent |
 
 **Key Insight:** The dual battery architecture isolates high-current accessory loads from engine systems. Even worst-case realistic scenarios maintain adequate margin on both batteries.
 

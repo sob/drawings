@@ -150,7 +150,7 @@ Organized by installation order for efficient build workflow.
 **SwitchPros Custom Harness Note:**
 
 !!! info "Custom Delphi Harness Design"
-    Create 12 custom 2-pin Delphi harnesses at SwitchPros:
+Create 12 custom 2-pin Delphi harnesses at SwitchPros:
 
     - Each SwitchPros output → 2-pin Delphi plug (power + ground combined)
     - Each light → matching 2-pin Delphi plug

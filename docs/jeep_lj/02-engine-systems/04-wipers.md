@@ -33,14 +33,14 @@ Ron Francis WS-51C replaces TIPM wiper functions. Provides delay/intermittent co
 
 ## Wiring
 
-| Circuit | Wire | Source | Destination | Notes |
-|:--------|:-----|:-------|:------------|:------|
-| Module Power | 14 AWG | PMU OUT11 | WS-51C power input | Auto (ignition ON) |
-| Module Ground | 14 AWG | WS-51C ground | Firewall ground | |
-| Low Speed | Per WS-51C | WS-51C output | Wiper motor low terminal | |
-| High Speed | Per WS-51C | WS-51C output | Wiper motor high terminal | |
-| Park Switch | Per WS-51C | Wiper motor park | WS-51C park input | Auto-park detection |
-| Washer Pump | Per WS-51C | WS-51C washer output | Factory washer pump | 3-5A, auto-wipe feature |
+| Circuit       | Wire       | Source               | Destination               | Notes                   |
+| :------------ | :--------- | :------------------- | :------------------------ | :---------------------- |
+| Module Power  | 14 AWG     | PMU OUT11            | WS-51C power input        | Auto (ignition ON)      |
+| Module Ground | 14 AWG     | WS-51C ground        | Firewall ground           |                         |
+| Low Speed     | Per WS-51C | WS-51C output        | Wiper motor low terminal  |                         |
+| High Speed    | Per WS-51C | WS-51C output        | Wiper motor high terminal |                         |
+| Park Switch   | Per WS-51C | Wiper motor park     | WS-51C park input         | Auto-park detection     |
+| Washer Pump   | Per WS-51C | WS-51C washer output | Factory washer pump       | 3-5A, auto-wipe feature |
 
 See [PMU Outputs][pmu-outputs] for PMU configuration.
 

@@ -102,9 +102,9 @@ Complete replacement of factory TIPM with modular power distribution:
 ## Documentation Notes
 
 !!! info "Outstanding Items"
-    Throughout this documentation, you'll find "Outstanding Items" checklists. These track design decisions, measurements, and tasks that need to be completed during installation.
+Throughout this documentation, you'll find "Outstanding Items" checklists. These track design decisions, measurements, and tasks that need to be completed during installation.
 
     **[View Global TBD Tracker](09-installation/01-tbd-tracker.md)** - Centralized tracking of all To-Be-Determined items with priorities
 
 !!! warning "Work in Progress"
-    This is a living document that evolves as the build progresses. Some specifications may be marked as TBD (To Be Determined) and will be updated during the build process.
+This is a living document that evolves as the build progresses. Some specifications may be marked as TBD (To Be Determined) and will be updated during the build process.

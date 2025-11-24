@@ -10,7 +10,7 @@ This section documents physical switches mounted in the dashboard area (separate
 ## Winch Control Rocker Switch
 
 !!! info "Winch System Documentation"
-    For complete winch specifications, wiring details, and recovery system information, see [Recovery Systems][recovery-systems].
+For complete winch specifications, wiring details, and recovery system information, see [Recovery Systems][recovery-systems].
 
 **Type:** Center-off momentary rocker switch (SPDT or DPDT)
 **Location:** Dashboard physical switch panel

@@ -36,12 +36,12 @@ High-output reverse lights that activate automatically via PMU reverse circuit (
 
 ## Specifications
 
-| Spec | Value |
-|:-----|------:|
-| Beam Pattern | Driving/Combo |
-| Lens | Clear |
-| Output | 4,900 lumens each (9,800 total) |
-| Draw | 3.5A each (7A total) |
+| Spec         |                           Value |
+| :----------- | ------------------------------: |
+| Beam Pattern |                   Driving/Combo |
+| Lens         |                           Clear |
+| Output       | 4,900 lumens each (9,800 total) |
+| Draw         |            3.5A each (7A total) |
 
 ## Control
 

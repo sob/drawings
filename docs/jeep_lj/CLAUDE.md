@@ -152,7 +152,7 @@ grep -r "TBD" docs/jeep_lj --include="*.md" | grep -v "PHASE1-ANALYSIS" | grep -
 **Priority Levels:**
 
 - **🔴 Critical:** Installation blockers (part numbers, required specs)
-- **⚠️ High:** Needed before parts order (wire routing, mounting locations)
+- **High:** Needed before parts order (wire routing, mounting locations)
 - **📋 Medium:** Can determine during build (exact mounting spots)
 - **Low:** Nice to have (aesthetic choices, optional features)
 
@@ -245,8 +245,8 @@ grep -r "TBD" docs/jeep_lj --include="*.md" | grep -v "PHASE1-ANALYSIS" | grep -
 ## Wiring
 
 | Connection | Wire Gauge | Source | Destination | Notes |
-|:-----------|:-----------|:-------|:------------|:------|
-| ... | ... | ... | ... | ... |
+| :--------- | :--------- | :----- | :---------- | :---- |
+| ...        | ...        | ...    | ...         | ...   |
 
 ## Outstanding Items
 
@@ -394,11 +394,11 @@ Alternator: 270A = CRITICAL UNDERSIZING ❌
 ```text
 START Battery Scenario (Offroad):
 PMU typical: 115A + Radiator fan: 53A + BCDC: 50A = 218A
-Alternator: 270A = 52A margin ✅
+Alternator: 270A = 52A margin
 
 AUX Battery Scenario (Night Offroad):
 SwitchPros: 70A, BCDC charging: 50A
-Net drain: 20A, Time to 50% SOC: 102 minutes ✅
+Net drain: 20A, Time to 50% SOC: 102 minutes
 ```
 
 [start-load-analysis]: 01-power-systems/08-load-analysis/02-start-battery.md
@@ -453,12 +453,12 @@ Net drain: 20A, Time to 50% SOC: 102 minutes ✅
 
 Your work is successful when:
 
-✅ All links use reference-style format
-✅ All images in central `/docs/jeep_lj/images/` location
-✅ No duplicate information across files
-✅ Build succeeds with no broken links
-✅ Documentation is succinct and actionable
-✅ Cross-references are accurate and up-to-date
-✅ **All TBD items are tracked in TBD Tracker with priorities**
-✅ Outstanding Items are specific and tracked
-✅ Changes follow established patterns
+All links use reference-style format
+All images in central `/docs/jeep_lj/images/` location
+No duplicate information across files
+Build succeeds with no broken links
+Documentation is succinct and actionable
+Cross-references are accurate and up-to-date
+**All TBD items are tracked in TBD Tracker with priorities**
+Outstanding Items are specific and tracked
+Changes follow established patterns

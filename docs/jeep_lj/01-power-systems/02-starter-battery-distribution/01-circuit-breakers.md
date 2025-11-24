@@ -13,15 +13,15 @@ All START battery positive circuits protected by Mechanical Products Series 17 c
 
 ## Circuit Breaker Specifications
 
-| Circuit | Model | Rating | Reset Type | Power Path | Max Load | Sizing |
-|:--------|:------|:------:|:-----------|:-----------|:---------|:-------|
-| **PMU24** | Mechanical Products<br/>([174-S2-250-2][mp-250]) | 250A | Manual | START battery+<br/>└→ 250A CB<br/>&nbsp;&nbsp;&nbsp;└→ PMU24 | ~253A theoretical peak (140-170A typical) | 99% of max load (with all radios transmitting + full radiator fan) |
-| **BCDC Input** | Mechanical Products<br/>([174-S2-080-2][mp-80]) | 80A | Manual | START battery+<br/>└→ 80A CB<br/>&nbsp;&nbsp;&nbsp;└→ BCDC Alpha 50 | 50-55A BCDC input | 145-160% of max load |
+| Circuit        | Model                                            | Rating | Reset Type | Power Path                                                          | Max Load                                  | Sizing                                                             |
+| :------------- | :----------------------------------------------- | :----: | :--------- | :------------------------------------------------------------------ | :---------------------------------------- | :----------------------------------------------------------------- |
+| **PMU24**      | Mechanical Products<br/>([174-S2-250-2][mp-250]) |  250A  | Manual     | START battery+<br/>└→ 250A CB<br/>&nbsp;&nbsp;&nbsp;└→ PMU24        | ~253A theoretical peak (140-170A typical) | 99% of max load (with all radios transmitting + full radiator fan) |
+| **BCDC Input** | Mechanical Products<br/>([174-S2-080-2][mp-80])  |  80A   | Manual     | START battery+<br/>└→ 80A CB<br/>&nbsp;&nbsp;&nbsp;└→ BCDC Alpha 50 | 50-55A BCDC input                         | 145-160% of max load                                               |
 
 **Total Circuit Breakers:** 2 (PMU 250A, BCDC 80A)
 
 !!! info "PMU Circuit Breaker Sizing"
-    250A CB sized to protect 2/0 AWG wire (265A @ 60°C). Typical PMU load is 140-170A (56-68% of CB rating). The 253A theoretical peak requires all loads maxed simultaneously - not realistic in practice.
+250A CB sized to protect 2/0 AWG wire (265A @ 60°C). Typical PMU load is 140-170A (56-68% of CB rating). The 253A theoretical peak requires all loads maxed simultaneously - not realistic in practice.
 
 **All Circuit Breakers:**
 

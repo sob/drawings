@@ -12,24 +12,24 @@ hide:
 Non-DOT-required lighting circuits controlled by the SwitchPros SP-1200 controller.
 
 !!! info "Controller Documentation"
-    See [SwitchPros SP-1200][switchpros-sp-1200] for complete specifications, wiring, and installation.
+See [SwitchPros SP-1200][switchpros-sp-1200] for complete specifications, wiring, and installation.
 
 ## Baja Designs Zone Lighting
 
 Lighting organized by [Baja Designs Zone System][bd-zones], optimized for specific use cases:
 
-| BD Zone | Purpose | Lumens | Lights | Lens | Pattern |
-|:-------:|:--------|-------:|:-------|:-----|:--------|
-| 1 | Fog/Dust | 8,000 | 1x BD S8 10" | Amber | Wide Cornering |
-| 2 | Ditch/Peripheral | 8,800 | 2x BD LP4 Pro | Clear | Driving/Combo |
-| 3 | Primary Forward | 54,000 | 6x BD XL Sport | Clear | Driving/Combo |
-| 4 | Spot Distance | 18,000 | 2x BD XL Sport | Clear | Spot |
-| 6 | Rock Lights | 1,200 | 6x KC Cyclone V2 | Clear | Flood |
-| 7 | Cargo | — | 2x BD S2 Sport Flush | Clear | Work/Scene |
-| 8 | Reverse | 9,800 | 2x BD Squadron Pro | Clear | Driving/Combo |
-| 8 | Rear Work | 3,800 | 2x BD S1 Black | Clear | Work/Scene |
-| — | Chase/Safety | — | 1x BD RTL-S 30" | Amber | Rear-facing |
-| — | Footwell | — | 4x LED4Life RGBW Pods | RGB | Flood |
+| BD Zone | Purpose          | Lumens | Lights                | Lens  | Pattern        |
+| :-----: | :--------------- | -----: | :-------------------- | :---- | :------------- |
+|    1    | Fog/Dust         |  8,000 | 1x BD S8 10"          | Amber | Wide Cornering |
+|    2    | Ditch/Peripheral |  8,800 | 2x BD LP4 Pro         | Clear | Driving/Combo  |
+|    3    | Primary Forward  | 54,000 | 6x BD XL Sport        | Clear | Driving/Combo  |
+|    4    | Spot Distance    | 18,000 | 2x BD XL Sport        | Clear | Spot           |
+|    6    | Rock Lights      |  1,200 | 6x KC Cyclone V2      | Clear | Flood          |
+|    7    | Cargo            |      — | 2x BD S2 Sport Flush  | Clear | Work/Scene     |
+|    8    | Reverse          |  9,800 | 2x BD Squadron Pro    | Clear | Driving/Combo  |
+|    8    | Rear Work        |  3,800 | 2x BD S1 Black        | Clear | Work/Scene     |
+|    —    | Chase/Safety     |      — | 1x BD RTL-S 30"       | Amber | Rear-facing    |
+|    —    | Footwell         |      — | 4x LED4Life RGBW Pods | RGB   | Flood          |
 
 **Total Forward:** 88,800 lumens (white) + 8,000 lumens (amber)
 **Total Rear:** 7,600 lumens | **Rock:** 1,200 lumens
@@ -40,13 +40,13 @@ Lighting organized by [Baja Designs Zone System][bd-zones], optimized for specif
 
 ## Control Systems
 
-| Circuit | Controller | Page |
-|:--------|:-----------|:-----|
-| Roof, Ditch, Fog, Rock, Chase, Rear Work | [SwitchPros SP-1200][switchpros-sp-1200] | See controller for wiring |
-| Cargo Lights | Physical switch | [Cargo Lights][cargo-lights] |
-| Reverse Lights | [PMU Out 18][tail-brake-reverse] | [Reverse Lights][reverse-lights] |
-| RTL-S Brake/Running | PMU/OEM | [Chase Lights][chase-lights] |
-| Footwell | [JL Audio MLC-RW][audio-systems] | [Footwell Lights][footwell-lights] |
+| Circuit                                  | Controller                               | Page                               |
+| :--------------------------------------- | :--------------------------------------- | :--------------------------------- |
+| Roof, Ditch, Fog, Rock, Chase, Rear Work | [SwitchPros SP-1200][switchpros-sp-1200] | See controller for wiring          |
+| Cargo Lights                             | Physical switch                          | [Cargo Lights][cargo-lights]       |
+| Reverse Lights                           | [PMU Out 18][tail-brake-reverse]         | [Reverse Lights][reverse-lights]   |
+| RTL-S Brake/Running                      | PMU/OEM                                  | [Chase Lights][chase-lights]       |
+| Footwell                                 | [JL Audio MLC-RW][audio-systems]         | [Footwell Lights][footwell-lights] |
 
 [tail-brake-reverse]: ../03-lighting-systems/04-tail-brake-reverse.md
 

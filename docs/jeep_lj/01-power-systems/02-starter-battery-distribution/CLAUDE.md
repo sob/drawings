@@ -57,13 +57,13 @@ Documents START battery power distribution from the driver wheel well (Odyssey P
 
 This page is the **single source of truth** for wire specifications. When updating wire specs, you must also update all pages that reference the circuit:
 
-| Circuit | Also Update |
-|:--------|:------------|
-| Alternator | `01-power-generation/02-alternator.md` |
-| Starter | `02-engine-systems/01-starter.md` |
-| PMU24 | `04-pmu/01-pmu-overview.md` |
-| BCDC Alpha 50 | `01-power-generation/03-bcdc.md`, `03-aux-battery-distribution/index.md` |
-| Engine Bay Ground Bus | `05-grounding/01-engine-bay-ground-bus.md` |
-| Radio Grounds | `07-communication-systems/index.md` |
+| Circuit               | Also Update                                                              |
+| :-------------------- | :----------------------------------------------------------------------- |
+| Alternator            | `01-power-generation/02-alternator.md`                                   |
+| Starter               | `02-engine-systems/01-starter.md`                                        |
+| PMU24                 | `04-pmu/01-pmu-overview.md`                                              |
+| BCDC Alpha 50         | `01-power-generation/03-bcdc.md`, `03-aux-battery-distribution/index.md` |
+| Engine Bay Ground Bus | `05-grounding/01-engine-bay-ground-bus.md`                               |
+| Radio Grounds         | `07-communication-systems/index.md`                                      |
 
 **If circuit passes through firewall:** Also update `02-engine-systems/07-firewall-ingress.md`

@@ -15,11 +15,11 @@ The Cummins R2.8 includes a **gear-driven mechanical fuel pump** mounted on the 
 
 ## Fuel System Components
 
-| Component | Source | Notes |
-|:----------|:-------|:------|
-| Gear-driven fuel pump | Included with R2.8 | Mechanical, on back of block |
-| Fuel filter/water separator | Included with R2.8 | Has manual priming hand pump |
-| Fuel lines | User-supplied | Tank → filter → pump, return → tank |
+| Component                   | Source             | Notes                               |
+| :-------------------------- | :----------------- | :---------------------------------- |
+| Gear-driven fuel pump       | Included with R2.8 | Mechanical, on back of block        |
+| Fuel filter/water separator | Included with R2.8 | Has manual priming hand pump        |
+| Fuel lines                  | User-supplied      | Tank → filter → pump, return → tank |
 
 ## Fuel Flow Path
 

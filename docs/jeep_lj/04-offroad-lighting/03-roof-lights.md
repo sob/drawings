@@ -38,20 +38,20 @@ Primary forward illumination mounted on roof rack (Baja Designs Zone 3 + Zone 4)
 
 All 8 pods physically linked on roof rack. Split into two circuits for load distribution:
 
-| Circuit | Pods | Lens | Pattern | Draw | Control |
-|:--------|-----:|:-----|:--------|-----:|:--------|
-| Zone 3 (OUTPUT-1) | 4 center | Driving/Combo | Forward | 24A | Button 1 |
-| Zone 3 (OUTPUT-1) | 2 mid | Wide Cornering | Peripheral | 12A | Button 1 |
-| Zone 4 (OUTPUT-5) | 2 outer | Spot | Distance | 12A | Button 5 |
+| Circuit           |     Pods | Lens           | Pattern    | Draw | Control  |
+| :---------------- | -------: | :------------- | :--------- | ---: | :------- |
+| Zone 3 (OUTPUT-1) | 4 center | Driving/Combo  | Forward    |  24A | Button 1 |
+| Zone 3 (OUTPUT-1) |    2 mid | Wide Cornering | Peripheral |  12A | Button 1 |
+| Zone 4 (OUTPUT-5) |  2 outer | Spot           | Distance   |  12A | Button 5 |
 
 ## Specifications
 
-| Spec | Value |
-|:-----|------:|
-| Output | 9,000 lumens each |
-| Draw | 6A each |
-| Total Output | 72,000 lumens |
-| Total Draw | 48A (split across 2 circuits) |
+| Spec         |                         Value |
+| :----------- | ----------------------------: |
+| Output       |             9,000 lumens each |
+| Draw         |                       6A each |
+| Total Output |                 72,000 lumens |
+| Total Draw   | 48A (split across 2 circuits) |
 
 See [SwitchPros SP-1200][switchpros-sp-1200] for wiring details.
 

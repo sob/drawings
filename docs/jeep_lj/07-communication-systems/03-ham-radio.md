@@ -28,13 +28,13 @@ Reserved circuit for future amateur radio installation.
 
 PMU OUT12 is reserved for future ham radio installation:
 
-| Spec | Value |
-|:-----|------:|
-| PMU Output | OUT12 |
-| Capacity | 15A |
-| Power Mode | CONSTANT |
-| Wire Gauge | 10 AWG |
-| Firewall | Grommet 1 |
+| Spec       |     Value |
+| :--------- | --------: |
+| PMU Output |     OUT12 |
+| Capacity   |       15A |
+| Power Mode |  CONSTANT |
+| Wire Gauge |    10 AWG |
+| Firewall   | Grommet 1 |
 
 15A capacity supports up to ~180W output radios (most mobile ham radios are 50-100W).
 
@@ -52,21 +52,21 @@ Exam required for each license class.
 
 **VHF/UHF Mobile (2m/70cm):**
 
-| Spec | Value |
-|:-----|------:|
-| Frequency | 144 MHz / 440 MHz |
-| Typical Power | 50W VHF, 35W UHF |
-| Current Draw | ~10A TX, 1A RX |
-| Antenna | Roof-mounted dual-band whip (NMO) |
+| Spec          |                             Value |
+| :------------ | --------------------------------: |
+| Frequency     |                 144 MHz / 440 MHz |
+| Typical Power |                  50W VHF, 35W UHF |
+| Current Draw  |                    ~10A TX, 1A RX |
+| Antenna       | Roof-mounted dual-band whip (NMO) |
 
 **HF Mobile (Long Range):**
 
-| Spec | Value |
-|:-----|------:|
-| Frequency | 3-30 MHz |
-| Typical Power | 100W |
-| Current Draw | ~15A TX, 1-2A RX |
-| Antenna | Bumper or rack mount (requires tuner) |
+| Spec          |                                 Value |
+| :------------ | ------------------------------------: |
+| Frequency     |                              3-30 MHz |
+| Typical Power |                                  100W |
+| Current Draw  |                      ~15A TX, 1-2A RX |
+| Antenna       | Bumper or rack mount (requires tuner) |
 
 ## Outstanding Items
 

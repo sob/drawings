@@ -32,12 +32,12 @@ Marine-grade entertainment system with multi-zone audio, Bluetooth, and NMEA 200
 
 ## Specifications
 
-| Spec | Value |
-|:-----|------:|
-| Display | 2.7" full-color TFT |
+| Spec           |                 Value |
+| :------------- | --------------------: |
+| Display        |   2.7" full-color TFT |
 | Speaker Output | 4x 50W RMS (not used) |
-| Max Current | 15A |
-| Waterproof | IPX7 |
+| Max Current    |                   15A |
+| Waterproof     |                  IPX7 |
 
 ## Features
 
@@ -51,22 +51,22 @@ Marine-grade entertainment system with multi-zone audio, Bluetooth, and NMEA 200
 
 ## RCA Pre-Outs
 
-| Output | Destination | Amplifier |
-|:-------|:------------|:----------|
-| Zone 1 L+R | Front dash speakers | Ch 3+4 |
-| Zone 2 L+R | Rear roll bar speakers | Ch 5+6 |
-| Zone 3 L+R | Available | — |
-| Subwoofer | Subwoofer | Ch 1+2 bridged |
+| Output     | Destination            | Amplifier      |
+| :--------- | :--------------------- | :------------- |
+| Zone 1 L+R | Front dash speakers    | Ch 3+4         |
+| Zone 2 L+R | Rear roll bar speakers | Ch 5+6         |
+| Zone 3 L+R | Available              | —              |
+| Subwoofer  | Subwoofer              | Ch 1+2 bridged |
 
 ## Wiring
 
-| Connection | Wire | Source | Notes |
-|:-----------|:-----|:-------|:------|
-| Constant (Yellow) | 18 AWG | BODY PDU F2 | Memory/clock |
-| Switched (Red) | 18 AWG | BODY PDU F2 | Ignition on/off |
-| Ground (Black) | 18 AWG | Dash ground | Clean ground critical |
-| Antenna | Motorola | Factory antenna | Fender or windshield |
-| Remote Out | 18 AWG | To amplifier | Turn-on signal |
+| Connection        | Wire     | Source          | Notes                 |
+| :---------------- | :------- | :-------------- | :-------------------- |
+| Constant (Yellow) | 18 AWG   | BODY PDU F2     | Memory/clock          |
+| Switched (Red)    | 18 AWG   | BODY PDU F2     | Ignition on/off       |
+| Ground (Black)    | 18 AWG   | Dash ground     | Clean ground critical |
+| Antenna           | Motorola | Factory antenna | Fender or windshield  |
+| Remote Out        | 18 AWG   | To amplifier    | Turn-on signal        |
 
 ## Power Configuration
 
