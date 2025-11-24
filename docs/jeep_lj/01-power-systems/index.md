@@ -11,8 +11,8 @@ The Jeep LJ uses a dual-battery electrical system with intelligent power distrib
 
 ### Power Generation & Storage
 
-- **START battery:** Odyssey PC1500 (850 CCA, 68 Ah) in engine bay - critical systems only
-- **AUX battery:** Odyssey PC1500 (850 CCA, 68 Ah) in wheel well - accessories, inverter, winch (jump start capable)
+- **START battery:** Odyssey PC1500 (850 CCA, 68 Ah) in driver wheel well - critical systems only
+- **AUX battery:** Dakota Lithium 135Ah LiFePO4 (108 Ah usable, heated BMS) in passenger wheel well - accessories, winch (jump start capable)
 - **RedArc BCDC Alpha 50:** DC-DC charger/isolator - batteries operate independently when isolated
 - **270A Alternator:** Charges START battery, BCDC charges AUX battery from front
 

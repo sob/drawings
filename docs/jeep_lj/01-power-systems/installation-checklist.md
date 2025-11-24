@@ -8,9 +8,10 @@ Organized by installation order for efficient build workflow.
 
 ### Battery Compartments
 
-- [ ] Install Odyssey PC1500 in factory engine bay location (front)
-- [ ] Build enclosed compartment in passenger wheel well with access panel (rear)
-- [ ] Install Odyssey PC1500 in rear wheel well
+- [ ] Install Odyssey PC1500 (START) in driver wheel well with access panel
+- [ ] Build enclosed compartment in passenger wheel well with access panel (AUX)
+- [ ] Install Barnes 4WD battery box (Group 24) in passenger wheel well - powdercoat before install
+- [ ] Install Dakota Lithium 135Ah LiFePO4 (AUX) in Barnes battery box
 
 ### Grounding System
 
@@ -288,9 +289,13 @@ Create 12 custom 2-pin Delphi harnesses at SwitchPros:
 - **PMU24:** [PMU User Manual v101.1.5][pmu-manual]
 - **BCDC Alpha 50:** [Installation Manual][bcdc-install]
 - **Odyssey PC1500:** [Product Page][odyssey-pc1500]
+- **Dakota Lithium 135Ah:** [Product Page][dakota-135ah]
+- **Barnes 4WD Battery Box:** [Product Page][barnes-box]
 - **Blue Sea Systems:** Product-specific installation instructions per part number
 
 [pmu-manual]: https://www.ecumaster.com/files/PMU/PMU_Manual.pdf
 [bcdc-install]: https://cdn.intelligencebank.com/au/share/yE9N/zJpl/NNRlJ/original/Install+Guide+BCDC+Alpha+50R+EN
 [odyssey-pc1500]: https://www.odysseybattery.com/products/odx-agm34-battery-34-pc1500t/
+[dakota-135ah]: https://dakotalithium.com/product/dl-plus-12v-135ah-dual-purpose-1000cca-starter-car-truck-battery-plus-deep-cycle-performance/
+[barnes-box]: https://barnes4wd.com/products/barnes-4wd-single-odyssey-pc1500-group-34-78-group-24-battery-box
 [wire-distance]: 01-power-generation/05-wire-distance-reference.md

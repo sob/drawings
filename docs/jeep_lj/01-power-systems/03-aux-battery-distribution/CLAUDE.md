@@ -2,7 +2,7 @@
 
 ## What's Here
 
-Documents wheel well power distribution from the AUX battery (Odyssey PC1500).
+Documents wheel well power distribution from the AUX battery (Dakota Lithium 135Ah LiFePO4).
 
 ## Files
 

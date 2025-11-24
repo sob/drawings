@@ -34,12 +34,12 @@ BCDC charging rate:         50A  (to AUX battery)
 ─────────────────────────────────
 Net AUX battery drain:      45A
 
-AUX battery capacity:       68Ah
-Time to 50% SOC:           ~45 minutes continuous
-Time to 20% SOC:           ~73 minutes continuous
+AUX battery capacity:       135Ah (Dakota Lithium LiFePO4)
+Usable capacity (80% DOD):  108Ah
+Time to 20% SOC:           ~144 minutes continuous (2.4 hours)
 ```
 
-The 50A BCDC makes extended air-up practical without battery concerns. Load shedding provides additional margin and maintains optimal voltage for electronics.
+The Dakota Lithium 135Ah combined with 50A BCDC makes extended air-up a non-issue. Load shedding provides additional margin and maintains optimal voltage for electronics.
 
 **Impact Without Load Shedding:**
 

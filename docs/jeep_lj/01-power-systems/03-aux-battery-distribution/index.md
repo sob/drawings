@@ -5,13 +5,9 @@ hide:
 
 # 1.3 AUX battery Distribution (Passenger Wheel Well) {#aux-battery-distribution}
 
-/// html | div.product-info
-![Odyssey PC1500 Battery Terminals](../../images/odyssey-pc1500.jpg){ loading=lazy }
-///
-
 ## Overview
 
-The AUX battery (passenger wheel well) provides power for high-current accessories and cabin systems:
+The AUX battery ([Dakota Lithium 135Ah LiFePO4][batteries]) in the passenger wheel well provides power for high-current accessories and cabin systems:
 
 1. **Direct high-current** → Winch (recovery system, no CB per manufacturer spec)
 2. **CONSTANT Bus Bar** (Blue Sea 2107 PowerBar, 600A) - Feeds SwitchPros, SafetyHub 150, BODY PDU, Fusion Amp

@@ -29,7 +29,7 @@ tags:
 
 ## Specifications
 
-- **Output:** 50A DC-DC charging, multi-stage AGM compatible (0.74C charge rate for 68Ah battery)
+- **Output:** 50A DC-DC charging, multi-stage LiFePO4/AGM compatible (0.37C charge rate for 135Ah LiFePO4)
 - **Inputs:** 9-32V primary (alternator), 9-48V solar (up to 350W)
 - **Features:** Auto isolation, jump start assist, Green Power Priority, ignition-triggered
 - **Dimensions:** 260mm L × 160mm W × 70mm H
@@ -44,7 +44,7 @@ tags:
 | Solar (+)             | Yellow           | TBD           | Cascadia 4x4 80W panel        | See [Solar Charging][solar]                                      |
 | Ground (-)            | Black            | M8            | AUX battery negative          | See [AUX Battery Distribution][aux-battery] for wire specs       |
 | Ignition              | Blue             | Spade         | PMU ignition sense tap        | 18 AWG - see [PMU Inputs][pmu-inputs]                            |
-| Battery Temp Sensor   | +/- (reversible) | 2-pin plug    | AUX battery positive terminal | **REQUIRED** - AGM temperature-compensated charging              |
+| Battery Temp Sensor   | +/- (reversible) | 2-pin plug    | AUX battery positive terminal | **REQUIRED** - LiFePO4 temperature-compensated charging          |
 
 See [START Battery Distribution][starter-battery] and [AUX Battery Distribution][aux-battery] for complete wire specifications (gauge, distance, routing, circuit breakers).
 

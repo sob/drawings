@@ -50,10 +50,12 @@ All circuits powered by AUX battery (charged by BCDC at 50A max):
 - **Combined max:** ~57A charging rate (sunny day, engine running)
 - **Typical charging:** 30-50A depending on AUX battery SOC
 
-**AUX Battery Capacity:** 68Ah (Odyssey PC1500)
+**AUX Battery:** Dakota Lithium DL+ 135Ah LiFePO4
 
-- **Safe discharge depth:** 50% for AGM = 34Ah usable
-- **Recovery rate:** At 50A charging, recovers 34Ah in ~41 minutes
+- **Capacity:** 135Ah nominal
+- **Usable capacity:** 108Ah (80% DOD safe for LiFePO4)
+- **Heated BMS:** Enables charging down to -4°F (critical for wheel well mount)
+- **Recovery rate:** At 50A charging, recovers 108Ah in ~2.2 hours
 
 ## Scenario Analysis
 
@@ -124,9 +126,9 @@ All circuits powered by AUX battery (charged by BCDC at 50A max):
 
 **Net Battery Effect:** -18A (slow discharge)
 
-**Time to 50% SOC:** 34Ah / 18A = **113 minutes** to reach 50% SOC
+**Time to 20% SOC:** 108Ah / 18A = **6 hours** to reach 20% SOC
 
-**Assessment:** Excellent - 50A BCDC cuts discharge rate by more than half vs 25A. Extended night wheeling now practical without significant battery concerns.
+**Assessment:** Excellent - LiFePO4 upgrade provides 6+ hours of full night offroad lighting. Run out of driver before running out of battery.
 
 ---
 
@@ -148,11 +150,11 @@ All circuits powered by AUX battery (charged by BCDC at 50A max):
 
 **Net Battery Effect:** -60A (moderate discharge)
 
-**5-minute air-up:** 60A × (5/60)h = **5Ah used** (7% of battery)
+**5-minute air-up:** 60A × (5/60)h = **5Ah used** (5% of usable capacity)
 
-**10-minute air-up:** 60A × (10/60)h = **10Ah used** (15% of battery)
+**10-minute air-up:** 60A × (10/60)h = **10Ah used** (9% of usable capacity)
 
-**Assessment:** Excellent - 50A BCDC reduces battery impact by 30%. Battery recovers in 10-20 minutes of driving.
+**Assessment:** Excellent - minimal battery impact. Full recovery in 10-20 minutes of driving.
 
 ---
 
@@ -174,14 +176,11 @@ All circuits powered by AUX battery (charged by BCDC at 50A max):
 
 **Net Battery Effect:** -60A (moderate discharge)
 
-**30-minute operation:** 60A × 0.5h = **30Ah used** (44% of battery)
+**30-minute operation:** 60A × 0.5h = **30Ah used** (28% of usable capacity)
 
-**Assessment:** Now practical with 50A BCDC. For extended air-up:
+**Time to 20% SOC:** 108Ah / 60A = **108 minutes** of continuous compressor operation
 
-- Battery stays above 50% SOC for 30+ minutes of continuous compressor operation
-- Increase engine RPM to 1500+ for optimal charging
-- Monitor AUX battery voltage (Dakota Digital gauge)
-- Still wise to take breaks for very extended sessions (>45 min)
+**Assessment:** Extended air-up no longer a concern. Can run compressor for nearly 2 hours before reaching 20% SOC.
 
 ---
 
@@ -202,9 +201,9 @@ All circuits powered by AUX battery (charged by BCDC at 50A max):
 
 **Net Battery Effect:** -215A (heavy discharge)
 
-**30-second pull:** 215A × (30/3600)h = **1.8Ah used** (3% of battery)
+**30-second pull:** 215A × (30/3600)h = **1.8Ah used** (1.7% of usable capacity)
 
-**Assessment:** Brief winch operations have minimal battery impact. 50A BCDC provides faster recovery between pulls.
+**Assessment:** Winch operations have negligible battery impact. Can perform 50+ pulls before approaching 20% SOC.
 
 ---
 
@@ -230,46 +229,31 @@ All circuits powered by AUX battery (charged by BCDC at 50A max):
 
 **Net Battery Effect (night):** -27A
 
-**Time to 50% SOC (no solar):** 34Ah / 27A = **76 minutes**
+**Time to 20% SOC (no solar):** 108Ah / 27A = **4 hours**
 
-**Assessment:** Limited camp time on battery alone. For extended camping:
+**Time to 20% SOC (with solar):** 108Ah / 21A = **5+ hours** (daytime only)
 
-- Minimize lighting to essentials
-- Idle engine periodically to recharge
-- Use solar during daytime
-- Consider portable generator for multi-day camping
+**Assessment:** Camp mode now practical. 4+ hours of music, lights, and charging without engine. For extended camping:
+
+- Solar extends daytime runtime significantly
+- Idle engine 30 min to recover ~25Ah
+- Multi-day camping still benefits from periodic charging
 
 ---
 
 ## Summary
 
-| Scenario          | Total Draw | BCDC | Net Effect | Duration Limit | Status        |
-| :---------------- | :--------- | :--- | :--------- | :------------- | :------------ |
-| Daily Driving     | 5A         | 50A  | +45A       | Unlimited      | Fast charging |
-| Night Highway     | 35A        | 50A  | +15A       | Unlimited      | Charging!     |
-| Night Offroad     | 68A        | 50A  | -18A       | 113 minutes    | Excellent     |
-| Air Up (5-10 min) | 110A       | 50A  | -60A       | 10 minutes     | Excellent     |
-| Air Up Extended   | 110A       | 50A  | -60A       | 34 minutes     | Practical     |
-| Winch Recovery    | 265A       | 50A  | -215A      | 30-sec pulls   | Brief OK      |
-| Camp Mode         | 27A        | 0A   | -27A       | 76 minutes     | Limited       |
+| Scenario          | Total Draw | BCDC | Net Effect | Time to 20% SOC | Status    |
+| :---------------- | :--------- | :--- | :--------- | :-------------- | :-------- |
+| Daily Driving     | 5A         | 50A  | +45A       | N/A (charging)  | Excellent |
+| Night Highway     | 35A        | 50A  | +15A       | N/A (charging)  | Excellent |
+| Night Offroad     | 68A        | 50A  | -18A       | **6 hours**     | Excellent |
+| Air Up (5-10 min) | 110A       | 50A  | -60A       | 108 minutes     | Excellent |
+| Air Up Extended   | 110A       | 50A  | -60A       | 108 minutes     | Excellent |
+| Winch Recovery    | 265A       | 50A  | -215A      | 50+ pulls       | Excellent |
+| Camp Mode         | 27A        | 0A   | -27A       | **4 hours**     | Good      |
 
-**Key Insight:** The 50A BCDC upgrade transforms AUX battery capability. Night highway driving now charges the battery. Night offroad runtime more than doubles (45→102 min). Extended air-up is now practical without battery concerns. Only engine-off camp mode remains limited by battery capacity.
-
-## AGM vs Lithium Comparison
-
-For future reference if upgrading to LiFePO4:
-
-| Factor             | AGM (Current)      | LiFePO4           |
-| :----------------- | :----------------- | :---------------- |
-| Capacity           | 68Ah               | 100Ah typical     |
-| Safe DOD           | 50% (34Ah usable)  | 80% (80Ah usable) |
-| Night Offroad Time | 45 min to 50%      | 107 min to 20%    |
-| Extended Air-Up    | 24 min to 50%      | 56 min to 20%     |
-| Camp Time          | 64 min to 50%      | 150 min to 20%    |
-| Low SOC Damage     | Sulfation risk     | Minimal           |
-| Charge Acceptance  | Tapers at high SOC | Near-full rate    |
-
-**Lithium Benefit:** 2-3× more usable capacity, no sulfation concern from occasional deep discharge.
+**Key Insight:** The Dakota Lithium 135Ah upgrade (108Ah usable) combined with 50A BCDC provides effectively unlimited runtime for all driving scenarios. Night offroad lighting lasts 6+ hours. Camp mode provides 4+ hours without engine. Extended air-up and winch recovery are no longer battery concerns.
 
 ## Related Documentation
 
