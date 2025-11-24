@@ -162,7 +162,7 @@ Items completed since last update.
 [wire-routing]: ../01-power-systems/07-wire-routing/index.md
 [switchpros]: ../05-control-interfaces/02-switchpros-sp1200.md
 [dash-controls]: ../05-control-interfaces/05-dashboard-controls.md
-[audio-systems]: ../06-audio-systems/01-audio.md
+[audio-systems]: ../06-audio-systems/index.md
 [communication]: ../07-communication-systems/01-communication.md
 [turn-signals]: ../03-lighting-systems/03-turn-signals.md
 [offroad-lighting]: ../04-offroad-lighting/index.md

@@ -160,7 +160,11 @@ nav:
       - 5.5 - Dashboard Switches: jeep_lj/05-control-interfaces/05-dashboard-controls.md
     - Stereo Systems:
       - jeep_lj/06-audio-systems/index.md
-      - 6.1 - Audio Systems: jeep_lj/06-audio-systems/01-audio.md
+      - 6.1 - Head Unit: jeep_lj/06-audio-systems/01-head-unit.md
+      - 6.2 - Amplifier: jeep_lj/06-audio-systems/02-amplifier.md
+      - 6.3 - Speakers: jeep_lj/06-audio-systems/03-speakers.md
+      - 6.4 - Subwoofer: jeep_lj/06-audio-systems/04-subwoofer.md
+      - 6.5 - LED Controller: jeep_lj/06-audio-systems/05-led-controller.md
     - Communications:
       - jeep_lj/07-communication-systems/index.md
       - 7.1 - Communication Systems: jeep_lj/07-communication-systems/01-communication.md

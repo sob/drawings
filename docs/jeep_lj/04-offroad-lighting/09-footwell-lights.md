@@ -78,5 +78,5 @@ See [Audio Systems][audio-systems] for MLC-RW details.
 - [Audio Systems][audio-systems]
 
 [offroad-overview]: index.md
-[audio-systems]: ../06-audio-systems/01-audio.md
+[audio-systems]: ../06-audio-systems/05-led-controller.md
 [led4life-pod]: https://www.led4lifellc.com/products/rgbw-led-rock-light-single-pod

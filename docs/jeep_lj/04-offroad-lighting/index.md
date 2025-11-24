@@ -68,4 +68,4 @@ None - design complete. See individual product pages for component-specific item
 [cargo-lights]: 07-cargo-lights.md
 [reverse-lights]: 10-reverse-lights.md
 [footwell-lights]: 09-footwell-lights.md
-[audio-systems]: ../06-audio-systems/01-audio.md
+[audio-systems]: ../06-audio-systems/05-led-controller.md
