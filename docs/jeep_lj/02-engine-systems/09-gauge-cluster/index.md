@@ -3,7 +3,7 @@ hide:
   - toc
 ---
 
-# 4.4 Dakota Digital HDX Gauge System {#dakota-digital-gauge-cluster}
+# 2.9 Dakota Digital HDX Gauge System {#dakota-digital-gauge-cluster}
 
 ## Overview
 
@@ -43,4 +43,4 @@ Complete digital instrumentation system replacing factory TJ gauge cluster. HDX 
 [pmu-outputs]: ../../01-power-systems/04-pmu/03-pmu-outputs.md
 [grounding]: ../../01-power-systems/05-grounding/index.md
 [firewall-ingress]: ../../01-power-systems/07-wire-routing/02-firewall-ingress.md
-[ecm]: ../../02-engine-systems/index.md
+[ecm]: ../index.md

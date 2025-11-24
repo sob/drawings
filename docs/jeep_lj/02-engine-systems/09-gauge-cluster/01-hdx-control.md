@@ -142,5 +142,5 @@ All BIM modules connect via single daisy-chain harness from HDX control 3.5mm po
 [bim-j1939]: 03-bim-j1939.md
 [pmu-outputs]: ../../01-power-systems/04-pmu/03-pmu-outputs.md
 [ignition-bus]: ../../01-power-systems/06-ignition-signal/index.md
-[ct4]: ../03-command-touch-ct4.md
-[ecm]: ../../02-engine-systems/index.md
+[ct4]: ../../05-control-interfaces/03-command-touch-ct4.md
+[ecm]: ../index.md

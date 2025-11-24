@@ -159,7 +159,7 @@ Items completed since last update.
 - [Section 1.7 Wire Routing][wire-routing] - Wire routing organized by location
 
 [bcdc]: ../01-power-systems/01-power-generation/03-bcdc.md
-[gauge-cluster]: ../05-control-interfaces/04-gauge-cluster/index.md
+[gauge-cluster]: ../02-engine-systems/09-gauge-cluster/index.md
 [radiator-fan]: ../02-engine-systems/06-radiator-fan.md
 [wire-routing]: ../01-power-systems/07-wire-routing/index.md
 [switchpros]: ../05-control-interfaces/02-switchpros-sp1200.md
@@ -169,9 +169,6 @@ Items completed since last update.
 [turn-signals]: ../03-lighting-systems/03-turn-signals.md
 [offroad-lighting]: ../04-offroad-lighting/index.md
 [cargo-lights]: ../04-offroad-lighting/07-cargo-lights.md
-[fog-light]: ../04-offroad-lighting/02-fog-lights.md
-[reverse-lights]: ../04-offroad-lighting/10-reverse-lights.md
-[footwell-lights]: ../04-offroad-lighting/09-footwell-lights.md
 [chase-light]: ../04-offroad-lighting/04-chase-lights.md
 [recovery-systems]: ../08-exterior-systems/01-recovery-systems.md
 [body-rtmr]: ../01-power-systems/03-aux-battery-distribution/03-body-pdu.md

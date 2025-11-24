@@ -165,4 +165,4 @@ IF (BatteryVoltage < 12.5V) AND (EngineRPM > 1000)
 [pmu-outputs]: 03-pmu-outputs.md
 [arb-load-shedding]: 05-pmu-arb-load-shedding.md
 [starter-battery-distribution]: ../02-starter-battery-distribution/index.md
-[gauge-cluster]: ../../05-control-interfaces/04-gauge-cluster/index.md
+[gauge-cluster]: ../../02-engine-systems/09-gauge-cluster/index.md

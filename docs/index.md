@@ -14,6 +14,7 @@ Welcome to the technical documentation site for various in-depth projects.
 Comprehensive electrical wiring documentation for a Jeep LJ with Cummins R2.8 Turbo Diesel engine swap, dual battery system, and extensive custom electronics.
 
 **Key Systems:**
+
 - Dual battery system (front/rear split architecture)
 - Complete TIPM replacement with custom RTMRs
 - SwitchPros SP-9100 lighting control
@@ -30,6 +31,7 @@ Comprehensive electrical wiring documentation for a Jeep LJ with Cummins R2.8 Tu
 Browse the navigation menu to explore detailed technical documentation for each project.
 
 All documentation is organized by system/zone for easy reference and includes:
+
 - Complete wiring diagrams
 - Parts specifications
 - Installation notes

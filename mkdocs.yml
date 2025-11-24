@@ -128,6 +128,14 @@ nav:
       - 2.6 - Radiator Fan: jeep_lj/02-engine-systems/06-radiator-fan.md
       - 2.7 - Grid Heater: jeep_lj/02-engine-systems/07-grid-heater.md
       - 2.8 - Fuel System: jeep_lj/02-engine-systems/08-fuel-system.md
+      - 2.9 - Dakota Digital HDX:
+        - jeep_lj/02-engine-systems/09-gauge-cluster/index.md
+        - 2.9.1 - HDX Control: jeep_lj/02-engine-systems/09-gauge-cluster/01-hdx-control.md
+        - 2.9.2 - Dashboard Cluster: jeep_lj/02-engine-systems/09-gauge-cluster/02-dashboard-cluster.md
+        - 2.9.3 - BIM J1939: jeep_lj/02-engine-systems/09-gauge-cluster/03-bim-j1939.md
+        - 2.9.4 - BIM GPS: jeep_lj/02-engine-systems/09-gauge-cluster/04-bim-gps.md
+        - 2.9.5 - BIM TPMS: jeep_lj/02-engine-systems/09-gauge-cluster/05-bim-tpms.md
+        - 2.9.6 - BIM Compass: jeep_lj/02-engine-systems/09-gauge-cluster/06-bim-compass.md
     - Vehicle Lighting:
       - jeep_lj/03-lighting-systems/index.md
       - 3.1 - Lighting Overview: jeep_lj/03-lighting-systems/01-lighting-overview.md
@@ -152,15 +160,7 @@ nav:
       - 5.1 - Overview: jeep_lj/05-control-interfaces/01-overview.md
       - 5.2 - SwitchPros SP-1200: jeep_lj/05-control-interfaces/02-switchpros-sp1200.md
       - 5.3 - Command Touch CT4: jeep_lj/05-control-interfaces/03-command-touch-ct4.md
-      - 5.4 - Dakota Digital HDX:
-        - jeep_lj/05-control-interfaces/04-gauge-cluster/index.md
-        - 5.4.1 - HDX Control: jeep_lj/05-control-interfaces/04-gauge-cluster/01-hdx-control.md
-        - 5.4.2 - Dashboard Cluster: jeep_lj/05-control-interfaces/04-gauge-cluster/02-dashboard-cluster.md
-        - 5.4.3 - BIM J1939: jeep_lj/05-control-interfaces/04-gauge-cluster/03-bim-j1939.md
-        - 5.4.4 - BIM GPS: jeep_lj/05-control-interfaces/04-gauge-cluster/04-bim-gps.md
-        - 5.4.5 - BIM TPMS: jeep_lj/05-control-interfaces/04-gauge-cluster/05-bim-tpms.md
-        - 5.4.6 - BIM Compass: jeep_lj/05-control-interfaces/04-gauge-cluster/06-bim-compass.md
-      - 5.5 - Dashboard Switches: jeep_lj/05-control-interfaces/05-dashboard-controls.md
+      - 5.4 - Dashboard Switches: jeep_lj/05-control-interfaces/05-dashboard-controls.md
     - Stereo Systems:
       - jeep_lj/06-audio-systems/index.md
       - 6.1 - Head Unit: jeep_lj/06-audio-systems/01-head-unit.md
