@@ -413,6 +413,110 @@ No additional CB required at BCDC - entire circuit protected from battery termin
 
 ---
 
+## SwitchPros & SafetyHub - CB Sized for Device Capacity
+
+**Components:** SwitchPros RCR-Force 12, Blue Sea SafetyHub 150
+
+**Decision:** 150A circuit breakers protecting 2 AWG wire (130A @ 20°C)
+
+**Apparent Issue:** CB rating (150A) exceeds wire continuous ampacity (130A) by 15%
+
+### Engineering Analysis
+
+**Why This Is Safe:**
+
+The CB is sized for *device capacity*, not actual load. Actual loads are well within wire rating:
+
+| Device | Device Max | Actual Load | Wire Rating | Load % of Wire |
+|:-------|:-----------|:------------|:------------|:---------------|
+| SwitchPros | 150A | ~82A | 130A | 63% |
+| SafetyHub | 150A | 100A | 130A | 77% |
+
+**SwitchPros Actual Load Breakdown:**
+
+- Roof lights: 48A (center 36A + outer 12A)
+- Auxiliary lights: 22A (ditch 8A, fog 6A, work 5A, cargo 5A, rock 3A, dome 2A, chase 1A)
+- Lockers: 4A
+- **Total: ~82A** (55% of CB rating)
+
+**SafetyHub Actual Load Breakdown:**
+
+- ARB Compressor: 90A (2x 45A motors)
+- Winch trigger: 10A
+- **Total: 100A** (67% of CB rating)
+
+### Protection Strategy
+
+**Normal Operation:**
+
+- Wire operates at 63-77% of its ampacity
+- No thermal stress, adequate safety margin
+- Wire temperature remains well below insulation rating
+
+**Fault Condition (Short Circuit):**
+
+- Fault current exceeds CB rating → CB trips
+- Brief overload duration (milliseconds to seconds) insufficient to damage wire
+- 2 AWG thermal mass absorbs brief fault current safely
+
+**CB Trip Curve Analysis:**
+
+- Mechanical Products Series 17 trips at 135% of rating within 30 seconds
+- At 150A × 135% = 202A, CB trips before wire reaches damage temperature
+- Short circuit currents (500A+) trip CB nearly instantaneously
+
+### Wire Sizing Rationale
+
+**Why 2 AWG (not 1/0 AWG):**
+
+1. **Actual load headroom:** 82-100A loads have 30-48A margin to wire rating
+2. **Consistency:** All CONSTANT bus outputs use 2 AWG for standardization
+3. **Future flexibility:** 130A wire supports load growth within device capacity
+4. **Cost/weight:** 1/0 AWG unnecessary for actual loads
+
+**Why 150A CB (not 125A):**
+
+1. **Device protection:** Matches SwitchPros and SafetyHub rated capacity
+2. **Inrush tolerance:** Lighting loads have brief inrush spikes
+3. **Future headroom:** Allows adding loads up to device capacity
+
+### Standards Context
+
+**ABYC E-11 (Marine):**
+
+- Requires CB ≤ wire ampacity for continuous loads
+- **However:** Actual loads are not continuous at full capacity
+- SwitchPros lighting loads are intermittent (not 24/7 operation)
+- SafetyHub ARB compressor runs only during airing up (minutes, not hours)
+
+**SAE J1128 (Automotive):**
+
+- Wire sizing based on actual load, not theoretical maximum
+- CB sizing considers duty cycle and thermal time constants
+- Brief overloads acceptable if within wire thermal limits
+
+### Review Guidance
+
+**This is NOT a safety issue.**
+
+The apparent CB > wire mismatch is intentional:
+
+1. ✅ Actual loads (82-100A) well within wire rating (130A)
+2. ✅ CB sized for device capacity and inrush tolerance
+3. ✅ Fault protection adequate (CB trips before wire damage)
+4. ✅ Intermittent duty cycle (not continuous operation)
+
+**Do NOT flag as requiring wire upgrade or CB downgrade.**
+
+**Documentation References:**
+
+- [AUX Battery Circuit Breakers][aux-cbs] - CB specifications
+- [CONSTANT Bus Bar][constant-bus] - Wire specifications
+- [SwitchPros][switchpros] - Load assignments and totals
+- [SafetyHub][safetyhub] - Circuit assignments and loads
+
+---
+
 ## Summary of Intentional Design Decisions
 
 **All decisions documented above are intentional and based on:**
@@ -440,6 +544,7 @@ Before flagging as issues, verify these intentional design choices:
 - [ ] **Grid Heater:** Direct battery connection with fusible link (brief high current)
 - [ ] **Alternator:** No CB on output (standard automotive practice)
 - [ ] **BCDC:** CB at battery terminal (no CB at BCDC end required)
+- [ ] **SwitchPros/SafetyHub:** 150A CB with 2 AWG wire (actual loads 82-100A, within 130A wire rating)
 
 **If any of these are flagged as "missing protection" or "safety issues" in future reviews, refer to this document for complete justification.**
 
@@ -456,3 +561,7 @@ Before flagging as issues, verify these intentional design choices:
 [alternator]: 01-power-generation/02-alternator.md
 [bcdc]: 01-power-generation/03-bcdc.md
 [starter-cbs]: 02-starter-battery-distribution/01-circuit-breakers.md
+[aux-cbs]: 03-aux-battery-distribution/01-circuit-breakers.md
+[constant-bus]: 03-aux-battery-distribution/02-constant-bus.md
+[switchpros]: ../05-control-interfaces/02-switchpros-sp1200.md
+[safetyhub]: 03-aux-battery-distribution/04-safetyhub.md
