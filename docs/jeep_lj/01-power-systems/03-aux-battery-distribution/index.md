@@ -14,7 +14,7 @@ hide:
 The AUX battery (passenger wheel well) provides power for high-current accessories and cabin systems:
 
 1. **Direct high-current** → Winch (recovery system, no CB per manufacturer spec)
-2. **CONSTANT Bus Bar** (Blue Sea 2104 PowerBar, 225A) - Feeds SwitchPros, SafetyHub 150, BODY PDU
+2. **CONSTANT Bus Bar** (Blue Sea 2107 PowerBar, 600A) - Feeds SwitchPros, SafetyHub 150, BODY PDU, Fusion Amp
 3. **Direct charging input** → BCDC Alpha 50 output
 
 See [CONSTANT Bus Bar][constant-bus] for complete bus bar specifications, [SafetyHub][aux-safetyhub] for fused distribution, and [Circuit Breakers][circuit-breakers] for CB details.
@@ -36,7 +36,7 @@ This page is the authoritative source for all AUX battery wire specs (gauge, dis
 | :------------------------------- | :---------------- | :--------- | :------- | :-------- | :-------------- |
 | Rear Frame Rail                  | Local (chassis)   | 2/0 AWG    | ~3 ft    | 654A peak | <0.1V @ 20°C    |
 | [BCDC Alpha 50][bcdc]            | Local             | 4 AWG      | Short    | 50A       | Negligible      |
-| [Fusion Apollo Amp][audio]       | Local             | Per spec   | <18"     | Per spec  | Negligible      |
+| [Fusion Apollo Amp][audio]       | Local             | 4 AWG      | <18"     | 78A max   | Negligible      |
 | [START Battery][starter-battery] | Driver wheel well | 1/0 AWG    | 5-6 ft   | 75A max   | <0.05V @ 20°C   |
 | [Winch][recovery]                | Front bumper      | 1/0 AWG    | 13 ft    | 250-400A  | 4.9-7.9% @ 20°C |
 

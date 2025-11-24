@@ -28,7 +28,7 @@ tags:
 
 **Mounting:** TBD - cargo area or under rear seat
 
-**Power Source:** CONSTANT bus via 40A breaker
+**Power Source:** CONSTANT bus via 100A breaker
 
 ///
 
@@ -78,8 +78,8 @@ Fusion includes bridge adapters with built-in magnets:
 
 | Connection | Wire     | Source          | Notes                    |
 | :--------- | :------- | :-------------- | :----------------------- |
-| Power (+)  | 6 AWG    | CONSTANT bus    | Via 40A Blue Sea breaker |
-| Ground (−) | 6 AWG    | Chassis/AUX neg | <18" length              |
+| Power (+)  | 4 AWG    | CONSTANT bus    | Via 100A Blue Sea breaker |
+| Ground (−) | 4 AWG    | Chassis/AUX neg | <18" length              |
 | Remote     | 18 AWG   | MS-RA670        | Turn-on signal           |
 | RCA Zone 1 | Shielded | MS-RA670        | Ch 3+4 (front)           |
 | RCA Zone 2 | Shielded | MS-RA670        | Ch 5+6 (rear)            |
@@ -89,9 +89,9 @@ Fusion includes bridge adapters with built-in magnets:
 
 Amplifier has 125A internal electronic fuse (no replacement necessary). External protection at CONSTANT bus:
 
-- **Recommended:** Blue Sea 7184 (50A) breaker
-- Protects wiring (78A max draw)
-- Mount at CONSTANT bus for easy access
+- **Breaker:** Blue Sea 187-100A (100A) thermal circuit breaker
+- Protects 4 AWG wiring (rated 95A continuous, 100A with short runs)
+- Mount at CONSTANT bus in passenger wheel well
 
 ## Mounting Options
 
@@ -102,9 +102,8 @@ Amplifier has 125A internal electronic fuse (no replacement necessary). External
 ## Outstanding Items
 
 - [ ] Determine mounting location (behind dash preferred)
-- [ ] Select Blue Sea breaker: 50A (7184) recommended for 78A max
-- [ ] Plan breaker mounting at CONSTANT bus
-- [ ] Confirm 6 AWG sufficient for power run
+- [ ] Order Blue Sea 187-100A circuit breaker
+- [ ] Order 4 AWG power/ground cable (length TBD based on mounting location)
 - [ ] Determine ground connection point
 - [ ] Verify ground wire <18" for best performance
 - [ ] Plan RCA cable routing from head unit

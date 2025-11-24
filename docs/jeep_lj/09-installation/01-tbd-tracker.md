@@ -104,6 +104,7 @@ Items completed since last update.
 | Item                          | Resolution                                                                                                                    | Date       |
 | :---------------------------- | :---------------------------------------------------------------------------------------------------------------------------- | :--------- |
 | Fusion Amp Current Draw       | 6-ch MS-AP61800: 1.32A idle, 78A max, 125A electronic fuse                                                                    | 2025-11-24 |
+| Fusion Amp CB Selection       | Blue Sea 187-100A breaker, 4 AWG power/ground wiring, mount at CONSTANT bus                                                   | 2025-11-24 |
 | WolfBox Model                 | G900 TriPro selected                                                                                                          | 2025-11-24 |
 | WolfBox Power Source          | BODY PDU F5 (10A, CONSTANT)                                                                                                   | 2025-11-24 |
 | WolfBox Mounting              | Windshield mount (replaces factory rearview mirror)                                                                           | 2025-11-24 |
