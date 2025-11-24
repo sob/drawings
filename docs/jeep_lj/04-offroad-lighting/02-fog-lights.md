@@ -1,24 +1,46 @@
 ---
+hide:
+  - toc
 tags:
+  - product-details
   - lighting
   - offroad
   - switchpros-controlled
   - baja-designs
 ---
 
-# Fog Light
+# 4.2 Fog Light {#fog-light}
 
 Amber fog/dust light for improved visibility in poor conditions (Baja Designs Zone 1).
 
+/// html | div.product-info
+![Baja Designs S8 10" Amber](../images/baja-designs-s8-10-amber.jpg){ loading=lazy }
+
+**Type:** LED Light Bar
+
+**Model:** S8 10" Wide Cornering Amber
+
+**Part Number:** 701014
+
+**Manufacturer:** Baja Designs
+
+**Quantity:** 1
+
+**Mounting:** Top of Motobilt bumper, centered
+
+**Power Source:** SwitchPros OUTPUT-3
+
+///
+
 ## Specifications
 
-**Type:** Baja Designs S8 10"
-**Quantity:** 1 (center mounted on Motobilt bumper)
-**Lens:** Amber
-**Beam Pattern:** Wide Cornering (42°)
-**Output:** 8,000 lumens
-**Draw:** 6A
-**Profile:** 2.13" slim
+| Spec | Value |
+|:-----|------:|
+| Lens | Amber |
+| Beam Pattern | Wide Cornering (42°) |
+| Output | 8,000 lumens |
+| Draw | 6A |
+| Profile | 2.13" slim |
 
 ## Control
 
@@ -26,13 +48,8 @@ Amber fog/dust light for improved visibility in poor conditions (Baja Designs Zo
 
 See [SwitchPros SP-1200][switchpros-sp-1200] for wiring details.
 
-## Mounting
-
-Top-of-Motobilt-bumper mounted, horizontal, centered.
-
 ## Outstanding Items
 
-- [ ] Confirm S8 10" amber part number
 - [ ] Determine mounting hardware for Motobilt bumper
 
 ## Related Documentation

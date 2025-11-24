@@ -1,22 +1,38 @@
 ---
+hide:
+  - toc
 tags:
+  - product-details
   - lighting
   - offroad
   - switchpros-controlled
   - baja-designs
 ---
 
-# Chase Light
+# 4.4 Chase Light {#chase-light}
 
 Multi-function rear safety light for convoy visibility, plus integrated brake, turn, and work lighting.
 
-## Specifications
+/// html | div.product-info
+![Baja Designs RTL-S 30"](../images/baja-designs-rtl-s-30.jpg){ loading=lazy }
 
-**Type:** Baja Designs RTL-S 30"
-**Quantity:** 1 bar (centered on rear roll cage)
-**Profile:** 2.15" slim
-**Part #:** 103004
+**Type:** LED Chase Light Bar
+
+**Model:** RTL-S 30"
+
+**Part Number:** 103004
+
+**Manufacturer:** Baja Designs
+
+**Quantity:** 1
+
+**Mounting:** Centered on rear roll cage
+
+**Power Source:** Multiple (see Functions table)
+
 **Harness:** RTL-S wiring harness (Part #: 640134)
+
+///
 
 ## Functions
 

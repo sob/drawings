@@ -1,42 +1,55 @@
 ---
+hide:
+  - toc
 tags:
+  - product-details
   - lighting
   - offroad
   - switchpros-controlled
   - baja-designs
 ---
 
-# Roof Lights
+# 4.3 Roof Lights {#roof-lights}
 
-Primary forward illumination mounted on roof rack (Baja Designs Zone 3 + Zone 4). Two separate circuits for flexibility.
+Primary forward illumination mounted on roof rack (Baja Designs Zone 3 + Zone 4).
 
-## Center Section - Zone 3
+/// html | div.product-info
+![Baja Designs XL Sport Linkable 8-Pod](../images/baja-designs-xl-sport-linkable-8.jpg){ loading=lazy }
 
-**Type:** Baja Designs XL Sport Linkable
-**Quantity:** 6 pods (roof rack center section)
-**Beam Pattern:** Driving/Combo (6° spot + 42° driving)
-**Lens:** Clear
-**Output:** 9,000 lumens each (54,000 total)
-**Draw:** 6A each (36A total)
-**Part #:** 557803 (clear lens)
+**Type:** LED Pod Light (Linkable)
 
-**Control:** SwitchPros Button 1 (OUTPUT-1)
+**Model:** XL Sport Linkable
 
-## Outer Spots - Zone 4
+**Part Number:** 740006
 
-**Type:** Baja Designs XL Sport Linkable
-**Quantity:** 2 pods (roof rack outer positions, left/right corners)
-**Beam Pattern:** Spot (6° narrow)
-**Lens:** Clear
-**Output:** 9,000 lumens each (18,000 total)
-**Draw:** 6A each (12A total)
-**Part #:** 557801 (clear lens)
+**Manufacturer:** Baja Designs
 
-**Control:** SwitchPros Button 5 (OUTPUT-5)
+**Quantity:** 8 pods total
 
-## Combined Output
+**Mounting:** Roof rack - physically linked, electrically split
 
-**Total Roof Lighting:** 72,000 lumens | 48A draw
+**Power Source:** SwitchPros OUTPUT-1 (6 pods) + OUTPUT-5 (2 pods)
+
+///
+
+## Wiring
+
+All 8 pods physically linked on roof rack. Split into two circuits for load distribution:
+
+| Circuit | Pods | Lens | Pattern | Draw | Control |
+|:--------|-----:|:-----|:--------|-----:|:--------|
+| Zone 3 (OUTPUT-1) | 4 center | Driving/Combo | Forward | 24A | Button 1 |
+| Zone 3 (OUTPUT-1) | 2 mid | Wide Cornering | Peripheral | 12A | Button 1 |
+| Zone 4 (OUTPUT-5) | 2 outer | Spot | Distance | 12A | Button 5 |
+
+## Specifications
+
+| Spec | Value |
+|:-----|------:|
+| Output | 9,000 lumens each |
+| Draw | 6A each |
+| Total Output | 72,000 lumens |
+| Total Draw | 48A (split across 2 circuits) |
 
 See [SwitchPros SP-1200][switchpros-sp-1200] for wiring details.
 

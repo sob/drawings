@@ -1,34 +1,50 @@
 ---
+hide:
+  - toc
 tags:
+  - product-details
   - lighting
   - offroad
   - switchpros-controlled
   - kc-hilites
 ---
 
-# Rock Lights
+# 4.6 Rock Lights {#rock-lights}
 
 Underbody lighting for wheel wells and frame rails (Baja Designs Zone 6).
 
+/// html | div.product-info
+![KC HiLiTES Cyclone V2](../images/kc-cyclone-v2.jpg){ loading=lazy }
+
+**Type:** LED Rock Light
+
+**Model:** Cyclone V2
+
+**Part Number:** 1352 (single light)
+
+**Manufacturer:** KC HiLiTES
+
+**Quantity:** 6 pods
+
+**Mounting:** Wheel wells and frame rails (4 front, 2 rear)
+
+**Power Source:** SwitchPros OUTPUT-6
+
+///
+
 ## Specifications
 
-**Type:** KC HiLiTES Cyclone V2
-**Quantity:** 6 pods
-**Output:** 200 lumens each (1,200 total)
-**Draw:** 0.5A each (3A total)
-**Size:** 2.4" diameter round
-**Part #:** 1352 (single light)
+| Spec | Value |
+|:-----|------:|
+| Output | 200 lumens each (1,200 total) |
+| Draw | 0.5A each (3A total) |
+| Size | 2.4" diameter round |
 
 ## Control
 
 **Controller:** SwitchPros Button 6 (OUTPUT-6)
 
 See [SwitchPros SP-1200][switchpros-sp-1200] for wiring details.
-
-## Mounting
-
-- 4x front wheel wells and frame rails
-- 2x rear wheel wells
 
 **Protection:** Conduit or protective sleeving in exposed areas.
 

@@ -1,24 +1,45 @@
 ---
+hide:
+  - toc
 tags:
+  - product-details
   - lighting
   - offroad
   - switchpros-controlled
   - baja-designs
 ---
 
-# Ditch Lights
+# 4.1 Ditch Lights {#ditch-lights}
 
 A-pillar mounted lights for peripheral and side illumination (Baja Designs Zone 2).
 
+/// html | div.product-info
+![Baja Designs LP4 Pro](../images/baja-designs-lp4-pro-combo.jpg){ loading=lazy }
+
+**Type:** LED Pod Light
+
+**Model:** LP4 Pro Driving/Combo
+
+**Part Number:** 297803
+
+**Manufacturer:** Baja Designs
+
+**Quantity:** 2 (left and right A-pillars)
+
+**Mounting:** A-pillar brackets
+
+**Power Source:** SwitchPros OUTPUT-2
+
+///
+
 ## Specifications
 
-**Type:** Baja Designs LP4 Pro
-**Quantity:** 2 (left and right A-pillars)
-**Beam Pattern:** Wide Cornering (42° horizontal)
-**Lens:** Clear
-**Output:** 4,400 lumens each (8,800 total)
-**Draw:** 4A each (8A total)
-**Part #:** 270013 (clear, wide cornering)
+| Spec | Value |
+|:-----|------:|
+| Beam Pattern | Driving/Combo |
+| Lens | Clear |
+| Output | 4,400 lumens each (8,800 total) |
+| Draw | 4A each (8A total) |
 
 ## Control
 
@@ -28,7 +49,7 @@ See [SwitchPros SP-1200][switchpros-sp-1200] for wiring details.
 
 ## Zone 2 Purpose
 
-Wide Cornering pattern provides peripheral illumination for:
+Driving/Combo pattern provides peripheral illumination for:
 
 - Trail obstacle visibility on sides
 - Ditch and shoulder illumination

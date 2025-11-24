@@ -21,15 +21,15 @@ Lighting organized by [Baja Designs Zone System][bd-zones], optimized for specif
 | BD Zone | Purpose | Lumens | Lights | Lens | Pattern |
 |:-------:|:--------|-------:|:-------|:-----|:--------|
 | 1 | Fog/Dust | 8,000 | 1x BD S8 10" | Amber | Wide Cornering |
-| 2 | Ditch/Peripheral | 8,800 | 2x BD LP4 Pro | Clear | Wide Cornering |
+| 2 | Ditch/Peripheral | 8,800 | 2x BD LP4 Pro | Clear | Driving/Combo |
 | 3 | Primary Forward | 54,000 | 6x BD XL Sport | Clear | Driving/Combo |
 | 4 | Spot Distance | 18,000 | 2x BD XL Sport | Clear | Spot |
 | 6 | Rock Lights | 1,200 | 6x KC Cyclone V2 | Clear | Flood |
-| 7 | Cargo | 3,000 | 2x BD Squadron Sport | Clear | Flood |
-| 8 | Reverse | 3,800 | 2x BD S1 Flush | Clear | Flood |
-| 8 | Rear Work | 3,800 | 2x BD S1 Pro | Clear | Work/Driving |
+| 7 | Cargo | — | 2x BD S2 Sport Flush | Clear | Work/Scene |
+| 8 | Reverse | 9,800 | 2x BD Squadron Pro | Clear | Driving/Combo |
+| 8 | Rear Work | 3,800 | 2x BD S1 Black | Clear | Work/Scene |
 | — | Chase/Safety | — | 1x BD RTL-S 30" | Amber | Rear-facing |
-| — | Party | — | BD RGB Whip + Strips | RGB | — |
+| — | Party/Footwell | — | 4x LED4Life RGBW Pods | RGB | Flood |
 
 **Total Forward:** 88,800 lumens (white) + 8,000 lumens (amber)
 **Total Rear:** 7,600 lumens | **Rock:** 1,200 lumens
@@ -42,10 +42,11 @@ Lighting organized by [Baja Designs Zone System][bd-zones], optimized for specif
 
 | Circuit | Controller | Page |
 |:--------|:-----------|:-----|
-| Roof, Ditch, Fog, Rock, Chase, Party, Rear Work | [SwitchPros SP-1200][switchpros-sp-1200] | See controller for wiring |
+| Roof, Ditch, Fog, Rock, Chase, Rear Work | [SwitchPros SP-1200][switchpros-sp-1200] | See controller for wiring |
 | Cargo Lights | Physical switch | [Cargo Lights][cargo-lights] |
 | Reverse Lights | [PMU Out 18][tail-brake-reverse] | [Reverse Lights][reverse-lights] |
 | RTL-S Brake/Running | PMU/OEM | [Chase Lights][chase-lights] |
+| Party/Footwell | [JL Audio MLC-RW][audio-systems] | [Party Lights][party-lights] |
 
 [tail-brake-reverse]: ../03-lighting-systems/04-tail-brake-reverse.md
 
@@ -61,3 +62,5 @@ Lighting organized by [Baja Designs Zone System][bd-zones], optimized for specif
 [chase-lights]: 04-chase-lights.md
 [cargo-lights]: 07-cargo-lights.md
 [reverse-lights]: 10-reverse-lights.md
+[party-lights]: 09-party-lights.md
+[audio-systems]: ../06-audio-systems/01-audio.md

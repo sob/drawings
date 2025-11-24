@@ -1,27 +1,47 @@
 ---
+hide:
+  - toc
 tags:
+  - product-details
   - lighting
   - offroad
   - baja-designs
 ---
 
-# Cargo Lights
+# 4.7 Cargo Lights {#cargo-lights}
 
 Interior cargo area lighting controlled by physical switch (Baja Designs Zone 7).
 
+/// html | div.product-info
+![Baja Designs S2 Sport Flush Mount](../images/baja-designs-s2-sport-flush.jpg){ loading=lazy }
+
+**Type:** LED Flush Mount Light
+
+**Model:** S2 Sport Black Flush Mount
+
+**Part Number:** 541006
+
+**Manufacturer:** Baja Designs
+
+**Quantity:** 2 pods
+
+**Mounting:** TBD - cargo area (flush mount)
+
+**Power Source:** Physical switch (not SwitchPros)
+
+///
+
 ## Specifications
 
-**Type:** Baja Designs Squadron Sport
-**Quantity:** 2 pods
-**Beam Pattern:** Flood
-**Lens:** Clear
-**Output:** ~1,500 lumens each (3,000 total)
-**Draw:** 2.5A each (5A total)
-**Part #:** 551003 (clear lens)
+| Spec | Value |
+|:-----|------:|
+| Beam Pattern | Work/Scene |
+| Lens | Clear |
+| Draw | ~2A each (4A total) |
 
 ## Control
 
-**Controller:** Physical switch (not SwitchPros)
+**Controller:** Physical switch (rocker switch in cargo area)
 
 Rocker switch in cargo area for convenient access when loading/unloading from tailgate.
 

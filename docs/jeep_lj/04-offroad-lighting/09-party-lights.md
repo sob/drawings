@@ -1,56 +1,82 @@
 ---
+hide:
+  - toc
 tags:
+  - product-details
   - lighting
   - offroad
-  - switchpros-controlled
-  - baja-designs
+  - audio-integrated
 ---
 
-# Party Lights
+# 4.9 Party Lights {#party-lights}
 
-RGB lighting for events, camping, and off-trail activities.
+RGB footwell lighting synced with stereo speaker LEDs via JL Audio MLC-RW controller.
 
-## Components
+/// html | div.product-info
+![LED4Life RGBW Rock Light Pod](../images/led4life-rgbw-rock-light-pod.jpg){ loading=lazy }
 
-### BD RGB Whip
+**Type:** RGBW LED Rock Light Pod
 
-**Type:** Baja Designs RGB Whip
-**Length:** 4' or 5'
-**Draw:** ~5A
-**Part #:** 329907 (4') or 329908 (5')
-**Mounting:** Rear bumper or tire carrier
+**Model:** RGBW LED Rock Light Single Pod
 
-### Footwell Strips
+**Part Number:** N/A (sold individually)
 
-**Type:** RGB LED Strips
-**Quantity:** 4 strips (12-18" each)
-**Draw:** ~1A total
-**Mounting:** Under dashboard and rear cargo area
+**Manufacturer:** LED4Life
 
-## Combined Specifications
+**Product Page:** [LED4Life RGBW Rock Light Single Pod][led4life-pod]
 
-**Total Draw:** 6A
+**Quantity:** 4 pods
+
+**Mounting:** Footwells (2 front, 2 rear)
+
+**Power Source:** JL Audio MLC-RW controller
+
+///
+
+## Specifications
+
+| Spec | Value |
+|:-----|------:|
+| Wiring | Common anode (5-pin RGBW) |
+| Waterproof | IP68 |
+| Construction | Epoxy filled, aluminum body |
+| Wire Length | 14.5' per pod |
+| Price | ~$15 each |
+
+## Wiring
+
+Pods wire directly to MLC-RW outputs in parallel with JL Audio speaker LEDs:
+
+| LED4Life Wire | MLC-RW Wire | Function |
+|:--------------|:------------|:---------|
+| +12V | White | Common anode (+12V) |
+| R | Red | Red LED (−) |
+| G | Green | Green LED (−) |
+| B | Blue | Blue LED (−) |
+| W | *Not connected* | White LED (unused) |
+
+W channel capped off - MLC-RW is RGB only. RGB can produce white when all channels on.
 
 ## Control
 
-**Controller:** SwitchPros Button 8 (OUTPUT-8)
+**Controller:** JL Audio MLC-RW (rotary encoder + WiFi app)
 
-See [SwitchPros SP-1200][switchpros-sp-1200] for wiring details.
+- Press & hold 2 sec: Power ON
+- Press & hold 5 sec: Power OFF
+- Rotate: Color/brightness/speed
 
-## RGB Controller
-
-Whip includes integrated controller for color/pattern selection.
+See [Audio Systems][audio-systems] for MLC-RW details.
 
 ## Outstanding Items
 
-- [ ] Confirm RGB whip length (4' vs 5')
-- [ ] Determine RGB LED strip model and lengths
-- [ ] Plan controller integration
+- [ ] Confirm LED4Life pod wire colors match table above
+- [ ] Plan wire routing from MLC-RW to footwells
 
 ## Related Documentation
 
 - [Offroad Lighting Overview][offroad-overview]
-- [SwitchPros SP-1200][switchpros-sp-1200]
+- [Audio Systems][audio-systems]
 
 [offroad-overview]: index.md
-[switchpros-sp-1200]: ../05-control-interfaces/02-switchpros-sp1200.md
+[audio-systems]: ../06-audio-systems/01-audio.md
+[led4life-pod]: https://www.led4lifellc.com/products/rgbw-led-rock-light-single-pod

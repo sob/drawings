@@ -9,7 +9,7 @@ hide:
 
 **Last Updated:** 2025-11-23
 
-**Total Open Items:** 43
+**Total Open Items:** 38
 
 ---
 
@@ -82,9 +82,6 @@ Items that can be determined during build.
 | WolfBox Display Size | 9.66" or 12" model | [Communication][communication] | Low |
 | WolfBox License Plate Integration | With existing license plate lights | [Communication][communication] | Low |
 | Rear Seat Switch | Parallel wiring for passenger control | [Offroad Lighting][offroad-lighting] | Low |
-| Cargo Area Lighting Type | LED bar or pod lights | [Offroad Lighting][offroad-lighting] | Low |
-| Cargo Area Light Quantity | Based on coverage needed | [Offroad Lighting][offroad-lighting] | Low |
-| RGB Controller | For rock light color/pattern selection | [Offroad Lighting][offroad-lighting] | Low |
 | Recovery Board Storage | MaxTrax storage location | [Recovery Systems][recovery-systems] | Low |
 | Hi-Lift Jack Mount | Hood, bumper, or rear swing-out | [Recovery Systems][recovery-systems] | Low |
 | BIM Module Current Draw | Current draw for BIM-17-2, BIM-11-2, BIM-12-2, BIM-13-2 (powered via BIM cable) | [Gauge Cluster][gauge-cluster] | Low |
@@ -108,6 +105,10 @@ Items completed since last update.
 
 | Item | Resolution | Date |
 |:-----|:-----------|:-----|
+| S8 10" Amber Part Number | 701014 - Baja Designs S8 10" Wide Cornering Amber | 2025-11-23 |
+| Cargo Area Lighting Type | BD Squadron Sport Flood (2 pods, 3,000 lumens total) | 2025-11-23 |
+| Cargo Area Light Quantity | 2 BD Squadron Sport pods | 2025-11-23 |
+| RGB Controller | BD RGB Whip has integrated controller | 2025-11-23 |
 | iBooster Mounting Bolt Torque | 16.5 Nm (12 ft-lb) - 2x nyloc nuts, 13mm per Tesla Model Y service manual | 2025-11-23 |
 | Grommet Locations | Determined during installation (general areas documented) | 2025-11-22 |
 | Firewall Ground Stud Location | Determined during installation | 2025-11-22 |
@@ -144,9 +145,9 @@ Items completed since last update.
 | 🔴 Critical | 0 |
 | ⚠️ High | 5 |
 | 📋 Medium | 25 |
-| 📝 Low | 11 |
+| 📝 Low | 6 |
 | 🔍 Verify | 2 |
-| **TOTAL** | **43** |
+| **TOTAL** | **38** |
 
 ## Related Documentation
 
@@ -163,6 +164,9 @@ Items completed since last update.
 [communication]: ../07-communication-systems/01-communication.md
 [turn-signals]: ../03-lighting-systems/03-turn-signals.md
 [offroad-lighting]: ../04-offroad-lighting/index.md
+[fog-light]: ../04-offroad-lighting/02-fog-lights.md
+[reverse-lights]: ../04-offroad-lighting/10-reverse-lights.md
+[party-lights]: ../04-offroad-lighting/09-party-lights.md
 [recovery-systems]: ../08-exterior-systems/01-recovery-systems.md
 [body-rtmr]: ../01-power-systems/03-aux-battery-distribution/03-body-pdu.md
 [section-1-install]: ../01-power-systems/installation-checklist.md

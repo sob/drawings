@@ -1,25 +1,46 @@
 ---
+hide:
+  - toc
 tags:
+  - product-details
   - lighting
   - offroad
   - switchpros-controlled
   - baja-designs
 ---
 
-# Rear Work Lights
+# 4.8 Rear Work Lights {#rear-work-lights}
 
 Rear-facing auxiliary work lights mounted at license plate area (Baja Designs Zone 8).
 
+/// html | div.product-info
+![Baja Designs S1 Pro](../images/baja-designs-s1-pro-work-scene.jpg){ loading=lazy }
+
+**Type:** LED Pod Light
+
+**Model:** S1 Black LED
+
+**Part Number:** 387806
+
+**Manufacturer:** Baja Designs
+
+**Quantity:** 2 pods
+
+**Mounting:** Above license plate or spare tire carrier
+
+**Power Source:** SwitchPros OUTPUT-12
+
+///
+
 ## Specifications
 
-**Type:** Baja Designs S1 Pro
-**Quantity:** 2 pods (above license plate or spare tire carrier)
-**Beam Pattern:** Work/Driving
-**Lens:** Clear
-**Output:** 1,900 lumens each (3,800 total)
-**Draw:** 2.5A each (5A total)
-**Size:** 2" square
-**Part #:** 387805 (clear lens)
+| Spec | Value |
+|:-----|------:|
+| Beam Pattern | Work/Scene |
+| Lens | Clear |
+| Output | 1,900 lumens each (3,800 total) |
+| Draw | 2.5A each (5A total) |
+| Size | 2" square |
 
 ## Control
 

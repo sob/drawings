@@ -1,25 +1,45 @@
 ---
+hide:
+  - toc
 tags:
+  - product-details
   - lighting
   - offroad
   - pmu-controlled
   - baja-designs
 ---
 
-# Reverse Lights
+# 4.10 Reverse Lights {#reverse-lights}
 
 High-output reverse lights that activate automatically via PMU reverse circuit (Baja Designs Zone 8).
 
+/// html | div.product-info
+![Baja Designs Squadron Pro](../images/baja-designs-squadron-pro.jpg){ loading=lazy }
+
+**Type:** LED Pod Light
+
+**Model:** Squadron Pro Black
+
+**Part Number:** 497803
+
+**Manufacturer:** Baja Designs
+
+**Quantity:** 2 pods
+
+**Mounting:** Rear bumper or spare tire carrier
+
+**Power Source:** PMU Out 18 (automatic with reverse gear)
+
+///
+
 ## Specifications
 
-**Type:** Baja Designs S1 Flush Mount
-**Quantity:** 2 pods (Motobilt rear bumper, left/right of hitch)
-**Beam Pattern:** Flood
-**Lens:** Clear
-**Output:** 1,900 lumens each (3,800 total)
-**Draw:** 2.5A each (5A total)
-**Size:** 2" x 2" square flush mount
-**Bumper Compatibility:** Fits 2.75-3" bumper height
+| Spec | Value |
+|:-----|------:|
+| Beam Pattern | Driving/Combo |
+| Lens | Clear |
+| Output | 4,900 lumens each (9,800 total) |
+| Draw | 3.5A each (7A total) |
 
 ## Control
 
@@ -31,9 +51,8 @@ See [Tail/Brake/Reverse Lights][tail-brake-reverse] for PMU reverse circuit deta
 
 ## Outstanding Items
 
-- [ ] Confirm S1 Flush Mount part number
-- [ ] Verify PMU Out 18 capacity handles combined load (~8A)
-- [ ] Plan wire routing from PMU Out 18 junction to rear bumper
+- [ ] Confirm Squadron Pro mounting location
+- [ ] Verify PMU Out 18 capacity handles combined load
 
 ## Related Documentation
 
