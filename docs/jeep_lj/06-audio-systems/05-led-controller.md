@@ -22,6 +22,8 @@ RGB LED controller for speaker lighting and footwell pods, with WiFi app and rot
 
 **Product Page:** [MLC-RW][product-link]
 
+**Manual:** [Installation Manual][manual-link]
+
 **Mounting:** Near amplifier (behind dash or cargo area)
 
 **Power Source:** BODY PDU spare circuit (30A)
@@ -126,4 +128,5 @@ See [Footwell Lights][footwell-lights] for pod details.
 [subwoofer]: 04-subwoofer.md
 [footwell-lights]: ../04-offroad-lighting/09-footwell-lights.md
 [body-pdu]: ../01-power-systems/03-aux-battery-distribution/03-body-pdu.md
-[product-link]: https://www.garmin.com/en-US/p/1854162/pn/010-03092-00/
+[product-link]: https://www.garmin.com/en-US/p/1669617/
+[manual-link]: https://static.garmin.com/pumac/MLC_RW_MAN.pdf
