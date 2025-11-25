@@ -11,20 +11,18 @@ tags:
 
 **Control:** Automatic with ignition
 
-**Power Source:** PMU Out 9 (8A capacity, SWITCHED)
+**Power Source:** PMU Out 23 (7A capacity, ~2A load)
 
 **DRL Auto-Off:** PMU programming logic disables when CT4 SW3 activates headlights
 
 ## Circuit Components
 
-The DRL/parking circuit (PMU Out 9) powers:
+The DRL/parking circuit (PMU Out 23) powers:
 
-1. LP6 Headlight DRL (Pin 3) - both lights
-2. License plate lights - both lights
-3. Front 2" LED side markers (dual-function: marker + turn signal) - both lights
-4. Maxbilt tail light RED wire (marker/parking) - both lights
+1. LP6 Headlight DRL (Pin 3) - both lights (0.8A total)
+2. Maxbilt Round Trail Tail RED wire (marker/parking) - both lights (~1A total)
 
-**Total Load:** ~8A (PMU Out 9 capacity: 15A)
+**Total Load:** ~2A (PMU Out 23 capacity: 7A, 29% utilization)
 
 ## PMU DRL Auto-Off Logic
 
@@ -35,13 +33,13 @@ The DRL/parking circuit (PMU Out 9) powers:
 ```text
 PMU Input 7 (In 7): CT4 SW3 headlight status signal
 PMU Input 6 (In 6): Ignition RUN signal
-PMU Output 9 (Out 9): DRL/Parking lights circuit
+PMU Output 23 (Out 23): DRL/Parking lights circuit
 
 Programming Logic:
 IF (In6_IgnitionRUN == ON) AND (In7_CT4_Headlights == OFF)
-  THEN Out9_DRL = ON
+  THEN Out23_DRL = ON
 ELSE
-  Out9_DRL = OFF
+  Out23_DRL = OFF
 END
 ```
 
@@ -51,20 +49,20 @@ END
 
 - PMU In 6 = ON (ignition RUN)
 - PMU In 7 = OFF (CT4 SW3 not active)
-- PMU Out 9 = ON
+- PMU Out 23 = ON
 - **Result:** All DRL/parking lights illuminated
 
 **2. Ignition ON, Headlights ON:**
 
 - PMU In 6 = ON (ignition RUN)
 - PMU In 7 = ON (CT4 SW3 active)
-- PMU Out 9 = OFF
+- PMU Out 23 = OFF
 - **Result:** Headlights active, DRL off
 
 **3. Ignition OFF:**
 
 - PMU In 6 = OFF
-- PMU Out 9 = OFF (regardless of headlight status)
+- PMU Out 23 = OFF (regardless of headlight status)
 - **Result:** All DRL/parking lights off
 
 ## Wiring
@@ -76,37 +74,24 @@ END
 
 **PMU Output Wiring:**
 
-- **Out 9:** 14 AWG from PMU to DRL junction
-- DRL junction distributes to:
-  - LP6 Pin 3 (DRL): 16 AWG to each light (0.8A total)
-  - License plate lights: 16 AWG to each light
-  - Front LED side markers (also receive CT4 turn signal): 16 AWG to each light
-  - Maxbilt tail RED wire: 16 AWG to each light
+- **Out 23:** 16 AWG from PMU (engine bay) splits to:
+  - LP6 Pin 3 (DRL): 16 AWG to each headlight (0.8A total)
+  - Maxbilt Round Trail Tail RED wire: 16 AWG to each tail light (~1A total)
 
-## License Plate Lights
-
-**Type:** Factory or aftermarket LED license plate lights
-**Quantity:** 2 (factory locations)
-**Control:** DRL/parking circuit (automatic with ignition)
-**Wire Gauge:** 16 AWG from DRL junction
+**Wiring Method:** Simple inline splice or parallel connection at PMU output. No junction box required for ~2A load.
 
 ## Outstanding Items
 
-- [ ] Determine if factory license plate lights are retained or upgraded to LED
-- [ ] Verify wire routing from DRL junction to license plate area
 - [ ] Plan wire routing from ignition switch RUN to PMU In 6 (splits to CT4, SwitchPros)
 - [ ] Plan wire routing from CT4 SW3 to PMU In 7 (DRL cutoff logic)
 - [ ] Create PMU programming configuration with DRL auto-off logic
-- [ ] Verify total DRL circuit load does not exceed 8A
 
 ## Related Documentation
 
-- [PMU Power Distribution][pmu-power-distribution] - PMU Out 9 circuit and programming
+- [PMU Power Distribution][pmu-power-distribution] - PMU Out 23 circuit and programming
 - [Headlights][headlights] - LP6 DRL function (Pin 3)
 - [Tail/Brake/Reverse][tail-brake-reverse-lights] - Maxbilt RED wire (marker/parking)
-- [Turn Signals][turn-signals] - Front marker parking lights
 
 [pmu-power-distribution]: ../01-power-systems/04-pmu/index.md
 [headlights]: 02-headlights.md
 [tail-brake-reverse-lights]: 04-tail-brake-reverse.md
-[turn-signals]: 03-turn-signals.md

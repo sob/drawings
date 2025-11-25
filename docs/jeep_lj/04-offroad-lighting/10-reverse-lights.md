@@ -11,26 +11,26 @@ tags:
 
 # 4.10 Reverse Lights {#reverse-lights}
 
-High-output reverse lights that activate automatically via PMU reverse circuit (Baja Designs Zone 8).
+High-output reverse lights that activate automatically via PMU reverse circuit.
 
 /// html | div.product-info
-![Baja Designs Squadron Pro](../images/baja-designs-squadron-pro.jpg){ loading=lazy }
+![Baja Designs Squadron Sport](../images/baja-designs-squadron-sport.jpg){ loading=lazy }
 
 **Type:** LED Pod Light
 
-**Model:** Squadron Pro Black
+**Model:** Squadron Sport Black - Wide Cornering
 
-**Part Number:** 497803
+**Part Number:** 557805
 
 **Manufacturer:** Baja Designs
 
-**Product Page:** [Squadron Pro Black][product-link]
+**Product Page:** [Squadron Sport Wide Cornering Pair][product-link]
 
 **Quantity:** 2 pods
 
 **Mounting:** Rear bumper or spare tire carrier
 
-**Power Source:** PMU Out 18 (automatic with reverse gear)
+**Power Source:** PMU Out 22 (automatic with reverse gear)
 
 ///
 
@@ -38,31 +38,38 @@ High-output reverse lights that activate automatically via PMU reverse circuit (
 
 | Spec         |                           Value |
 | :----------- | ------------------------------: |
-| Beam Pattern |                   Driving/Combo |
+| Beam Pattern |              Wide Cornering 42° |
 | Lens         |                           Clear |
-| Output       | 4,900 lumens each (9,800 total) |
-| Draw         |            3.5A each (7A total) |
+| Output       | 2,260 lumens each (4,520 total) |
+| Draw         |            1.4A each (2.8A total) |
+| IP Rating    |                           IP69K |
 
 ## Control
 
-**Controller:** PMU Out 18 (automatic with reverse gear)
+**Controller:** PMU Out 22 (automatic with reverse gear)
 
-Wired in parallel with Maxbilt WHITE (reverse) and WolfBox camera trigger.
+Wired in parallel with Maxbilt Round Trail Tail WHITE (reverse) and WolfBox camera trigger.
 
 See [Tail/Brake/Reverse Lights][tail-brake-reverse] for PMU reverse circuit details.
 
+**Load Verification:**
+
+- Squadron Sport pair: 2.8A
+- Maxbilt WHITE: ~2A
+- WolfBox trigger: negligible
+- **Total: ~5A** (PMU Out 22 capacity: 7A, 71% utilization)
+
 ## Outstanding Items
 
-- [ ] Confirm Squadron Pro mounting location
-- [ ] Verify PMU Out 18 capacity handles combined load
+- [ ] Confirm Squadron Sport mounting location
 
 ## Related Documentation
 
 - [Offroad Lighting Overview][offroad-overview]
-- [Tail/Brake/Reverse Lights][tail-brake-reverse] - PMU Out 18 reverse circuit
+- [Tail/Brake/Reverse Lights][tail-brake-reverse] - PMU Out 22 reverse circuit
 - [Rear Work Lights][rear-lights] - Separate SwitchPros-controlled rear lights
 
 [offroad-overview]: index.md
 [tail-brake-reverse]: ../03-lighting-systems/04-tail-brake-reverse.md
 [rear-lights]: 08-rear-lights.md
-[product-link]: https://www.bajadesigns.com/products/squadron-pro-black-led-auxiliary-light-pod-pair-universal/?sku=497803
+[product-link]: https://www.bajadesigns.com/products/squadron-sport-led-light-557805.html

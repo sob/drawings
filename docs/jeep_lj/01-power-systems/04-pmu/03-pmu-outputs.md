@@ -31,7 +31,7 @@ Complete configuration of all 24 PMU outputs, load allocations, and combined out
 | **Out 11** | WS-51C Wiper Controller   | 15A  | [Firewall Stud Bus][firewall-ground] T2               | Auto (ignition ON)   | See [Wipers][windshield-wiper-control-system] |
 | **Out 12** | Ham Radio (iCom IC-2730A) | 13A  | [Direct START battery-][starter-battery-distribution] | CONSTANT             | RF noise isolation                            |
 | **Out 13** | Command Touch CT4         | ~10A | [Firewall Stud Bus][firewall-ground] T1               | CONSTANT             | Hazards/turn signals                          |
-| **Out 14** | DRL/Parking Lights        | ~8A  | [SwitchPros Ground Bus][switchpros-ground]            | Auto (ignition)      | See [DRL & Parking][drl-parking-lights]       |
+| **Out 14** | **[Available]**           | -    | -                                                     | -                    | Future expansion (15A)                        |
 | **Out 15** | Winch Contactor Trigger   | 1A   | Via winch contactor                                   | Manual (dash rocker) | Control signal only                           |
 | **Out 16** | **[Available]**           | -    | -                                                     | -                    | Future expansion (15A)                        |
 
@@ -46,8 +46,8 @@ Complete configuration of all 24 PMU outputs, load allocations, and combined out
 | **Out 19** | iBooster Ignition Signal | ~5A  | [Engine Bay Bus][engine-ground] Stud 7                | Auto (ignition RUN) | Same ground as iBooster main   |
 | **Out 20** | STX Intercom             | ~5A  | [Direct START battery-][starter-battery-distribution] | Auto (ignition ON)  | RF noise isolation             |
 | **Out 21** | Brake Lights             | ~3A  | [SwitchPros Ground Bus][switchpros-ground]            | External input      | Shared tail light ground       |
-| **Out 22** | Reverse Lights           | ~3A  | [SwitchPros Ground Bus][switchpros-ground]            | External input      | Shared tail light ground       |
-| **Out 23** | **[Available]**          | -    | -                                                     | -                   | Future expansion (7A)          |
+| **Out 22** | Reverse Lights           | ~5A  | [SwitchPros Ground Bus][switchpros-ground]            | External input      | Maxbilt + Squadron Sport       |
+| **Out 23** | DRL/Parking Lights       | ~2A  | [SwitchPros Ground Bus][switchpros-ground]            | Auto (ignition)     | See [DRL & Parking][drl-parking-lights] |
 | **Out 24** | **[Available]**          | -    | -                                                     | -                   | Future expansion (7A)          |
 
 ## Combined Outputs

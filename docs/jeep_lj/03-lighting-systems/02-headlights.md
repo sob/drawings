@@ -37,7 +37,7 @@ tags:
 | :-: | :-------- | :--------- | :--------- | :-------------------------- |
 |  1  | Low Beam  | CT4 SW3    | 14 AWG     | 1.8A per light (3.6A total) |
 |  2  | Ground    | Chassis    | 14 AWG     | -                           |
-|  3  | DRL       | PMU Out 9  | 16 AWG     | 0.4A per light (0.8A total) |
+|  3  | DRL       | PMU Out 23 | 16 AWG     | 0.4A per light (0.8A total) |
 |  4  | High Beam | CT4 SW4    | 14 AWG     | 2.8A per light (5.6A total) |
 
 ## Low Beam
@@ -57,7 +57,7 @@ tags:
 
 ## DRL (Daytime Running Light)
 
-- **Power:** PMU Out 9 (shared with license plate, front/rear markers)
+- **Power:** PMU Out 23 (shared with Maxbilt tail markers)
 - **Auto-Off Logic:** PMU disables DRL when CT4 SW3 activates headlights
 - **Control:** Automatic with ignition (on when ignition on, off when headlights or ignition off)
 - **Load:** 0.8A total
@@ -73,7 +73,7 @@ tags:
 
 - [Command Touch CT4][command-touch-ct4] - Controller programming and wiring
 - [DRL/Parking Lights][drl-parking-lights] - DRL circuit and auto-off logic
-- [PMU24 Power Distribution][pmu-power-distribution] - PMU Out 9 DRL circuit
+- [PMU24 Power Distribution][pmu-power-distribution] - PMU Out 23 DRL circuit
 
 [product-link]: https://www.bajadesigns.com/products/lp6-pair-driving-combo-led.html
 [install-link]: https://www.bajadesigns.com/wp-content/uploads/Installation%20Instructions/FGXX_18-7801-INS_001.pdf
