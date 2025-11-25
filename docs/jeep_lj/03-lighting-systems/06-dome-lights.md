@@ -43,13 +43,17 @@ See [SwitchPros SP-1200][switchpros-sp-1200] for wiring and trigger configuratio
 
 ## Rear Seat Override
 
-Physical switch at rear left wheel well for rear dome control independent of SwitchPros panel. Wired in parallel with SwitchPros output to rear domes only.
+Physical switch on KC #6337 bracket for rear dome control independent of SwitchPros panel.
+
+**Wiring:** KC bracket switch wired in parallel with SwitchPros OUTPUT-4:
+
+- KC switch input: 12V CONSTANT (tap from SwitchPros power input or BODY PDU)
+- KC switch output: Rear dome lights positive (parallel with SwitchPros OUTPUT-4)
+- Either switch can turn on rear domes independently
 
 ## Outstanding Items
 
-- [ ] Determine wiring for rear seat switch control (parallel circuit)
 - [ ] Plan wire routing from SwitchPros to roll bar mounts
-- [ ] Source physical switch for rear dome override
 
 ## Related Documentation
 

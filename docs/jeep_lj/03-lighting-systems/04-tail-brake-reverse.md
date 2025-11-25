@@ -92,9 +92,6 @@ See [DRL/Parking Lights][drl-parking-lights] for circuit details.
 
 ## Outstanding Items
 
-- [ ] Confirm reverse switch location and wiring to PMU In 3
-- [ ] Verify parallel connection to WolfBox camera trigger
-- [ ] Confirm brake switch location and wiring to PMU In 2
 - [ ] Plan wire routing from CT4 to rear tail lights
 - [ ] Plan wire routing from PMU Out 21/22 to rear tail lights
 

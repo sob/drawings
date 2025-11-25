@@ -65,9 +65,8 @@ tags:
 
 ## Outstanding Items
 
-- [ ] Determine exact mounting method in factory headlight buckets
 - [ ] Plan wire routing from CT4 to headlight buckets (engine bay, 14 AWG)
-- [ ] Verify headlight aim and DOT compliance after installation
+- [ ] Verify headlight aim after installation (LP6 DOT is compliant, just needs aiming)
 
 ## Related Documentation
 

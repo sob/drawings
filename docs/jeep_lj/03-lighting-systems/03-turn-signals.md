@@ -44,7 +44,6 @@ See [Tail/Brake/Reverse Lights][tail-brake-reverse-lights] for complete wiring.
 ## Outstanding Items
 
 - [x] ~~Plan wire routing from CT4 to fender turn signal locations~~ → Via firewall grommet
-- [ ] Verify turn signal flash rate meets DOT requirements
 - [ ] Measure wire distance: CT4 → firewall → fenders (see [Wire Distance Reference][wire-distance])
 
 [wire-distance]: ../01-power-systems/01-power-generation/05-wire-distance-reference.md
