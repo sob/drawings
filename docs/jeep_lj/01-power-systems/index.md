@@ -34,3 +34,22 @@ The system replaces the factory TIPM with modular programmable controllers:
 Ground distribution architecture:
 
 - **[Grounding Architecture](05-grounding/index.md):** Battery grounds, engine bay ground bus, firewall stud bus, distributed grounding system
+
+---
+
+## Wiring Standards
+
+| Standard | Specification | Notes |
+| :------- | :------------ | :---- |
+| **Connections** | Soldered + marine heat shrink | Waterproof, vibration-resistant |
+| **Connectors** | Deutsch DT series (IP68) | Engine bay and exterior locations |
+| **Securing** | Every 12-18" | High-vibration areas (engine bay, wheel wells, frame rails) |
+| **Securing** | Every 24" | Low-vibration areas (cabin, trunk) |
+| **Loom** | Split loom or braided sleeving | Abrasion protection where routed against metal |
+| **Grommets** | Rubber with sealant | All firewall and body penetrations |
+| **Temp derating** | 60°C for engine bay | Ampacity calculations must use derated values |
+| **Temp derating** | 30°C for cabin/wheel well | Standard ampacity values acceptable |
+
+See [Wire Distance Reference][wire-distance] for routing distances and gauge specifications.
+
+[wire-distance]: 01-power-generation/05-wire-distance-reference.md

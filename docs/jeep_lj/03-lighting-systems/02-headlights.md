@@ -31,14 +31,14 @@ tags:
 
 ///
 
-## Pin Configuration (Deutsch DT06-4S connector)
+## Pin Configuration (Deutsch DT06-4S connector, IP68)
 
-| Pin | Function  | Connection | Wire Gauge | Current                     |
-| :-: | :-------- | :--------- | :--------- | :-------------------------- |
-|  1  | Low Beam  | CT4 SW3    | 14 AWG     | 1.8A per light (3.6A total) |
-|  2  | Ground    | Chassis    | 14 AWG     | -                           |
-|  3  | DRL       | PMU Out 23 | 16 AWG     | 0.4A per light (0.8A total) |
-|  4  | High Beam | CT4 SW4    | 14 AWG     | 2.8A per light (5.6A total) |
+| Pin | Function  | Connection | Wire Gauge | Current | Ampacity @60°C | Utilization |
+| :-: | :-------- | :--------- | :--------- | :------ | :------------- | :---------- |
+|  1  | Low Beam  | CT4 SW3    | 14 AWG     | 3.6A    | 20A            | 18%         |
+|  2  | Ground    | Chassis    | 14 AWG     | -       | -              | -           |
+|  3  | DRL       | PMU Out 23 | 16 AWG     | 0.8A    | 13A            | 6%          |
+|  4  | High Beam | CT4 SW4    | 14 AWG     | 5.6A    | 20A            | 28%         |
 
 ## Low Beam
 

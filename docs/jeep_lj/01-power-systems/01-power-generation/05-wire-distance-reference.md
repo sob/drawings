@@ -19,7 +19,7 @@ Both batteries located in rear wheel wells for optimal wire routing:
 ## Component Distance Matrix
 
 | From                         | To                                     | Distance | Notes                                                 |
-| :--------------------------- | :------------------------------------- | :------- | :---------------------------------------------------- |
+|:-----------------------------|:---------------------------------------|:---------|:------------------------------------------------------|
 | **Alternator**               | **START battery** (driver wheel well)  | 8 ft     | Primary charging path                                 |
 | **Starter**                  | **START battery** (driver wheel well)  | 6 ft     | Cranking power                                        |
 | **PMU24**                    | **START battery** (driver wheel well)  | 7 ft     | Critical systems power                                |
@@ -46,6 +46,61 @@ Wire gauges optimized for performance at measured routing distances:
 - Engine bay circuits (alternator, PMU) calculated @ 60°C ambient
 - Wheel well circuits (starter, winch) calculated @ 20°C ambient
 - Voltage drop percentages shown at maximum rated current
+
+## Measurements Needed
+
+Distances required for voltage drop calculations and wire purchases. Measure actual routing paths, not straight-line.
+
+### Lighting Circuits (Priority: High)
+
+| From                    | To                       | Wire   | Purpose                             |
+|:------------------------|:-------------------------|:-------|:------------------------------------|
+| CT4 (steering column)   | Headlight buckets        | 14 AWG | Low/high beam voltage drop          |
+| CT4 (steering column)   | Left fender turn signal  | 14 AWG | Turn signal                         |
+| CT4 (steering column)   | Right fender turn signal | 14 AWG | Turn signal                         |
+| CT4 (steering column)   | Rear tail lights         | 14 AWG | Turn signal rear                    |
+| PMU (engine bay)        | Rear tail lights         | 16 AWG | Brake/reverse/marker (Out 21/22/23) |
+| SwitchPros (engine bay) | Roll bar dome lights     | 16 AWG | Dome light circuit                  |
+| Ignition switch         | PMU In 6                 | 18 AWG | Ignition sense distribution         |
+| CT4 SW3 output          | PMU In 7                 | 18 AWG | DRL cutoff logic signal             |
+
+### Offroad Lighting (Priority: Medium)
+
+| From                    | To                        | Notes                      |
+|:------------------------|:--------------------------|:---------------------------|
+| SwitchPros (engine bay) | A-pillar ditch lights     | Via Baja harness           |
+| SwitchPros (engine bay) | Wheel wells (rock lights) | 6 positions                |
+| Dash                    | Roof rack                 | A-pillar or B-pillar path? |
+
+### Air System (Priority: High)
+
+| From                      | To                          | Wire      | Purpose           |
+|:--------------------------|:----------------------------|:----------|:------------------|
+| SafetyHub (engine bay)    | ARB compressor (under seat) | 6 AWG × 2 | Compressor power  |
+| ARB compressor            | Chassis ground              | 6 AWG     | Ground path       |
+| SwitchPros                | Compressor control terminal | 14 AWG    | Control signal    |
+| Air manifold (under seat) | Front axle locker           | Air line  | Locker activation |
+| Air manifold (under seat) | Rear axle locker            | Air line  | Locker activation |
+
+### Communication (Priority: Low)
+
+| Location/Route             | Purpose                      |
+|:---------------------------|:-----------------------------|
+| STX intercom mounting      | Under dash or center console |
+| GMRS antenna roof position | Antenna mount location       |
+| Ham antenna position       | Separate from GMRS           |
+| Rear camera cable path     | Mirror → spare tire area     |
+
+### Mounting Locations (Priority: Medium)
+
+| Component                       | Decision Needed              |
+|:--------------------------------|:-----------------------------|
+| SwitchPros power module         | Engine bay mounting position |
+| SwitchPros control panel        | Dash mounting position       |
+| SwitchPros control cable length | Engine bay → dash route      |
+| CT4 GPS antenna                 | Dash top or windshield       |
+| Rear cargo rocker switch        | Tailgate-accessible position |
+| Rear seat dome override switch  | Rear passenger accessible    |
 
 ## Related Documentation
 

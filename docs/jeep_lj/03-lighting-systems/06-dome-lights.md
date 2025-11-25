@@ -18,6 +18,14 @@ Roll bar-mounted interior lighting for cabin illumination.
 **Draw:** 0.5A each (2A total)
 **Size:** 2.4" diameter round
 **Part #:** 1352 (single light)
+**Wire Gauge:** 16 AWG
+
+**Mounting Bracket:** KC HiLiTES Dual Cyclone Dome Light Mount (#6337)
+
+- ADC12 aluminum, powder coated black
+- Roll cage mount design
+- Includes hardware and switch
+- Dimensions: 5.45" W × 2.61" D × 1.54" H
 
 ## Control
 
