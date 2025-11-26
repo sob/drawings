@@ -30,20 +30,19 @@ Both batteries under significant load simultaneously:
 
 | Circuit           |    Load |
 | :---------------- | ------: |
-| Roof Lights (all) |     43A |
-| Ditch + Fog       |     17A |
-| Rock + Chase      |      9A |
+| Roof Lights (8x)  |     18A |
+| Ditch + Fog       |     14A |
+| Rock + Chase      |      4A |
 | Lockers           |      4A |
 | Camera + USB      |      4A |
-| **AUX Total**     | **77A** |
+| **AUX Total**     | **44A** |
 
 **Analysis:**
 
 - START: 198A / 270A = **73% alternator utilization**
-- AUX: 77A - 50A BCDC = **-27A net discharge**
-- AUX runtime: 34Ah / 27A = **75 minutes** to 50% SOC
+- AUX: 44A - 50A BCDC = **+6A net charge**
 
-**Verdict:** System handles worst realistic case with margin on both batteries.
+**Verdict:** With corrected XL Sport specs (2.2A/pod), full night offroad lighting is now fully covered by BCDC. Battery maintains charge even in worst realistic case.
 
 ---
 
@@ -151,12 +150,12 @@ ARB compressor running with engine idling:
 
 | Scenario      | START Load | START % | AUX Net | AUX Duration | Status    |
 | :------------ | :--------- | :------ | :------ | :----------- | :-------- |
-| Night Offroad | 198A       | 73%     | -27A    | 75 min       | Good      |
+| Night Offroad | 198A       | 73%     | +6A     | N/A (charging) | Excellent |
 | Recovery      | 115A       | 43%     | -212A   | 30-sec pulls | Brief OK  |
 | Extended Camp | —          | —       | -27A    | 76 min       | Limited   |
 | Airing Up     | 115A       | 43%     | -59A    | 10 min       | Excellent |
 
-**Key Insight:** The dual battery architecture isolates high-current accessory loads from engine systems. Even worst-case realistic scenarios maintain adequate margin on both batteries.
+**Key Insight:** With corrected XL Sport specs (2.2A/pod), the dual battery architecture now provides net positive charging even during full night offroad lighting. The 50A BCDC fully covers all lighting loads with margin to spare.
 
 ## Related Documentation
 

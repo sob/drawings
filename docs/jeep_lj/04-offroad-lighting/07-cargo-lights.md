@@ -27,9 +27,9 @@ Interior cargo area lighting controlled by physical switch (Baja Designs Zone 7)
 
 **Quantity:** 2 pods
 
-**Mounting:** TBD - cargo area (flush mount)
+**Mounting:** Flush mount inset on wheel well
 
-**Power Source:** Physical switch (not SwitchPros)
+**Power Source:** BODY PDU (via physical switch)
 
 ///
 
@@ -43,20 +43,25 @@ Interior cargo area lighting controlled by physical switch (Baja Designs Zone 7)
 
 ## Control
 
-**Controller:** Physical switch (rocker switch in cargo area)
+**Controller:** [Blue Sea 4160 Push Button Switch][switch-link]
 
-Rocker switch in cargo area for convenient access when loading/unloading from tailgate.
+**Switch Location:** Top of wheel well (accessible from tailgate)
 
-## Outstanding Items
+**Wiring:** BODY PDU CB20 (10A) → Switch → Cargo lights → Ground
 
-- [ ] Determine cargo light mounting location
-- [ ] Determine switch mounting location (accessible from tailgate)
-- [ ] Source SPST rocker switch
-- [ ] Determine power source for switch (SafetyHub or fused circuit)
+| Spec | Value |
+| :--- | ----: |
+| Switch Rating | 10A @ 12V |
+| Load | 4A |
+| Action | OFF-ON (latching) |
+| Mounting Hole | 3/4" (19mm) |
 
 ## Related Documentation
 
 - [Offroad Lighting Overview][offroad-overview]
+- [BODY PDU][body-pdu] - CB20 power source
 
 [offroad-overview]: index.md
+[body-pdu]: ../01-power-systems/03-aux-battery-distribution/03-body-pdu.md
 [product-link]: https://www.bajadesigns.com/products/s2-sport-black-flush-mount-led-auxiliary-light-pod/?sku=541006
+[switch-link]: https://www.bluesea.com/products/4160/10A_Push_Button_LED_Ring_Switch_OFF-ON_Blue

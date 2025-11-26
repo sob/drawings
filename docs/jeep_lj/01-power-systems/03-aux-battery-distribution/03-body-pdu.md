@@ -52,10 +52,10 @@ tags:
 | CB39        | TRLR BO STOP            | WolfBox Camera/Mirror       | 10A  | 16AWG | ~10A                  | -     | Dash cam + backup camera                 |
 | CB45        | IGNITION                | Driver Heated Seat          | 15A  | 14AWG | 5A peak, 2A sustained | K21   | Manual switch → relay K21 → seat element |
 | CB42        | 2WAY INTRCM             | Passenger Heated Seat       | 20A  | 14AWG | 5A peak, 2A sustained | K22   | Manual switch → relay K22 → seat element |
-| CB20        | RADIO                   | **[Available]**             | 25A  | -     | -                     | -     | High-current spare (future ham radio)    |
+| CB20        | RADIO                   | Cargo Lights                | 10A  | 16AWG | 4A                    | -     | Switch on wheel well top                 |
 | CB43        | TRANS ECU               | Winch Control (dash rocker) | 10A  | 18AWG | ~2A                   | -     | Dash rocker + remote parallel control    |
 
-**Circuit Breaker Utilization:** 7 of 8 used, 1 available
+**Circuit Breaker Utilization:** 8 of 8 used
 
 ## Relay Configuration
 
@@ -72,7 +72,7 @@ tags:
 
 **Relay Utilization:** 2 of 8 used, 6 available (3 require 12V relay replacement)
 
-**Total Load:** ~56A maximum (Radio 16A + USB 13A + Camera 10A + Seats 10A peak + Winch control 2A, 48A sustained)
+**Total Load:** ~60A maximum (Radio 16A + USB 13A + Camera 10A + Seats 10A peak + Winch control 2A + Cargo lights 4A, 52A sustained)
 
 **Control:** All circuits on CONSTANT power with trigger-wire or manual switch control for on/off
 

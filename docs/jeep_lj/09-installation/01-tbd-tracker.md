@@ -7,9 +7,9 @@ hide:
 
 **Purpose:** Central tracking for all To-Be-Determined items across the Jeep LJ electrical system documentation.
 
-**Last Updated:** 2025-11-25
+**Last Updated:** 2025-11-26
 
-**Total Open Items:** 40
+**Total Open Items:** 36
 
 ---
 
@@ -42,7 +42,6 @@ Items that improve the design but don't block installation.
 
 | Item                                   | Description                                                                      | File                                 | Priority |
 | :------------------------------------- | :------------------------------------------------------------------------------- | :----------------------------------- | :------- |
-| Cargo Light Mounting Location          | TBD - cargo area (flush mount) - exact location                                  | [Cargo Lights][cargo-lights]         | Medium   |
 | Firewall Grommet Circuits              | Complete wire bundle lists                                                       | [Wire Routing][wire-routing]         | Medium   |
 | Passenger Wheel Well Routing           | SwitchPros outputs path                                                          | [Wire Routing][wire-routing]         | Medium   |
 | Dash to Console Routing                | Switch panels, USB, radio                                                        | [Wire Routing][wire-routing]         | Medium   |
@@ -67,7 +66,6 @@ Items that improve the design but don't block installation.
 | Alternator Voltage Regulator Set Point | Verify 14.2-14.4V for AGM batteries                                              | [Alternator][alternator]             | Medium   |
 | BODY PDU Metri-Pack Pinout             | J301-J306 connector pinout (military TM or reverse engineering)                  | [BODY PDU][body-rtmr]                | Medium   |
 | BODY PDU 12V Relay Part Numbers        | Replacement part numbers for K40, K42, K53 (currently 24V coils)                 | [BODY PDU][body-rtmr]                | Medium   |
-| Rear Work Lights Position              | Verify clearance with WolfBox camera at license plate area                       | [Rear Work Lights][rear-lights]      | Medium   |
 
 ---
 
@@ -85,7 +83,6 @@ Items that can be determined during build.
 | Hi-Lift Jack Mount                | Hood, bumper, or rear swing-out                                                 | [Recovery Systems][recovery-systems] | Low      |
 | BIM Module Current Draw           | Current draw for BIM-17-2, BIM-11-2, BIM-12-2, BIM-13-2 (powered via BIM cable) | [Gauge Cluster][gauge-cluster]       | Low      |
 | LED4Life Wire Colors              | Confirm pod wire colors match MLC-RW pinout before install                      | [Footwell Lights][footwell-lights]   | Low      |
-| Cargo Light Switch Position       | Verify switch accessible from tailgate                                          | [Cargo Lights][cargo-lights]         | Low      |
 
 ---
 
@@ -106,7 +103,11 @@ Items completed since last update.
 | Item                          | Resolution                                                                                                                    | Date       |
 | :---------------------------- | :---------------------------------------------------------------------------------------------------------------------------- | :--------- |
 | RTL-S Wiring Configuration    | 4-wire: black ground, red running (PMU Out 23), yellow brake (OEM), blue work (PMU Out 23); 2-wire: yellow/blue turn (SwitchPros OUTPUT-7) | 2025-11-25 |
-| Roof Lights OUTPUT-1 Overload | Split 8 pods to 3 circuits: 4 center (OUTPUT-1, 24A), 2 second (OUTPUT-5, 12A), 2 outer (OUTPUT-8, 12A)                       | 2025-11-25 |
+| Cargo Light Power Source      | BODY PDU CB20 (10A) with SPST switch on wheel well top; lights flush mounted in wheel well                                                   | 2025-11-26 |
+| Rear Work Lights Position     | Above license plate, verified clear of WolfBox rear camera                                                                                   | 2025-11-26 |
+| Reverse Lights Mount          | Rear armor brackets                                                                                                                          | 2025-11-26 |
+| Cargo Light Switch            | Blue Sea 4160 (10A latching, 3/4" mount) on wheel well top                                                                                   | 2025-11-26 |
+| Roof Lights OUTPUT-1 Overload | Corrected XL Sport specs (2.2A/pod, not 6A); 8 pods = 18A on single OUTPUT-1 (51% utilization)                               | 2025-11-25 |
 | Fusion Amp Current Draw       | 6-ch MS-AP61800: 1.32A idle, 78A max, 125A electronic fuse                                                                    | 2025-11-24 |
 | Fusion Amp CB Selection       | Blue Sea 187-100A breaker, 4 AWG power/ground wiring, mount at CONSTANT bus                                                   | 2025-11-24 |
 | WolfBox Model                 | G900 TriPro selected                                                                                                          | 2025-11-24 |
@@ -147,10 +148,10 @@ Items completed since last update.
 | :---------- | :----- |
 | 🔴 Critical | 0      |
 | High        | 4      |
-| 📋 Medium   | 26     |
-| 📝 Low      | 9      |
+| 📋 Medium   | 24     |
+| 📝 Low      | 7      |
 | 🔍 Verify   | 1      |
-| **TOTAL**   | **40** |
+| **TOTAL**   | **36** |
 
 ## Related Documentation
 

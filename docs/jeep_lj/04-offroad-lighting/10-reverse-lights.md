@@ -28,7 +28,7 @@ High-output reverse lights that activate automatically via PMU reverse circuit.
 
 **Quantity:** 2 pods
 
-**Mounting:** Rear bumper or spare tire carrier
+**Mounting:** Rear armor brackets
 
 **Power Source:** PMU Out 22 (automatic with reverse gear)
 
@@ -58,10 +58,6 @@ See [Tail/Brake/Reverse Lights][tail-brake-reverse] for PMU reverse circuit deta
 - Maxbilt WHITE: ~2A
 - WolfBox trigger: negligible
 - **Total: ~5A** (PMU Out 22 capacity: 7A, 71% utilization)
-
-## Outstanding Items
-
-- [ ] Confirm Squadron Sport mounting location
 
 ## Related Documentation
 

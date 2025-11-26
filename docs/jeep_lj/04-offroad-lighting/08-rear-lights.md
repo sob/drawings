@@ -28,7 +28,7 @@ Rear-facing auxiliary work lights mounted at license plate area (Baja Designs Zo
 
 **Quantity:** 2 pods
 
-**Mounting:** Above license plate or spare tire carrier
+**Mounting:** Above license plate (clears WolfBox rear camera)
 
 **Power Source:** SwitchPros OUTPUT-12
 
@@ -49,11 +49,6 @@ Rear-facing auxiliary work lights mounted at license plate area (Baja Designs Zo
 **Controller:** SwitchPros Button 12 (OUTPUT-12)
 
 See [SwitchPros SP-1200][switchpros-sp-1200] for wiring details.
-
-## Outstanding Items
-
-- [ ] Determine exact mounting location (license plate vs spare tire carrier)
-- [ ] Verify mounting does not interfere with WolfBox rear camera
 
 ## Related Documentation
 

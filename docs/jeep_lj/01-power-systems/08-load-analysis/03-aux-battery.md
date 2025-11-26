@@ -14,13 +14,13 @@ All circuits powered by AUX battery (charged by BCDC at 50A max):
 | Source                 | Circuit                  | Typical | Peak | Duty Cycle        | Notes                     |
 | :--------------------- | :----------------------- | ------: | ---: | :---------------- | :------------------------ |
 | **SwitchPros Outputs** |                          |         |      |                   |                           |
-| OUTPUT-1               | Roof Center (6x XL Sport)|      0A |  36A | Night offroad     | 4 combo + 2 wide          |
+| OUTPUT-1               | Roof Lights (8x XL Sport)|      0A |  18A | Night offroad     | 2.2A per pod              |
 | OUTPUT-2               | Ditch Lights (2x LP4 Pro)|      0A |   8A | Night offroad     | Driving pattern           |
 | OUTPUT-3               | Fog Light (1x S8 10")    |      0A |   6A | Night/weather     | Amber wide cornering      |
-| OUTPUT-4               | Dome Lights (4x Cyclone) |      0A |   4A | Doors open        | Manual + trigger          |
-| OUTPUT-5               | Roof Outer Spots (2x XL) |      0A |  12A | Night offroad     | Spot pattern              |
+| OUTPUT-4               | Dome Lights (4x Cyclone) |      0A |   2A | Doors open        | Manual + trigger          |
+| OUTPUT-5               | Available                |      0A |   0A | —                 | Freed by roof consolidation |
 | OUTPUT-6               | Rock Lights (6x Cyclone) |      0A |   3A | Night offroad     | Under vehicle             |
-| OUTPUT-7               | Rear Chase (OnX6 Arc)    |      0A |   6A | Night offroad     | Amber wide                |
+| OUTPUT-7               | Chase Light (RTL-S)      |      0A |   1A | Night offroad     | Amber chase only          |
 | OUTPUT-8               | Available                |      0A |   0A | —                 | Footwell lights on MLC-RW |
 | OUTPUT-10              | Rear Locker              |      0A |   2A | Technical terrain | Solenoid                  |
 | OUTPUT-11              | Compressor Control       |      0A |  15A | Control signal    | To ARB                    |
@@ -110,25 +110,23 @@ All circuits powered by AUX battery (charged by BCDC at 50A max):
 
 | Circuit                        |    Load | Reason             |
 | :----------------------------- | ------: | :----------------- |
-| **Roof Center (OUTPUT-1)**     | **36A** | Primary forward    |
+| **Roof Lights (OUTPUT-1)**     | **18A** | Primary forward    |
 | **Ditch Lights (OUTPUT-2)**    |  **8A** | Peripheral         |
 | **Fog Light (OUTPUT-3)**       |  **6A** | Close range        |
 | **Rock Lights (OUTPUT-6)**     |  **3A** | Obstacle spotting  |
-| **Rear Chase (OUTPUT-7)**      |  **6A** | Following vehicles |
+| **Chase Light (OUTPUT-7)**     |  **1A** | Following vehicles |
 | **Front Locker (OUTPUT-17)**   |  **2A** | Engaged            |
 | **Rear Locker (OUTPUT-10)**    |  **2A** | Engaged            |
 | **Fusion Radio memory (CB30)** |  **1A** | Always on          |
 | **USB Charging (CB48)**        |  **2A** | Phone              |
 | **WolfBox Camera (CB39)**      |  **2A** | Recording          |
-| **TOTAL**                      | **68A** |                    |
+| **TOTAL**                      | **45A** |                    |
 
 **BCDC Charging:** 50A (full rate)
 
-**Net Battery Effect:** -18A (slow discharge)
+**Net Battery Effect:** +5A (battery charging!)
 
-**Time to 20% SOC:** 108Ah / 18A = **6 hours** to reach 20% SOC
-
-**Assessment:** Excellent - LiFePO4 upgrade provides 6+ hours of full night offroad lighting. Run out of driver before running out of battery.
+**Assessment:** Excellent - with corrected XL Sport specs (2.2A/pod), full night offroad lighting is now fully covered by BCDC charging. Battery maintains charge even with all lights on.
 
 ---
 
@@ -247,13 +245,13 @@ All circuits powered by AUX battery (charged by BCDC at 50A max):
 | :---------------- | :--------- | :--- | :--------- | :-------------- | :-------- |
 | Daily Driving     | 5A         | 50A  | +45A       | N/A (charging)  | Excellent |
 | Night Highway     | 35A        | 50A  | +15A       | N/A (charging)  | Excellent |
-| Night Offroad     | 68A        | 50A  | -18A       | **6 hours**     | Excellent |
+| Night Offroad     | 45A        | 50A  | +5A        | N/A (charging)  | Excellent |
 | Air Up (5-10 min) | 110A       | 50A  | -60A       | 108 minutes     | Excellent |
 | Air Up Extended   | 110A       | 50A  | -60A       | 108 minutes     | Excellent |
 | Winch Recovery    | 265A       | 50A  | -215A      | 50+ pulls       | Excellent |
 | Camp Mode         | 27A        | 0A   | -27A       | **4 hours**     | Good      |
 
-**Key Insight:** The Dakota Lithium 135Ah upgrade (108Ah usable) combined with 50A BCDC provides effectively unlimited runtime for all driving scenarios. Night offroad lighting lasts 6+ hours. Camp mode provides 4+ hours without engine. Extended air-up and winch recovery are no longer battery concerns.
+**Key Insight:** With corrected XL Sport specs (2.2A/pod vs 6A), full night offroad lighting (45A) is now fully covered by 50A BCDC charging. The Dakota Lithium 135Ah upgrade provides effectively unlimited runtime for all driving scenarios including full lighting. Camp mode provides 4+ hours without engine.
 
 ## Related Documentation
 

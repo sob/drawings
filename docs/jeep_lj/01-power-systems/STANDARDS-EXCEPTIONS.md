@@ -429,15 +429,15 @@ The CB is sized for _device capacity_, not actual load. Actual loads are well wi
 
 | Device     | Device Max | Actual Load | Wire Rating | Load % of Wire |
 | :--------- | :--------- | :---------- | :---------- | :------------- |
-| SwitchPros | 150A       | ~82A        | 130A        | 63%            |
+| SwitchPros | 150A       | ~48A        | 130A        | 37%            |
 | SafetyHub  | 150A       | 100A        | 130A        | 77%            |
 
 **SwitchPros Actual Load Breakdown:**
 
-- Roof lights: 48A (center 36A + outer 12A)
-- Auxiliary lights: 22A (ditch 8A, fog 6A, work 5A, cargo 5A, rock 3A, dome 2A, chase 1A)
+- Roof lights: 18A (8x XL Sport @ 2.2A each)
+- Auxiliary lights: 26A (ditch 8A, fog 6A, work 5A, rock 3A, dome 2A, chase 1A, rear 5A)
 - Lockers: 4A
-- **Total: ~82A** (55% of CB rating)
+- **Total: ~48A** (32% of CB rating)
 
 **SafetyHub Actual Load Breakdown:**
 
@@ -449,7 +449,7 @@ The CB is sized for _device capacity_, not actual load. Actual loads are well wi
 
 **Normal Operation:**
 
-- Wire operates at 63-77% of its ampacity
+- Wire operates at 37-77% of its ampacity
 - No thermal stress, adequate safety margin
 - Wire temperature remains well below insulation rating
 
