@@ -28,7 +28,7 @@ Underbody lighting for wheel wells and frame rails (Baja Designs Zone 6).
 
 **Quantity:** 6 pods
 
-**Mounting:** Wheel wells and frame rails (4 front, 2 rear)
+**Mounting:** 4 in wheel wells (one per corner), 1 front bumper, 1 rear bumper
 
 **Power Source:** SwitchPros OUTPUT-6
 
@@ -48,18 +48,11 @@ Underbody lighting for wheel wells and frame rails (Baja Designs Zone 6).
 
 See [SwitchPros SP-1200][switchpros-sp-1200] for wiring details.
 
-**Protection:** Conduit or protective sleeving in exposed areas.
-
-## Physical Switch Override
-
-Physical switch at rear left wheel well for rock light control independent of SwitchPros panel. Wired in parallel with SwitchPros output.
+**Protection:** Braided sleeving with soldered connections and marine heat shrink.
 
 ## Outstanding Items
 
-- [ ] Determine exact mounting locations (6 positions)
-- [ ] Plan wire routing from SwitchPros to wheel wells
-- [ ] Determine protection method for exposed wiring
-- [ ] Source physical switch for wheel well override
+- [ ] Plan wire routing from SwitchPros to wheel wells and bumpers
 
 ## Related Documentation
 

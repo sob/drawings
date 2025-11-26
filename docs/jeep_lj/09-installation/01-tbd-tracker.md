@@ -7,7 +7,7 @@ hide:
 
 **Purpose:** Central tracking for all To-Be-Determined items across the Jeep LJ electrical system documentation.
 
-**Last Updated:** 2025-11-24
+**Last Updated:** 2025-11-25
 
 **Total Open Items:** 40
 
@@ -67,7 +67,7 @@ Items that improve the design but don't block installation.
 | Alternator Voltage Regulator Set Point | Verify 14.2-14.4V for AGM batteries                                              | [Alternator][alternator]             | Medium   |
 | BODY PDU Metri-Pack Pinout             | J301-J306 connector pinout (military TM or reverse engineering)                  | [BODY PDU][body-rtmr]                | Medium   |
 | BODY PDU 12V Relay Part Numbers        | Replacement part numbers for K40, K42, K53 (currently 24V coils)                 | [BODY PDU][body-rtmr]                | Medium   |
-| RTL-S Wiring Configuration             | Which functions on SwitchPros vs PMU vs OEM (consider Button 8 for running/work) | [Chase Light][chase-light]           | Medium   |
+| Rear Work Lights Position              | Verify clearance with WolfBox camera at license plate area                       | [Rear Work Lights][rear-lights]      | Medium   |
 
 ---
 
@@ -84,6 +84,8 @@ Items that can be determined during build.
 | Recovery Board Storage            | MaxTrax storage location                                                        | [Recovery Systems][recovery-systems] | Low      |
 | Hi-Lift Jack Mount                | Hood, bumper, or rear swing-out                                                 | [Recovery Systems][recovery-systems] | Low      |
 | BIM Module Current Draw           | Current draw for BIM-17-2, BIM-11-2, BIM-12-2, BIM-13-2 (powered via BIM cable) | [Gauge Cluster][gauge-cluster]       | Low      |
+| LED4Life Wire Colors              | Confirm pod wire colors match MLC-RW pinout before install                      | [Footwell Lights][footwell-lights]   | Low      |
+| Cargo Light Switch Position       | Verify switch accessible from tailgate                                          | [Cargo Lights][cargo-lights]         | Low      |
 
 ---
 
@@ -103,6 +105,8 @@ Items completed since last update.
 
 | Item                          | Resolution                                                                                                                    | Date       |
 | :---------------------------- | :---------------------------------------------------------------------------------------------------------------------------- | :--------- |
+| RTL-S Wiring Configuration    | 4-wire: black ground, red running (PMU Out 23), yellow brake (OEM), blue work (PMU Out 23); 2-wire: yellow/blue turn (SwitchPros OUTPUT-7) | 2025-11-25 |
+| Roof Lights OUTPUT-1 Overload | Split 8 pods to 3 circuits: 4 center (OUTPUT-1, 24A), 2 second (OUTPUT-5, 12A), 2 outer (OUTPUT-8, 12A)                       | 2025-11-25 |
 | Fusion Amp Current Draw       | 6-ch MS-AP61800: 1.32A idle, 78A max, 125A electronic fuse                                                                    | 2025-11-24 |
 | Fusion Amp CB Selection       | Blue Sea 187-100A breaker, 4 AWG power/ground wiring, mount at CONSTANT bus                                                   | 2025-11-24 |
 | WolfBox Model                 | G900 TriPro selected                                                                                                          | 2025-11-24 |
@@ -144,9 +148,9 @@ Items completed since last update.
 | 🔴 Critical | 0      |
 | High        | 4      |
 | 📋 Medium   | 26     |
-| 📝 Low      | 7      |
+| 📝 Low      | 9      |
 | 🔍 Verify   | 1      |
-| **TOTAL**   | **38** |
+| **TOTAL**   | **40** |
 
 ## Related Documentation
 
@@ -172,3 +176,7 @@ Items completed since last update.
 [alternator]: ../01-power-systems/01-power-generation/02-alternator.md
 [hvac]: ../02-engine-systems/03-hvac.md
 [ct4]: ../05-control-interfaces/03-command-touch-ct4.md
+[roof-lights]: ../04-offroad-lighting/03-roof-lights.md
+[rear-lights]: ../04-offroad-lighting/08-rear-lights.md
+[footwell-lights]: ../04-offroad-lighting/09-footwell-lights.md
+[rock-lights]: ../04-offroad-lighting/06-rock-lights.md

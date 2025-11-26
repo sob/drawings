@@ -28,7 +28,7 @@ Multi-function rear safety light for convoy visibility, plus integrated brake, t
 
 **Quantity:** 1
 
-**Mounting:** Centered on rear roll cage
+**Mounting:** Baja Designs tube mounts on rear roll cage
 
 **Power Source:** Multiple (see Functions table)
 
@@ -36,29 +36,45 @@ Multi-function rear safety light for convoy visibility, plus integrated brake, t
 
 ///
 
-## Functions
+## Wiring
 
-| Function           | Color |       Draw | Control             |
-| :----------------- | :---- | ---------: | :------------------ |
-| Running Light      | Red   |       0.8A | PMU/Ignition        |
-| Brake Light        | Red   |      1.45A | OEM brake circuit   |
-| Turn/Chase Signals | Amber | 0.36A each | SwitchPros Button 7 |
-| Work Light         | White |       1.3A | PMU/Ignition        |
+### 4-Wire Connector (Main Functions)
+
+| Wire   | Function     | Draw   | Source                                       |
+| :----- | :----------- | :----- | :------------------------------------------- |
+| Black  | Ground       | -      | Chassis ground                               |
+| Red    | Running      | 0.8A   | PMU Out 23 (ignition-switched)               |
+| Yellow | Brake        | 1.45A  | OEM brake circuit via [Tail Lights][tail-brake-reverse] |
+| Blue   | Work (White) | 1.3A   | PMU Out 23 (shared with running)             |
+
+### 2-Wire Connector (Amber Sections)
+
+| Wire   | Function    | Draw   | Source                                      |
+| :----- | :---------- | :----- | :------------------------------------------ |
+| Yellow | Right Amber | 0.36A  | CT4 right turn OR SwitchPros OUTPUT-7 (via diode) |
+| Blue   | Left Amber  | 0.36A  | CT4 left turn OR SwitchPros OUTPUT-7 (via diode)  |
 
 **Max Draw:** ~4A
 
+**Light Bar Layout:** Solid Red | Flashing Amber | White Center | Flashing Amber | Solid Red
+
 ## Control
 
-- **Amber Chase:** SwitchPros Button 7 (OUTPUT-7) - see [SwitchPros SP-1200][switchpros-sp-1200]
-- **Brake:** OEM brake circuit - see [Tail/Brake/Reverse][tail-brake-reverse]
-- **Running/Work:** PMU or ignition-switched power
+- **Turn Signals:** CT4 left/right outputs - synced with front turn signals for on-road use
+- **Chase Mode:** SwitchPros Button 7 (OUTPUT-7) - both amber sections flash together
+- **Isolation:** Diodes prevent backfeed between CT4 and SwitchPros circuits
+- **Brake (Red):** OEM brake circuit - taps into existing brake light feed
+- **Running + Work (Red/White):** PMU Out 23 - running on with ignition, work light same circuit
 
-## Outstanding Items
+```
+CT4 Right Turn ──|>|──┬── Yellow (Right Amber)
+                      │
+SwitchPros OUT7 ─|>|──┘
 
-- [ ] Determine RTL-S mounting method on roll cage
-- [ ] **TBD: Determine RTL-S wiring configuration** - which functions on SwitchPros vs PMU vs OEM (consider Button 8 for running/work control)
-- [ ] Plan wiring for brake light integration with OEM circuit
-- [ ] Verify RTL-S harness (640134) included or separate purchase
+CT4 Left Turn ───|>|──┬── Blue (Left Amber)
+                      │
+SwitchPros OUT7 ─|>|──┘
+```
 
 ## Related Documentation
 

@@ -45,7 +45,7 @@ RGB interior lighting synced with stereo speaker LEDs via JL Audio MLC-RW contro
 
 ## Wiring
 
-Pods wire directly to MLC-RW outputs in parallel with JL Audio speaker LEDs:
+Pods wire to MLC-RW outputs using multi-conductor cable, in parallel with JL Audio speaker LEDs:
 
 | LED4Life Wire | MLC-RW Wire     | Function            |
 | :------------ | :-------------- | :------------------ |
@@ -70,7 +70,6 @@ See [Audio Systems][audio-systems] for MLC-RW details.
 ## Outstanding Items
 
 - [ ] Confirm LED4Life pod wire colors match table above
-- [ ] Plan wire routing from MLC-RW to footwells
 
 ## Related Documentation
 

@@ -28,7 +28,7 @@ A-pillar mounted lights for peripheral and side illumination (Baja Designs Zone 
 
 **Quantity:** 2 (left and right A-pillars)
 
-**Mounting:** A-pillar brackets
+**Mounting:** Motobilt A-pillar light mounts
 
 **Power Source:** SwitchPros OUTPUT-2
 
@@ -59,7 +59,6 @@ Driving/Combo pattern provides peripheral illumination for:
 
 ## Outstanding Items
 
-- [ ] Source A-pillar mounting brackets
 - [ ] Plan wire routing from SwitchPros to A-pillars
 
 ## Related Documentation

@@ -50,10 +50,6 @@ Amber fog/dust light for improved visibility in poor conditions (Baja Designs Zo
 
 See [SwitchPros SP-1200][switchpros-sp-1200] for wiring details.
 
-## Outstanding Items
-
-- [ ] Determine mounting hardware for Motobilt bumper
-
 ## Related Documentation
 
 - [Offroad Lighting Overview][offroad-overview]

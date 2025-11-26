@@ -28,39 +28,33 @@ Primary forward illumination mounted on roof rack (Baja Designs Zone 3 + Zone 4)
 
 **Quantity:** 8 pods total
 
-**Mounting:** Roof rack - physically linked, electrically split
+**Harness:** [XL Linkable Wiring Harness 8-Pod][harness-link] (640192)
 
-**Power Source:** SwitchPros OUTPUT-1 (6 pods) + OUTPUT-5 (2 pods)
+**Mounting:** [XL Linkable Pre-Load Mount][preload-link] (748002) center + [XL Linkable Brackets][bracket-link] (748000) sides
+
+**Power Source:** SwitchPros OUTPUT-1
 
 ///
 
 ## Wiring
 
-All 8 pods physically linked on roof rack. Split into two circuits for load distribution:
+All 8 pods on single circuit via XL Linkable harness.
 
-| Circuit           |     Pods | Lens           | Pattern    | Draw | Control  |
-| :---------------- | -------: | :------------- | :--------- | ---: | :------- |
-| Zone 3 (OUTPUT-1) | 4 center | Driving/Combo  | Forward    |  24A | Button 1 |
-| Zone 3 (OUTPUT-1) |    2 mid | Wide Cornering | Peripheral |  12A | Button 1 |
-| Zone 4 (OUTPUT-5) |  2 outer | Spot           | Distance   |  12A | Button 5 |
+**Wire Routing:** Passenger A-pillar from SwitchPros (engine bay) to roof rack.
+
+**Controller:** SwitchPros Button 1 (OUTPUT-1) - 17.6A load on 35A output (50% utilization)
 
 ## Specifications
 
-| Spec         |                         Value |
-| :----------- | ----------------------------: |
-| Output       |             9,000 lumens each |
-| Draw         |                       6A each |
-| Total Output |                 72,000 lumens |
-| Total Draw   | 48A (split across 2 circuits) |
+| Spec         |                          Value |
+| :----------- | -----------------------------: |
+| Output       |              9,000 lumens each |
+| Draw         |          2.2A each (30.36W)    |
+| Total Output |                  72,000 lumens |
+| Total Draw   |                           17.6A |
 
 See [SwitchPros SP-1200][switchpros-sp-1200] for wiring details.
 
-## Outstanding Items
-
-- [ ] Confirm XL Linkable harness length and connector type
-- [ ] Determine roof rack mounting method for 8 pods
-- [ ] Plan wire routing from dash to roof (A-pillar vs B-pillar)
-- [ ] Plan weatherproofing at roof penetration
 
 ## Related Documentation
 
@@ -70,3 +64,6 @@ See [SwitchPros SP-1200][switchpros-sp-1200] for wiring details.
 [offroad-overview]: index.md
 [switchpros-sp-1200]: ../05-control-interfaces/02-switchpros-sp1200.md
 [product-link]: https://www.bajadesigns.com/products/xl-sport-linkable-led-light-bar-universal/?sku=740006
+[harness-link]: https://www.bajadesigns.com/products/xl-linkable-wiring-harness-universal/?sku=640192
+[preload-link]: https://www.bajadesigns.com/products/xl-linkable-led-light-bar-pre-load-mount/?sku=748002
+[bracket-link]: https://www.bajadesigns.com/products/xl-linkable-led-light-bar-brackets/?sku=748000

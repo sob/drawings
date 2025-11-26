@@ -45,11 +45,11 @@ The SwitchPros SP-1200 is the main lighting and accessory controller for the Jee
 
 | Button |       Circuit       | Draw |                                  Details                                  |    Output Pin(s)     |
 | :----: | :-----------------: | :--: | :-----------------------------------------------------------------------: | :------------------: |
-|   1    | Roof Center Section | 36A  |                  6x BD XL Sport (Driving/Combo Pattern)                   |       OUTPUT-1       |
+|   1    |    Roof Lights      | 18A  |                  8x BD XL Sport (Linkable, single circuit)                |       OUTPUT-1       |
 |   2    |    Ditch Lights     |  8A  |                   2x BD LP4 Pro (Driving/Combo Pattern)                   |       OUTPUT-2       |
 |   3    |      Fog Light      |  6A  |                   1x BD S8 10" (Amber, Wide Cornering)                    |       OUTPUT-3       |
 |   4    |     Dome Lights     |  2A  |                4x KC Cyclone V2 (manual + door-triggered)                 |       OUTPUT-4       |
-|   5    |  Roof Outer Spots   | 12A  |                       2x BD XL Sport (Spot Pattern)                       |       OUTPUT-5       |
+|   5    |     _AVAILABLE_     |  —   |                                Unassigned                                 |       OUTPUT-5       |
 |   6    |     Rock Lights     |  3A  |                          6x KC Cyclone V2 Lights                          |       OUTPUT-6       |
 |   7    |     Chase Light     |  1A  |                      BD RTL-S 30" (Amber chase mode)                      |       OUTPUT-7       |
 |   8    |     _AVAILABLE_     |  —   |                                Unassigned                                 |       OUTPUT-8       |
@@ -64,10 +64,10 @@ The SwitchPros SP-1200 is the main lighting and accessory controller for the Jee
   - Driver door switch + Passenger door switch (wired in parallel) → TRIGGER-1 → OUTPUT-4
   - Either door opening or Button 4 press activates dome lights
 - **Button 7:** RTL-S amber chase function only - brake/running/work functions powered separately
-- **Button 8:** Available for future use (footwell lights moved to JL Audio MLC-RW)
+- **Buttons 5, 8:** Available for future use
 - **Button 11:** OUTPUT-11 provides control signal to ARB compressor (main power is separate: CONSTANT bus → dual 60A fuses → compressor)
 - **Cargo Light:** Not assigned to button - controlled by rear rocker switch via TRIGGER-2 → OUTPUT-13
-- Total lighting draw if all on simultaneously: 73A (within 150A capacity)
+- Total lighting draw if all on simultaneously: 44A (within 150A capacity)
 
 ## Wiring Pinout
 
@@ -75,7 +75,7 @@ The SwitchPros SP-1200 is the main lighting and accessory controller for the Jee
 
 | Pin |   Label   |    Color    | Gauge  |  Max Load   | Assigned Circuit                   | Load |                      Notes                      |
 | :-: | :-------: | :---------: | :----: | :---------: | ---------------------------------- | :--: | :---------------------------------------------: |
-|  1  | OUTPUT-5  |    GREEN    | 14 AWG |     15A     | Roof Outer Spots                   | 12A  |                                                 |
+|  1  | OUTPUT-5  |    GREEN    | 14 AWG |     15A     | _AVAILABLE_                        |  —   |                                                 |
 |  2  | OUTPUT-6  |    BLUE     | 14 AWG |     15A     | Rock Lights                        |  3A  |                                                 |
 |  3  | IGNITION  |   LT BLUE   |   -    |      -      | Connect to ignition signal         |  -   |              For auto-off features              |
 |  4  |  LIGHTS   |    WHITE    |   -    |      -      | Connect to parking lights          |  -   |               For DRL integration               |
@@ -98,12 +98,12 @@ The SwitchPros SP-1200 is the main lighting and accessory controller for the Jee
 
 ### 4-Pin Harness (High Current Outputs)
 
-| Pin |  Label   | Color  | Gauge | Max Load | Assigned Circuit    | Load |    Notes    |
-| :-: | :------: | :----: | :---: | :------: | ------------------- | :--: | :---------: |
-|  1  | OUTPUT-1 | BROWN  | 10AWG |   35A    | Roof Center Section | 36A  | At capacity |
-|  2  | OUTPUT-2 |  RED   | 10AWG |   35A    | Ditch Lights        |  8A  |             |
-|  3  | OUTPUT-3 | ORANGE | 10AWG |   35A    | Fog Light           |  6A  |             |
-|  4  | OUTPUT-4 | YELLOW | 10AWG |   35A    | Dome Lights         |  2A  |             |
+| Pin |  Label   | Color  | Gauge | Max Load | Assigned Circuit | Load |    Notes    |
+| :-: | :------: | :----: | :---: | :------: | ---------------- | :--: | :---------: |
+|  1  | OUTPUT-1 | BROWN  | 10AWG |   35A    | Roof Lights (8x) | 18A  |             |
+|  2  | OUTPUT-2 |  RED   | 10AWG |   35A    | Ditch Lights     |  8A  |             |
+|  3  | OUTPUT-3 | ORANGE | 10AWG |   35A    | Fog Light        |  6A  |             |
+|  4  | OUTPUT-4 | YELLOW | 10AWG |   35A    | Dome Lights      |  2A  |             |
 
 ## Power and Ground Connections
 
