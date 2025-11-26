@@ -12,7 +12,7 @@ Driver control interfaces: switches, controllers, and input devices for vehicle 
 - **[5.1 Overview][control-interfaces-overview]** - Control interface system architecture and integration
 - **[5.2 SwitchPros SP-1200][switchpros-sp-1200-rcr-force-12]** - Main auxiliary lighting controller, 12-button panel, 17 outputs, Bluetooth app
 - **[5.3 Command Touch CT4][command-touch-ct4]** - Steering column turn signal and headlight controller with GPS auto-cancel
-- **[Dakota Digital Gauge Cluster][dakota-digital-gauge-cluster]** - Digital gauge cluster with J1939 CAN integration, GPS speedometer, TPMS (see Section 2.9)
+- **[Dakota Digital Gauge Cluster][dakota-digital-gauge-cluster]** - See Section 2.9
 - **[5.4 Dashboard Controls][dashboard-physical-controls]** - Physical dash-mounted switches (winch control, rear seat switch)
 
 ## System Overview
@@ -21,7 +21,6 @@ Driver control interfaces: switches, controllers, and input devices for vehicle 
 
 - **SwitchPros SP-1200:** Auxiliary lighting and accessories (AUX battery CONSTANT bus, 150A capacity)
 - **Command Touch CT4:** Turn signals and headlights (START battery, PMU integration)
-- **Dakota Digital:** Gauge cluster with J1939 engine data (PMU Out 14, 15A)
 
 **Physical Controls:**
 

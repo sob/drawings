@@ -34,9 +34,9 @@ tags:
 | Color  | Function       | Connection       | Wire Gauge | Notes                                |
 | :----- | :------------- | :--------------- | :--------- | :----------------------------------- |
 | BLACK  | Ground         | Chassis ground   | 16 AWG     | Clean metal-to-metal                 |
-| WHITE  | Reverse        | PMU Out 22       | 16 AWG     | Parallel with Squadron Sport reverse |
-| YELLOW | Brake/Turn     | CT4 + PMU Out 21 | 16 AWG     | Combined function, internal diodes   |
-| RED    | Marker/Parking | PMU Out 23       | 16 AWG     | DRL/parking circuit                  |
+| WHITE  | Reverse        | [Reverse splice][reverse-lights] | 16 AWG | Parallel with Squadron Sport reverse |
+| YELLOW | Brake/Turn     | [Turn splice][turn-signals] + [Brake splice][brake-lights] | 16 AWG | Combined function, internal diodes   |
+| RED    | Marker/Parking | [Running splice][drl-parking-lights] | 16 AWG | DRL/parking circuit                  |
 
 ## Reverse Lights
 
@@ -57,19 +57,22 @@ tags:
 - WolfBox trigger: negligible
 - **Total: ~5A** (PMU Out 22 capacity: 7A, 71% utilization)
 
-## Brake Lights
+## Brake Lights {#brake-lights}
 
-**Power:** PMU Out 21 (~3A load, 16 AWG)
+**Power:** PMU Out 21 (7A capacity)
 **Trigger:** Brake pedal switch → PMU In 2
-**Third Brake Light:** [Rear Chase Light][rear-chase] (SwitchPros-controlled, activates with brake input)
 
-**Wiring:**
+### Brake Light Distribution
 
-1. Brake pedal switch → PMU In 2
-2. PMU Out 21 → Maxbilt YELLOW (both tail lights)
-3. Chassis ground
+PMU Out 21 splices to all brake lights:
 
-**Load:** ~3A (PMU Out 21 capacity: 7A, 43% utilization)
+| Destination | Load | Wire | Notes |
+| :---------- | :--- | :--- | :---- |
+| Maxbilt Round Trail Tail (YELLOW) | ~3A | 16 AWG | Both tail lights |
+| RTL-S Brake (Yellow) | 1.45A | Per RTL-S harness | Chase light brake function |
+| **Total** | **~4.5A** | | PMU Out 21 capacity: 7A (64%) |
+
+**Splice Location:** Rear of vehicle (accessible for service)
 
 ## Brake/Turn Signal Integration
 
@@ -108,4 +111,6 @@ See [DRL/Parking Lights][drl-parking-lights] for circuit details.
 [drl-parking-lights]: 05-drl-parking.md
 [communication-systems]: ../07-communication-systems/index.md
 [reverse-lights]: ../04-offroad-lighting/10-reverse-lights.md
-[rear-chase]: ../04-offroad-lighting/09-rear-chase.md
+[rear-chase]: ../04-offroad-lighting/04-chase-lights.md
+[turn-signals]: 03-turn-signals.md
+[brake-lights]: #brake-lights

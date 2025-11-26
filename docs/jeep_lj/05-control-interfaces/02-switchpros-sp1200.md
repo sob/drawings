@@ -18,11 +18,18 @@ tags:
 
 **Power Source:** 150A breaker from CONSTANT bus (AUX battery)
 
-**Power Module Location:** Engine bay (rated to 125°C, IP67)
+**Power Wire:** 1/0 AWG, ~2 ft (AUX battery to power module in same wheel well)
 
-**Control Panel Location:** TBD - dash mount (4" L x 3" W x 0.375" H)
+**Power Module Location:** Passenger rear wheel well (with AUX battery, rated to 125°C, IP67)
 
-**Ground:** 4 AWG to front frame rail or START battery negative (per manufacturer spec - direct battery ground)
+**Control Panel Location:** Dash mount (4" L x 3" W x 0.375" H)
+
+**Control Cable:** Standard 10.5 ft (available in 1, 5, 10.5, 15, 20, 25, 30, 35 ft lengths)
+
+**Ground:** 4 AWG to chassis (per manufacturer spec - reference ground only, not load return)
+
+!!! note "Load Ground Path"
+    The 4 AWG controller ground is for logic/reference only. Load return current flows through individual output grounds to the [SwitchPros Ground Bus][switchpros-ground-bus] (1/0 AWG to chassis).
 
 **IP Rating:** IP67 (both power module and control panel)
 
@@ -116,21 +123,27 @@ See [AUX Battery Distribution][aux-battery] for power specifications.
 
 ### TRIGGER-1: Door Switches → Dome Lights
 
-Driver and passenger door switches wired in parallel to activate dome lights when either door opens.
+Factory door plunger switches retained and wired in parallel to activate dome lights when either door opens.
+
+**Switch Type:** Factory Jeep TJ/LJ door jamb plunger switch (normally open, closes to ground when door opens)
 
 **Wiring:**
 
 ```text
-Driver Door Switch (NO) ──┬──→ TRIGGER-1 (Pin 7, PINK)
-Passenger Door Switch (NO)─┘
+Factory Driver Door Plunger (NO) ──┬──→ TRIGGER-1 (Pin 7, PINK)
+Factory Passenger Door Plunger (NO)─┘
 ```
+
+**Wire Routing:**
+- Driver door: Door jamb → under dash → rear wheel well (via existing harness path)
+- Passenger door: Door jamb → under dash → rear wheel well (via existing harness path)
+- Wire gauge: 18 AWG (trigger signal only, no current load)
 
 **Configuration:**
 
 - Program Button 4 to control OUTPUT-4 OR TRIGGER-1 → OUTPUT-4
 - Manual control: Press Button 4
 - Automatic control: Open driver or passenger door
-- Both switches are normally open, close to ground when door opens
 
 **Note:** Rear tailgate replaced factory rear door - no rear door switch needed
 
@@ -207,8 +220,8 @@ Program TRIGGER-3 to activate compressor when tank pressure drops below 135 PSI:
 - [ ] Connect ignition signal from ignition switch RUN terminal to SwitchPros Pin 3 (IGNITION - LT BLUE)
   - 18 AWG wire, splits from main ignition signal distribution (see [PMU24][pmu-inputs])
 - [ ] Determine parking lights signal source for SwitchPros Pin 4 (LIGHTS - WHITE) for DRL integration
-- [ ] Plan control panel cable routing from engine bay power module to dash-mounted control panel
-  - Cable length required for engine bay to dash mount
+- [ ] Plan control panel cable routing from rear wheel well power module to dash (~10-15 ft)
+  - Order 15 ft cable if standard 10.5 ft is insufficient
 - [ ] Wire driver door switch + passenger door switch in parallel to TRIGGER-1 (Pin 7, PINK)
 - [ ] Configure Button 4 programming: OUTPUT-4 OR TRIGGER-1 activates dome lights
 - [ ] Install rear cargo rocker switch and wire to TRIGGER-2 (Pin 8, PINK)
@@ -235,3 +248,4 @@ Program TRIGGER-3 to activate compressor when tank pressure drops below 135 PSI:
 [pmu-inputs]: ../01-power-systems/04-pmu/02-pmu-inputs.md
 [control-interfaces-overview]: 01-overview.md
 [offroad-auxiliary-lighting]: ../04-offroad-lighting/index.md
+[switchpros-ground-bus]: ../01-power-systems/05-grounding/03-switchpros-ground-bus.md

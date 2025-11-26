@@ -11,18 +11,22 @@ tags:
 
 **Control:** Automatic with ignition
 
-**Power Source:** PMU Out 23 (7A capacity, ~2A load)
+**Power Source:** PMU Out 23 (7A capacity, ~2.6A load)
 
 **DRL Auto-Off:** PMU programming logic disables when CT4 SW3 activates headlights
 
-## Circuit Components
+## Running Light Distribution
 
-The DRL/parking circuit (PMU Out 23) powers:
+PMU Out 23 splices to all running/marker lights:
 
-1. LP6 Headlight DRL (Pin 3) - both lights (0.8A total)
-2. Maxbilt Round Trail Tail RED wire (marker/parking) - both lights (~1A total)
+| Destination | Load | Wire | Notes |
+| :---------- | :--- | :--- | :---- |
+| LP6 Headlight DRL (Pin 3) | 0.8A | 16 AWG | Both lights |
+| Maxbilt Round Trail Tail (RED) | ~1A | 16 AWG | Both tail lights |
+| RTL-S Running (Red) | 0.8A | Per RTL-S harness | Chase light running function |
+| **Total** | **~2.6A** | | PMU Out 23 capacity: 7A (37%) |
 
-**Total Load:** ~2A (PMU Out 23 capacity: 7A, 29% utilization)
+**Splice Location:** Rear of vehicle (accessible for service)
 
 ## PMU DRL Auto-Off Logic
 

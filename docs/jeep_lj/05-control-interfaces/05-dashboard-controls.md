@@ -52,31 +52,24 @@ For complete winch specifications, wiring details, and recovery system informati
 
 ## Rear Seat Switch
 
-**Type:** TBD - momentary or latching switch
+**Type:** [Blue Sea 4160 Push Button Switch][bluesea-4160] (10A latching, OFF-ON)
 **Location:** Rear seat area (for rear passenger control)
 **Function:** Controls rear roll bar dome lights (4x KC Cyclone)
+**Wire Gauge:** 16 AWG
 
-### Wiring Options
+### Wiring
 
-**Option 1 - Parallel with SwitchPros Button 4:**
+Wired in parallel with SwitchPros OUTPUT-4:
 
-- Wire switch in parallel with OUTPUT-4 circuit
+- SwitchPros OUTPUT-4 → Splice → Blue Sea 4160 → Dome lights
 - Allows rear passenger to turn on/off dome lights independently
-- Both switches can control the same lights
-
-**Option 2 - Connected to TRIGGER input:**
-
-- Wire to SwitchPros TRIGGER-1, TRIGGER-2, or TRIGGER-3
-- Allows SwitchPros to interpret rear seat switch as a remote trigger
-- More complex but allows for programmable behavior
+- Both SwitchPros Button 4 and rear switch can control the same lights
+- Switch rating (10A) exceeds dome light load (4A)
 
 ### Rear Seat Switch Outstanding Items
 
-- [ ] Determine rear seat switch type (momentary vs latching)
 - [ ] Determine rear seat switch mounting location
-- [ ] Decide on wiring method (parallel with Button 4 or TRIGGER input)
-- [ ] Determine wire routing from rear seat to SwitchPros location
-- [ ] Verify switch rating if wired in parallel (must handle 4A dome light load)
+- [ ] Route 16 AWG wire from SwitchPros OUTPUT-4 splice to rear seat switch location
 
 ## Related Documentation
 
@@ -87,3 +80,4 @@ For complete winch specifications, wiring details, and recovery system informati
 [recovery-systems]: ../08-exterior-systems/01-recovery-systems.md
 [control-interfaces-overview]: 01-overview.md
 [switchpros-sp-1200-rcr-force-12]: 02-switchpros-sp1200.md
+[bluesea-4160]: https://www.bluesea.com/products/4160/10A_Push_Button_LED_Ring_Switch_OFF-ON_Blue

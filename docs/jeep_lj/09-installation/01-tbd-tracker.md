@@ -31,7 +31,6 @@ Items needed before installation begins but not system-critical.
 | :-------------------------------- | :-------------------------------------------------------------- | :----------------------------- | :------- |
 | R2.8 ECM A/C Request Input        | Verify if CM2220 has A/C request input for idle bump (optional) | [HVAC System][hvac]            | High     |
 | Dakota Digital Panel Mounting     | HDPE sheet dimensions and location                              | [Wire Routing][wire-routing]   | High     |
-| SwitchPros Control Panel Location | Dash mount location (4" x 3")                                   | [SwitchPros][switchpros]       | High     |
 | Fusion Amp Mounting               | Cargo area or under rear seat                                   | [Audio Systems][audio-systems] | High     |
 
 ---
@@ -66,6 +65,8 @@ Items that improve the design but don't block installation.
 | Alternator Voltage Regulator Set Point | Verify 14.2-14.4V for AGM batteries                                              | [Alternator][alternator]             | Medium   |
 | BODY PDU Metri-Pack Pinout             | J301-J306 connector pinout (military TM or reverse engineering)                  | [BODY PDU][body-rtmr]                | Medium   |
 | BODY PDU 12V Relay Part Numbers        | Replacement part numbers for K40, K42, K53 (currently 24V coils)                 | [BODY PDU][body-rtmr]                | Medium   |
+| Winch Control Wire Routing             | Routing path from dash to bumper (~15-20 ft through multiple zones)              | [Dashboard Controls][dash-controls]  | Medium   |
+| SwitchPros Control Cable Routing       | Control panel cable path from rear wheel well to dash (~10-15 ft)                | [SwitchPros][switchpros]             | Medium   |
 
 ---
 
@@ -78,7 +79,6 @@ Items that can be determined during build.
 | Horn Button Type                  | Momentary or latching                                                           | [CT4][ct4]                           | Low      |
 | Speaker IPX Rating                | Verify from spec sheet                                                          | [Audio Systems][audio-systems]       | Low      |
 | WolfBox License Plate Integration | With existing license plate lights                                              | [Communication][communication]       | Low      |
-| Rear Seat Switch                  | Parallel wiring for passenger control                                           | [Offroad Lighting][offroad-lighting] | Low      |
 | Recovery Board Storage            | MaxTrax storage location                                                        | [Recovery Systems][recovery-systems] | Low      |
 | Hi-Lift Jack Mount                | Hood, bumper, or rear swing-out                                                 | [Recovery Systems][recovery-systems] | Low      |
 | BIM Module Current Draw           | Current draw for BIM-17-2, BIM-11-2, BIM-12-2, BIM-13-2 (powered via BIM cable) | [Gauge Cluster][gauge-cluster]       | Low      |
@@ -102,6 +102,13 @@ Items completed since last update.
 
 | Item                          | Resolution                                                                                                                    | Date       |
 | :---------------------------- | :---------------------------------------------------------------------------------------------------------------------------- | :--------- |
+| CT4 Power Source              | PMU Out 13 (15A CONSTANT) - ~9A actual load, allows hazards when ignition off                                                | 2025-11-26 |
+| SwitchPros Power Module Location | Passenger rear wheel well (with AUX battery), 1/0 AWG power wire ~2 ft                                                     | 2025-11-26 |
+| Rear Seat Switch              | Blue Sea 4160 (10A latching), 16 AWG, parallel with SwitchPros OUTPUT-4                                                      | 2025-11-26 |
+| Door Switch Routing           | Factory plunger switches retained, 18 AWG to SwitchPros TRIGGER-1                                                            | 2025-11-26 |
+| Turn Signal Distribution      | CT4 splice to front turn, Maxbilt rear, RTL-S amber (~0.9A per side)                                                         | 2025-11-26 |
+| Brake Light Distribution      | PMU Out 21 splice to Maxbilt, RTL-S brake (~4.5A total)                                                                      | 2025-11-26 |
+| Running Light Distribution    | PMU Out 23 splice to LP6 DRL, Maxbilt marker, RTL-S running (~2.6A total)                                                    | 2025-11-26 |
 | RTL-S Wiring Configuration    | 4-wire: black ground, red running (PMU Out 23), yellow brake (OEM), blue work (PMU Out 23); 2-wire: yellow/blue turn (SwitchPros OUTPUT-7) | 2025-11-25 |
 | Cargo Light Power Source      | BODY PDU CB20 (10A) with SPST switch on wheel well top; lights flush mounted in wheel well                                                   | 2025-11-26 |
 | Rear Work Lights Position     | Above license plate, verified clear of WolfBox rear camera                                                                                   | 2025-11-26 |
@@ -147,9 +154,9 @@ Items completed since last update.
 | Priority    | Count  |
 | :---------- | :----- |
 | 🔴 Critical | 0      |
-| High        | 4      |
-| 📋 Medium   | 24     |
-| 📝 Low      | 7      |
+| High        | 3      |
+| 📋 Medium   | 26     |
+| 📝 Low      | 6      |
 | 🔍 Verify   | 1      |
 | **TOTAL**   | **36** |
 

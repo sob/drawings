@@ -20,13 +20,13 @@ tags:
 
 **Function:** Turn signals (left/right), headlight control, and auxiliary accessories
 
-**Power Source:** START battery positive (40A fuse, battery power allows hazards when ignition off)
+**Power Source:** PMU Out 13 (15A, programmed CONSTANT for hazards when ignition off)
 
 **Mounting Location:** Steering column
 
 **Ground:** Chassis ground (via ignition/ground harness)
 
-**IP Rating:** Designed for automotive use
+**IP Rating:** IP67
 
 **GPS Module:** Included (enables automatic turn signal cancellation based on speed and steering angle)
 
@@ -38,7 +38,7 @@ The Command Touch CT4 is a steering column-mounted controller that replaces the 
 
 **Specifications:**
 
-- **Total Capacity:** 40A max (10A per switch output)
+- **Total Capacity:** 10A per switch output (~9A max actual load)
 - **Four Outputs:**
   - SW1 (UP): Right Turn Signal (configured in turn signal mode)
   - SW2 (DOWN): Left Turn Signal (configured in turn signal mode)
@@ -69,7 +69,7 @@ The CT4 provides complete turn signal and headlight control:
 
 - **Headlights (SW3 - PULL):** Baja Designs LP6 headlights (low beam)
   - **Pull lever** → Activates headlights (low beam)
-  - Power: CT4 main battery power (40A CONSTANT) → internal switching → SW3 output
+  - Power: PMU Out 13 (CONSTANT) → CT4 internal switching → SW3 output
   - CT4 SW3 output → LP6 Pin 1 (low beam, both lights in parallel)
   - CT4 handles switching internally (10A output capacity, 3.6A actual load)
   - Disabled when ignition off (via ignition signal from ignition switch RUN)
@@ -79,7 +79,7 @@ The CT4 provides complete turn signal and headlight control:
 
 - **High Beams (SW4 - PUSH):** Switches to high beams
   - **Push lever** (while headlights on) → Activates high beams
-  - Power: CT4 main battery power (40A CONSTANT) → internal switching → SW4 output
+  - Power: PMU Out 13 (CONSTANT) → CT4 internal switching → SW4 output
   - CT4 SW4 output → LP6 Pin 4 (high beam, both lights in parallel)
   - CT4 handles switching internally (10A output capacity, 5.6A actual load)
   - Disabled when ignition off (via ignition signal from ignition switch RUN)
@@ -114,7 +114,7 @@ See [PMU DRL Auto-Off Logic](#pmu-drl-auto-off-logic) section below for complete
 | Red         | SW2, DOWN  | Left Turn (CT4 output)  | Front/rear left turn signals                                             | 10A max per output                                       |
 | Orange      | SW3, PULL  | Headlights (low beam)   | LP6 Pin 1 (low beam, both lights) + DRL cutoff relay coil                | 10A output, 3.6A load, disabled when ignition off        |
 | Yellow      | SW4, PUSH  | High Beams              | LP6 Pin 4 (high beam, both lights)                                       | 10A output, 5.6A load, disabled when ignition off        |
-| Red (thick) | 12V Supply | Main power input        | START battery CONSTANT (40A fuse)                                        | Powers all SW outputs, allows hazards when ignition off  |
+| Red (thick) | 12V Supply | Main power input        | PMU Out 13 (15A CONSTANT)                                                | Powers all SW outputs, allows hazards when ignition off  |
 | Black       | Ground     | Ground return           | Chassis ground or firewall ground stud                                   | Via ignition/ground harness                              |
 | White/Gray  | Ignition   | Ignition signal input   | Ignition switch RUN output (18 AWG, splits to PMU In 6, SwitchPros, CT4) | Disables SW3/SW4 when ignition off, keeps SW1/SW2 active |
 
@@ -217,8 +217,7 @@ END
 
 ### Power & Ground
 
-- [ ] Install 40A fuse or circuit breaker between START battery positive and CT4 12V supply wire
-- [ ] Route 40A power wire from battery to steering column location
+- [ ] Route PMU Out 13 wire to steering column location (CT4 12V supply)
 - [ ] Connect CT4 ground to chassis ground or firewall ground stud
 - [ ] Verify ground connection is clean metal-to-metal contact
 
@@ -251,7 +250,7 @@ END
 ### Headlight Wiring
 
 - [ ] Route ignition signal from ignition switch RUN output (18 AWG) to CT4 ignition input (splits to PMU In 6, SwitchPros, CT4)
-- [ ] Route CT4 main power from START battery CONSTANT (40A fuse) to CT4 12V supply
+- [ ] Route CT4 main power from PMU Out 13 to CT4 12V supply
 - [ ] Route CT4 SW3 output wire to LP6 Pin 1 (low beam, both lights in parallel, 14 AWG)
 - [ ] Route CT4 SW4 output wire to LP6 Pin 4 (high beam, both lights in parallel, 14 AWG)
 - [ ] Tap CT4 SW3 output wire to DRL cutoff relay coil (to disable DRL when headlights on)

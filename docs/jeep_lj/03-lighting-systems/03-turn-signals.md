@@ -11,9 +11,22 @@ tags:
 
 **Controller:** [Command Touch CT4][command-touch-ct4] (SW1 = right turn, SW2 = left turn)
 
-**Power Source:** START battery CONSTANT (via CT4 40A fuse)
+**Power Source:** PMU Out 13 (CONSTANT, via CT4)
 
 **Features:** GPS auto-cancel, lane change mode, hazard function
+
+## Turn Signal Distribution
+
+Each CT4 output (SW1 right, SW2 left) splices to three destinations:
+
+| Destination | Load | Wire | Notes |
+| :---------- | :--- | :--- | :---- |
+| Front turn signal | ~0.2A | 14 AWG | Fender-mounted LED |
+| Maxbilt rear turn | ~0.3A | 16 AWG | Integrated tail light |
+| RTL-S amber | 0.36A | Per RTL-S harness | Chase light turn function |
+| **Total per side** | **~0.9A** | | Well under 10A CT4 output capacity |
+
+**Splice Location:** Behind dash (accessible for service)
 
 ## Front Turn Signals
 
@@ -38,8 +51,10 @@ tags:
 
 ## Rear Turn Signals
 
-Rear turn signals are integrated into Maxbilt Round Trail Tail lights (YELLOW wire).
-See [Tail/Brake/Reverse Lights][tail-brake-reverse-lights] for complete wiring.
+Rear turn signals are fed from the CT4 splice (see distribution table above):
+
+- **Maxbilt Round Trail Tail** - YELLOW wire, see [Tail/Brake/Reverse Lights][tail-brake-reverse-lights]
+- **RTL-S Chase Light** - Yellow/Blue wires, see [Chase Lights][chase-lights]
 
 ## Outstanding Items
 
@@ -55,3 +70,4 @@ See [Tail/Brake/Reverse Lights][tail-brake-reverse-lights] for complete wiring.
 
 [command-touch-ct4]: ../05-control-interfaces/03-command-touch-ct4.md
 [tail-brake-reverse-lights]: 04-tail-brake-reverse.md
+[chase-lights]: ../04-offroad-lighting/04-chase-lights.md

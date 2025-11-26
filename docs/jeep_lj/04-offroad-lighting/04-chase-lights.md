@@ -43,16 +43,16 @@ Multi-function rear safety light for convoy visibility, plus integrated brake, t
 | Wire   | Function     | Draw   | Source                                       |
 | :----- | :----------- | :----- | :------------------------------------------- |
 | Black  | Ground       | -      | Chassis ground                               |
-| Red    | Running      | 0.8A   | PMU Out 23 (ignition-switched)               |
-| Yellow | Brake        | 1.45A  | OEM brake circuit via [Tail Lights][tail-brake-reverse] |
-| Blue   | Work (White) | 1.3A   | PMU Out 23 (shared with running)             |
+| Red    | Running      | 0.8A   | [Running light splice][drl-parking]          |
+| Yellow | Brake        | 1.45A  | [Brake light splice][tail-brake-reverse]     |
+| Blue   | Work (White) | 1.3A   | [Running light splice][drl-parking] (shared) |
 
 ### 2-Wire Connector (Amber Sections)
 
 | Wire   | Function    | Draw   | Source                                      |
 | :----- | :---------- | :----- | :------------------------------------------ |
-| Yellow | Right Amber | 0.36A  | CT4 right turn OR SwitchPros OUTPUT-7 (via diode) |
-| Blue   | Left Amber  | 0.36A  | CT4 left turn OR SwitchPros OUTPUT-7 (via diode)  |
+| Yellow | Right Amber | 0.36A  | [Turn signal splice][turn-signals] OR SwitchPros OUTPUT-7 (via diode) |
+| Blue   | Left Amber  | 0.36A  | [Turn signal splice][turn-signals] OR SwitchPros OUTPUT-7 (via diode)  |
 
 **Max Draw:** ~4A
 
@@ -60,11 +60,11 @@ Multi-function rear safety light for convoy visibility, plus integrated brake, t
 
 ## Control
 
-- **Turn Signals:** CT4 left/right outputs - synced with front turn signals for on-road use
+- **Turn Signals:** Via [turn signal splice][turn-signals] - synced with all turn signals for on-road use
 - **Chase Mode:** SwitchPros Button 7 (OUTPUT-7) - both amber sections flash together
 - **Isolation:** Diodes prevent backfeed between CT4 and SwitchPros circuits
-- **Brake (Red):** OEM brake circuit - taps into existing brake light feed
-- **Running + Work (Red/White):** PMU Out 23 - running on with ignition, work light same circuit
+- **Brake (Red):** Via [brake light splice][tail-brake-reverse]
+- **Running + Work (Red/White):** Via [running light splice][drl-parking]
 
 ```
 CT4 Right Turn ──|>|──┬── Yellow (Right Amber)
@@ -84,5 +84,7 @@ SwitchPros OUT7 ─|>|──┘
 
 [offroad-overview]: index.md
 [switchpros-sp-1200]: ../05-control-interfaces/02-switchpros-sp1200.md
-[tail-brake-reverse]: ../03-lighting-systems/04-tail-brake-reverse.md
+[tail-brake-reverse]: ../03-lighting-systems/04-tail-brake-reverse.md#brake-lights
+[turn-signals]: ../03-lighting-systems/03-turn-signals.md
+[drl-parking]: ../03-lighting-systems/05-drl-parking.md
 [product-link]: https://www.bajadesigns.com/products/rtl-led-rear-light-bar/?sku=103004
