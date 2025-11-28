@@ -23,15 +23,26 @@ All CONSTANT bus loads protected by Mechanical Products Series 17 circuit breake
 !!! info "Wire Sizing for CB Protection"
 CONSTANT bus outputs use 2 AWG (130A @ 20°C) for SwitchPros, SafetyHub, and BODY PDU. Fusion Amp uses 4 AWG (95A @ 20°C) sized for 100A CB.
 
-**All Circuit Breakers:**
+**Mechanical Products Series 17 (3 units):**
 
-- Manufacturer: Mechanical Products Series 17
 - Type: Surface mount
 - Reset: Manual (Type III - push to reset)
 - Terminals: 3/8"-16 studs (S2 configuration)
+- Dimensions: 3.39" L × 1.9" W (per unit)
 - Ratings: 48V DC (20-150A), 30V DC (175-200A), 14V DC (225-300A)
 - Standards: Marine-rated (SAE J1171, ABYC E-11, UL1500, IP67, MIL-STD-202)
 - Mounting: Rear wheel well near battery
+
+**Blue Sea 187-Series (1 unit - Fusion Amp):**
+
+- Type: Surface mount
+- Reset: Manual
+- Terminals: 5/16" (M8) studs
+- Dimensions: 3.44" H × 2.32" W × 1.8" D
+- Rating: 5000A interrupt @ 12V DC
+- Standards: Ignition protected, waterproof
+
+**Space Requirements:** 4 CBs in 2×2 arrangement with wiring clearance for 2-4 AWG cables: ~8" × 10" (~80 sq in)
 
 ## Related Documentation
 

@@ -29,9 +29,12 @@ All START battery positive circuits protected by Mechanical Products Series 17 c
 - Type: Surface mount
 - Reset: Manual (Type III - push to reset)
 - Terminals: 3/8"-16 studs (S2 configuration)
+- Dimensions: 3.39" L × 1.9" W (per unit)
 - Ratings: 48V DC (20-150A), 30V DC (175-200A), 14V DC (225-300A)
 - Standards: Marine-rated (SAE J1171, ABYC E-11, UL1500, IP67, MIL-STD-202)
 - Mounting: Wheel well within 7" of battery positive terminal
+
+**Space Requirements:** 2 CBs side-by-side with wiring clearance for 2/0 AWG cables: ~7" × 4" (~28 sq in)
 
 ## Related Documentation
 
