@@ -43,12 +43,18 @@ See [Ignition Signal Distribution](#ignition-signal-distribution) for complete w
 
 | Input       | Physical Pin | Range | Function                    | Notes                                          |
 | :---------- | :----------- | :---- | :-------------------------- | :--------------------------------------------- |
-| **An 1-8**  | Dedicated    | 0-5V  | **[Available]**             | 8 dedicated analog inputs for custom sensors   |
+| **An 1-4**  | Dedicated    | 0-5V  | **[Available]**             | Future expansion                               |
+| **An 5**    | Dedicated    | 0-5V  | Boost Pressure              | 0-5V transducer, displayed on ADU7             |
+| **An 6**    | Dedicated    | 0-5V  | EGT (Exhaust Gas Temp)      | Thermocouple + amplifier, displayed on ADU7    |
+| **An 7**    | Dedicated    | 0-5V  | AUX Battery Voltage         | Voltage divider circuit, displayed on ADU7     |
+| **An 8**    | Dedicated    | 0-5V  | **[Available]**             | Future expansion                               |
 | **An 9-16** | OUT17-24     | 0-20V | **[Configured as outputs]** | Dual-purpose pins - currently used as OUT17-24 |
 
 **Current Configuration:** An 9-16 configured as outputs (OUT17-24). See [PMU Outputs][pmu-outputs] for output assignments.
 
 **J1939 Data:** Engine oil temperature and coolant temperature are monitored via J1939 CAN bus from ECM (no analog inputs needed).
+
+**ADU7 Integration:** Analog inputs An 5-8 feed data to [ADU7 Display][adu7-display] via ECUMaster CAN bus.
 
 ## CAN Bus Integration (J1939)
 
@@ -107,3 +113,4 @@ See [PMU Programming][pmu-programming] for CAN-based logic examples.
 [firewall-ingress]: ../07-wire-routing/02-firewall-ingress.md
 [gauge-cluster]: ../../02-engine-systems/09-gauge-cluster/index.md
 [ignition-signal]: ../06-ignition-signal/index.md
+[adu7-display]: ../../02-engine-systems/10-adu7-display/index.md

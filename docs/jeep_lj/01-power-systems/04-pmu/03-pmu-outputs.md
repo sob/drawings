@@ -31,7 +31,7 @@ Complete configuration of all 24 PMU outputs, load allocations, and combined out
 | **Out 11** | WS-51C Wiper Controller   | 15A  | [Firewall Stud Bus][firewall-ground] T2               | Auto (ignition ON)   | See [Wipers][windshield-wiper-control-system] |
 | **Out 12** | Ham Radio (iCom IC-2730A) | 13A  | [Direct START battery-][starter-battery-distribution] | CONSTANT             | RF noise isolation                            |
 | **Out 13** | Command Touch CT4         | ~9A  | [Firewall Stud Bus][firewall-ground] T1               | CONSTANT             | Turn signals, headlights, hazards             |
-| **Out 14** | **[Available]**           | -    | -                                                     | -                    | Future expansion (15A)                        |
+| **Out 14** | ADU7 Display              | ~2A  | A-pillar ground                                       | Auto (ignition ON)   | See [ADU7 Display][adu7-display]              |
 | **Out 15** | Winch Contactor Trigger   | 1A   | Via winch contactor                                   | Manual (dash rocker) | Control signal only                           |
 | **Out 16** | **[Available]**           | -    | -                                                     | -                    | Future expansion (15A)                        |
 
@@ -120,3 +120,4 @@ Complete configuration of all 24 PMU outputs, load allocations, and combined out
 [hvac-system]: ../../02-engine-systems/03-hvac.md
 [windshield-wiper-control-system]: ../../02-engine-systems/04-wipers.md
 [drl-parking-lights]: ../../03-lighting-systems/05-drl-parking.md
+[adu7-display]: ../../02-engine-systems/10-adu7-display/index.md
