@@ -38,7 +38,7 @@ tags:
 | Stud 2 (5/16")           | **[Available]**            | -           | -         | -              | Future high-current ground                              |
 | Terminal 1 (#10-24)      | Command Touch CT4          | 14 AWG ✓    | ~3 ft     | <1A            | Steering column controller logic ground                 |
 | Terminal 2 (#10-24)      | WS-51C Wiper Controller    | 16 AWG ✓    | ~2 ft     | ~5A            | Dash wiper control - see [Wiper System][wiper-system]   |
-| Terminal 3 (#10-24)      | BODY PDU                   | 14 AWG ✓    | ~4 ft     | ~10A           | Body electronics ground                                 |
+| Terminal 3 (#10-24)      | BODY PDU                   | 14 AWG ✓    | ~4 ft     | ~3A            | Relay coil/logic ground only (high-side switching)      |
 | Terminal 4 (#10-24)      | Dakota Digital Cluster     | 16 AWG ✓    | ~2 ft     | <1A            | Instrument cluster logic ground                         |
 | Terminal 5 (#10-24)      | Dakota Digital BIM         | 16 AWG ✓    | ~2 ft     | <1A            | Body interface module                                   |
 | Terminal 6 (#10-24)      | Fusion MS-RA670 Head Unit  | 14 AWG ✓    | ~2 ft     | ~5A            | Audio head unit - see [Audio System][audio-system]      |
@@ -55,7 +55,7 @@ tags:
 
 **Mounting:** Firewall (cabin side), close to dash electronics
 
-**Ground Path:** Bus → chassis ground (4 AWG minimum, handles ~50A total load) → START battery negative bus (via 2/0 AWG main chassis ground)
+**Ground Path:** Bus → chassis ground (4 AWG, handles ~50A total load) → START battery negative bus (via 2/0 AWG main chassis ground)
 
 **Critical:** Clean metal-to-metal connection to firewall/chassis, protected from water/moisture
 

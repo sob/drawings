@@ -144,7 +144,7 @@ Items completed since last update.
 | Grid Heater Current           | Design value 80A (moved to Verification for field measurement)                                                                | 2025-11-21 |
 | BCDC Temperature Sensor       | Included with BCDC unit (2-pin reversible, moved to High Priority for install documentation)                                  | 2025-11-21 |
 | BODY PDU Model                | Bussmann LR-2 (301-1C-C-R1)                                                                                                   | 2025-11-18 |
-| BODY PDU Ground               | Firewall Stud Bus Terminal 3 (14 AWG)                                                                                         | 2025-11-18 |
+| BODY PDU Ground               | Firewall Stud Bus Terminal 3 (14 AWG) - relay coil/logic reference only (~3A); high-side switching means loads ground separately | 2025-11-28 |
 | Alternator Part Number        | Premier Power Welder HO-C28                                                                                                   | 2025-11-18 |
 
 ---

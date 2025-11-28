@@ -28,6 +28,8 @@ tags:
 
 **Power Source:** CONSTANT power from AUX battery via 2 AWG feed
 
+**Ground:** [Firewall Stud Bus][firewall-stud-bus] Terminal 3 (14 AWG) - relay coil/logic reference only
+
 **Configuration:** 8 circuit breaker positions + 8 relay positions
 
 **Input:** Military-spec power studs (accepts up to 2 AWG wire)
@@ -82,11 +84,11 @@ G1 GMRS Radio, STX Intercom, and Ham Radio are powered from [SafetyHub 150][safe
 ## Outstanding Items
 
 - [ ] Identify pinout for J301-J306 Metri-Pack connectors (military TM manual or reverse engineering)
-- [ ] Determine LR-2 ground connection location (chassis ground or direct to AUX battery)
 - [ ] Determine replacement 12V relay part numbers for K40, K42, K53 (currently 24V coils)
 
 **Design Notes:**
 
+- **High-side switching:** BODY PDU switches positive power to loads; load current returns through each load's own ground wire, NOT through the PDU. The PDU ground connection (~3A) is only for relay coils and internal logic.
 - Heated seat current: 5A peak, 2A sustained per seat (verified with vendor)
 - Military relays K21/K22 provide fault isolation and independent operation
 - J301-J306 connectors require custom harness fabrication
@@ -106,3 +108,4 @@ G1 GMRS Radio, STX Intercom, and Ham Radio are powered from [SafetyHub 150][safe
 [dashboard]: ../../05-control-interfaces/05-dashboard-controls.md
 [audio]: ../../06-audio-systems/01-head-unit.md
 [firewall]: ../07-wire-routing/02-firewall-ingress.md
+[firewall-stud-bus]: ../05-grounding/02-firewall-stud-bus.md
