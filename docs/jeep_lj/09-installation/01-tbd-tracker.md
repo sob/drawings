@@ -7,9 +7,9 @@ hide:
 
 **Purpose:** Central tracking for all To-Be-Determined items across the Jeep LJ electrical system documentation.
 
-**Last Updated:** 2025-11-26
+**Last Updated:** 2025-11-28
 
-**Total Open Items:** 36
+**Total Open Items:** 22
 
 ---
 
@@ -29,9 +29,7 @@ Items needed before installation begins but not system-critical.
 
 | Item                              | Description                                                     | File                           | Priority |
 | :-------------------------------- | :-------------------------------------------------------------- | :----------------------------- | :------- |
-| R2.8 ECM A/C Request Input        | Verify if CM2220 has A/C request input for idle bump (optional) | [HVAC System][hvac]            | High     |
 | Dakota Digital Panel Mounting     | HDPE sheet dimensions and location                              | [Wire Routing][wire-routing]   | High     |
-| Fusion Amp Mounting               | Cargo area or under rear seat                                   | [Audio Systems][audio-systems] | High     |
 
 ---
 
@@ -48,25 +46,18 @@ Items that improve the design but don't block installation.
 | Roof/Roll Bar Routing                  | Light bars, dome lights                                                          | [Wire Routing][wire-routing]         | Medium   |
 | 3-Position Selector Switch Assignment  | Which SwitchPros output controls                                                 | [Dashboard Controls][dash-controls]  | Medium   |
 | Speaker Mounting Locations             | Dash end caps or kick panels                                                     | [Audio Systems][audio-systems]       | Medium   |
-| STX Intercom Mounting                  | Under dash or center console                                                     | [Communication][communication]       | Medium   |
-| WolfBox Rear Camera Mount              | Above license plate vs spare tire carrier                                        | [Communication][communication]       | Medium   |
-| WolfBox Cable Length                   | Mirror to rear routing (20-30 ft)                                                | [Communication][communication]       | Medium   |
-| GMRS Antenna Location                  | Roof rack, fender, or NMO mount                                                  | [Communication][communication]       | Medium   |
 | Horn Relay Specs                       | Contact rating, coil voltage                                                     | [CT4][ct4]                           | Medium   |
 | Horn Load                              | Factory Jeep horn amperage (3-6A)                                                | [CT4][ct4]                           | Medium   |
 | Horn Circuit Protection                | Inline fuse/breaker (10A typical)                                                | [CT4][ct4]                           | Medium   |
-| Turn Signal Mounting                   | Front fenders or bumper                                                          | [Turn Signals][turn-signals]         | Medium   |
 | Winch 3-Position Switch Assignment     | Which SwitchPros output controls                                                 | [Recovery Systems][recovery-systems] | Medium   |
 | Cummins Harness Wire Count             | Wire bundle specification for engine harness                                     | [Wire Routing][wire-routing]         | Medium   |
 | RF Power Grommet Location              | Grommet 6 location near battery for radio power                                  | [Wire Routing][wire-routing]         | Medium   |
 | Solar Panel Wire Gauge                 | Wire sizing for Cascadia 4x4 80W panel connection                                | [BCDC][bcdc]                         | Medium   |
-| Radiator Fan Wire Length               | Wire length from PMU to fan (~6 ft estimated)                                    | [Radiator Fan][radiator-fan]         | Medium   |
 | Alternator Output Terminal Size        | Terminal size for 1/0 AWG lug selection                                          | [Alternator][alternator]             | Medium   |
 | Alternator Voltage Regulator Set Point | Verify 14.2-14.4V for AGM batteries                                              | [Alternator][alternator]             | Medium   |
 | BODY PDU Metri-Pack Pinout             | J301-J306 connector pinout (military TM or reverse engineering)                  | [BODY PDU][body-rtmr]                | Medium   |
 | BODY PDU 12V Relay Part Numbers        | Replacement part numbers for K40, K42, K53 (currently 24V coils)                 | [BODY PDU][body-rtmr]                | Medium   |
 | Winch Control Wire Routing             | Routing path from dash to bumper (~15-20 ft through multiple zones)              | [Dashboard Controls][dash-controls]  | Medium   |
-| SwitchPros Control Cable Routing       | Control panel cable path from rear wheel well to dash (~10-15 ft)                | [SwitchPros][switchpros]             | Medium   |
 
 ---
 
@@ -77,10 +68,7 @@ Items that can be determined during build.
 | Item                              | Description                                                                     | File                                 | Priority |
 | :-------------------------------- | :------------------------------------------------------------------------------ | :----------------------------------- | :------- |
 | Horn Button Type                  | Momentary or latching                                                           | [CT4][ct4]                           | Low      |
-| Speaker IPX Rating                | Verify from spec sheet                                                          | [Audio Systems][audio-systems]       | Low      |
 | WolfBox License Plate Integration | With existing license plate lights                                              | [Communication][communication]       | Low      |
-| Recovery Board Storage            | MaxTrax storage location                                                        | [Recovery Systems][recovery-systems] | Low      |
-| Hi-Lift Jack Mount                | Hood, bumper, or rear swing-out                                                 | [Recovery Systems][recovery-systems] | Low      |
 | BIM Module Current Draw           | Current draw for BIM-17-2, BIM-11-2, BIM-12-2, BIM-13-2 (powered via BIM cable) | [Gauge Cluster][gauge-cluster]       | Low      |
 | LED4Life Wire Colors              | Confirm pod wire colors match MLC-RW pinout before install                      | [Footwell Lights][footwell-lights]   | Low      |
 
@@ -102,6 +90,19 @@ Items completed since last update.
 
 | Item                          | Resolution                                                                                                                    | Date       |
 | :---------------------------- | :---------------------------------------------------------------------------------------------------------------------------- | :--------- |
+| R2.8 ECM A/C Request Input    | CM2220 has no A/C request input - not applicable                                                                             | 2025-11-28 |
+| Fusion Amp Mounting           | Back firewall in cab                                                                                                          | 2025-11-28 |
+| STX Intercom Mounting         | Dash/behind dash                                                                                                              | 2025-11-28 |
+| WolfBox Rear Camera Mount     | Above license plate                                                                                                           | 2025-11-28 |
+| WolfBox Cable Length          | ~11 ft (windshield → A-pillar → rear center)                                                                                  | 2025-11-28 |
+| GMRS Antenna Location         | Driver A-pillar (~6 ft from dash)                                                                                             | 2025-11-28 |
+| Ham Antenna Location          | Passenger A-pillar (~4 ft to dash)                                                                                            | 2025-11-28 |
+| Turn Signal Mounting          | Front fenders                                                                                                                 | 2025-11-28 |
+| Radiator Fan Wire Length      | 6 ft (PMU to fan)                                                                                                             | 2025-11-28 |
+| Speaker IPX Rating            | IP67                                                                                                                          | 2025-11-28 |
+| Hi-Lift Jack Mount            | Not needed                                                                                                                    | 2025-11-28 |
+| Recovery Board Storage        | Not needed                                                                                                                    | 2025-11-28 |
+| SwitchPros Control Cable      | 10.5 ft standard cable (wheel well to dash)                                                                                   | 2025-11-28 |
 | CT4 Power Source              | PMU Out 13 (15A CONSTANT) - ~9A actual load, allows hazards when ignition off                                                | 2025-11-26 |
 | SwitchPros Power Module Location | Passenger rear wheel well (with AUX battery), 1/0 AWG power wire ~2 ft                                                     | 2025-11-26 |
 | Rear Seat Switch              | Blue Sea 4160 (10A latching), 16 AWG, parallel with SwitchPros OUTPUT-4                                                      | 2025-11-26 |
@@ -154,11 +155,11 @@ Items completed since last update.
 | Priority    | Count  |
 | :---------- | :----- |
 | 🔴 Critical | 0      |
-| High        | 3      |
-| 📋 Medium   | 26     |
-| 📝 Low      | 6      |
+| High        | 1      |
+| 📋 Medium   | 17     |
+| 📝 Low      | 4      |
 | 🔍 Verify   | 1      |
-| **TOTAL**   | **36** |
+| **TOTAL**   | **23** |
 
 ## Related Documentation
 
