@@ -24,7 +24,7 @@ tags:
 
 **Manual:** [Quick Start Guide][manual-link]
 
-**Mounting:** TBD - under dash or center console
+**Mounting:** Behind dash
 
 **Power Source:** PMU OUT20 (5A capacity, CONSTANT)
 
@@ -59,39 +59,30 @@ tags:
 
 ## Headset Configuration
 
-| Port   | Position        | Cable Length    |
-| :----- | :-------------- | :-------------- |
-| Port 1 | Driver          | 6 ft (included) |
-| Port 2 | Front passenger | 6 ft (included) |
-| Port 3 | Rear left       | Custom extended |
-| Port 4 | Rear right      | Custom extended |
+| Port   | Position        | Jack Location          | Cable Length    |
+| :----- | :-------------- | :--------------------- | :-------------- |
+| Port 1 | Driver          | STX unit (behind dash) | 6 ft (included) |
+| Port 2 | Front passenger | STX unit (behind dash) | 6 ft (included) |
+| Port 3 | Rear left       | Driver wheel well      | Extended        |
+| Port 4 | Rear right      | Passenger wheel well   | Extended        |
 
 ## Wiring
 
 | Connection | Wire              | Source            | Notes                    |
 | :--------- | :---------------- | :---------------- | :----------------------- |
-| Power (+)  | 10 AWG            | PMU OUT20         | Via firewall Grommet 1   |
-| Ground (−) | 10 AWG            | START battery neg | Direct for audio quality |
+| Power (+)  | 14 AWG            | PMU OUT20         | Via firewall grommet     |
+| Ground (−) | 14 AWG            | START battery neg | Direct for audio quality |
 | G1 Radio   | Integration cable | G1 RADIO port     | Audio/PTT/mute           |
 | Aux Audio  | 3.5mm or RCA      | Fusion MS-RA670   | Music to headsets        |
 
 ## Installation Notes
 
-- **Do NOT mount near ignition box** - RF interference
 - Direct battery ground recommended for best audio quality
 - PMU output has integrated 5A protection - no inline fuse needed
-- Do NOT connect to ignition or switched power (causes ground loop noise)
 
 ## Outstanding Items
 
-- [ ] Determine STX mounting location (under dash or center console)
-- [ ] Ensure STX is NOT mounted near ignition box
-- [ ] Plan headset port access (all on STX or extend rear ports to grab handles)
-- [ ] Determine if external PTT buttons will be used
-- [ ] Plan PTT button mounting locations if used
-- [ ] Order Rugged Radio integration cable for G1 to STX
-- [ ] Determine aux input cable type (3.5mm or RCA)
-- [ ] Plan aux cable routing from Fusion to STX
+None - all specifications determined.
 
 ## Related Documentation
 

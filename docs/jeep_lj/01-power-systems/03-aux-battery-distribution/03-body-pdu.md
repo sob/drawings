@@ -46,8 +46,8 @@ tags:
 
 | CB Position | Original Military Label | Repurposed Circuit          | Size | Gauge | Load                  | Relay | Notes                                    |
 | :---------- | :---------------------- | :-------------------------- | :--- | :---- | :-------------------- | :---- | :--------------------------------------- |
-| CB30        | CHEM DETECT             | Fusion Radio (memory)       | 10A  | 18AWG | ~1A                   | -     | Memory/clock retention only              |
-| CB44        | TRLR LIGHT              | Fusion Radio (amplifier)    | 15A  | 14AWG | ~15A                  | -     | Remote wire from deck triggers on/off    |
+| CB30        | CHEM DETECT             | Fusion Head Unit (memory)   | 10A  | 18AWG | ~1A                   | -     | Memory/clock retention (CONSTANT)        |
+| CB44        | TRLR LIGHT              | Fusion Head Unit (main)     | 15A  | 14AWG | ~15A                  | K27   | Ignition switched via relay K27          |
 | CB48        | ARCT CRAN               | USB Charging Ports          | 20A  | 14AWG | ~13A                  | -     | 2x Powerwerx PanelUSB-75W always-on      |
 | CB39        | TRLR BO STOP            | WolfBox Camera/Mirror       | 10A  | 16AWG | ~10A                  | -     | Dash cam + backup camera                 |
 | CB45        | IGNITION                | Driver Heated Seat          | 15A  | 14AWG | 5A peak, 2A sustained | K21   | Manual switch → relay K21 → seat element |
@@ -59,18 +59,18 @@ tags:
 
 ## Relay Configuration
 
-| Relay Position | Original Military Label | Repurposed Function   | Voltage | Control     | Notes                                  |
-| :------------- | :---------------------- | :-------------------- | :------ | :---------- | :------------------------------------- |
-| K21            | REAR LEFT LIGHT         | Driver Heated Seat    | 12V     | Dash switch | Controls CB45 output to driver seat    |
-| K22            | REAR RIGHT LIGHT        | Passenger Heated Seat | 12V     | Dash switch | Controls CB42 output to passenger seat |
-| K27            | TRAILER BO STOP         | **[Available]**       | 12V     | -           | Future expansion                       |
-| K30            | TRAILER REAR LEFT       | **[Available]**       | 12V     | -           | Future expansion                       |
-| K31            | TRAILER REAR RIGHT      | **[Available]**       | 12V     | -           | Future expansion                       |
+| Relay Position | Original Military Label | Repurposed Function   | Voltage | Control         | Notes                                  |
+| :------------- | :---------------------- | :-------------------- | :------ | :-------------- | :------------------------------------- |
+| K21            | REAR LEFT LIGHT         | Driver Heated Seat    | 12V     | Dash switch     | Controls CB45 output to driver seat    |
+| K22            | REAR RIGHT LIGHT        | Passenger Heated Seat | 12V     | Dash switch     | Controls CB42 output to passenger seat |
+| K27            | TRAILER BO STOP         | Fusion Head Unit      | 12V     | Ignition signal | Switches CB44 output to head unit      |
+| K30            | TRAILER REAR LEFT       | **[Available]**       | 12V     | -               | Future expansion                       |
+| K31            | TRAILER REAR RIGHT      | **[Available]**       | 12V     | -               | Future expansion                       |
 | K53            | RADIO                   | **[Available]**       | 24V→12V | -           | Replace with 12V relay                 |
 | K40            | START DISABEL           | **[Available]**       | 24V→12V | -           | Replace with 12V relay                 |
 | K42            | ENGINE PTO              | **[Available]**       | 24V→12V | -           | Replace with 12V relay                 |
 
-**Relay Utilization:** 2 of 8 used, 6 available (3 require 12V relay replacement)
+**Relay Utilization:** 3 of 8 used, 5 available (3 require 12V relay replacement)
 
 **Total Load:** ~60A maximum (Radio 16A + USB 13A + Camera 10A + Seats 10A peak + Winch control 2A + Cargo lights 4A, 52A sustained)
 

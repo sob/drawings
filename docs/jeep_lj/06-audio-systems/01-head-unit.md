@@ -26,7 +26,7 @@ Marine-grade entertainment system with multi-zone audio, Bluetooth, and NMEA 200
 
 **Mounting:** Dashboard center console (factory radio location)
 
-**Power Source:** BODY PDU CB30 (10A memory) + CB44 (15A switched)
+**Power Source:** BODY PDU CB30 (10A memory) + CB44 via K27 (15A ignition-switched)
 
 ///
 
@@ -73,7 +73,9 @@ Marine-grade entertainment system with multi-zone audio, Bluetooth, and NMEA 200
 Head unit uses two BODY PDU circuits:
 
 - **CB30 (10A, CONSTANT):** Yellow wire - memory/clock retention (~1A)
-- **CB44 (15A, SWITCHED):** Red wire - main power when ignition on (~15A)
+- **CB44 via K27 (15A, ignition-switched):** Red wire - main power when ignition on (~15A)
+
+K27 relay triggered by ignition signal from SWITCHED bus.
 
 ## Outstanding Items
 

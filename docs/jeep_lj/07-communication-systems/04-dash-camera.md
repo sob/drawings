@@ -24,7 +24,7 @@ Rearview mirror replacement with integrated front dash camera and rear backup ca
 
 **Mounting:** Windshield (replaces factory rearview mirror)
 
-**Power Source:** BODY PDU F5 (10A fuse, CONSTANT)
+**Power Source:** BODY PDU CB39 (10A, CONSTANT)
 
 ///
 
@@ -33,8 +33,8 @@ Rearview mirror replacement with integrated front dash camera and rear backup ca
 | Spec         |                      Value |
 | :----------- | -------------------------: |
 | Front Camera |  Integrated in mirror unit |
-| Rear Camera  |        License plate mount |
-| Display      | Touchscreen (9.66" or 12") |
+| Rear Camera  |   Above license plate      |
+| Display      |         12" touchscreen    |
 | Current Draw |               2-5A typical |
 | Storage      |   SD card (loop recording) |
 
@@ -59,41 +59,33 @@ Rearview mirror replacement with integrated front dash camera and rear backup ca
 
 **Rear Camera:**
 
-- Mounts above license plate or on tailgate
+- Mounts above license plate
 - Powered via cable from main unit
 - Auto-displays when reverse gear engaged
 
 ## Wiring
 
-| Connection      | Wire           | Source                | Notes                  |
-| :-------------- | :------------- | :-------------------- | :--------------------- |
-| Power (+)       | 18 AWG         | BODY PDU F5           | 10A fuse, CONSTANT     |
-| Ground (−)      | 18 AWG         | Dash ground           | Firewall stud or local |
-| Reverse Trigger | 18 AWG         | Reverse light circuit | Signal only            |
-| Rear Camera     | Included cable | Main unit             | Power + video combined |
+| Connection      | Wire           | Source                | Notes                     |
+| :-------------- | :------------- | :-------------------- | :------------------------ |
+| Power (+)       | 18 AWG         | BODY PDU CB39         | 10A, CONSTANT             |
+| ACC Trigger     | 18 AWG         | Ignition SWITCHED bus | Parking mode vs driving   |
+| Ground (−)      | 18 AWG         | Dash ground           | Firewall stud or local    |
+| Reverse Trigger | 18 AWG         | Reverse light circuit | Auto-display rear camera  |
+| Rear Camera     | Included cable | Main unit             | Power + video combined    |
 
 ## Cable Routing
 
 **Main Unit to Rear Camera:**
 
-Windshield → along headliner → down A-pillar → under door sills → up tailgate to camera
+Windshield → along inside tub corner (bundled with other rear wiring) → up to license plate area
 
 **Reverse Trigger:**
 
-Tap into reverse light circuit (Engine RTMR F7) → route to WolfBox trigger input
+Tap into reverse light circuit → route to WolfBox trigger input
 
 ## Outstanding Items
 
-- [ ] Verify G900 TriPro display size and features
-- [ ] Confirm power requirement within 10A fuse capacity
-- [ ] Verify CONSTANT vs SWITCHED power preference for parking mode
-- [ ] Determine rear camera mount location (above license plate vs spare tire carrier)
-- [ ] Verify rear camera cable length sufficient for routing
-- [ ] Determine reverse trigger tap location
-- [ ] Plan cable routing path from mirror to rear camera
-- [ ] Determine ground connection point
-- [ ] Verify WolfBox compatible with windshield mount
-- [ ] Verify rear camera does not interfere with BD S1 Pro lights
+None - all specifications determined.
 
 ## Related Documentation
 

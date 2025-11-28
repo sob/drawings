@@ -28,13 +28,14 @@ Reserved circuit for future amateur radio installation.
 
 PMU OUT12 is reserved for future ham radio installation:
 
-| Spec       |     Value |
-| :--------- | --------: |
-| PMU Output |     OUT12 |
-| Capacity   |       15A |
-| Power Mode |  CONSTANT |
-| Wire Gauge |    10 AWG |
-| Firewall   | Grommet 1 |
+| Spec       |                   Value |
+| :--------- | ----------------------: |
+| PMU Output |                   OUT12 |
+| Capacity   |                     15A |
+| Power Mode |                CONSTANT |
+| Wire Gauge |                  14 AWG |
+| Ground     | START battery neg (14 AWG) |
+| Firewall   |                 Grommet |
 
 15A capacity supports up to ~180W output radios (most mobile ham radios are 50-100W).
 

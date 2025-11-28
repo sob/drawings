@@ -52,37 +52,34 @@ tags:
 
 ## Antenna
 
-| Spec      | Value                           |
-| :-------- | :------------------------------ |
-| Type      | 1/4 wave or 1/2 wave whip       |
-| Frequency | 462-467 MHz                     |
-| Mounting  | Roof rack, fender, or NMO mount |
-| Cable     | RG58 minimum (50Ω impedance)    |
+| Spec      | Value                                         |
+| :-------- | :-------------------------------------------- |
+| Model     | Rugged Radios Stealth UHF-GP (ground plane)   |
+| Type      | Low-profile tuned antenna (3.25" tall)        |
+| Frequency | 450-480 MHz                                   |
+| Gain      | 2.0 dBi                                       |
+| Mount     | A-pillar ditch light adapter (MT-ANT-ADPT)    |
+| Connector | NMO                                           |
+| Cable     | RG58 or LMR-400 (50Ω impedance)               |
 
 ## Wiring
 
 | Connection | Wire              | Source            | Notes                                |
 | :--------- | :---------------- | :---------------- | :----------------------------------- |
-| Power (+)  | 10 AWG            | PMU OUT6          | Via firewall Grommet 1               |
-| Ground (−) | 10 AWG            | START battery neg | Direct connection for RF performance |
+| Power (+)  | 14 AWG            | PMU OUT6          | Via firewall grommet                 |
+| Ground (−) | 14 AWG            | START battery neg | Direct connection for RF performance |
 | Antenna    | RG58 coax         | Roof antenna      | Route away from power leads          |
 | Intercom   | Integration cable | STX RADIO port    | Audio/PTT/mute                       |
 
 ## Installation Notes
 
-- **Do NOT mount near ignition box** - RF interference
 - Direct battery ground required for best RF performance
 - Route antenna coax away from power leads
 - Keep coax length <25 ft for minimal signal loss
 
 ## Outstanding Items
 
-- [ ] Verify G1 mounting location does NOT place unit near ignition box
-- [ ] Determine roof-mounted GMRS antenna location and type (1/4 vs 1/2 wave)
-- [ ] Plan antenna coax routing away from power leads
-- [ ] Verify coax cable type (RG58 minimum, LMR-400 preferred for long runs)
-- [ ] Order Rugged Radio integration cable for G1 to STX connection
-- [ ] Plan PTT button mounting location (steering wheel, dash, or hand mic)
+None - all specifications determined.
 
 ## Related Documentation
 

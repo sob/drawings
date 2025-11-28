@@ -59,7 +59,7 @@ The SwitchPros SP-1200 is the main lighting and accessory controller for the Jee
 |   5    |   Interior LEDs     |  5A  |                   MLC-RW controller (speaker + footwell RGB)              |       OUTPUT-5       |
 |   6    |     Rock Lights     |  3A  |                          6x KC Cyclone V2 Lights                          |       OUTPUT-6       |
 |   7    |     Chase Light     |  1A  |                      BD RTL-S 30" (Amber chase mode)                      |       OUTPUT-7       |
-|   8    |     _AVAILABLE_     |  —   |                                Unassigned                                 |       OUTPUT-8       |
+|   8    |     Navigation      |  2A  |                        Garmin Tread XL GPS                                |       OUTPUT-8       |
 |   9    |    Front Locker     |  2A  |     ARB Locker (see [Air System][air-system-arb-compressor-lockers])      | OUTPUT-17 (low-side) |
 |   10   |     Rear Locker     |  2A  |     ARB Locker (see [Air System][air-system-arb-compressor-lockers])      |      OUTPUT-10       |
 |   11   |     Compressor      | 15A  | ARB Twin Compressor (see [Air System][air-system-arb-compressor-lockers]) |      OUTPUT-11       |

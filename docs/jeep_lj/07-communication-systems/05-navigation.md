@@ -25,9 +25,9 @@ tags:
 
 **Product Page:** [Garmin Tread XL][product-link]
 
-**Mounting:** Roll cage mount (included) or dash mount
+**Mounting:** Dash mount
 
-**Power Source:** TBD - BODY PDU or direct to CONSTANT bus
+**Power Source:** SwitchPros OUTPUT-8 (15A capacity)
 
 ///
 
@@ -63,19 +63,14 @@ tags:
 
 ## Wiring
 
-| Connection | Wire        | Source | Notes                          |
-| :--------- | :---------- | :----- | :----------------------------- |
-| Power (+)  | Per harness | TBD    | Bare wire power cable included |
-| Ground (−) | Per harness | TBD    | Bare wire power cable included |
+| Connection | Wire   | Source           | Notes                    |
+| :--------- | :----- | :--------------- | :----------------------- |
+| Power (+)  | 18 AWG | SwitchPros OUT-8 | ~2A load                 |
+| Ground (−) | 18 AWG | Chassis          | Local ground near mount  |
 
 ## Outstanding Items
 
-- [ ] Determine power source (BODY PDU fused circuit or dedicated CB from CONSTANT bus)
-- [ ] Determine mounting location (dash mount vs roll cage mount)
-- [ ] Plan power cable routing from power source to mount location
-- [ ] Verify current draw for fuse/CB sizing
-- [ ] Configure Bluetooth pairing with Rugged Radio STX intercom (if compatible)
-- [ ] Download satellite imagery and topographic maps before trails
+None - all specifications determined.
 
 ## Related Documentation
 
