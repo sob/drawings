@@ -47,7 +47,7 @@ tags:
 | CB Position | Original Military Label | Repurposed Circuit          | Size | Gauge | Load                  | Relay | Notes                                       |
 | :---------- | :---------------------- | :-------------------------- | :--- | :---- | :-------------------- | :---- | :------------------------------------------ |
 | CB30        | CHEM DETECT             | Fusion Head Unit            | 15A  | 14AWG | ~15A                  | -     | CONSTANT power, ignition sense from bus bar |
-| CB48        | ARCT CRAN               | USB Charging Ports          | 20A  | 14AWG | ~13A                  | -     | 2x Powerwerx PanelUSB-75W always-on         |
+| CB48        | ARCT CRAN               | USB Charging Ports          | 20A  | 14AWG | ~13A                  | -     | 2x Powerwerx PanelUSB-75W (78W each, 7.5A fuse ea) |
 | CB39        | TRLR BO STOP            | WolfBox Camera/Mirror       | 10A  | 16AWG | ~10A                  | -     | Dash cam + backup camera                    |
 | CB45        | IGNITION                | Driver Heated Seat          | 15A  | 14AWG | 5A peak, 2A sustained | K21   | Manual switch → relay K21 → seat element    |
 | CB42        | 2WAY INTRCM             | Passenger Heated Seat       | 20A  | 14AWG | 5A peak, 2A sustained | K22   | Manual switch → relay K22 → seat element    |
