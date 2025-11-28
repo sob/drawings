@@ -18,9 +18,9 @@ Marine-grade audio system with multi-zone control and RGB LED lighting integrati
 | [Front Speakers][speakers]       | JL Audio M6-650X-S-GmTi-i      |     — | Amp Ch 3+4         |
 | [Rear Speakers][speakers]        | JL Audio M6-650VEX-Mb-S-GmTi-i |     — | Amp Ch 5+6         |
 | [Subwoofer][subwoofer]           | JL Audio M7-12IB-S-GmTi-i-4    |     — | Amp Ch 1+2 bridged |
-| [LED Controller][led-controller] | JL Audio MLC-RW                |   10A | BODY PDU (30A)     |
+| [LED Controller][led-controller] | JL Audio MLC-RW                |    5A | SwitchPros OUT-5   |
 
-**Total System Power:** ~65A peak (40A amp + 15A head unit + 10A LED)
+**Total System Power:** ~60A peak (40A amp + 15A head unit + 5A LED)
 
 ## Signal Flow
 

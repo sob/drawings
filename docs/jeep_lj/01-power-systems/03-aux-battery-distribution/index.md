@@ -32,7 +32,7 @@ This page is the authoritative source for all AUX battery wire specs (gauge, dis
 | :------------------------------- | :---------------- | :--------- | :------- | :-------- | :-------------- |
 | Rear Frame Rail                  | Local (chassis)   | 2/0 AWG    | ~3 ft    | 654A peak | <0.1V @ 20°C    |
 | [BCDC Alpha 50][bcdc]            | Local             | 4 AWG      | Short    | 50A       | Negligible      |
-| [Fusion Apollo Amp][audio]       | Local             | 4 AWG      | <18"     | 78A max   | Negligible      |
+| [Fusion Apollo Amp][audio]       | Cab firewall      | 4 AWG      | ~8-10 ft | 78A max   | 1.2% @ 30°C     |
 | [START Battery][starter-battery] | Driver wheel well | 1/0 AWG    | 5-6 ft   | 75A max   | <0.05V @ 20°C   |
 | [Winch][recovery]                | Front bumper      | 1/0 AWG    | 13 ft    | 250-400A  | 4.9-7.9% @ 20°C |
 

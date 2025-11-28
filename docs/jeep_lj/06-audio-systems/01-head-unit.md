@@ -26,7 +26,7 @@ Marine-grade entertainment system with multi-zone audio, Bluetooth, and NMEA 200
 
 **Mounting:** Dashboard center console (factory radio location)
 
-**Power Source:** BODY PDU F2 (20A fuse)
+**Power Source:** BODY PDU CB30 (10A memory) + CB44 (15A switched)
 
 ///
 
@@ -62,34 +62,22 @@ Marine-grade entertainment system with multi-zone audio, Bluetooth, and NMEA 200
 
 | Connection        | Wire     | Source          | Notes                 |
 | :---------------- | :------- | :-------------- | :-------------------- |
-| Constant (Yellow) | 18 AWG   | BODY PDU F2     | Memory/clock          |
-| Switched (Red)    | 18 AWG   | BODY PDU F2     | Ignition on/off       |
-| Ground (Black)    | 18 AWG   | Dash ground     | Clean ground critical |
+| Constant (Yellow) | 18 AWG   | BODY PDU CB30   | Memory/clock (10A)    |
+| Switched (Red)    | 18 AWG   | BODY PDU CB44   | Ignition on/off (15A) |
+| Ground (Black)    | 18 AWG   | Dash ground     | Same ground as MLC-RW |
 | Antenna           | Motorola | Factory antenna | Fender or windshield  |
 | Remote Out        | 18 AWG   | To amplifier    | Turn-on signal        |
 
 ## Power Configuration
 
-BODY PDU F2 requires both constant and switched power:
+Head unit uses two BODY PDU circuits:
 
-**Option 1 (Recommended):** F2 provides dual power
-
-- Constant input from CONSTANT bus → Yellow wire (memory)
-- Switched input from SWITCHED bus → Red wire (ignition)
-- Single 20A fuse protects both (15A draw within capacity)
-
-**Option 2:** Separate circuits
-
-- F2 (SWITCHED, 20A) → Red wire only
-- Spare BODY PDU circuit (CONSTANT, 15A) → Yellow wire
+- **CB30 (10A, CONSTANT):** Yellow wire - memory/clock retention (~1A)
+- **CB44 (15A, SWITCHED):** Red wire - main power when ignition on (~15A)
 
 ## Outstanding Items
 
-- [ ] Verify radio ignition trigger wire connection
-- [ ] Determine ground connection point (firewall stud or dash ground)
-- [ ] Plan Bluetooth microphone mounting location
-- [ ] Configure DSP settings for subwoofer crossover (80-120 Hz)
-- [ ] Configure Zone 1/2/3 RCA output assignments
+None - all specifications determined.
 
 ## Related Documentation
 

@@ -75,20 +75,17 @@ tags:
 
 ## Wiring
 
-| Connection  | Wire      | Notes                   |
-| :---------- | :-------- | :---------------------- |
-| Speaker (+) | 12-14 AWG | From amp Ch 1+2 bridged |
-| Speaker (−) | 12-14 AWG | From amp Ch 1+2 bridged |
+| Connection  | Wire   | Notes                   |
+| :---------- | :----- | :---------------------- |
+| Speaker (+) | 12 AWG | From amp Ch 1+2 bridged |
+| Speaker (−) | 12 AWG | From amp Ch 1+2 bridged |
 | LED         | 20 AWG    | RGB from MLC-RW         |
 
 Standard speaker wire (no XM-WHTMFC needed for subwoofer audio).
 
 ## Outstanding Items
 
-- [ ] Determine subwoofer mounting orientation (front-firing or downward)
-- [ ] Verify cargo area provides minimum 3 cu. ft. air space
-- [ ] Plan 12.0625" circular cutout location
-- [ ] Plan LED cable routing from MLC-RW to subwoofer
+- [ ] Determine subwoofer mounting location and orientation
 
 ## Related Documentation
 

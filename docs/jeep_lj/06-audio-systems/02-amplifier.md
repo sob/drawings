@@ -26,7 +26,7 @@ tags:
 
 **Manual:** [Installation Manual][manual-link]
 
-**Mounting:** TBD - cargo area or under rear seat
+**Mounting:** Cab side firewall (behind radio)
 
 **Power Source:** CONSTANT bus via 100A breaker
 
@@ -79,7 +79,7 @@ Fusion includes bridge adapters with built-in magnets:
 | Connection | Wire     | Source          | Notes                    |
 | :--------- | :------- | :-------------- | :----------------------- |
 | Power (+)  | 4 AWG    | CONSTANT bus    | Via 100A Blue Sea breaker |
-| Ground (−) | 4 AWG    | Chassis/AUX neg | <18" length              |
+| Ground (−) | 4 AWG    | AUX battery (−) | Direct to terminal       |
 | Remote     | 18 AWG   | MS-RA670        | Turn-on signal           |
 | RCA Zone 1 | Shielded | MS-RA670        | Ch 3+4 (front)           |
 | RCA Zone 2 | Shielded | MS-RA670        | Ch 5+6 (rear)            |
@@ -93,20 +93,14 @@ Amplifier has 125A internal electronic fuse (no replacement necessary). External
 - Protects 4 AWG wiring (rated 95A continuous, 100A with short runs)
 - Mount at CONSTANT bus in passenger wheel well
 
-## Mounting Options
+## Mounting Location
 
-1. **Behind Dashboard** - Shortest RCA runs, central speaker routing
-2. **Cargo Area** - Easy access, longer power/RCA cables
-3. **Under Rear Seat** - Hidden, good heat dissipation
+**Cab side firewall (behind radio)**
 
-## Outstanding Items
-
-- [ ] Determine mounting location (behind dash preferred)
-- [ ] Order Blue Sea 187-100A circuit breaker
-- [ ] Order 4 AWG power/ground cable (length TBD based on mounting location)
-- [ ] Determine ground connection point
-- [ ] Verify ground wire <18" for best performance
-- [ ] Plan RCA cable routing from head unit
+- Shortest RCA runs from head unit
+- Central location for speaker wire routing
+- Power/ground run ~8-10 ft to AUX battery in passenger wheel well
+- Adequate ventilation for Class-D efficiency
 
 ## Related Documentation
 

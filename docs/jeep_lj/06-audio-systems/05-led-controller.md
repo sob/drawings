@@ -26,7 +26,7 @@ RGB LED controller for speaker lighting and footwell pods, with WiFi app and rot
 
 **Mounting:** Near amplifier (behind dash or cargo area)
 
-**Power Source:** BODY PDU spare circuit (30A)
+**Power Source:** SwitchPros OUTPUT-5 (15A)
 
 ///
 
@@ -69,10 +69,10 @@ RGB LED controller for speaker lighting and footwell pods, with WiFi app and rot
 
 ## Wiring
 
-| Connection | Wire      | Source      | Notes             |
-| :--------- | :-------- | :---------- | :---------------- |
-| Power (+)  | 14 AWG    | BODY PDU    | 30A circuit       |
-| Ground (−) | 14 AWG    | Chassis     | Dash ground point |
+| Connection | Wire      | Source           | Notes              |
+| :--------- | :-------- | :--------------- | :----------------- |
+| Power (+)  | 14 AWG    | SwitchPros OUT-5 | 15A capacity       |
+| Ground (−) | 14 AWG    | Dash ground      | Same ground as head unit |
 | RGB Out    | 20 AWG    | To speakers | Via XM-WHTMFC     |
 | Encoder    | Extension | To dash     | Rotary control    |
 
@@ -108,12 +108,7 @@ See [Footwell Lights][footwell-lights] for pod details.
 
 ## Outstanding Items
 
-- [ ] Add BODY PDU circuit for MLC-RW (30A CONSTANT)
-- [ ] Determine rotary encoder dash location (near radio or console)
-- [ ] Plan encoder extension cable routing
-- [ ] Plan LED cable routing to all 5 speakers
-- [ ] Confirm XM-WHTMFC connectors match MLC-RW outputs
-- [ ] Confirm LED4Life pod wire colors
+- [ ] Confirm LED4Life pod wire colors match MLC-RW pinout
 
 ## Related Documentation
 

@@ -56,7 +56,7 @@ The SwitchPros SP-1200 is the main lighting and accessory controller for the Jee
 |   2    |    Ditch Lights     |  8A  |                   2x BD LP4 Pro (Driving/Combo Pattern)                   |       OUTPUT-2       |
 |   3    |      Fog Light      |  6A  |                   1x BD S8 10" (Amber, Wide Cornering)                    |       OUTPUT-3       |
 |   4    |     Dome Lights     |  2A  |                4x KC Cyclone V2 (manual + door-triggered)                 |       OUTPUT-4       |
-|   5    |     _AVAILABLE_     |  —   |                                Unassigned                                 |       OUTPUT-5       |
+|   5    |   Interior LEDs     |  5A  |                   MLC-RW controller (speaker + footwell RGB)              |       OUTPUT-5       |
 |   6    |     Rock Lights     |  3A  |                          6x KC Cyclone V2 Lights                          |       OUTPUT-6       |
 |   7    |     Chase Light     |  1A  |                      BD RTL-S 30" (Amber chase mode)                      |       OUTPUT-7       |
 |   8    |     _AVAILABLE_     |  —   |                                Unassigned                                 |       OUTPUT-8       |

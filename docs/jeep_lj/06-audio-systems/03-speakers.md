@@ -107,10 +107,7 @@ Single cable run per speaker carries both audio and LED control.
 
 ## Outstanding Items
 
-- [ ] Determine front dash mounting locations (dash end caps or kick panels)
-- [ ] Plan custom speaker pods or dash modification for flush mount
-- [ ] Calculate XM-WHTMFC cable lengths for each speaker
-- [ ] Plan speaker wire routing from amplifier to dash and roll bar
+- [ ] Determine front speaker mounting locations (dash end caps or kick panels)
 
 ## Related Documentation
 
