@@ -70,7 +70,7 @@ This page is the **single source of truth** for wire specifications. When updati
 | Circuit                        | Also Update                                                                  |
 | :----------------------------- | :--------------------------------------------------------------------------- |
 | BCDC Alpha 50                  | `01-power-generation/03-bcdc.md`, `02-starter-battery-distribution/index.md` |
-| Winch (+/-)                    | `08-exterior-systems/01-recovery-systems.md`                                 |
+| Winch (+/-)                    | `08-exterior-systems/01-winch.md`                                            |
 | CONSTANT Bus Bar               | `02-constant-bus.md`                                                         |
 | SwitchPros                     | `05-control-interfaces/02-switchpros-sp1200.md`                              |
 | Fusion Apollo Amp              | `06-audio-systems/index.md`                                                  |

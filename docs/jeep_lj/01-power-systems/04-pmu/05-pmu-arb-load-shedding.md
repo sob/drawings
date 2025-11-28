@@ -340,7 +340,7 @@ LOG SwitchPros_OUT11_ARB (state or trigger input)
 [pmu-overview]: 01-pmu-overview.md
 [pmu-outputs]: 03-pmu-outputs.md
 [pmu-programming]: 04-pmu-programming.md
-[air-system]: ../../08-exterior-systems/02-air-system.md
+[air-system]: ../../08-exterior-systems/02-air-compressor.md
 [switchpros]: ../../05-control-interfaces/02-switchpros-sp1200.md
 [start-load-analysis]: ../08-load-analysis/02-start-battery.md
 [aux-load-analysis]: ../08-load-analysis/03-aux-battery.md

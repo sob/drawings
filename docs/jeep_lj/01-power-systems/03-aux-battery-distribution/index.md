@@ -24,7 +24,7 @@ This page is the authoritative source for all AUX battery wire specs (gauge, dis
 | :------------------------------- | :----------- | :--------- | :------- | :------- | :-------------- | :----------------------- |
 | [BCDC Alpha 50][bcdc]            | Local        | 4 AWG      | Short    | 50A      | Negligible      | None                     |
 | [CONSTANT Bus Bar][constant-bus] | Local        | 1/0 AWG    | ~3 ft    | 254A max | 0.9% @ 20°C     | None                     |
-| [Winch][recovery]                | Front bumper | 1/0 AWG    | 13 ft    | 250-400A | 4.9-7.9% @ 20°C | [None][winch-protection] |
+| [Winch][recovery]                | Front bumper | 1/0 AWG    | 13 ft    | 250A typ, 450A peak | 4.9-7.9% @ 20°C | [None][winch-protection] |
 
 ## AUX battery Negative Terminal (5 connections)
 
@@ -34,7 +34,7 @@ This page is the authoritative source for all AUX battery wire specs (gauge, dis
 | [BCDC Alpha 50][bcdc]            | Local             | 4 AWG      | Short    | 50A       | Negligible      |
 | [Fusion Apollo Amp][audio]       | Cab firewall      | 4 AWG      | ~8-10 ft | 78A max   | 1.2% @ 30°C     |
 | [START Battery][starter-battery] | Driver wheel well | 1/0 AWG    | 5-6 ft   | 75A max   | <0.05V @ 20°C   |
-| [Winch][recovery]                | Front bumper      | 1/0 AWG    | 13 ft    | 250-400A  | 4.9-7.9% @ 20°C |
+| [Winch][recovery]                | Front bumper      | 1/0 AWG    | 13 ft    | 250A typ, 450A peak  | 4.9-7.9% @ 20°C |
 
 ## Related Documentation
 
@@ -54,6 +54,6 @@ This page is the authoritative source for all AUX battery wire specs (gauge, dis
 [circuit-breakers]: 01-circuit-breakers.md
 [grounding]: ../05-grounding/index.md
 [starter-battery]: ../02-starter-battery-distribution/index.md
-[recovery]: ../../08-exterior-systems/01-recovery-systems.md
-[winch-protection]: ../../08-exterior-systems/01-recovery-systems.md#winch-circuit-protection
+[recovery]: ../../08-exterior-systems/01-winch.md
+[winch-protection]: ../../08-exterior-systems/01-winch.md#winch-circuit-protection
 [audio]: ../../06-audio-systems/index.md

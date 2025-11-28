@@ -61,8 +61,10 @@ The electrical system is organized into zones for logical distribution and maint
 
 ### Auxiliary Systems
 
-- **[Recovery Systems](08-exterior-systems/01-recovery-systems.md)** - Warn Zeon 10-S winch and recovery equipment
-- **[Air System](08-exterior-systems/02-air-system.md)** - ARB Twin Compressor and air lockers
+- **[Winch](08-exterior-systems/01-winch.md)** - Warn Zeon 10-S winch (10,000 lb)
+- **[Air Compressor](08-exterior-systems/02-air-compressor.md)** - ARB Twin Compressor and tank
+- **[Air Lockers](08-exterior-systems/03-air-lockers.md)** - ARB RD116 front/rear lockers
+- **[Rear Air Chuck](08-exterior-systems/04-rear-air-chuck.md)** - External air access
 
 ### Install Notes
 
@@ -97,7 +99,7 @@ Complete replacement of factory TIPM with modular power distribution:
 - **[Command Touch CT4](05-control-interfaces/03-command-touch-ct4.md):** Street-legal lighting and turn signal control
 - **[Audio System](06-audio-systems/index.md):** Fusion Apollo 6-channel amp, JL Audio marine speakers with RGB LED
 - **[Communication](07-communication-systems/index.md):** Rugged Radio G1 GMRS, STX 4-place intercom, WolfBox dash camera
-- **[Recovery & Air](08-exterior-systems/01-recovery-systems.md):** Warn 10,000 lb winch, ARB air lockers, ARB Twin Air Compressor
+- **[Recovery & Air](08-exterior-systems/index.md):** Warn 10,000 lb winch, ARB air lockers, ARB Twin Air Compressor
 
 ## Documentation Notes
 

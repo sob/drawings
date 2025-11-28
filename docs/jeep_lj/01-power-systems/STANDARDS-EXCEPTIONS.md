@@ -553,7 +553,7 @@ Before flagging as issues, verify these intentional design choices:
 [warn-product]: https://www.warn.com/
 [warn-manual]: https://www.warn.com/
 [aux-battery-distribution]: 03-aux-battery-distribution/index.md
-[recovery-systems]: ../08-exterior-systems/01-recovery-systems.md
+[recovery-systems]: ../08-exterior-systems/01-winch.md
 [wire-distance]: 01-power-generation/05-wire-distance-reference.md
 [starter-system]: ../02-engine-systems/01-starter.md
 [starter-battery-distribution]: 02-starter-battery-distribution/index.md

@@ -177,7 +177,7 @@ Items completed since last update.
 [offroad-lighting]: ../04-offroad-lighting/index.md
 [cargo-lights]: ../04-offroad-lighting/07-cargo-lights.md
 [chase-light]: ../04-offroad-lighting/04-chase-lights.md
-[recovery-systems]: ../08-exterior-systems/01-recovery-systems.md
+[recovery-systems]: ../08-exterior-systems/01-winch.md
 [body-rtmr]: ../01-power-systems/03-aux-battery-distribution/03-body-pdu.md
 [section-1-install]: ../01-power-systems/installation-checklist.md
 [grid-heater]: ../02-engine-systems/07-grid-heater.md

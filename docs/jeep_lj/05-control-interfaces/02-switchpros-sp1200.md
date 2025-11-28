@@ -244,7 +244,7 @@ Program TRIGGER-3 to activate compressor when tank pressure drops below 135 PSI:
 - [AUX Battery Distribution][aux-battery] - Power feed specifications for SwitchPros
 
 [aux-battery]: ../01-power-systems/03-aux-battery-distribution/index.md
-[air-system-arb-compressor-lockers]: ../08-exterior-systems/02-air-system.md
+[air-system-arb-compressor-lockers]: ../08-exterior-systems/02-air-compressor.md
 [pmu-inputs]: ../01-power-systems/04-pmu/02-pmu-inputs.md
 [control-interfaces-overview]: 01-overview.md
 [offroad-auxiliary-lighting]: ../04-offroad-lighting/index.md

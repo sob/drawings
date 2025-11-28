@@ -77,7 +77,7 @@ Wired in parallel with SwitchPros OUTPUT-4:
 - [SwitchPros SP-1200][switchpros-sp-1200-rcr-force-12] - Main lighting controller
 - [Recovery Systems][recovery-systems] - Winch system complete documentation
 
-[recovery-systems]: ../08-exterior-systems/01-recovery-systems.md
+[recovery-systems]: ../08-exterior-systems/01-winch.md
 [control-interfaces-overview]: 01-overview.md
 [switchpros-sp-1200-rcr-force-12]: 02-switchpros-sp1200.md
 [bluesea-4160]: https://www.bluesea.com/products/4160/10A_Push_Button_LED_Ring_Switch_OFF-ON_Blue

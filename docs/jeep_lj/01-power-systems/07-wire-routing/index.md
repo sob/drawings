@@ -196,4 +196,4 @@ J1939 CAN High/Low wires tap into Cummins harness at firewall punch-through, the
 [alternator]: ../01-power-generation/02-alternator.md
 [starter]: ../../02-engine-systems/01-starter.md
 [firewall-ingress]: 02-firewall-ingress.md
-[recovery-systems]: ../../08-exterior-systems/01-recovery-systems.md
+[recovery-systems]: ../../08-exterior-systems/01-winch.md

@@ -181,8 +181,10 @@ nav:
       - 7.5 - Navigation: jeep_lj/07-communication-systems/05-navigation.md
     - Auxiliary Systems:
       - jeep_lj/08-exterior-systems/index.md
-      - 8.1 - Recovery Systems: jeep_lj/08-exterior-systems/01-recovery-systems.md
-      - 8.2 - Air System: jeep_lj/08-exterior-systems/02-air-system.md
+      - 8.1 - Winch: jeep_lj/08-exterior-systems/01-winch.md
+      - 8.2 - Air Compressor: jeep_lj/08-exterior-systems/02-air-compressor.md
+      - 8.3 - Air Lockers: jeep_lj/08-exterior-systems/03-air-lockers.md
+      - 8.4 - Rear Air Chuck: jeep_lj/08-exterior-systems/04-rear-air-chuck.md
     - Install Notes:
       - jeep_lj/09-installation/index.md
       - 9.1 - TBD Tracker: jeep_lj/09-installation/01-tbd-tracker.md
