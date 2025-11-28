@@ -26,7 +26,7 @@ Marine-grade entertainment system with multi-zone audio, Bluetooth, and NMEA 200
 
 **Mounting:** Dashboard center console (factory radio location)
 
-**Power Source:** BODY PDU CB30 (10A memory) + CB44 via K27 (15A ignition-switched)
+**Power Source:** BODY PDU CB30 (15A CONSTANT) + ignition sense from bus bar
 
 ///
 
@@ -60,22 +60,22 @@ Marine-grade entertainment system with multi-zone audio, Bluetooth, and NMEA 200
 
 ## Wiring
 
-| Connection        | Wire     | Source          | Notes                 |
-| :---------------- | :------- | :-------------- | :-------------------- |
-| Constant (Yellow) | 18 AWG   | BODY PDU CB30   | Memory/clock (10A)    |
-| Switched (Red)    | 18 AWG   | BODY PDU CB44   | Ignition on/off (15A) |
-| Ground (Black)    | 18 AWG   | Dash ground     | Same ground as MLC-RW |
-| Antenna           | Motorola | Factory antenna | Fender or windshield  |
-| Remote Out        | 18 AWG   | To amplifier    | Turn-on signal        |
+| Connection        | Wire     | Source               | Notes                        |
+| :---------------- | :------- | :------------------- | :--------------------------- |
+| Constant (Yellow) | 14 AWG   | BODY PDU CB30        | Main power (15A, CONSTANT)   |
+| Switched (Red)    | 18 AWG   | Ignition SWITCHED bus | Ignition sense signal        |
+| Ground (Black)    | 18 AWG   | Dash ground          | Same ground as MLC-RW        |
+| Antenna           | Motorola | Factory antenna      | Fender or windshield         |
+| Remote Out        | 18 AWG   | To amplifier         | Turn-on signal               |
 
 ## Power Configuration
 
-Head unit uses two BODY PDU circuits:
+Head unit uses single BODY PDU circuit with ignition sense:
 
-- **CB30 (10A, CONSTANT):** Yellow wire - memory/clock retention (~1A)
-- **CB44 via K27 (15A, ignition-switched):** Red wire - main power when ignition on (~15A)
+- **CB30 (15A, CONSTANT):** Yellow wire - main power (~15A max)
+- **Ignition sense (SWITCHED bus):** Red wire - tells head unit when to turn on/off
 
-K27 relay triggered by ignition signal from SWITCHED bus.
+Head unit has internal power management - draws full power when ignition sense is active, minimal standby current (~1A) when off for memory retention.
 
 ## Outstanding Items
 
