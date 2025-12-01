@@ -98,18 +98,16 @@ All wire runs require appropriate protection based on location and environment:
 
 **Wire bundles passing through firewall:**
 
-| Grommet                     | Location           | Direction        | Circuits                       | Wire Count | Notes                                           |
-| :-------------------------- | :----------------- | :--------------- | :----------------------------- | :--------- | :---------------------------------------------- |
-| **Cummins Harness**         | TBD                | Engine <-> Cabin | Engine harness, J1939 CAN      | Factory    | Dedicated punch-through with bulkhead connector |
-| **Grommet 1 (Engine RTMR)** | TBD (near PMU)     | Engine -> Cabin  | PMU outputs to cabin loads     | TBD        | See [Firewall Ingress][firewall-ingress]        |
-| **Grommet 2 (BODY PDU)**    | TBD (near pedals)  | Cabin -> Engine  | BODY PDU to engine circuits    | TBD        | See [Firewall Ingress][firewall-ingress]        |
-| **Grommet 5 (Temp Probe)**  | TBD                | Cabin -> Grille  | Outside temp sensor (BIM-17-2) | 1 pair     | Dakota Digital module                           |
-| **Grommet 6 (RF Power)**    | TBD (near battery) | Engine -> Cabin  | G1 GMRS, STX, Ham Radio        | 6x 14 AWG  | Direct battery power/ground                     |
+| Penetration | Location | Direction | Circuits | Wire Count | Notes |
+|:------------|:---------|:----------|:---------|:-----------|:------|
+| **Cummins Harness** | Factory location | Engine ↔ Cabin | Engine harness, J1939 CAN | Factory | Dedicated bulkhead connector |
+| **Deutsch HDP20** | TBD (near PMU) | Bidirectional | All custom wiring | 17 | Single weatherproof connector |
+| **Temp Probe Grommet** | Near grille | Cabin → Grille | BIM-17-2 temp sensor | 2 (22 AWG) | Small grommet, twisted pair |
 
 !!! info "J1939 CAN Bus"
 J1939 CAN High/Low wires tap into Cummins harness at firewall punch-through, then route to Dakota Digital 01-2-J1939 module on firewall HDPE panel (cabin side).
 
-**Complete Grommet Details:** See [Firewall Ingress][firewall-ingress] for specifications and circuit lists
+**Complete Details:** See [Firewall Ingress][firewall-ingress] for Deutsch HDP20 connector pinout and BOM
 
 ---
 

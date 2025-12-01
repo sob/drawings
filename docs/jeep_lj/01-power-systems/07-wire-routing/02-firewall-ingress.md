@@ -18,61 +18,134 @@ All firewall penetration points for wire routing between engine bay and cabin.
 
 ---
 
-## Firewall Grommet - All Custom Wiring
+## Deutsch HDP20 Bulkhead Connector
 
-Complete list of wires passing through firewall grommet(s). Grommet size TBD based on final wire count.
+Single weatherproof bulkhead connector for all custom wiring through firewall.
 
-### Engine Bay → Cabin
+### Connector Specification
 
-| Circuit             | Source     | Gauge  | Destination           |
-| :------------------ | :--------- | :----- | :-------------------- |
-| Brake lights        | PMU OUT21  | 16 AWG | Rear tail lights      |
-| Reverse lights      | PMU OUT22  | 16 AWG | Rear tail lights      |
-| DRL/Parking         | PMU OUT23  | 16 AWG | Rear tail lights      |
-| GMRS Radio power    | PMU OUT6   | 10 AWG | Midland G1            |
-| Ham Radio power     | PMU OUT12  | 10 AWG | iCom IC-2730A         |
-| STX Intercom power  | PMU OUT20  | 14 AWG | STX intercom          |
-| Horn trigger return | Horn       | 18 AWG | Steering wheel button |
+| Component | Part Number | Description |
+|:----------|:------------|:------------|
+| **Receptacle** | HDP24-24-21PE-L015 | 21-pin bulkhead receptacle, flange mount (engine side) |
+| **Plug** | HDP26-24-21SE | 21-pin plug (cabin side) |
 
-### Cabin → Engine Bay
+**Insert Arrangement 24-21:** 4× size 12 + 17× size 16 contacts
 
-| Circuit              | Source              | Gauge  | Destination                    |
-| :------------------- | :------------------ | :----- | :----------------------------- |
-| Ignition sense       | Ignition switch RUN | 18 AWG | PMU Pin 7                      |
-| Brake switch         | Brake pedal switch  | 18 AWG | PMU In 2                       |
-| A/C request          | HVAC controls       | 18 AWG | PMU In 9                       |
-| Clutch switch        | Clutch pedal switch | 18 AWG | Starter circuit                |
-| Right turn signal    | CT4 SW1             | 14 AWG | Right fender + rear tail light |
-| Left turn signal     | CT4 SW2             | 14 AWG | Left fender + rear tail light  |
-| Low beam headlights  | CT4 SW3             | 14 AWG | LP6 Pin 1 (both lights)        |
-| High beam headlights | CT4 SW4             | 14 AWG | LP6 Pin 4 (both lights)        |
-| DRL cutoff signal    | CT4 SW3 tap         | 18 AWG | PMU In 7 (DRL auto-off logic)  |
+- Size 12 contacts: 12-14 AWG, 25A (4 available, 0 used - reserved for future)
+- Size 16 contacts: 14-20 AWG, 13A (17 available, 17 used)
 
-### Cabin → Grille
+**Mounting:** Single 1.5" diameter hole in firewall
 
-| Circuit            | Source         | Gauge       | Destination              |
-| :----------------- | :------------- | :---------- | :----------------------- |
-| Outside temp probe | Dakota Digital | 2-wire, 22 AWG | BIM-17-2 sensor (grille) |
+**Sealing:** IP67/IP68, bayonet quick-connect coupling
+
+### Why Single Connector
+
+RF interference analysis determined that with ferrite chokes on radio power leads at the radio end, all circuits can share one connector safely. The temp probe routes separately to grille (not through main connector).
+
+---
+
+## Pin Assignment
+
+### Engine Bay → Cabin (6 wires)
+
+| Pin | Circuit | Gauge | Source | Destination | Contact |
+|:---:|:--------|:-----:|:-------|:------------|:-------:|
+| 1 | GMRS Radio power (+) | 14 AWG | PMU OUT6 | Midland G1 | #16 |
+| 2 | Ham Radio power (+) | 14 AWG | PMU OUT12 | iCom IC-2730A | #16 |
+| 3 | STX Intercom power | 14 AWG | PMU OUT20 | STX intercom | #16 |
+| 4 | Brake lights | 16 AWG | PMU OUT21 | Rear tail lights | #16 |
+| 5 | Reverse lights | 16 AWG | PMU OUT22 | Rear tail lights | #16 |
+| 6 | DRL/Parking | 16 AWG | PMU OUT23 | Rear tail lights | #16 |
+
+### Cabin → Engine Bay (11 wires)
+
+| Pin | Circuit | Gauge | Source | Destination | Contact |
+|:---:|:--------|:-----:|:-------|:------------|:-------:|
+| 7 | Right turn signal | 14 AWG | CT4 SW1 | Right fender + rear | #16 |
+| 8 | Left turn signal | 14 AWG | CT4 SW2 | Left fender + rear | #16 |
+| 9 | Low beam headlights | 14 AWG | CT4 SW3 | LP6 Pin 1 (both) | #16 |
+| 10 | High beam headlights | 14 AWG | CT4 SW4 | LP6 Pin 4 (both) | #16 |
+| 11 | Horn button trigger | 18 AWG | Steering wheel button | PMU In 1 | #16 |
+| 12 | Ignition sense | 18 AWG | Ignition switch RUN | PMU Pin 7 | #16 |
+| 13 | Brake switch | 18 AWG | Brake pedal switch | PMU In 2 | #16 |
+| 14 | A/C request | 18 AWG | HVAC controls | PMU In 9 | #16 |
+| 15 | Clutch switch | 18 AWG | Clutch pedal switch | Starter circuit | #16 |
+| 16 | Winch control IN | 18 AWG | Dash rocker switch | Winch contactor | #16 |
+| 17 | Winch control OUT | 18 AWG | Dash rocker switch | Winch contactor | #16 |
+
+### Reserved (4 pins)
+
+| Pin | Contact | Notes |
+|:---:|:-------:|:------|
+| A-D | #12 | Size 12 cavities reserved for future 10-12 AWG circuits |
+
+---
+
+## Separate Routing (Not Through Main Connector)
+
+### Cabin → Grille (Small Grommet)
+
+| Circuit | Gauge | Source | Destination | Notes |
+|:--------|:-----:|:-------|:------------|:------|
+| Outside temp probe (+) | 22 AWG | BIM-17-2 | SEN-15-1 (grille) | Twisted pair |
+| Outside temp probe (-) | 22 AWG | BIM-17-2 | SEN-15-1 (grille) | Twisted pair |
+
+**Routing:** Separate small grommet near grille area - keeps analog sensor isolated from power circuits.
+
+### Radio Grounds (Floor/Frame Routing)
+
+Radio grounds do NOT go through firewall - they route through cab floor to START battery:
+
+| Circuit | Gauge | Source | Destination |
+|:--------|:-----:|:-------|:------------|
+| GMRS Radio ground (-) | 14 AWG | Midland G1 | START battery negative |
+| Ham Radio ground (-) | 14 AWG | iCom IC-2730A | START battery negative |
+| STX Intercom ground (-) | 14 AWG | STX | START battery negative |
+
+**Routing:** Radios (cabin) → under seat/floor → frame rail → START battery negative (driver wheel well)
 
 ---
 
 ## Wire Count Summary
 
-| Gauge  | Count | Notes                              |
-| :----- | :---- | :--------------------------------- |
-| 10 AWG | 2     | Radio power (GMRS, Ham)            |
-| 14 AWG | 5     | CT4 outputs, STX power             |
-| 16 AWG | 3     | PMU lighting outputs               |
-| 18 AWG | 6     | Signal wires (switches, triggers)  |
-| 22 AWG | 2     | Temp probe                         |
-| **Total** | **18** |                                 |
+| Gauge | Count | Circuits |
+|:------|:-----:|:---------|
+| 14 AWG | 7 | Radio power (3), CT4 outputs (4) |
+| 16 AWG | 3 | PMU lighting outputs |
+| 18 AWG | 7 | Switch signals (5), winch control (2) |
+| **Main Connector** | **17** | HDP24-24-21 |
+| 22 AWG | 2 | Temp probe (separate grommet) |
 
 ---
 
-## Outstanding Items
+## Connector Bill of Materials
 
-- [ ] Determine grommet size based on wire bundle diameter
-- [ ] Determine if RF-sensitive wires (radio power) need separate grommet
+| Part Number | Description | Qty | ~Price |
+|:------------|:------------|:---:|:------:|
+| HDP24-24-21PE-L015 | 21-pin receptacle, flange mount | 1 | $35 |
+| HDP26-24-21SE | 21-pin plug | 1 | $25 |
+| 0460-202-16141 | Size 16 pin, solid, nickel | 17 | $0.50 ea |
+| 0462-201-16141 | Size 16 socket, solid, nickel | 17 | $0.55 ea |
+| 114017 | Sealing plug, size 12 cavity | 4 | $0.25 ea |
+| 114018 | Sealing plug, size 16 cavity | 4 | $0.25 ea |
+
+**Estimated Total:** ~$80
+
+**Crimping Tool:** HDT-48-00 (size 12-20 solid contacts)
+
+---
+
+## DRL Auto-Off Signal
+
+**Note:** The DRL cutoff signal does NOT require a separate wire through the firewall. The CT4 SW3 (low beam) wire is tapped on the engine bay side after it passes through the connector:
+
+```text
+CT4 SW3 (cabin) → Pin 9 → [ENGINE BAY TAP to PMU In 7] → LP6 headlights
+```
+
+PMU In 7 receives the headlight status signal from this tap, enabling DRL auto-off logic.
+
+---
 
 ## Related Documentation
 
@@ -80,9 +153,14 @@ Complete list of wires passing through firewall grommet(s). Grommet size TBD bas
 - [PMU Outputs][pmu-outputs] - PMU output assignments
 - [PMU Inputs][pmu-inputs] - PMU input assignments
 - [Command Touch CT4][ct4] - CT4 controller and outputs
+- [Dashboard Controls][dash-controls] - Winch rocker switch wiring
+- [GMRS Radio][gmrs] - Radio power and ground routing
+- [Intercom][intercom] - STX power routing
 
-[install-checklist]: ../../02-engine-systems/installation-checklist.md
 [wire-routing]: index.md
 [pmu-outputs]: ../04-pmu/03-pmu-outputs.md
 [pmu-inputs]: ../04-pmu/02-pmu-inputs.md
 [ct4]: ../../05-control-interfaces/03-command-touch-ct4.md
+[dash-controls]: ../../05-control-interfaces/05-dashboard-controls.md
+[gmrs]: ../../07-communication-systems/01-gmrs-radio.md
+[intercom]: ../../07-communication-systems/02-intercom.md
