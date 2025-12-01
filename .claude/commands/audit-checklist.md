@@ -2,9 +2,13 @@
 
 Review and improve installation checklist tasks for a specific section.
 
-**Argument:** Section number or name (e.g., "01", "02", "engine-systems")
+**Argument:** Section number or name (e.g., "01", "power-systems", "02", "engine-systems")
 
-**Search Path:** `docs/jeep_lj/<section>/installation-checklist.md`
+**Search Path:** `docs/jeep_lj/09-installation/<section>-checklist.md`
+
+**Examples:**
+- `01` or `power-systems` → `docs/jeep_lj/09-installation/02-power-systems-checklist.md`
+- `02` or `engine-systems` → `docs/jeep_lj/09-installation/03-engine-systems-checklist.md`
 
 ## Audit Goals
 
@@ -41,4 +45,4 @@ Present as replacement text ready to apply after user approval.
 
 ## After Review
 
-Apply changes to the installation-checklist.md file after user approval.
+Apply changes to the checklist file in `docs/jeep_lj/09-installation/` after user approval.
