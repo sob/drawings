@@ -116,4 +116,4 @@ Accessories and high-draw auxiliary loads:
 
 [odyssey-pc1500]: https://www.odysseybattery.com/products/odx-agm34-battery-34-pc1500t/
 [dakota-135ah]: https://dakotalithium.com/product/dl-plus-12v-135ah-dual-purpose-1000cca-starter-car-truck-battery-plus-deep-cycle-performance/
-[installation-checklist]: ../installation-checklist.md#phase-1-foundations
+[installation-checklist]: ../../09-installation/02-power-systems-checklist.md#phase-1-foundations

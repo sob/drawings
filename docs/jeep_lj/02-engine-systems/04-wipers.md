@@ -59,7 +59,7 @@ None - design complete. See [installation checklist][install-checklist] for buil
 
 - [PMU Outputs][pmu-outputs] - OUT11 configuration
 
-[install-checklist]: installation-checklist.md
+[install-checklist]: ../09-installation/03-engine-systems-checklist.md
 [ws-51c-product]: https://www.ronfrancis.com/product/173
 [ws-51c-manual]: https://s3.amazonaws.com/cdn.ronfrancis.com/downloads/INSTRUCTIONS/WS51C-INST.pdf
 [pmu-outputs]: ../01-power-systems/04-pmu/03-pmu-outputs.md

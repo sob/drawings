@@ -97,6 +97,6 @@ None - design complete. See [installation checklist][install-checklist] for buil
 - [PMU Power Distribution][pmu-power-distribution] - Engine bay power management
 - [START Battery Distribution][starter-battery-distribution] - Direct battery connections
 
-[install-checklist]: installation-checklist.md
+[install-checklist]: ../09-installation/03-engine-systems-checklist.md
 [pmu-power-distribution]: ../01-power-systems/04-pmu/index.md
 [starter-battery-distribution]: ../01-power-systems/02-starter-battery-distribution/index.md

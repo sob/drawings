@@ -167,10 +167,10 @@ Organized by installation order for efficient build workflow.
 - **Radiator Fan:** [Radiator Fan System][radiator-fan]
 
 [tulays-harness]: https://tulayswirewerks.com/product/bosch-ibooster-gen-2-universal-wire-harness/
-[starter]: 01-starter.md
-[ibooster]: 02-brake-booster.md
-[grid-heater]: 07-grid-heater.md
-[hvac]: 03-hvac.md
-[wipers]: 04-wipers.md
-[horn]: 05-horn.md
-[radiator-fan]: 06-radiator-fan.md
+[starter]: ../02-engine-systems/01-starter.md
+[ibooster]: ../02-engine-systems/02-brake-booster.md
+[grid-heater]: ../02-engine-systems/07-grid-heater.md
+[hvac]: ../02-engine-systems/03-hvac.md
+[wipers]: ../02-engine-systems/04-wipers.md
+[horn]: ../02-engine-systems/05-horn.md
+[radiator-fan]: ../02-engine-systems/06-radiator-fan.md

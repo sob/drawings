@@ -117,7 +117,7 @@ Ignition START → Clutch Switch → Cole Hersee 24213 Coil → Ground
 
 None - design complete. See [installation checklist][install-checklist] for build tasks.
 
-[install-checklist]: installation-checklist.md
+[install-checklist]: ../09-installation/03-engine-systems-checklist.md
 
 ## Related Documentation
 

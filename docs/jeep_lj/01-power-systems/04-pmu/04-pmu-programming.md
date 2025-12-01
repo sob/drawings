@@ -150,7 +150,7 @@ IF (BatteryVoltage < 12.5V) AND (EngineRPM > 1000)
 
 **Installation & Testing:** See [Section 1 Installation Checklist][installation]
 
-[installation]: ../installation-checklist.md#phase-3-controllers-physical-installation-main-power
+[installation]: ../../09-installation/02-power-systems-checklist.md#phase-3-controllers-physical-installation-main-power
 
 ## Related Documentation
 

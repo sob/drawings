@@ -18,14 +18,30 @@ Project planning, installation tracking, and TBD item management.
 
 **Use when:** Checking outstanding items or planning next steps
 
+### `02-power-systems-checklist.md` - Power Systems Checklist
+
+**Contains:** Section 1 installation tasks organized by workflow phases
+
+**Use when:** Planning or tracking power systems installation
+
+### `03-engine-systems-checklist.md` - Engine Systems Checklist
+
+**Contains:** Section 2 installation tasks organized by system
+
+**Use when:** Planning or tracking engine systems installation
+
 ## Cross-Section References
 
-**To Power Systems (1):** `01-power-systems/installation-checklist.md`
+**From Power Systems (1):** Components reference `02-power-systems-checklist.md`
 
-**To Engine Systems (2):** `02-engine-systems/07-firewall-ingress.md`
+**From Engine Systems (2):** Components reference `03-engine-systems-checklist.md`
+
+**To Wire Routing:** `01-power-systems/07-wire-routing/`
 
 ## When Updating
 
 **Adding TBD:** Add to source file, then immediately add to `01-tbd-tracker.md` with priority
 
 **Resolving TBD:** Update source file, move tracker entry to "Recently Resolved" with date
+
+**Adding checklist:** Create new file `0X-section-name-checklist.md`, update `index.md`

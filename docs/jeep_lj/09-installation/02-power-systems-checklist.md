@@ -298,4 +298,4 @@ Create 12 custom 2-pin Delphi harnesses at SwitchPros:
 [odyssey-pc1500]: https://www.odysseybattery.com/products/odx-agm34-battery-34-pc1500t/
 [dakota-135ah]: https://dakotalithium.com/product/dl-plus-12v-135ah-dual-purpose-1000cca-starter-car-truck-battery-plus-deep-cycle-performance/
 [barnes-box]: https://barnes4wd.com/products/barnes-4wd-single-odyssey-pc1500-group-34-78-group-24-battery-box
-[wire-distance]: 01-power-generation/05-wire-distance-reference.md
+[wire-distance]: ../01-power-systems/01-power-generation/05-wire-distance-reference.md

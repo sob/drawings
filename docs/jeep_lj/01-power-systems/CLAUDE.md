@@ -34,7 +34,7 @@ Ignition sense signal to CT4, SwitchPros, Fusion Radio, BCDC
 
 ### Installation Checklist
 
-`installation-checklist.md` - Build sequence organized by workflow phases
+`../09-installation/02-power-systems-checklist.md` - Build sequence organized by workflow phases
 
 ## Cross-Section Integration
 
