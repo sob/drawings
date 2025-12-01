@@ -1,30 +1,42 @@
 # Audit Installation Checklist
 
-Review and improve installation checklist tasks for a specific section.
+Analyze a documentation section and create/update its installation checklist.
 
-**Argument:** Section number or name (e.g., "01", "power-systems", "02", "engine-systems")
+**Argument:** `$ARGUMENTS` - Section number or name (e.g., "01", "power-systems", "03", "lighting-systems")
 
-**Search Path:** `docs/jeep_lj/09-installation/<section>-checklist.md`
+## Section Mapping
 
-**Examples:**
-- `01` or `power-systems` → `docs/jeep_lj/09-installation/02-power-systems-checklist.md`
-- `02` or `engine-systems` → `docs/jeep_lj/09-installation/03-engine-systems-checklist.md`
+| Input | Section Path | Checklist File |
+|-------|--------------|----------------|
+| `01`, `power-systems` | `docs/jeep_lj/01-power-systems/` | `09-installation/02-power-systems-checklist.md` |
+| `02`, `engine-systems` | `docs/jeep_lj/02-engine-systems/` | `09-installation/03-engine-systems-checklist.md` |
+| `03`, `lighting-systems` | `docs/jeep_lj/03-lighting-systems/` | `09-installation/04-lighting-systems-checklist.md` |
+| `04`, `offroad-lighting` | `docs/jeep_lj/04-offroad-lighting/` | `09-installation/05-offroad-lighting-checklist.md` |
+| `05`, `control-interfaces` | `docs/jeep_lj/05-control-interfaces/` | `09-installation/06-control-interfaces-checklist.md` |
+| `06`, `audio-systems` | `docs/jeep_lj/06-audio-systems/` | `09-installation/07-audio-systems-checklist.md` |
+| `07`, `communication-systems` | `docs/jeep_lj/07-communication-systems/` | `09-installation/08-communication-systems-checklist.md` |
+| `08`, `exterior-systems` | `docs/jeep_lj/08-exterior-systems/` | `09-installation/09-exterior-systems-checklist.md` |
 
-## Audit Goals
+## Process
 
-1. **Rephrase as confirmations** - Tasks should read as verification steps for an amateur mechanic
-   - Before: "Wire PMU Out 11 → WS-51C"
-   - After: "Confirm PMU Out 11 is wired to WS-51C power input (14 AWG red)"
+### Step 1: Analyze Section Documentation
 
-2. **Include specific specs** - Torque values, wire gauges, pin numbers
-   - "Ensure iBooster mounting bolts are torqued to 25 ft-lb"
-   - "Confirm 10 AWG wire from PMU OUT1+10 to iBooster"
+Read all `.md` files in the section directory (excluding CLAUDE.md). Extract:
 
-3. **Group logically** - Tasks should flow in installation order
+1. **Components** - Each product/system documented
+2. **Wiring connections** - Sources, destinations, wire gauges, colors
+3. **Mounting locations** - Physical installation points
+4. **Configuration requirements** - Programming, settings, calibration
+5. **Testing requirements** - Verification steps, expected values
 
-4. **Be specific** - Reference exact pins, outputs, wire colors, torque specs when known
+### Step 2: Check for Existing Checklist
 
-## Task Phrasing Guide
+- If checklist exists: Compare against section docs, identify missing items
+- If checklist doesn't exist: Create new file with all discovered tasks
+
+### Step 3: Generate/Update Checklist
+
+**Task Phrasing (as confirmations for amateur mechanic):**
 
 | Type | Pattern | Example |
 |------|---------|---------|
@@ -32,17 +44,71 @@ Review and improve installation checklist tasks for a specific section.
 | Mounting | "Ensure [component] is mounted at [location], torqued to [spec]" | "Ensure iBooster mounted at factory location, bolts torqued to 25 ft-lb" |
 | Testing | "Verify [condition] ([expected value])" | "Verify 12V present at iBooster with ignition OFF and ON" |
 | Configuration | "Confirm [setting] is configured in [system]" | "Confirm PMU output combining configured for OUT1+10" |
-| Fasteners | "Ensure [fastener] torqued to [spec]" | "Ensure ground stud nut torqued to 15 ft-lb" |
+| Ground | "Confirm [component] grounded to [location] ([gauge])" | "Confirm radio grounded to START battery negative (14 AWG)" |
+
+**Organization:**
+- Group by subsystem or component
+- Order by installation sequence (mount → wire → configure → test)
+- Include cross-references to source documentation
+
+### Step 4: Update Index and Nav (if new file)
+
+If creating a new checklist file:
+
+1. **Add to `docs/jeep_lj/09-installation/index.md`:**
+   ```markdown
+   - **[9.X - Section Name Checklist][section-checklist]** - Section X installation tasks
+
+   [section-checklist]: 0X-section-name-checklist.md
+   ```
+
+2. **Add to `mkdocs.yml` nav under Installation:**
+   ```yaml
+   - 9.X - Section Name Checklist: jeep_lj/09-installation/0X-section-name-checklist.md
+   ```
+
+3. **Update `docs/jeep_lj/09-installation/CLAUDE.md`** with new file entry
 
 ## Output Format
 
-Show the revised checklist with:
-1. Tasks rephrased as confirmations with specs
-2. Missing specs flagged as TBD if not in design docs
-3. Any tasks that need clarification noted
+Present findings:
 
-Present as replacement text ready to apply after user approval.
+1. **Components found** - List of systems/products in section
+2. **Tasks identified** - Grouped checklist items
+3. **Missing from existing checklist** (if applicable)
+4. **Files to create/modify** - List all changes needed
 
-## After Review
+Then apply changes after user approval.
 
-Apply changes to the checklist file in `docs/jeep_lj/09-installation/` after user approval.
+## Checklist File Template
+
+```markdown
+# Section X: [Name] - Installation Checklist
+
+Organized by installation order for efficient build workflow.
+
+---
+
+## [Subsystem 1]
+
+### [Component A]
+
+- [ ] Confirm [task 1]
+- [ ] Ensure [task 2]
+- [ ] Verify [task 3]
+
+### [Component B]
+
+- [ ] Confirm [task 1]
+...
+
+---
+
+## Related Documentation
+
+- [Component A][component-a] - Full specifications
+- [Component B][component-b] - Wiring details
+
+[component-a]: ../0X-section/component-a.md
+[component-b]: ../0X-section/component-b.md
+```
