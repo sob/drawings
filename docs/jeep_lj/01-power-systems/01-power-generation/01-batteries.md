@@ -47,6 +47,7 @@ Critical systems requiring high cranking amps and reliable starting:
 ## AUX Battery - Dakota Lithium 135Ah
 
 /// html | div.product-info
+![Dakota Lithium DL+ 135Ah](../../images/dakota-lithium-135ah.jpg){ loading=lazy }
 
 **Type:** LiFePO4 Deep Cycle with Heated BMS
 
@@ -107,7 +108,7 @@ Accessories and high-draw auxiliary loads:
 
 ## Outstanding Items
 
-- [ ] Order Dakota Lithium DL+ 135Ah battery (~$999)
+- [x] ~~Order Dakota Lithium DL+ 135Ah battery (~$999)~~ → Purchased
 - [ ] Backorder Barnes 4WD battery box (Group 24 compatible, ~$67)
 - [ ] Powdercoat or paint battery box before installation
 
