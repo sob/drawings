@@ -62,7 +62,7 @@ None - design complete. See individual product pages for component-specific item
 [switchpros-sp-1200]: ../05-control-interfaces/02-switchpros-sp1200.md
 [control-interfaces-overview]: ../05-control-interfaces/index.md
 [vehicle-lighting-overview]: ../03-lighting-systems/01-lighting-overview.md
-[install-checklist]: ../09-installation/02-power-systems-checklist.md
+[install-checklist]: ../09-installation/01-power-systems-checklist.md
 [chase-lights]: 04-chase-lights.md
 [cargo-lights]: 07-cargo-lights.md
 [reverse-lights]: 10-reverse-lights.md

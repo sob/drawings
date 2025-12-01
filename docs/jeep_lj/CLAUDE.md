@@ -137,16 +137,16 @@ All To-Be-Determined items must be tracked in the centralized TBD Tracker.
 - Guess at specifications instead of marking TBD
 - Forget to update tracker when resolving items
 
-**TBD Tracker Location:** `/docs/jeep_lj/09-installation/01-tbd-tracker.md`
+**TBD Tracker Location:** `/docs/jeep_lj/09-installation/00-tbd-tracker.md`
 
 **Quick Commands:**
 
 ```bash
 # Find all TBD items
-grep -r "TBD" docs/jeep_lj --include="*.md" -n | grep -v "PHASE1-ANALYSIS" | grep -v "PROMPT.md" | grep -v "01-tbd-tracker"
+grep -r "TBD" docs/jeep_lj --include="*.md" -n | grep -v "PHASE1-ANALYSIS" | grep -v "PROMPT.md" | grep -v "00-tbd-tracker"
 
 # Count TBD items
-grep -r "TBD" docs/jeep_lj --include="*.md" | grep -v "PHASE1-ANALYSIS" | grep -v "PROMPT.md" | grep -v "01-tbd-tracker" | wc -l
+grep -r "TBD" docs/jeep_lj --include="*.md" | grep -v "PHASE1-ANALYSIS" | grep -v "PROMPT.md" | grep -v "00-tbd-tracker" | wc -l
 ```
 
 **Priority Levels:**
@@ -445,7 +445,7 @@ Net drain: 20A, Time to 50% SOC: 102 minutes
 
 **Outstanding work:** `grep -r "\- \[ \]" docs/jeep_lj --include="*.md"`
 
-**TBD items:** See [Section 9.1 - TBD Tracker](09-installation/01-tbd-tracker.md) for centralized list with priorities
+**TBD items:** See [Section 9.1 - TBD Tracker](09-installation/00-tbd-tracker.md) for centralized list with priorities
 
 **Search for specific TBD:** `grep -r "TBD" docs/jeep_lj --include="*.md" -n`
 

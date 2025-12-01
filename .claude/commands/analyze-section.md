@@ -258,7 +258,7 @@ Generate timestamp: `YYYYMMDD-HHMMSS` (e.g., `20251124-143052`)
 
 ## Untracked TBDs
 
-TBDs found in analyzed files that are **not** in the central TBD tracker (`docs/jeep_lj/09-installation/01-tbd-tracker.md`).
+TBDs found in analyzed files that are **not** in the central TBD tracker (`docs/jeep_lj/09-installation/00-tbd-tracker.md`).
 
 | File | Line | TBD Item | Action |
 |------|------|----------|--------|

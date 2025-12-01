@@ -73,4 +73,4 @@ No circuit breaker between battery and CONSTANT bus. Each load has individual CB
 [safetyhub]: 04-safetyhub.md
 [body-rtmr]: 03-body-pdu.md
 [audio]: ../../06-audio-systems/02-amplifier.md
-[installation]: ../../09-installation/02-power-systems-checklist.md#phase-2-power-distribution
+[installation]: ../../09-installation/01-power-systems-checklist.md#phase-2-power-distribution

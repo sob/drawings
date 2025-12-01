@@ -9,9 +9,9 @@ Physical installation planning, tracking, and validation procedures.
 
 ## Contents
 
-- **[9.1 TBD Tracker][tbd-tracker]** - Outstanding items and completion tracking
-- **[9.2 Power Systems Checklist][power-checklist]** - Section 1 installation tasks
-- **[9.3 Engine Systems Checklist][engine-checklist]** - Section 2 installation tasks
+- **[9.0 - TBD Tracker][tbd-tracker]** - Outstanding items and completion tracking
+- **[9.1 - Power Systems Checklist][power-checklist]** - Section 1 installation tasks
+- **[9.2 - Engine Systems Checklist][engine-checklist]** - Section 2 installation tasks
 
 ## Installation Resources
 
@@ -33,8 +33,8 @@ Installation planning and tracking includes:
 - Firewall penetration planning
 - Testing and validation procedures
 
-[tbd-tracker]: 01-tbd-tracker.md
-[power-checklist]: 02-power-systems-checklist.md
-[engine-checklist]: 03-engine-systems-checklist.md
+[tbd-tracker]: 00-tbd-tracker.md
+[power-checklist]: 01-power-systems-checklist.md
+[engine-checklist]: 02-engine-systems-checklist.md
 [wire-routing]: ../01-power-systems/07-wire-routing/index.md
 [firewall-ingress]: ../01-power-systems/07-wire-routing/02-firewall-ingress.md

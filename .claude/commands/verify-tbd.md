@@ -8,7 +8,7 @@ Ensure all TBD items are tracked in the centralized tracker with appropriate pri
 
 **Search Path:** `docs/jeep_lj/` (exclude CLAUDE.md files, tracker itself, and .claude/)
 
-**Tracker Location:** `docs/jeep_lj/08-installation/01-tbd-tracker.md`
+**Tracker Location:** `docs/jeep_lj/08-installation/00-tbd-tracker.md`
 
 ## Checks to Perform
 
@@ -52,7 +52,7 @@ Flag potential priority mismatches:
 
 Skip these files when searching:
 - `CLAUDE.md` files (navigation guides, reference TBD process)
-- `01-tbd-tracker.md` itself (contains TBD as content)
+- `00-tbd-tracker.md` itself (contains TBD as content)
 - Any file in `.claude/` directory
 - `index.md` files that just reference the tracker
 

@@ -68,7 +68,7 @@ START battery CONSTANT → PMU → Out 18 → PIAA Horns (5.4A) → Chassis Grou
 
 None - design complete. See [installation checklist][install-checklist] for build tasks.
 
-[install-checklist]: ../09-installation/03-engine-systems-checklist.md
+[install-checklist]: ../09-installation/02-engine-systems-checklist.md
 
 ## Related Documentation
 

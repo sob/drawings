@@ -8,14 +8,14 @@ Analyze a documentation section and create/update its installation checklist.
 
 | Input | Section Path | Checklist File |
 |-------|--------------|----------------|
-| `01`, `power-systems` | `docs/jeep_lj/01-power-systems/` | `09-installation/02-power-systems-checklist.md` |
-| `02`, `engine-systems` | `docs/jeep_lj/02-engine-systems/` | `09-installation/03-engine-systems-checklist.md` |
-| `03`, `lighting-systems` | `docs/jeep_lj/03-lighting-systems/` | `09-installation/04-lighting-systems-checklist.md` |
-| `04`, `offroad-lighting` | `docs/jeep_lj/04-offroad-lighting/` | `09-installation/05-offroad-lighting-checklist.md` |
-| `05`, `control-interfaces` | `docs/jeep_lj/05-control-interfaces/` | `09-installation/06-control-interfaces-checklist.md` |
-| `06`, `audio-systems` | `docs/jeep_lj/06-audio-systems/` | `09-installation/07-audio-systems-checklist.md` |
-| `07`, `communication-systems` | `docs/jeep_lj/07-communication-systems/` | `09-installation/08-communication-systems-checklist.md` |
-| `08`, `exterior-systems` | `docs/jeep_lj/08-exterior-systems/` | `09-installation/09-exterior-systems-checklist.md` |
+| `01`, `power-systems` | `docs/jeep_lj/01-power-systems/` | `09-installation/01-power-systems-checklist.md` |
+| `02`, `engine-systems` | `docs/jeep_lj/02-engine-systems/` | `09-installation/02-engine-systems-checklist.md` |
+| `03`, `lighting-systems` | `docs/jeep_lj/03-lighting-systems/` | `09-installation/03-lighting-systems-checklist.md` |
+| `04`, `offroad-lighting` | `docs/jeep_lj/04-offroad-lighting/` | `09-installation/04-offroad-lighting-checklist.md` |
+| `05`, `control-interfaces` | `docs/jeep_lj/05-control-interfaces/` | `09-installation/05-control-interfaces-checklist.md` |
+| `06`, `audio-systems` | `docs/jeep_lj/06-audio-systems/` | `09-installation/06-audio-systems-checklist.md` |
+| `07`, `communication-systems` | `docs/jeep_lj/07-communication-systems/` | `09-installation/07-communication-systems-checklist.md` |
+| `08`, `exterior-systems` | `docs/jeep_lj/08-exterior-systems/` | `09-installation/08-exterior-systems-checklist.md` |
 
 ## Process
 

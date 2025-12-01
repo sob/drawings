@@ -67,7 +67,7 @@ None - design complete. See [installation checklist][install-checklist] for buil
 - [Engine Bay Ground Bus][ground-bus] - Stud 7 ground connection
 - [Firewall Ingress][firewall-ingress] - Mounting and wire routing
 
-[install-checklist]: ../09-installation/03-engine-systems-checklist.md
+[install-checklist]: ../09-installation/02-engine-systems-checklist.md
 [bosch-ibooster]: https://www.bosch-mobility.com/en/solutions/driving-safety/ibooster/
 [tulays-harness]: https://tulayswirewerks.com/product/bosch-ibooster-gen-2-universal-wire-harness/
 [evcreate-wiring]: https://www.evcreate.com/wiring-the-ibooster/

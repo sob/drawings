@@ -154,5 +154,5 @@ For a passive (no electronics) solution, install 4-5 series rectifier diodes (10
 
 [cascadia-solar]: https://www.cascadia4x4.com/
 [bcdc]: 03-bcdc.md
-[installation-checklist]: ../../09-installation/02-power-systems-checklist.md#phase-4-integration-wiring
+[installation-checklist]: ../../09-installation/01-power-systems-checklist.md#phase-4-integration-wiring
 [overvoltage-module]: https://www.amazon.com/Over-Voltage-Under-Voltage-Protection-Monitoring-Adjustable/dp/B07Y2PTB4M

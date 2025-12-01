@@ -67,7 +67,7 @@ None - design complete. See [installation checklist][install-checklist] for buil
 - [Engine Bay Ground Bus][ground-bus] - Fan ground connection
 
 [gm-fan]: https://www.gmpartsdirect.com/oem-parts/gm-fan-84100128
-[install-checklist]: ../09-installation/03-engine-systems-checklist.md
+[install-checklist]: ../09-installation/02-engine-systems-checklist.md
 [pmu-outputs]: ../01-power-systems/04-pmu/03-pmu-outputs.md
 [pmu-programming]: ../01-power-systems/04-pmu/04-pmu-programming.md
 [ground-bus]: ../01-power-systems/05-grounding/01-engine-bay-ground-bus.md

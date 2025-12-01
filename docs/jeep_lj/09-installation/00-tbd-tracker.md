@@ -180,7 +180,7 @@ Items completed since last update.
 [chase-light]: ../04-offroad-lighting/04-chase-lights.md
 [recovery-systems]: ../08-exterior-systems/01-winch.md
 [body-rtmr]: ../01-power-systems/03-aux-battery-distribution/03-body-pdu.md
-[section-1-install]: 02-power-systems-checklist.md
+[section-1-install]: 01-power-systems-checklist.md
 [grid-heater]: ../02-engine-systems/07-grid-heater.md
 [alternator]: ../01-power-systems/01-power-generation/02-alternator.md
 [hvac]: ../02-engine-systems/03-hvac.md

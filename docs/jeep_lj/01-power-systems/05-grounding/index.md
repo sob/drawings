@@ -33,7 +33,7 @@ Multi-point grounding strategy with high-current grounds to frame rails and low-
 
 **Installation & Testing:** See [Section 1 Installation Checklist][installation]
 
-[installation]: ../../09-installation/02-power-systems-checklist.md#phase-1-foundations
+[installation]: ../../09-installation/01-power-systems-checklist.md#phase-1-foundations
 [starter-battery]: ../02-starter-battery-distribution/index.md
 [aux-battery]: ../03-aux-battery-distribution/index.md
 [engine-bay-ground-bus]: 01-engine-bay-ground-bus.md

@@ -78,5 +78,5 @@ See [installation checklist][install-checklist] for build tasks.
 
 - [PMU Outputs][pmu-outputs] - OUT5 and OUT17 configuration
 
-[install-checklist]: ../09-installation/03-engine-systems-checklist.md
+[install-checklist]: ../09-installation/02-engine-systems-checklist.md
 [pmu-outputs]: ../01-power-systems/04-pmu/03-pmu-outputs.md
