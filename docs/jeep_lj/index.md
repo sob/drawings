@@ -110,3 +110,21 @@ Throughout this documentation, you'll find "Outstanding Items" checklists. These
 
 !!! warning "Work in Progress"
 This is a living document that evolves as the build progresses. Some specifications may be marked as TBD (To Be Determined) and will be updated during the build process.
+
+## Print / Download
+
+Need a physical copy for the shop? Use the print page which combines all documentation into a single printable page optimized for 3-ring binder formatting (US Letter, duplex, with binding margins).
+
+<div class="print-hide" markdown="1">
+
+**[Open Print Page](/print_page/){target="_blank"}** - All Jeep LJ docs on one page
+
+**To print or save as PDF:**
+
+1. Click the Print Page link above
+2. Wait for the page to fully load
+3. Use your browser's print function (Ctrl+P / Cmd+P)
+4. Select "Save as PDF" or your printer
+5. For duplex printing, select "Print on both sides" with "Flip on long edge"
+
+</div>

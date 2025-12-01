@@ -208,3 +208,194 @@ a[href^="http"]:not([href*="localhost"]):not([href*="127.0.0.1"])::after {
 .md-header a[href^="http"]::after {
   display: none;
 }
+
+/* ==========================================================================
+   PRINT STYLES FOR 3-RING BINDER
+   ========================================================================== */
+
+@media print {
+  /* Page setup for US Letter with 3-hole punch margins */
+  @page {
+    size: letter;
+    margin: 0.75in 0.5in 0.75in 1in; /* top right bottom left - extra left for holes */
+  }
+
+  /* Alternating margins for duplex printing */
+  @page :left {
+    margin-left: 0.5in;
+    margin-right: 1in; /* Binding edge on right for back pages */
+  }
+
+  @page :right {
+    margin-left: 1in; /* Binding edge on left for front pages */
+    margin-right: 0.5in;
+  }
+
+  /* Hide navigation, header, footer for print */
+  .md-header,
+  .md-tabs,
+  .md-sidebar,
+  .md-footer,
+  .md-top,
+  .md-search,
+  .md-source,
+  .print-hide {
+    display: none !important;
+  }
+
+  /* Make content full width */
+  .md-content {
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: 100% !important;
+  }
+
+  .md-content__inner {
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: 100% !important;
+  }
+
+  .md-main__inner {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .md-grid {
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+
+  /* Typography adjustments for print */
+  body {
+    font-size: 11pt !important;
+    line-height: 1.4 !important;
+    color: black !important;
+    background: white !important;
+  }
+
+  .md-typeset {
+    font-size: 11pt !important;
+  }
+
+  h1 {
+    font-size: 18pt !important;
+    page-break-after: avoid;
+  }
+
+  h2 {
+    font-size: 14pt !important;
+    page-break-after: avoid;
+    border-bottom-color: #333 !important;
+  }
+
+  h3 {
+    font-size: 12pt !important;
+    page-break-after: avoid;
+  }
+
+  /* Prevent orphans and widows */
+  p, li {
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* Keep headings with content */
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+    break-after: avoid;
+  }
+
+  /* Keep tables together when possible */
+  table {
+    page-break-inside: avoid;
+    break-inside: avoid;
+    font-size: 10pt !important;
+  }
+
+  /* Table styling for print */
+  table, th, td {
+    border: 1px solid #333 !important;
+  }
+
+  th {
+    background-color: #eee !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Code blocks */
+  pre, code {
+    font-size: 9pt !important;
+    border: 1px solid #ccc !important;
+    background-color: #f5f5f5 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  pre {
+    page-break-inside: avoid;
+    break-inside: avoid;
+    padding: 0.5em !important;
+    overflow-x: visible !important;
+    white-space: pre-wrap !important;
+    word-wrap: break-word !important;
+  }
+
+  /* Links - show URL for external links */
+  a[href^="http"]:not(.md-nav__link)::after {
+    content: " (" attr(href) ")";
+    font-size: 8pt;
+    color: #666;
+    word-break: break-all;
+  }
+
+  /* Don't show URL for internal links */
+  a[href^="#"]::after,
+  a[href^="/"]::after,
+  a[href^="../"]::after,
+  a:not([href^="http"])::after {
+    content: none !important;
+  }
+
+  /* Images */
+  img {
+    max-width: 100% !important;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  /* Product info layout for print */
+  .product-info p:has(img) {
+    float: none !important;
+    margin: 1em auto !important;
+    max-width: 250px !important;
+  }
+
+  /* Admonitions */
+  .admonition {
+    page-break-inside: avoid;
+    break-inside: avoid;
+    border: 1px solid #333 !important;
+    background: #f9f9f9 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Checkboxes for checklists */
+  .task-list-item input[type="checkbox"] {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Page breaks */
+  .page-break {
+    page-break-after: always;
+    break-after: always;
+  }
+
+  .no-page-break {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+}
