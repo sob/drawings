@@ -189,3 +189,4 @@ Items completed since last update.
 [rear-lights]: ../04-offroad-lighting/08-rear-lights.md
 [footwell-lights]: ../04-offroad-lighting/09-footwell-lights.md
 [rock-lights]: ../04-offroad-lighting/06-rock-lights.md
+[transmission]: ../10-drivetrain/01-transmission.md

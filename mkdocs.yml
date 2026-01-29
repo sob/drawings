@@ -210,6 +210,15 @@ nav:
       - 9.1 - Power Systems Checklist: jeep_lj/09-installation/01-power-systems-checklist.md
       - 9.2 - Engine Systems Checklist: jeep_lj/09-installation/02-engine-systems-checklist.md
       - 9.3 - Purchase Tracker: jeep_lj/09-installation/03-purchase-tracker.md
+    - Drivetrain:
+      - jeep_lj/10-drivetrain/index.md
+      - 10.1 - Transmission: jeep_lj/10-drivetrain/01-transmission.md
+      - 10.2 - Transfer Case: jeep_lj/10-drivetrain/02-transfer-case.md
+      - 10.3 - Driveshafts: jeep_lj/10-drivetrain/03-driveshafts.md
+      - 10.4 - Front Axle: jeep_lj/10-drivetrain/04-front-axle.md
+      - 10.5 - Rear Axle: jeep_lj/10-drivetrain/05-rear-axle.md
+      - 10.6 - Suspension: jeep_lj/10-drivetrain/06-suspension.md
+      - 10.7 - Steering: jeep_lj/10-drivetrain/07-steering.md
   - Nissan NV 3500:
     - nissan_nv/index.md
   - Jeep Wrangler JKU:

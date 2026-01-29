@@ -33,7 +33,7 @@ Complete configuration of all 24 PMU outputs, load allocations, and combined out
 | **Out 13** | Command Touch CT4         | ~9A  | [Firewall Stud Bus][firewall-ground] T1               | CONSTANT             | Turn signals, headlights, hazards             |
 | **Out 14** | ADU7 Display              | ~2A  | A-pillar ground                                       | Auto (ignition ON)   | See [ADU7 Display][adu7-display]              |
 | **Out 15** | Winch Contactor Trigger   | 1A   | Via winch contactor                                   | Manual (dash rocker) | Control signal only                           |
-| **Out 16** | **[Available]**           | -    | -                                                     | -                    | Future expansion (15A)                        |
+| **Out 16** | Turbolamik TCU            | 15A  | Engine bay ground bus                                 | CONSTANT             | 8HP70 transmission controller                 |
 
 ### 7A High-Side Outputs (OUT17-OUT24)
 
