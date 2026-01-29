@@ -49,10 +49,13 @@ GM brushless fans use **inverted duty cycle** - high duty cycle = low fan speed.
 
 ## Wiring
 
-| Circuit    | Wire Gauge | Source        | Destination    | Notes                  |
-| :--------- | :--------- | :------------ | :------------- | :--------------------- |
-| Fan Power  | 4 AWG      | PMU OUT2+3+4  | Fan motor (+)  | ~6 ft, 3.4% drop @ 53A |
-| Fan Ground | 4 AWG      | Fan motor (-) | Engine Bay Bus | Short run              |
+| Circuit              | Wire Gauge | Source               | Destination     | Notes                          |
+| :------------------- | :--------- | :------------------- | :-------------- | :----------------------------- |
+| Fan Power (PMU side) | 12 AWG × 3 | PMU OUT2, OUT3, OUT4 | Splice near PMU | PMU 2.8mm terminals max 12 AWG |
+| Fan Power (load side)| 4 AWG      | Splice               | Fan motor (+)   | ~6 ft, ~1.2% drop @ 53A        |
+| Fan Ground           | 4 AWG      | Fan motor (-)        | Engine Bay Bus  | Short run                      |
+
+**Wire Transition:** PMU terminals accept max 12 AWG. Three 12 AWG wires from OUT2, OUT3, and OUT4 splice into a single 4 AWG wire **near the PMU** (not the fan) to minimize voltage drop - 4 AWG for the long run is better than 3× 12 AWG in parallel.
 
 See [PMU Outputs][pmu-outputs] for complete configuration and [PMU Programming][pmu-programming] for control logic.
 

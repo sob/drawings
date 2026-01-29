@@ -43,11 +43,14 @@ Electromechanical brake booster that eliminates the need for engine vacuum. Requ
 
 ## Wiring
 
-| Circuit         | Wire Gauge | Source          | Destination             | Notes                          |
-| :-------------- | :--------- | :-------------- | :---------------------- | :----------------------------- |
-| Main Power      | 10 AWG     | PMU OUT1+10     | iBooster main connector | CONSTANT (safety requirement)  |
-| Ignition Signal | 20 AWG     | PMU OUT19       | iBooster ignition input | SWITCHED (ignition RUN)        |
-| Ground          | 10 AWG     | iBooster ground | Engine Bay Bus Stud 7   | Same stud as main power ground |
+| Circuit                | Wire Gauge | Source          | Destination             | Notes                          |
+| :--------------------- | :--------- | :-------------- | :---------------------- | :----------------------------- |
+| Main Power (PMU side)  | 12 AWG × 2 | PMU OUT1, OUT10 | Splice near PMU         | PMU 2.8mm terminals max 12 AWG |
+| Main Power (load side) | 10 AWG     | Splice          | iBooster main connector | CONSTANT (safety requirement)  |
+| Ignition Signal        | 20 AWG     | PMU OUT19       | iBooster ignition input | SWITCHED (ignition RUN)        |
+| Ground                 | 10 AWG     | iBooster ground | Engine Bay Bus Stud 7   | Same stud as main power ground |
+
+**Wire Transition:** PMU terminals accept max 12 AWG. Two 12 AWG wires from OUT1 and OUT10 splice into a single 10 AWG wire **near the PMU** to minimize voltage drop.
 
 See [PMU Outputs][pmu-outputs] for complete PMU configuration and thermal analysis.
 
