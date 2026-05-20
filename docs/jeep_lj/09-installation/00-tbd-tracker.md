@@ -7,9 +7,9 @@ hide:
 
 **Purpose:** Central tracking for all To-Be-Determined items across the Jeep LJ electrical system documentation.
 
-**Last Updated:** 2025-11-28
+**Last Updated:** 2026-05-20
 
-**Total Open Items:** 22
+**Total Open Items:** 25
 
 ---
 
@@ -30,6 +30,10 @@ Items needed before installation begins but not system-critical.
 | Item                              | Description                                                     | File                           | Priority |
 | :-------------------------------- | :-------------------------------------------------------------- | :----------------------------- | :------- |
 | Dakota Digital Panel Mounting     | HDPE sheet dimensions and location                              | [Wire Routing][wire-routing]   | High     |
+| Turbolamik Aux: Reverse           | Confirm aux output channel + pinout configured for Reverse signal → PMU In 3 | [Transmission][transmission]   | High     |
+| Turbolamik Aux: P/N               | Confirm aux output channel + pinout configured for P/N (start interlock) | [Transmission][transmission]   | High     |
+| Dash START Push-Button            | Select momentary push-button (illuminated, dash-mountable) for keyless start | [Starter][starter-doc]         | High     |
+| P/N Interlock Relay               | Select SPST automotive relay for P/N gate in engine bay         | [Starter][starter-doc]         | High     |
 
 ---
 
@@ -155,11 +159,11 @@ Items completed since last update.
 | Priority    | Count  |
 | :---------- | :----- |
 | 🔴 Critical | 0      |
-| High        | 1      |
+| High        | 5      |
 | 📋 Medium   | 17     |
 | 📝 Low      | 4      |
 | 🔍 Verify   | 1      |
-| **TOTAL**   | **23** |
+| **TOTAL**   | **27** |
 
 ## Related Documentation
 
@@ -190,3 +194,4 @@ Items completed since last update.
 [footwell-lights]: ../04-offroad-lighting/09-footwell-lights.md
 [rock-lights]: ../04-offroad-lighting/06-rock-lights.md
 [transmission]: ../10-drivetrain/01-transmission.md
+[starter-doc]: ../02-engine-systems/01-starter.md

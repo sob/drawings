@@ -34,7 +34,7 @@ Distributes low-current 12V ignition sense signal from keyswitch RUN terminal to
 Critical engine and power management systems use dedicated wires directly from the keyswitch, NOT this bus bar, for maximum reliability. This includes:
 
     - **PMU 12V Switched Input (Physical Pin 7):** Direct wire for ignition sense and power reference - see [PMU Inputs][pmu-inputs]
-    - **Starter Control:** Direct keyswitch → clutch switch → relay path - see [Starter System][starter-system]
+    - **Starter Control:** Direct keyswitch RUN → START push-button → brake switch → P/N interlock → relay path - see [Starter System][starter-system]
 
     **Note:** PMU "Pin 7" (physical connector pin for 12V switched power) is different from PMU "In 7" (digital input channel #7 used for CT4 headlight status).
 

@@ -69,7 +69,7 @@ RF interference analysis determined that with ferrite chokes on radio power lead
 | 12 | Ignition sense | 18 AWG | Ignition switch RUN | PMU Pin 7 | #16 |
 | 13 | Brake switch | 18 AWG | Brake pedal switch | PMU In 2 | #16 |
 | 14 | A/C request | 18 AWG | HVAC controls | PMU In 9 | #16 |
-| 15 | Clutch switch | 18 AWG | Clutch pedal switch | Starter circuit | #16 |
+| 15 | P/N interlock (gated start) | 18 AWG | Brake switch (start tap, after START button) | P/N interlock relay → Cole Hersee coil | #16 |
 | 16 | Winch control IN | 18 AWG | Dash rocker switch | Winch contactor | #16 |
 | 17 | Winch control OUT | 18 AWG | Dash rocker switch | Winch contactor | #16 |
 

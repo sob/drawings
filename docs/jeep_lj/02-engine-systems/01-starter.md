@@ -52,34 +52,40 @@ tags:
 
 **Control Solenoid:** Cole Hersee 24213 (85A continuous-duty)
 
-**Safety Interlock:** Clutch pedal switch (normally open)
+**Safety Interlock:** Series chain — brake pedal switch + dash START push-button + Turbolamik P/N output (all three required to crank the 8HP70 auto)
 
 **Battery Requirement:** 800 CCA minimum (Odyssey PC1500 provides 850 CCA)
 
 ## Wiring
 
-| Circuit              | Source                   | Destination                   | Wire Gauge | Current  | Notes                                                            |
-| :------------------- | :----------------------- | :---------------------------- | :--------- | :------- | :--------------------------------------------------------------- |
-| Main Power           | START battery+           | Starter solenoid battery post | 2/0 AWG    | 400-600A | See [START Battery Distribution][starter-battery] for wire specs |
-| Solenoid Power Tap   | START battery post       | Cole Hersee 24213 input       | 10 AWG     | 30-75A   | ~2 ft                                                            |
-| Ignition Control     | Ignition switch START    | Clutch safety switch          | 16 AWG     | ~1A      | ~10 ft                                                           |
-| Clutch Switch Output | Clutch switch            | Cole Hersee 24213 coil+       | 16 AWG     | ~1.6A    | ~3 ft                                                            |
-| Solenoid Coil Ground | Cole Hersee 24213 coil-  | Engine bay ground bus         | 16 AWG     | ~1.6A    | ~3 ft                                                            |
-| Solenoid Output      | Cole Hersee 24213 output | Starter solenoid switch post  | 10 AWG     | 30-75A   | ~2 ft                                                            |
-| Ground Return        | Starter case             | Engine block → START battery- | 2/0 AWG    | 400-600A | Via engine bay ground bus                                        |
+| Circuit               | Source                   | Destination                       | Wire Gauge | Current  | Notes                                                            |
+| :-------------------- | :----------------------- | :-------------------------------- | :--------- | :------- | :--------------------------------------------------------------- |
+| Main Power            | START battery+           | Starter solenoid battery post     | 2/0 AWG    | 400-600A | See [START Battery Distribution][starter-battery] for wire specs |
+| Solenoid Power Tap    | START battery post       | Cole Hersee 24213 input           | 10 AWG     | 30-75A   | ~2 ft                                                            |
+| Start Button Power    | Ignition switch RUN      | Dash START push-button (input)    | 16 AWG     | ~1.6A    | ~2 ft (cabin)                                                    |
+| Brake Interlock       | START button (output)    | Brake pedal switch (start tap)    | 18 AWG     | ~1.6A    | ~2 ft (cabin); requires brake pressed                            |
+| Cabin → Engine Bay    | Brake switch (start tap) | Firewall Pin 15 → P/N interlock relay | 18 AWG | ~1.6A    | Via Deutsch HDP24-24-21 Pin 15                                   |
+| P/N Interlock         | Turbolamik P/N aux output| Interlock relay coil              | 18 AWG     | ~0.1A    | 12V when 8HP70 shifter in P or N                                 |
+| Gated Coil Drive      | Interlock relay output   | Cole Hersee 24213 coil+           | 16 AWG     | ~1.6A    | ~1 ft (engine bay)                                               |
+| Solenoid Coil Ground  | Cole Hersee 24213 coil-  | Engine bay ground bus             | 16 AWG     | ~1.6A    | ~3 ft                                                            |
+| Solenoid Output       | Cole Hersee 24213 output | Starter solenoid switch post      | 10 AWG     | 30-75A   | ~2 ft                                                            |
+| Ground Return         | Starter case             | Engine block → START battery-     | 2/0 AWG    | 400-600A | Via engine bay ground bus                                        |
 
 ## Control Flow
 
 ```text
-Ignition START → Clutch Switch → Cole Hersee 24213 Coil → Ground
-                                         ↓
-                              Solenoid Closes (when clutch depressed)
-                                         ↓
-                    START battery Post → Cole Hersee Output → Starter Switch Post
-                                         ↓
-                              Main Solenoid Engages
-                                         ↓
-                                   Starter Cranks
+Ignition RUN → START Button → Brake Switch → Pin 15 (firewall) →
+                                              P/N Interlock Relay (gated by Turbolamik P/N output)
+                                                         ↓
+                                              Cole Hersee 24213 Coil → Ground
+                                                         ↓
+                                              Solenoid Closes (button + brake + P or N all asserted)
+                                                         ↓
+                              START battery Post → Cole Hersee Output → Starter Switch Post
+                                                         ↓
+                                              Main Solenoid Engages
+                                                         ↓
+                                                   Starter Cranks
 ```
 
 ## Starter Motor Terminals
@@ -110,12 +116,16 @@ Ignition START → Clutch Switch → Cole Hersee 24213 Coil → Ground
 
 - Large Stud 1 (Input): From START battery post (M8 terminal, 10 AWG)
 - Large Stud 2 (Output): To starter switch post (6.3mm female push-on, 10 AWG)
-- Small Terminal 1 (Coil+): From clutch switch (16-18 AWG)
+- Small Terminal 1 (Coil+): From P/N interlock relay output (16-18 AWG)
 - Small Terminal 2 (Coil-): To engine bay ground bus (16-18 AWG)
 
 ## Outstanding Items
 
-None - design complete. See [installation checklist][install-checklist] for build tasks.
+- [ ] Select dash START push-button (momentary, normally open, illuminated preferred)
+- [ ] Select P/N interlock relay (low-current automotive relay, ~30A SPST)
+- [ ] Confirm Turbolamik aux output configured for P/N (12V when in P or N)
+
+See [installation checklist][install-checklist] for build tasks.
 
 [install-checklist]: ../09-installation/02-engine-systems-checklist.md
 

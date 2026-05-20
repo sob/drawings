@@ -33,8 +33,11 @@ Organized by installation order for efficient build workflow.
 - [ ] Confirm Cole Hersee 24213 solenoid mounted on firewall (engine bay side)
 - [ ] Confirm 10 AWG from starter battery post to Cole Hersee input
 - [ ] Confirm 10 AWG from Cole Hersee output to starter switch post
-- [ ] Confirm 16 AWG ignition START wire routed through firewall to clutch switch
-- [ ] Confirm clutch safety switch wired to Cole Hersee coil+
+- [ ] Confirm 16 AWG ignition RUN feed to dash START push-button (cabin)
+- [ ] Confirm START push-button output series with brake pedal switch (start tap)
+- [ ] Confirm gated start signal routed through firewall Pin 15 to engine bay
+- [ ] Confirm P/N interlock relay gated by Turbolamik P/N aux output
+- [ ] Confirm interlock relay output wired to Cole Hersee coil+
 - [ ] Confirm Cole Hersee coil- grounded to engine bay ground bus
 
 ---
@@ -133,9 +136,11 @@ Organized by installation order for efficient build workflow.
 
 ### Starter Testing
 
-- [ ] Verify clutch pedal switch prevents starting when clutch released
-- [ ] Verify starter engages when clutch depressed and key in START
-- [ ] Verify starter disengages cleanly when key released
+- [ ] Verify starter does NOT crank with shifter in R, D, or manual gates (P/N interlock open)
+- [ ] Verify starter does NOT crank when brake pedal is released (brake interlock open)
+- [ ] Verify starter does NOT crank when START button is not pressed
+- [ ] Verify starter cranks when ignition RUN + brake pressed + START button held + shifter in P or N
+- [ ] Verify starter disengages cleanly when START button is released
 
 ### Grid Heater Testing
 

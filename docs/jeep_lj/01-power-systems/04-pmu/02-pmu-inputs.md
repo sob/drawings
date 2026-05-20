@@ -27,7 +27,7 @@ See [Ignition Signal Distribution](#ignition-signal-distribution) for complete w
 | :------- | :------------------- | :--------------------------- | :---------------------- | :--------------------------------------- |
 | **In 1** | Horn Button          | Steering wheel button        | Out 18 (Horn)           | Normally open, closes when pressed       |
 | **In 2** | Brake Switch         | Brake pedal switch           | Out 21 (Brake Lights)   | Normally open, closes when pedal pressed |
-| **In 3** | Reverse Switch       | AX15 trans switch            | Out 22 (Reverse Lights) | Normally open, closes in reverse gear    |
+| **In 3** | Reverse Signal       | Turbolamik aux output (Reverse) | Out 22 (Reverse Lights) | 12V from TCU when 8HP70 in Reverse       |
 | **In 4** | **[Available]**      | -                            | -                       | Available for future expansion           |
 | **In 5** | **[Available]**      | -                            | -                       | Available for future expansion           |
 | **In 6** | **[Available]**      | -                            | -                       | Available for future expansion           |
@@ -35,7 +35,7 @@ See [Ignition Signal Distribution](#ignition-signal-distribution) for complete w
 | **In 8** | **[Available]**      | -                            | -                       | Available for future expansion           |
 | **In 9** | A/C Request          | Factory TJ A/C button signal | Out 17 (A/C Clutch)     | 12V when factory dash A/C button pressed |
 
-**Note:** Starter system uses traditional direct control (keyswitch → clutch switch → relay) independent of PMU. See [Starter System][starter].
+**Note:** Starter system uses traditional direct control (ignition RUN → start button → brake switch → P/N interlock → relay) independent of PMU. See [Starter System][starter].
 
 [starter]: ../../02-engine-systems/01-starter.md
 

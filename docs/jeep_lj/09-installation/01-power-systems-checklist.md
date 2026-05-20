@@ -208,7 +208,7 @@ Create 12 custom 2-pin Delphi harnesses at SwitchPros:
 - [ ] Confirm 18 AWG: Ignition RUN → PMU Pin 7 (dedicated wire, not from bus bar)
 - [ ] Confirm horn button → PMU In 1 (via Deutsch connector Pin 11)
 - [ ] Confirm brake pedal switch → PMU In 2 (via Deutsch connector Pin 13)
-- [ ] Confirm reverse switch → PMU In 3 (AX15 trans switch)
+- [ ] Confirm reverse signal → PMU In 3 (Turbolamik aux output, Reverse gear)
 - [ ] Confirm A/C request → PMU In 9 (via Deutsch connector Pin 14)
 - [ ] Confirm CT4 SW3 (headlight status) → PMU In 7 (tap on engine bay side of connector)
 
