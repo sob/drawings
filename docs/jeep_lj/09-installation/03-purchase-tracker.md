@@ -72,6 +72,7 @@ Major components - watch for sales, consider financing options.
 | ARB Air Tank (171601) | ARB | ~$200 | Medium | [Air Compressor][air-compressor] |
 | WolfBox G900 TriPro Dash Camera | WolfBox | ~$200 | Low | [Dash Camera][dash-camera] |
 | DB Electrical 410-52442 Starter | DB Electrical | ~$200 | High | [Starter][starter] |
+| AMOT 4261M02A027-AA Air Shutoff Valve | AMOT | ~$400-500 | High | 2.8" manual/pneumatic, NPT - [Runaway Protection][runaway-protection] |
 
 ---
 
@@ -133,6 +134,11 @@ _(Most electrical distribution components already purchased - see Purchased Item
 | 0-200 PSI Pressure Gauge | Generic | ~$20 | Medium | [Air Compressor][air-compressor] |
 | Air Chuck Plate and Fittings | Generic | ~$30 | Low | [Rear Air Chuck][rear-air-chuck] |
 | Center-Off Momentary Rocker Switch | Generic | ~$15 | Medium | Winch control - [Dashboard][dashboard] |
+| Mishimoto MMOCC-CBT Compact Baffled Catch Can | Mishimoto | ~$150 | High | 13 oz, petcock drain - [Runaway Protection][runaway-protection] |
+| Mishimoto MMOCC-UB Universal Mounting Bracket | Mishimoto | ~$40 | High | [Runaway Protection][runaway-protection] |
+| Midwest Control 30-144-TTL-BH-3 Push-Pull Cable | Midwest Control | ~$60-80 | High | 144" turn-to-lock T-handle, 3" travel - [Runaway Protection][runaway-protection] |
+| 5/8" Oil-Resistant Hose (2 ft) + Worm Clamps | Generic | ~$15 | High | Catch can plumbing - [Runaway Protection][runaway-protection] |
+| NPT-to-Hose Adapter Fittings (AMOT to intake) | Generic | ~$25 | High | Size per measured turbo inlet - [Runaway Protection][runaway-protection] |
 
 ---
 
@@ -231,6 +237,7 @@ _(Most electrical distribution components already purchased - see Purchased Item
 [dashboard]: ../05-control-interfaces/05-dashboard-controls.md
 [power-checklist]: 01-power-systems-checklist.md
 [engine-checklist]: 02-engine-systems-checklist.md
+[runaway-protection]: ../02-engine-systems/11-runaway-protection.md
 [tbd-tracker]: 00-tbd-tracker.md
 [bd-site]: https://www.bajadesigns.com/
 [4wp-site]: https://www.4wheelparts.com/

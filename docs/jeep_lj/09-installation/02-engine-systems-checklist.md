@@ -24,6 +24,14 @@ Organized by installation order for efficient build workflow.
 
 - [ ] Order Ron Francis WS-51C wiper controller module
 
+### Runaway Protection
+
+- [ ] Order Mishimoto MMOCC-CBT catch can + MMOCC-UB bracket
+- [ ] Order AMOT 4261M02A027-AA air shutoff valve (2.8", manual/pneumatic, NPT)
+- [ ] Order Midwest Control 30-144-TTL-BH-3 push-pull cable + T-handle
+- [ ] Measure R2.8 turbo inlet OD and order matching NPT-to-hose adapters
+- [ ] Source 2 ft of 5/8" oil-resistant hose + worm clamps for catch can plumbing
+
 ---
 
 ## Phase 1: Starter System
@@ -110,7 +118,37 @@ Organized by installation order for efficient build workflow.
 
 ---
 
-## Phase 8: Testing
+## Phase 8: Runaway Protection
+
+### Catch Can Installation
+
+- [ ] Confirm Mishimoto MMOCC-UB bracket mounted to selected engine bay location (TBD - intake side, away from exhaust)
+- [ ] Confirm MMOCC-CBT catch can installed vertically with petcock at bottom
+- [ ] Confirm 5/8" hose from R2.8 valve cover breather to catch can INLET (worm clamps both ends)
+- [ ] Confirm 5/8" hose from catch can OUTLET to turbo inlet (worm clamps both ends)
+- [ ] Verify catch can petcock closed before first engine start
+- [ ] Verify no hose chafing against engine, exhaust, or moving parts
+
+### AMOT Air Shutoff Installation
+
+- [ ] Confirm AMOT 4261M02A027-AA installed in pre-turbo intake tract (between air filter outlet and turbo inlet)
+- [ ] Confirm NPT-to-hose adapters secure on both AMOT ports
+- [ ] Confirm AMOT butterfly cocks fully open and latches; verify lever orientation matches cable pull direction
+- [ ] Confirm intake clamps torqued on both sides of AMOT (no boost or vacuum leaks)
+- [ ] Confirm AMOT body oriented so the trip lever clears engine bay obstructions through full motion
+
+### Cable and T-Handle Installation
+
+- [ ] Confirm Midwest 30-144-TTL-BH-3 T-handle mounted at selected dash location (TBD)
+- [ ] Confirm cable conduit passes through dedicated firewall grommet (TBD - must not share with other cables)
+- [ ] Confirm cable secured every 12" with adel clamps; no sharp bends (≥6" radius)
+- [ ] Confirm cable end attaches to AMOT trip lever; pull stroke ≥0.5" past trip point
+- [ ] Confirm T-handle sits flush against dash bezel when AMOT is cocked open
+- [ ] Confirm T-handle is labeled `EMERGENCY ENGINE SHUTOFF — PULL TO STOP`
+
+---
+
+## Phase 9: Testing
 
 ### iBooster Testing
 
@@ -167,6 +205,15 @@ Organized by installation order for efficient build workflow.
 - [ ] Verify inverted duty cycle behavior (high duty = low speed)
 - [ ] Tune temperature setpoints for R2.8 under real-world conditions
 
+### Runaway Protection Testing
+
+- [ ] Static test: engine OFF, pull T-handle, verify AMOT butterfly snaps fully closed (visual through air filter housing)
+- [ ] Reset test: re-cock AMOT manually, push T-handle to flush, verify butterfly returns fully open
+- [ ] Cable freedom: pull T-handle through full 3" stroke, verify no binding in conduit
+- [ ] Functional test (with engine running at idle, away from people/objects): pull T-handle, verify engine stalls within 2 seconds
+- [ ] Catch can drain check: after first 100 miles, drain petcock and inspect for oil collection (confirms PCV flow)
+- [ ] Visual inspection: verify catch can hoses, AMOT cable, and conduit show no chafing or heat damage
+
 ---
 
 ## Reference Documentation
@@ -178,6 +225,7 @@ Organized by installation order for efficient build workflow.
 - **Wipers:** [Wiper System][wipers]
 - **Horn:** [Horn System][horn]
 - **Radiator Fan:** [Radiator Fan System][radiator-fan]
+- **Runaway Protection:** [Diesel Runaway Protection][runaway-protection]
 
 [tulays-harness]: https://tulayswirewerks.com/product/bosch-ibooster-gen-2-universal-wire-harness/
 [starter]: ../02-engine-systems/01-starter.md
@@ -187,3 +235,4 @@ Organized by installation order for efficient build workflow.
 [wipers]: ../02-engine-systems/04-wipers.md
 [horn]: ../02-engine-systems/05-horn.md
 [radiator-fan]: ../02-engine-systems/06-radiator-fan.md
+[runaway-protection]: ../02-engine-systems/11-runaway-protection.md

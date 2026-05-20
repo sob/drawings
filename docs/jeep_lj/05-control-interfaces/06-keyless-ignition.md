@@ -156,7 +156,9 @@ A hidden hardwired toggle (under dash, location TBD) bypasses the PMU and direct
 
 ## Diesel Runaway Note
 
-The Cummins R2.8 is a modern electronic common-rail diesel. Engine shutdown is achieved by cutting power to the ECM, which stops commanding the injectors. There is no mechanical fuel shutoff in this build (no intake air shutoff valve — see [Standards Exceptions][standards-exceptions]). If the ECM fails in a way that maintains injector commands, the runaway cannot be killed by the keyless system or the bypass toggle.
+The Cummins R2.8 is a modern electronic common-rail diesel. Normal engine shutdown is achieved by cutting power to the ECM, which stops commanding the injectors. However, ECM-only kill does not stop a true runaway — if the engine is being fed oil, fuel, or hydrocarbon vapor from an external source, cutting ECM power does nothing.
+
+This build provides independent mechanical protection: a Mishimoto catch can in the crankcase ventilation path (prevention) plus an AMOT 4261M air shutoff valve with dash-mounted manual cable (termination). See [Diesel Runaway Protection][runaway-protection] for the full specification.
 
 ## Outstanding Items
 
@@ -191,3 +193,4 @@ The Cummins R2.8 is a modern electronic common-rail diesel. Engine shutdown is a
 [ignition-signal]: ../01-power-systems/06-ignition-signal/index.md
 [firewall-ingress]: ../01-power-systems/07-wire-routing/02-firewall-ingress.md
 [standards-exceptions]: ../01-power-systems/STANDARDS-EXCEPTIONS.md
+[runaway-protection]: ../02-engine-systems/11-runaway-protection.md
