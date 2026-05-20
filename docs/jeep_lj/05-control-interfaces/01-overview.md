@@ -27,6 +27,12 @@ This section documents all control interfaces in the Jeep LJ build - the switche
   - Winch control switch
   - Other dash-mounted controls
 
+- **[Keyless Ignition][keyless-ignition]** - RFID + push-button start/stop replacing the factory keyswitch
+  - Boomerang Bullet 230 RFID fob anti-theft
+  - Single dash push-button (start/stop)
+  - PMU24 runs the ignition state machine
+  - Hidden hardwired bypass for emergencies
+
 ## System Integration
 
 All control interfaces integrate with the dual-battery electrical system:
@@ -46,6 +52,7 @@ All control interfaces integrate with the dual-battery electrical system:
 [switchpros-sp-1200-rcr-force-12]: 02-switchpros-sp1200.md
 [command-touch-ct4]: 03-command-touch-ct4.md
 [dashboard-physical-controls]: 05-dashboard-controls.md
+[keyless-ignition]: 06-keyless-ignition.md
 [vehicle-lighting-overview]: ../03-lighting-systems/01-lighting-overview.md
 [offroad-auxiliary-lighting]: ../04-offroad-lighting/index.md
 [pmu-power-distribution]: ../01-power-systems/04-pmu/index.md

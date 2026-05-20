@@ -52,7 +52,7 @@ tags:
 
 **Control Solenoid:** Cole Hersee 24213 (85A continuous-duty)
 
-**Safety Interlock:** Series chain — brake pedal switch + dash START push-button + Turbolamik P/N output (all three required to crank the 8HP70 auto)
+**Safety Interlock:** PMU24 state machine (OUT24) supplies a hardware crank chain — push button + brake pedal switch + Turbolamik P/N relay + engine-running lockout (all four gates required). See [Keyless Ignition][keyless-ignition] for the full architecture.
 
 **Battery Requirement:** 800 CCA minimum (Odyssey PC1500 provides 850 CCA)
 
@@ -62,11 +62,13 @@ tags:
 | :-------------------- | :----------------------- | :-------------------------------- | :--------- | :------- | :--------------------------------------------------------------- |
 | Main Power            | START battery+           | Starter solenoid battery post     | 2/0 AWG    | 400-600A | See [START Battery Distribution][starter-battery] for wire specs |
 | Solenoid Power Tap    | START battery post       | Cole Hersee 24213 input           | 10 AWG     | 30-75A   | ~2 ft                                                            |
-| Start Button Power    | Ignition switch RUN      | Dash START push-button (input)    | 16 AWG     | ~1.6A    | ~2 ft (cabin)                                                    |
-| Brake Interlock       | START button (output)    | Brake pedal switch (start tap)    | 18 AWG     | ~1.6A    | ~2 ft (cabin); requires brake pressed                            |
-| Cabin → Engine Bay    | Brake switch (start tap) | Firewall Pin 15 → P/N interlock relay | 18 AWG | ~1.6A    | Via Deutsch HDP24-24-21 Pin 15                                   |
-| P/N Interlock         | Turbolamik P/N aux output| Interlock relay coil              | 18 AWG     | ~0.1A    | 12V when 8HP70 shifter in P or N                                 |
-| Gated Coil Drive      | Interlock relay output   | Cole Hersee 24213 coil+           | 16 AWG     | ~1.6A    | ~1 ft (engine bay)                                               |
+| Crank Chain Supply    | PMU OUT24                | Dash push-button supply (cabin)   | 18 AWG     | ~1.6A    | Asserted by PMU state machine; routed through firewall to cabin  |
+| Push Button Output    | Dash push-button         | Brake switch (start tap)          | 18 AWG     | ~1.6A    | Cabin                                                            |
+| Brake-gated Start     | Brake switch (start tap) | Firewall Pin 15 → P/N relay contact | 18 AWG   | ~1.6A    | Via Deutsch HDP24-24-21 Pin 15                                   |
+| P/N Relay Coil        | Turbolamik P/N aux output| P/N interlock relay coil          | 18 AWG     | ~0.1A    | Engine bay; energized when shifter in P or N                     |
+| P/N Relay Output      | P/N interlock relay (NO) | Engine-running lockout relay      | 18 AWG     | ~1.6A    | Engine bay                                                       |
+| Engine-Run Relay Coil | Alternator B+ (filtered) | Engine-running relay coil         | 18 AWG     | ~0.1A    | Diode + zener filter; >13V threshold = engine running            |
+| Lockout-gated Drive   | Engine-running relay NC  | Cole Hersee 24213 coil+           | 16 AWG     | ~1.6A    | NC contacts: closed when engine off, opens once running          |
 | Solenoid Coil Ground  | Cole Hersee 24213 coil-  | Engine bay ground bus             | 16 AWG     | ~1.6A    | ~3 ft                                                            |
 | Solenoid Output       | Cole Hersee 24213 output | Starter solenoid switch post      | 10 AWG     | 30-75A   | ~2 ft                                                            |
 | Ground Return         | Starter case             | Engine block → START battery-     | 2/0 AWG    | 400-600A | Via engine bay ground bus                                        |
@@ -74,18 +76,22 @@ tags:
 ## Control Flow
 
 ```text
-Ignition RUN → START Button → Brake Switch → Pin 15 (firewall) →
-                                              P/N Interlock Relay (gated by Turbolamik P/N output)
-                                                         ↓
-                                              Cole Hersee 24213 Coil → Ground
-                                                         ↓
-                                              Solenoid Closes (button + brake + P or N all asserted)
-                                                         ↓
+PMU OUT24 (Ignition Authorize) → Push Button (cabin) → Brake Switch → Pin 15 (firewall) →
+                                                          P/N Relay (coil = Turbolamik P/N) →
+                                                          Engine-Running Lockout Relay (NC, coil = alternator) →
+                                                              ↓
+                                                          Cole Hersee 24213 Coil → Ground
+                                                              ↓
+                                                          Solenoid Closes (all four gates asserted)
+                                                              ↓
                               START battery Post → Cole Hersee Output → Starter Switch Post
-                                                         ↓
-                                              Main Solenoid Engages
-                                                         ↓
-                                                   Starter Cranks
+                                                              ↓
+                                                          Main Solenoid Engages
+                                                              ↓
+                                                              Starter Cranks
+                                                              ↓
+                                                  Engine starts → alternator output rises →
+                                                  Engine-Running Relay opens → Cole Hersee de-energized
 ```
 
 ## Starter Motor Terminals
@@ -116,14 +122,12 @@ Ignition RUN → START Button → Brake Switch → Pin 15 (firewall) →
 
 - Large Stud 1 (Input): From START battery post (M8 terminal, 10 AWG)
 - Large Stud 2 (Output): To starter switch post (6.3mm female push-on, 10 AWG)
-- Small Terminal 1 (Coil+): From P/N interlock relay output (16-18 AWG)
+- Small Terminal 1 (Coil+): From engine-running lockout relay NC output (16-18 AWG)
 - Small Terminal 2 (Coil-): To engine bay ground bus (16-18 AWG)
 
 ## Outstanding Items
 
-- [ ] Select dash START push-button (momentary, normally open, illuminated preferred)
-- [ ] Select P/N interlock relay (low-current automotive relay, ~30A SPST)
-- [ ] Confirm Turbolamik aux output configured for P/N (12V when in P or N)
+Starter-circuit-specific items are tracked in the [Keyless Ignition][keyless-ignition] doc and the [TBD Tracker][tbd-tracker], since the new crank chain is part of the keyless ignition design.
 
 See [installation checklist][install-checklist] for build tasks.
 
@@ -136,6 +140,7 @@ See [installation checklist][install-checklist] for build tasks.
 - [Engine Bay Ground Bus][engine-bay-ground-bus] - Ground connections
 - [Power Generation][power-generation] - Battery specifications
 - [Wire Distance Reference][wire-distance] - Starter to battery routing distances
+- [Keyless Ignition][keyless-ignition] - State machine driving OUT24 and the crank chain
 
 [db-starter]: https://www.dbelectrical.com/products/starter-for-2-8-cummins-isf2-8-qsb3-9-30-qsb4-5-4996706-428000-7090.html
 [starter-battery-distribution]: ../01-power-systems/02-starter-battery-distribution/index.md
@@ -144,3 +149,5 @@ See [installation checklist][install-checklist] for build tasks.
 [engine-bay-ground-bus]: ../01-power-systems/05-grounding/01-engine-bay-ground-bus.md
 [power-generation]: ../01-power-systems/01-power-generation/index.md
 [wire-distance]: ../01-power-systems/01-power-generation/05-wire-distance-reference.md
+[keyless-ignition]: ../05-control-interfaces/06-keyless-ignition.md
+[tbd-tracker]: ../09-installation/00-tbd-tracker.md

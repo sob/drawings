@@ -9,7 +9,7 @@ hide:
 
 **Last Updated:** 2026-05-20
 
-**Total Open Items:** 25
+**Total Open Items:** 36
 
 ---
 
@@ -32,8 +32,17 @@ Items needed before installation begins but not system-critical.
 | Dakota Digital Panel Mounting     | HDPE sheet dimensions and location                              | [Wire Routing][wire-routing]   | High     |
 | Turbolamik Aux: Reverse           | Confirm aux output channel + pinout configured for Reverse signal → PMU In 3 | [Transmission][transmission]   | High     |
 | Turbolamik Aux: P/N               | Confirm aux output channel + pinout configured for P/N (start interlock) | [Transmission][transmission]   | High     |
-| Dash START Push-Button            | Select momentary push-button (illuminated, dash-mountable) for keyless start | [Starter][starter-doc]         | High     |
-| P/N Interlock Relay               | Select SPST automotive relay for P/N gate in engine bay         | [Starter][starter-doc]         | High     |
+| Dash Push-Button (Keyless)        | Select 19/22mm illuminated momentary NO push-button for keyless start/stop | [Keyless Ignition][keyless]   | High     |
+| Boomerang Bullet 230              | Order RFID receiver + fob; mounting location under dash         | [Keyless Ignition][keyless]   | High     |
+| Boomerang Mounting Location       | Under-dash position near driver (3-6 ft range to driver seat)   | [Keyless Ignition][keyless]   | High     |
+| ECM Ignition Relay                | Select Hella/Bosch SPST 30-40A automotive relay                 | [Keyless Ignition][keyless]   | High     |
+| P/N Interlock Relay               | Select SPST 30A automotive relay (Turbolamik P/N → coil)        | [Keyless Ignition][keyless]   | High     |
+| Engine-Running Lockout Relay      | Select SPST 30A automotive relay with NC contacts               | [Keyless Ignition][keyless]   | High     |
+| Engine-Running Voltage Filter     | Design diode + zener + resistor filter on alternator B+ tap for lockout coil drive | [Keyless Ignition][keyless]   | High     |
+| Keyless Firewall Pin Assignments  | Assign 3 new HDP24 pins (fob, OUT24 supply, gated start return); current connector is full | [Firewall Ingress][firewall-ingress] | High     |
+| Hidden Bypass Toggle              | Select part + mounting location for emergency get-home bypass   | [Keyless Ignition][keyless]   | High     |
+| PMU Output Strategy (Keyless)     | Decide: OUT24-only + engine-running lockout (current plan) vs. free OUT15 winch trigger for dedicated crank output | [Keyless Ignition][keyless]   | High     |
+| PMU24 Keyless State Machine       | Program ECUMaster Light Client logic for OFF/RUN/CRANK transitions, fob detection, kill behavior | [PMU Programming][pmu-programming]   | High     |
 
 ---
 
@@ -159,11 +168,11 @@ Items completed since last update.
 | Priority    | Count  |
 | :---------- | :----- |
 | 🔴 Critical | 0      |
-| High        | 5      |
+| High        | 14     |
 | 📋 Medium   | 17     |
 | 📝 Low      | 4      |
 | 🔍 Verify   | 1      |
-| **TOTAL**   | **27** |
+| **TOTAL**   | **36** |
 
 ## Related Documentation
 
@@ -195,3 +204,6 @@ Items completed since last update.
 [rock-lights]: ../04-offroad-lighting/06-rock-lights.md
 [transmission]: ../10-drivetrain/01-transmission.md
 [starter-doc]: ../02-engine-systems/01-starter.md
+[keyless]: ../05-control-interfaces/06-keyless-ignition.md
+[pmu-programming]: ../01-power-systems/04-pmu/04-pmu-programming.md
+[firewall-ingress]: ../01-power-systems/07-wire-routing/02-firewall-ingress.md
