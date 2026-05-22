@@ -40,6 +40,7 @@ Components organized by estimated cost for purchase planning (Black Friday, sale
 | Maxbilt Round Trail Tail Light | Maxbilt | ~$200 | |
 | JL Audio M6-650VEX-Mb-S-GmTi-i (Rear) | JL Audio | ~$600 | Pair |
 | Blue Sea / Electrical Distribution | Blue Sea Systems | ~$500 | Bus bars, CBs, etc. |
+| Garmin Tread 2 - Overland Edition | Garmin | ~$899 | Amex points; [Navigation][navigation] |
 
 ---
 
@@ -52,7 +53,6 @@ Major components - watch for sales, consider financing options.
 | Premier Power Welder HO-C28 Alternator (270A) | Premier Power Welder | $899.95 | High | [Product Page][alternator] |
 | ECUMaster PMU24 DL | ECUMaster | ~$1,200 | High | [PMU Overview][pmu] |
 | Command Touch CT4 | SwitchPros | ~$500 | High | [CT4][ct4] |
-| Garmin Tread XL - Overland Edition | Garmin | ~$800 | Low | [Navigation][navigation] |
 | ECUMaster ADU7 Rev 2 Display | ECUMaster | ~$500 | Low | [ADU7][adu7] |
 | ARB CKBLTA12 Twin Compressor | ARB | ~$900 | Medium | [Air Compressor][air-compressor] |
 

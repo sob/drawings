@@ -17,7 +17,7 @@ Radio communication and camera systems for vehicle-to-vehicle coordination and s
 | [Intercom][intercom]       | Rugged Radio STX    |     2A | PMU OUT20            |
 | [Ham Radio][ham-radio]     | Future              |    15A | PMU OUT12 (reserved) |
 | [Dash Camera][dash-camera] | WolfBox G900 TriPro |     5A | BODY PDU CB39        |
-| [Navigation][navigation]   | Garmin Tread XL     |     2A | SwitchPros OUT-8     |
+| [Navigation][navigation]   | Garmin Tread 2 Overland |     2A | SwitchPros OUT-8     |
 
 **Total System Power:** ~25A peak (radio transmitting + intercom + camera + navigation)
 
