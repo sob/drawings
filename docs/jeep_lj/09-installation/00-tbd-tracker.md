@@ -9,7 +9,7 @@ hide:
 
 **Last Updated:** 2026-05-25
 
-**Total Open Items:** 22
+**Total Open Items:** 33
 
 ---
 
@@ -44,13 +44,7 @@ Items that improve the design but don't block installation.
 | Dash to Console Routing                | Switch panels, USB, radio                                                        | [Wire Routing][wire-routing]         | Medium   |
 | Cab to Cargo Routing                   | Rear lights, compressor, lockers                                                 | [Wire Routing][wire-routing]         | Medium   |
 | Roof/Roll Bar Routing                  | Light bars, dome lights                                                          | [Wire Routing][wire-routing]         | Medium   |
-| 3-Position Selector Switch Assignment  | Which SwitchPros output controls                                                 | [Dashboard Controls][dash-controls]  | Medium   |
 | Speaker Mounting Locations             | Dash end caps or kick panels                                                     | [Audio Systems][audio-systems]       | Medium   |
-| Horn Relay Specs                       | Contact rating, coil voltage                                                     | [CT4][ct4]                           | Medium   |
-| Horn Load                              | Factory Jeep horn amperage (3-6A)                                                | [CT4][ct4]                           | Medium   |
-| Horn Circuit Protection                | Inline fuse/breaker (10A typical)                                                | [CT4][ct4]                           | Medium   |
-| Winch 3-Position Switch Assignment     | Which SwitchPros output controls                                                 | [Recovery Systems][recovery-systems] | Medium   |
-| Cummins Harness Wire Count             | Wire bundle specification for engine harness                                     | [Wire Routing][wire-routing]         | Medium   |
 | RF Power Grommet Location              | Grommet 6 location near battery for radio power                                  | [Wire Routing][wire-routing]         | Medium   |
 | Solar Panel Wire Gauge                 | Wire sizing for Cascadia 4x4 80W panel connection                                | [BCDC][bcdc]                         | Medium   |
 | Alternator Output Terminal Size        | Terminal size for 1/0 AWG lug selection                                          | [Alternator][alternator]             | Medium   |
@@ -58,6 +52,9 @@ Items that improve the design but don't block installation.
 | BODY PDU Metri-Pack Pinout             | J301-J306 connector pinout (military TM or reverse engineering)                  | [BODY PDU][body-rtmr]                | Medium   |
 | BODY PDU 12V Relay Part Numbers        | Replacement part numbers for K40, K42, K53 (currently 24V coils)                 | [BODY PDU][body-rtmr]                | Medium   |
 | Winch Control Wire Routing             | Routing path from dash to bumper (~15-20 ft through multiple zones)              | [Dashboard Controls][dash-controls]  | Medium   |
+| Winch Rocker Switch Sourcing           | Center-off momentary rocker switch (SPDT or DPDT, 10A rated)                     | [Dashboard Controls][dash-controls]  | Medium   |
+| Rear Seat Switch Mounting Location     | Physical mounting location for Blue Sea 4160 push button (rear roll bar lights)  | [Dashboard Controls][dash-controls]  | Medium   |
+| Fusion Apollo Amp Distance & Drop      | Wire distance and resulting voltage drop for MS-AP61800 (CONSTANT bus stud 5)    | [Constant Bus][constant-bus]         | Medium   |
 
 ---
 
@@ -67,8 +64,6 @@ Items that can be determined during build.
 
 | Item                              | Description                                                                     | File                                 | Priority |
 | :-------------------------------- | :------------------------------------------------------------------------------ | :----------------------------------- | :------- |
-| Horn Button Type                  | Momentary or latching                                                           | [CT4][ct4]                           | Low      |
-| WolfBox License Plate Integration | With existing license plate lights                                              | [Communication][communication]       | Low      |
 | BIM Module Current Draw           | Current draw for BIM-17-2, BIM-11-2, BIM-12-2, BIM-13-2 (powered via BIM cable) | [Gauge Cluster][gauge-cluster]       | Low      |
 | LED4Life Wire Colors              | Confirm pod wire colors match MLC-RW pinout before install                      | [Footwell Lights][footwell-lights]   | Low      |
 
@@ -84,12 +79,43 @@ Items that are estimated and need actual product specs to confirm.
 
 ---
 
+## 🚙 DRIVETRAIN (Section 10)
+
+Mechanical drivetrain specifications, tracked separately from the electrical build. Most items need component selection before parts ordering.
+
+| Item                              | Description                                                                                  | File                              | Priority |
+| :-------------------------------- | :------------------------------------------------------------------------------------------- | :-------------------------------- | :------- |
+| Transmission Shifter Type         | Electronic shifter input - depends on shifter selection                                      | [Transmission][transmission]      | Medium   |
+| Transmission Pilot Bearing        | If required by flywheel/crank combination                                                    | [Transmission][transmission]      | Medium   |
+| Transfer Case Specs               | Output type, fluid type and capacity                                                         | [Transfer Case][transfer-case]    | Medium   |
+| Front Driveshaft Specs            | Type, length, U-joint selection                                                              | [Driveshafts][driveshafts]        | Medium   |
+| Rear Driveshaft Specs             | Type, length, U-joint selection                                                              | [Driveshafts][driveshafts]        | Medium   |
+| Front Axle Gearing & Manufacturer | Ratio and axle housing manufacturer                                                          | [Front Axle][front-axle]          | Medium   |
+| Rear Axle Gearing & Locker        | Ratio, manufacturer, and locker type                                                         | [Rear Axle][rear-axle]            | Medium   |
+| Front Suspension Components       | Coil rate, bypass valving, control arms, track bar, sway bar                                 | [Suspension][suspension]          | Medium   |
+| Rear Suspension Components        | Coil rate, bypass valving, control arms, track bar, sway bar                                 | [Suspension][suspension]          | Medium   |
+| Hydroboost Pump Specs             | Model, flow rate, pressure, drive type                                                       | [Steering][steering]              | Medium   |
+| Hydroboost Ram Specs              | Model, bore, stroke, mount type                                                              | [Steering][steering]              | Medium   |
+| Suspension Geometry               | Departure and breakover angles (calculated from chosen suspension)                           | [Suspension][suspension]          | Low      |
+| Hydroboost Reservoir & Fluid      | Reservoir type/capacity/location and fluid type/capacity                                     | [Steering][steering]              | Low      |
+
+---
+
 ## RECENTLY RESOLVED
 
 Items completed since last update.
 
 | Item                          | Resolution                                                                                                                    | Date       |
 | :---------------------------- | :---------------------------------------------------------------------------------------------------------------------------- | :--------- |
+| Horn Relay Specs              | None required - PMU OUT 18 switches PIAA horns directly, no external relay                                                    | 2026-05-25 |
+| Horn Load                     | 5.4A (PIAA 2.7A × 2)                                                                                                          | 2026-05-25 |
+| Horn Circuit Protection       | None required - PMU OUT 18 has integrated electronic overcurrent/thermal protection                                           | 2026-05-25 |
+| Horn Button Type              | Momentary (steering wheel button → PMU In 1)                                                                                  | 2026-05-25 |
+| WolfBox License Plate         | Resolved - rear camera mounts above license plate; integration with plate lights not required                                 | 2026-05-25 |
+| 3-Position Selector Switch    | Obsolete entry - no such switch in current design (SwitchPros outputs used directly)                                          | 2026-05-25 |
+| Winch 3-Position Switch       | Obsolete entry - winch uses BODY PDU-fed center-off momentary rocker, not SwitchPros                                          | 2026-05-25 |
+| Cummins Harness Wire Count    | Use factory bulkhead connector as-is; no per-wire enumeration needed                                                          | 2026-05-25 |
+| R2.8 ECM A/C Pin (source sync)| Source file `02-engine-systems/03-hvac.md` updated to remove stale TBD; matches 2025-11-28 tracker resolution                 | 2026-05-25 |
 | ADU7 Supplemental Display     | Removed from build - PMU OUT14 freed, An 5-8 returned to Available, boost/EGT/AUX-voltage sensors no longer required          | 2026-05-25 |
 | Ham Radio                     | Removed from build - PMU OUT12 freed, firewall pin 2 freed, radio ground run eliminated                                       | 2026-05-25 |
 | R2.8 ECM A/C Request Input    | CM2220 has no A/C request input - not applicable                                                                             | 2025-11-28 |
@@ -154,14 +180,15 @@ Items completed since last update.
 
 ## Summary by Priority
 
-| Priority    | Count  |
-| :---------- | :----- |
-| 🔴 Critical | 0      |
-| High        | 1      |
-| 📋 Medium   | 17     |
-| 📝 Low      | 4      |
-| 🔍 Verify   | 1      |
-| **TOTAL**   | **23** |
+| Priority         | Count  |
+| :--------------- | :----- |
+| 🔴 Critical      | 0      |
+| High             | 1      |
+| 📋 Medium        | 16     |
+| 📝 Low           | 2      |
+| 🔍 Verify        | 1      |
+| 🚙 Drivetrain    | 13     |
+| **TOTAL**        | **33** |
 
 ## Related Documentation
 
@@ -192,3 +219,10 @@ Items completed since last update.
 [footwell-lights]: ../04-offroad-lighting/09-footwell-lights.md
 [rock-lights]: ../04-offroad-lighting/06-rock-lights.md
 [transmission]: ../10-drivetrain/01-transmission.md
+[transfer-case]: ../10-drivetrain/02-transfer-case.md
+[driveshafts]: ../10-drivetrain/03-driveshafts.md
+[front-axle]: ../10-drivetrain/04-front-axle.md
+[rear-axle]: ../10-drivetrain/05-rear-axle.md
+[suspension]: ../10-drivetrain/06-suspension.md
+[steering]: ../10-drivetrain/07-steering.md
+[constant-bus]: ../01-power-systems/03-aux-battery-distribution/02-constant-bus.md
