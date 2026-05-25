@@ -46,12 +46,12 @@ RF interference analysis determined that with ferrite chokes on radio power lead
 
 ## Pin Assignment
 
-### Engine Bay → Cabin (6 wires)
+### Engine Bay → Cabin (5 wires)
 
 | Pin | Circuit | Gauge | Source | Destination | Contact |
 |:---:|:--------|:-----:|:-------|:------------|:-------:|
 | 1 | GMRS Radio power (+) | 14 AWG | PMU OUT6 | Midland G1 | #16 |
-| 2 | Ham Radio power (+) | 14 AWG | PMU OUT12 | iCom IC-2730A | #16 |
+| 2 | **[Available]** | - | - | - | #16 |
 | 3 | STX Intercom power | 14 AWG | PMU OUT20 | STX intercom | #16 |
 | 4 | Brake lights | 16 AWG | PMU OUT21 | Rear tail lights | #16 |
 | 5 | Reverse lights | 16 AWG | PMU OUT22 | Rear tail lights | #16 |
@@ -99,7 +99,6 @@ Radio grounds do NOT go through firewall - they route through cab floor to START
 | Circuit | Gauge | Source | Destination |
 |:--------|:-----:|:-------|:------------|
 | GMRS Radio ground (-) | 14 AWG | Midland G1 | START battery negative |
-| Ham Radio ground (-) | 14 AWG | iCom IC-2730A | START battery negative |
 | STX Intercom ground (-) | 14 AWG | STX | START battery negative |
 
 **Routing:** Radios (cabin) → under seat/floor → frame rail → START battery negative (driver wheel well)
@@ -110,10 +109,10 @@ Radio grounds do NOT go through firewall - they route through cab floor to START
 
 | Gauge | Count | Circuits |
 |:------|:-----:|:---------|
-| 14 AWG | 7 | Radio power (3), CT4 outputs (4) |
+| 14 AWG | 6 | Radio power (2), CT4 outputs (4) |
 | 16 AWG | 3 | PMU lighting outputs |
 | 18 AWG | 7 | Switch signals (5), winch control (2) |
-| **Main Connector** | **17** | HDP24-24-21 |
+| **Main Connector** | **16** | HDP24-24-21 (1 spare cavity at pin 2 + 4 reserved size 12) |
 | 22 AWG | 2 | Temp probe (separate grommet) |
 
 ---
@@ -124,10 +123,10 @@ Radio grounds do NOT go through firewall - they route through cab floor to START
 |:------------|:------------|:---:|:------:|
 | HDP24-24-21PE-L015 | 21-pin receptacle, flange mount | 1 | $35 |
 | HDP26-24-21SE | 21-pin plug | 1 | $25 |
-| 0460-202-16141 | Size 16 pin, solid, nickel | 17 | $0.50 ea |
-| 0462-201-16141 | Size 16 socket, solid, nickel | 17 | $0.55 ea |
+| 0460-202-16141 | Size 16 pin, solid, nickel | 16 | $0.50 ea |
+| 0462-201-16141 | Size 16 socket, solid, nickel | 16 | $0.55 ea |
 | 114017 | Sealing plug, size 12 cavity | 4 | $0.25 ea |
-| 114018 | Sealing plug, size 16 cavity | 4 | $0.25 ea |
+| 114018 | Sealing plug, size 16 cavity | 5 | $0.25 ea |
 
 **Estimated Total:** ~$80
 

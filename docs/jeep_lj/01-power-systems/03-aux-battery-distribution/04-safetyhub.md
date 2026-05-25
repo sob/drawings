@@ -30,7 +30,7 @@ Provides fused distribution for recovery and auxiliary systems powered by the AU
 
 **Power Source:** CONSTANT bus via 150A CB - see [Circuit Breakers][circuit-breakers]
 
-**Note:** Communications systems (GMRS, Intercom, Ham Radio) are powered via PMU outputs - see [PMU Outputs][pmu-outputs]
+**Note:** Communications systems (GMRS, Intercom) are powered via PMU outputs - see [PMU Outputs][pmu-outputs]
 
 !!! note "Future-Proof Capacity"
 Wire and CB sized for full 150A SafetyHub capacity (current load 100A). Provides 50A headroom for additional recovery or auxiliary systems.
@@ -72,7 +72,7 @@ Winch motor power (400A peak) connects directly to AUX battery positive terminal
 
 - [AUX Battery Distribution Overview][aux-battery]
 - [Circuit Breakers][circuit-breakers] - 150A CB protection
-- [PMU Outputs][pmu-outputs] - Communications system power (GMRS, Intercom, Ham Radio)
+- [PMU Outputs][pmu-outputs] - Communications system power (GMRS, Intercom)
 - [Standards Exceptions][standards-exceptions] - Winch protection strategy documentation
 
 **Connected Systems:**

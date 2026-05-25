@@ -7,7 +7,7 @@ hide:
 
 **Purpose:** Central tracking for all To-Be-Determined items across the Jeep LJ electrical system documentation.
 
-**Last Updated:** 2025-11-28
+**Last Updated:** 2026-05-25
 
 **Total Open Items:** 22
 
@@ -90,6 +90,8 @@ Items completed since last update.
 
 | Item                          | Resolution                                                                                                                    | Date       |
 | :---------------------------- | :---------------------------------------------------------------------------------------------------------------------------- | :--------- |
+| ADU7 Supplemental Display     | Removed from build - PMU OUT14 freed, An 5-8 returned to Available, boost/EGT/AUX-voltage sensors no longer required          | 2026-05-25 |
+| Ham Radio                     | Removed from build - PMU OUT12 freed, firewall pin 2 freed, radio ground run eliminated                                       | 2026-05-25 |
 | R2.8 ECM A/C Request Input    | CM2220 has no A/C request input - not applicable                                                                             | 2025-11-28 |
 | Fusion Amp Mounting           | Back firewall in cab                                                                                                          | 2025-11-28 |
 | STX Intercom Mounting         | Dash/behind dash                                                                                                              | 2025-11-28 |

@@ -53,7 +53,6 @@ Major components - watch for sales, consider financing options.
 | ECUMaster PMU24 DL | ECUMaster | ~$1,200 | High | [PMU Overview][pmu] |
 | Command Touch CT4 | SwitchPros | ~$500 | High | [CT4][ct4] |
 | Garmin Tread XL - Overland Edition | Garmin | ~$800 | Low | [Navigation][navigation] |
-| ECUMaster ADU7 Rev 2 Display | ECUMaster | ~$500 | Low | [ADU7][adu7] |
 | ARB CKBLTA12 Twin Compressor | ARB | ~$900 | Medium | [Air Compressor][air-compressor] |
 
 ---
@@ -140,7 +139,7 @@ _(Most electrical distribution components already purchased - see Purchased Item
 
 | Category | Est. Total | Priority Items |
 |:---------|:-----------|:---------------|
-| ECUMaster (PMU24 + ADU7) | ~$1,700 | PMU24 critical |
+| ECUMaster PMU24 | ~$1,200 | PMU24 critical |
 | Command Touch CT4 | ~$500 | Critical for lighting |
 | Alternator | ~$900 | Critical |
 | iBooster + Harness | ~$500-700 | Critical for brakes |
@@ -148,7 +147,7 @@ _(Most electrical distribution components already purchased - see Purchased Item
 | Baja Designs Lighting | ~$5,000 | Medium-Low |
 | Audio (Amp, Sub, Front Speakers) | ~$1,350 | Low |
 | Misc Small Parts | ~$500 | Various |
-| **TOTAL REMAINING** | **~$11,500-12,000** | |
+| **TOTAL REMAINING** | **~$11,000-11,500** | |
 
 ---
 
@@ -171,7 +170,7 @@ _(Most electrical distribution components already purchased - see Purchased Item
 | [Crutchfield][crutch-site] | Fusion, JL Audio | Often includes install kits |
 | [Amazon][amazon] | Blue Sea, generic | Prime deals, price tracking |
 | [Premier Power Welder][ppw-site] | Alternator | Direct only |
-| [ECUMaster][ecum-site] | PMU24, ADU7 | Direct only |
+| [ECUMaster][ecum-site] | PMU24 | Direct only |
 | [SwitchPros][sp-site] | SP-1200, CT4 | Direct only |
 | [Dakota Digital][dd-site] | Gauge cluster, BIMs | Dealer network |
 
@@ -190,7 +189,6 @@ _(Most electrical distribution components already purchased - see Purchased Item
 [gauge-cluster]: ../02-engine-systems/09-gauge-cluster/index.md
 [navigation]: ../07-communication-systems/05-navigation.md
 [bcdc]: ../01-power-systems/01-power-generation/03-bcdc.md
-[adu7]: ../02-engine-systems/10-adu7-display/index.md
 [winch]: ../08-exterior-systems/01-winch.md
 [air-compressor]: ../08-exterior-systems/02-air-compressor.md
 [ibooster]: ../02-engine-systems/02-brake-booster.md
