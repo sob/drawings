@@ -45,7 +45,6 @@ Complete drivetrain system documentation for the Jeep LJ build.
 
 ## Outstanding Items
 
-- [ ] Select 8HP70 transmission controller (Compushift vs US Shift Quick 8)
 - [ ] Document driveshaft specifications
 
 ## Related Documentation

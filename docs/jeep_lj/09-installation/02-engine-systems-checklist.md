@@ -24,6 +24,14 @@ Organized by installation order for efficient build workflow.
 
 - [ ] Order Ron Francis WS-51C wiper controller module
 
+### Runaway Protection
+
+- [ ] Order Mishimoto MMOCC-CBT catch can + MMOCC-UB bracket
+- [ ] Order AMOT 4261M02A027-AA air shutoff valve (2.8", manual/pneumatic, NPT)
+- [ ] Order Midwest Control 30-144-TTL-BH-3 push-pull cable + T-handle
+- [ ] Measure R2.8 turbo inlet OD and order matching NPT-to-hose adapters
+- [ ] Source 2 ft of 5/8" oil-resistant hose + worm clamps for catch can plumbing
+
 ---
 
 ## Phase 1: Starter System
@@ -33,9 +41,16 @@ Organized by installation order for efficient build workflow.
 - [ ] Confirm Cole Hersee 24213 solenoid mounted on firewall (engine bay side)
 - [ ] Confirm 10 AWG from starter battery post to Cole Hersee input
 - [ ] Confirm 10 AWG from Cole Hersee output to starter switch post
-- [ ] Confirm 16 AWG ignition START wire routed through firewall to clutch switch
-- [ ] Confirm clutch safety switch wired to Cole Hersee coil+
+- [ ] Confirm PMU OUT24 (Ignition Authorize) routed through firewall to dash push-button supply
+- [ ] Confirm push-button output (cabin) wired in series with brake pedal switch start tap
+- [ ] Confirm gated start signal routed through firewall Pin 15 → P/N relay contact in engine bay
+- [ ] Confirm P/N interlock relay coil driven by Turbolamik P/N aux output
+- [ ] Confirm engine-running lockout relay coil sensed from alternator B+ via filter circuit
+- [ ] Confirm engine-running lockout relay NC contacts in series with Cole Hersee coil+
 - [ ] Confirm Cole Hersee coil- grounded to engine bay ground bus
+- [ ] Confirm ECM ignition relay coil driven by PMU OUT24 (parallel to crank chain supply)
+- [ ] Confirm Boomerang Bullet 230 mounted, powered (CONSTANT), and output to PMU In 4
+- [ ] Confirm hidden bypass toggle installed (battery+ via 5A fuse → ECM relay coil)
 
 ---
 
@@ -103,7 +118,37 @@ Organized by installation order for efficient build workflow.
 
 ---
 
-## Phase 8: Testing
+## Phase 8: Runaway Protection
+
+### Catch Can Installation
+
+- [ ] Confirm Mishimoto MMOCC-UB bracket mounted to selected engine bay location (TBD - intake side, away from exhaust)
+- [ ] Confirm MMOCC-CBT catch can installed vertically with petcock at bottom
+- [ ] Confirm 5/8" hose from R2.8 valve cover breather to catch can INLET (worm clamps both ends)
+- [ ] Confirm 5/8" hose from catch can OUTLET to turbo inlet (worm clamps both ends)
+- [ ] Verify catch can petcock closed before first engine start
+- [ ] Verify no hose chafing against engine, exhaust, or moving parts
+
+### AMOT Air Shutoff Installation
+
+- [ ] Confirm AMOT 4261M02A027-AA installed in pre-turbo intake tract (between air filter outlet and turbo inlet)
+- [ ] Confirm NPT-to-hose adapters secure on both AMOT ports
+- [ ] Confirm AMOT butterfly cocks fully open and latches; verify lever orientation matches cable pull direction
+- [ ] Confirm intake clamps torqued on both sides of AMOT (no boost or vacuum leaks)
+- [ ] Confirm AMOT body oriented so the trip lever clears engine bay obstructions through full motion
+
+### Cable and T-Handle Installation
+
+- [ ] Confirm Midwest 30-144-TTL-BH-3 T-handle mounted at selected dash location (TBD)
+- [ ] Confirm cable conduit passes through dedicated firewall grommet (TBD - must not share with other cables)
+- [ ] Confirm cable secured every 12" with adel clamps; no sharp bends (≥6" radius)
+- [ ] Confirm cable end attaches to AMOT trip lever; pull stroke ≥0.5" past trip point
+- [ ] Confirm T-handle sits flush against dash bezel when AMOT is cocked open
+- [ ] Confirm T-handle is labeled `EMERGENCY ENGINE SHUTOFF — PULL TO STOP`
+
+---
+
+## Phase 9: Testing
 
 ### iBooster Testing
 
@@ -133,9 +178,15 @@ Organized by installation order for efficient build workflow.
 
 ### Starter Testing
 
-- [ ] Verify clutch pedal switch prevents starting when clutch released
-- [ ] Verify starter engages when clutch depressed and key in START
-- [ ] Verify starter disengages cleanly when key released
+- [ ] Verify starter does NOT crank with shifter in R, D, or manual gates (P/N interlock relay open)
+- [ ] Verify starter does NOT crank when brake pedal is released (brake interlock open)
+- [ ] Verify starter does NOT crank when push-button is not pressed
+- [ ] Verify starter does NOT crank without Boomerang fob present (PMU blocks OUT24 assertion)
+- [ ] Verify starter cranks when fob + push-button + brake + P/N all asserted (engine off)
+- [ ] Verify engine-running lockout opens once alternator output > 13V (no Bendix re-engagement)
+- [ ] Verify push-button press while engine running kills the engine (OUT24 de-asserts, ECM off)
+- [ ] Verify hidden bypass toggle powers ECM ignition relay independent of PMU
+- [ ] Verify Boomerang fob lost while running does NOT kill the engine (PMU stay-on logic)
 
 ### Grid Heater Testing
 
@@ -154,6 +205,15 @@ Organized by installation order for efficient build workflow.
 - [ ] Verify inverted duty cycle behavior (high duty = low speed)
 - [ ] Tune temperature setpoints for R2.8 under real-world conditions
 
+### Runaway Protection Testing
+
+- [ ] Static test: engine OFF, pull T-handle, verify AMOT butterfly snaps fully closed (visual through air filter housing)
+- [ ] Reset test: re-cock AMOT manually, push T-handle to flush, verify butterfly returns fully open
+- [ ] Cable freedom: pull T-handle through full 3" stroke, verify no binding in conduit
+- [ ] Functional test (with engine running at idle, away from people/objects): pull T-handle, verify engine stalls within 2 seconds
+- [ ] Catch can drain check: after first 100 miles, drain petcock and inspect for oil collection (confirms PCV flow)
+- [ ] Visual inspection: verify catch can hoses, AMOT cable, and conduit show no chafing or heat damage
+
 ---
 
 ## Reference Documentation
@@ -165,6 +225,7 @@ Organized by installation order for efficient build workflow.
 - **Wipers:** [Wiper System][wipers]
 - **Horn:** [Horn System][horn]
 - **Radiator Fan:** [Radiator Fan System][radiator-fan]
+- **Runaway Protection:** [Diesel Runaway Protection][runaway-protection]
 
 [tulays-harness]: https://tulayswirewerks.com/product/bosch-ibooster-gen-2-universal-wire-harness/
 [starter]: ../02-engine-systems/01-starter.md
@@ -174,3 +235,4 @@ Organized by installation order for efficient build workflow.
 [wipers]: ../02-engine-systems/04-wipers.md
 [horn]: ../02-engine-systems/05-horn.md
 [radiator-fan]: ../02-engine-systems/06-radiator-fan.md
+[runaway-protection]: ../02-engine-systems/11-runaway-protection.md

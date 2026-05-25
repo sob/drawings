@@ -24,17 +24,17 @@ tags:
 
 ## Overview
 
-Distributes low-current 12V ignition sense signal from keyswitch RUN terminal to non-critical convenience devices.
+Distributes low-current 12V ignition sense signal to non-critical convenience devices. With the keyswitch removed (see [Keyless Ignition][keyless-ignition]), the bus bar input is now sourced from the **ECM Ignition Relay** — a switched relay driven by PMU OUT24 whenever the state machine is in RUN or CRANK.
 
 **Location:** Cabin side of firewall
 
 **Function:** Signal distribution only (not a power bus)
 
 !!! info "Critical Systems Use Dedicated Wires"
-Critical engine and power management systems use dedicated wires directly from the keyswitch, NOT this bus bar, for maximum reliability. This includes:
+Critical engine and power management systems take their own switched supply directly from the ECM Ignition Relay (or PMU OUT24 tap), NOT through this bus bar, for maximum reliability. This includes:
 
-    - **PMU 12V Switched Input (Physical Pin 7):** Direct wire for ignition sense and power reference - see [PMU Inputs][pmu-inputs]
-    - **Starter Control:** Direct keyswitch → clutch switch → relay path - see [Starter System][starter-system]
+    - **PMU 12V Switched Input (Physical Pin 7):** Direct wire from ECM Ignition Relay output - see [PMU Inputs][pmu-inputs]
+    - **Starter Control:** Hardware crank chain (push button → brake → P/N relay → engine-running lockout → Cole Hersee) supplied by PMU OUT24 - see [Starter System][starter-system] and [Keyless Ignition][keyless-ignition]
 
     **Note:** PMU "Pin 7" (physical connector pin for 12V switched power) is different from PMU "In 7" (digital input channel #7 used for CT4 headlight status).
 
@@ -50,7 +50,7 @@ Critical engine and power management systems use dedicated wires directly from t
 
 | Stud/Terminal           | Connection                | Wire Gauge   | Distance              | Max Current     | Notes                                              |
 | :---------------------- | :------------------------ | :----------- | :-------------------- | :-------------- | :------------------------------------------------- |
-| **Stud 1 (5/16")**      | **Keyswitch RUN (INPUT)** | **18 AWG ✓** | **Through Grommet 2** | **~80mA total** | **Already fused at keyswitch**                     |
+| **Stud 1 (5/16")**      | **ECM Ignition Relay output (INPUT)** | **18 AWG ✓** | **Through firewall (engine bay → cabin)** | **~80mA total** | **5A inline fuse at relay**                     |
 | Stud 2 (5/16")          | **[Available]**           | -            | -                     | -               | Future high-current signal                         |
 | Terminal 1 (#10-24)     | Command Touch CT4         | 18 AWG ✓     | ~3 ft                 | ~20mA           | Ignition sense for turn signal auto-cancel         |
 | Terminal 2 (#10-24)     | SwitchPros SP-1200        | 18 AWG ✓     | ~4 ft                 | ~20mA           | Pin 3 (Lt Blue) - ignition sense                   |
@@ -63,9 +63,9 @@ Critical engine and power management systems use dedicated wires directly from t
 
 ## Mounting
 
-**Location:** Cabin side of firewall near keyswitch
+**Location:** Cabin side of firewall, behind dash (former keyswitch location now repurposed)
 
-**Benefits:** Single firewall penetration (input only), all outputs routed within cabin
+**Benefits:** Single firewall penetration (input only — from ECM Ignition Relay in engine bay), all outputs routed within cabin
 
 ## Related Documentation
 
@@ -79,3 +79,5 @@ Critical engine and power management systems use dedicated wires directly from t
 [pmu-inputs]: ../04-pmu/02-pmu-inputs.md
 [firewall-ingress]: ../07-wire-routing/02-firewall-ingress.md
 [bcdc]: ../01-power-generation/03-bcdc.md
+[keyless-ignition]: ../../05-control-interfaces/06-keyless-ignition.md
+[starter-system]: ../../02-engine-systems/01-starter.md

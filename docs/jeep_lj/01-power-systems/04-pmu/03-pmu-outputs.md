@@ -48,7 +48,7 @@ Complete configuration of all 24 PMU outputs, load allocations, and combined out
 | **Out 21** | Brake Lights             | ~3A  | [SwitchPros Ground Bus][switchpros-ground]            | External input      | Shared tail light ground       |
 | **Out 22** | Reverse Lights           | ~5A  | [SwitchPros Ground Bus][switchpros-ground]            | External input      | Maxbilt + Squadron Sport       |
 | **Out 23** | DRL/Parking Lights       | ~2A  | [SwitchPros Ground Bus][switchpros-ground]            | Auto (ignition)     | See [DRL & Parking][drl-parking-lights] |
-| **Out 24** | **[Available]**          | -    | -                                                     | -                   | Future expansion (7A)          |
+| **Out 24** | Ignition Authorize       | ~5A  | Via downstream loads                                  | PMU state machine   | Drives ECM ignition relay + supplies hardware crank chain (push button → brake → P/N → ER lockout → Cole Hersee). See [Keyless Ignition][keyless-ignition] |
 
 ## Combined Outputs
 
@@ -121,3 +121,4 @@ Complete configuration of all 24 PMU outputs, load allocations, and combined out
 [windshield-wiper-control-system]: ../../02-engine-systems/04-wipers.md
 [drl-parking-lights]: ../../03-lighting-systems/05-drl-parking.md
 [adu7-display]: ../../02-engine-systems/10-adu7-display/index.md
+[keyless-ignition]: ../../05-control-interfaces/06-keyless-ignition.md

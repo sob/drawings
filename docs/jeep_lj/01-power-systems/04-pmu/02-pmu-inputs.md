@@ -9,7 +9,7 @@ PMU input configuration including digital inputs, analog inputs, CAN bus integra
 
 ## 12V Switched Input (Pin 7)
 
-**Source:** Dedicated 18 AWG wire from ignition switch RUN terminal
+**Source:** Dedicated 18 AWG wire from ECM Ignition Relay output (relay driven by PMU OUT24 when state machine is in RUN or CRANK — see [Keyless Ignition][keyless-ignition])
 
 **Function:** Provides switched power reference for PMU logic
 
@@ -27,17 +27,18 @@ See [Ignition Signal Distribution](#ignition-signal-distribution) for complete w
 | :------- | :------------------- | :--------------------------- | :---------------------- | :--------------------------------------- |
 | **In 1** | Horn Button          | Steering wheel button        | Out 18 (Horn)           | Normally open, closes when pressed       |
 | **In 2** | Brake Switch         | Brake pedal switch           | Out 21 (Brake Lights)   | Normally open, closes when pedal pressed |
-| **In 3** | Reverse Switch       | AX15 trans switch            | Out 22 (Reverse Lights) | Normally open, closes in reverse gear    |
-| **In 4** | **[Available]**      | -                            | -                       | Available for future expansion           |
-| **In 5** | **[Available]**      | -                            | -                       | Available for future expansion           |
-| **In 6** | **[Available]**      | -                            | -                       | Available for future expansion           |
+| **In 3** | Reverse Signal       | Turbolamik aux output (Reverse) | Out 22 (Reverse Lights) | 12V from TCU when 8HP70 in Reverse       |
+| **In 4** | Boomerang Fob Present | Bullet 230 transistor output | OUT24 logic (ignition)  | 12V active when RFID fob in range        |
+| **In 5** | Push Button (Start/Stop) | Dash momentary button     | OUT24 logic (state machine) | 12V on press; toggles ignition state  |
+| **In 6** | Turbolamik P/N        | Turbolamik P/N aux output    | OUT24 logic + crank gate | 12V when 8HP70 shifter in P or N        |
 | **In 7** | CT4 SW3 (Headlights) | CT4 lever pull               | Out 14 (DRL) logic      | 12V when headlights active, disables DRL |
 | **In 8** | **[Available]**      | -                            | -                       | Available for future expansion           |
 | **In 9** | A/C Request          | Factory TJ A/C button signal | Out 17 (A/C Clutch)     | 12V when factory dash A/C button pressed |
 
-**Note:** Starter system uses traditional direct control (keyswitch → clutch switch → relay) independent of PMU. See [Starter System][starter].
+**Note:** Keyless ignition state machine runs on PMU. OUT24 drives the ECM ignition relay coil and supplies the hardware crank chain (push button → brake → P/N relay → engine-running lockout → Cole Hersee 24213). See [Keyless Ignition][keyless-ignition] and [Starter System][starter].
 
 [starter]: ../../02-engine-systems/01-starter.md
+[keyless-ignition]: ../../05-control-interfaces/06-keyless-ignition.md
 
 ## Analog Inputs
 
@@ -91,9 +92,9 @@ See [PMU Programming][pmu-programming] for CAN-based logic examples.
 
 ## Ignition Signal Distribution
 
-**PMU Pin 7:** Dedicated 18 AWG wire directly from keyswitch RUN terminal (NOT from ignition signal bus bar)
+**PMU Pin 7:** Dedicated 18 AWG wire directly from ECM Ignition Relay output (NOT from ignition signal bus bar)
 
-**Routing:** Through firewall (Grommet 2) to PMU Pin 7
+**Routing:** Engine bay (relay → PMU Pin 7), no firewall crossing required
 
 **Purpose:** Critical PMU functions have guaranteed power independent of other devices
 

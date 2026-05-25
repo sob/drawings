@@ -46,7 +46,7 @@ RF interference analysis determined that with ferrite chokes on radio power lead
 
 ## Pin Assignment
 
-### Engine Bay → Cabin (6 wires)
+### Engine Bay → Cabin (7 wires)
 
 | Pin | Circuit | Gauge | Source | Destination | Contact |
 |:---:|:--------|:-----:|:-------|:------------|:-------:|
@@ -56,8 +56,11 @@ RF interference analysis determined that with ferrite chokes on radio power lead
 | 4 | Brake lights | 16 AWG | PMU OUT21 | Rear tail lights | #16 |
 | 5 | Reverse lights | 16 AWG | PMU OUT22 | Rear tail lights | #16 |
 | 6 | DRL/Parking | 16 AWG | PMU OUT23 | Rear tail lights | #16 |
+| 12 | Ignition signal bus feed + dash button supply | 18 AWG | ECM Ignition Relay output (EB) | Ignition signal bus bar (cabin); also taps to dash push-button supply | #16 |
 
-### Cabin → Engine Bay (11 wires)
+### Cabin → Engine Bay (10 wires)
+
+Pin 12 was reassigned from "Ignition sense" (cabin→EB) to "Ignition signal bus feed" (EB→cabin) when the keyswitch was removed.
 
 | Pin | Circuit | Gauge | Source | Destination | Contact |
 |:---:|:--------|:-----:|:-------|:------------|:-------:|
@@ -66,10 +69,9 @@ RF interference analysis determined that with ferrite chokes on radio power lead
 | 9 | Low beam headlights | 14 AWG | CT4 SW3 | LP6 Pin 1 (both) | #16 |
 | 10 | High beam headlights | 14 AWG | CT4 SW4 | LP6 Pin 4 (both) | #16 |
 | 11 | Horn button trigger | 18 AWG | Steering wheel button | PMU In 1 | #16 |
-| 12 | Ignition sense | 18 AWG | Ignition switch RUN | PMU Pin 7 | #16 |
 | 13 | Brake switch | 18 AWG | Brake pedal switch | PMU In 2 | #16 |
 | 14 | A/C request | 18 AWG | HVAC controls | PMU In 9 | #16 |
-| 15 | Clutch switch | 18 AWG | Clutch pedal switch | Starter circuit | #16 |
+| 15 | Push button → PMU + crank chain | 18 AWG | Dash push-button (NO) | PMU In 5 + brake switch start tap | #16 |
 | 16 | Winch control IN | 18 AWG | Dash rocker switch | Winch contactor | #16 |
 | 17 | Winch control OUT | 18 AWG | Dash rocker switch | Winch contactor | #16 |
 
@@ -77,7 +79,14 @@ RF interference analysis determined that with ferrite chokes on radio power lead
 
 | Pin | Contact | Notes |
 |:---:|:-------:|:------|
-| A-D | #12 | Size 12 cavities reserved for future 10-12 AWG circuits |
+| A-D | #12 | Size 12 cavities — candidate slots for outstanding keyless system signals (fob present, gated start return); will need size 16→12 reducer crimps or size 12 contacts on 18 AWG wires |
+
+**Keyless Ignition Outstanding Pins:** Two additional pins still need allocation:
+
+1. **Boomerang fob present** (cabin → EB): Bullet 230 output to PMU In 4
+2. **Gated start return** (cabin → EB): brake switch start tap → engine bay P/N relay
+
+Current 17 size-16 contacts are fully assigned. Options under consideration in [Keyless Ignition][keyless-ignition]: use two of the size-12 reserved cavities, or add a small secondary connector for keyless signals.
 
 ---
 
@@ -158,6 +167,7 @@ PMU In 7 receives the headlight status signal from this tap, enabling DRL auto-o
 - [Intercom][intercom] - STX power routing
 
 [wire-routing]: index.md
+[keyless-ignition]: ../../05-control-interfaces/06-keyless-ignition.md
 [pmu-outputs]: ../04-pmu/03-pmu-outputs.md
 [pmu-inputs]: ../04-pmu/02-pmu-inputs.md
 [ct4]: ../../05-control-interfaces/03-command-touch-ct4.md

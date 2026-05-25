@@ -101,7 +101,7 @@ Main control box for HDX instrument system. Processes sensor inputs, BIM module 
 | **LEFT**                 | 18 AWG ✓    | CT4 left turn output         | HDX LEFT input          | Left turn indicator                              |
 | **RIGHT**                | 18 AWG ✓    | CT4 right turn output        | HDX RIGHT input         | Right turn indicator                             |
 | **4x4/EX**               | 18 AWG ✓    | Transfer case switch         | HDX 4x4/EX input        | 4WD/4LO indicators                               |
-| GEAR                     | -           | -                            | -                       | Not used (manual transmission)                   |
+| GEAR                     | -           | BIM-01-2 J1939               | -                       | Gear position read from Turbolamik J1939 broadcast (no discrete input wiring) |
 | **WAIT/EX**              | 18 AWG ✓    | ECM harness                  | HDX WAIT/EX input       | Wait-to-start indicator (active high)            |
 | EX                       | -           | -                            | -                       | Reserved                                         |
 | EX                       | -           | -                            | -                       | Reserved                                         |
