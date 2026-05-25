@@ -206,7 +206,6 @@ Items completed since last update.
 [roof-lights]: ../04-offroad-lighting/03-roof-lights.md
 [rear-lights]: ../04-offroad-lighting/08-rear-lights.md
 [footwell-lights]: ../04-offroad-lighting/09-footwell-lights.md
-[rock-lights]: ../04-offroad-lighting/06-rock-lights.md
 [transmission]: ../10-drivetrain/01-transmission.md
 [starter-doc]: ../02-engine-systems/01-starter.md
 [keyless]: ../05-control-interfaces/06-keyless-ignition.md

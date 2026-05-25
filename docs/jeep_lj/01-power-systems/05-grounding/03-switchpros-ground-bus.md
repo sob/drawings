@@ -35,7 +35,7 @@ tags:
 | Stud/Terminal           | Connection                        | Wire Gauge    | Distance     | Max Current     | Notes                                  |
 | :---------------------- | :-------------------------------- | :------------ | :----------- | :-------------- | :------------------------------------- |
 | **Stud 1 (5/16")**      | **Chassis Ground (INPUT)**        | **1/0 AWG ✓** | **Variable** | **~100A total** | **Primary bus ground - to frame rail** |
-| Stud 2 (5/16")          | **[Available]**                   | -             | -            | -               | Future high-current ground             |
+| Stud 2 (5/16")          | **\[Available\]**                   | -             | -            | -               | Future high-current ground             |
 | Terminal 1 (#10-24)     | SwitchPros controller             | 14 AWG ✓      | ~2 ft        | <1A             | Controller logic ground (via harness)  |
 | Terminal 2 (#10-24)     | Headlights (LP6) - pair 1         | 16 AWG ✓      | ~10 ft       | ~8A             | See [Headlights][headlights]           |
 | Terminal 3 (#10-24)     | Headlights (LP6) - pair 2         | 16 AWG ✓      | ~10 ft       | ~8A             | See [Headlights][headlights]           |
@@ -44,7 +44,7 @@ tags:
 | Terminal 6 (#10-24)     | Roof lights (8x XL Sport)         | 14 AWG ✓      | ~8 ft        | ~18A            | Single circuit via XL Linkable harness |
 | Terminal 7 (#10-24)     | Ditch lights                      | 16 AWG ✓      | ~8 ft        | ~8A             | Auxiliary lighting                     |
 | Terminal 8 (#10-24)     | Rock lights                       | 16 AWG ✓      | ~6 ft        | ~5A             | Auxiliary lighting                     |
-| Terminals 9-12 (#10-24) | **[Available]**                   | -             | -            | -               | Future expansion (4 terminals)         |
+| Terminals 9-12 (#10-24) | **\[Available\]**                   | -             | -            | -               | Future expansion (4 terminals)         |
 
 **Utilization:** 9 of 14 used (1 stud + 8 terminals used, 1 stud + 4 terminals available)
 

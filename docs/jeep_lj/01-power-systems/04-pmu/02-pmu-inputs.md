@@ -32,7 +32,7 @@ See [Ignition Signal Distribution](#ignition-signal-distribution) for complete w
 | **In 5** | Push Button (Start/Stop) | Dash momentary button     | OUT24 logic (state machine) | 12V on press; toggles ignition state  |
 | **In 6** | Turbolamik P/N        | Turbolamik P/N aux output    | OUT24 logic + crank gate | 12V when 8HP70 shifter in P or N        |
 | **In 7** | CT4 SW3 (Headlights) | CT4 lever pull               | Out 14 (DRL) logic      | 12V when headlights active, disables DRL |
-| **In 8** | **[Available]**      | -                            | -                       | Available for future expansion           |
+| **In 8** | **\[Available\]**      | -                            | -                       | Available for future expansion           |
 | **In 9** | A/C Request          | Factory TJ A/C button signal | Out 17 (A/C Clutch)     | 12V when factory dash A/C button pressed |
 
 **Note:** Keyless ignition state machine runs on PMU. OUT24 drives the ECM ignition relay coil and supplies the hardware crank chain (push button → brake → P/N relay → engine-running lockout → Cole Hersee 24213). See [Keyless Ignition][keyless-ignition] and [Starter System][starter].
@@ -44,12 +44,12 @@ See [Ignition Signal Distribution](#ignition-signal-distribution) for complete w
 
 | Input       | Physical Pin | Range | Function                    | Notes                                          |
 | :---------- | :----------- | :---- | :-------------------------- | :--------------------------------------------- |
-| **An 1-4**  | Dedicated    | 0-5V  | **[Available]**             | Future expansion                               |
+| **An 1-4**  | Dedicated    | 0-5V  | **\[Available\]**             | Future expansion                               |
 | **An 5**    | Dedicated    | 0-5V  | Boost Pressure              | 0-5V transducer, displayed on ADU7             |
 | **An 6**    | Dedicated    | 0-5V  | EGT (Exhaust Gas Temp)      | Thermocouple + amplifier, displayed on ADU7    |
 | **An 7**    | Dedicated    | 0-5V  | AUX Battery Voltage         | Voltage divider circuit, displayed on ADU7     |
-| **An 8**    | Dedicated    | 0-5V  | **[Available]**             | Future expansion                               |
-| **An 9-16** | OUT17-24     | 0-20V | **[Configured as outputs]** | Dual-purpose pins - currently used as OUT17-24 |
+| **An 8**    | Dedicated    | 0-5V  | **\[Available\]**             | Future expansion                               |
+| **An 9-16** | OUT17-24     | 0-20V | **\[Configured as outputs\]** | Dual-purpose pins - currently used as OUT17-24 |
 
 **Current Configuration:** An 9-16 configured as outputs (OUT17-24). See [PMU Outputs][pmu-outputs] for output assignments.
 

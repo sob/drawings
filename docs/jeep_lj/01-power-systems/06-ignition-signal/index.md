@@ -51,13 +51,13 @@ Critical engine and power management systems take their own switched supply dire
 | Stud/Terminal           | Connection                | Wire Gauge   | Distance              | Max Current     | Notes                                              |
 | :---------------------- | :------------------------ | :----------- | :-------------------- | :-------------- | :------------------------------------------------- |
 | **Stud 1 (5/16")**      | **ECM Ignition Relay output (INPUT)** | **18 AWG ✓** | **Through firewall (engine bay → cabin)** | **~80mA total** | **5A inline fuse at relay**                     |
-| Stud 2 (5/16")          | **[Available]**           | -            | -                     | -               | Future high-current signal                         |
+| Stud 2 (5/16")          | **\[Available\]**           | -            | -                     | -               | Future high-current signal                         |
 | Terminal 1 (#10-24)     | Command Touch CT4         | 18 AWG ✓     | ~3 ft                 | ~20mA           | Ignition sense for turn signal auto-cancel         |
 | Terminal 2 (#10-24)     | SwitchPros SP-1200        | 18 AWG ✓     | ~4 ft                 | ~20mA           | Pin 3 (Lt Blue) - ignition sense                   |
 | Terminal 3 (#10-24)     | Fusion MS-RA670 Radio     | 18 AWG ✓     | ~2 ft                 | ~20mA           | Yellow wire - ignition sense                       |
 | Terminal 4 (#10-24)     | BCDC Alpha 50             | 18 AWG ✓     | ~12 ft                | ~20mA           | Blue wire - activates charging when engine running |
-| Terminal 5 (#10-24)     | **[Available]**           | -            | -                     | -               | Future ignition-switched device                    |
-| Terminals 6-12 (#10-24) | **[Available]**           | -            | -                     | -               | Future expansion (7 terminals)                     |
+| Terminal 5 (#10-24)     | **\[Available\]**           | -            | -                     | -               | Future ignition-switched device                    |
+| Terminals 6-12 (#10-24) | **\[Available\]**           | -            | -                     | -               | Future expansion (7 terminals)                     |
 
 **Utilization:** 5 of 14 used (1 stud + 4 terminals used, 1 stud + 8 terminals available)
 

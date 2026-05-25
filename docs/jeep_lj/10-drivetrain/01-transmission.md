@@ -208,7 +208,6 @@ The Turbolamik communicates with the Cummins R2.8 ECM via J1939 CAN for:
 
 [transfer-case]: 02-transfer-case.md
 [pmu-inputs]: ../01-power-systems/04-pmu/02-pmu-inputs.md
-[pmu-outputs]: ../01-power-systems/04-pmu/03-pmu-outputs.md
 [engine]: ../02-engine-systems/index.md
 [starter]: ../02-engine-systems/01-starter.md
 [bim-j1939]: ../02-engine-systems/09-gauge-cluster/03-bim-j1939.md

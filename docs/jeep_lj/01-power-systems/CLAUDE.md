@@ -51,11 +51,11 @@ Ignition sense signal to CT4, SwitchPros, Fusion Radio, BCDC
 
 | Question                                  | Answer Location                                            |
 | :---------------------------------------- | :--------------------------------------------------------- |
-| Where does [component] get power?         | Battery distribution `index.md` terminal tables            |
-| What's on PMU OUT[X]?                     | `04-pmu/03-pmu-outputs.md`                                 |
-| Where does [wire] route through firewall? | `02-engine-systems/07-firewall-ingress.md`                 |
-| What CB protects [load]?                  | Battery distribution `01-circuit-breakers.md`              |
-| Where does [component] ground?            | `05-grounding/` or battery distribution for direct grounds |
+| Where does \[component\] get power?         | Battery distribution `index.md` terminal tables            |
+| What's on PMU OUT\[X\]?                     | `04-pmu/03-pmu-outputs.md`                                 |
+| Where does \[wire\] route through firewall? | `02-engine-systems/07-firewall-ingress.md`                 |
+| What CB protects \[load\]?                  | Battery distribution `01-circuit-breakers.md`              |
+| Where does \[component\] ground?            | `05-grounding/` or battery distribution for direct grounds |
 
 ## When Changing Content
 
