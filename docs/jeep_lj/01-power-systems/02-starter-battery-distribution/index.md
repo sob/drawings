@@ -45,7 +45,6 @@ All circuit breakers mounted within 7" of battery (ABYC/NEC compliant). See [Cir
 | [AUX Battery][aux-battery]                 | Passenger wheel well | 1/0 AWG     | 5-6 ft   | 75A max    | <0.05V @ 20°C |
 | [G1 GMRS Radio][radios]                    | Dashboard            | 10 AWG      | ~8 ft    | 15A TX     | 1.2% @ 20°C   |
 | [STX Intercom][radios]                     | Dashboard            | 10 AWG      | ~8 ft    | 5A         | 0.4% @ 20°C   |
-| [Ham Radio][radios]                        | Dashboard            | 10 AWG      | ~8 ft    | 13A TX     | 1.0% @ 20°C   |
 
 Radio grounds direct to battery for RF noise isolation. ECM/grid heater via Cummins harness to isolate from starter spikes.
 

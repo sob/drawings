@@ -74,7 +74,6 @@ Organized by installation order for efficient build workflow.
 **Radio Grounds (RF Noise Isolation):**
 
 - [ ] Confirm 10 AWG: GMRS Radio ground → START battery- (route through floor/frame, ~8 ft)
-- [ ] Confirm 10 AWG: Ham Radio ground → START battery- (route through floor/frame, ~8 ft)
 - [ ] Confirm 10 AWG: STX Intercom ground → START battery- (route through floor/frame, ~8 ft)
 
 **Testing:**
@@ -233,9 +232,7 @@ Create 12 custom 2-pin Delphi harnesses at SwitchPros:
 **15A Outputs:**
 
 - [ ] Confirm wipers (WS-51C) → OUT11 (15A) - ground: Firewall Stud Bus T2
-- [ ] Confirm Ham Radio → OUT12 (13A) - ground: direct to START battery-
 - [ ] Confirm CT4 → OUT13 (9A, CONSTANT) - ground: Firewall Stud Bus T1
-- [ ] Confirm ADU7 Display → OUT14 (2A) - ground: A-pillar
 - [ ] Confirm winch contactor trigger → OUT15 (1A) - control signal only
 
 **7A Outputs:**

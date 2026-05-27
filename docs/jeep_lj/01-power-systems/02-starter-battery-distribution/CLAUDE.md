@@ -42,7 +42,7 @@ Documents START battery power distribution from the driver wheel well (Odyssey P
 
 **"Where does BCDC get power?"** → `02-constant-bus.md` → `01-circuit-breakers.md`
 
-**"Where do radios/intercom get power?"** → PMU outputs (Section 1.4) - OUT6 (GMRS), OUT12 (Ham), OUT20 (Intercom)
+**"Where do radios/intercom get power?"** → PMU outputs (Section 1.4) - OUT6 (GMRS), OUT20 (Intercom)
 
 ## When Updating
 

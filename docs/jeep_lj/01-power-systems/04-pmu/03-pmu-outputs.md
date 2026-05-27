@@ -29,9 +29,9 @@ Complete configuration of all 24 PMU outputs, load allocations, and combined out
 | Output     | Circuit                   | Load | Ground                                                | Control Type         | Notes                                         |
 | :--------- | :------------------------ | :--- | :---------------------------------------------------- | :------------------- | :-------------------------------------------- |
 | **Out 11** | WS-51C Wiper Controller   | 15A  | [Firewall Stud Bus][firewall-ground] T2               | Auto (ignition ON)   | See [Wipers][windshield-wiper-control-system] |
-| **Out 12** | Ham Radio (iCom IC-2730A) | 13A  | [Direct START battery-][starter-battery-distribution] | CONSTANT             | RF noise isolation                            |
+| **Out 12** | **[Available]**           | -    | -                                                     | -                    | Future expansion (15A)                        |
 | **Out 13** | Command Touch CT4         | ~9A  | [Firewall Stud Bus][firewall-ground] T1               | CONSTANT             | Turn signals, headlights, hazards             |
-| **Out 14** | ADU7 Display              | ~2A  | A-pillar ground                                       | Auto (ignition ON)   | See [ADU7 Display][adu7-display]              |
+| **Out 14** | **[Available]**           | -    | -                                                     | -                    | Future expansion (15A)                        |
 | **Out 15** | Winch Contactor Trigger   | 1A   | Via winch contactor                                   | Manual (dash rocker) | Control signal only                           |
 | **Out 16** | Turbolamik TCU            | 15A  | Engine bay ground bus                                 | CONSTANT             | 8HP70 transmission controller                 |
 
@@ -74,8 +74,7 @@ Complete configuration of all 24 PMU outputs, load allocations, and combined out
 | :---------- | :--------------- | :--------------------------------------- | :---------------------------- | :---------- | :------------------------------------------------------------------------ |
 | **OUT1+10** | 40A peak (brief) | 46A @ 40°C (non-adjacent)<br/>50A @ 23°C | 87% @ 40°C peak<br/>1% @ idle | ✓ EXCELLENT | iBooster - non-adjacent combining eliminates thermal concerns, 0.25A idle |
 | **OUT5**    | 20A continuous   | 23A (single @ 40°C)                      | 87%                           | ✓ OK        | HVAC blower - relocated from OUT1, same thermal margin                    |
-| **OUT11**   | 15A continuous   | 19A (1.5mm terminal)                     | 79%                           | ✓ OK        | Wiper controller - avoid adjacent to OUT12 if possible                    |
-| **OUT12**   | 15A (if used)    | 19A (1.5mm terminal)                     | 79%                           | ✓ OK        | Available - avoid adjacent to OUT11 if possible                           |
+| **OUT11**   | 15A continuous   | 19A (1.5mm terminal)                     | 79%                           | ✓ OK        | Wiper controller - avoid adjacent high-current load on OUT12              |
 
 **Installation Notes:**
 
@@ -120,5 +119,4 @@ Complete configuration of all 24 PMU outputs, load allocations, and combined out
 [hvac-system]: ../../02-engine-systems/03-hvac.md
 [windshield-wiper-control-system]: ../../02-engine-systems/04-wipers.md
 [drl-parking-lights]: ../../03-lighting-systems/05-drl-parking.md
-[adu7-display]: ../../02-engine-systems/10-adu7-display/index.md
 [keyless-ignition]: ../../05-control-interfaces/06-keyless-ignition.md

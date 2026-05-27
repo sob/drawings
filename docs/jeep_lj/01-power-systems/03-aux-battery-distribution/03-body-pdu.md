@@ -79,7 +79,7 @@ tags:
 **Control:** All circuits on CONSTANT power with trigger-wire or manual switch control for on/off
 
 !!! info "Communication Devices"
-G1 GMRS Radio, STX Intercom, and Ham Radio are powered from [SafetyHub 150][safetyhub] (START battery) as critical infrastructure, with direct grounds to START battery to minimize RF noise.
+G1 GMRS Radio and STX Intercom are powered from [SafetyHub 150][safetyhub] (START battery) as critical infrastructure, with direct grounds to START battery to minimize RF noise.
 
 ## Outstanding Items
 
