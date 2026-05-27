@@ -186,9 +186,9 @@ It is intentional adherence to:
    - Thermal time constant >> cranking duration
    - No fire hazard during normal cranking
 
-2. **Clutch Safety Interlock**
-   - Prevents starter engagement unless clutch depressed
-   - Reduces accidental cranking scenarios
+2. **Brake + START Button + P/N Interlock**
+   - Prevents starter engagement unless brake pressed, START button held, and shifter in P or N
+   - Triple gate eliminates accidental cranking and in-gear cranking
 
 3. **Two-Stage Relay Control**
    - Cole Hersee 24213 solenoid controls high current

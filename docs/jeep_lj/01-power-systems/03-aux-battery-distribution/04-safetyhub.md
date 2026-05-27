@@ -49,11 +49,11 @@ Wire and CB sized for full 150A SafetyHub capacity (current load 100A). Provides
 | :----- | :--- | :----------------------------------- | :--------- | :------- | :------------- | :--- | :-------------------------------------------------- |
 | MIDI-1 | 60A  | [ARB Compressor][air-system] Motor 1 | 6 AWG ✓    | ~12 ft   | 11.56V (3.6%)  | 45A  | Passenger wheel well → cargo → under passenger seat |
 | MIDI-2 | 60A  | [ARB Compressor][air-system] Motor 2 | 6 AWG ✓    | ~12 ft   | 11.56V (3.6%)  | 45A  | Passenger wheel well → cargo → under passenger seat |
-| MIDI-3 | -    | **[Available]**                      | -          | -        | -              | -    | -                                                   |
+| MIDI-3 | -    | **\[Available\]**                      | -          | -        | -              | -    | -                                                   |
 | ATC-1  | 15A  | Winch Contactor Trigger              | 14 AWG ✓   | ~13 ft   | 13.70V (0.8%)  | 10A  | Passenger wheel well → front bumper via frame rail  |
-| ATC-2  | -    | **[Available]**                      | -          | -        | -              | -    | -                                                   |
-| ATC-3  | -    | **[Available]**                      | -          | -        | -              | -    | -                                                   |
-| ATC-4  | -    | **[Available]**                      | -          | -        | -              | -    | -                                                   |
+| ATC-2  | -    | **\[Available\]**                      | -          | -        | -              | -    | -                                                   |
+| ATC-3  | -    | **\[Available\]**                      | -          | -        | -              | -    | -                                                   |
+| ATC-4  | -    | **\[Available\]**                      | -          | -        | -              | -    | -                                                   |
 
 **Slot Utilization:** 3 of 7 used (2 MIDI + 1 ATC, 4 available)
 

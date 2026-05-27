@@ -55,7 +55,7 @@ tags:
 | CB42        | 2WAY INTRCM             | Passenger Heated Seat       | 20A  | 14AWG | 5A peak, 2A sustained | K22   | Manual switch → relay K22 → seat element    |
 | CB20        | RADIO                   | Cargo Lights                | 10A  | 16AWG | 4A                    | -     | Switch on wheel well top                    |
 | CB43        | TRANS ECU               | Winch Control (dash rocker) | 10A  | 18AWG | ~2A                   | -     | Dash rocker + remote parallel control       |
-| CB44        | TRLR LIGHT              | **[Available]**             | -    | -     | -                     | -     | Future expansion                            |
+| CB44        | TRLR LIGHT              | **\[Available\]**             | -    | -     | -                     | -     | Future expansion                            |
 
 **Circuit Breaker Utilization:** 7 of 8 used (1 available)
 
@@ -65,12 +65,12 @@ tags:
 | :------------- | :---------------------- | :-------------------- | :------ | :---------- | :------------------------------------- |
 | K21            | REAR LEFT LIGHT         | Driver Heated Seat    | 12V     | Dash switch | Controls CB45 output to driver seat    |
 | K22            | REAR RIGHT LIGHT        | Passenger Heated Seat | 12V     | Dash switch | Controls CB42 output to passenger seat |
-| K27            | TRAILER BO STOP         | **[Available]**       | 12V     | -           | Future expansion                       |
-| K30            | TRAILER REAR LEFT       | **[Available]**       | 12V     | -           | Future expansion                       |
-| K31            | TRAILER REAR RIGHT      | **[Available]**       | 12V     | -           | Future expansion                       |
-| K53            | RADIO                   | **[Available]**       | 24V→12V | -           | Replace with 12V relay                 |
-| K40            | START DISABEL           | **[Available]**       | 24V→12V | -           | Replace with 12V relay                 |
-| K42            | ENGINE PTO              | **[Available]**       | 24V→12V | -           | Replace with 12V relay                 |
+| K27            | TRAILER BO STOP         | **\[Available\]**       | 12V     | -           | Future expansion                       |
+| K30            | TRAILER REAR LEFT       | **\[Available\]**       | 12V     | -           | Future expansion                       |
+| K31            | TRAILER REAR RIGHT      | **\[Available\]**       | 12V     | -           | Future expansion                       |
+| K53            | RADIO                   | **\[Available\]**       | 24V→12V | -           | Replace with 12V relay                 |
+| K40            | START DISABEL           | **\[Available\]**       | 24V→12V | -           | Replace with 12V relay                 |
+| K42            | ENGINE PTO              | **\[Available\]**       | 24V→12V | -           | Replace with 12V relay                 |
 
 **Relay Utilization:** 2 of 8 used, 6 available (3 require 12V relay replacement)
 

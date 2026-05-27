@@ -7,9 +7,9 @@ hide:
 
 **Purpose:** Central tracking for all To-Be-Determined items across the Jeep LJ electrical system documentation.
 
-**Last Updated:** 2026-05-25
+**Last Updated:** 2026-05-27
 
-**Total Open Items:** 33
+**Total Open Items:** 51
 
 ---
 
@@ -30,6 +30,24 @@ Items needed before installation begins but not system-critical.
 | Item                              | Description                                                     | File                           | Priority |
 | :-------------------------------- | :-------------------------------------------------------------- | :----------------------------- | :------- |
 | Dakota Digital Panel Mounting     | HDPE sheet dimensions and location                              | [Wire Routing][wire-routing]   | High     |
+| Turbolamik Aux: Reverse           | Confirm aux output channel + pinout configured for Reverse signal → PMU In 3 | [Transmission][transmission]   | High     |
+| Turbolamik Aux: P/N               | Confirm aux output channel + pinout configured for P/N (start interlock) | [Transmission][transmission]   | High     |
+| Dash Push-Button (Keyless)        | Select 19/22mm illuminated momentary NO push-button for keyless start/stop | [Keyless Ignition][keyless]   | High     |
+| Boomerang Bullet 230              | Order RFID receiver + fob; mounting location under dash         | [Keyless Ignition][keyless]   | High     |
+| Boomerang Mounting Location       | Under-dash position near driver (3-6 ft range to driver seat)   | [Keyless Ignition][keyless]   | High     |
+| ECM Ignition Relay                | Select Hella/Bosch SPST 30-40A automotive relay                 | [Keyless Ignition][keyless]   | High     |
+| P/N Interlock Relay               | Select SPST 30A automotive relay (Turbolamik P/N → coil)        | [Keyless Ignition][keyless]   | High     |
+| Engine-Running Lockout Relay      | Select SPST 30A automotive relay with NC contacts               | [Keyless Ignition][keyless]   | High     |
+| Engine-Running Voltage Filter     | Design diode + zener + resistor filter on alternator B+ tap for lockout coil drive | [Keyless Ignition][keyless]   | High     |
+| Keyless Firewall Pin Assignments  | Assign 3 new HDP24 pins (fob, OUT24 supply, gated start return); current connector is full | [Firewall Ingress][firewall-ingress] | High     |
+| Hidden Bypass Toggle              | Select part + mounting location for emergency get-home bypass   | [Keyless Ignition][keyless]   | High     |
+| PMU Output Strategy (Keyless)     | Decide: OUT24-only + engine-running lockout (current plan) vs. free OUT15 winch trigger for dedicated crank output | [Keyless Ignition][keyless]   | High     |
+| PMU24 Keyless State Machine       | Program ECUMaster Light Client logic for OFF/RUN/CRANK transitions, fob detection, kill behavior | [PMU Programming][pmu-programming]   | High     |
+| R2.8 Turbo Inlet OD               | Measure turbo inlet tube outside diameter to confirm AMOT 4261M-02 (2.8" body) fitment and select intake-side adapter | [Runaway Protection][runaway-protection] | High     |
+| AMOT-to-Intake Adapters           | Source NPT-to-hose fittings sized to match measured turbo inlet OD                                | [Runaway Protection][runaway-protection] | High     |
+| AMOT T-Handle Mounting Location   | Select dash mounting position for Midwest Control 30-144-TTL-BH-3 (reachable belted, away from accidental contact) | [Runaway Protection][runaway-protection] | High     |
+| AMOT Cable Firewall Grommet       | Assign dedicated firewall grommet for AMOT push-pull cable pass-through (must not share with other cables) | [Runaway Protection][runaway-protection] | High     |
+| Catch Can Mounting Bracket Point  | Select engine bracketry attachment point for Mishimoto MMOCC-UB universal bracket                  | [Runaway Protection][runaway-protection] | High     |
 
 ---
 
@@ -183,12 +201,12 @@ Items completed since last update.
 | Priority         | Count  |
 | :--------------- | :----- |
 | 🔴 Critical      | 0      |
-| High             | 1      |
+| High             | 19     |
 | 📋 Medium        | 16     |
 | 📝 Low           | 2      |
 | 🔍 Verify        | 1      |
 | 🚙 Drivetrain    | 13     |
-| **TOTAL**        | **33** |
+| **TOTAL**        | **51** |
 
 ## Related Documentation
 
@@ -217,7 +235,6 @@ Items completed since last update.
 [roof-lights]: ../04-offroad-lighting/03-roof-lights.md
 [rear-lights]: ../04-offroad-lighting/08-rear-lights.md
 [footwell-lights]: ../04-offroad-lighting/09-footwell-lights.md
-[rock-lights]: ../04-offroad-lighting/06-rock-lights.md
 [transmission]: ../10-drivetrain/01-transmission.md
 [transfer-case]: ../10-drivetrain/02-transfer-case.md
 [driveshafts]: ../10-drivetrain/03-driveshafts.md
@@ -226,3 +243,8 @@ Items completed since last update.
 [suspension]: ../10-drivetrain/06-suspension.md
 [steering]: ../10-drivetrain/07-steering.md
 [constant-bus]: ../01-power-systems/03-aux-battery-distribution/02-constant-bus.md
+[starter-doc]: ../02-engine-systems/01-starter.md
+[keyless]: ../05-control-interfaces/06-keyless-ignition.md
+[pmu-programming]: ../01-power-systems/04-pmu/04-pmu-programming.md
+[firewall-ingress]: ../01-power-systems/07-wire-routing/02-firewall-ingress.md
+[runaway-protection]: ../02-engine-systems/11-runaway-protection.md

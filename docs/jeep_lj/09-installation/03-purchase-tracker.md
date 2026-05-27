@@ -40,6 +40,7 @@ Components organized by estimated cost for purchase planning (Black Friday, sale
 | Maxbilt Round Trail Tail Light | Maxbilt | ~$200 | |
 | JL Audio M6-650VEX-Mb-S-GmTi-i (Rear) | JL Audio | ~$600 | Pair |
 | Blue Sea / Electrical Distribution | Blue Sea Systems | ~$500 | Bus bars, CBs, etc. |
+| Garmin Tread 2 - Overland Edition | Garmin | ~$899 | Amex points; [Navigation][navigation] |
 
 ---
 
@@ -52,7 +53,6 @@ Major components - watch for sales, consider financing options.
 | Premier Power Welder HO-C28 Alternator (270A) | Premier Power Welder | $899.95 | High | [Product Page][alternator] |
 | ECUMaster PMU24 DL | ECUMaster | ~$1,200 | High | [PMU Overview][pmu] |
 | Command Touch CT4 | SwitchPros | ~$500 | High | [CT4][ct4] |
-| Garmin Tread XL - Overland Edition | Garmin | ~$800 | Low | [Navigation][navigation] |
 | ARB CKBLTA12 Twin Compressor | ARB | ~$900 | Medium | [Air Compressor][air-compressor] |
 
 ---
@@ -71,6 +71,7 @@ Major components - watch for sales, consider financing options.
 | ARB Air Tank (171601) | ARB | ~$200 | Medium | [Air Compressor][air-compressor] |
 | WolfBox G900 TriPro Dash Camera | WolfBox | ~$200 | Low | [Dash Camera][dash-camera] |
 | DB Electrical 410-52442 Starter | DB Electrical | ~$200 | High | [Starter][starter] |
+| AMOT 4261M02A027-AA Air Shutoff Valve | AMOT | ~$400-500 | High | 2.8" manual/pneumatic, NPT - [Runaway Protection][runaway-protection] |
 
 ---
 
@@ -132,6 +133,11 @@ _(Most electrical distribution components already purchased - see Purchased Item
 | 0-200 PSI Pressure Gauge | Generic | ~$20 | Medium | [Air Compressor][air-compressor] |
 | Air Chuck Plate and Fittings | Generic | ~$30 | Low | [Rear Air Chuck][rear-air-chuck] |
 | Center-Off Momentary Rocker Switch | Generic | ~$15 | Medium | Winch control - [Dashboard][dashboard] |
+| Mishimoto MMOCC-CBT Compact Baffled Catch Can | Mishimoto | ~$150 | High | 13 oz, petcock drain - [Runaway Protection][runaway-protection] |
+| Mishimoto MMOCC-UB Universal Mounting Bracket | Mishimoto | ~$40 | High | [Runaway Protection][runaway-protection] |
+| Midwest Control 30-144-TTL-BH-3 Push-Pull Cable | Midwest Control | ~$60-80 | High | 144" turn-to-lock T-handle, 3" travel - [Runaway Protection][runaway-protection] |
+| 5/8" Oil-Resistant Hose (2 ft) + Worm Clamps | Generic | ~$15 | High | Catch can plumbing - [Runaway Protection][runaway-protection] |
+| NPT-to-Hose Adapter Fittings (AMOT to intake) | Generic | ~$25 | High | Size per measured turbo inlet - [Runaway Protection][runaway-protection] |
 
 ---
 
@@ -184,9 +190,7 @@ _(Most electrical distribution components already purchased - see Purchased Item
 
 [alternator]: ../01-power-systems/01-power-generation/02-alternator.md
 [pmu]: ../01-power-systems/04-pmu/01-pmu-overview.md
-[switchpros]: ../05-control-interfaces/02-switchpros-sp1200.md
 [ct4]: ../05-control-interfaces/03-command-touch-ct4.md
-[gauge-cluster]: ../02-engine-systems/09-gauge-cluster/index.md
 [navigation]: ../07-communication-systems/05-navigation.md
 [bcdc]: ../01-power-systems/01-power-generation/03-bcdc.md
 [winch]: ../08-exterior-systems/01-winch.md
@@ -194,16 +198,13 @@ _(Most electrical distribution components already purchased - see Purchased Item
 [ibooster]: ../02-engine-systems/02-brake-booster.md
 [tulays]: https://tulayswirewerks.com/product/bosch-ibooster-gen-2-universal-wire-harness/
 [batteries]: ../01-power-systems/01-power-generation/01-batteries.md
-[head-unit]: ../06-audio-systems/01-head-unit.md
 [amplifier]: ../06-audio-systems/02-amplifier.md
 [subwoofer]: ../06-audio-systems/04-subwoofer.md
 [led-controller]: ../06-audio-systems/05-led-controller.md
-[gmrs]: ../07-communication-systems/01-gmrs-radio.md
 [intercom]: ../07-communication-systems/02-intercom.md
 [air-lockers]: ../08-exterior-systems/03-air-lockers.md
 [solar]: ../01-power-systems/01-power-generation/04-solar.md
 [dash-camera]: ../07-communication-systems/04-dash-camera.md
-[radiator-fan]: ../02-engine-systems/06-radiator-fan.md
 [starter]: ../02-engine-systems/01-starter.md
 [headlights]: ../03-lighting-systems/02-headlights.md
 [ditch-lights]: ../04-offroad-lighting/01-ditch-lights.md
@@ -213,14 +214,8 @@ _(Most electrical distribution components already purchased - see Purchased Item
 [rear-lights]: ../04-offroad-lighting/08-rear-lights.md
 [cargo-lights]: ../04-offroad-lighting/07-cargo-lights.md
 [chase-light]: ../04-offroad-lighting/04-chase-lights.md
-[rock-lights]: ../04-offroad-lighting/06-rock-lights.md
 [footwell-lights]: ../04-offroad-lighting/09-footwell-lights.md
-[tail-lights]: ../03-lighting-systems/04-tail-brake-reverse.md
 [speakers]: ../06-audio-systems/03-speakers.md
-[bim-gps]: ../02-engine-systems/09-gauge-cluster/04-bim-gps.md
-[bim-tpms]: ../02-engine-systems/09-gauge-cluster/05-bim-tpms.md
-[bim-compass]: ../02-engine-systems/09-gauge-cluster/06-bim-compass.md
-[safetyhub]: ../01-power-systems/03-aux-battery-distribution/04-safetyhub.md
 [body-pdu]: ../01-power-systems/03-aux-battery-distribution/03-body-pdu.md
 [wipers]: ../02-engine-systems/04-wipers.md
 [horn]: ../02-engine-systems/05-horn.md
@@ -229,6 +224,7 @@ _(Most electrical distribution components already purchased - see Purchased Item
 [dashboard]: ../05-control-interfaces/05-dashboard-controls.md
 [power-checklist]: 01-power-systems-checklist.md
 [engine-checklist]: 02-engine-systems-checklist.md
+[runaway-protection]: ../02-engine-systems/11-runaway-protection.md
 [tbd-tracker]: 00-tbd-tracker.md
 [bd-site]: https://www.bajadesigns.com/
 [4wp-site]: https://www.4wheelparts.com/

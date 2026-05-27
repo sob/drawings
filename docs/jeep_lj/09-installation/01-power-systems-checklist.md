@@ -207,7 +207,10 @@ Create 12 custom 2-pin Delphi harnesses at SwitchPros:
 - [ ] Confirm 18 AWG: Ignition RUN → PMU Pin 7 (dedicated wire, not from bus bar)
 - [ ] Confirm horn button → PMU In 1 (via Deutsch connector Pin 11)
 - [ ] Confirm brake pedal switch → PMU In 2 (via Deutsch connector Pin 13)
-- [ ] Confirm reverse switch → PMU In 3 (AX15 trans switch)
+- [ ] Confirm reverse signal → PMU In 3 (Turbolamik aux output, Reverse gear)
+- [ ] Confirm Boomerang fob present → PMU In 4 (via firewall pin TBD)
+- [ ] Confirm push-button → PMU In 5 (via Deutsch connector Pin 15)
+- [ ] Confirm Turbolamik P/N → PMU In 6 (engine bay, direct from TCU)
 - [ ] Confirm A/C request → PMU In 9 (via Deutsch connector Pin 14)
 - [ ] Confirm CT4 SW3 (headlight status) → PMU In 7 (tap on engine bay side of connector)
 
@@ -241,6 +244,7 @@ Create 12 custom 2-pin Delphi harnesses at SwitchPros:
 - [ ] Confirm brake lights → OUT21 (3A) - ground: SwitchPros Ground Bus T4
 - [ ] Confirm reverse lights → OUT22 (5A) - ground: SwitchPros Ground Bus T4
 - [ ] Confirm DRL/parking → OUT23 (2A) - ground: SwitchPros Ground Bus T5
+- [ ] Confirm Ignition Authorize → OUT24 (5A) - drives ECM ignition relay + keyless crank chain
 
 ### PMU CAN Bus Integration
 
