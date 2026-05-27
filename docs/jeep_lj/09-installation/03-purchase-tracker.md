@@ -2,7 +2,7 @@
 
 Components organized by estimated cost for purchase planning (Black Friday, sales, etc.).
 
-**Last Updated:** 2025-12-01
+**Last Updated:** 2026-05-27
 
 ---
 
@@ -10,7 +10,7 @@ Components organized by estimated cost for purchase planning (Black Friday, sale
 
 | Status | Count | Est. Total |
 |:-------|------:|-----------:|
-| Purchased | 20+ | ~$10,000+ |
+| Purchased | 20+ | ~$11,200+ |
 | To Purchase | 40+ | TBD |
 
 ---
@@ -41,6 +41,7 @@ Components organized by estimated cost for purchase planning (Black Friday, sale
 | JL Audio M6-650VEX-Mb-S-GmTi-i (Rear) | JL Audio | ~$600 | Pair |
 | Blue Sea / Electrical Distribution | Blue Sea Systems | ~$500 | Bus bars, CBs, etc. |
 | Garmin Tread 2 - Overland Edition | Garmin | ~$899 | Amex points; [Navigation][navigation] |
+| ECUMaster PMU24 DL | ECUMaster | ~$1,200 | [PMU Overview][pmu] |
 
 ---
 
@@ -51,7 +52,6 @@ Major components - watch for sales, consider financing options.
 | Item | Manufacturer | Est. Price | Priority | Notes |
 |:-----|:-------------|:-----------|:---------|:------|
 | Premier Power Welder HO-C28 Alternator (270A) | Premier Power Welder | $899.95 | High | [Product Page][alternator] |
-| ECUMaster PMU24 DL | ECUMaster | ~$1,200 | High | [PMU Overview][pmu] |
 | Command Touch CT4 | SwitchPros | ~$500 | High | [CT4][ct4] |
 | ARB CKBLTA12 Twin Compressor | ARB | ~$900 | Medium | [Air Compressor][air-compressor] |
 
@@ -145,7 +145,6 @@ _(Most electrical distribution components already purchased - see Purchased Item
 
 | Category | Est. Total | Priority Items |
 |:---------|:-----------|:---------------|
-| ECUMaster PMU24 | ~$1,200 | PMU24 critical |
 | Command Touch CT4 | ~$500 | Critical for lighting |
 | Alternator | ~$900 | Critical |
 | iBooster + Harness | ~$500-700 | Critical for brakes |
@@ -153,7 +152,7 @@ _(Most electrical distribution components already purchased - see Purchased Item
 | Baja Designs Lighting | ~$5,000 | Medium-Low |
 | Audio (Amp, Sub, Front Speakers) | ~$1,350 | Low |
 | Misc Small Parts | ~$500 | Various |
-| **TOTAL REMAINING** | **~$11,000-11,500** | |
+| **TOTAL REMAINING** | **~$9,800-10,300** | |
 
 ---
 
