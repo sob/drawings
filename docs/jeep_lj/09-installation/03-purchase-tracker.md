@@ -2,7 +2,7 @@
 
 Components organized by estimated cost for purchase planning (Black Friday, sales, etc.).
 
-**Last Updated:** 2026-05-27
+**Last Updated:** 2026-05-29
 
 ---
 
@@ -10,7 +10,7 @@ Components organized by estimated cost for purchase planning (Black Friday, sale
 
 | Status | Count | Est. Total |
 |:-------|------:|-----------:|
-| Purchased | 20+ | ~$11,200+ |
+| Purchased | 20+ | ~$12,200+ |
 | To Purchase | 40+ | TBD |
 
 ---
@@ -42,6 +42,9 @@ Components organized by estimated cost for purchase planning (Black Friday, sale
 | Blue Sea / Electrical Distribution | Blue Sea Systems | ~$500 | Bus bars, CBs, etc. |
 | Garmin Tread 2 - Overland Edition | Garmin | ~$899 | Amex points; [Navigation][navigation] |
 | ECUMaster PMU24 DL | ECUMaster | ~$1,200 | [PMU Overview][pmu] |
+| ARB CKBLTA12 Brushless Twin Compressor | ARB | ~$900 | [Air Compressor][air-compressor] |
+| ARB Pressure Switch (180901) | ARB | ~$50 | [Air Compressor][air-compressor] |
+| 4-6 Port Air Manifold | Generic | ~$30 | [Air Compressor][air-compressor] |
 
 ---
 
@@ -53,7 +56,6 @@ Major components - watch for sales, consider financing options.
 |:-----|:-------------|:-----------|:---------|:------|
 | Premier Power Welder HO-C28 Alternator (270A) | Premier Power Welder | $899.95 | High | [Product Page][alternator] |
 | Command Touch CT4 | SwitchPros | ~$500 | High | [CT4][ct4] |
-| ARB CKBLTA12 Twin Compressor | ARB | ~$900 | Medium | [Air Compressor][air-compressor] |
 
 ---
 
@@ -68,7 +70,7 @@ Major components - watch for sales, consider financing options.
 | JL Audio M7-12IB-S-GmTi-i-4 Subwoofer | JL Audio | ~$400 | Low | [Subwoofer][subwoofer] |
 | JL Audio MLC-RW LED Controller | JL Audio | ~$250 | Low | [LED Controller][led-controller] |
 | Rugged Radios STX Intercom (4-place) | Rugged Radios | ~$400 | Medium | [Intercom][intercom] |
-| ARB Air Tank (171601) | ARB | ~$200 | Medium | [Air Compressor][air-compressor] |
+| ARB Aluminum Air Tank (171507, 1-gal 4-port) | ARB | ~$200 | Medium | [Air Compressor][air-compressor] |
 | WolfBox G900 TriPro Dash Camera | WolfBox | ~$200 | Low | [Dash Camera][dash-camera] |
 | DB Electrical 410-52442 Starter | DB Electrical | ~$200 | High | [Starter][starter] |
 | AMOT 4261M02A027-AA Air Shutoff Valve | AMOT | ~$400-500 | High | 2.8" manual/pneumatic, NPT - [Runaway Protection][runaway-protection] |
@@ -127,9 +129,7 @@ _(Most electrical distribution components already purchased - see Purchased Item
 | PIAA 85115 Sports Horn | PIAA | ~$50 | Low | [Horn][horn] |
 | Overvoltage Protection Relay | Generic | ~$15-25 | Low | Solar protection - [Solar][solar] |
 | Deutsch HDP20 Connector Kit | Deutsch | ~$80 | High | [Firewall Ingress][firewall-ingress] |
-| ARB Pressure Switch (180901) | ARB | ~$50 | Medium | [Air Compressor][air-compressor] |
 | ARB Air Line Installation Kit | ARB | ~$50 | Medium | [Air Lockers][air-lockers] |
-| 4-6 Port Air Manifold | Generic | ~$30 | Medium | [Air Compressor][air-compressor] |
 | 0-200 PSI Pressure Gauge | Generic | ~$20 | Medium | [Air Compressor][air-compressor] |
 | Air Chuck Plate and Fittings | Generic | ~$30 | Low | [Rear Air Chuck][rear-air-chuck] |
 | Center-Off Momentary Rocker Switch | Generic | ~$15 | Medium | Winch control - [Dashboard][dashboard] |
@@ -148,11 +148,11 @@ _(Most electrical distribution components already purchased - see Purchased Item
 | Command Touch CT4 | ~$500 | Critical for lighting |
 | Alternator | ~$900 | Critical |
 | iBooster + Harness | ~$500-700 | Critical for brakes |
-| ARB Compressor + Tank | ~$1,100 | Medium |
+| ARB 1-Gallon Tank + Pressure Gauge | ~$220 | Medium |
 | Baja Designs Lighting | ~$5,000 | Medium-Low |
 | Audio (Amp, Sub, Front Speakers) | ~$1,350 | Low |
 | Misc Small Parts | ~$500 | Various |
-| **TOTAL REMAINING** | **~$9,800-10,300** | |
+| **TOTAL REMAINING** | **~$8,800-9,300** | |
 
 ---
 

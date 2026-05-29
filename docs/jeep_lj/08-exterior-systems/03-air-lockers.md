@@ -26,6 +26,10 @@ ARB RD116 air-operated locking differentials for front and rear Dana 44 axles.
 
 ///
 
+**Product Image:**
+
+![ARB RD116 Air Locker (Dana 44, 30-spline)](../../images/arb-rd116-air-locker.jpg)
+
 ## Specifications
 
 | Spec              | Front Locker          | Rear Locker           |
