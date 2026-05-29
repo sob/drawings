@@ -16,6 +16,10 @@ ARB Twin Compressor system with air tank and automatic pressure management for l
 
 **Model:** ARB CKBLTA12 Brushless Twin Motor Onboard 12V Air Compressor
 
+**Status:** Purchased
+
+**Product Page:** [ARB CKBLTA12](https://store.arbusa.com/brushless-twin-motor-onboard-12v-air-compressor-ckblta12/)
+
 **Installation Guide:** [ARB CKBLTA12 Installation PDF](https://store.arbusa.com/content/CKBLTA12%20INST.pdf)
 
 **Maximum Amperage Draw:** 90A total (45A per motor × 2 motors)
@@ -26,13 +30,28 @@ ARB Twin Compressor system with air tank and automatic pressure management for l
 
 ///
 
+**Product Image:**
+
+![ARB CKBLTA12 Brushless Twin Compressor](../../images/arb-ckblta12-compressor.jpg)
+
 ## Specifications
 
-- Smart Start feature with staggered power-on to reduce startup spike
-- 100% duty cycle
-- Maximum pressure: 150 PSI
-- Air flow at 0 PSI: 9.18 CFM
-- IP67 water resistant
+| Spec                  | Value                              |
+| --------------------- | ---------------------------------- |
+| Motor Type            | Brushless, twin motor              |
+| Voltage               | 12V                                |
+| Max Amperage          | 90A total (45A per motor)          |
+| Duty Cycle            | 100%                               |
+| Maximum Pressure      | 150 PSI                            |
+| Air Flow @ 0 PSI      | 9.18 CFM                           |
+| Air Flow @ 29 PSI     | 6.20 CFM                           |
+| Cooling               | Active cooling with built-in fans  |
+| Smart Start           | Staggered motor power-on           |
+| Electronic Control    | Speed control for temp/pressure    |
+| IP Rating             | IP67 water resistant               |
+| Dimensions (L×W×H)    | 14.49" × 13.31" × 6.69"            |
+| Weight                | 15.8 lb (complete), 13.2 lb (bare) |
+| Warranty              | 3 years                            |
 
 ## Control System
 
@@ -65,17 +84,23 @@ ARB Twin Compressor system with air tank and automatic pressure management for l
 
 ### ARB 1-Gallon Air Tank
 
-**Model:** ARB 171601
+**Model:** ARB 171507 (Aluminum, 1-gallon, 4-port)
 
-**Product Page:** [ARB 1-Gallon Air Tank](https://www.amazon.com/ARB-171601-Steel-Tank/dp/B00IAAU66K)
+**Status:** To purchase (targeting 1-gallon capacity)
+
+**Product Page:** [ARB 171507 Aluminum 1-Gallon Air Tank](https://store.arbusa.com/aluminum-compressor-air-tank-with-1-gallon-capacity-and-4-ports-171507/)
+
+**Product Image:**
+
+![ARB 171507 1-Gallon Aluminum Air Tank](../../images/arb-171507-air-tank-1gal.jpg)
 
 | Spec             | Value                                |
 | ---------------- | ------------------------------------ |
 | Capacity         | 1 gallon (4 liters)                  |
 | Working Pressure | 150 PSI maximum                      |
-| Material         | Forged aluminum                      |
-| Mounting         | Under passenger seat (with compressor) |
-| Ports            | 2 ports (input from compressor, output to manifold) |
+| Material         | Forged aluminum end caps + extruded aluminum body (~50% lighter than steel) |
+| Mounting         | Under passenger seat (horizontal or vertical) |
+| Ports            | 4 × 1/4" NPT (daisy-chain compatible) |
 
 **Purpose:**
 
@@ -93,7 +118,13 @@ ARB Twin Compressor system with air tank and automatic pressure management for l
 
 **Model:** ARB 180901
 
+**Status:** Purchased
+
 **Product Page:** [ARB Pressure Switch](https://store.arbusa.com/compressor-pressure-switch-180901/)
+
+**Product Image:**
+
+![ARB 180901 Pressure Switch](../../images/arb-180901-pressure-switch.jpg)
 
 | Spec             | Value                    |
 | ---------------- | ------------------------ |
@@ -114,6 +145,8 @@ ARB Twin Compressor system with air tank and automatic pressure management for l
 ## Air Manifold
 
 **Configuration:** 4-6 port brass manifold
+
+**Status:** Purchased
 
 **Location:** Under passenger seat (with compressor and tank)
 
@@ -181,7 +214,7 @@ Compressor fills tank to 150 PSI → pressure switch opens → compressor stops
 
 - [ ] Verify ARB CKBLTA12 wiring harness connector pinout for motor 1, motor 2, and control terminals
 - [ ] Confirm under-seat mounting bracket/location for compressor and 1-gallon tank
-- [ ] Source 4-6 port air manifold with 1/4" NPT fittings
+- [ ] Purchase ARB 171507 1-gallon aluminum air tank
 - [ ] Order 0-200 PSI pressure gauge (panel-mount or in-line)
 
 ## Related Documentation
