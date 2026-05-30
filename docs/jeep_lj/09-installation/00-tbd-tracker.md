@@ -19,7 +19,7 @@ Items that prevent build completion or system operation.
 
 | Item                                   | Description | File | Priority |
 | :------------------------------------- | :---------- | :--- | :------- |
-| Back Bay MC Adapter Compatibility      | Confirm Back Bay Customs Wilwood adapter fits Wilwood 260-15542 (1-1/8" Tandem Compact) before ordering MC | [iBooster][ibooster] | 🔴 Critical |
+| iBooster Backing Plate DXF Redesign    | Re-cut `lj-ibooster-backing-plate.dxf` from 72×72mm square to confirmed 60×80mm rectangular hole pattern (±30mm H / ±40mm V, 80mm vertical) before ordering SendCutSend steel. Vendor revised pattern 2026-05-30. | [iBooster][ibooster] | 🔴 Critical |
 
 ---
 
@@ -45,7 +45,7 @@ Items needed before installation begins but not system-critical.
 | Catch Can Mounting Bracket Point  | Select engine bracketry attachment point for Mishimoto MMOCC-UB universal bracket                  | [Runaway Protection][runaway-protection] | High     |
 | iBooster Donor Sourcing           | Source 2018-2023 Honda Accord Hybrid iBooster + MC pull (eBay/LKQ/Car-Part.com)                   | [iBooster][ibooster] | High |
 | iBooster Wiring Harness Selection | Choose between Tulay's Wire Werks Gen 2 universal vs EVcreate Gen 2 connector kit                  | [iBooster][ibooster] | High |
-| LJ Firewall Mount Strategy        | Primary: direct mount via booster's integral 4-stud flange + SendCutSend cabin-side backing plate (drill new firewall holes 72×72mm M8 + 62mm center). Fallback: SendCutSend custom one-off, then Back Bay commission (only if LJ trial-fit available) | [iBooster][ibooster] | High |
+| LJ Firewall Mount Strategy        | Primary: direct mount via booster's integral 4-stud flange + SendCutSend cabin-side backing plate (drill new firewall holes 60×80mm M8, 80mm vertical + 62mm center). Fallback: SendCutSend custom one-off, then Back Bay commission (only if LJ trial-fit available) | [iBooster][ibooster] | High |
 | Reservoir Standoff Design         | Design firewall standoff to mount 250-16393 dual bracket 4-6" above MC flange                      | [iBooster][ibooster] | High |
 | Auto Brake Pedal Sourcing         | Source 03-06 TJ/LJ automatic brake pedal assembly + stop-lamp switch (Mopar 56045043AB if needed) | [iBooster][ibooster] | High |
 | Clutch MC Firewall Hole Plug      | Block-off plate or weld closure for ~1.25" CMC pass-through (manual-to-auto pedal swap)            | [iBooster][ibooster] | High |
@@ -127,7 +127,7 @@ Items completed since last update.
 
 | Item                          | Resolution                                                                                                                    | Date       |
 | :---------------------------- | :---------------------------------------------------------------------------------------------------------------------------- | :--------- |
-| Cummins ECM WAIT/MIL Pins     | Confirmed from Cummins R2.8 install manual (document 0042728): WAIT=Pin 35 yellow, MIL=Pin 22 white, STOP ENGINE=Pin 49 green, WARNING=Pin 36 blue, Keyswitch=Pin 41 black (5A fuse) | 2026-05-30 |
+| Back Bay MC Adapter Compatibility | Vendor (Back Bay Customs / Adam) confirmed: adapter fits Wilwood 260-15542 (1-1/8" Tandem Compact), is Honda-Accord-iBooster-only (not Tesla), and the 2× remote Wilwood reservoirs are fine. Blocker cleared — Wilwood + adapter cleared to order. Note: vendor also revised the firewall pattern to 60×80mm (80mm vertical), see new backing-plate DXF redesign item. | 2026-05-30 |
 | Boomerang Bullet 230          | Removed from build — product was fabricated (does not exist). Replaced by Digital Guard Dawg PBS-I self-contained system     | 2026-05-30 |
 | Boomerang Mounting Location   | Obsolete — Boomerang not used; PBS-I includes its own RFID receiver in the ICM                                                | 2026-05-30 |
 | ECM Ignition Relay            | Obsolete — PBS-I PINK IGN (60A onboard relay) replaces the external ECM ignition relay                                        | 2026-05-30 |
