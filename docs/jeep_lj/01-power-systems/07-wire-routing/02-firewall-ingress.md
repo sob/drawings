@@ -31,8 +31,10 @@ Single weatherproof bulkhead connector for all custom wiring through firewall.
 
 **Insert Arrangement 24-21:** 4× size 12 + 17× size 16 contacts
 
-- Size 12 contacts: 12-14 AWG, 25A (4 available, 0 used - reserved for future)
-- Size 16 contacts: 14-20 AWG, 13A (17 available, 17 used)
+- Size 12 contacts: 12-14 AWG, 25A (4 available, 0 used - reserved for future)[^deutsch-contacts]
+- Size 16 contacts: 14-20 AWG, 13A (17 available, 17 used)[^deutsch-contacts]
+
+[^deutsch-contacts]: TE Connectivity / Deutsch HD30 & HDP20 series contact ratings: **size 12 = 25A**, **size 16 = 13A** (solid contacts) — confirmed against TE HDP24-24-21 datasheet and the Deutsch Common Contact System spec (checked 2026-05-30).
 
 **Mounting:** Single 1.5" diameter hole in firewall
 

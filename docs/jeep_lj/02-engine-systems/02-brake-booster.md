@@ -21,13 +21,15 @@ tags:
 
 **Honda OEM Part Numbers:** 46680-T3Z-A00 (booster module), 01469-TWA-A58 (MC/reservoir kit)
 
-**Master Cylinder:** Wilwood 260-15542 Tandem Compact, 1-1/8" bore
+**Master Cylinder:** Wilwood Tandem Compact — ⛔ bore TBD, recalc pending (260-15541 1.125" vs 260-15542 1.00")
 
-**MC Adapter:** [Back Bay Customs Wilwood iBooster Adapter][backbay-adapter]
+**MC Adapter:** [Back Bay Customs Wilwood iBooster Adapter][backbay-adapter] — Honda Accord iBooster only (not Tesla); confirmed compatible with Wilwood 260-15542 (vendor, 2026-05-30)
 
-**Reservoirs:** 2× Wilwood 260-16392 (4 oz anodized, remote)
+**Reservoirs:** 2× Wilwood 260-16392 (4 oz anodized, remote) — vendor-confirmed OK with adapter[^mc-reservoir]
 
-**Mounting:** Direct firewall mount via booster's integral 4-stud flange (72×72mm M8) + SendCutSend cabin-side backing plate
+[^mc-reservoir]: Wilwood 260-16392 confirmed: **4.0 oz** capacity, **9/16-18 × -3 AN** hose connector (the -3 AN feed matches the Plumbing section). Source: [Summit Racing](https://www.summitracing.com/parts/wil-260-16392) / JEGS (checked 2026-05-30; thread figure is retailer-sourced).
+
+**Mounting:** Direct firewall mount via booster's integral 4-stud flange (60×80mm M8, **80mm oriented vertical**) + SendCutSend cabin-side backing plate
 
 **Power Source:** PMU OUT1+10 (40A main), OUT19 (5A ignition signal)
 
@@ -39,21 +41,38 @@ tags:
 
 Electromechanical brake booster required for the Cummins R2.8 diesel (minimal manifold vacuum). The Honda Accord Hybrid donor delivers the same Bosch Gen 2 unit as the Tesla Model 3 with better DIY documentation and sourcing. The Honda variant also ships with a factory **remote-mounted** reservoir (Honda solved the angled-reservoir issue at the OEM level) — moot for this build since the MC + reservoir are discarded in favor of the Wilwood ecosystem, but useful context.
 
-The factory Tesla/Honda master cylinder is discarded. The Back Bay Customs adapter mates a Wilwood Tandem Compact master directly to the iBooster, eliminating the angled-reservoir problem on a vertical firewall and putting the brake hydraulics on Wilwood's standard 1-1/8" bore + remote reservoir ecosystem.
+The factory Tesla/Honda master cylinder is discarded. The Back Bay Customs adapter mates a Wilwood Tandem Compact master directly to the iBooster, eliminating the angled-reservoir problem on a vertical firewall and putting the brake hydraulics on Wilwood's remote-reservoir ecosystem. (MC bore is pending recalculation — see the Master Cylinder section.)
+
+**Vendor compatibility (Back Bay Customs / Adam, email 2026-05-30):**
+
+- Wilwood 260-15542 Tandem Compact **is compatible** with the adapter. (Note: 260-15542 is the **1.00"** bore unit; the MC bore is now pending recalculation — see the Master Cylinder section.)
+- The adapter is designed for the **Honda Accord iBooster only**, *not* the Tesla variant. This build uses the Honda Accord Hybrid donor, so it matches.
+- The 2× remote Wilwood reservoirs are fine with the adapter.
+- The booster's 60×80mm firewall pattern[^bbc-firewall] must be mounted with the **80mm dimension vertical**. Back Bay offers a separate adapter for an 80mm-horizontal orientation, but it is **out of stock** as of this writing — design around the 80mm-vertical orientation.
 
 ## Specifications
 
 ### iBooster
 
 - **Current:** 40A peak (braking), 0.25A idle, 12mA standby
-- **Mounting Bolt Torque:** 16.5 Nm (12 ft-lb) - 2x nyloc nuts, 13mm
+- **Mounting Bolt Torque:** 16.5 Nm (12 ft-lb) - 2x nyloc nuts, 13mm — ⚠️ unverified[^ibooster-torque]
 
 ### Master Cylinder
 
-- **Bore:** 1.125" (1-1/8") - sized for power-assisted, heavy, multi-piston caliper build
-- **Stroke:** 1.100"
-- **Outlets:** Tandem (independent front/rear circuits)
-- **Reservoir Ports:** 11/16-20 (2× - one per circuit, remote feed)
+!!! danger "⛔ ON HOLD — bore to be recalculated before MC selection"
+    Wilwood **260-15542 is a 1.00" bore** master cylinder, not the 1-1/8" stated throughout this doc.[^mc-bore] The 1-1/8" (1.125") Tandem Compact is a **different part — 260-15541**. Rather than assume which is right, the **MC bore is being recalculated** from the brake-system hydraulics before the part is selected. Until then, **do not order the master cylinder.**
+
+    Inputs the recalc needs: caliper piston count + bore (total piston area, front & rear), rotor effective radius, desired pedal effort and travel, pedal ratio, and the iBooster's assist output. Output: required MC bore → selects **260-15541 (1.125")** vs **260-15542 (1.00")**. Note: Adam confirmed adapter fitment against *260-15542*; if the calc lands on 260-15541, re-confirm fitment with him (both are "Tandem Compact," so the mount is almost certainly identical — bore differs internally).
+
+- **Bore:** ⛔ TBD — pending recalculation (1.00" / 260-15542 vs 1.125" / 260-15541)[^mc-bore]
+- **Stroke:** 1.100" (260-15542)[^mc-stroke]
+- **Outlets:** Tandem (independent front/rear circuits); outlet thread **1/2-20**[^mc-ports]
+- **Reservoir Ports:** 11/16-20 (2× - one per circuit, remote feed) — ⚠️ verify[^mc-ports]
+
+[^ibooster-torque]: ⚠️ UNVERIFIED. No Honda service-manual or Bosch published firewall-mount torque was found for the Accord Gen 2 iBooster; the only published Bosch figure is 16 Nm for the M12×1 *brake-line* nuts (a different fastener). Treat 16.5 Nm / 12 ft-lb as an estimate — confirm against a Honda service manual before final torque (checked 2026-05-30).
+[^mc-bore]: Wilwood [260-15542-BK official page](https://www.wilwood.com/MasterCylinders/MasterCylinderProd?itemno=260-15542-BK) lists **1.00" bore**; the 1-1/8" Tandem Compact is part **260-15541**. Corroborated by multiple retailers (checked 2026-05-30). High confidence the documented "260-15542 = 1-1/8\"" pairing is an error.
+[^mc-stroke]: Wilwood 260-15542 official page lists **stroke 1.10"** — matches (checked 2026-05-30).
+[^mc-ports]: ⚠️ Wilwood's 260-15542 page lists **1/2-20 outlets**, not 11/16-20. 11/16-20 appears in the Wilwood line only as a separate inlet *adapter fitting* (e.g., the 220-12993 flexline adapter), not the MC's native port — so the "11/16-20 reservoir port" claim likely conflates the flexline adapter thread with the MC port. Verify the actual MC inlet/outlet threads against the Wilwood data sheet before ordering fittings (checked 2026-05-30).
 
 ### Plumbing
 
@@ -66,13 +85,13 @@ The factory Tesla/Honda master cylinder is discarded. The Back Bay Customs adapt
 | :--- | :----- | :----- | :----- | :---- |
 | iBooster + MC pull | Honda 46680-T3Z-A00 (+ 01469-TWA-A58) | eBay / LKQ / Car-Part.com | Offer pending ($195 on $254 listing) | 2017-2022 Honda Accord Hybrid FHEV donor |
 | Auto brake pedal assembly | 03-06 TJ/LJ auto pedal | eBay / junkyard | **Ordered** | Wider pedal pad than manual; stop-lamp switch + connector included on donor |
-| MC adapter | Back Bay Customs | [backbaycustoms.com][backbay] | Awaiting compat. confirmation (🔴 blocker) | Steel plate + pushrod spacer + nyloc nuts |
-| Master cylinder | Wilwood 260-15542 | Summit / Jegs | Pending (waiting on Back Bay) | Tandem Compact, 1-1/8", black E-coat |
-| Reservoir (×2) | Wilwood 260-16392 | Summit / Jegs | Pending (waiting on Back Bay) | 4 oz anodized, includes -3 AN fitting |
-| Dual reservoir bracket | Wilwood 250-16393 | Summit / Jegs | Pending (waiting on Back Bay) | Anodized billet, mounting screws incl. |
-| Flexline (×2) | Wilwood 220-12993 | Summit / Jegs | Pending (waiting on Back Bay) | 8" -3 AN, includes 11/16-20 adapter |
-| Firewall mount (engine side) | iBooster integral 4-stud flange | Included w/ iBooster | Ships with donor | Bolts directly to firewall — 72×72mm M8 pattern, 62mm body neck through firewall |
-| Firewall reinforcement (cabin side) | SendCutSend custom — see [DXF][backing-plate-dxf] | ~$15-30 | DXF designed; PLA test-fit pending, then order | 3/16" A36 steel, 152×152mm, 12mm corner radius, 9mm M8 holes at 72×72mm, 64mm center bore. Zinc yellow plating |
+| MC adapter | Back Bay Customs | [backbaycustoms.com][backbay] | ✅ Confirmed vs 260-15542 (vendor, 2026-05-30); re-confirm if bore recalc selects 260-15541 | Steel plate + pushrod spacer + nyloc nuts; Honda iBooster only |
+| Master cylinder | Wilwood 260-15541 (1.125") **or** 260-15542 (1.00") | Summit / Jegs | ⛔ On hold — bore recalc pending (see warning above) | Tandem Compact, black E-coat; bore TBD |
+| Reservoir (×2) | Wilwood 260-16392 | Summit / Jegs | Ready to order (vendor-confirmed OK) | 4 oz anodized, includes -3 AN fitting |
+| Dual reservoir bracket | Wilwood 250-16393 | Summit / Jegs | Ready to order | Anodized billet, mounting screws incl. |
+| Flexline (×2) | Wilwood 220-12993 | Summit / Jegs | Ready to order | 8" -3 AN, includes 11/16-20 adapter |
+| Firewall mount (engine side) | iBooster integral 4-stud flange | Included w/ iBooster | Ships with donor | Bolts directly to firewall — 60×80mm M8 pattern (80mm vertical), 62mm body neck through firewall |
+| Firewall reinforcement (cabin side) | SendCutSend custom — see [DXF][backing-plate-dxf] | ~$15-30 | ⚠️ DXF needs redesign for 60×80mm pattern (currently drawn 72×72mm — see Outstanding Items) | 3/16" A36 steel, 152×152mm, 12mm corner radius, 9mm M8 holes, 64mm center bore. Zinc yellow plating |
 | Wiring harness | TBD | Tulay's or EVcreate | Decision pending donor arrival | Choice depends on donor pigtail condition |
 
 ## Wiring
@@ -95,13 +114,16 @@ See [PMU Outputs][pmu-outputs] for complete PMU configuration and thermal analys
 **Geometry:**
 
 - 152mm × 152mm (6"×6") square, 12mm corner radius
-- 4× 9mm M8 clearance holes on 72×72mm square pattern
+- 4× 9mm M8 clearance holes on a **60mm (horizontal) × 80mm (vertical)** rectangular pattern (80mm dimension vertical, per vendor)
 - 64mm center pass-through bore (clearance for iBooster body neck protrusion)
 - 3/16" (4.76mm) thickness
 - Material: A36 mild steel
 - Finish: zinc yellow plating (corrosion resistance for the cabin-side mounting area; also lets the plate stay visible-looking-intentional behind the dash)
 
-**CAD file:** [`lj-ibooster-backing-plate.dxf`][backing-plate-dxf] (SendCutSend-ready, designed in Fusion 360)
+!!! warning "DXF redesign required"
+    The committed `lj-ibooster-backing-plate.dxf` was drawn for a **72×72mm square** hole pattern (holes at ±36mm). Back Bay Customs confirmed (2026-05-30) the iBooster firewall pattern is actually **60×80mm rectangular** (holes at ±30mm horizontal, ±40mm vertical), mounted 80mm-vertical. The DXF must be re-cut to the new pattern before ordering steel. The 152×152mm plate still provides ample edge margin (≥36mm at the ±40mm holes). Confirm the real hole spacing against the donor unit's studs during PLA test-fit before committing to steel.
+
+**CAD file:** [`lj-ibooster-backing-plate.dxf`][backing-plate-dxf] (Fusion 360 — **needs update to 60×80mm pattern**)
 
 **Fabrication workflow:**
 
@@ -159,7 +181,7 @@ See [tail/brake][tail-brake] (PMU lighting flow), [starter][starter] (crank chai
 
 ## Installation Notes
 
-- **Firewall mounting strategy:** Factory LJ vacuum booster holes are abandoned. The Honda Gen 2 iBooster bolts directly to the firewall via its own integral 4-stud flange (72×72mm M8 pattern, 62mm body neck through the firewall) — no separate steel bracket. Drill matching holes in the LJ firewall, then sandwich a SendCutSend 3/16" steel backing plate on the cabin side to distribute the cantilevered load and prevent fatigue cracking at the new holes.
+- **Firewall mounting strategy:** Factory LJ vacuum booster holes are abandoned. The Honda Gen 2 iBooster bolts directly to the firewall via its own integral 4-stud flange (60×80mm M8 pattern, **80mm dimension vertical** per Back Bay Customs; 62mm body neck through the firewall) — no separate steel bracket. Drill matching holes in the LJ firewall, then sandwich a SendCutSend 3/16" steel backing plate on the cabin side to distribute the cantilevered load and prevent fatigue cracking at the new holes. If an 80mm-horizontal orientation is ever required, Back Bay sells a re-orientation adapter (currently out of stock).
 - **Fallback paths:** If integral flange has engine-bay packaging conflicts, fall back to (a) SendCutSend custom one-off firewall plate that re-patterns mounting holes, or (b) Back Bay Customs one-off commission — *only worthwhile if they have access to an LJ for trial fit; without one, customer-measurement-blind design carries the same risk as SendCutSend at higher cost.*
 - **Reservoir height:** Mount reservoirs 4-6" above MC flange on firewall standoff for proper gravity feed. More than 6" risks hood clearance issues.
 - **Bench test before fab:** Apply 12V ignition signal to the iBooster and verify motor cycles + pedal rod assists. Used iBoosters fail frequently.
@@ -178,13 +200,23 @@ See [tail/brake][tail-brake] (PMU lighting flow), [starter][starter] (crank chai
 
 **Waiting on external action:**
 
-- [ ] Confirm Back Bay Customs MC adapter compatibility with Wilwood 260-15542 (email sent — awaiting reply; 🔴 blocker before Wilwood parts order)
+- [x] ~~Confirm Back Bay Customs MC adapter compatibility with Wilwood 260-15542~~ — ✅ confirmed by vendor (Adam, 2026-05-30): adapter fits the 260-15542, is Honda-iBooster-only (not Tesla), and the remote reservoirs are fine. Blocker cleared.
 - [ ] Close iBooster eBay offer ($195 sent on $254 listing)
+
+**MC bore — recalc before ordering (🔴 blocker):**
+
+- [ ] 🔴 Recalculate the required MC bore from the brake-system hydraulics (caliper piston area front/rear, rotor effective radius, pedal ratio, desired pedal effort/travel, iBooster assist) → selects **260-15541 (1.125")** vs **260-15542 (1.00")**. Hold the MC order until resolved.
+- [ ] If recalc selects 260-15541, re-confirm adapter fitment with Back Bay Customs (both are Tandem Compact; mount almost certainly identical)
+
+**Backing plate redesign (vendor revised the firewall pattern):**
+
+- [ ] 🔴 Redesign `lj-ibooster-backing-plate.dxf` from the 72×72mm square pattern to the confirmed **60×80mm rectangular** pattern (holes at ±30mm H / ±40mm V, 80mm vertical). Center bore (Ø64), plate size (152×152mm), and corner radius unchanged. Blocks the SendCutSend steel order.
+- [ ] Update firewall drilling jig/template to the 60×80mm pattern before mocking up
 
 **In progress:**
 
 - [x] ~~Source 03-06 TJ/LJ automatic brake pedal assembly~~ — ordered; verify donor checks (switch + clip, pushrod hole bushing, pedal arm condition) on arrival
-- [ ] 3D-print PLA prototype of the backing plate ([DXF][backing-plate-dxf]) for trial fit; verify hole spacing against donor studs and clearance for cabin-side hardware
+- [ ] 3D-print PLA prototype of the **revised** backing plate ([DXF][backing-plate-dxf]) for trial fit; verify the 60×80mm hole spacing against donor studs and clearance for cabin-side hardware
 
 **Pending donor arrival:**
 
@@ -199,15 +231,16 @@ See [tail/brake][tail-brake] (PMU lighting flow), [starter][starter] (crank chai
 - [ ] Confirm flexline length after firewall mockup (220-12993 = 8", longer SKUs available if needed)
 - [ ] Design / select reservoir standoff bracket location and height (4-6" above MC flange)
 
-**Pending Back Bay confirmation, then order:**
+**Ordering:**
 
-- [ ] Order Wilwood 260-15542 master cylinder + 2× 260-16392 reservoirs + 250-16393 dual bracket + 2× 220-12993 flexlines
-- [ ] Order Back Bay Customs Wilwood MC adapter
+- [ ] ⛔ Order master cylinder — **HELD pending bore recalc** (260-15541 1.125" vs 260-15542 1.00")
+- [ ] Order bore-independent plumbing: 2× 260-16392 reservoirs + 250-16393 dual bracket + 2× 220-12993 flexlines (OK to order — vendor-confirmed, not affected by bore)
+- [ ] Order Back Bay Customs Wilwood MC adapter (confirmed vs 260-15542; re-confirm first if recalc selects 260-15541)
 
 **Fab + install:**
 
 - [ ] After PLA fit confirms: order SendCutSend backing plate in 3/16" A36 steel with zinc yellow plating
-- [ ] Drill LJ firewall: 4× M8 clearance holes (72×72mm pattern) + 62mm center bore for booster shaft pass-through
+- [ ] Drill LJ firewall: 4× M8 clearance holes (60×80mm pattern, 80mm vertical) + 62mm center bore for booster shaft pass-through
 - [ ] Plug clutch master cylinder firewall hole (~1.25" block-off plate or weld closure)
 
 ## Related Documentation
@@ -224,6 +257,8 @@ See [tail/brake][tail-brake] (PMU lighting flow), [starter][starter] (crank chai
 [evcreate-wiring]: https://www.evcreate.com/wiring-the-ibooster/
 [evcreate-install]: https://www.evcreate.com/installing-the-ibooster/
 [evcreate-donors]: https://www.evcreate.com/ibooster-donor-vehicles/
+[^bbc-firewall]: Back Bay Customs (adapter maker, Adam), email to owner 2026-05-30. First vendor-confirmed firewall bolt pattern; supersedes the earlier unsourced "72×72mm" estimate introduced in PR #12, which the original backing-plate DXF was cut to.
+
 [pmu-outputs]: ../01-power-systems/04-pmu/03-pmu-outputs.md
 [ground-bus]: ../01-power-systems/05-grounding/01-engine-bay-ground-bus.md
 [firewall-ingress]: ../01-power-systems/07-wire-routing/02-firewall-ingress.md

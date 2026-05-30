@@ -53,7 +53,9 @@ tags:
 
 **Mounting:** Firewall (engine bay side) near PMU
 
-**Torque:** 100-120 in-lb (3/8"-16 studs)
+**Torque:** 100-120 in-lb (3/8"-16 studs) — ⚠️ verify[^bus-torque]
+
+[^bus-torque]: ⚠️ UNVERIFIED. Blue Sea's published terminal torque for a **3/8"-16 stud appears to be 140 in-lb** (their 120 in-lb figure is for 5/16"-18 studs), so the documented 100-120 in-lb may be undertorqued for the 2107's 3/8"-16 studs. Manufacturer page returned 403 to automated fetch; figure is retailer/aggregator-sourced only. Confirm against the Blue Sea 2107 spec sheet before final assembly.
 
 **Critical:** Clean metal-to-metal connections - remove paint/rust before installation, apply dielectric grease after assembly
 

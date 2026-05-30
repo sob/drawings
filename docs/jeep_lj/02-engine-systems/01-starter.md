@@ -108,17 +108,19 @@ Engine starts → driver releases button → Cole Hersee de-energizes → Bendix
 
 **Specifications:**
 
-- Rating: 85A continuous duty
+- Rating: 200A continuous duty[^ch-24213]
 - Coil Voltage: 12V DC
-- Coil Draw: ~1.6A
+- Coil Draw: ~0.69A (17.5 Ω coil @ 12V)[^ch-24213]
 - Mounting: Firewall (engine bay side)
 
-**Terminals:**
+**Terminals:**[^ch-24213]
 
-- Large Stud 1 (Input): From START battery post (M8 terminal, 10 AWG)
-- Large Stud 2 (Output): To starter switch post (6.3mm female push-on, 10 AWG)
-- Small Terminal 1 (Coil+): From WAIT-gate relay NC contact (16 AWG, gated PBS-I PURPLE START)
-- Small Terminal 2 (Coil-): To engine bay ground bus (16-18 AWG)
+- Large Stud 1 (Input): 5/16"-24 copper power stud; from START battery post (10 AWG)
+- Large Stud 2 (Output): 5/16"-24 copper power stud; to starter switch post (10 AWG; starter post is 6.3mm push-on)
+- Small Stud 1 (Coil+): #10-32 steel stud; from WAIT-gate relay NC contact (16 AWG, gated PBS-I PURPLE START)
+- Small Stud 2 (Coil-): #10-32 steel stud; to engine bay ground bus (16-18 AWG)
+
+[^ch-24213]: Littelfuse (Cole Hersee) 24213 continuous-duty SPST solenoid, [product page](https://www.littelfuse.com/products/relays-contactors-transformers/solenoids-relays/standard-high-current-relays/continuous-duty-spst/24213) / DigiKey #6347082. Rated **200A continuous** with two 5/16"-24 copper power studs + two #10-32 steel coil studs; coil ~0.69A @ 12V (17.5 Ω). Corrects the earlier unsourced "85A / M8 / 6.3mm-push-on" figures (validated 2026-05-30). 200A is comfortably oversized for the ~10A starter-trigger path.
 
 ## Outstanding Items
 

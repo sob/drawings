@@ -9,7 +9,7 @@ hide:
 
 **Last Updated:** 2026-05-30
 
-**Total Open Items:** 53
+**Total Open Items:** 63 (+10 from the 2026-05-30 critical-spec verification audit)
 
 ---
 
@@ -19,7 +19,8 @@ Items that prevent build completion or system operation.
 
 | Item                                   | Description | File | Priority |
 | :------------------------------------- | :---------- | :--- | :------- |
-| Back Bay MC Adapter Compatibility      | Confirm Back Bay Customs Wilwood adapter fits Wilwood 260-15542 (1-1/8" Tandem Compact) before ordering MC | [iBooster][ibooster] | 🔴 Critical |
+| iBooster Backing Plate DXF Redesign    | Re-cut `lj-ibooster-backing-plate.dxf` from 72×72mm square to confirmed 60×80mm rectangular hole pattern (±30mm H / ±40mm V, 80mm vertical) before ordering SendCutSend steel. Vendor revised pattern 2026-05-30. | [iBooster][ibooster] | 🔴 Critical |
+| MC Bore Recalculation (on hold)        | Wilwood **260-15542 is 1.00" bore**, not the 1-1/8" documented (1-1/8" = **260-15541**). Per owner decision (2026-05-30), **recalculate required MC bore** from brake hydraulics (caliper piston area, rotor radius, pedal ratio, effort/travel, iBooster assist) → select 260-15541 vs 260-15542. MC order HELD until resolved; re-confirm adapter fitment if it lands on 260-15541. | [iBooster][ibooster] | 🔴 Critical |
 
 ---
 
@@ -45,7 +46,7 @@ Items needed before installation begins but not system-critical.
 | Catch Can Mounting Bracket Point  | Select engine bracketry attachment point for Mishimoto MMOCC-UB universal bracket                  | [Runaway Protection][runaway-protection] | High     |
 | iBooster Donor Sourcing           | Source 2018-2023 Honda Accord Hybrid iBooster + MC pull (eBay/LKQ/Car-Part.com)                   | [iBooster][ibooster] | High |
 | iBooster Wiring Harness Selection | Choose between Tulay's Wire Werks Gen 2 universal vs EVcreate Gen 2 connector kit                  | [iBooster][ibooster] | High |
-| LJ Firewall Mount Strategy        | Primary: direct mount via booster's integral 4-stud flange + SendCutSend cabin-side backing plate (drill new firewall holes 72×72mm M8 + 62mm center). Fallback: SendCutSend custom one-off, then Back Bay commission (only if LJ trial-fit available) | [iBooster][ibooster] | High |
+| LJ Firewall Mount Strategy        | Primary: direct mount via booster's integral 4-stud flange + SendCutSend cabin-side backing plate (drill new firewall holes 60×80mm M8, 80mm vertical + 62mm center). Fallback: SendCutSend custom one-off, then Back Bay commission (only if LJ trial-fit available) | [iBooster][ibooster] | High |
 | Reservoir Standoff Design         | Design firewall standoff to mount 250-16393 dual bracket 4-6" above MC flange                      | [iBooster][ibooster] | High |
 | Auto Brake Pedal Sourcing         | Source 03-06 TJ/LJ automatic brake pedal assembly + stop-lamp switch (Mopar 56045043AB if needed) | [iBooster][ibooster] | High |
 | Clutch MC Firewall Hole Plug      | Block-off plate or weld closure for ~1.25" CMC pass-through (manual-to-auto pedal swap)            | [iBooster][ibooster] | High |
@@ -95,7 +96,27 @@ Items that are estimated and need actual product specs to confirm.
 
 | Item                | Description                                                                                     | File                       | Action Needed      |
 | :------------------ | :---------------------------------------------------------------------------------------------- | :------------------------- | :----------------- |
-| Grid Heater Current | Design value 80A - verify via element resistance measurement during installation (~0.15Ω @ 12V) | [Grid Heater][grid-heater] | Measure resistance |
+| Grid Heater Current | Design value 80A - verify via element resistance measurement during installation (~0.15Ω @ 12V); Cummins publishes no current figure for 5467024 | [Grid Heater][grid-heater] | Measure resistance |
+
+---
+
+## 🔬 CRITICAL-SPEC VERIFICATION AUDIT (2026-05-30)
+
+Findings from a source-validation pass over critical fab/order/wiring specs (per CLAUDE.md Imperative #7). Each is footnoted at its source page. **Confirmed** specs need no action; **mismatch/unverified** items below need a decision or measurement before fabrication/order.
+
+| Item | Finding | File | Action Needed |
+| :--- | :------ | :--- | :------------ |
+| Fusion amp external fuse | ✅ **Resolved (2026-05-30):** external protection set to **40A** per Fusion install guide (owner decision); 100A was oversized. 78A is theoretical sine-max, not sustained; musical draw ~8-15A. 4 AWG retained; 125A internal fuse covers amp-side faults. | [Amplifier][amplifier] | ✅ Done — 40A |
+| Winch model + peak draw | ✅ **Resolved (2026-05-30):** model confirmed **WARN ZEON 10-S** (owner); VR EVO naming removed. Peak draw corrected to **409A** (WARN spec) throughout; 1/0 AWG retains margin. | [Winch][winch] | ✅ Done — Zeon 10-S / 409A |
+| iBooster firewall torque | **16.5 Nm** has no Honda/Bosch source (only an unrelated 16 Nm brake-line spec exists). | [iBooster][ibooster] | Confirm vs service manual |
+| iBooster body-neck Ø | **~62mm** pass-through asserted only by adapter vendor; no corroboration. | [iBooster][ibooster] | Measure on donor |
+| Ground bus stud torque | Doc **100-120 in-lb**; Blue Sea's 3/8"-16 figure appears to be **140 in-lb** (120 = 5/16"). Mfr page was fetch-blocked. | [Ground Bus][ground-bus] | Confirm vs Blue Sea sheet |
+| MC port threads | Doc **11/16-20**; Wilwood 260-15542 outlets are **1/2-20** (11/16-20 is a flexline-adapter thread). | [iBooster][ibooster] | Verify MC port threads |
+| Radiator fan current/CFM | **53A / 4188 CFM** unverifiable — GM/ACDelco publish no figures for 84100128. | [Radiator Fan][radiator-fan] | Clamp-meter measure |
+| SwitchPros power/ground gauge | **1/0 AWG power, 4 AWG ground** not published by Switch-Pros; build design choice. | [SwitchPros][switchpros] | Confirm gauge adequate |
+| iBooster donor year | Doc says **2017**-2022 Accord Hybrid; public sources cite **2018+** for Gen 2. | [iBooster][ibooster] | Verify 2017 inclusion |
+
+**Confirmed-correct (footnoted, no action):** Cole Hersee 24213 = 200A (was wrongly 85A — corrected); MC stroke 1.10"; reservoir 260-16392 4oz/-3AN; ARB CKBLTA12 90A total; SwitchPros RCR-Force 12 output ratings (4×35A/1×30A/11×15A/150A); CT4 10A/output (40A); Odyssey PC1500 68Ah/850CCA; Dakota Lithium 135Ah; Mechanical Products 174-S2 breakers (250/150/100/80A); Blue Sea 2107 (600A) / 2105 (250A); Deutsch HDP24 contacts (size-12 25A / size-16 13A); DB Electrical 410-52442 starter (2.7kW/10-tooth); WARN line pull 10,000 lb; iBooster firewall pattern 60×80mm M8.
 
 ---
 
@@ -127,7 +148,7 @@ Items completed since last update.
 
 | Item                          | Resolution                                                                                                                    | Date       |
 | :---------------------------- | :---------------------------------------------------------------------------------------------------------------------------- | :--------- |
-| Cummins ECM WAIT/MIL Pins     | Confirmed from Cummins R2.8 install manual (document 0042728): WAIT=Pin 35 yellow, MIL=Pin 22 white, STOP ENGINE=Pin 49 green, WARNING=Pin 36 blue, Keyswitch=Pin 41 black (5A fuse) | 2026-05-30 |
+| Back Bay MC Adapter Compatibility | Vendor (Back Bay Customs / Adam) confirmed: adapter fits Wilwood 260-15542 (1-1/8" Tandem Compact), is Honda-Accord-iBooster-only (not Tesla), and the 2× remote Wilwood reservoirs are fine. Blocker cleared — Wilwood + adapter cleared to order. Note: vendor also revised the firewall pattern to 60×80mm (80mm vertical), see new backing-plate DXF redesign item. | 2026-05-30 |
 | Boomerang Bullet 230          | Removed from build — product was fabricated (does not exist). Replaced by Digital Guard Dawg PBS-I self-contained system     | 2026-05-30 |
 | Boomerang Mounting Location   | Obsolete — Boomerang not used; PBS-I includes its own RFID receiver in the ICM                                                | 2026-05-30 |
 | ECM Ignition Relay            | Obsolete — PBS-I PINK IGN (60A onboard relay) replaces the external ECM ignition relay                                        | 2026-05-30 |
@@ -177,7 +198,7 @@ Items completed since last update.
 | Cargo Light Switch            | Blue Sea 4160 (10A latching, 3/4" mount) on wheel well top                                                                                   | 2025-11-26 |
 | Roof Lights OUTPUT-1 Overload | Corrected XL Sport specs (2.2A/pod, not 6A); 8 pods = 18A on single OUTPUT-1 (51% utilization)                               | 2025-11-25 |
 | Fusion Amp Current Draw       | 6-ch MS-AP61800: 1.32A idle, 78A max, 125A electronic fuse                                                                    | 2025-11-24 |
-| Fusion Amp CB Selection       | Blue Sea 187-100A breaker, 4 AWG power/ground wiring, mount at CONSTANT bus                                                   | 2025-11-24 |
+| Fusion Amp CB Selection       | Blue Sea 187-series 40A breaker (per Fusion install guide; superseded earlier 100A), 4 AWG power/ground wiring, mount at CONSTANT bus       | 2026-05-30 |
 | WolfBox Model                 | G900 TriPro selected                                                                                                          | 2025-11-24 |
 | WolfBox Power Source          | BODY PDU F5 (10A, CONSTANT)                                                                                                   | 2025-11-24 |
 | WolfBox Mounting              | Windshield mount (replaces factory rearview mirror)                                                                           | 2025-11-24 |
@@ -263,3 +284,6 @@ Items completed since last update.
 [firewall-ingress]: ../01-power-systems/07-wire-routing/02-firewall-ingress.md
 [runaway-protection]: ../02-engine-systems/11-runaway-protection.md
 [ibooster]: ../02-engine-systems/02-brake-booster.md
+[amplifier]: ../06-audio-systems/02-amplifier.md
+[winch]: ../08-exterior-systems/01-winch.md
+[ground-bus]: ../01-power-systems/05-grounding/01-engine-bay-ground-bus.md

@@ -28,7 +28,9 @@ tags:
 
 **Mounting:** Cab side firewall (behind radio)
 
-**Power Source:** CONSTANT bus via 100A breaker
+**Power Source:** CONSTANT bus via 40A breaker (per Fusion install guide)[^amp-fuse]
+
+[^amp-fuse]: External protection set to **40A** per Garmin/Fusion's MS-AP61800 install guide (owner decision, 2026-05-30) — supersedes the earlier 100A breaker, which was oversized for this amp. The install guide specifies a 40A external inline fuse/breaker with 4 AWG (max 2 AWG) power/ground; our 4 AWG matches. The amp's own **125A internal electronic fuse** handles amp-side faults; the 40A external device protects the wiring. The previously documented "78A max" is a theoretical all-channels-full-sine figure, not a sustained load — realistic musical draw is ~8-15A (see [AUX Battery Load Analysis][aux-load-analysis]). Source: [Fusion Apollo Multichannel Amplifiers install guide](https://static.garmin.com/pumac/Fusion_Apollo_Multichannel_Amplifiers_Install_EN-US.pdf) (checked 2026-05-30).
 
 ///
 
@@ -78,7 +80,7 @@ Fusion includes bridge adapters with built-in magnets:
 
 | Connection | Wire     | Source          | Notes                    |
 | :--------- | :------- | :-------------- | :----------------------- |
-| Power (+)  | 4 AWG    | CONSTANT bus    | Via 100A Blue Sea breaker |
+| Power (+)  | 4 AWG    | CONSTANT bus    | Via 40A Blue Sea breaker |
 | Ground (−) | 4 AWG    | AUX battery (−) | Direct to terminal       |
 | Remote     | 18 AWG   | MS-RA670        | Turn-on signal           |
 | RCA Zone 1 | Shielded | MS-RA670        | Ch 3+4 (front)           |
@@ -89,8 +91,8 @@ Fusion includes bridge adapters with built-in magnets:
 
 Amplifier has 125A internal electronic fuse (no replacement necessary). External protection at CONSTANT bus:
 
-- **Breaker:** Blue Sea 187-100A (100A) thermal circuit breaker
-- Protects 4 AWG wiring (rated 95A continuous, 100A with short runs)
+- **Breaker:** Blue Sea 187-series 40A thermal circuit breaker (per Fusion install guide)
+- Protects 4 AWG wiring (rated 95A continuous)
 - Mount at CONSTANT bus in passenger wheel well
 
 ## Mounting Location
@@ -115,5 +117,6 @@ Amplifier has 125A internal electronic fuse (no replacement necessary). External
 [speakers]: 03-speakers.md
 [subwoofer]: 04-subwoofer.md
 [aux-distribution]: ../01-power-systems/03-aux-battery-distribution/index.md
+[aux-load-analysis]: ../01-power-systems/08-load-analysis/03-aux-battery.md
 [product-link]: https://www.garmin.com/en-US/p/677280/pn/010-02284-60/
 [manual-link]: https://static.garmin.com/pumac/Fusion_Apollo_Multichannel_Amplifiers_Install_EN-US.pdf

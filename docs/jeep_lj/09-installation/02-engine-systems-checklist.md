@@ -19,12 +19,12 @@ Organized by installation order for efficient build workflow.
 - [ ] Source 03-06 TJ/LJ automatic brake pedal assembly (donor)
 - [ ] Source new stop-lamp switch + clip if donor pedal lacks them (Mopar 56045043AB)
 - [ ] Source Bosch iBooster Gen 2 unit (2017-2022 Honda Accord Hybrid FHEV donor; OEM 46680-T3Z-A00; MC pull included is OK but will be discarded)
-- [ ] Order Back Bay Customs Wilwood MC adapter (confirm 260-15542 fitment first)
-- [ ] Order Wilwood 260-15542 Tandem Compact 1-1/8" master cylinder
+- [ ] Order Back Bay Customs Wilwood MC adapter (260-15542 fitment confirmed by vendor 2026-05-30 — Honda iBooster only)
+- [ ] ⛔ Order Wilwood Tandem Compact master cylinder — HELD pending bore recalc (260-15541 1.125" vs 260-15542 1.00")
 - [ ] Order Wilwood 260-16392 remote reservoirs (×2) + 250-16393 dual bracket
 - [ ] Order Wilwood 220-12993 -3 AN flexlines (×2) - confirm length after firewall mockup
 - [ ] Select iBooster wiring harness: [Tulay's Gen 2][tulays-harness] vs EVcreate Gen 2 kit
-- [ ] Order SendCutSend cabin-side backing plate (3/16" steel, 4× M8 clearance holes at 72×72mm + 62mm center pass-through) — booster mounts directly via integral studs, no separate bracket needed
+- [ ] Redesign backing-plate DXF to 60×80mm hole pattern (was 72×72mm), then order SendCutSend cabin-side backing plate (3/16" steel, 4× M8 clearance holes at 60×80mm, 80mm vertical + 62mm center pass-through) — booster mounts directly via integral studs, no separate bracket needed
 
 ### Wipers
 
@@ -64,9 +64,9 @@ Organized by installation order for efficient build workflow.
 
 - [ ] Bench test donor iBooster: apply 12V ignition signal, verify motor cycles and pedal rod assists
 - [ ] Discard factory Honda master cylinder
-- [ ] Install Back Bay Customs adapter + Wilwood 260-15542 MC onto iBooster (pushrod pre-set)
+- [ ] Install Back Bay Customs adapter + Wilwood Tandem Compact MC (bore TBD) onto iBooster (pushrod pre-set)
 - [ ] Mock up donor bracket + iBooster + Wilwood MC assembly against LJ firewall (cardboard/3D-print) - verify engine-bay clearance BEFORE drilling
-- [ ] Drill LJ firewall: 4× M8 clearance holes (72×72mm pattern) + 62mm center bore (factory booster holes abandoned)
+- [ ] Drill LJ firewall: 4× M8 clearance holes (60×80mm pattern, 80mm vertical) + 62mm center bore (factory booster holes abandoned)
 - [ ] Mock up reservoir standoff location 4-6" above MC flange, verify hood clearance
 
 ### Brake Pedal Swap

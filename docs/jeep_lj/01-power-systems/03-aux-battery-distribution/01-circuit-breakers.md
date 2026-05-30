@@ -18,10 +18,10 @@ All CONSTANT bus loads protected by Mechanical Products Series 17 circuit breake
 | **SwitchPros RCR-Force 12**  | Mechanical Products<br/>([174-S2-150-2][mp-150])  |  150A  | Manual     | CONSTANT bus<br/>└→ 150A CB<br/>&nbsp;&nbsp;&nbsp;└→ SwitchPros RCR-Force 12 | ~100A (all lighting outputs on)                           | 150% of max load                         |
 | **SafetyHub 150 (Recovery)** | Mechanical Products<br/>([174-S2-150-2][mp-150b]) |  150A  | Manual     | CONSTANT bus<br/>└→ 150A CB<br/>&nbsp;&nbsp;&nbsp;└→ SafetyHub 150           | ~100A (ARB 90A + Winch Trigger 10A)                       | Future-proofed to SafetyHub max capacity |
 | **BODY PDU**                 | Mechanical Products<br/>([174-S2-100-2][mp-100])  |  100A  | Manual     | CONSTANT bus<br/>└→ 100A CB<br/>&nbsp;&nbsp;&nbsp;└→ BODY PDU                | ~54A max (radio 16A, USB 13A, camera 10A, seats 10A peak) | 185% of max load (future expansion)      |
-| **Fusion Apollo Amp**        | Blue Sea<br/>([187-100A][bs-100])                 |  100A  | Manual     | CONSTANT bus<br/>└→ 100A CB<br/>&nbsp;&nbsp;&nbsp;└→ Fusion MS-AP61800       | 78A max (all channels full output)                        | 128% of max load                         |
+| **Fusion Apollo Amp**        | Blue Sea<br/>([187-series 40A][bs-100])           |  40A   | Manual     | CONSTANT bus<br/>└→ 40A CB<br/>&nbsp;&nbsp;&nbsp;└→ Fusion MS-AP61800        | Wiring + amp (40A per Fusion install guide; 125A internal fuse) | Mfr-specified external protection        |
 
 !!! info "Wire Sizing for CB Protection"
-CONSTANT bus outputs use 2 AWG (130A @ 20°C) for SwitchPros, SafetyHub, and BODY PDU. Fusion Amp uses 4 AWG (95A @ 20°C) sized for 100A CB.
+CONSTANT bus outputs use 2 AWG (130A @ 20°C) for SwitchPros, SafetyHub, and BODY PDU. Fusion Amp uses 4 AWG (95A @ 20°C) per the Fusion install guide (40A external breaker).
 
 **Mechanical Products Series 17 (3 units):**
 
@@ -55,7 +55,7 @@ CONSTANT bus outputs use 2 AWG (130A @ 20°C) for SwitchPros, SafetyHub, and BOD
 [mp-150]: https://www.waytekwire.com/item/49079/
 [mp-150b]: https://www.waytekwire.com/item/49079/
 [mp-100]: https://www.waytekwire.com/item/49077/
-[bs-100]: https://www.bluesea.com/products/187-100A/187_Series_Thermal_Circuit_Breaker_100A
+[bs-100]: https://www.bluesea.com/category/8/Circuit_Protection/187-Series_Circuit_Breakers
 [rear-battery]: index.md
 [switchpros]: ../../05-control-interfaces/02-switchpros-sp1200.md
 [safetyhub]: 04-safetyhub.md
