@@ -7,9 +7,9 @@ hide:
 
 **Purpose:** Central tracking for all To-Be-Determined items across the Jeep LJ electrical system documentation.
 
-**Last Updated:** 2026-05-27
+**Last Updated:** 2026-05-29
 
-**Total Open Items:** 51
+**Total Open Items:** 59
 
 ---
 
@@ -19,7 +19,7 @@ Items that prevent build completion or system operation.
 
 | Item                                   | Description | File | Priority |
 | :------------------------------------- | :---------- | :--- | :------- |
-| _(None - all critical items resolved)_ |             |      |          |
+| Back Bay MC Adapter Compatibility      | Confirm Back Bay Customs Wilwood adapter fits Wilwood 260-15542 (1-1/8" Tandem Compact) before ordering MC | [iBooster][ibooster] | 🔴 Critical |
 
 ---
 
@@ -48,6 +48,12 @@ Items needed before installation begins but not system-critical.
 | AMOT T-Handle Mounting Location   | Select dash mounting position for Midwest Control 30-144-TTL-BH-3 (reachable belted, away from accidental contact) | [Runaway Protection][runaway-protection] | High     |
 | AMOT Cable Firewall Grommet       | Assign dedicated firewall grommet for AMOT push-pull cable pass-through (must not share with other cables) | [Runaway Protection][runaway-protection] | High     |
 | Catch Can Mounting Bracket Point  | Select engine bracketry attachment point for Mishimoto MMOCC-UB universal bracket                  | [Runaway Protection][runaway-protection] | High     |
+| iBooster Donor Sourcing           | Source 2018-2023 Honda Accord Hybrid iBooster + MC pull (eBay/LKQ/Car-Part.com)                   | [iBooster][ibooster] | High |
+| iBooster Wiring Harness Selection | Choose between Tulay's Wire Werks Gen 2 universal vs EVcreate Gen 2 connector kit                  | [iBooster][ibooster] | High |
+| LJ Firewall Mount Strategy        | Primary: direct mount via booster's integral 4-stud flange + SendCutSend cabin-side backing plate (drill new firewall holes 72×72mm M8 + 62mm center). Fallback: SendCutSend custom one-off, then Back Bay commission (only if LJ trial-fit available) | [iBooster][ibooster] | High |
+| Reservoir Standoff Design         | Design firewall standoff to mount 250-16393 dual bracket 4-6" above MC flange                      | [iBooster][ibooster] | High |
+| Auto Brake Pedal Sourcing         | Source 03-06 TJ/LJ automatic brake pedal assembly + stop-lamp switch (Mopar 56045043AB if needed) | [iBooster][ibooster] | High |
+| Clutch MC Firewall Hole Plug      | Block-off plate or weld closure for ~1.25" CMC pass-through (manual-to-auto pedal swap)            | [iBooster][ibooster] | High |
 
 ---
 
@@ -73,6 +79,7 @@ Items that improve the design but don't block installation.
 | Winch Rocker Switch Sourcing           | Center-off momentary rocker switch (SPDT or DPDT, 10A rated)                     | [Dashboard Controls][dash-controls]  | Medium   |
 | Rear Seat Switch Mounting Location     | Physical mounting location for Blue Sea 4160 push button (rear roll bar lights)  | [Dashboard Controls][dash-controls]  | Medium   |
 | Fusion Apollo Amp Distance & Drop      | Wire distance and resulting voltage drop for MS-AP61800 (CONSTANT bus stud 5)    | [Constant Bus][constant-bus]         | Medium   |
+| iBooster Reservoir Flexline Length     | Confirm Wilwood 220-12xxx length after firewall mockup (8"/10"/12" available)    | [iBooster][ibooster]                 | Medium   |
 
 ---
 
@@ -200,13 +207,13 @@ Items completed since last update.
 
 | Priority         | Count  |
 | :--------------- | :----- |
-| 🔴 Critical      | 0      |
-| High             | 19     |
-| 📋 Medium        | 16     |
+| 🔴 Critical      | 1      |
+| High             | 25     |
+| 📋 Medium        | 17     |
 | 📝 Low           | 2      |
 | 🔍 Verify        | 1      |
 | 🚙 Drivetrain    | 13     |
-| **TOTAL**        | **51** |
+| **TOTAL**        | **59** |
 
 ## Related Documentation
 
@@ -248,3 +255,4 @@ Items completed since last update.
 [pmu-programming]: ../01-power-systems/04-pmu/04-pmu-programming.md
 [firewall-ingress]: ../01-power-systems/07-wire-routing/02-firewall-ingress.md
 [runaway-protection]: ../02-engine-systems/11-runaway-protection.md
+[ibooster]: ../02-engine-systems/02-brake-booster.md
