@@ -76,7 +76,7 @@ Organized by installation order for efficient build workflow.
 - [ ] Install 03-06 auto brake pedal assembly (BTSI boss left empty)
 - [ ] Reconnect stop-lamp switch wiring: PMU In 2, Pin 15 crank-chain tap, Turbolamik brake input
 - [ ] Plug clutch master cylinder firewall hole (~1.25" block-off plate or weld closure)
-- [ ] Bench-measure pedal pivot-to-pushrod distance vs factory manual pedal (confirm pedal ratio)
+- [ ] Bench-measure pedal pivot-to-pushrod distance vs factory manual pedal (confirm pedal ratio — geometry/travel check for MC stroke headroom + iBooster rod travel, not a feel-tuning step)
 - [ ] Re-measure iBooster pushrod length after pedal install; adjust per harness vendor instructions before bleeding
 
 ### iBooster Installation
