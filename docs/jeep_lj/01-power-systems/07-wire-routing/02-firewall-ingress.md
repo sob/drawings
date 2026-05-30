@@ -46,7 +46,7 @@ RF interference analysis determined that with ferrite chokes on radio power lead
 
 ## Pin Assignment
 
-### Engine Bay → Cabin (6 wires)
+### Engine Bay → Cabin (5 wires)
 
 | Pin | Circuit | Gauge | Source | Destination | Contact |
 |:---:|:--------|:-----:|:-------|:------------|:-------:|
@@ -56,11 +56,8 @@ RF interference analysis determined that with ferrite chokes on radio power lead
 | 4 | Brake lights | 16 AWG | PMU OUT21 | Rear tail lights | #16 |
 | 5 | Reverse lights | 16 AWG | PMU OUT22 | Rear tail lights | #16 |
 | 6 | DRL/Parking | 16 AWG | PMU OUT23 | Rear tail lights | #16 |
-| 12 | Ignition signal bus feed + dash button supply | 18 AWG | ECM Ignition Relay output (EB) | Ignition signal bus bar (cabin); also taps to dash push-button supply | #16 |
 
-### Cabin → Engine Bay (10 wires)
-
-Pin 12 was reassigned from "Ignition sense" (cabin→EB) to "Ignition signal bus feed" (EB→cabin) when the keyswitch was removed.
+### Cabin → Engine Bay (11 wires)
 
 | Pin | Circuit | Gauge | Source | Destination | Contact |
 |:---:|:--------|:-----:|:-------|:------------|:-------:|
@@ -69,9 +66,10 @@ Pin 12 was reassigned from "Ignition sense" (cabin→EB) to "Ignition signal bus
 | 9 | Low beam headlights | 14 AWG | CT4 SW3 | LP6 Pin 1 (both) | #16 |
 | 10 | High beam headlights | 14 AWG | CT4 SW4 | LP6 Pin 4 (both) | #16 |
 | 11 | Horn button trigger | 18 AWG | Steering wheel button | PMU In 1 | #16 |
+| 12 | Ignition signal (outbound) | 14 AWG | Ignition signal bus bar Stud 2 (cabin) | ECM 12V supply + PMU Pin 7 (engine bay) | #16 |
 | 13 | Brake switch | 18 AWG | Brake pedal switch | PMU In 2 | #16 |
 | 14 | A/C request | 18 AWG | HVAC controls | PMU In 9 | #16 |
-| 15 | Push button → PMU + crank chain | 18 AWG | Dash push-button (NO) | PMU In 5 + brake switch start tap | #16 |
+| 15 | WAIT-gated PURPLE START | 16 AWG | WAIT-gate relay NC contact (cabin) | Cole Hersee 24213 coil+ | #16 |
 | 16 | Winch control IN | 18 AWG | Dash rocker switch | Winch contactor | #16 |
 | 17 | Winch control OUT | 18 AWG | Dash rocker switch | Winch contactor | #16 |
 
@@ -79,14 +77,9 @@ Pin 12 was reassigned from "Ignition sense" (cabin→EB) to "Ignition signal bus
 
 | Pin | Contact | Notes |
 |:---:|:-------:|:------|
-| A-D | #12 | Size 12 cavities — candidate slots for outstanding keyless system signals (fob present, gated start return); will need size 16→12 reducer crimps or size 12 contacts on 18 AWG wires |
+| A-D | #12 | Size 12 cavities — available for future expansion (e.g., higher-current circuits requiring size 12 contacts) |
 
-**Keyless Ignition Outstanding Pins:** Two additional pins still need allocation:
-
-1. **Boomerang fob present** (cabin → EB): Bullet 230 output to PMU In 4
-2. **Gated start return** (cabin → EB): brake switch start tap → engine bay P/N relay
-
-Current 17 size-16 contacts are fully assigned. Options under consideration in [Keyless Ignition][keyless-ignition]: use two of the size-12 reserved cavities, or add a small secondary connector for keyless signals.
+Connector is fully populated on size-16 contacts (17/17 used). Size-12 cavities remain available.
 
 ---
 
@@ -118,10 +111,10 @@ Radio grounds do NOT go through firewall - they route through cab floor to START
 
 | Gauge | Count | Circuits |
 |:------|:-----:|:---------|
-| 14 AWG | 6 | Radio power (2), CT4 outputs (4) |
-| 16 AWG | 3 | PMU lighting outputs |
-| 18 AWG | 7 | Switch signals (5), winch control (2) |
-| **Main Connector** | **16** | HDP24-24-21 (1 spare cavity at pin 2 + 4 reserved size 12) |
+| 14 AWG | 7 | Radio power (2), CT4 outputs (4), PBS-I PINK IGN (1) |
+| 16 AWG | 4 | PMU lighting outputs (3), WAIT-gated PURPLE START (1) |
+| 18 AWG | 6 | Switch signals (4), winch control (2) |
+| **Main Connector** | **17** | HDP24-24-21 (1 spare cavity at pin 2 + 4 reserved size 12) |
 | 22 AWG | 2 | Temp probe (separate grommet) |
 
 ---

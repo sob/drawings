@@ -47,16 +47,14 @@ Organized by installation order for efficient build workflow.
 - [ ] Confirm Cole Hersee 24213 solenoid mounted on firewall (engine bay side)
 - [ ] Confirm 10 AWG from starter battery post to Cole Hersee input
 - [ ] Confirm 10 AWG from Cole Hersee output to starter switch post
-- [ ] Confirm PMU OUT24 (Ignition Authorize) routed through firewall to dash push-button supply
-- [ ] Confirm push-button output (cabin) wired in series with brake pedal switch start tap
-- [ ] Confirm gated start signal routed through firewall Pin 15 → P/N relay contact in engine bay
-- [ ] Confirm P/N interlock relay coil driven by Turbolamik P/N aux output
-- [ ] Confirm engine-running lockout relay coil sensed from alternator B+ via filter circuit
-- [ ] Confirm engine-running lockout relay NC contacts in series with Cole Hersee coil+
+- [ ] Confirm PBS-I module mounted under-dash (cabin), powered from Critical Cabin PDU
+- [ ] Confirm PBS-I PURPLE START output wired to WAIT-gate relay COM terminal (cabin)
+- [ ] Confirm WAIT-gate relay coil wired to ECM WAIT signal tap (shared with HDX WAIT/EX input)
+- [ ] Confirm WAIT-gate relay NC contact routed through firewall Pin 15 → Cole Hersee 24213 coil+ in engine bay
 - [ ] Confirm Cole Hersee coil- grounded to engine bay ground bus
-- [ ] Confirm ECM ignition relay coil driven by PMU OUT24 (parallel to crank chain supply)
-- [ ] Confirm Boomerang Bullet 230 mounted, powered (CONSTANT), and output to PMU In 4
-- [ ] Confirm hidden bypass toggle installed (battery+ via 5A fuse → ECM relay coil)
+- [ ] Confirm PBS-I PINK IGN routed through cabin ignition signal bus bar → firewall Pin 12 → ECM 12V supply + PMU Pin 7
+- [ ] Confirm Start Button (included in PBS-I kit) mounted on dash, 36" harness plugged into PBS-I side port
+- [ ] Confirm Programming Button stashed accessibly for tag-learn / Emergency Bypass PIN entry
 
 ---
 
@@ -207,15 +205,14 @@ Organized by installation order for efficient build workflow.
 
 ### Starter Testing
 
-- [ ] Verify starter does NOT crank with shifter in R, D, or manual gates (P/N interlock relay open)
-- [ ] Verify starter does NOT crank when brake pedal is released (brake interlock open)
-- [ ] Verify starter does NOT crank when push-button is not pressed
-- [ ] Verify starter does NOT crank without Boomerang fob present (PMU blocks OUT24 assertion)
-- [ ] Verify starter cranks when fob + push-button + brake + P/N all asserted (engine off)
-- [ ] Verify engine-running lockout opens once alternator output > 13V (no Bendix re-engagement)
-- [ ] Verify push-button press while engine running kills the engine (OUT24 de-asserts, ECM off)
-- [ ] Verify hidden bypass toggle powers ECM ignition relay independent of PMU
-- [ ] Verify Boomerang fob lost while running does NOT kill the engine (PMU stay-on logic)
+- [ ] Verify starter does NOT crank when brake pedal is released (PBS-I brake interlock blocks PURPLE START)
+- [ ] Verify starter does NOT crank when Start Button is not pressed
+- [ ] Verify starter does NOT crank without valid PBS-I iTag fob in range (Start Button LED off)
+- [ ] Verify starter cranks when fob + Start Button + brake all asserted (engine off, warm engine - WAIT lamp not lit)
+- [ ] Verify cold-start sequence: brake + hold button → WAIT lamp illuminates → starter waits → WAIT extinguishes → starter cranks
+- [ ] Verify engine shutoff: brake + 2-second button hold → engine stops
+- [ ] Verify Emergency Bypass: with fob absent, Programming Button + 4-digit PIN authorizes start
+- [ ] Verify fob auto-arm: 60 seconds after fob leaves range, Start Button has no effect
 
 ### Grid Heater Testing
 
