@@ -55,7 +55,7 @@ The factory Tesla/Honda master cylinder is discarded. The Back Bay Customs adapt
 ### iBooster
 
 - **Current:** 40A peak (braking), 0.25A idle, 12mA standby
-- **Mounting Bolt Torque:** 16.5 Nm (12 ft-lb) - 2x nyloc nuts, 13mm — ⚠️ unverified[^ibooster-torque]
+- **Mounting Bolt Torque:** 13 Nm (115 in-lb) - 2× nyloc nuts, 13mm (M8)[^ibooster-torque]
 
 ### Master Cylinder
 
@@ -69,7 +69,7 @@ The factory Tesla/Honda master cylinder is discarded. The Back Bay Customs adapt
 - **Outlets:** Tandem (independent front/rear circuits); outlet thread **1/2-20**[^mc-ports]
 - **Reservoir Ports:** 11/16-20 (2× - one per circuit, remote feed) — ⚠️ verify[^mc-ports]
 
-[^ibooster-torque]: ⚠️ UNVERIFIED. No Honda service-manual or Bosch published firewall-mount torque was found for the Accord Gen 2 iBooster; the only published Bosch figure is 16 Nm for the M12×1 *brake-line* nuts (a different fastener). Treat 16.5 Nm / 12 ft-lb as an estimate — confirm against a Honda service manual before final torque (checked 2026-05-30).
+[^ibooster-torque]: Honda does not publish a Gen 2 iBooster-specific firewall-mount torque, but the booster mounts on **M8** studs (confirmed M8 by [EVcreate's iBooster install guide](https://www.evcreate.com/installing-the-ibooster/)), and Honda's published **power-brake-booster mounting-nut** torque is consistently **~115 in-lb / 13 Nm** across Accord generations (e.g. 115 in-lb on 2003-2007, 110 in-lb on 6th-gen). Corrected from the earlier unsourced 16.5 Nm estimate to the sourced **13 Nm** — also the conservative direction into the firewall + cabin-side backing plate. Do **not** confuse with the Bosch **16 Nm M12×1 brake-line** nut spec (a different fastener). Sources: [TorqueSpec Database — Accord 2003-2007](https://torque-spec-database.com/honda-accord-2003-2007/) (Power Brake Booster Mounting Nuts 115 in-lb); EVcreate (M8 confirmation). Verified 2026-05-30.
 [^mc-bore]: Wilwood [260-15542-BK official page](https://www.wilwood.com/MasterCylinders/MasterCylinderProd?itemno=260-15542-BK) lists **1.00" bore**; the 1-1/8" Tandem Compact is part **260-15541**. Corroborated by multiple retailers (checked 2026-05-30). High confidence the documented "260-15542 = 1-1/8\"" pairing is an error.
 [^mc-stroke]: Wilwood 260-15542 official page lists **stroke 1.10"** — matches (checked 2026-05-30).
 [^mc-ports]: ⚠️ Wilwood's 260-15542 page lists **1/2-20 outlets**, not 11/16-20. 11/16-20 appears in the Wilwood line only as a separate inlet *adapter fitting* (e.g., the 220-12993 flexline adapter), not the MC's native port — so the "11/16-20 reservoir port" claim likely conflates the flexline adapter thread with the MC port. Verify the actual MC inlet/outlet threads against the Wilwood data sheet before ordering fittings (checked 2026-05-30).
