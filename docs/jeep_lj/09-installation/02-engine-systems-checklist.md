@@ -18,7 +18,7 @@ Organized by installation order for efficient build workflow.
 
 - [ ] Source 03-06 TJ/LJ automatic brake pedal assembly (donor)
 - [ ] Source new stop-lamp switch + clip if donor pedal lacks them (Mopar 56045043AB)
-- [ ] Source Bosch iBooster Gen 2 unit (2017-2022 Honda Accord Hybrid FHEV donor; OEM 46680-T3Z-A00; MC pull included is OK but will be discarded)
+- [ ] Source Bosch iBooster Gen 2 unit (2018-2022 Honda Accord Hybrid 2.0L donor; ⚠️ verify OEM part # on donor — `46680-T3Z-A00` may be a 9th-gen number, see brake-booster doc; MC pull included is OK but will be discarded)
 - [ ] Order Back Bay Customs Wilwood MC adapter (260-15542 fitment confirmed by vendor 2026-05-30 — Honda iBooster only)
 - [ ] ⛔ Order Wilwood Tandem Compact master cylinder — HELD pending bore recalc (260-15541 1.125" vs 260-15542 1.00")
 - [ ] Order Wilwood 260-16392 remote reservoirs (×2) + 250-16393 dual bracket

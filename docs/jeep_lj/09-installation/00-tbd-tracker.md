@@ -115,7 +115,7 @@ Findings from a source-validation pass over critical fab/order/wiring specs (per
 | MC port threads | Doc **11/16-20**; Wilwood 260-15542 outlets are **1/2-20** (11/16-20 is a flexline-adapter thread). | [iBooster][ibooster] | Verify MC port threads | [#21][i21] |
 | Radiator fan current/CFM | **53A / 4188 CFM** unverifiable — GM/ACDelco publish no figures for 84100128. | [Radiator Fan][radiator-fan] | Clamp-meter measure | [#23][i23] |
 | SwitchPros power/ground gauge | ✅ **Resolved (2026-05-30):** confirmed adequate. 1/0 AWG power is a deliberate upsize over the supplied 30" cable (150A module, ~2 ft run); 4 AWG ground carries reference/logic current only — load return flows via each output's ground to the 1/0 AWG SwitchPros ground bus, per Switch-Pros design. | [SwitchPros][switchpros] | ✅ Done — adequate | [#24][i24] |
-| iBooster donor year | Doc says **2017**-2022 Accord Hybrid; public sources cite **2018+** for Gen 2. | [iBooster][ibooster] | Verify 2017 inclusion | [#20][i20] |
+| iBooster donor year + part # | ⚠️ **Partially resolved (2026-05-30):** year corrected **2017 → 2018**-2022 (10th-gen 2.0L Hybrid, Gen 2 — vendor-corroborated via EVcreate/Back Bay). **New finding:** part # `46680-T3Z-A00` carries a **9th-gen "T3Z"** code that conflicts with a 10th-gen donor (10th-gen = `01469-TVA-`). No vendor confirms the OEM part #; flagged for first-party verification on the donor in hand. | [iBooster][ibooster] | Verify part # on donor | [#20][i20] |
 
 > **GitHub tracking:** the open audit items above are sub-issues of [#17 — Critical-spec verification audit][i17]. The MC bore ([#16][i16]) is tracked as a standalone blocker.
 
