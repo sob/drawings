@@ -9,7 +9,9 @@ hide:
 
 **Last Updated:** 2026-05-31
 
-**Total Open Items:** 58
+**Total Open Items:** 50
+
+> Count reflects the priority sections below. The Critical-Spec Verification Audit is a separate validation log (its open on-arrival/on-vehicle checks are tracked via GitHub issue [#29][i29]); items already marked ✅ Resolved are not counted.
 
 ---
 
@@ -63,7 +65,6 @@ Items that improve the design but don't block installation.
 | Roof/Roll Bar Routing                  | Light bars, dome lights                                                          | [Wire Routing][wire-routing]         | Medium   |
 | Speaker Mounting Locations             | Dash end caps or kick panels                                                     | [Audio Systems][audio-systems]       | Medium   |
 | RF Power Grommet Location              | Grommet 6 location near battery for radio power                                  | [Wire Routing][wire-routing]         | Medium   |
-| Solar Panel Wire Gauge                 | Wire sizing for Cascadia 4x4 80W panel connection                                | [BCDC][bcdc]                         | Medium   |
 | Alternator Output Terminal Size        | Terminal size for 1/0 AWG lug selection                                          | [Alternator][alternator]             | Medium   |
 | Alternator Voltage Regulator Set Point | Verify 14.2-14.4V for AGM batteries                                              | [Alternator][alternator]             | Medium   |
 | BODY PDU Metri-Pack Pinout             | J301-J306 connector pinout (military TM or reverse engineering)                  | [BODY PDU][body-rtmr]                | Medium   |
@@ -89,7 +90,7 @@ Items that can be determined during build.
 
 | Item                              | Description                                                                     | File                                 | Priority |
 | :-------------------------------- | :------------------------------------------------------------------------------ | :----------------------------------- | :------- |
-| BIM Module Current Draw           | Current draw for BIM-17-2, BIM-11-2, BIM-12-2, BIM-13-2 (powered via BIM cable) | [Gauge Cluster][gauge-cluster]       | Low      |
+| BIM Module Current Draw           | Current draw for BIM-01-2-J1939, GPS-50-2, BIM-22-3, BIM-17-2 (powered via BIM cable) | [Gauge Cluster][gauge-cluster]       | Low      |
 | LED4Life Wire Colors              | Confirm pod wire colors match MLC-RW pinout before install                      | [Footwell Lights][footwell-lights]   | Low      |
 
 ---
@@ -132,6 +133,7 @@ Items completed since last update.
 
 | Item                          | Resolution                                                                                                                    | Date       |
 | :---------------------------- | :---------------------------------------------------------------------------------------------------------------------------- | :--------- |
+| Solar Panel Wire Gauge        | 10 AWG minimum (for 2.23A Isc with safety margin) - already specified in solar generation doc                                 | 2026-05-30 |
 | SwitchPros Power Module Location | **Architecture change:** Moved from passenger rear wheel well to firewall (cabin side, passenger area). Output fan-out is ~58% forward — placing module near loads minimizes total output wire. SwitchPros Ground Bus moves with controller. Input is 2 AWG, ~2 ft from Firewall CONSTANT Bus. Control cable shortens from 10.5 ft to ~5 ft. | 2026-05-30 |
 | AUX Battery CONSTANT Bus #1 (rear) | **Architecture change:** Removed. With SwitchPros, BODY PDU, and Fusion Amp moved to firewall distribution, only 2 CB-protected feeds + 2 direct connections leave the AUX battery. Replaced rear CONSTANT bus with 4 stacked ring lugs on battery + 2 inline CBs (300A master + 150A SafetyHub) on a wheel well bracket. | 2026-05-30 |
 | Firewall CONSTANT Bus (new)   | **Architecture change:** Added Blue Sea 2105 MaxiBus (250A) on firewall (passenger cabin side). Fed by 2/0 AWG forward feed from AUX battery via 300A master CB. Feeds SwitchPros (150A CB), BODY PDU (100A CB), Fusion Amp (100A CB). Places distribution near loads; collapses 3 forward feeds into 1 heavy cable through cabin trunk. | 2026-05-30 |
@@ -230,18 +232,17 @@ Items completed since last update.
 | :--------------- | :----- |
 | 🔴 Critical      | 0      |
 | High             | 19     |
-| 📋 Medium        | 16     |
+| 📋 Medium        | 15     |
 | 📝 Low           | 2      |
 | 🔍 Verify        | 1      |
 | 🚙 Drivetrain    | 13     |
-| **TOTAL**        | **51** |
+| **TOTAL**        | **50** |
 
 ## Related Documentation
 
 - [Section 1 Installation Checklist][section-1-install] - Power systems installation guide
 - [Section 1.7 Wire Routing][wire-routing] - Wire routing organized by location
 
-[bcdc]: ../01-power-systems/01-power-generation/03-bcdc.md
 [gauge-cluster]: ../02-engine-systems/09-gauge-cluster/index.md
 [radiator-fan]: ../02-engine-systems/06-radiator-fan.md
 [wire-routing]: ../01-power-systems/07-wire-routing/index.md
