@@ -16,9 +16,15 @@ Organized by installation order for efficient build workflow.
 
 ### iBooster
 
-- [ ] Source Bosch iBooster Gen 2 unit (Tesla Model 3 donor)
-- [ ] Source Gen 2 master cylinder (Tesla Model 3)
-- [ ] Order wiring harness from [Tulay's Wire Werks][tulays-harness]
+- [ ] Source 03-06 TJ/LJ automatic brake pedal assembly (donor)
+- [ ] Source new stop-lamp switch + clip if donor pedal lacks them (Mopar 56045043AB)
+- [ ] Source Bosch iBooster Gen 2 unit (2017-2022 Honda Accord Hybrid FHEV donor; OEM 46680-T3Z-A00; MC pull included is OK but will be discarded)
+- [ ] Order Back Bay Customs Wilwood MC adapter (confirm 260-15542 fitment first)
+- [ ] Order Wilwood 260-15542 Tandem Compact 1-1/8" master cylinder
+- [ ] Order Wilwood 260-16392 remote reservoirs (×2) + 250-16393 dual bracket
+- [ ] Order Wilwood 220-12993 -3 AN flexlines (×2) - confirm length after firewall mockup
+- [ ] Select iBooster wiring harness: [Tulay's Gen 2][tulays-harness] vs EVcreate Gen 2 kit
+- [ ] Order SendCutSend cabin-side backing plate (3/16" steel, 4× M8 clearance holes at 72×72mm + 62mm center pass-through) — booster mounts directly via integral studs, no separate bracket needed
 
 ### Wipers
 
@@ -56,17 +62,40 @@ Organized by installation order for efficient build workflow.
 
 ## Phase 2: Brake System
 
+### Pre-Install Fab + Bench Test
+
+- [ ] Bench test donor iBooster: apply 12V ignition signal, verify motor cycles and pedal rod assists
+- [ ] Discard factory Honda master cylinder
+- [ ] Install Back Bay Customs adapter + Wilwood 260-15542 MC onto iBooster (pushrod pre-set)
+- [ ] Mock up donor bracket + iBooster + Wilwood MC assembly against LJ firewall (cardboard/3D-print) - verify engine-bay clearance BEFORE drilling
+- [ ] Drill LJ firewall: 4× M8 clearance holes (72×72mm pattern) + 62mm center bore (factory booster holes abandoned)
+- [ ] Mock up reservoir standoff location 4-6" above MC flange, verify hood clearance
+
+### Brake Pedal Swap
+
+- [ ] Remove factory manual-trans pedal assembly (clutch + brake)
+- [ ] Verify donor 03-06 auto pedal: stop-lamp switch + clip present, pushrod hole bushing OK, arm not bent
+- [ ] Install 03-06 auto brake pedal assembly (BTSI boss left empty)
+- [ ] Reconnect stop-lamp switch wiring: PMU In 2, Pin 15 crank-chain tap, Turbolamik brake input
+- [ ] Plug clutch master cylinder firewall hole (~1.25" block-off plate or weld closure)
+- [ ] Bench-measure pedal pivot-to-pushrod distance vs factory manual pedal (confirm pedal ratio)
+- [ ] Re-measure iBooster pushrod length after pedal install; adjust per harness vendor instructions before bleeding
+
 ### iBooster Installation
 
 - [ ] Confirm factory vacuum brake booster removed
-- [ ] Confirm iBooster Gen 2 mounted in factory brake booster location
+- [ ] Confirm custom firewall bracket installed at factory booster location
+- [ ] Confirm iBooster + Wilwood MC assembly mounted to firewall bracket
 - [ ] Confirm iBooster mounting bolts torqued to 16.5 Nm (12 ft-lb) - 2x nyloc nuts
-- [ ] Confirm Gen 2 master cylinder installed
-- [ ] Confirm brake lines routed from master cylinder to front/rear brakes
-- [ ] Confirm iBooster wiring harness connected per Tulay's diagram
+- [ ] Confirm secondary front support bracket installed (cantilever brace)
+- [ ] Confirm Wilwood 250-16393 dual bracket + 2× 260-16392 reservoirs mounted on standoff
+- [ ] Confirm 2× Wilwood 220-12993 flexlines installed: reservoir (-3 AN) → MC (11/16-20)
+- [ ] Confirm brake hardlines routed from Wilwood MC to front/rear brakes
+- [ ] Confirm iBooster wiring harness connected (Tulay's or EVcreate, per selection)
 - [ ] Confirm iBooster main power connected (10 AWG red from PMU OUT1+10)
 - [ ] Confirm iBooster ignition signal connected (20 AWG green from PMU OUT19)
-- [ ] Confirm iBooster ground connected to firewall ground stud (10 AWG black)
+- [ ] Confirm iBooster ground connected to engine bay ground bus stud 7 (10 AWG black)
+- [ ] Bleed brake system; verify no leaks at flexlines, MC ports, or hardline unions
 
 ---
 

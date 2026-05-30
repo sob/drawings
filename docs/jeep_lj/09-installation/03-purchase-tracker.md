@@ -2,7 +2,7 @@
 
 Components organized by estimated cost for purchase planning (Black Friday, sales, etc.).
 
-**Last Updated:** 2026-05-29
+**Last Updated:** 2026-05-30
 
 ---
 
@@ -63,9 +63,15 @@ Major components - watch for sales, consider financing options.
 
 | Item | Manufacturer | Est. Price | Priority | Notes |
 |:-----|:-------------|:-----------|:---------|:------|
-| Bosch iBooster Gen 2 | Bosch | ~$200-400 | High | Tesla Model 3 donor - [iBooster][ibooster] |
-| Gen 2 Master Cylinder | Bosch | ~$100-200 | High | Tesla Model 3 donor |
-| Tulay's Wire Werks iBooster Harness | Tulay's Wire Werks | ~$150 | High | [Harness][tulays] |
+| Bosch iBooster Gen 2 (with MC pull) | Bosch / Honda | ~$195 (offer pending on $254 listing) | High | 2017-2022 Honda Accord Hybrid FHEV donor; OEM 46680-T3Z-A00 - [iBooster][ibooster] |
+| 03-06 TJ/LJ Auto Brake Pedal Assembly | Mopar | ~$30-80 | **Ordered** | Auto-trans pedal w/ wider pad + stop-lamp switch - [iBooster][ibooster] |
+| Back Bay Customs Wilwood MC Adapter | Back Bay Customs | ~$165 | High | Replaces factory MC w/ Wilwood - [iBooster][ibooster] |
+| Wilwood 260-15542 Tandem Compact MC | Wilwood | ~$180-230 | High | 1-1/8" bore, black E-coat - [iBooster][ibooster] |
+| Wilwood 260-16392 Remote Reservoir (×2) | Wilwood | ~$260-320 | High | 4oz anodized, -3 AN port - [iBooster][ibooster] |
+| Wilwood 250-16393 Dual Reservoir Bracket | Wilwood | ~$45-65 | High | Anodized billet - [iBooster][ibooster] |
+| Wilwood 220-12993 -3 AN Flexline (×2) | Wilwood | ~$50-70 | High | 8" w/ 11/16-20 adapter - [iBooster][ibooster] |
+| iBooster Wiring Harness | Tulay's or EVcreate | ~$60-150 | High | TBD: Gen 2 universal vs EVcreate kit - [Harness][tulays] |
+| Firewall backing plate (cabin side) | SendCutSend | ~$15-30 | High | Flat 3/16" steel sandwich plate, donor bracket pattern + 62mm center - [iBooster][ibooster] |
 | Fusion Apollo MS-AP61800 Amplifier | Fusion (Garmin) | ~$450 | Medium | [Amplifier][amplifier] |
 | JL Audio M7-12IB-S-GmTi-i-4 Subwoofer | JL Audio | ~$400 | Low | [Subwoofer][subwoofer] |
 | JL Audio MLC-RW LED Controller | JL Audio | ~$250 | Low | [LED Controller][led-controller] |
@@ -147,7 +153,7 @@ _(Most electrical distribution components already purchased - see Purchased Item
 |:---------|:-----------|:---------------|
 | Command Touch CT4 | ~$500 | Critical for lighting |
 | Alternator | ~$900 | Critical |
-| iBooster + Harness | ~$500-700 | Critical for brakes |
+| iBooster + Wilwood MC + plumbing | ~$1,100-1,600 | Critical for brakes |
 | ARB 1-Gallon Tank + Pressure Gauge | ~$220 | Medium |
 | Baja Designs Lighting | ~$5,000 | Medium-Low |
 | Audio (Amp, Sub, Front Speakers) | ~$1,350 | Low |
