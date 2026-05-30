@@ -68,13 +68,13 @@ The factory Tesla/Honda master cylinder is discarded. The Back Bay Customs adapt
 
 - **Bore:** ⛔ TBD — pending recalculation (1.00" / 260-15542 vs 1.125" / 260-15541)[^mc-bore]
 - **Stroke:** 1.100" (260-15542)[^mc-stroke]
-- **Outlets:** Tandem (independent front/rear circuits); outlet thread **1/2-20**[^mc-ports]
-- **Reservoir Ports:** 11/16-20 (2× - one per circuit, remote feed) — ⚠️ verify[^mc-ports]
+- **Outlets:** Tandem (independent front/rear circuits); outlet thread **1/2-20 IF** (confirmed)[^mc-ports]
+- **Reservoir/Inlet Ports:** 2× (one per circuit, remote feed) — thread TBD with final bore selection[^mc-ports]
 
 [^ibooster-torque]: Honda does not publish a Gen 2 iBooster-specific firewall-mount torque, but the booster mounts on **M8** studs (confirmed M8 by [EVcreate's iBooster install guide](https://www.evcreate.com/installing-the-ibooster/)), and Honda's published **power-brake-booster mounting-nut** torque is consistently **~115 in-lb / 13 Nm** across Accord generations (e.g. 115 in-lb on 2003-2007, 110 in-lb on 6th-gen). Corrected from the earlier unsourced 16.5 Nm estimate to the sourced **13 Nm** — also the conservative direction into the firewall + cabin-side backing plate. Do **not** confuse with the Bosch **16 Nm M12×1 brake-line** nut spec (a different fastener). Sources: [TorqueSpec Database — Accord 2003-2007](https://torque-spec-database.com/honda-accord-2003-2007/) (Power Brake Booster Mounting Nuts 115 in-lb); EVcreate (M8 confirmation). Verified 2026-05-30.
 [^mc-bore]: Wilwood [260-15542-BK official page](https://www.wilwood.com/MasterCylinders/MasterCylinderProd?itemno=260-15542-BK) lists **1.00" bore**; the 1-1/8" Tandem Compact is part **260-15541**. Corroborated by multiple retailers (checked 2026-05-30). High confidence the documented "260-15542 = 1-1/8\"" pairing is an error.
 [^mc-stroke]: Wilwood 260-15542 official page lists **stroke 1.10"** — matches (checked 2026-05-30).
-[^mc-ports]: ⚠️ Wilwood's 260-15542 page lists **1/2-20 outlets**, not 11/16-20. 11/16-20 appears in the Wilwood line only as a separate inlet *adapter fitting* (e.g., the 220-12993 flexline adapter), not the MC's native port — so the "11/16-20 reservoir port" claim likely conflates the flexline adapter thread with the MC port. Verify the actual MC inlet/outlet threads against the Wilwood data sheet before ordering fittings (checked 2026-05-30).
+[^mc-ports]: **Outlets confirmed 1/2-20 IF** per Wilwood's [260-15542-BK page](https://www.wilwood.com/MasterCylinders/MasterCylinderProd?itemno=260-15542-BK) (fitting options: outlet 1 = 3/8-24 IF or 1/2-20 IF; outlet 2 = 3/8-24 IF or 9/16-18 IF). This corrects the earlier "11/16-20" outlet claim, which conflated the **flexline adapter** thread (the 220-12993 inlet adapter is 11/16-20) with the MC's native outlet. **Reservoir/inlet port thread is left TBD** because Wilwood lists an inlet *size* but not a clean thread spec on the product page, and the final fitting depends on which bore (260-15541 vs 260-15542) the bore recalc selects — confirm the inlet thread against the datasheet for the chosen part before ordering reservoir feed fittings. Outlet verified 2026-05-30.
 
 ### Plumbing
 
@@ -92,7 +92,7 @@ The factory Tesla/Honda master cylinder is discarded. The Back Bay Customs adapt
 | Reservoir (×2) | Wilwood 260-16392 | Summit / Jegs | Ready to order (vendor-confirmed OK) | 4 oz anodized, includes -3 AN fitting |
 | Dual reservoir bracket | Wilwood 250-16393 | Summit / Jegs | Ready to order | Anodized billet, mounting screws incl. |
 | Flexline (×2) | Wilwood 220-12993 | Summit / Jegs | Ready to order | 8" -3 AN, includes 11/16-20 adapter |
-| Firewall mount (engine side) | iBooster integral 4-stud flange | Included w/ iBooster | Ships with donor | Bolts directly to firewall — 60×80mm M8 pattern (80mm vertical), 62mm body neck through firewall |
+| Firewall mount (engine side) | iBooster integral 4-stud flange | Included w/ iBooster | Ships with donor | Bolts directly to firewall — 60×80mm M8 pattern (80mm vertical), ~62mm body neck through firewall[^body-neck] |
 | Firewall reinforcement (cabin side) | SendCutSend custom — see [DXF][backing-plate-dxf] | ~$15-30 | ⚠️ DXF needs redesign for 60×80mm pattern (currently drawn 72×72mm — see Outstanding Items) | 3/16" A36 steel, 152×152mm, 12mm corner radius, 9mm M8 holes, 64mm center bore. Zinc yellow plating |
 | Wiring harness | TBD | Tulay's or EVcreate | Decision pending donor arrival | Choice depends on donor pigtail condition |
 
@@ -262,6 +262,8 @@ See [tail/brake][tail-brake] (PMU lighting flow), [starter][starter] (crank chai
 [evcreate-install]: https://www.evcreate.com/installing-the-ibooster/
 [evcreate-donors]: https://www.evcreate.com/ibooster-donor-vehicles/
 [^bbc-firewall]: Back Bay Customs (adapter maker, Adam), email to owner 2026-05-30. First vendor-confirmed firewall bolt pattern; supersedes the earlier unsourced "72×72mm" estimate introduced in PR #12, which the original backing-plate DXF was cut to.
+
+[^body-neck]: ~62mm body-neck (firewall pass-through) is now **corroborated by two independent sources**: Back Bay Customs (adapter vendor, 2026-05-30) and independent retrofit measurements of the Gen 2 Accord iBooster reported by the [Bosch iBooster retrofit community](https://nastyz28.com/threads/ibooster-retrofit.343058/) / [EVcreate](https://www.evcreate.com/installing-the-ibooster/) (62mm firewall center bore, ~6mm protrusion). Honda does not publish this dimension (it is not a serviceable spec), so it remains a measured rather than datasheet figure. **Still confirm on the secured donor before final firewall cut:** the backing-plate bore is 64mm, leaving only ~2mm radial clearance over a 62mm neck. Checked 2026-05-30.
 
 [pmu-outputs]: ../01-power-systems/04-pmu/03-pmu-outputs.md
 [ground-bus]: ../01-power-systems/05-grounding/01-engine-bay-ground-bus.md
