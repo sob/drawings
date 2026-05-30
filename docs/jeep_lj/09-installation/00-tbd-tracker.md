@@ -104,17 +104,31 @@ Items that are estimated and need actual product specs to confirm.
 
 Findings from a source-validation pass over critical fab/order/wiring specs (per CLAUDE.md Imperative #7). Each is footnoted at its source page. **Confirmed** specs need no action; **mismatch/unverified** items below need a decision or measurement before fabrication/order.
 
-| Item | Finding | File | Action Needed |
-| :--- | :------ | :--- | :------------ |
-| Fusion amp external fuse | ✅ **Resolved (2026-05-30):** external protection set to **40A** per Fusion install guide (owner decision); 100A was oversized. 78A is theoretical sine-max, not sustained; musical draw ~8-15A. 4 AWG retained; 125A internal fuse covers amp-side faults. | [Amplifier][amplifier] | ✅ Done — 40A |
-| Winch model + peak draw | ✅ **Resolved (2026-05-30):** model confirmed **WARN ZEON 10-S** (owner); VR EVO naming removed. Peak draw corrected to **409A** (WARN spec) throughout; 1/0 AWG retains margin. | [Winch][winch] | ✅ Done — Zeon 10-S / 409A |
-| iBooster firewall torque | **16.5 Nm** has no Honda/Bosch source (only an unrelated 16 Nm brake-line spec exists). | [iBooster][ibooster] | Confirm vs service manual |
-| iBooster body-neck Ø | **~62mm** pass-through asserted only by adapter vendor; no corroboration. | [iBooster][ibooster] | Measure on donor |
-| Ground bus stud torque | Doc **100-120 in-lb**; Blue Sea's 3/8"-16 figure appears to be **140 in-lb** (120 = 5/16"). Mfr page was fetch-blocked. | [Ground Bus][ground-bus] | Confirm vs Blue Sea sheet |
-| MC port threads | Doc **11/16-20**; Wilwood 260-15542 outlets are **1/2-20** (11/16-20 is a flexline-adapter thread). | [iBooster][ibooster] | Verify MC port threads |
-| Radiator fan current/CFM | **53A / 4188 CFM** unverifiable — GM/ACDelco publish no figures for 84100128. | [Radiator Fan][radiator-fan] | Clamp-meter measure |
-| SwitchPros power/ground gauge | **1/0 AWG power, 4 AWG ground** not published by Switch-Pros; build design choice. | [SwitchPros][switchpros] | Confirm gauge adequate |
-| iBooster donor year | Doc says **2017**-2022 Accord Hybrid; public sources cite **2018+** for Gen 2. | [iBooster][ibooster] | Verify 2017 inclusion |
+| Item | Finding | File | Action Needed | Issue |
+| :--- | :------ | :--- | :------------ | :---- |
+| Fusion amp external fuse | ✅ **Resolved (2026-05-30):** external protection set to **40A** per Fusion install guide (owner decision); 100A was oversized. 78A is theoretical sine-max, not sustained; musical draw ~8-15A. 4 AWG retained; 125A internal fuse covers amp-side faults. | [Amplifier][amplifier] | ✅ Done — 40A | [PR #15][pr15] |
+| Winch model + peak draw | ✅ **Resolved (2026-05-30):** model confirmed **WARN ZEON 10-S** (owner); VR EVO naming removed. Peak draw corrected to **409A** (WARN spec) throughout; 1/0 AWG retains margin. | [Winch][winch] | ✅ Done — Zeon 10-S / 409A | [PR #15][pr15] |
+| MC bore recalc | ⛔ **On hold:** part/bore conflict (260-15542 = 1.00", not the documented 1.125" = 260-15541). Bore to be recalculated from brake hydraulics before ordering. | [iBooster][ibooster] | Recalc → select part | [#16][i16] |
+| iBooster firewall torque | **16.5 Nm** has no Honda/Bosch source (only an unrelated 16 Nm brake-line spec exists). | [iBooster][ibooster] | Confirm vs service manual | [#18][i18] |
+| iBooster body-neck Ø | **~62mm** pass-through asserted only by adapter vendor; no corroboration. | [iBooster][ibooster] | Measure on donor | [#19][i19] |
+| Ground bus stud torque | Doc **100-120 in-lb**; Blue Sea's 3/8"-16 figure appears to be **140 in-lb** (120 = 5/16"). Mfr page was fetch-blocked. | [Ground Bus][ground-bus] | Confirm vs Blue Sea sheet | [#22][i22] |
+| MC port threads | Doc **11/16-20**; Wilwood 260-15542 outlets are **1/2-20** (11/16-20 is a flexline-adapter thread). | [iBooster][ibooster] | Verify MC port threads | [#21][i21] |
+| Radiator fan current/CFM | **53A / 4188 CFM** unverifiable — GM/ACDelco publish no figures for 84100128. | [Radiator Fan][radiator-fan] | Clamp-meter measure | [#23][i23] |
+| SwitchPros power/ground gauge | **1/0 AWG power, 4 AWG ground** not published by Switch-Pros; build design choice. | [SwitchPros][switchpros] | Confirm gauge adequate | [#24][i24] |
+| iBooster donor year | Doc says **2017**-2022 Accord Hybrid; public sources cite **2018+** for Gen 2. | [iBooster][ibooster] | Verify 2017 inclusion | [#20][i20] |
+
+> **GitHub tracking:** the open audit items above are sub-issues of [#17 — Critical-spec verification audit][i17]. The MC bore ([#16][i16]) is tracked as a standalone blocker.
+
+[pr15]: https://github.com/sob/drawings/pull/15
+[i16]: https://github.com/sob/drawings/issues/16
+[i17]: https://github.com/sob/drawings/issues/17
+[i18]: https://github.com/sob/drawings/issues/18
+[i19]: https://github.com/sob/drawings/issues/19
+[i20]: https://github.com/sob/drawings/issues/20
+[i21]: https://github.com/sob/drawings/issues/21
+[i22]: https://github.com/sob/drawings/issues/22
+[i23]: https://github.com/sob/drawings/issues/23
+[i24]: https://github.com/sob/drawings/issues/24
 
 **Confirmed-correct (footnoted, no action):** Cole Hersee 24213 = 200A (was wrongly 85A — corrected); MC stroke 1.10"; reservoir 260-16392 4oz/-3AN; ARB CKBLTA12 90A total; SwitchPros RCR-Force 12 output ratings (4×35A/1×30A/11×15A/150A); CT4 10A/output (40A); Odyssey PC1500 68Ah/850CCA; Dakota Lithium 135Ah; Mechanical Products 174-S2 breakers (250/150/100/80A); Blue Sea 2107 (600A) / 2105 (250A); Deutsch HDP24 contacts (size-12 25A / size-16 13A); DB Electrical 410-52442 starter (2.7kW/10-tooth); WARN line pull 10,000 lb; iBooster firewall pattern 60×80mm M8.
 
