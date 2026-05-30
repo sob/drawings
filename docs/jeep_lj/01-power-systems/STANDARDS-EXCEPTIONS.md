@@ -550,8 +550,8 @@ Before flagging as issues, verify these intentional design choices:
 
 ---
 
-[warn-product]: https://www.warn.com/
-[warn-manual]: https://www.warn.com/
+[warn-product]: https://www.warn.com/products/zeon-10-s-89611
+[warn-manual]: https://www.warn.com/products/zeon-10-s-89611
 [aux-battery-distribution]: 03-aux-battery-distribution/index.md
 [recovery-systems]: ../08-exterior-systems/01-winch.md
 [wire-distance]: 01-power-generation/05-wire-distance-reference.md
