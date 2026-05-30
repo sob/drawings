@@ -20,7 +20,7 @@ Items that prevent build completion or system operation.
 | Item                                   | Description | File | Priority |
 | :------------------------------------- | :---------- | :--- | :------- |
 | iBooster Backing Plate DXF Redesign    | Re-cut `lj-ibooster-backing-plate.dxf` from 72×72mm square to confirmed 60×80mm rectangular hole pattern (±30mm H / ±40mm V, 80mm vertical) before ordering SendCutSend steel. Vendor revised pattern 2026-05-30. | [iBooster][ibooster] | 🔴 Critical |
-| MC Bore Recalculation (on hold)        | Wilwood **260-15542 is 1.00" bore**, not the 1-1/8" documented (1-1/8" = **260-15541**). Per owner decision (2026-05-30), **recalculate required MC bore** from brake hydraulics (caliper piston area, rotor radius, pedal ratio, effort/travel, iBooster assist) → select 260-15541 vs 260-15542. MC order HELD until resolved; re-confirm adapter fitment if it lands on 260-15541. | [iBooster][ibooster] | 🔴 Critical |
+| MC Bore — ✅ resolved                  | **1.00" → Wilwood 260-15542** (2026-05-30). Sized from brake hardware: TJ Rubicon front calipers (2.595" piston) + rear disc + standard/light pedal feel. Factory-matched (Mopar's TJ 1.00" bore was built around these calipers), gives lighter pedal effort, and agrees with the already-confirmed adapter fitment. MC ready to order. | [iBooster][ibooster] | ✅ Done |
 
 ---
 
@@ -108,16 +108,16 @@ Findings from a source-validation pass over critical fab/order/wiring specs (per
 | :--- | :------ | :--- | :------------ | :---- |
 | Fusion amp external fuse | ✅ **Resolved (2026-05-30):** external protection set to **40A** per Fusion install guide (owner decision); 100A was oversized. 78A is theoretical sine-max, not sustained; musical draw ~8-15A. 4 AWG retained; 125A internal fuse covers amp-side faults. | [Amplifier][amplifier] | ✅ Done — 40A | [PR #15][pr15] |
 | Winch model + peak draw | ✅ **Resolved (2026-05-30):** model confirmed **WARN ZEON 10-S** (owner); VR EVO naming removed. Peak draw corrected to **409A** (WARN spec) throughout; 1/0 AWG retains margin. | [Winch][winch] | ✅ Done — Zeon 10-S / 409A | [PR #15][pr15] |
-| MC bore recalc | ⛔ **On hold:** part/bore conflict (260-15542 = 1.00", not the documented 1.125" = 260-15541). Bore to be recalculated from brake hydraulics before ordering. | [iBooster][ibooster] | Recalc → select part | [#16][i16] |
+| MC bore recalc | ✅ **Resolved (2026-05-30):** **1.00" / Wilwood 260-15542**, sized to TJ Rubicon front calipers + rear disc + standard/light pedal feel (factory-matched; agrees with confirmed adapter fitment). | [iBooster][ibooster] | ✅ Done — 260-15542 | [#16][i16] |
 | iBooster firewall torque | ✅ **Resolved (2026-05-30):** corrected **16.5 → 13 Nm (115 in-lb)** — Honda's M8 power-brake-booster mounting-nut spec (consistent across Accord generations); M8 confirmed by EVcreate. Conservative direction into the firewall/backing plate. | [iBooster][ibooster] | ✅ Done — 13 Nm | [#18][i18] |
-| iBooster body-neck Ø | **~62mm** pass-through asserted only by adapter vendor; no corroboration. | [iBooster][ibooster] | Measure on donor | [#19][i19] |
-| Ground bus stud torque | Doc **100-120 in-lb**; Blue Sea's 3/8"-16 figure appears to be **140 in-lb** (120 = 5/16"). Mfr page was fetch-blocked. | [Ground Bus][ground-bus] | Confirm vs Blue Sea sheet | [#22][i22] |
-| MC port threads | Doc **11/16-20**; Wilwood 260-15542 outlets are **1/2-20** (11/16-20 is a flexline-adapter thread). | [iBooster][ibooster] | Verify MC port threads | [#21][i21] |
-| Radiator fan current/CFM | **53A / 4188 CFM** unverifiable — GM/ACDelco publish no figures for 84100128. | [Radiator Fan][radiator-fan] | Clamp-meter measure | [#23][i23] |
+| iBooster body-neck Ø | ⚠️ **Corroborated (2026-05-30):** ~62mm backed by **two** independent sources (Back Bay vendor + iBooster retrofit community). Not a Honda-published spec. On-arrival measurement folded into checklist [#29][i29] — only ~2mm clearance vs the 64mm backing-plate bore. | [iBooster][ibooster] | On arrival → [#29][i29] | [#19][i19] |
+| Ground bus stud torque | ✅ **Resolved (2026-05-30):** corrected **100-120 → 140 in-lb** — Blue Sea's published spec for the 2107's 3/8"-16 studs (the 120 in-lb was the 5/16"-18 value, undertorquing these). Cited to bluesea.com. | [Ground Bus][ground-bus] | ✅ Done — 140 in-lb | [#22][i22] |
+| MC port threads | ✅ **Outlet resolved (2026-05-30):** confirmed **1/2-20 IF** per Wilwood datasheet (corrects the old 11/16-20 flexline-adapter thread). Inlet/reservoir thread (bore fixed at 260-15542) folded into ordering checklist [#29][i29]. | [iBooster][ibooster] | Inlet → [#29][i29] | [#21][i21] |
+| Radiator fan current/CFM | **53A / 4188 CFM** unverifiable — GM/ACDelco publish no figures for 84100128; requires clamp-meter on the running vehicle. Folded into checklist [#29][i29]. | [Radiator Fan][radiator-fan] | On vehicle → [#29][i29] | [#23][i23] |
 | SwitchPros power/ground gauge | ✅ **Resolved (2026-05-30):** confirmed adequate. 1/0 AWG power is a deliberate upsize over the supplied 30" cable (150A module, ~2 ft run); 4 AWG ground carries reference/logic current only — load return flows via each output's ground to the 1/0 AWG SwitchPros ground bus, per Switch-Pros design. | [SwitchPros][switchpros] | ✅ Done — adequate | [#24][i24] |
-| iBooster donor year | Doc says **2017**-2022 Accord Hybrid; public sources cite **2018+** for Gen 2. | [iBooster][ibooster] | Verify 2017 inclusion | [#20][i20] |
+| iBooster donor year + part # | ✅ **Resolved (2026-05-30):** part #s **confirmed on the secured donor** (eBay listing #397546491129, offer accepted): OE/OEM `46680-T3Z-A00` + `01469-TWA-A58`, MC mfr # `46100-TWA-A550-M1`. Speculative model-year claim dropped — physical part is the fitment reference (Gen 2 Honda Accord). Final casting-# check on arrival. | [iBooster][ibooster] | ✅ Done — donor secured | [#20][i20] |
 
-> **GitHub tracking:** the open audit items above are sub-issues of [#17 — Critical-spec verification audit][i17]. The MC bore ([#16][i16]) is tracked as a standalone blocker.
+> **GitHub tracking:** the audit items above are sub-issues of [#17 — Critical-spec verification audit][i17]. The MC bore ([#16][i16]) was tracked as a standalone blocker (now resolved). Items needing the physical part or running vehicle (body-neck measure, MC inlet thread, fan current) are consolidated into the on-arrival/on-bench checklist [#29][i29].
 
 [pr15]: https://github.com/sob/drawings/pull/15
 [i16]: https://github.com/sob/drawings/issues/16
@@ -129,6 +129,7 @@ Findings from a source-validation pass over critical fab/order/wiring specs (per
 [i22]: https://github.com/sob/drawings/issues/22
 [i23]: https://github.com/sob/drawings/issues/23
 [i24]: https://github.com/sob/drawings/issues/24
+[i29]: https://github.com/sob/drawings/issues/29
 
 **Confirmed-correct (footnoted, no action):** Cole Hersee 24213 = 200A (was wrongly 85A — corrected); MC stroke 1.10"; reservoir 260-16392 4oz/-3AN; ARB CKBLTA12 90A total; SwitchPros RCR-Force 12 output ratings (4×35A/1×30A/11×15A/150A); CT4 10A/output (40A); Odyssey PC1500 68Ah/850CCA; Dakota Lithium 135Ah; Mechanical Products 174-S2 breakers (250/150/100/80A); Blue Sea 2107 (600A) / 2105 (250A); Deutsch HDP24 contacts (size-12 25A / size-16 13A); DB Electrical 410-52442 starter (2.7kW/10-tooth); WARN line pull 10,000 lb; iBooster firewall pattern 60×80mm M8.
 
@@ -162,7 +163,7 @@ Items completed since last update.
 
 | Item                          | Resolution                                                                                                                    | Date       |
 | :---------------------------- | :---------------------------------------------------------------------------------------------------------------------------- | :--------- |
-| Back Bay MC Adapter Compatibility | Vendor (Back Bay Customs / Adam) confirmed: adapter fits Wilwood 260-15542 (1-1/8" Tandem Compact), is Honda-Accord-iBooster-only (not Tesla), and the 2× remote Wilwood reservoirs are fine. Blocker cleared — Wilwood + adapter cleared to order. Note: vendor also revised the firewall pattern to 60×80mm (80mm vertical), see new backing-plate DXF redesign item. | 2026-05-30 |
+| Back Bay MC Adapter Compatibility | Vendor (Back Bay Customs / Adam) confirmed: adapter fits Wilwood 260-15542 (1.00" Tandem Compact — the selected bore), is Honda-Accord-iBooster-only (not Tesla), and the 2× remote Wilwood reservoirs are fine. Blocker cleared — Wilwood + adapter cleared to order. Note: vendor also revised the firewall pattern to 60×80mm (80mm vertical), see new backing-plate DXF redesign item. | 2026-05-30 |
 | Boomerang Bullet 230          | Removed from build — product was fabricated (does not exist). Replaced by Digital Guard Dawg PBS-I self-contained system     | 2026-05-30 |
 | Boomerang Mounting Location   | Obsolete — Boomerang not used; PBS-I includes its own RFID receiver in the ICM                                                | 2026-05-30 |
 | ECM Ignition Relay            | Obsolete — PBS-I PINK IGN (60A onboard relay) replaces the external ECM ignition relay                                        | 2026-05-30 |
