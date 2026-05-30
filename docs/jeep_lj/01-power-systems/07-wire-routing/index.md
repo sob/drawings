@@ -67,8 +67,8 @@ All wire runs require appropriate protection based on location and environment:
 
 | Circuit                           | Wire Gauge | Distance | Destination                            | Current             | Notes                                                                |
 | :-------------------------------- | :--------- | :------- | :------------------------------------- | :------------------ | :------------------------------------------------------------------- |
-| **Warn VR EVO 10-S Winch power**  | 1/0 AWG    | 13 ft    | TO Front bumper winch                  | 250A typ, 400A peak | Direct connection (no CB) - see [Recovery Systems][recovery-systems] |
-| **Warn VR EVO 10-S Winch ground** | 1/0 AWG    | 13 ft    | TO Winch motor ground                  | 250A typ, 400A peak | Return path via frame rail                                           |
+| **Warn ZEON 10-S Winch power**  | 1/0 AWG    | 13 ft    | TO Front bumper winch                  | 250A typ, 409A peak | Direct connection (no CB) - see [Recovery Systems][recovery-systems] |
+| **Warn ZEON 10-S Winch ground** | 1/0 AWG    | 13 ft    | TO Winch motor ground                  | 250A typ, 409A peak | Return path via frame rail                                           |
 | **CONSTANT bus bar**              | 1/0 AWG    | 3 ft     | TO CONSTANT bus (passenger wheel well) | 254A max            | Feeds SwitchPros, SafetyHub, BODY PDU                                |
 | **BCDC output**                   | 4 AWG      | Short    | FROM BCDC (passenger wheel well)       | 50A                 | Charging input to AUX battery                                        |
 | **SwitchPros outputs**            | Various    | TBD      | TO Engine bay/front                    | ~100A               | Offroad lighting power - routing TBD                                 |

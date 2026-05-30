@@ -28,14 +28,14 @@ tags:
 
 ## Electrical Specifications
 
-- **Peak Amperage Draw:** 450A (at full load/stall - brief periods only) — ⚠️ verify model[^winch-model]
+- **Peak Amperage Draw:** 409A (at full load/stall - brief periods only)[^winch-model]
 - **Typical Operating Draw:** 80-250A (most recovery operations)
 - **Main Power Source:** AUX battery (passenger wheel well - direct connection, no fuse/breaker)
   - See [AUX Battery Distribution][aux-battery] for wire specs (gauge, length, routing, voltage drop calculations)
   - **System Voltage:** 13.8V (alternator charging - engine running during winch operations)
   - **Protection:** None - direct connection (see justification below)
 
-[^winch-model]: ⚠️ VERIFY MODEL. Two issues: (1) This doc names the winch both as **"Zeon 10-S"** (header, contactor section) and **"VR EVO 10-S"** with a VR EVO install manual (circuit-protection section) — these are *different* WARN winches; confirm which is actually installed. (2) WARN's published peak draw for the standard **ZEON 10-S is 409A @ 10,000 lb** (table: 62/144/215/280/353/409A), not 450A; ~450-465A is the **ZEON Platinum**. The 450A figure is conservative (heavier-than-needed cable/contactor margin), but the model name and peak figure should be reconciled. WARN service battery leads for the 10-S are **2 AWG** (our 1/0 AWG is a deliberate upsize). Source: [WARN ZEON 10-S (89611)](https://www.warn.com/products/zeon-10-s-89611) (checked 2026-05-30).
+[^winch-model]: Model confirmed **WARN ZEON 10-S** (owner, 2026-05-30) — the earlier "VR EVO 10-S" naming was incorrect. WARN's published peak draw for the ZEON 10-S is **409A @ 10,000 lb** (pull table: 62/144/215/280/353/409A); the previously documented 450A (≈ ZEON Platinum) was conservative. 1/0 AWG cable and the integrated contactor retain margin above 409A; WARN service battery leads for the 10-S are **2 AWG** (our 1/0 AWG is a deliberate upsize). Source: [WARN ZEON 10-S (89611)](https://www.warn.com/products/zeon-10-s-89611) (checked 2026-05-30).
 
 ## Circuit Protection - Engineering Justification {#winch-circuit-protection}
 
@@ -43,15 +43,15 @@ tags:
 
 **Manufacturer Specification:**
 
-- WARN Part: VR EVO 10-S Winch
-- Installation Manual: [WARN VR EVO Installation Guide][warn-manual]
+- WARN Part: ZEON 10-S Winch
+- Installation Manual: [WARN ZEON 10-S Installation Guide][warn-manual]
 - Specification: "No external fuse or circuit breaker required"
 
 **Protection Strategy:**
 
 1. **Internal Thermal Protection:** Winch motor has integrated thermal cutoff
 2. **Contactor Disconnect:** Provides isolation when not in use
-3. **Cable Sizing:** 1/0 AWG rated 325A continuous, adequate for 450A brief peaks
+3. **Cable Sizing:** 1/0 AWG rated 325A continuous, adequate for 409A brief peaks
 4. **Duty Cycle:** Winch operations are brief (10-30 seconds typical recovery)
 
 **Automotive Industry Standard:**
@@ -63,7 +63,7 @@ tags:
 **Fault Scenarios Covered:**
 
 - **Motor Stall:** Internal thermal protection trips before fire hazard
-- **Cable Short:** 1/0 AWG fuses open at ~800A+ (well above 450A peak current)
+- **Cable Short:** 1/0 AWG fuses open at ~800A+ (well above 409A peak current)
 - **Contactor Weld:** Manual disconnect at battery terminal provides emergency shutoff
 
 **Standards Applied:** SAE J1128 (automotive), WARN manufacturer specifications
@@ -74,7 +74,7 @@ tags:
 
 - **Type:** Warn Zeon 10-S integrated contactor (included with winch)
 - **Location:** Mounted on winch motor housing
-- **Rating:** 450A+ switching capability
+- **Rating:** Rated for full stall current (≥409A switching)
 - **Function:** High-current switching for winch motor direction and power
 
 ## Control System
@@ -170,7 +170,7 @@ See [AUX Battery Distribution][aux-battery] for cable specs and routing path.
     - Monitor battery voltage during extended winch operations
 
 !!! warning "Electrical Safety"
-    - Winch power cables carry extremely high current (up to 450A)
+    - Winch power cables carry extremely high current (up to 409A)
     - Ensure all connections are tight and properly crimped
     - Never disconnect battery while winch is under load
     - Check cable insulation regularly for damage
@@ -190,5 +190,5 @@ None - all specifications determined.
 [wire-distance]: ../01-power-systems/01-power-generation/05-wire-distance-reference.md
 [safetyhub]: ../01-power-systems/03-aux-battery-distribution/04-safetyhub.md
 [air-compressor]: 02-air-compressor.md
-[warn-manual]: https://www.warn.com/
+[warn-manual]: https://www.warn.com/products/zeon-10-s-89611
 [standards-exceptions]: ../01-power-systems/STANDARDS-EXCEPTIONS.md

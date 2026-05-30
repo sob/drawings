@@ -106,8 +106,8 @@ Findings from a source-validation pass over critical fab/order/wiring specs (per
 
 | Item | Finding | File | Action Needed |
 | :--- | :------ | :--- | :------------ |
-| Fusion amp external fuse | Garmin/Fusion install guide specifies **40A** external fuse; doc uses **100A** (but 100A is needed for the 78A max draw). Reconcile mfr spec vs draw. | [Amplifier][amplifier] | Decide protection size |
-| Winch model + peak draw | Doc names both **Zeon 10-S** and **VR EVO 10-S**; WARN's Zeon 10-S peak is **409A** (doc says 450A; 450A = Platinum). Reconcile model identity + figure. | [Winch][winch] | Confirm installed model |
+| Fusion amp external fuse | ✅ **Resolved (2026-05-30):** external protection set to **40A** per Fusion install guide (owner decision); 100A was oversized. 78A is theoretical sine-max, not sustained; musical draw ~8-15A. 4 AWG retained; 125A internal fuse covers amp-side faults. | [Amplifier][amplifier] | ✅ Done — 40A |
+| Winch model + peak draw | ✅ **Resolved (2026-05-30):** model confirmed **WARN ZEON 10-S** (owner); VR EVO naming removed. Peak draw corrected to **409A** (WARN spec) throughout; 1/0 AWG retains margin. | [Winch][winch] | ✅ Done — Zeon 10-S / 409A |
 | iBooster firewall torque | **16.5 Nm** has no Honda/Bosch source (only an unrelated 16 Nm brake-line spec exists). | [iBooster][ibooster] | Confirm vs service manual |
 | iBooster body-neck Ø | **~62mm** pass-through asserted only by adapter vendor; no corroboration. | [iBooster][ibooster] | Measure on donor |
 | Ground bus stud torque | Doc **100-120 in-lb**; Blue Sea's 3/8"-16 figure appears to be **140 in-lb** (120 = 5/16"). Mfr page was fetch-blocked. | [Ground Bus][ground-bus] | Confirm vs Blue Sea sheet |
@@ -198,7 +198,7 @@ Items completed since last update.
 | Cargo Light Switch            | Blue Sea 4160 (10A latching, 3/4" mount) on wheel well top                                                                                   | 2025-11-26 |
 | Roof Lights OUTPUT-1 Overload | Corrected XL Sport specs (2.2A/pod, not 6A); 8 pods = 18A on single OUTPUT-1 (51% utilization)                               | 2025-11-25 |
 | Fusion Amp Current Draw       | 6-ch MS-AP61800: 1.32A idle, 78A max, 125A electronic fuse                                                                    | 2025-11-24 |
-| Fusion Amp CB Selection       | Blue Sea 187-100A breaker, 4 AWG power/ground wiring, mount at CONSTANT bus                                                   | 2025-11-24 |
+| Fusion Amp CB Selection       | Blue Sea 187-series 40A breaker (per Fusion install guide; superseded earlier 100A), 4 AWG power/ground wiring, mount at CONSTANT bus       | 2026-05-30 |
 | WolfBox Model                 | G900 TriPro selected                                                                                                          | 2025-11-24 |
 | WolfBox Power Source          | BODY PDU F5 (10A, CONSTANT)                                                                                                   | 2025-11-24 |
 | WolfBox Mounting              | Windshield mount (replaces factory rearview mirror)                                                                           | 2025-11-24 |
