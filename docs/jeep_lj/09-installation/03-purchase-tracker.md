@@ -66,7 +66,7 @@ Major components - watch for sales, consider financing options.
 | Bosch iBooster Gen 2 (with MC pull) | Bosch / Honda | $195 ✅ purchased 2026-05-30 | High | Honda Accord Hybrid donor (listing #397546491129); OEM 46680-T3Z-A00 + 01469-TWA-A58 confirmed - [iBooster][ibooster] |
 | 03-06 TJ/LJ Auto Brake Pedal Assembly | Mopar | ~$30-80 | **Ordered** | Auto-trans pedal w/ wider pad + stop-lamp switch - [iBooster][ibooster] |
 | Back Bay Customs Wilwood MC Adapter | Back Bay Customs | ~$165 | High | Replaces factory MC w/ Wilwood - [iBooster][ibooster] |
-| Wilwood Tandem Compact MC (260-15541 1.125" **or** 260-15542 1.00") | Wilwood | ~$180-230 | High | ⛔ On hold — bore recalc pending; black E-coat - [iBooster][ibooster] |
+| Wilwood 260-15542 Tandem Compact MC (1.00" bore) | Wilwood | ~$180-230 | High | ✅ Bore resolved — ready to order; black E-coat - [iBooster][ibooster] |
 | Wilwood 260-16392 Remote Reservoir (×2) | Wilwood | ~$260-320 | High | 4oz anodized, -3 AN port - [iBooster][ibooster] |
 | Wilwood 250-16393 Dual Reservoir Bracket | Wilwood | ~$45-65 | High | Anodized billet - [iBooster][ibooster] |
 | Wilwood 220-12993 -3 AN Flexline (×2) | Wilwood | ~$50-70 | High | 8" w/ 11/16-20 adapter - [iBooster][ibooster] |

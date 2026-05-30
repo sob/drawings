@@ -20,7 +20,7 @@ Organized by installation order for efficient build workflow.
 - [ ] Source new stop-lamp switch + clip if donor pedal lacks them (Mopar 56045043AB)
 - [x] ~~Source Bosch iBooster Gen 2 unit~~ — ✅ purchased 2026-05-30 (Honda Accord Hybrid donor, listing #397546491129; OEM 46680-T3Z-A00 + 01469-TWA-A58 confirmed on listing; MC pull included will be discarded)
 - [ ] Order Back Bay Customs Wilwood MC adapter (260-15542 fitment confirmed by vendor 2026-05-30 — Honda iBooster only)
-- [ ] ⛔ Order Wilwood Tandem Compact master cylinder — HELD pending bore recalc (260-15541 1.125" vs 260-15542 1.00")
+- [ ] Order Wilwood 260-15542 Tandem Compact master cylinder (1.00" bore — sized to TJ Rubicon front calipers)
 - [ ] Order Wilwood 260-16392 remote reservoirs (×2) + 250-16393 dual bracket
 - [ ] Order Wilwood 220-12993 -3 AN flexlines (×2) - confirm length after firewall mockup
 - [ ] Select iBooster wiring harness: [Tulay's Gen 2][tulays-harness] vs EVcreate Gen 2 kit
@@ -64,7 +64,7 @@ Organized by installation order for efficient build workflow.
 
 - [ ] Bench test donor iBooster: apply 12V ignition signal, verify motor cycles and pedal rod assists
 - [ ] Discard factory Honda master cylinder
-- [ ] Install Back Bay Customs adapter + Wilwood Tandem Compact MC (bore TBD) onto iBooster (pushrod pre-set)
+- [ ] Install Back Bay Customs adapter + Wilwood 260-15542 MC (1.00" bore) onto iBooster (pushrod pre-set)
 - [ ] Mock up donor bracket + iBooster + Wilwood MC assembly against LJ firewall (cardboard/3D-print) - verify engine-bay clearance BEFORE drilling
 - [ ] Drill LJ firewall: 4× M8 clearance holes (60×80mm pattern, 80mm vertical) + 62mm center bore (factory booster holes abandoned)
 - [ ] Mock up reservoir standoff location 4-6" above MC flange, verify hood clearance
