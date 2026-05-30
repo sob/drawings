@@ -21,7 +21,7 @@ tags:
 
 **Honda OEM Part Numbers:** 46680-T3Z-A00 (booster module), 01469-TWA-A58 (MC/reservoir kit)
 
-**Master Cylinder:** Wilwood 260-15542 Tandem Compact, 1-1/8" bore
+**Master Cylinder:** Wilwood Tandem Compact — ⛔ bore TBD, recalc pending (260-15541 1.125" vs 260-15542 1.00")
 
 **MC Adapter:** [Back Bay Customs Wilwood iBooster Adapter][backbay-adapter] — Honda Accord iBooster only (not Tesla); confirmed compatible with Wilwood 260-15542 (vendor, 2026-05-30)
 
@@ -41,11 +41,11 @@ tags:
 
 Electromechanical brake booster required for the Cummins R2.8 diesel (minimal manifold vacuum). The Honda Accord Hybrid donor delivers the same Bosch Gen 2 unit as the Tesla Model 3 with better DIY documentation and sourcing. The Honda variant also ships with a factory **remote-mounted** reservoir (Honda solved the angled-reservoir issue at the OEM level) — moot for this build since the MC + reservoir are discarded in favor of the Wilwood ecosystem, but useful context.
 
-The factory Tesla/Honda master cylinder is discarded. The Back Bay Customs adapter mates a Wilwood Tandem Compact master directly to the iBooster, eliminating the angled-reservoir problem on a vertical firewall and putting the brake hydraulics on Wilwood's standard 1-1/8" bore + remote reservoir ecosystem.
+The factory Tesla/Honda master cylinder is discarded. The Back Bay Customs adapter mates a Wilwood Tandem Compact master directly to the iBooster, eliminating the angled-reservoir problem on a vertical firewall and putting the brake hydraulics on Wilwood's remote-reservoir ecosystem. (MC bore is pending recalculation — see the Master Cylinder section.)
 
 **Vendor compatibility (Back Bay Customs / Adam, email 2026-05-30):**
 
-- Wilwood 260-15542 (1-1/8" Tandem Compact) **is compatible** with the adapter — clears the order blocker.
+- Wilwood 260-15542 Tandem Compact **is compatible** with the adapter. (Note: 260-15542 is the **1.00"** bore unit; the MC bore is now pending recalculation — see the Master Cylinder section.)
 - The adapter is designed for the **Honda Accord iBooster only**, *not* the Tesla variant. This build uses the Honda Accord Hybrid donor, so it matches.
 - The 2× remote Wilwood reservoirs are fine with the adapter.
 - The booster's 60×80mm firewall pattern[^bbc-firewall] must be mounted with the **80mm dimension vertical**. Back Bay offers a separate adapter for an 80mm-horizontal orientation, but it is **out of stock** as of this writing — design around the 80mm-vertical orientation.
@@ -59,11 +59,13 @@ The factory Tesla/Honda master cylinder is discarded. The Back Bay Customs adapt
 
 ### Master Cylinder
 
-!!! danger "Part-number vs bore conflict — decision needed before ordering"
-    Wilwood **260-15542 is a 1.00" bore** master cylinder, not the 1-1/8" stated throughout this doc.[^mc-bore] The 1-1/8" (1.125") Tandem Compact is a **different part — 260-15541**. Either the part number or the bore is wrong. This also affects the vendor confirmation: Adam confirmed the adapter fits *260-15542* (the 1.00" unit); if the 1-1/8" bore is the real intent, the part number changes to 260-15541 and adapter fitment should be re-confirmed. **Resolve which is correct before ordering.**
+!!! danger "⛔ ON HOLD — bore to be recalculated before MC selection"
+    Wilwood **260-15542 is a 1.00" bore** master cylinder, not the 1-1/8" stated throughout this doc.[^mc-bore] The 1-1/8" (1.125") Tandem Compact is a **different part — 260-15541**. Rather than assume which is right, the **MC bore is being recalculated** from the brake-system hydraulics before the part is selected. Until then, **do not order the master cylinder.**
 
-- **Bore:** 1.125" (1-1/8") — ⚠️ conflicts with part 260-15542 (1.00"); see warning above[^mc-bore]
-- **Stroke:** 1.100"[^mc-stroke]
+    Inputs the recalc needs: caliper piston count + bore (total piston area, front & rear), rotor effective radius, desired pedal effort and travel, pedal ratio, and the iBooster's assist output. Output: required MC bore → selects **260-15541 (1.125")** vs **260-15542 (1.00")**. Note: Adam confirmed adapter fitment against *260-15542*; if the calc lands on 260-15541, re-confirm fitment with him (both are "Tandem Compact," so the mount is almost certainly identical — bore differs internally).
+
+- **Bore:** ⛔ TBD — pending recalculation (1.00" / 260-15542 vs 1.125" / 260-15541)[^mc-bore]
+- **Stroke:** 1.100" (260-15542)[^mc-stroke]
 - **Outlets:** Tandem (independent front/rear circuits); outlet thread **1/2-20**[^mc-ports]
 - **Reservoir Ports:** 11/16-20 (2× - one per circuit, remote feed) — ⚠️ verify[^mc-ports]
 
@@ -83,8 +85,8 @@ The factory Tesla/Honda master cylinder is discarded. The Back Bay Customs adapt
 | :--- | :----- | :----- | :----- | :---- |
 | iBooster + MC pull | Honda 46680-T3Z-A00 (+ 01469-TWA-A58) | eBay / LKQ / Car-Part.com | Offer pending ($195 on $254 listing) | 2017-2022 Honda Accord Hybrid FHEV donor |
 | Auto brake pedal assembly | 03-06 TJ/LJ auto pedal | eBay / junkyard | **Ordered** | Wider pedal pad than manual; stop-lamp switch + connector included on donor |
-| MC adapter | Back Bay Customs | [backbaycustoms.com][backbay] | ✅ Compatibility confirmed (vendor, 2026-05-30) — ready to order | Steel plate + pushrod spacer + nyloc nuts; Honda iBooster only |
-| Master cylinder | Wilwood 260-15542 | Summit / Jegs | Ready to order (fitment confirmed) | Tandem Compact, 1-1/8", black E-coat |
+| MC adapter | Back Bay Customs | [backbaycustoms.com][backbay] | ✅ Confirmed vs 260-15542 (vendor, 2026-05-30); re-confirm if bore recalc selects 260-15541 | Steel plate + pushrod spacer + nyloc nuts; Honda iBooster only |
+| Master cylinder | Wilwood 260-15541 (1.125") **or** 260-15542 (1.00") | Summit / Jegs | ⛔ On hold — bore recalc pending (see warning above) | Tandem Compact, black E-coat; bore TBD |
 | Reservoir (×2) | Wilwood 260-16392 | Summit / Jegs | Ready to order (vendor-confirmed OK) | 4 oz anodized, includes -3 AN fitting |
 | Dual reservoir bracket | Wilwood 250-16393 | Summit / Jegs | Ready to order | Anodized billet, mounting screws incl. |
 | Flexline (×2) | Wilwood 220-12993 | Summit / Jegs | Ready to order | 8" -3 AN, includes 11/16-20 adapter |
@@ -201,6 +203,11 @@ See [tail/brake][tail-brake] (PMU lighting flow), [starter][starter] (crank chai
 - [x] ~~Confirm Back Bay Customs MC adapter compatibility with Wilwood 260-15542~~ — ✅ confirmed by vendor (Adam, 2026-05-30): adapter fits the 260-15542, is Honda-iBooster-only (not Tesla), and the remote reservoirs are fine. Blocker cleared.
 - [ ] Close iBooster eBay offer ($195 sent on $254 listing)
 
+**MC bore — recalc before ordering (🔴 blocker):**
+
+- [ ] 🔴 Recalculate the required MC bore from the brake-system hydraulics (caliper piston area front/rear, rotor effective radius, pedal ratio, desired pedal effort/travel, iBooster assist) → selects **260-15541 (1.125")** vs **260-15542 (1.00")**. Hold the MC order until resolved.
+- [ ] If recalc selects 260-15541, re-confirm adapter fitment with Back Bay Customs (both are Tandem Compact; mount almost certainly identical)
+
 **Backing plate redesign (vendor revised the firewall pattern):**
 
 - [ ] 🔴 Redesign `lj-ibooster-backing-plate.dxf` from the 72×72mm square pattern to the confirmed **60×80mm rectangular** pattern (holes at ±30mm H / ±40mm V, 80mm vertical). Center bore (Ø64), plate size (152×152mm), and corner radius unchanged. Blocks the SendCutSend steel order.
@@ -224,10 +231,11 @@ See [tail/brake][tail-brake] (PMU lighting flow), [starter][starter] (crank chai
 - [ ] Confirm flexline length after firewall mockup (220-12993 = 8", longer SKUs available if needed)
 - [ ] Design / select reservoir standoff bracket location and height (4-6" above MC flange)
 
-**Ready to order (compatibility confirmed 2026-05-30):**
+**Ordering:**
 
-- [ ] Order Wilwood 260-15542 master cylinder + 2× 260-16392 reservoirs + 250-16393 dual bracket + 2× 220-12993 flexlines
-- [ ] Order Back Bay Customs Wilwood MC adapter
+- [ ] ⛔ Order master cylinder — **HELD pending bore recalc** (260-15541 1.125" vs 260-15542 1.00")
+- [ ] Order bore-independent plumbing: 2× 260-16392 reservoirs + 250-16393 dual bracket + 2× 220-12993 flexlines (OK to order — vendor-confirmed, not affected by bore)
+- [ ] Order Back Bay Customs Wilwood MC adapter (confirmed vs 260-15542; re-confirm first if recalc selects 260-15541)
 
 **Fab + install:**
 

@@ -20,7 +20,7 @@ Items that prevent build completion or system operation.
 | Item                                   | Description | File | Priority |
 | :------------------------------------- | :---------- | :--- | :------- |
 | iBooster Backing Plate DXF Redesign    | Re-cut `lj-ibooster-backing-plate.dxf` from 72×72mm square to confirmed 60×80mm rectangular hole pattern (±30mm H / ±40mm V, 80mm vertical) before ordering SendCutSend steel. Vendor revised pattern 2026-05-30. | [iBooster][ibooster] | 🔴 Critical |
-| MC Bore vs Part-Number Conflict        | Wilwood **260-15542 is a 1.00" bore**, not the 1-1/8" documented; the 1-1/8" Tandem Compact is **260-15541**. Decide which is correct before ordering — if 1-1/8" is intended, the part number changes and adapter fitment (Adam confirmed *260-15542*) must be re-confirmed. | [iBooster][ibooster] | 🔴 Critical |
+| MC Bore Recalculation (on hold)        | Wilwood **260-15542 is 1.00" bore**, not the 1-1/8" documented (1-1/8" = **260-15541**). Per owner decision (2026-05-30), **recalculate required MC bore** from brake hydraulics (caliper piston area, rotor radius, pedal ratio, effort/travel, iBooster assist) → select 260-15541 vs 260-15542. MC order HELD until resolved; re-confirm adapter fitment if it lands on 260-15541. | [iBooster][ibooster] | 🔴 Critical |
 
 ---
 
