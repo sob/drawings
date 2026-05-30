@@ -46,7 +46,7 @@ The factory Tesla/Honda master cylinder is discarded. The Back Bay Customs adapt
 - Wilwood 260-15542 (1-1/8" Tandem Compact) **is compatible** with the adapter — clears the order blocker.
 - The adapter is designed for the **Honda Accord iBooster only**, *not* the Tesla variant. This build uses the Honda Accord Hybrid donor, so it matches.
 - The 2× remote Wilwood reservoirs are fine with the adapter.
-- The booster's 60×80mm firewall pattern must be mounted with the **80mm dimension vertical**. Back Bay offers a separate adapter for an 80mm-horizontal orientation, but it is **out of stock** as of this writing — design around the 80mm-vertical orientation.
+- The booster's 60×80mm firewall pattern[^bbc-firewall] must be mounted with the **80mm dimension vertical**. Back Bay offers a separate adapter for an 80mm-horizontal orientation, but it is **out of stock** as of this writing — design around the 80mm-vertical orientation.
 
 ## Specifications
 
@@ -239,6 +239,8 @@ See [tail/brake][tail-brake] (PMU lighting flow), [starter][starter] (crank chai
 [evcreate-wiring]: https://www.evcreate.com/wiring-the-ibooster/
 [evcreate-install]: https://www.evcreate.com/installing-the-ibooster/
 [evcreate-donors]: https://www.evcreate.com/ibooster-donor-vehicles/
+[^bbc-firewall]: Back Bay Customs (adapter maker, Adam), email to owner 2026-05-30. First vendor-confirmed firewall bolt pattern; supersedes the earlier unsourced "72×72mm" estimate introduced in PR #12, which the original backing-plate DXF was cut to.
+
 [pmu-outputs]: ../01-power-systems/04-pmu/03-pmu-outputs.md
 [ground-bus]: ../01-power-systems/05-grounding/01-engine-bay-ground-bus.md
 [firewall-ingress]: ../01-power-systems/07-wire-routing/02-firewall-ingress.md
