@@ -28,12 +28,14 @@ tags:
 
 ## Electrical Specifications
 
-- **Peak Amperage Draw:** 450A (at full load/stall - brief periods only)
+- **Peak Amperage Draw:** 450A (at full load/stall - brief periods only) — ⚠️ verify model[^winch-model]
 - **Typical Operating Draw:** 80-250A (most recovery operations)
 - **Main Power Source:** AUX battery (passenger wheel well - direct connection, no fuse/breaker)
   - See [AUX Battery Distribution][aux-battery] for wire specs (gauge, length, routing, voltage drop calculations)
   - **System Voltage:** 13.8V (alternator charging - engine running during winch operations)
   - **Protection:** None - direct connection (see justification below)
+
+[^winch-model]: ⚠️ VERIFY MODEL. Two issues: (1) This doc names the winch both as **"Zeon 10-S"** (header, contactor section) and **"VR EVO 10-S"** with a VR EVO install manual (circuit-protection section) — these are *different* WARN winches; confirm which is actually installed. (2) WARN's published peak draw for the standard **ZEON 10-S is 409A @ 10,000 lb** (table: 62/144/215/280/353/409A), not 450A; ~450-465A is the **ZEON Platinum**. The 450A figure is conservative (heavier-than-needed cable/contactor margin), but the model name and peak figure should be reconciled. WARN service battery leads for the 10-S are **2 AWG** (our 1/0 AWG is a deliberate upsize). Source: [WARN ZEON 10-S (89611)](https://www.warn.com/products/zeon-10-s-89611) (checked 2026-05-30).
 
 ## Circuit Protection - Engineering Justification {#winch-circuit-protection}
 

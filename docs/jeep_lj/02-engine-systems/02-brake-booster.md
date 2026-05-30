@@ -25,7 +25,9 @@ tags:
 
 **MC Adapter:** [Back Bay Customs Wilwood iBooster Adapter][backbay-adapter] — Honda Accord iBooster only (not Tesla); confirmed compatible with Wilwood 260-15542 (vendor, 2026-05-30)
 
-**Reservoirs:** 2× Wilwood 260-16392 (4 oz anodized, remote) — vendor-confirmed OK with adapter
+**Reservoirs:** 2× Wilwood 260-16392 (4 oz anodized, remote) — vendor-confirmed OK with adapter[^mc-reservoir]
+
+[^mc-reservoir]: Wilwood 260-16392 confirmed: **4.0 oz** capacity, **9/16-18 × -3 AN** hose connector (the -3 AN feed matches the Plumbing section). Source: [Summit Racing](https://www.summitracing.com/parts/wil-260-16392) / JEGS (checked 2026-05-30; thread figure is retailer-sourced).
 
 **Mounting:** Direct firewall mount via booster's integral 4-stud flange (60×80mm M8, **80mm oriented vertical**) + SendCutSend cabin-side backing plate
 
@@ -53,14 +55,22 @@ The factory Tesla/Honda master cylinder is discarded. The Back Bay Customs adapt
 ### iBooster
 
 - **Current:** 40A peak (braking), 0.25A idle, 12mA standby
-- **Mounting Bolt Torque:** 16.5 Nm (12 ft-lb) - 2x nyloc nuts, 13mm
+- **Mounting Bolt Torque:** 16.5 Nm (12 ft-lb) - 2x nyloc nuts, 13mm — ⚠️ unverified[^ibooster-torque]
 
 ### Master Cylinder
 
-- **Bore:** 1.125" (1-1/8") - sized for power-assisted, heavy, multi-piston caliper build
-- **Stroke:** 1.100"
-- **Outlets:** Tandem (independent front/rear circuits)
-- **Reservoir Ports:** 11/16-20 (2× - one per circuit, remote feed)
+!!! danger "Part-number vs bore conflict — decision needed before ordering"
+    Wilwood **260-15542 is a 1.00" bore** master cylinder, not the 1-1/8" stated throughout this doc.[^mc-bore] The 1-1/8" (1.125") Tandem Compact is a **different part — 260-15541**. Either the part number or the bore is wrong. This also affects the vendor confirmation: Adam confirmed the adapter fits *260-15542* (the 1.00" unit); if the 1-1/8" bore is the real intent, the part number changes to 260-15541 and adapter fitment should be re-confirmed. **Resolve which is correct before ordering.**
+
+- **Bore:** 1.125" (1-1/8") — ⚠️ conflicts with part 260-15542 (1.00"); see warning above[^mc-bore]
+- **Stroke:** 1.100"[^mc-stroke]
+- **Outlets:** Tandem (independent front/rear circuits); outlet thread **1/2-20**[^mc-ports]
+- **Reservoir Ports:** 11/16-20 (2× - one per circuit, remote feed) — ⚠️ verify[^mc-ports]
+
+[^ibooster-torque]: ⚠️ UNVERIFIED. No Honda service-manual or Bosch published firewall-mount torque was found for the Accord Gen 2 iBooster; the only published Bosch figure is 16 Nm for the M12×1 *brake-line* nuts (a different fastener). Treat 16.5 Nm / 12 ft-lb as an estimate — confirm against a Honda service manual before final torque (checked 2026-05-30).
+[^mc-bore]: Wilwood [260-15542-BK official page](https://www.wilwood.com/MasterCylinders/MasterCylinderProd?itemno=260-15542-BK) lists **1.00" bore**; the 1-1/8" Tandem Compact is part **260-15541**. Corroborated by multiple retailers (checked 2026-05-30). High confidence the documented "260-15542 = 1-1/8\"" pairing is an error.
+[^mc-stroke]: Wilwood 260-15542 official page lists **stroke 1.10"** — matches (checked 2026-05-30).
+[^mc-ports]: ⚠️ Wilwood's 260-15542 page lists **1/2-20 outlets**, not 11/16-20. 11/16-20 appears in the Wilwood line only as a separate inlet *adapter fitting* (e.g., the 220-12993 flexline adapter), not the MC's native port — so the "11/16-20 reservoir port" claim likely conflates the flexline adapter thread with the MC port. Verify the actual MC inlet/outlet threads against the Wilwood data sheet before ordering fittings (checked 2026-05-30).
 
 ### Plumbing
 

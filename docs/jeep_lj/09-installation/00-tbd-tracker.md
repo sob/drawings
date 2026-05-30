@@ -9,7 +9,7 @@ hide:
 
 **Last Updated:** 2026-05-30
 
-**Total Open Items:** 53
+**Total Open Items:** 63 (+10 from the 2026-05-30 critical-spec verification audit)
 
 ---
 
@@ -20,6 +20,7 @@ Items that prevent build completion or system operation.
 | Item                                   | Description | File | Priority |
 | :------------------------------------- | :---------- | :--- | :------- |
 | iBooster Backing Plate DXF Redesign    | Re-cut `lj-ibooster-backing-plate.dxf` from 72×72mm square to confirmed 60×80mm rectangular hole pattern (±30mm H / ±40mm V, 80mm vertical) before ordering SendCutSend steel. Vendor revised pattern 2026-05-30. | [iBooster][ibooster] | 🔴 Critical |
+| MC Bore vs Part-Number Conflict        | Wilwood **260-15542 is a 1.00" bore**, not the 1-1/8" documented; the 1-1/8" Tandem Compact is **260-15541**. Decide which is correct before ordering — if 1-1/8" is intended, the part number changes and adapter fitment (Adam confirmed *260-15542*) must be re-confirmed. | [iBooster][ibooster] | 🔴 Critical |
 
 ---
 
@@ -95,7 +96,27 @@ Items that are estimated and need actual product specs to confirm.
 
 | Item                | Description                                                                                     | File                       | Action Needed      |
 | :------------------ | :---------------------------------------------------------------------------------------------- | :------------------------- | :----------------- |
-| Grid Heater Current | Design value 80A - verify via element resistance measurement during installation (~0.15Ω @ 12V) | [Grid Heater][grid-heater] | Measure resistance |
+| Grid Heater Current | Design value 80A - verify via element resistance measurement during installation (~0.15Ω @ 12V); Cummins publishes no current figure for 5467024 | [Grid Heater][grid-heater] | Measure resistance |
+
+---
+
+## 🔬 CRITICAL-SPEC VERIFICATION AUDIT (2026-05-30)
+
+Findings from a source-validation pass over critical fab/order/wiring specs (per CLAUDE.md Imperative #7). Each is footnoted at its source page. **Confirmed** specs need no action; **mismatch/unverified** items below need a decision or measurement before fabrication/order.
+
+| Item | Finding | File | Action Needed |
+| :--- | :------ | :--- | :------------ |
+| Fusion amp external fuse | Garmin/Fusion install guide specifies **40A** external fuse; doc uses **100A** (but 100A is needed for the 78A max draw). Reconcile mfr spec vs draw. | [Amplifier][amplifier] | Decide protection size |
+| Winch model + peak draw | Doc names both **Zeon 10-S** and **VR EVO 10-S**; WARN's Zeon 10-S peak is **409A** (doc says 450A; 450A = Platinum). Reconcile model identity + figure. | [Winch][winch] | Confirm installed model |
+| iBooster firewall torque | **16.5 Nm** has no Honda/Bosch source (only an unrelated 16 Nm brake-line spec exists). | [iBooster][ibooster] | Confirm vs service manual |
+| iBooster body-neck Ø | **~62mm** pass-through asserted only by adapter vendor; no corroboration. | [iBooster][ibooster] | Measure on donor |
+| Ground bus stud torque | Doc **100-120 in-lb**; Blue Sea's 3/8"-16 figure appears to be **140 in-lb** (120 = 5/16"). Mfr page was fetch-blocked. | [Ground Bus][ground-bus] | Confirm vs Blue Sea sheet |
+| MC port threads | Doc **11/16-20**; Wilwood 260-15542 outlets are **1/2-20** (11/16-20 is a flexline-adapter thread). | [iBooster][ibooster] | Verify MC port threads |
+| Radiator fan current/CFM | **53A / 4188 CFM** unverifiable — GM/ACDelco publish no figures for 84100128. | [Radiator Fan][radiator-fan] | Clamp-meter measure |
+| SwitchPros power/ground gauge | **1/0 AWG power, 4 AWG ground** not published by Switch-Pros; build design choice. | [SwitchPros][switchpros] | Confirm gauge adequate |
+| iBooster donor year | Doc says **2017**-2022 Accord Hybrid; public sources cite **2018+** for Gen 2. | [iBooster][ibooster] | Verify 2017 inclusion |
+
+**Confirmed-correct (footnoted, no action):** Cole Hersee 24213 = 200A (was wrongly 85A — corrected); MC stroke 1.10"; reservoir 260-16392 4oz/-3AN; ARB CKBLTA12 90A total; SwitchPros RCR-Force 12 output ratings (4×35A/1×30A/11×15A/150A); CT4 10A/output (40A); Odyssey PC1500 68Ah/850CCA; Dakota Lithium 135Ah; Mechanical Products 174-S2 breakers (250/150/100/80A); Blue Sea 2107 (600A) / 2105 (250A); Deutsch HDP24 contacts (size-12 25A / size-16 13A); DB Electrical 410-52442 starter (2.7kW/10-tooth); WARN line pull 10,000 lb; iBooster firewall pattern 60×80mm M8.
 
 ---
 
@@ -263,3 +284,6 @@ Items completed since last update.
 [firewall-ingress]: ../01-power-systems/07-wire-routing/02-firewall-ingress.md
 [runaway-protection]: ../02-engine-systems/11-runaway-protection.md
 [ibooster]: ../02-engine-systems/02-brake-booster.md
+[amplifier]: ../06-audio-systems/02-amplifier.md
+[winch]: ../08-exterior-systems/01-winch.md
+[ground-bus]: ../01-power-systems/05-grounding/01-engine-bay-ground-bus.md

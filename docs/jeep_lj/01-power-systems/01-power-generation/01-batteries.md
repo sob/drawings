@@ -28,8 +28,10 @@ Dual battery system with AGM starter battery and LiFePO4 deep cycle auxiliary ba
 
 ### Specifications
 
-- **Capacity:** 68 Ah @ 20-hour rate
-- **CCA:** 850A @ 0°F (-18°C)
+- **Capacity:** 68 Ah @ 20-hour rate[^odyssey-pc1500]
+- **CCA:** 850A @ 0°F (-18°C)[^odyssey-pc1500]
+
+[^odyssey-pc1500]: Odyssey 34-PC1500 Extreme Series: **68 Ah** (20-hr) / **850 CCA** confirmed against the Odyssey Extreme Series spec table (checked 2026-05-30).
 - **PHCA:** 1500A (Pulse Hot Cranking Amps)
 - **Dimensions:** 10.9" L × 6.8" W × 7.9" H
 - **Weight:** 49.5 lbs

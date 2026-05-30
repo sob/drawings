@@ -28,7 +28,9 @@ tags:
 
 **Mounting:** Cab side firewall (behind radio)
 
-**Power Source:** CONSTANT bus via 100A breaker
+**Power Source:** CONSTANT bus via 100A breaker — ⚠️ external fuse size conflicts with mfr[^amp-fuse]
+
+[^amp-fuse]: ⚠️ VERIFY. Garmin/Fusion's MS-AP61800 install guide specifies a **40A** external inline fuse/breaker and 4 AWG (max 2 AWG) power/ground; the 125A internal electronic fuse and 4 AWG both match our doc, but our **100A external breaker does not match the manufacturer's 40A**. Note the tension: a 40A breaker cannot carry the documented 78A max draw, so confirm the correct external protection against the install guide before finalizing. Source: [Fusion Apollo Multichannel Amplifiers install guide](https://static.garmin.com/pumac/Fusion_Apollo_Multichannel_Amplifiers_Install_EN-US.pdf) (checked 2026-05-30).
 
 ///
 

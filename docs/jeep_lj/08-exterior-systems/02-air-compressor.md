@@ -22,9 +22,11 @@ ARB Twin Compressor system with air tank and automatic pressure management for l
 
 **Installation Guide:** [ARB CKBLTA12 Installation PDF](https://store.arbusa.com/content/CKBLTA12%20INST.pdf)
 
-**Maximum Amperage Draw:** 90A total (45A per motor × 2 motors)
+**Maximum Amperage Draw:** 90A total (45A per motor × 2 motors)[^arb-current]
 
-**Fuse Configuration:** Dual 60A MIDI fuses via SafetyHub 150 (one per motor)
+**Fuse Configuration:** Dual 60A MIDI fuses via SafetyHub 150 (one per motor)[^arb-current]
+
+[^arb-current]: ARB publishes **Max Amps 90** (total) for the CKBLTA12 brushless twin — matches our doc. The **45A per motor** is the 90÷2 split (ARB does not publish a per-motor figure), and the **60A MIDI fuse per motor** is this build's protection choice (not an ARB-specified value), sized above the ~45A per-motor draw. Source: [ARB CKBLTA12 product page](https://store.arbusa.com/brushless-twin-motor-onboard-12v-air-compressor-ckblta12/) (checked 2026-05-30). NB: this is the brushless CKBLTA12 — do not apply specs from the older brushed CKMTA12 (28A/50A, 40A fuse), which is a different unit.
 
 **Location:** Under passenger seat
 
