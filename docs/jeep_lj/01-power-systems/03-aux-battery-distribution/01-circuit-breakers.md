@@ -55,7 +55,7 @@ CONSTANT bus outputs use 2 AWG (130A @ 20°C) for SwitchPros, SafetyHub, and BOD
 [mp-150]: https://www.waytekwire.com/item/49079/
 [mp-150b]: https://www.waytekwire.com/item/49079/
 [mp-100]: https://www.waytekwire.com/item/49077/
-[bs-100]: https://www.bluesea.com/products/187-100A/187_Series_Thermal_Circuit_Breaker_100A
+[bs-100]: https://www.bluesea.com/category/8/Circuit_Protection/187-Series_Circuit_Breakers
 [rear-battery]: index.md
 [switchpros]: ../../05-control-interfaces/02-switchpros-sp1200.md
 [safetyhub]: 04-safetyhub.md

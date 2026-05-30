@@ -117,5 +117,6 @@ Amplifier has 125A internal electronic fuse (no replacement necessary). External
 [speakers]: 03-speakers.md
 [subwoofer]: 04-subwoofer.md
 [aux-distribution]: ../01-power-systems/03-aux-battery-distribution/index.md
+[aux-load-analysis]: ../01-power-systems/08-load-analysis/03-aux-battery.md
 [product-link]: https://www.garmin.com/en-US/p/677280/pn/010-02284-60/
 [manual-link]: https://static.garmin.com/pumac/Fusion_Apollo_Multichannel_Amplifiers_Install_EN-US.pdf

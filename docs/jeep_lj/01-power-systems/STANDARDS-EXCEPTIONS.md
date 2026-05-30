@@ -8,7 +8,7 @@ This document tracks intentional deviations from general electrical standards wh
 
 ## Winch Circuit - No External Overcurrent Protection
 
-**Component:** WARN VR EVO 10-S Winch
+**Component:** WARN ZEON 10-S Winch
 
 **Decision:** No external circuit breaker or fuse
 
@@ -22,7 +22,7 @@ This document tracks intentional deviations from general electrical standards wh
 - Designed for direct battery connection
 - Contactor provides disconnect capability
 
-**Product Page:** [WARN VR EVO 10-S][warn-product]
+**Product Page:** [WARN ZEON 10-S][warn-product]
 
 **Installation Manual:** [WARN Installation Guide][warn-manual]
 
