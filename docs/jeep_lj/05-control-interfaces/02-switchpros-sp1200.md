@@ -18,7 +18,7 @@ tags:
 
 **Power Source:** 150A breaker from CONSTANT bus (AUX battery)
 
-**Power Wire:** 1/0 AWG, ~2 ft (AUX battery to power module in same wheel well)
+**Power Wire:** 1/0 AWG, ~2 ft (AUX battery to power module in same wheel well) — deliberate upsize over the supplied 30" cable[^sp-gauge]
 
 **Power Module Location:** Passenger rear wheel well (with AUX battery, rated to 125°C, IP67)
 
@@ -26,7 +26,7 @@ tags:
 
 **Control Cable:** Standard 10.5 ft (available in 1, 5, 10.5, 15, 20, 25, 30, 35 ft lengths)
 
-**Ground:** 4 AWG to chassis (per manufacturer spec - reference ground only, not load return)
+**Ground:** 4 AWG to chassis (reference ground only, not load return)[^sp-gauge]
 
 !!! note "Load Ground Path"
     The 4 AWG controller ground is for logic/reference only. Load return current flows through individual output grounds to the [SwitchPros Ground Bus][switchpros-ground-bus] (1/0 AWG to chassis).
@@ -242,6 +242,8 @@ Program TRIGGER-3 to activate compressor when tank pressure drops below 135 PSI:
 - [Offroad Lighting][offroad-auxiliary-lighting] - Complete wiring details for all lighting circuits controlled by SwitchPros
 - [Air System][air-system-arb-compressor-lockers] - ARB locker and compressor wiring details
 - [AUX Battery Distribution][aux-battery] - Power feed specifications for SwitchPros
+
+[^sp-gauge]: Switch-Pros does not publish a required wire gauge — the RCR-Force 12 ships with a **30" battery cable** and its [install guide](https://www.switchpros.com/wp-content/uploads/RCR-force-12-installation-guide-REV-1.9.pdf) only specifies output-side gauge (14 AWG harness; up to 12/10 AWG for long high-current runs). Our **1/0 AWG** power feed is a deliberate upsize over the supplied cable, sized for the 150A module capacity on a short (~2 ft) run. The **4 AWG controller ground is adequate** because it carries logic/reference current only — per Switch-Pros' design, load-return current flows through each output's own ground back to the [SwitchPros Ground Bus][switchpros-ground-bus] (1/0 AWG to chassis), not through the controller ground. Confirmed design choice, 2026-05-30.
 
 [aux-battery]: ../01-power-systems/03-aux-battery-distribution/index.md
 [air-system-arb-compressor-lockers]: ../08-exterior-systems/02-air-compressor.md
