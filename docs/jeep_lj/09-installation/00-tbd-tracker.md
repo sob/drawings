@@ -9,7 +9,7 @@ hide:
 
 **Last Updated:** 2026-05-31
 
-**Total Open Items:** 50
+**Total Open Items:** 49
 
 > Count reflects the priority sections below. The Critical-Spec Verification Audit is a separate validation log (its open on-arrival/on-vehicle checks are tracked via GitHub issue [#29][i29]); items already marked ✅ Resolved are not counted.
 
@@ -235,8 +235,8 @@ Items completed since last update.
 | 📋 Medium        | 15     |
 | 📝 Low           | 2      |
 | 🔍 Verify        | 1      |
-| 🚙 Drivetrain    | 13     |
-| **TOTAL**        | **50** |
+| 🚙 Drivetrain    | 12     |
+| **TOTAL**        | **49** |
 
 ## Related Documentation
 
