@@ -28,10 +28,10 @@ This section documents all control interfaces in the Jeep LJ build - the switche
   - Other dash-mounted controls
 
 - **[Keyless Ignition][keyless-ignition]** - RFID + push-button start/stop replacing the factory keyswitch
-  - Boomerang Bullet 230 RFID fob anti-theft
-  - Single dash push-button (start/stop)
-  - PMU24 runs the ignition state machine
-  - Hidden hardwired bypass for emergencies
+  - Digital Guard Dawg PBS-I self-contained module with RFID iTag fobs
+  - Single dash push-button included with kit
+  - WAIT-gate relay handles cold-start grid heater preheat automatically
+  - Emergency Bypass Card with 4-digit PIN (no hidden toggle)
 
 ## System Integration
 

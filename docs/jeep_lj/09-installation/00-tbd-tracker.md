@@ -7,9 +7,9 @@ hide:
 
 **Purpose:** Central tracking for all To-Be-Determined items across the Jeep LJ electrical system documentation.
 
-**Last Updated:** 2026-05-29
+**Last Updated:** 2026-05-30
 
-**Total Open Items:** 59
+**Total Open Items:** 53
 
 ---
 
@@ -32,17 +32,12 @@ Items needed before installation begins but not system-critical.
 | Dakota Digital Panel Mounting     | HDPE sheet dimensions and location                              | [Wire Routing][wire-routing]   | High     |
 | Turbolamik Aux: Reverse           | Confirm aux output channel + pinout configured for Reverse signal → PMU In 3 | [Transmission][transmission]   | High     |
 | Turbolamik Aux: P/N               | Confirm aux output channel + pinout configured for P/N (start interlock) | [Transmission][transmission]   | High     |
-| Dash Push-Button (Keyless)        | Select 19/22mm illuminated momentary NO push-button for keyless start/stop | [Keyless Ignition][keyless]   | High     |
-| Boomerang Bullet 230              | Order RFID receiver + fob; mounting location under dash         | [Keyless Ignition][keyless]   | High     |
-| Boomerang Mounting Location       | Under-dash position near driver (3-6 ft range to driver seat)   | [Keyless Ignition][keyless]   | High     |
-| ECM Ignition Relay                | Select Hella/Bosch SPST 30-40A automotive relay                 | [Keyless Ignition][keyless]   | High     |
-| P/N Interlock Relay               | Select SPST 30A automotive relay (Turbolamik P/N → coil)        | [Keyless Ignition][keyless]   | High     |
-| Engine-Running Lockout Relay      | Select SPST 30A automotive relay with NC contacts               | [Keyless Ignition][keyless]   | High     |
-| Engine-Running Voltage Filter     | Design diode + zener + resistor filter on alternator B+ tap for lockout coil drive | [Keyless Ignition][keyless]   | High     |
-| Keyless Firewall Pin Assignments  | Assign 3 new HDP24 pins (fob, OUT24 supply, gated start return); current connector is full | [Firewall Ingress][firewall-ingress] | High     |
-| Hidden Bypass Toggle              | Select part + mounting location for emergency get-home bypass   | [Keyless Ignition][keyless]   | High     |
-| PMU Output Strategy (Keyless)     | Decide: OUT24-only + engine-running lockout (current plan) vs. free OUT15 winch trigger for dedicated crank output | [Keyless Ignition][keyless]   | High     |
-| PMU24 Keyless State Machine       | Program ECUMaster Light Client logic for OFF/RUN/CRANK transitions, fob detection, kill behavior | [PMU Programming][pmu-programming]   | High     |
+| PBS-I Order                       | Order Digital Guard Dawg PBS-I kit (ICM, 2 iTag fobs, Start Button, Programming Button, Bypass Card, harnesses) | [Keyless Ignition][keyless]   | High     |
+| WAIT-Gate Relay                   | Select SPST 30A automotive relay (NC contacts in start path; coil driven by ECM WAIT signal) | [Keyless Ignition][keyless]   | High     |
+| PBS-I Mounting Location           | Cabin under-dash position; module is ~5.5"×3"×1.25"; away from heat/water; do NOT engine-bay mount | [Keyless Ignition][keyless]   | High     |
+| Start Button Mounting Location    | Dash position within easy reach (button + 36" harness included in PBS-I kit)                  | [Keyless Ignition][keyless]   | High     |
+| Programming Button Storage        | Hidden but accessible location (under dash or in trunk) for fob-learn and emergency bypass PIN entry | [Keyless Ignition][keyless] | Medium   |
+| PBS-I Quiescent Current           | Measure or vendor-confirm standby draw to add to START battery parasitic budget               | [Keyless Ignition][keyless]   | Medium   |
 | R2.8 Turbo Inlet OD               | Measure turbo inlet tube outside diameter to confirm AMOT 4261M-02 (2.8" body) fitment and select intake-side adapter | [Runaway Protection][runaway-protection] | High     |
 | AMOT-to-Intake Adapters           | Source NPT-to-hose fittings sized to match measured turbo inlet OD                                | [Runaway Protection][runaway-protection] | High     |
 | AMOT T-Handle Mounting Location   | Select dash mounting position for Midwest Control 30-144-TTL-BH-3 (reachable belted, away from accidental contact) | [Runaway Protection][runaway-protection] | High     |
@@ -132,6 +127,18 @@ Items completed since last update.
 
 | Item                          | Resolution                                                                                                                    | Date       |
 | :---------------------------- | :---------------------------------------------------------------------------------------------------------------------------- | :--------- |
+| Cummins ECM WAIT/MIL Pins     | Confirmed from Cummins R2.8 install manual (document 0042728): WAIT=Pin 35 yellow, MIL=Pin 22 white, STOP ENGINE=Pin 49 green, WARNING=Pin 36 blue, Keyswitch=Pin 41 black (5A fuse) | 2026-05-30 |
+| Boomerang Bullet 230          | Removed from build — product was fabricated (does not exist). Replaced by Digital Guard Dawg PBS-I self-contained system     | 2026-05-30 |
+| Boomerang Mounting Location   | Obsolete — Boomerang not used; PBS-I includes its own RFID receiver in the ICM                                                | 2026-05-30 |
+| ECM Ignition Relay            | Obsolete — PBS-I PINK IGN (60A onboard relay) replaces the external ECM ignition relay                                        | 2026-05-30 |
+| P/N Interlock Relay           | Obsolete — interlock provided by 8HP70 + Turbolamik (transmission won't shift out of Park without brake); no external relay  | 2026-05-30 |
+| Engine-Running Lockout Relay  | Obsolete — relying on starter Bendix overrunning clutch + brake-required-to-crank UX; no external relay                       | 2026-05-30 |
+| Engine-Running Voltage Filter | Obsolete — no engine-running lockout relay; no filter needed                                                                  | 2026-05-30 |
+| Hidden Bypass Toggle          | Obsolete — PBS-I Emergency Bypass Card (4-digit PIN entered via Programming Button) replaces hardwired bypass                 | 2026-05-30 |
+| Dash Push-Button (Keyless)    | Resolved — Start Button included in PBS-I kit (pre-wired 36" harness to ICM)                                                  | 2026-05-30 |
+| PMU Output Strategy (Keyless) | Obsolete — PMU is no longer in the keyless logic path; OUT24 returned to Available                                            | 2026-05-30 |
+| PMU24 Keyless State Machine   | Obsolete — PBS-I is self-contained; no PMU state machine required                                                             | 2026-05-30 |
+| Keyless Firewall Pin Assignments | Resolved — Pin 12 reassigned to ignition signal outbound (cabin→EB), Pin 15 reassigned to WAIT-gated PURPLE START         | 2026-05-30 |
 | Horn Relay Specs              | None required - PMU OUT 18 switches PIAA horns directly, no external relay                                                    | 2026-05-25 |
 | Horn Load                     | 5.4A (PIAA 2.7A × 2)                                                                                                          | 2026-05-25 |
 | Horn Circuit Protection       | None required - PMU OUT 18 has integrated electronic overcurrent/thermal protection                                           | 2026-05-25 |
@@ -208,12 +215,12 @@ Items completed since last update.
 | Priority         | Count  |
 | :--------------- | :----- |
 | 🔴 Critical      | 1      |
-| High             | 25     |
-| 📋 Medium        | 17     |
+| High             | 20     |
+| 📋 Medium        | 19     |
 | 📝 Low           | 2      |
 | 🔍 Verify        | 1      |
 | 🚙 Drivetrain    | 13     |
-| **TOTAL**        | **59** |
+| **TOTAL**        | **56** |
 
 ## Related Documentation
 

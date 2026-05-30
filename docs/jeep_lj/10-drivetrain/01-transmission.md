@@ -128,7 +128,7 @@ The Turbolamik communicates with the Cummins R2.8 ECM via J1939 CAN for:
 | Output            | Function                          | Destination                              | Notes                                              |
 | :---------------- | :-------------------------------- | :--------------------------------------- | :------------------------------------------------- |
 | Aux Out (Reverse) | 12V when shifter in R             | [PMU In 3][pmu-inputs]                   | Drives PMU OUT22 (Reverse Lights)                  |
-| Aux Out (P/N)     | 12V when shifter in P or N        | [Starter P/N interlock relay][starter]   | Required gate for cranking the engine              |
+| Aux Out (P/N)     | 12V when shifter in P or N        | **\[Reserve\]**                          | Not currently consumed; PBS-I handles brake interlock for cranking. Available for future P/N gating if needed. |
 | J1939 broadcast   | Gear position, trans temp, mode   | [BIM-01-2 J1939][bim-j1939] → HDX GEAR   | Shares Cummins J1939 bus                           |
 
 ### Shifter

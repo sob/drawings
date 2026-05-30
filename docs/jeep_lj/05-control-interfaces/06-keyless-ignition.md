@@ -6,191 +6,188 @@ tags:
   - control-interfaces
   - ignition
   - keyless
-  - boomerang
+  - pbs-i
 ---
 
 # 5.6 Keyless Ignition System {#keyless-ignition}
 
-Modern push-button ignition for the Cummins R2.8 + 8HP70 build. Replaces the factory keyswitch entirely. Single dash button starts and stops the engine. Boomerang Bullet 230 RFID provides theft deterrence. State machine runs on the PMU24.
+Push-button ignition for the Cummins R2.8 + 8HP70 build. Replaces the factory keyswitch entirely. Self-contained Digital Guard Dawg PBS-I handles RFID immobilizer, brake interlock, and ACC/IGN/START sequencing internally. One external SPST relay gates cranking through the diesel wait-to-start lamp so cold-day starts auto-wait for grid heater preheat. PMU is not involved.
 
 ## Architecture
 
 /// html | div.product-info
 
-**Type:** RFID-enabled push-button start/stop with diesel-specific interlocks
+**Module:** Digital Guard Dawg PBS-I (Intelligent Push Button Start)
 
-**Anti-theft:** Boomerang Bullet 230 (RFID fob required to enable)
+**Type:** RFID-enabled push-button start/stop with onboard 60A relays for IGN, START, ACC1, ACC2
 
-**State Machine:** PMU24 firmware (logic in `04-pmu-programming.md`)
+**Anti-theft:** Built-in dual-mode (passive + active) RFID iTag fob
 
-**Crank Interlocks:** Brake pedal + Turbolamik P/N + engine-running lockout
+**Diesel preheat handling:** External SPST WAIT-gate relay gates PURPLE START output through Cummins WAIT-to-Start lamp signal
 
-**Emergency Bypass:** Hidden hardwired toggle (get-home mode)
+**Brake interlock:** Built into PBS-I (Accessory Harness Brake input)
+
+**Emergency Bypass:** Built-in 4-digit PIN entered via Programming Button (no hidden toggle)
+
+**Product Page:** [Digital Guard Dawg PBS-I][pbs-i]
+
+**Install Manual:** [PBS-I Manual PDF][pbs-i-manual]
 
 ///
 
 ## Components
 
-### Boomerang Bullet 230 (RFID Immobilizer)
+### Digital Guard Dawg PBS-I
 
-| Specification     | Value                                            |
-| :---------------- | :----------------------------------------------- |
-| Type              | RFID transponder + fob                           |
-| Detection Range   | 3-6 ft                                           |
-| Output            | Single transistor output (12V when fob in range) |
-| Power             | 12V CONSTANT (so fob can be detected key-off)    |
-| Mounting          | Under dash, near driver position                 |
-| Product Page      | [Boomerang Bullet 230][boomerang]                |
+| Specification | Value |
+| :------------ | :---- |
+| Type | RFID push-button start, self-contained |
+| Onboard Relays | 4× 60A (IGN, START, ACC1 drops during crank, ACC2 stays on during crank) |
+| Inrush Capacity | 300A |
+| Supply Voltage | 12V DC |
+| Detection Range | ~10 ft (iTag fob) |
+| Auto-arm | 60 sec after fob leaves range |
+| Module Dimensions | ~5.5" × 3" × 1.25" |
+| Wiring | Heavy-duty Molex high-current connectors, 12 GA bus wiring |
+| Mounting | **Cabin, under dash** (vendor mandate: do NOT mount in engine bay) |
+| Kit Contents | ICM + 2 iTag fobs + Start Button (36" pre-wired harness) + Programming Button + Bypass Card + 4-digit PIN |
 
-### Dash Push-Button
+### WAIT-gate Relay
 
-| Specification     | Value                                            |
-| :---------------- | :----------------------------------------------- |
-| Type              | Momentary, normally open, illuminated            |
-| Diameter          | 19mm or 22mm panel mount                         |
-| Illumination      | LED, driven by PMU (state feedback)              |
-| Mounting          | Dash, within easy reach from driver seat         |
-| Part              | TBD (Otto P9-113121 or equivalent)               |
+Single SPST automotive relay with normally-closed contacts. Blocks PBS-I's START output from reaching the Cole Hersee coil while the Cummins WAIT-to-Start lamp is illuminated.
 
-### ECM Ignition Relay
+The Cummins R2.8 ECM uses a **sink-circuit lamp topology** (per Cummins R2.8 install manual, document 0042728): keyswitch +12V → lamp → ECM Pin 35 (yellow) → ECM internal sink to ground when condition is active. The WAIT signal at Pin 35 is therefore **active LOW** (~0V when WAIT lamp on, ~+12V when WAIT lamp off).
 
-| Specification     | Value                                            |
-| :---------------- | :----------------------------------------------- |
-| Type              | Automotive SPST, 30/40A                          |
-| Coil              | 12V DC, ~150 mA draw                             |
-| Contacts          | Switches Cummins ECM 12V supply                  |
-| Mounting          | Engine bay, near ECM                             |
-| Part              | TBD (Hella H41730011 or Bosch 0332019150)        |
+| Specification | Value |
+| :------------ | :---- |
+| Type | SPST automotive, 30A continuous, NC contacts in start path |
+| Coil | 12V DC, ~150 mA |
+| Coil+ | Switched +12V (tap from ignition signal bus bar — same source as the WAIT lamp itself) |
+| Coil- | ECM Pin 35 (yellow WAIT-to-Start wire) tap on cabin side (shared with HDX WAIT/EX input) |
+| Contacts | NC; close when WAIT lamp off, open when WAIT lamp on |
+| Mounting | Cabin, adjacent to PBS-I |
+| Suggested Part | Bosch 0332019150 or Hella 4RA 003 510-04 (TBD) |
 
-### P/N Interlock Relay
+**Logic:**
 
-| Specification     | Value                                            |
-| :---------------- | :----------------------------------------------- |
-| Type              | Automotive SPST, 30A                             |
-| Coil              | 12V DC, driven by Turbolamik P/N aux output      |
-| Contacts          | NO; in series with crank circuit                 |
-| Mounting          | Engine bay, near Cole Hersee 24213               |
-| Part              | TBD                                              |
+- WAIT lamp ON (preheating) → ECM sinks Pin 35 to ground → ~12V across coil → coil energized → NC opens → start chain blocked
+- WAIT lamp OFF (ready or no preheat needed) → Pin 35 floats to ~+12V via lamp → ~0V across coil → coil de-energized → NC closes → start chain passes
 
-### Engine-Running Lockout Relay
+### Cole Hersee 24213 Solenoid
 
-Prevents Cole Hersee from energizing while the engine is running, even if the start button is pressed with brake + P/N held. Protects the starter from Bendix engagement against a spinning flywheel.
+Unchanged from existing starter design. See [Starter System][starter].
 
-| Specification     | Value                                            |
-| :---------------- | :----------------------------------------------- |
-| Type              | Automotive SPST, 30A                             |
-| Coil              | 12V DC, driven by alternator output (~14V when running) |
-| Coil Trigger      | Simple diode + zener filter on alternator B+ tap (>13V threshold) |
-| Contacts          | NC; opens when engine running                    |
-| Mounting          | Engine bay, near Cole Hersee 24213               |
-| Part              | TBD                                              |
+## Daily Start Sequence
 
-## State Machine
+**Warm engine (no preheat cycle):**
 
-| Current State | Trigger                                              | Action                                       | New State |
-| :------------ | :--------------------------------------------------- | :------------------------------------------- | :-------- |
-| OFF           | Fob detected + button press                          | Assert OUT24 (ECM powered)                   | RUN       |
-| OFF           | Fob detected + button + brake + P/N                  | Assert OUT24 → hardware crank chain closes   | CRANK     |
-| CRANK         | J1939 RPM > 500 (engine running)                     | Engine-running relay opens, crank disengages | RUN       |
-| RUN           | Button press (with or without brake)                 | De-assert OUT24, ECM loses power, engine off | OFF       |
-| Any           | Hold button > 3 sec                                  | Force OFF (emergency)                        | OFF       |
-| Any           | Fob lost while moving (RPM > 0)                      | Stay in current state, log alarm             | unchanged |
-| OFF           | Button press, fob NOT detected                       | No action, optional alarm chirp              | OFF       |
+1. Approach vehicle — iTag fob in pocket — Start Button LED illuminates
+2. Press brake pedal — Start Button LED begins flashing
+3. Press and hold Start Button — starter cranks immediately, release on engine start
 
-**Fob-lost behavior:** If the fob leaves range while driving, the PMU does not kill the engine — only blocks re-start at the next OFF cycle. Modern-car convention; prevents stranding on dead fob battery.
+**Cold engine (grid heater active):**
+
+1. Approach — fob recognized — Start Button LED illuminates
+2. Press brake + press and hold Start Button
+3. PBS-I energizes PINK IGN immediately → ECM powers up → grid heater runs → WAIT-to-Start lamp illuminates
+4. PBS-I asserts PURPLE START, but WAIT-gate relay holds it open while WAIT lamp on — **keep holding button**
+5. ~3-5 seconds later (per [Grid Heater][grid-heater]), WAIT lamp extinguishes → WAIT-gate relay NC closes → starter cranks
+6. Release on engine start
+
+**Shut off:** Press brake + press and hold Start Button for 2 seconds.
+
+**Accessory-only mode** (e.g., radio without engine): press button once without brake — ACC2 energizes. Second press adds ACC1 + IGN.
+
+**Emergency bypass** (lost or damaged fob): Use Programming Button + 4-digit PIN from the Bypass Card stored in wallet. See [PBS-I Manual][pbs-i-manual].
 
 ## Wiring
 
-### PMU24 I/O (new)
+### PBS-I Power Harness (6 wires)
 
-| PMU Channel | Function                                | Source                       | Destination               | Notes                          |
-| :---------- | :-------------------------------------- | :--------------------------- | :------------------------ | :----------------------------- |
-| **In 4**    | Boomerang fob present                   | Bullet 230 transistor output | PMU In 4                  | 12V active when fob in range   |
-| **In 5**    | Push button                             | Dash button (NO contact)     | PMU In 5                  | Pulled up; goes high on press  |
-| **In 6**    | Turbolamik P/N                          | Turbolamik P/N aux output    | PMU In 6                  | 12V active when in P or N      |
-| **Out 24**  | Ignition Authorize                      | PMU OUT24                    | ECM ignition relay + start circuit supply | ~5A, switched by PMU logic |
+| Wire | Function | Source | Destination | Notes |
+| :--- | :------- | :----- | :---------- | :---- |
+| RED | +12V Battery | Critical Cabin PDU (CONSTANT) | PBS-I module | 14 AWG; ~50 mA standby (TBD verify) |
+| BLACK | Chassis Ground | Cabin ground bus | PBS-I module | 14 AWG |
+| PINK | 1st Ignition Out (60A) | PBS-I module | Ignition signal bus bar (cabin) | Does NOT drop during crank; bus bar Stud 2 outbounds to ECM Pin 41 via 5A inline fuse per Cummins spec |
+| PURPLE | Starter Out (60A) | PBS-I module | WAIT-gate relay common (NC input) | Cranks while button held |
+| PINK/BLK | Accessory 1 (60A) | PBS-I module | **[Reserve]** | Drops during crank |
+| BROWN | Accessory 2 (60A) | PBS-I module | **[Reserve]** | Stays on during crank |
 
-J1939 RPM is read via the existing CAN bus connection ([PMU Inputs - CAN][pmu-inputs]). No new wire needed for the engine-running input to the state machine.
+### PBS-I Accessory Harness (2 wires used)
 
-### Power & Control Wiring
+| Wire | Function | Source | Destination | Notes |
+| :--- | :------- | :----- | :---------- | :---- |
+| BROWN | Brake (+) input | Stop-lamp switch cold side | PBS-I Brake input | T-tap shared with PMU In 2 and Turbolamik brake input |
+| PURPLE | Ground upon Disarm | PBS-I module | **[Reserve]** | Active-low fob-present signal; available for future use |
 
-| Connection                 | Wire Gauge | Source                       | Destination                          | Notes                                |
-| :------------------------- | :--------- | :--------------------------- | :----------------------------------- | :----------------------------------- |
-| Boomerang power            | 18 AWG     | Critical Cabin PDU (CONSTANT)| Bullet 230 +12V input                | ~50 mA standby; CONSTANT required    |
-| Boomerang ground           | 18 AWG     | Cabin ground bus             | Bullet 230 ground                    |                                      |
-| Boomerang → PMU In 4       | 18 AWG     | Bullet 230 transistor output | Firewall Pin (TBD) → PMU In 4        | Cabin → Engine Bay                   |
-| Push button signal         | 18 AWG     | Dash button NO contact       | Firewall Pin 15 → PMU In 5           | Cabin → Engine Bay                   |
-| Push button LED supply     | 22 AWG     | PMU OUT24 (or dedicated tap) | Button LED+                          | Illuminates when ignition authorized |
-| Button LED ground          | 22 AWG     | Button LED-                  | Cabin ground bus                     |                                      |
-| OUT24 → ECM relay coil     | 18 AWG     | PMU OUT24                    | ECM ignition relay coil+             | Engine bay                           |
-| OUT24 → crank supply       | 18 AWG     | PMU OUT24                    | Push button supply (cabin)           | Engine Bay → Cabin (firewall)        |
-| Start chain (cabin)        | 18 AWG     | Push button output (gated)   | Brake switch start tap               | Cabin                                |
-| Start chain (firewall)     | 18 AWG     | Brake switch start tap       | Firewall Pin (TBD) → P/N relay       | Cabin → Engine Bay                   |
-| P/N relay coil             | 18 AWG     | Turbolamik P/N aux output    | P/N interlock relay coil             | Engine bay                           |
-| ER lockout coil            | 18 AWG     | Alternator B+ (via filter)   | Engine-running relay coil            | Engine bay; opens contacts when RPM up |
-| Cole Hersee drive          | 16 AWG     | ER lockout relay NC output   | Cole Hersee 24213 coil+              | Engine bay                           |
-| Hidden bypass toggle       | 18 AWG     | Battery+ (via fuse)          | ECM ignition relay coil+ (parallel)  | Get-home mode, hidden under dash     |
+### Start and Programming Buttons
 
-### Firewall Pin Assignments
+| Connector | Connection | Notes |
+| :-------- | :--------- | :---- |
+| Start Button | Pre-wired 36" harness → PBS-I side port | Dash mount; included in kit |
+| Programming Button | Pre-wired harness → PBS-I side port | Stash under dash or in trunk; needed only for fob-learn and emergency bypass PIN entry |
 
-Three pins are used by the keyless system. Pin 15 was reassigned from the prior P/N interlock placeholder (the P/N signal now stays in the engine bay since PMU and Turbolamik are co-located).
+### WAIT-Gate Relay
 
-| Pin | Direction       | Signal                          | Source                | Destination          |
-| :-- | :-------------- | :------------------------------ | :-------------------- | :------------------- |
-| 15  | Cabin → EB      | Push button signal              | Dash button NO        | PMU In 5             |
-| TBD | Cabin → EB      | Boomerang fob present           | Bullet 230 output     | PMU In 4             |
-| TBD | EB → Cabin      | OUT24 ignition supply           | PMU OUT24             | Dash button supply   |
-| TBD | Cabin → EB      | Gated start (post-brake)        | Brake switch output   | P/N relay contact    |
+| Wire | Source | Destination | Notes |
+| :--- | :----- | :---------- | :---- |
+| Coil (+) | Switched +12V tap (ignition signal bus bar terminal) | WAIT-gate relay coil+ | Same source that powers the WAIT lamp |
+| Coil (-) | WAIT-gate relay coil- | T-tap on ECM Pin 35 wire (cabin side, shared with HDX WAIT/EX input) | Active-low sink path; ECM grounds this wire when WAIT lamp on |
+| Contact COM | PBS-I PURPLE START | WAIT-gate relay COM terminal | |
+| Contact NC | WAIT-gate relay NC terminal | Firewall Pin 15 → Cole Hersee 24213 coil+ | Closed when WAIT off; opens when WAIT on |
 
-See [Firewall Ingress][firewall-ingress] for the full pin map.
+See [HDX Control][hdx-control] for the existing WAIT/EX wiring on the cabin side.
 
-## Emergency Bypass
+### Firewall Crossings
 
-A hidden hardwired toggle (under dash, location TBD) bypasses the PMU and directly powers the ECM ignition relay coil from CONSTANT 12V via a 5A inline fuse. This provides a get-home mode if:
+Two PBS-I outputs need to cross the firewall from cabin (PBS-I location) to engine bay:
 
-- PMU24 firmware locks up or fails
-- Boomerang Bullet 230 fails or fob battery dies and PMU programming has no fallback
-- A CAN bus fault prevents the state machine from running
+| Signal | Direction | Approximate Current | Notes |
+| :----- | :-------- | :------------------ | :---- |
+| Ignition signal (outbound from cabin bus bar) | Cabin → EB | ~5A typical (ECM + PMU Pin 7) | 14 AWG; feeds ECM Pin 41 (black, via **5A inline fuse** per Cummins spec) and PMU Pin 7 |
+| WAIT-gated PURPLE | Cabin → EB | ~1.6A (Cole Hersee coil) | 16 AWG sufficient; drives Cole Hersee 24213 coil+ during crank only |
 
-**Bypass does NOT enable cranking** — only ignition. Cranking still requires the full hardware interlock chain (brake + P/N + engine-running lockout). In bypass mode you can still start by holding the dash button if all hardware interlocks are intact.
+See [Firewall Ingress][firewall-ingress] for pin assignments.
+
+## Why Not the Engine-Running Lockout or P/N Interlock Relay?
+
+Earlier iterations of this design included a discrete engine-running lockout relay and a P/N interlock relay in series with the starter coil. Both were removed in favor of simpler, layered protection:
+
+- **Brake interlock** is built into PBS-I (Accessory Harness Brake input).
+- **Engine-running protection** relies on the starter motor's Bendix overrunning clutch (standard automotive practice for hard-keyed ignition systems) plus the requirement to deliberately press brake + hold the button to crank — accidental restart of a running engine requires two-handed misuse.
+- **P/N interlock** is provided by the 8HP70 + Turbolamik: the transmission cannot be shifted out of Park without brake pressed, and the vehicle will always be in Park at start time. The Turbolamik can additionally inhibit start signal via its P/N aux output if a future build phase requires it (the signal is documented but unused by the keyless system today).
+
+This shifts the build's safety stance from "redundant external interlocks" to "PBS-I + transmission + driver behavior" — appropriate for a single-driver vehicle with a CR diesel and modern automatic.
 
 ## Diesel Runaway Note
 
-The Cummins R2.8 is a modern electronic common-rail diesel. Normal engine shutdown is achieved by cutting power to the ECM, which stops commanding the injectors. However, ECM-only kill does not stop a true runaway — if the engine is being fed oil, fuel, or hydrocarbon vapor from an external source, cutting ECM power does nothing.
-
-This build provides independent mechanical protection: a Mishimoto catch can in the crankcase ventilation path (prevention) plus an AMOT 4261M air shutoff valve with dash-mounted manual cable (termination). See [Diesel Runaway Protection][runaway-protection] for the full specification.
+Normal engine shutdown (press brake + 2 sec button hold) drops PBS-I's PINK IGN output, cutting ECM power. However, ECM-only kill does not stop a runaway sustained by oil or hydrocarbon vapor. Independent mechanical protection is provided by the Mishimoto catch can (prevention) plus the AMOT 4261M air shutoff valve with dash-mounted manual cable (termination). See [Diesel Runaway Protection][runaway-protection].
 
 ## Outstanding Items
 
-- [ ] Select Boomerang Bullet 230 mounting location (under dash, near driver)
-- [ ] Select dash push-button part (Otto, Apem, Carling, etc.) - 19mm/22mm, illuminated, momentary NO
-- [ ] Select ECM ignition relay part (Hella/Bosch SPST 30-40A automotive)
-- [ ] Select P/N interlock relay part (SPST 30A automotive)
-- [ ] Select engine-running lockout relay part (SPST 30A, NC contacts)
-- [ ] Design alternator B+ voltage filter for engine-running relay coil drive (diode + zener + resistor)
-- [ ] Assign 3 new firewall HDP24 pin numbers (currently TBD): fob signal, OUT24 supply to cabin, gated start return
-- [ ] Determine hidden bypass toggle location and part
-- [ ] Confirm Turbolamik aux output channel can be configured for P/N (12V when in P or N)
-- [ ] Decide PMU output strategy: OUT24-only with engine-running lockout (current plan) vs. freeing OUT15 winch trigger for dedicated crank output
-- [ ] Write PMU24 state-machine logic in ECUMaster Light Client (see [PMU Programming][pmu-programming])
+- [ ] Order Digital Guard Dawg PBS-I kit (includes ICM, 2 fobs, Start Button, Programming Button, Bypass Card, harnesses)
+- [ ] Select WAIT-gate relay part (SPST 30A automotive, NC contacts used in start path)
+- [ ] Add 5A inline fuse on ignition outbound wire to ECM Pin 41 (per Cummins R2.8 install manual)
+- [ ] Select PBS-I module mounting location (cabin under-dash, away from heat and water)
+- [ ] Select Start Button dash mounting position (within easy reach of driver)
+- [ ] Select Programming Button storage location (hidden but accessible)
+- [ ] Assign firewall pins for PBS-I PINK IGN (cabin → EB) and WAIT-gated PURPLE START (cabin → EB)
+- [ ] Verify PBS-I quiescent current draw to add to START battery parasitic budget
+- [ ] Set DIP switches / jumpers per install manual (PBS-I has no DIP/Jumper menu; check Feature Programming defaults are acceptable)
 
 ## Related Documentation
 
-- [PMU Inputs][pmu-inputs] - In 4, In 5, In 6 assignments
-- [PMU Outputs][pmu-outputs] - OUT24 assignment
-- [PMU Programming][pmu-programming] - State machine logic
-- [Starter System][starter] - Cole Hersee 24213 and crank chain
-- [Transmission][transmission] - Turbolamik aux outputs (P/N source)
-- [Ignition Signal Distribution][ignition-signal] - Why the keyswitch is gone
-- [Firewall Ingress][firewall-ingress] - Pin assignments
+- [Starter System][starter] - Cole Hersee 24213 and PBS-I PURPLE → WAIT-gate → coil chain
+- [Ignition Signal Distribution][ignition-signal] - PBS-I PINK IGN feeds the bus bar
+- [HDX Control][hdx-control] - WAIT/EX signal source for the gate relay
+- [Grid Heater System][grid-heater] - R2.8 grid heater duty cycle (3-5 sec typical)
+- [Firewall Ingress][firewall-ingress] - PBS-I pin assignments
 
-[boomerang]: https://boomerangtag.com/products/bullet-230
-[pmu-inputs]: ../01-power-systems/04-pmu/02-pmu-inputs.md
-[pmu-outputs]: ../01-power-systems/04-pmu/03-pmu-outputs.md
-[pmu-programming]: ../01-power-systems/04-pmu/04-pmu-programming.md
+[pbs-i]: https://www.digitalguarddawg.com/keyless-ignition/automotive/pbs-i
+[pbs-i-manual]: https://cdn.shopify.com/s/files/1/0896/8005/2530/files/PBS-I-Manual.pdf
 [starter]: ../02-engine-systems/01-starter.md
-[transmission]: ../10-drivetrain/01-transmission.md
 [ignition-signal]: ../01-power-systems/06-ignition-signal/index.md
 [firewall-ingress]: ../01-power-systems/07-wire-routing/02-firewall-ingress.md
-[standards-exceptions]: ../01-power-systems/STANDARDS-EXCEPTIONS.md
 [runaway-protection]: ../02-engine-systems/11-runaway-protection.md
+[hdx-control]: ../02-engine-systems/09-gauge-cluster/01-hdx-control.md
+[grid-heater]: ../02-engine-systems/07-grid-heater.md

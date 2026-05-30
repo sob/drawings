@@ -71,7 +71,7 @@ Distances required for voltage drop calculations and wire purchases. Measure act
 | CT4 (steering column)   | Passenger tail light     | 14 AWG | 16 ft ✓  | Turn signal rear                    |
 | PMU (engine bay)        | Rear tail lights         | 16 AWG | 13 ft ✓  | Brake/reverse/marker (Out 21/22/23) |
 | SwitchPros (wheel well) | Roll bar dome lights     | 16 AWG | ~8 ft    | Low current, estimated              |
-| Dash push-button        | PMU In 5                 | 18 AWG | 3 ft ✓   | Keyless ignition (via firewall Pin 15) |
+| PBS-I PURPLE START      | Cole Hersee 24213 coil   | 16 AWG | ~10 ft ✓ | Via WAIT-gate relay + firewall Pin 15  |
 | CT4 SW3 output          | PMU In 7                 | 18 AWG | 3 ft ✓   | Same as steering column → PMU       |
 
 ### Offroad Lighting (Priority: Medium)
