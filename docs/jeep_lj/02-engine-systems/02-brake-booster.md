@@ -17,11 +17,11 @@ tags:
 
 **iBooster:** Bosch iBooster Gen 2
 
-**iBooster Donor:** 2018-2022 Honda Accord Hybrid (2.0L, 10th-gen) — Bosch iBooster **Gen 2**[^donor-year]
+**iBooster Donor:** Honda Accord Hybrid — Bosch iBooster **Gen 2**[^donor-year]
 
-**Honda OEM Part Numbers:** ⚠️ verify on donor — `46680-T3Z-A00` (booster module) appears to be a **9th-gen** ("T3Z") number, which conflicts with the 10th-gen donor; the 10th-gen Accord booster is the `01469-TVA-` family. `01469-TWA-A58` (MC/reservoir kit). Confirm both against the actual donor before ordering parts or harness.[^donor-year]
+**Honda OEM Part Numbers:** `46680-T3Z-A00` (booster module), `01469-TWA-A58` (MC/reservoir kit); MC mfr # `46100-TWA-A550-M1`[^donor-year]
 
-[^donor-year]: Donor framing (Gen 2 Honda Accord, 2.0L Hybrid) corroborated by vendors: [EVcreate's donor list](https://www.evcreate.com/ibooster-donor-vehicles/) lists the Honda Accord under **Gen 2**, and Back Bay Customs' adapter is **Honda-Accord-iBooster-only** (vendor, 2026-05-30). The 10th-gen Accord (2.0L Hybrid) runs **2018-2022**, so the earlier "2017" start was corrected to 2018 (2017 is the 9th gen, which used a different — `T3Z`-series — booster). No vendor confirms the specific OEM **part numbers**, and `46680-T3Z-A00` carries a 9th-gen "T3Z" chassis code that conflicts with a 10th-gen donor (10th-gen boosters are `01469-TVA-`), so the part numbers are flagged for first-party verification on the donor in hand rather than asserted. Tulay's Gen 2 harness is universal (year-agnostic), so it does not constrain the part number. Verified 2026-05-30.
+[^donor-year]: Part numbers **confirmed against the secured donor** — eBay listing #397546491129 (offer accepted 2026-05-30), OE/OEM: `46680-T3Z-A00` + `01469-TWA-A58`, MC mfr # `46100-TWA-A550-M1`, brand Honda, made in Japan. This is the first-party reference of record; the booster is the Bosch **Gen 2** unit (EVcreate lists the Honda Accord under Gen 2; Back Bay Customs adapter is Honda-Accord-iBooster-only, vendor 2026-05-30). **Model year is intentionally not asserted:** the listing states no year and the `T3Z` booster code does not map cleanly to a single Accord Hybrid generation in public catalogs — and it no longer matters, since the physical part (not a year-based catalog lookup) is now the fitment reference. The seller's own note ("eBay compatibility chart is not always correct… contact local dealer with your VIN") reinforces not relying on a catalog year. Supersedes the earlier "2017-2022 / 2018-2022" estimates. Verified 2026-05-30.
 
 **Master Cylinder:** Wilwood Tandem Compact — ⛔ bore TBD, recalc pending (260-15541 1.125" vs 260-15542 1.00")
 
@@ -85,7 +85,7 @@ The factory Tesla/Honda master cylinder is discarded. The Back Bay Customs adapt
 
 | Item | Part # | Source | Status | Notes |
 | :--- | :----- | :----- | :----- | :---- |
-| iBooster + MC pull | Honda 46680-T3Z-A00 (+ 01469-TWA-A58) — ⚠️ verify part # on donor (see Specs) | eBay / LKQ / Car-Part.com | Offer pending ($195 on $254 listing) | 2018-2022 Accord Hybrid (2.0L, Gen 2) donor |
+| iBooster + MC pull | Honda 46680-T3Z-A00 (+ 01469-TWA-A58) | eBay (listing #397546491129) | ✅ Purchased ($195, offer accepted 2026-05-30) | Honda Accord Hybrid Gen 2 donor; part #s confirmed on listing |
 | Auto brake pedal assembly | 03-06 TJ/LJ auto pedal | eBay / junkyard | **Ordered** | Wider pedal pad than manual; stop-lamp switch + connector included on donor |
 | MC adapter | Back Bay Customs | [backbaycustoms.com][backbay] | ✅ Confirmed vs 260-15542 (vendor, 2026-05-30); re-confirm if bore recalc selects 260-15541 | Steel plate + pushrod spacer + nyloc nuts; Honda iBooster only |
 | Master cylinder | Wilwood 260-15541 (1.125") **or** 260-15542 (1.00") | Summit / Jegs | ⛔ On hold — bore recalc pending (see warning above) | Tandem Compact, black E-coat; bore TBD |
@@ -203,7 +203,7 @@ See [tail/brake][tail-brake] (PMU lighting flow), [starter][starter] (crank chai
 **Waiting on external action:**
 
 - [x] ~~Confirm Back Bay Customs MC adapter compatibility with Wilwood 260-15542~~ — ✅ confirmed by vendor (Adam, 2026-05-30): adapter fits the 260-15542, is Honda-iBooster-only (not Tesla), and the remote reservoirs are fine. Blocker cleared.
-- [ ] Close iBooster eBay offer ($195 sent on $254 listing)
+- [x] ~~Close iBooster eBay offer ($195 sent on $254 listing)~~ — ✅ offer accepted 2026-05-30 (listing #397546491129); part #s 46680-T3Z-A00 + 01469-TWA-A58 confirmed on listing
 
 **MC bore — recalc before ordering (🔴 blocker):**
 
@@ -220,8 +220,10 @@ See [tail/brake][tail-brake] (PMU lighting flow), [starter][starter] (crank chai
 - [x] ~~Source 03-06 TJ/LJ automatic brake pedal assembly~~ — ordered; verify donor checks (switch + clip, pushrod hole bushing, pedal arm condition) on arrival
 - [ ] 3D-print PLA prototype of the **revised** backing plate ([DXF][backing-plate-dxf]) for trial fit; verify the 60×80mm hole spacing against donor studs and clearance for cabin-side hardware
 
-**Pending donor arrival:**
+**Pending donor arrival** (purchased 2026-05-30, listing #397546491129):
 
+- [ ] Confirm casting part #s on the actual unit match the listing (46680-T3Z-A00 booster / 01469-TWA-A58 MC kit)
+- [ ] Measure body-neck Ø against the 64mm backing-plate bore
 - [ ] Bench test donor iBooster before any fab work (12V to ignition signal → motor cycles + pedal rod assists)
 - [ ] Verify 4 mounting studs intact and body neck undamaged
 - [ ] Photograph back face — finalize backing plate alignment + harness pigtail condition

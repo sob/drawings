@@ -63,7 +63,7 @@ Major components - watch for sales, consider financing options.
 
 | Item | Manufacturer | Est. Price | Priority | Notes |
 |:-----|:-------------|:-----------|:---------|:------|
-| Bosch iBooster Gen 2 (with MC pull) | Bosch / Honda | ~$195 (offer pending on $254 listing) | High | 2018-2022 Accord Hybrid 2.0L donor; OEM part # ⚠️ verify on donor (46680-T3Z-A00 may be 9th-gen) - [iBooster][ibooster] |
+| Bosch iBooster Gen 2 (with MC pull) | Bosch / Honda | $195 ✅ purchased 2026-05-30 | High | Honda Accord Hybrid donor (listing #397546491129); OEM 46680-T3Z-A00 + 01469-TWA-A58 confirmed - [iBooster][ibooster] |
 | 03-06 TJ/LJ Auto Brake Pedal Assembly | Mopar | ~$30-80 | **Ordered** | Auto-trans pedal w/ wider pad + stop-lamp switch - [iBooster][ibooster] |
 | Back Bay Customs Wilwood MC Adapter | Back Bay Customs | ~$165 | High | Replaces factory MC w/ Wilwood - [iBooster][ibooster] |
 | Wilwood Tandem Compact MC (260-15541 1.125" **or** 260-15542 1.00") | Wilwood | ~$180-230 | High | ⛔ On hold — bore recalc pending; black E-coat - [iBooster][ibooster] |
