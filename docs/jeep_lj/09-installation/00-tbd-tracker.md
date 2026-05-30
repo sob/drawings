@@ -114,8 +114,8 @@ Mechanical drivetrain specifications, tracked separately from the electrical bui
 | TCU Brake Switch Routing          | Brake pedal switch already feeds PMU In 2 via HDP24 pin 13. Decide: shared signal tap or dedicated wire to TCU? | [Harness Inventory][harness-inventory] | Medium |
 | Transmission Pilot Bearing        | If required by flywheel/crank combination                                                    | [Transmission][transmission]      | Medium   |
 | Transfer Case Specs               | Output type, fluid type and capacity                                                         | [Transfer Case][transfer-case]    | Medium   |
-| Front Driveshaft Specs            | Type, length, U-joint selection                                                              | [Driveshafts][driveshafts]        | Medium   |
-| Rear Driveshaft Specs             | Type, length, U-joint selection                                                              | [Driveshafts][driveshafts]        | Medium   |
+| Front Driveshaft Specs            | Custom (Tom Woods) decided — measure length at final ride height & order                     | [Driveshafts][driveshafts]        | Medium   |
+| Rear Driveshaft Specs             | Custom (Tom Woods) decided — measure length at final ride height & order                     | [Driveshafts][driveshafts]        | Medium   |
 | Front Axle Gearing & Manufacturer | Ratio and axle housing manufacturer                                                          | [Front Axle][front-axle]          | Medium   |
 | Rear Axle Gearing & Locker        | Ratio, manufacturer, and locker type                                                         | [Rear Axle][rear-axle]            | Medium   |
 | Front Suspension Components       | Coil rate, bypass valving, control arms, track bar, sway bar                                 | [Suspension][suspension]          | Medium   |
