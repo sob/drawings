@@ -78,8 +78,8 @@ Component part numbers below come from the PSC **FHK400TJ** kit — the 1997-200
 | Unit | Mishimoto fluid cooler |
 | Fan | Mishimoto (matched to cooler) |
 | Control | 180 °F inline thermostat |
-| Fan Current Draw | TBD |
-| Fan Power Source | TBD |
+| Fan Current Draw | TBD (confirm fits PMU Out 8 ~15A budget) |
+| Fan Power Source | PMU Out 8 (~15A, thermostat-switched) — see [PMU Outputs][pmu-outputs] |
 
 ## Fluid Specifications
 
@@ -96,7 +96,7 @@ Component part numbers below come from the PSC **FHK400TJ** kit — the 1997-200
 - [ ] Document Artec Industries ram mount part number and the Dana 44 cut dimensions
 - [ ] Confirm remote reservoir model and mounting location
 - [ ] Confirm fluid system fill quantity
-- [ ] Document cooler fan current draw and power source (electrical integration + thermostat control)
+- [ ] Confirm Mishimoto cooler fan current draw fits the PMU Out 8 (~15A) budget
 - [ ] Document hydraulic line routing
 
 [^steering-config]: Owner decision, 2026-05-30 — full-hydro kit is PSC pump + PSC orbital valve + PSC double-ended ram; Busted Knuckle Off-Road steering stops limit ram stroke to Dana 44 spec; Artec Industries Dana 60 ram mount cut down to the Dana 44; Mishimoto fluid cooler + fan on a 180 °F inline thermostat. Model numbers, bore/stroke values, flow/pressure, and fluid specs remain pending.
@@ -110,3 +110,4 @@ Component part numbers below come from the PSC **FHK400TJ** kit — the 1997-200
 
 [front-axle]: 04-front-axle.md
 [suspension]: 06-suspension.md
+[pmu-outputs]: ../01-power-systems/04-pmu/03-pmu-outputs.md

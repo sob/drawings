@@ -122,7 +122,7 @@ Mechanical drivetrain specifications, tracked separately from the electrical bui
 | Rear Suspension Components        | Coil rate, bypass valving, control arms, track bar, sway bar                                 | [Suspension][suspension]          | Medium   |
 | Steering Pump Specs               | Kit pump PK40JP2-FH is Jeep 4.0L-only — source Cummins R2.8 PSC pump/bracket; flow/pressure/drive TBD | [Steering][steering]              | Medium   |
 | Steering Ram Specs                | PSC SC2227K1 (2.75×8 double-ended, FHK400TJ, 40"+ confirmed) on Artec D60 mount cut to D44 + Busted Knuckle stops; mount P/N + D44 stroke length TBD | [Steering][steering]              | Medium   |
-| Steering Cooler Fan (electrical)  | Mishimoto cooler + fan w/ 180°F inline thermostat (decided); fan current draw + power source/control TBD | [Steering][steering]              | Medium   |
+| Steering Cooler Fan (electrical)  | On PMU Out 8 (~15A, 180°F inline thermostat); confirm actual Mishimoto fan draw fits budget   | [Steering][steering]              | Medium   |
 | Suspension Geometry               | Departure and breakover angles (calculated from chosen suspension)                           | [Suspension][suspension]          | Low      |
 | Steering Reservoir & Fluid        | Fluid = PSC/SWEPCO 715; remote reservoir (in pump kit) model/location + system fill qty TBD  | [Steering][steering]              | Low      |
 
