@@ -60,9 +60,9 @@ Chosen over the TJ Rubicon NP241OR Rock-Trac (4:1) deliberately:
 
 ## Adapter (8HP70 → NV241)
 
-The 8HP70 is not the case's factory transmission, so it mates through a transmission-to-transfer-case adapter. The 8HP70 output and the required NV241 input gear are both **23-spline**, so a 23-spline interface is the clean path.[^adapter]
+**An adapter is required — there is no native bolt-up.** The 8HP70 is not the case's factory transmission, so it mates through a transmission-to-transfer-case adapter. The 8HP70 output and the required NV241 input gear are both **23-spline**, so a 23-spline interface is the clean path.[^adapter]
 
-The 8HP *family* does pair with an NV241 from the factory — the JL Wrangler automatic bolts an 850RE/8HP75 to one — but the Ram EcoDiesel 8HP70's bolt pattern only *resembles* the Jeep 850RE; it is not interchangeable. So this transmission needs an adapter to **any** NV241 (JK or JL), and the transmission is fixed (Turbolamik TCU + Kilduff shifter are spec'd to the 8HP70).[^why-adapter]
+The 8HP *family* does pair with an NV241 from the factory — the JL Wrangler automatic bolts an 850RE/8HP75 to one — **but the Ram EcoDiesel 8HP70's bolt pattern only *resembles* the Jeep 850RE; it is not interchangeable.** So this transmission needs an adapter to **any** NV241 (JK or JL), and the transmission is fixed (Turbolamik TCU + Kilduff shifter are spec'd to the 8HP70).[^why-adapter]
 
 - **Recommended — DomiWorks 24004001:** purpose-built for the 8HP70/75 EcoDiesel Ram 1500 → NP231/241 family; runs a 23-spline NV241 input gear (ZTNP22390 or similar) and has adjustable case tilt. ≈8,495 SEK (~$800–900 USD + import).
 - **Alternative — Advance Adapters:** no off-the-shelf 8HP70 → stock NV241 kit. Their 8HP70 tooling (output assembly 50-9905, housing 51-9905) is built to mate to an Atlas; their NV241-JK input gears (52-9940 32-spline, 52-9945 29-spline) are cut for GM transmissions, not the 8HP70's 23-spline output. Call to spec a 23-spline build, or go Atlas.
