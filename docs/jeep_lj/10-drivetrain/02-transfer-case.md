@@ -51,6 +51,13 @@ With the 8HP70's deep first gear, the shallower Sport low range still yields a u
 
 The deep 8HP70 first gear largely compensates for the 2.72:1 low range — a 4:1 Rock-Trac with the same gearing would give ≈96.7:1. ≈66:1 is a usable trail crawl ratio for this build.
 
+## Selection Notes
+
+Chosen over the TJ Rubicon NP241OR Rock-Trac (4:1) deliberately:
+
+- **Crawl speed (primary reason):** paired with the 8HP70 (automatic), a 4:1 case gives ≈96.7:1 geared — and the torque converter multiplies torque further at low speed, pushing the effective crawl far deeper. That is too slow to hold momentum on most terrain. An automatic wants a numerically lower geared crawl than a manual because the converter handles creep; ≈66:1 is the better target.
+- **Strength:** a wash — both share the NP241 case, 1.25" chain, and 32-spline output, and the R2.8's torque is well within either. The Rock-Trac's reinforced 4:1 planetary is the heavier-duty variant but is not needed here.
+
 ## Fluid Specifications
 
 | Specification | Value |
