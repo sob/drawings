@@ -120,10 +120,11 @@ Mechanical drivetrain specifications, tracked separately from the electrical bui
 | Rear Axle Gearing & Locker        | Ratio, manufacturer, and locker type                                                         | [Rear Axle][rear-axle]            | Medium   |
 | Front Suspension Components       | Coil rate, bypass valving, control arms, track bar, sway bar                                 | [Suspension][suspension]          | Medium   |
 | Rear Suspension Components        | Coil rate, bypass valving, control arms, track bar, sway bar                                 | [Suspension][suspension]          | Medium   |
-| Hydroboost Pump Specs             | Model, flow rate, pressure, drive type                                                       | [Steering][steering]              | Medium   |
-| Hydroboost Ram Specs              | Model, bore, stroke, mount type                                                              | [Steering][steering]              | Medium   |
+| Steering Pump Specs               | PSC pump (decided) — model, flow rate, pressure, drive type (belt vs Cummins gear-drive) TBD | [Steering][steering]              | Medium   |
+| Steering Ram Specs                | PSC double-ended ram on Artec D60 mount (cut to D44) + Busted Knuckle stops to D44 stroke (decided); model/bore TBD | [Steering][steering]              | Medium   |
+| Steering Cooler Fan (electrical)  | Mishimoto cooler + fan w/ 180°F inline thermostat (decided); fan current draw + power source/control TBD | [Steering][steering]              | Medium   |
 | Suspension Geometry               | Departure and breakover angles (calculated from chosen suspension)                           | [Suspension][suspension]          | Low      |
-| Hydroboost Reservoir & Fluid      | Reservoir type/capacity/location and fluid type/capacity                                     | [Steering][steering]              | Low      |
+| Steering Reservoir & Fluid        | Reservoir type/capacity/location and fluid type/capacity                                     | [Steering][steering]              | Low      |
 
 ---
 
