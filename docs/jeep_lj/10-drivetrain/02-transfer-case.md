@@ -62,6 +62,8 @@ Chosen over the TJ Rubicon NP241OR Rock-Trac (4:1) deliberately:
 
 The 8HP70 is not the case's factory transmission, so it mates through a transmission-to-transfer-case adapter. The 8HP70 output and the required NV241 input gear are both **23-spline**, so a 23-spline interface is the clean path.[^adapter]
 
+The 8HP *family* does pair with an NV241 from the factory — the JL Wrangler automatic bolts an 850RE/8HP75 to one — but the Ram EcoDiesel 8HP70's bolt pattern only *resembles* the Jeep 850RE; it is not interchangeable. So this transmission needs an adapter to **any** NV241 (JK or JL), and the transmission is fixed (Turbolamik TCU + Kilduff shifter are spec'd to the 8HP70).[^why-adapter]
+
 - **Recommended — DomiWorks 24004001:** purpose-built for the 8HP70/75 EcoDiesel Ram 1500 → NP231/241 family; runs a 23-spline NV241 input gear (ZTNP22390 or similar) and has adjustable case tilt. ≈8,495 SEK (~$800–900 USD + import).
 - **Alternative — Advance Adapters:** no off-the-shelf 8HP70 → stock NV241 kit. Their 8HP70 tooling (output assembly 50-9905, housing 51-9905) is built to mate to an Atlas; their NV241-JK input gears (52-9940 32-spline, 52-9945 29-spline) are cut for GM transmissions, not the 8HP70's 23-spline output. Call to spec a 23-spline build, or go Atlas.
 
@@ -93,3 +95,4 @@ Confirm before ordering: EcoDiesel 8HP70 output length (some units need a DomiWo
 [^trans]: ZF 8HP70 (Chrysler 845RE) 1st-gear ratio 4.714 — see [Transmission][transmission].
 [^fluid]: NV241 GenII service fluid: **ATF+4**, capacity ≈1.6 L (3.4 pt), filled to the fill-plug overflow. JK NV241 service references (project-jk.com / wranglerjkforum.net), accessed 2026-05-31. Verify against the FSM at service.
 [^adapter]: Advance Adapters (8HP70 output 50-9905 $642.51 / housing 51-9905 $371.11; NP241-JK input gears 52-9940 32-spline, 52-9945 29-spline) and DomiWorks 24004001 (≈8,495 SEK), accessed 2026-05-31; prices subject to change. The 8HP70 (Ram) output is 23-spline; Advance Adapters' 6L80→JK NP241 kit (50-9940) confirms the NP241-JK input shaft is 23-spline. DomiWorks specifies a 23-spline input gear (ZTNP22390).
+[^why-adapter]: JL Wrangler automatics pair an 8HP-family transmission (850RE Chrysler / 8HP75 ZF) with the NV241, but the Ram EcoDiesel 8HP70 bolt pattern is only *similar* to the Jeep 850RE — and even the 850RE and 8HP75ZF use different connections (Jeep sells a ~$300 adapter between them). A direct Ram-8HP70-to-JL-case kit has been discussed but is not on the market. jlwranglerforums.com 8-speed swap PSA / Advance Adapters 5054 (JL 850RE / Dodge 8HP70 → Atlas), accessed 2026-05-31.
