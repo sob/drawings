@@ -94,6 +94,43 @@ The 8HP *family* does pair with an NV241 from the factory — the JL Wrangler au
 - [ ] Order: DomiWorks 24004001 adapter; 23-spline NV241 input gear (ZTNP22390 or equiv.); NV241 input bearing + front seal; grade-10.9 hardware
 - [ ] Confirm donor JK case input-gear spline before swapping to the 23-spline gear
 
+## Vendor Inquiry — DomiWorks (draft)
+
+Draft email to confirm fitment and parts before ordering:
+
+```text
+Subject: Adapter fitment — Ram 1500 EcoDiesel 8HP70 → Jeep JK NP241 (2.72:1)
+
+Hi DomiWorks,
+
+I'm mating a Ram 1500 EcoDiesel 8HP70 (4x4) transmission to a 2012 Jeep
+Wrangler JK Sport NP241 transfer case (NV241 GenII Command-Trac, 2.72:1)
+and want to confirm the right parts before ordering.
+
+1. Is adapter SKU 24004001 the correct unit for this 8HP70 EcoDiesel →
+   NP241 combination?
+
+2. Output protrusion / spacer plate: where exactly do I measure the
+   8HP70 output-shaft protrusion from, and what is the cutoff for needing
+   the spacer plate? Is the spacer available for the EcoDiesel output,
+   and what does it cost?
+
+3. Input gear: do you supply the 23-spline NP241 input gear (ZTNP22390
+   or equivalent), or should I source that separately?
+
+4. Bearing / seal / hardware: can you include the NP241 input bearing,
+   front seal, and mounting hardware, or are those separate?
+
+5. Lead time and shipping cost to the US (state: ____)?
+
+Donor details:
+- Transmission: ZF 8HP70 (Chrysler 845RE), 2015–2019 Ram 1500 EcoDiesel, 4x4
+- Transfer case: 2012 Jeep JK Sport NP241 (2.72:1 low range)
+
+Thanks,
+[name]
+```
+
 ## Related Documentation
 
 - [Transmission][transmission]
