@@ -58,6 +58,15 @@ Chosen over the TJ Rubicon NP241OR Rock-Trac (4:1) deliberately:
 - **Crawl speed (primary reason):** paired with the 8HP70 (automatic), a 4:1 case gives ≈96.7:1 geared — and the torque converter multiplies torque further at low speed, pushing the effective crawl far deeper. That is too slow to hold momentum on most terrain. An automatic wants a numerically lower geared crawl than a manual because the converter handles creep; ≈66:1 is the better target.
 - **Strength:** a wash — both share the NP241 case, 1.25" chain, and 32-spline output, and the R2.8's torque is well within either. The Rock-Trac's reinforced 4:1 planetary is the heavier-duty variant but is not needed here.
 
+## Adapter (8HP70 → NV241)
+
+The 8HP70 is not the case's factory transmission, so it mates through a transmission-to-transfer-case adapter. The 8HP70 output and the required NV241 input gear are both **23-spline**, so a 23-spline interface is the clean path.[^adapter]
+
+- **Recommended — DomiWorks 24004001:** purpose-built for the 8HP70/75 EcoDiesel Ram 1500 → NP231/241 family; runs a 23-spline NV241 input gear (ZTNP22390 or similar) and has adjustable case tilt. ≈8,495 SEK (~$800–900 USD + import).
+- **Alternative — Advance Adapters:** no off-the-shelf 8HP70 → stock NV241 kit. Their 8HP70 tooling (output assembly 50-9905, housing 51-9905) is built to mate to an Atlas; their NV241-JK input gears (52-9940 32-spline, 52-9945 29-spline) are cut for GM transmissions, not the 8HP70's 23-spline output. Call to spec a 23-spline build, or go Atlas.
+
+Confirm before ordering: EcoDiesel 8HP70 output length (some units need a DomiWorks spacer plate) and the donor JK input-gear spline.
+
 ## Fluid Specifications
 
 | Specification | Value |
@@ -67,7 +76,7 @@ Chosen over the TJ Rubicon NP241OR Rock-Trac (4:1) deliberately:
 
 ## Outstanding Items
 
-- [ ] Source 8HP70-to-NV241 adapter (Advance Adapters JK NP241 2.72:1 line / DomiWorks / LOJ Conversions); confirm 8HP70 output spline & stickout for the EcoDiesel variant
+- [ ] Order DomiWorks 24004001 adapter + 23-spline NV241 input gear (ZTNP22390 or equiv.); confirm EcoDiesel output length (spacer plate) and donor input-gear spline before ordering
 
 ## Related Documentation
 
@@ -83,3 +92,4 @@ Chosen over the TJ Rubicon NP241OR Rock-Trac (4:1) deliberately:
 [^input]: Stock JK NP241 input is 23-spline (manual/NSG370) or 29-spline (auto) depending on donor — moot here, since the case mates to a ZF 8HP70, not its factory transmission. The 8HP70 (Ram) output is **23-spline, ~4" stickout** (Advance Adapters). Mating uses a transmission-to-transfer-case adapter that supplies a new NP241 input gear: Advance Adapters lists JK NP241 (2.72:1) adapter components; DomiWorks Engineering and LOJ Conversions offer 8HP/ZF8 adapter kits as alternatives. Confirm exact output spline/stickout for the EcoDiesel 8HP70 variant when ordering. Accessed 2026-05-31.
 [^trans]: ZF 8HP70 (Chrysler 845RE) 1st-gear ratio 4.714 — see [Transmission][transmission].
 [^fluid]: NV241 GenII service fluid: **ATF+4**, capacity ≈1.6 L (3.4 pt), filled to the fill-plug overflow. JK NV241 service references (project-jk.com / wranglerjkforum.net), accessed 2026-05-31. Verify against the FSM at service.
+[^adapter]: Advance Adapters (8HP70 output 50-9905 $642.51 / housing 51-9905 $371.11; NP241-JK input gears 52-9940 32-spline, 52-9945 29-spline) and DomiWorks 24004001 (≈8,495 SEK), accessed 2026-05-31; prices subject to change. The 8HP70 (Ram) output is 23-spline; Advance Adapters' 6L80→JK NP241 kit (50-9940) confirms the NP241-JK input shaft is 23-spline. DomiWorks specifies a 23-spline input gear (ZTNP22390).
