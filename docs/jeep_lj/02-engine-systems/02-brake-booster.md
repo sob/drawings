@@ -77,11 +77,11 @@ The factory Tesla/Honda master cylinder is discarded. The Back Bay Customs adapt
 ### Brake Hardware (downstream — MC bore design inputs)
 
 - **Front calipers:** Jeep TJ Rubicon — single-piston floating, **2.595" piston** (~5.29 sq in each; ~10.6 sq in front total)[^brake-hw]
-- **Rear:** disc (front + rear disc)[^brake-hw]
+- **Rear:** disc — factory TJ rear disc, **PowerStop drilled & slotted rotors**[^brake-hw]
 - **Pedal:** 03-06 TJ/LJ auto pedal (ratio bench-measured on assembly)
 - These set the MC bore selection — see the Master Cylinder section and [^mc-bore].
 
-[^brake-hw]: Front caliper piston Ø **2.595"** is the TJ Wrangler/Rubicon front spec ([replacement-parts data](https://www.wranglerforum.com/threads/brake-piston-dimensions.761722/), checked 2026-05-30). Rear is disc (build runs front + rear disc). The front calipers are the dominant input to the MC bore calc ([^mc-bore]); the rear disc volume is within the 1.00" bore's stroke headroom. Confirm actual rear caliper/rotor piston area when finalizing fittings.
+[^brake-hw]: Front caliper piston Ø **2.595"** is the TJ Wrangler/Rubicon front spec ([replacement-parts data](https://www.wranglerforum.com/threads/brake-piston-dimensions.761722/), checked 2026-05-30). Rear is disc (build runs front + rear disc). The front calipers are the dominant input to the MC bore calc ([^mc-bore]); the rear disc volume is within the 1.00" bore's stroke headroom. Rear-disc setup **confirmed** (seller, 2026-05-31): factory TJ rear disc with PowerStop drilled & slotted rotors — this validates the rear-disc assumption the bore was sized against. The drilled/slotted rotors are a friction-surface upgrade and do not change caliper piston area, so the MC bore basis is unchanged; still confirm actual rear caliper piston area when finalizing fittings.
 
 ### Plumbing
 

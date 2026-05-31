@@ -45,12 +45,10 @@ tags:
 
 | Specification | Value |
 | :------------ | :---- |
-| Type | TBD |
+| Manufacturer | Ten Factory[^shafts] |
+| Part Number | MG22135[^shafts] |
+| Type | 4140 chromoly |
 | Spline Count | 30 |
-
-## Outstanding Items
-
-- [ ] Document rear axle shaft specifications (stock 30-spline vs aftermarket)
 
 ## Related Documentation
 
@@ -61,4 +59,5 @@ tags:
 [driveshafts]: 03-driveshafts.md
 
 [^ratio]: 5.13:1 ring & pinion, **Revolution Gear & Axle** — seller-confirmed 2026-05-31. Re-geared from the factory 4.10 (TJ Rubicon). Supersedes the earlier 4.56 owner estimate.
+[^shafts]: Ten Factory rear axle shaft kit, P/N **MG22135** — Dana 44 30-spline, '04–'06 TJ/LJ Rubicon. 4140 chromoly, black-oxide; kit includes shafts, bearings, seals, and wheel studs. Seller-confirmed 2026-05-31 (seller's "Factor10" = Ten Factory).
 [^locker]: ARB **RD116** — Air Locker for 30-spline Dana 44, 3.92:1 & numerically higher. store.arbusa.com, accessed 2026-05-31. Same part fits front and rear; the 5.13 ratio confirms RD116 (the 3.73-&-lower RD117 does not apply).
