@@ -90,7 +90,6 @@ Component part numbers below come from the PSC **FHK400TJ** kit — the 1997-200
 
 ## Outstanding Items
 
-- [ ] Confirm tire size to lock the kit variant — FHK400TJ (2.75" bore / 160cc valve, 40"+) vs FHK100TJ (2.5" bore / 125cc valve, 35-42")
 - [ ] Source a Cummins R2.8-compatible PSC pump + bracket (kit PK40JP2-FH is 4.0L-only)
 - [ ] Confirm pump drive type (belt vs Cummins gear-drive), flow rate, and pressure
 - [ ] Confirm the Dana 44 stroke length set by the Busted Knuckle stops
