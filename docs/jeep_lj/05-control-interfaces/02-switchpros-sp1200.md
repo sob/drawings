@@ -16,17 +16,17 @@ tags:
 
 **Manual:** <https://www.switchpros.com/wp-content/uploads/RCR-force-12-installation-guide-REV-1.9.pdf>
 
-**Power Source:** 150A breaker from CONSTANT bus (AUX battery)
+**Power Source:** 150A breaker from [Firewall CONSTANT Bus][firewall-bus] (fed from AUX battery via 300A master CB + 2/0 AWG forward feed)
 
-**Power Wire:** 1/0 AWG, ~2 ft (AUX battery to power module in same wheel well) — deliberate upsize over the supplied 30" cable[^sp-gauge]
+**Power Wire:** 2 AWG, ~2 ft (Firewall CONSTANT Bus to power module — both at firewall cluster)
 
-**Power Module Location:** Passenger rear wheel well (with AUX battery, rated to 125°C, IP67)
+**Power Module Location:** Firewall (cabin side, passenger area) — co-located with BODY PDU and Firewall CONSTANT Bus. Module is IP67 / 125°C-rated so wheel well placement is also valid, but firewall mounting minimizes total output wire length since most loads are forward/upper (~58% of outputs).
 
 **Control Panel Location:** Dash mount (4" L x 3" W x 0.375" H)
 
-**Control Cable:** Standard 10.5 ft (available in 1, 5, 10.5, 15, 20, 25, 30, 35 ft lengths)
+**Control Cable:** Standard 5 ft cable (was 10.5 ft when module was rear-mounted — moving to firewall shortens this significantly)
 
-**Ground:** 4 AWG to chassis (reference ground only, not load return)[^sp-gauge]
+**Ground:** 4 AWG to chassis (per manufacturer spec - reference ground only, not load return)
 
 !!! note "Load Ground Path"
     The 4 AWG controller ground is for logic/reference only. Load return current flows through individual output grounds to the [SwitchPros Ground Bus][switchpros-ground-bus] (1/0 AWG to chassis).
@@ -114,10 +114,11 @@ The SwitchPros SP-1200 is the main lighting and accessory controller for the Jee
 
 ## Power and Ground Connections
 
-See [AUX Battery Distribution][aux-battery] for power specifications.
+See [AUX Battery Distribution][aux-battery] for source battery and [Firewall CONSTANT Bus][firewall-bus] for downstream distribution.
 
-- **Power:** CONSTANT bus (AUX battery) → 150A breaker → SwitchPros power module
-- **Ground:** 4 AWG wire from SwitchPros power module → Front frame rail or START battery negative (direct battery ground per manufacturer spec)
+- **Power:** AUX battery+ → 300A master CB → 2/0 AWG forward (~13 ft) → Firewall CONSTANT Bus → 150A CB → SwitchPros power module
+- **Ground (logic reference):** 4 AWG wire from SwitchPros power module → chassis ground at firewall (short run, per manufacturer spec)
+- **Load returns:** Each output's ground wire returns to the [SwitchPros Ground Bus][switchpros-ground-bus] (Blue Sea 2105 MaxiBus), co-located with the power module at the firewall
 
 ## Trigger Input Assignments
 
@@ -135,8 +136,8 @@ Factory Passenger Door Plunger (NO)─┘
 ```
 
 **Wire Routing:**
-- Driver door: Door jamb → under dash → rear wheel well (via existing harness path)
-- Passenger door: Door jamb → under dash → rear wheel well (via existing harness path)
+- Driver door: Door jamb → under dash → firewall SwitchPros (short run)
+- Passenger door: Door jamb → under dash → firewall SwitchPros (short run)
 - Wire gauge: 18 AWG (trigger signal only, no current load)
 
 **Configuration:**
@@ -195,7 +196,7 @@ Program TRIGGER-3 to activate compressor when tank pressure drops below 135 PSI:
 
 - ARB Pressure Switch model 180901 (cut-in: 135 PSI, cut-out: 150 PSI)
 - Mounted on air manifold under passenger seat
-- Low current signal wire (18 AWG from manifold to SwitchPros TRIGGER-3)
+- Low current signal wire (18 AWG from manifold under passenger seat to SwitchPros TRIGGER-3 at firewall — short run)
 
 **Benefits:**
 
@@ -211,17 +212,14 @@ Program TRIGGER-3 to activate compressor when tank pressure drops below 135 PSI:
 
 ## Outstanding Items
 
-- [ ] Determine exact SwitchPros power module mounting location in engine bay
-  - IP67 rated, 125°C temperature rating suitable for engine bay
-  - Locate near CONSTANT bus or START battery for short power/ground runs
+- [ ] Determine exact SwitchPros power module mounting location at firewall (passenger cabin side, near BODY PDU)
 - [ ] Determine SwitchPros control panel mounting location on dash
-- [ ] Route 4 AWG ground wire from SwitchPros power module to front frame rail or START battery negative
-  - Short run in engine bay, per manufacturer spec for direct battery ground
+- [ ] Route 4 AWG logic ground wire from SwitchPros power module to chassis ground at firewall (short run, per manufacturer spec)
+- [ ] Mount [SwitchPros Ground Bus][switchpros-ground-bus] (Blue Sea 2105 MaxiBus) at firewall near SwitchPros power module for output load returns
 - [ ] Connect ignition signal from ignition switch RUN terminal to SwitchPros Pin 3 (IGNITION - LT BLUE)
   - 18 AWG wire, splits from main ignition signal distribution (see [PMU24][pmu-inputs])
 - [ ] Determine parking lights signal source for SwitchPros Pin 4 (LIGHTS - WHITE) for DRL integration
-- [ ] Plan control panel cable routing from rear wheel well power module to dash (~10-15 ft)
-  - Order 15 ft cable if standard 10.5 ft is insufficient
+- [ ] Order 5 ft control panel cable (firewall power module to dash panel - short run)
 - [ ] Wire driver door switch + passenger door switch in parallel to TRIGGER-1 (Pin 7, PINK)
 - [ ] Configure Button 4 programming: OUTPUT-4 OR TRIGGER-1 activates dome lights
 - [ ] Install rear cargo rocker switch and wire to TRIGGER-2 (Pin 8, PINK)
@@ -243,9 +241,8 @@ Program TRIGGER-3 to activate compressor when tank pressure drops below 135 PSI:
 - [Air System][air-system-arb-compressor-lockers] - ARB locker and compressor wiring details
 - [AUX Battery Distribution][aux-battery] - Power feed specifications for SwitchPros
 
-[^sp-gauge]: Switch-Pros does not publish a required wire gauge — the RCR-Force 12 ships with a **30" battery cable** and its [install guide](https://www.switchpros.com/wp-content/uploads/RCR-force-12-installation-guide-REV-1.9.pdf) only specifies output-side gauge (14 AWG harness; up to 12/10 AWG for long high-current runs). Our **1/0 AWG** power feed is a deliberate upsize over the supplied cable, sized for the 150A module capacity on a short (~2 ft) run. The **4 AWG controller ground is adequate** because it carries logic/reference current only — per Switch-Pros' design, load-return current flows through each output's own ground back to the [SwitchPros Ground Bus][switchpros-ground-bus] (1/0 AWG to chassis), not through the controller ground. Confirmed design choice, 2026-05-30.
-
 [aux-battery]: ../01-power-systems/03-aux-battery-distribution/index.md
+[firewall-bus]: ../01-power-systems/03-aux-battery-distribution/02-constant-bus.md
 [air-system-arb-compressor-lockers]: ../08-exterior-systems/02-air-compressor.md
 [pmu-inputs]: ../01-power-systems/04-pmu/02-pmu-inputs.md
 [control-interfaces-overview]: 01-overview.md

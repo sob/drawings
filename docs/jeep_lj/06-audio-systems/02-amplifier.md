@@ -26,11 +26,9 @@ tags:
 
 **Manual:** [Installation Manual][manual-link]
 
-**Mounting:** Cab side firewall (behind radio)
+**Mounting:** Under rear seat (mounting plate w/ clearance for Class-D thermals)
 
-**Power Source:** CONSTANT bus via 40A breaker (per Fusion install guide)[^amp-fuse]
-
-[^amp-fuse]: External protection set to **40A** per Garmin/Fusion's MS-AP61800 install guide (owner decision, 2026-05-30) — supersedes the earlier 100A breaker, which was oversized for this amp. The install guide specifies a 40A external inline fuse/breaker with 4 AWG (max 2 AWG) power/ground; our 4 AWG matches. The amp's own **125A internal electronic fuse** handles amp-side faults; the 40A external device protects the wiring. The previously documented "78A max" is a theoretical all-channels-full-sine figure, not a sustained load — realistic musical draw is ~8-15A (see [AUX Battery Load Analysis][aux-load-analysis]). Source: [Fusion Apollo Multichannel Amplifiers install guide](https://static.garmin.com/pumac/Fusion_Apollo_Multichannel_Amplifiers_Install_EN-US.pdf) (checked 2026-05-30).
+**Power Source:** AUX battery+ direct via 100A inline CB (~3-4 ft, short feed)
 
 ///
 
@@ -54,7 +52,7 @@ tags:
 
 | Channel | Mode    |   Output | Load        |
 | :------ | :------ | -------: | :---------- |
-| Ch 1+2  | Bridged | 580W RMS | Subwoofer   |
+| Ch 1+2  | Bridged @ 8Ω | ~290W RMS | 2× M6-8IB subs wired in **series** (4Ω + 4Ω = 8Ω) |
 | Ch 3    | Stereo  | 150W RMS | Front Left  |
 | Ch 4    | Stereo  | 150W RMS | Front Right |
 | Ch 5    | Stereo  | 150W RMS | Rear Left   |
@@ -80,29 +78,31 @@ Fusion includes bridge adapters with built-in magnets:
 
 | Connection | Wire     | Source          | Notes                    |
 | :--------- | :------- | :-------------- | :----------------------- |
-| Power (+)  | 4 AWG    | CONSTANT bus    | Via 40A Blue Sea breaker |
-| Ground (−) | 4 AWG    | AUX battery (−) | Direct to terminal       |
-| Remote     | 18 AWG   | MS-RA670        | Turn-on signal           |
-| RCA Zone 1 | Shielded | MS-RA670        | Ch 3+4 (front)           |
-| RCA Zone 2 | Shielded | MS-RA670        | Ch 5+6 (rear)            |
-| RCA Sub    | Shielded | MS-RA670        | Ch 1+2 (bridged)         |
+| Power (+)  | 4 AWG    | AUX battery+ direct | Via 100A inline CB at battery (~3-4 ft) |
+| Ground (−) | 4 AWG    | AUX battery (−) | Direct to terminal (~3-4 ft)       |
+| Remote     | 18 AWG   | MS-RA670        | Turn-on signal, bundled w/ RCA through trans tunnel |
+| RCA Zone 1 | Shielded | MS-RA670        | Ch 3+4 (front), ~10-12 ft — use high-quality shielded |
+| RCA Zone 2 | Shielded | MS-RA670        | Ch 5+6 (rear), ~10-12 ft |
+| RCA Sub    | Shielded | MS-RA670        | Ch 1+2 (bridged), ~10-12 ft |
 
 ## Circuit Protection
 
-Amplifier has 125A internal electronic fuse (no replacement necessary). External protection at CONSTANT bus:
+Amplifier has 125A internal electronic fuse (no replacement necessary). External protection at AUX battery:
 
-- **Breaker:** Blue Sea 187-series 40A thermal circuit breaker (per Fusion install guide)
-- Protects 4 AWG wiring (rated 95A continuous)
-- Mount at CONSTANT bus in passenger wheel well
+- **Breaker:** Blue Sea 187-100A (100A) thermal circuit breaker
+- Protects 4 AWG wiring (rated 95A continuous, 100A with short runs)
+- Mount inline within 7" of AUX battery+ terminal (5th stacked lug)
 
 ## Mounting Location
 
-**Cab side firewall (behind radio)**
+**Under rear seat (driver side or center, mounted to floor with clearance for Class-D thermals)**
 
-- Shortest RCA runs from head unit
-- Central location for speaker wire routing
-- Power/ground run ~8-10 ft to AUX battery in passenger wheel well
-- Adequate ventilation for Class-D efficiency
+- Power feed ~3-4 ft direct from AUX battery+ (much shorter than firewall route)
+- Ground return ~3-4 ft to AUX battery− (shorter = less noise risk)
+- Centroid to all 4 speakers + 2 subs — optimizes speaker wire routing
+- RCA + remote bundled together from head unit through trans tunnel (~10-12 ft, high-quality shielded RCA required to avoid alternator whine)
+- Mounting plate with airflow gap underneath for Class-D thermals (Fusion rated 32-122°F operating)
+- Removes Fusion 100A CB from firewall-side bank (firewall CONSTANT bus now feeds only SwitchPros + BODY PDU)
 
 ## Related Documentation
 
@@ -117,6 +117,5 @@ Amplifier has 125A internal electronic fuse (no replacement necessary). External
 [speakers]: 03-speakers.md
 [subwoofer]: 04-subwoofer.md
 [aux-distribution]: ../01-power-systems/03-aux-battery-distribution/index.md
-[aux-load-analysis]: ../01-power-systems/08-load-analysis/03-aux-battery.md
 [product-link]: https://www.garmin.com/en-US/p/677280/pn/010-02284-60/
 [manual-link]: https://static.garmin.com/pumac/Fusion_Apollo_Multichannel_Amplifiers_Install_EN-US.pdf

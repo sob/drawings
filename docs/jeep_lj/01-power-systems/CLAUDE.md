@@ -14,11 +14,11 @@ Batteries, alternator, BCDC charger, solar panel
 
 ### 1.2 START Battery Distribution (`02-starter-battery-distribution/`)
 
-Engine bay power distribution, circuit breakers, SafetyHub
+Driver rear wheel well power distribution, circuit breakers, SafetyHub
 
 ### 1.3 AUX Battery Distribution (`03-aux-battery-distribution/`)
 
-Wheel well power distribution, BODY PDU, SwitchPros power source
+Passenger rear wheel well power distribution, BODY PDU, SwitchPros power source
 
 ### 1.4 PMU (`04-pmu/`)
 

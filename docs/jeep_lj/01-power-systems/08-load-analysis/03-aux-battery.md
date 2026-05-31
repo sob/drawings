@@ -54,7 +54,7 @@ All circuits powered by AUX battery (charged by BCDC at 50A max):
 
 - **Capacity:** 135Ah nominal
 - **Usable capacity:** 108Ah (80% DOD safe for LiFePO4)
-- **Heated BMS:** Enables charging down to -4°F (critical for wheel well mount)
+- **Heated BMS:** Enables charging down to -4°F (critical for rear wheel well mount)
 - **Recovery rate:** At 50A charging, recovers 108Ah in ~2.2 hours
 
 ## Scenario Analysis

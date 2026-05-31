@@ -97,16 +97,16 @@ Accessories and high-draw auxiliary loads:
 
 ## System Configuration
 
-- **START battery (Driver Wheel Well):** Odyssey PC1500 - critical systems
-- **AUX battery (Passenger Wheel Well):** Dakota Lithium 135Ah - accessories
+- **START battery (Driver Rear Wheel Well):** Odyssey PC1500 - critical systems
+- **AUX battery (Passenger Rear Wheel Well):** Dakota Lithium 135Ah - accessories
 - **Isolation:** BCDC Alpha 50 (independent operation when engine off)
 - **Jump Start:** BCDC jump start assist can parallel batteries if START fails
 - **Redundancy:** Vehicle operates on START battery alone if AUX system fails
 
 ## Mounting
 
-- **START battery:** Driver wheel well - enclosed compartment with access panel
-- **AUX battery:** Passenger wheel well - Barnes 4WD battery box (Group 24 compatible)
+- **START battery:** Driver rear wheel well - enclosed compartment with access panel
+- **AUX battery:** Passenger rear wheel well - Barnes 4WD battery box (Group 24 compatible)
 
 ## Outstanding Items
 
