@@ -31,8 +31,8 @@ tags:
 
 | Specification | Value |
 | :------------ | :---- |
-| Ratio | 4.56[^ratio] |
-| Manufacturer | TBD (re-geared from factory 4.10) |
+| Ratio | 5.13[^ratio] |
+| Manufacturer | Revolution Gear & Axle[^ratio] |
 
 ## Differential
 
@@ -50,7 +50,6 @@ tags:
 
 ## Outstanding Items
 
-- [ ] Confirm ring & pinion manufacturer (re-geared to 4.56)
 - [ ] Document rear axle shaft specifications (stock 30-spline vs aftermarket)
 
 ## Related Documentation
@@ -61,5 +60,5 @@ tags:
 [air-lockers]: ../08-exterior-systems/03-air-lockers.md
 [driveshafts]: 03-driveshafts.md
 
-[^ratio]: 4.56:1, owner-confirmed 2026-05-31. Not the factory ratio (TJ Rubicon shipped 4.10) — axles were re-geared; ring & pinion manufacturer still TBD. Physical confirmation (ring-gear stamp or tooth count) recommended before final gear setup work.
-[^locker]: ARB **RD116** — Air Locker for 30-spline Dana 44, 3.92:1 & numerically higher. store.arbusa.com, accessed 2026-05-31. Same part fits front and rear; the 4.56 ratio confirms RD116 (the 3.73-&-lower RD117 does not apply).
+[^ratio]: 5.13:1 ring & pinion, **Revolution Gear & Axle** — seller-confirmed 2026-05-31. Re-geared from the factory 4.10 (TJ Rubicon). Supersedes the earlier 4.56 owner estimate.
+[^locker]: ARB **RD116** — Air Locker for 30-spline Dana 44, 3.92:1 & numerically higher. store.arbusa.com, accessed 2026-05-31. Same part fits front and rear; the 5.13 ratio confirms RD116 (the 3.73-&-lower RD117 does not apply).
