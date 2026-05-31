@@ -7,7 +7,7 @@ hide:
 
 **Purpose:** Central tracking for all To-Be-Determined items across the Jeep LJ electrical system documentation.
 
-**Last Updated:** 2026-05-30
+**Last Updated:** 2026-05-31
 
 **Total Open Items:** 63 (+10 from the 2026-05-30 critical-spec verification audit)
 
@@ -143,11 +143,9 @@ Mechanical drivetrain specifications, tracked separately from the electrical bui
 | :-------------------------------- | :------------------------------------------------------------------------------------------- | :-------------------------------- | :------- |
 | Transmission Shifter Type         | Electronic shifter input - depends on shifter selection                                      | [Transmission][transmission]      | Medium   |
 | Transmission Pilot Bearing        | If required by flywheel/crank combination                                                    | [Transmission][transmission]      | Medium   |
-| Transfer Case Specs               | Output type, fluid type and capacity                                                         | [Transfer Case][transfer-case]    | Medium   |
+| Transfer Case → 8HP70 Mating      | Input shaft/adapter to mate the NV241 GenII (stock 23-spline JK input) to the 8HP70 output; confirm low-range gears are stock 2.72:1. Output (32-spline), fluid (ATF+4), capacity (~1.6 L) now documented | [Transfer Case][transfer-case]    | Medium   |
 | Front Driveshaft Specs            | Type, length, U-joint selection                                                              | [Driveshafts][driveshafts]        | Medium   |
 | Rear Driveshaft Specs             | Type, length, U-joint selection                                                              | [Driveshafts][driveshafts]        | Medium   |
-| Front Axle Gearing & Manufacturer | Ratio and axle housing manufacturer                                                          | [Front Axle][front-axle]          | Medium   |
-| Rear Axle Gearing & Locker        | Ratio, manufacturer, and locker type                                                         | [Rear Axle][rear-axle]            | Medium   |
 | Front Suspension Components       | Coil rate, bypass valving, control arms, track bar, sway bar                                 | [Suspension][suspension]          | Medium   |
 | Rear Suspension Components        | Coil rate, bypass valving, control arms, track bar, sway bar                                 | [Suspension][suspension]          | Medium   |
 | Hydroboost Pump Specs             | Model, flow rate, pressure, drive type                                                       | [Steering][steering]              | Medium   |
@@ -163,6 +161,12 @@ Items completed since last update.
 
 | Item                          | Resolution                                                                                                                    | Date       |
 | :---------------------------- | :---------------------------------------------------------------------------------------------------------------------------- | :--------- |
+| Front Axle Shaft Part Number  | RCV Performance Ultimate Dana 44 CV set, P/N **CVJ44** ('03–'06 TJ/LJ Rubicon; 30-spline inner / 27 outer, unit bearing). rcvperformance.com | 2026-05-31 |
+| Rear Axle Shaft Spec          | **Ten Factory MG22135** — Dana 44 30-spline rear kit ('04–'06 TJ/LJ Rubicon), 4140 chromoly. Seller-confirmed                                  | 2026-05-31 |
+| Rear Brake Hardware           | Confirmed factory TJ **rear disc** with **PowerStop drilled & slotted rotors** (seller). Validates the rear-disc assumption behind the iBooster MC bore; rotor upgrade doesn't change bore basis | 2026-05-31 |
+| Transfer Case Identity + Specs | Corrected to **2012 JK Sport NV241 GenII Command-Trac, 2.72:1** (was wrongly NP241OR Rock-Trac 4:1). Rear output 32-spline, fluid ATF+4 ~1.6 L documented. Crawl ratio ≈66:1 with 8HP70 4.714 1st + 5.13 axles. 8HP70 mating remains open | 2026-05-31 |
+| Front & Rear Gear Ratio + R&P Brand | **5.13:1, Revolution Gear & Axle** (seller-confirmed). Non-factory — re-geared from 4.10. Supersedes earlier 4.56 owner estimate | 2026-05-31 |
+| ARB Locker Model              | **RD116** front and rear — 30-spline Dana 44, 3.92 & up. Confirmed applicable by the 5.13 ratio (RD117 is 3.73 & down). Same part both ends | 2026-05-31 |
 | Back Bay MC Adapter Compatibility | Vendor (Back Bay Customs / Adam) confirmed: adapter fits Wilwood 260-15542 (1.00" Tandem Compact — the selected bore), is Honda-Accord-iBooster-only (not Tesla), and the 2× remote Wilwood reservoirs are fine. Blocker cleared — Wilwood + adapter cleared to order. Note: vendor also revised the firewall pattern to 60×80mm (80mm vertical), see new backing-plate DXF redesign item. | 2026-05-30 |
 | Boomerang Bullet 230          | Removed from build — product was fabricated (does not exist). Replaced by Digital Guard Dawg PBS-I self-contained system     | 2026-05-30 |
 | Boomerang Mounting Location   | Obsolete — Boomerang not used; PBS-I includes its own RFID receiver in the ICM                                                | 2026-05-30 |
@@ -255,8 +259,8 @@ Items completed since last update.
 | 📋 Medium        | 19     |
 | 📝 Low           | 2      |
 | 🔍 Verify        | 1      |
-| 🚙 Drivetrain    | 13     |
-| **TOTAL**        | **56** |
+| 🚙 Drivetrain    | 11     |
+| **TOTAL**        | **54** |
 
 ## Related Documentation
 
