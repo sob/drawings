@@ -64,10 +64,22 @@ Chosen over the TJ Rubicon NP241OR Rock-Trac (4:1) deliberately:
 
 The 8HP *family* does pair with an NV241 from the factory — the JL Wrangler automatic bolts an 850RE/8HP75 to one — **but the Ram EcoDiesel 8HP70's bolt pattern only *resembles* the Jeep 850RE; it is not interchangeable.** So this transmission needs an adapter to **any** NV241 (JK or JL), and the transmission is fixed (Turbolamik TCU + Kilduff shifter are spec'd to the 8HP70).[^why-adapter]
 
-- **Recommended — DomiWorks 24004001:** purpose-built for the 8HP70/75 EcoDiesel Ram 1500 → NP231/241 family; runs a 23-spline NV241 input gear (ZTNP22390 or similar) and has adjustable case tilt. ≈8,495 SEK (~$800–900 USD + import).
+- **Recommended — DomiWorks 24004001:** purpose-built for the 8HP70/75 EcoDiesel Ram 1500 → NP231/241 family; adjustable case tilt. ≈8,495 SEK (~$800–900 USD + import). **Includes only the adapter + integral crossmember bracket** — see the parts list below.[^adapter]
 - **Alternative — Advance Adapters:** no off-the-shelf 8HP70 → stock NV241 kit. Their 8HP70 tooling (output assembly 50-9905, housing 51-9905) is built to mate to an Atlas; their NV241-JK input gears (52-9940 32-spline, 52-9945 29-spline) are cut for GM transmissions, not the 8HP70's 23-spline output. Call to spec a 23-spline build, or go Atlas.
 
-Confirm before ordering: EcoDiesel 8HP70 output length (some units need a DomiWorks spacer plate) and the donor JK input-gear spline.
+### Full parts list (DomiWorks path)
+
+| Part | Source | Notes |
+| :--- | :----- | :---- |
+| Adapter 24004001 | DomiWorks | Adapter + crossmember bracket only |
+| 23-spline NV241 input gear (ZTNP22390 or equiv.) | Transmission parts supplier | Swaps into the case (teardown) |
+| NV241 input bearing + front seal | Rebuild parts | Replace during the input-gear swap |
+| Grade-10.9 mounting hardware | — | Adapter-to-trans / adapter-to-case bolts |
+| Spacer plate | DomiWorks | **Only if** 8HP70 output protrusion exceeds the standard 96 mm |
+
+**On the 8HP70 (transmission) side**, the only DomiWorks part is the conditional spacer plate. The 8HP70's factory output shaft is used as-is — it is already a 4WD/transfer-case output (this is a 4x4 Ram donor) and engages the 23-spline input gear directly through the adapter; no coupler or output adapter is needed from DomiWorks.
+
+**Critical measurement:** check the 8HP70 output-shaft protrusion before ordering — DomiWorks' standard fit is ~96 mm; longer EcoDiesel outputs need the spacer plate (or the axle shortened). Also confirm the donor JK case's input-gear spline before buying the 23-spline replacement.
 
 ## Fluid Specifications
 
@@ -78,7 +90,9 @@ Confirm before ordering: EcoDiesel 8HP70 output length (some units need a DomiWo
 
 ## Outstanding Items
 
-- [ ] Order DomiWorks 24004001 adapter + 23-spline NV241 input gear (ZTNP22390 or equiv.); confirm EcoDiesel output length (spacer plate) and donor input-gear spline before ordering
+- [ ] Measure 8HP70 output-shaft protrusion (≤~96 mm, else order DomiWorks spacer plate or shorten)
+- [ ] Order: DomiWorks 24004001 adapter; 23-spline NV241 input gear (ZTNP22390 or equiv.); NV241 input bearing + front seal; grade-10.9 hardware
+- [ ] Confirm donor JK case input-gear spline before swapping to the 23-spline gear
 
 ## Related Documentation
 
