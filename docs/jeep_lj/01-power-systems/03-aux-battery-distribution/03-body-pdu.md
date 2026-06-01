@@ -26,7 +26,7 @@ tags:
 
 **Mounting:** Firewall - body side (cabin), passenger side
 
-**Power Source:** CONSTANT power from AUX battery via 2 AWG feed
+**Power Source:** Firewall CONSTANT bus via 100A CB (2 AWG, ~2 ft local — bus is fed from AUX battery through 300A master CB and 2/0 AWG forward feed)
 
 **Ground:** [Firewall Stud Bus][firewall-stud-bus] Terminal 3 (14 AWG) - relay coil/logic reference only
 
@@ -53,8 +53,8 @@ tags:
 | CB39        | TRLR BO STOP            | WolfBox Camera/Mirror       | 10A  | 16AWG | ~10A                  | -     | Dash cam + backup camera                    |
 | CB45        | IGNITION                | Driver Heated Seat          | 15A  | 14AWG | 5A peak, 2A sustained | K21   | Manual switch → relay K21 → seat element    |
 | CB42        | 2WAY INTRCM             | Passenger Heated Seat       | 20A  | 14AWG | 5A peak, 2A sustained | K22   | Manual switch → relay K22 → seat element    |
-| CB20        | RADIO                   | Cargo Lights                | 10A  | 16AWG | 4A                    | -     | Switch on wheel well top                    |
-| CB43        | TRANS ECU               | Winch Control (dash rocker) | 10A  | 18AWG | ~2A                   | -     | Dash rocker + remote parallel control       |
+| CB20        | RADIO                   | Cargo Lights                | 10A  | 16AWG | 4A                    | -     | Switch on rear wheel well top               |
+| CB43        | TRANS ECU               | Winch Control (CH4X4 dual-push) | 10A  | 18AWG | ~3A peak per direction | -    | CH4X4-TOY-D-WINIO dual-momentary push at dash → HDP24 pins 16/17 → contactor; Warn remote parallel at contactor |
 | CB44        | TRLR LIGHT              | **\[Available\]**             | -    | -     | -                     | -     | Future expansion                            |
 
 **Circuit Breaker Utilization:** 7 of 8 used (1 available)
@@ -95,7 +95,7 @@ G1 GMRS Radio and STX Intercom are powered from [SafetyHub 150][safetyhub] (STAR
 
 ## Related Documentation
 
-- [AUX battery Distribution][house-battery] - Power source and circuit breaker (passenger wheel well)
+- [AUX battery Distribution][house-battery] - Power source and circuit breaker (passenger rear wheel well)
 - [Circuit Breakers][circuit-breakers] - 100A CB protection for LR-2 power feed
 - [Dashboard Controls][dashboard] - Physical switch panel layout
 - [Audio Systems][audio] - Fusion radio specifications

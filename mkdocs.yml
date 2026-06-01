@@ -136,6 +136,7 @@ nav:
       - 1.7 - Wire Routing:
         - jeep_lj/01-power-systems/07-wire-routing/index.md
         - 1.7.2 - Firewall Ingress: jeep_lj/01-power-systems/07-wire-routing/02-firewall-ingress.md
+        - 1.7.3 - Harness Inventory: jeep_lj/01-power-systems/07-wire-routing/03-harness-inventory.md
       - 1.8 - Load Analysis:
         - jeep_lj/01-power-systems/08-load-analysis/index.md
         - 1.8.1 - Scenarios: jeep_lj/01-power-systems/08-load-analysis/01-scenarios.md

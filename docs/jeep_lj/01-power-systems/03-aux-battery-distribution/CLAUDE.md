@@ -2,7 +2,7 @@
 
 ## What's Here
 
-Documents wheel well power distribution from the AUX battery (Dakota Lithium 135Ah LiFePO4).
+Documents rear wheel well power distribution from the AUX battery (Dakota Lithium 135Ah LiFePO4).
 
 ## Files
 
@@ -18,11 +18,13 @@ Documents wheel well power distribution from the AUX battery (Dakota Lithium 135
 
 **Use when:** Finding circuit breaker size for SwitchPros, BODY PDU, or other loads
 
-### `02-constant-bus.md` - CONSTANT Bus Bar
+### `02-constant-bus.md` - Firewall CONSTANT Bus Bar
 
-**Contains:** Blue Sea 2104 PowerBar specifications, stud assignments, load distribution
+**Contains:** Blue Sea 2105 MaxiBus specifications, stud assignments, load distribution at firewall
 
-**Use when:** Finding CONSTANT bus bar capacity, available studs, or what connects to the bus
+**Use when:** Finding firewall CONSTANT bus capacity, available studs, or what connects to the bus
+
+Note: AUX battery itself has NO local CONSTANT bus. Battery has 4 stacked terminal lugs + 2 inline CBs (300A master forward feed + 150A SafetyHub local).
 
 ### `03-body-pdu.md` - BODY PDU
 

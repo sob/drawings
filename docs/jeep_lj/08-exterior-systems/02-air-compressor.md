@@ -74,8 +74,8 @@ ARB Twin Compressor system with air tank and automatic pressure management for l
 
 **Wiring Summary:**
 
-1. **Motor 1 Power (+):** CONSTANT bus → SafetyHub (150A breaker) → SafetyHub MIDI-1 (60A) → 6 AWG → compressor motor 1
-2. **Motor 2 Power (+):** CONSTANT bus → SafetyHub (150A breaker) → SafetyHub MIDI-2 (60A) → 6 AWG → compressor motor 2
+1. **Motor 1 Power (+):** AUX battery+ → 150A inline CB → SafetyHub → SafetyHub MIDI-1 (60A) → 6 AWG → compressor motor 1
+2. **Motor 2 Power (+):** AUX battery+ → 150A inline CB → SafetyHub → SafetyHub MIDI-2 (60A) → 6 AWG → compressor motor 2
 3. **Ground (-):** Compressor negative terminal → 6 AWG → AUX battery negative
 4. **Control (Automatic):** Pressure switch (ARB 180901) → SwitchPros TRIGGER-3 (Pin 17) → OUTPUT-11 → compressor control
 5. **Control (Manual Override):** SwitchPros Button 11 → OUTPUT-11 → compressor control

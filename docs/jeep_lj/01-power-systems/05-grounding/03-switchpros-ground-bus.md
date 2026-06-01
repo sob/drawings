@@ -27,7 +27,7 @@ tags:
 
 - **Capacity:** 250A AC/DC continuous, 300V AC / 48V DC max
 - **Terminals:** 12x #10-24 screws, 2x 5/16"-18 studs
-- **Location:** Near SwitchPros controller (engine bay or rear cabin area)
+- **Location:** Firewall (passenger cabin side), co-located with SwitchPros power module
 - **Full Specs:** [Blue Sea 2105][bluesea-2105]
 
 ## Stud/Terminal Assignment
@@ -52,11 +52,11 @@ tags:
 
 ## Installation
 
-**Mounting:** Near SwitchPros controller (rear cabin area)
+**Mounting:** Firewall (cabin side, passenger area), bolted near SwitchPros power module so all load returns terminate locally
 
-**Ground Path:** Bus → chassis ground (1/0 AWG, handles ~100A total lighting load) → frame rail → START battery negative bus
+**Ground Path:** Bus → chassis ground (1/0 AWG, handles ~100A total lighting load) at firewall chassis point → main grounding network
 
-**Critical:** Clean metal-to-metal connection to chassis, accessible for lighting ground wires
+**Critical:** Clean metal-to-metal connection to chassis at firewall, accessible for lighting ground wires
 
 ## Related Documentation
 

@@ -12,7 +12,7 @@ This section documents all control interfaces in the Jeep LJ build - the switche
 - **[SwitchPros SP-1200][switchpros-sp-1200-rcr-force-12]** - Main lighting and accessory controller
   - 12-button control panel with Bluetooth app
   - 17 total outputs (12 main + 5 low-side drivers)
-  - 150A total capacity on CONSTANT bus
+  - 150A capacity, fed by Firewall CONSTANT Bus (via 150A CB)
   - Controls all auxiliary lighting and accessories
 
 - **[Command Touch CT4][command-touch-ct4]** - Steering column turn signal and headlight controller
@@ -37,8 +37,8 @@ This section documents all control interfaces in the Jeep LJ build - the switche
 
 All control interfaces integrate with the dual-battery electrical system:
 
-- **SwitchPros SP-1200:** Powered by CONSTANT bus (AUX battery)
-- **Command Touch CT4:** Powered by START battery CONSTANT, integrates with PMU
+- **SwitchPros SP-1200:** Powered by Firewall CONSTANT Bus (sourced from AUX battery via 300A master CB + 2/0 AWG forward feed)
+- **Command Touch CT4:** Powered by PMU OUT 13 (15A CONSTANT, sourced from START battery), integrates with PMU
 - **Dashboard switches:** Various power sources depending on function
 
 ## Related Documentation
