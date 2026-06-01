@@ -9,7 +9,7 @@ hide:
 
 **Last Updated:** 2026-05-31
 
-**Total Open Items:** 47
+**Total Open Items:** 38
 
 > Count reflects the priority sections below. The Critical-Spec Verification Audit is a separate validation log (its open on-arrival/on-vehicle checks are tracked via GitHub issue [#29][i29]); items already marked ✅ Resolved are not counted.
 
@@ -34,15 +34,6 @@ Items needed before installation begins but not system-critical.
 | Dakota Digital Panel Mounting     | HDPE sheet dimensions and location                              | [Wire Routing][wire-routing]   | High     |
 | Turbolamik Aux: Reverse           | Confirm aux output channel + pinout configured for Reverse signal → PMU In 3 | [Transmission][transmission]   | High     |
 | Turbolamik Aux: P/N               | Confirm aux output channel + pinout configured for P/N (start interlock) | [Transmission][transmission]   | High     |
-| Dash Push-Button (Keyless)        | Select 19/22mm illuminated momentary NO push-button for keyless start/stop | [Keyless Ignition][keyless]   | High     |
-| ECM Ignition Relay                | Select Hella/Bosch SPST 30-40A automotive relay                 | [Keyless Ignition][keyless]   | High     |
-| P/N Interlock Relay               | Select SPST 30A automotive relay (Turbolamik P/N → coil)        | [Keyless Ignition][keyless]   | High     |
-| Engine-Running Lockout Relay      | Select SPST 30A automotive relay with NC contacts               | [Keyless Ignition][keyless]   | High     |
-| Engine-Running Voltage Filter     | Design diode + zener + resistor filter on alternator B+ tap for lockout coil drive | [Keyless Ignition][keyless]   | High     |
-| Keyless Firewall Pin Assignments  | Assign 3 new HDP24 pins (fob, OUT24 supply, gated start return); current connector is full | [Firewall Ingress][firewall-ingress] | High     |
-| Hidden Bypass Toggle              | Select part + mounting location for emergency get-home bypass   | [Keyless Ignition][keyless]   | High     |
-| PMU Output Strategy (Keyless)     | Decide: OUT24-only + engine-running lockout (current plan) vs. free OUT15 winch trigger for dedicated crank output | [Keyless Ignition][keyless]   | High     |
-| PMU24 Keyless State Machine       | Program ECUMaster Light Client logic for OFF/RUN/CRANK transitions, fob detection, kill behavior | [PMU Programming][pmu-programming]   | High     |
 | R2.8 Turbo Inlet OD               | Measure turbo inlet tube outside diameter to confirm AMOT 4261M-02 (2.8" body) fitment and select intake-side adapter | [Runaway Protection][runaway-protection] | High     |
 | AMOT-to-Intake Adapters           | Source NPT-to-hose fittings sized to match measured turbo inlet OD                                | [Runaway Protection][runaway-protection] | High     |
 | AMOT T-Handle Mounting Location   | Select dash mounting position for Midwest Control 30-144-TTL-BH-3 (reachable belted, away from accidental contact) | [Runaway Protection][runaway-protection] | High     |
@@ -230,12 +221,12 @@ Items completed since last update.
 | Priority         | Count  |
 | :--------------- | :----- |
 | 🔴 Critical      | 0      |
-| High             | 17     |
+| High             | 8      |
 | 📋 Medium        | 15     |
 | 📝 Low           | 2      |
 | 🔍 Verify        | 1      |
 | 🚙 Drivetrain    | 12     |
-| **TOTAL**        | **47** |
+| **TOTAL**        | **38** |
 
 ## Related Documentation
 
