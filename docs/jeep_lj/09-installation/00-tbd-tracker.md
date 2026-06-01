@@ -9,7 +9,7 @@ hide:
 
 **Last Updated:** 2026-05-31
 
-**Total Open Items:** 49
+**Total Open Items:** 47
 
 > Count reflects the priority sections below. The Critical-Spec Verification Audit is a separate validation log (its open on-arrival/on-vehicle checks are tracked via GitHub issue [#29][i29]); items already marked ✅ Resolved are not counted.
 
@@ -35,8 +35,6 @@ Items needed before installation begins but not system-critical.
 | Turbolamik Aux: Reverse           | Confirm aux output channel + pinout configured for Reverse signal → PMU In 3 | [Transmission][transmission]   | High     |
 | Turbolamik Aux: P/N               | Confirm aux output channel + pinout configured for P/N (start interlock) | [Transmission][transmission]   | High     |
 | Dash Push-Button (Keyless)        | Select 19/22mm illuminated momentary NO push-button for keyless start/stop | [Keyless Ignition][keyless]   | High     |
-| Boomerang Bullet 230              | Order RFID receiver + fob; mounting location under dash         | [Keyless Ignition][keyless]   | High     |
-| Boomerang Mounting Location       | Under-dash position near driver (3-6 ft range to driver seat)   | [Keyless Ignition][keyless]   | High     |
 | ECM Ignition Relay                | Select Hella/Bosch SPST 30-40A automotive relay                 | [Keyless Ignition][keyless]   | High     |
 | P/N Interlock Relay               | Select SPST 30A automotive relay (Turbolamik P/N → coil)        | [Keyless Ignition][keyless]   | High     |
 | Engine-Running Lockout Relay      | Select SPST 30A automotive relay with NC contacts               | [Keyless Ignition][keyless]   | High     |
@@ -232,12 +230,12 @@ Items completed since last update.
 | Priority         | Count  |
 | :--------------- | :----- |
 | 🔴 Critical      | 0      |
-| High             | 19     |
+| High             | 17     |
 | 📋 Medium        | 15     |
 | 📝 Low           | 2      |
 | 🔍 Verify        | 1      |
 | 🚙 Drivetrain    | 12     |
-| **TOTAL**        | **49** |
+| **TOTAL**        | **47** |
 
 ## Related Documentation
 
