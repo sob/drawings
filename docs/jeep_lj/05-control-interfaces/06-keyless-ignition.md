@@ -171,7 +171,6 @@ Normal engine shutdown (press brake + 2 sec button hold) drops PBS-I's PINK IGN 
 - [ ] Select PBS-I module mounting location (cabin under-dash, away from heat and water)
 - [ ] Select Start Button dash mounting position (within easy reach of driver)
 - [ ] Select Programming Button storage location (hidden but accessible)
-- [ ] Assign firewall pins for PBS-I PINK IGN (cabin → EB) and WAIT-gated PURPLE START (cabin → EB)
 - [ ] Verify PBS-I quiescent current draw to add to START battery parasitic budget
 - [ ] Set DIP switches / jumpers per install manual (PBS-I has no DIP/Jumper menu; check Feature Programming defaults are acceptable)
 

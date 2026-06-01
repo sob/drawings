@@ -9,7 +9,7 @@ hide:
 
 **Last Updated:** 2026-05-31
 
-**Total Open Items:** 38
+**Total Open Items:** 46
 
 > Count reflects the priority sections below. The Critical-Spec Verification Audit is a separate validation log (its open on-arrival/on-vehicle checks are tracked via GitHub issue [#29][i29]); items already marked ✅ Resolved are not counted.
 
@@ -34,6 +34,11 @@ Items needed before installation begins but not system-critical.
 | Dakota Digital Panel Mounting     | HDPE sheet dimensions and location                              | [Wire Routing][wire-routing]   | High     |
 | Turbolamik Aux: Reverse           | Confirm aux output channel + pinout configured for Reverse signal → PMU In 3 | [Transmission][transmission]   | High     |
 | Turbolamik Aux: P/N               | Confirm aux output channel + pinout configured for P/N (start interlock) | [Transmission][transmission]   | High     |
+| PBS-I Kit Order                   | Order Digital Guard Dawg PBS-I kit (ICM, 2 iTag fobs, Start Button + 36" harness, Programming Button, Bypass Card) | [Keyless Ignition][keyless]   | High     |
+| WAIT-Gate Relay Part              | Select SPST 30A automotive relay, NC contacts in start path (e.g. Bosch 0332019150 or Hella 4RA 003 510-04) | [Keyless Ignition][keyless]   | High     |
+| ECM Pin 41 Inline Fuse            | Add 5A inline fuse on ignition outbound wire to ECM Pin 41 per Cummins R2.8 install manual (doc 0042728) | [Keyless Ignition][keyless]   | High     |
+| PBS-I Module Mounting Location    | Cabin under-dash position; module ~5.5"×3"×1.25"; away from heat and water (do NOT engine-bay mount) | [Keyless Ignition][keyless]   | High     |
+| Start Button Mounting Location    | Dash position within easy reach of driver (button + 36" harness included in PBS-I kit) | [Keyless Ignition][keyless]   | High     |
 | R2.8 Turbo Inlet OD               | Measure turbo inlet tube outside diameter to confirm AMOT 4261M-02 (2.8" body) fitment and select intake-side adapter | [Runaway Protection][runaway-protection] | High     |
 | AMOT-to-Intake Adapters           | Source NPT-to-hose fittings sized to match measured turbo inlet OD                                | [Runaway Protection][runaway-protection] | High     |
 | AMOT T-Handle Mounting Location   | Select dash mounting position for Midwest Control 30-144-TTL-BH-3 (reachable belted, away from accidental contact) | [Runaway Protection][runaway-protection] | High     |
@@ -70,6 +75,9 @@ Items that improve the design but don't block installation.
 | Winch Trigger Control Routing          | Path for 14 AWG control wire (~13 ft) from SafetyHub ATC-1 (passenger rear wheel well) to winch contactor (front bumper) | [Recovery Systems][recovery-systems] | Medium   |
 | Front Air Locker Solenoid Routing      | Path for 18 AWG (~12 ft) from SwitchPros OUTPUT-17 (passenger rear wheel well) to front axle solenoid - cross-cab + forward | [Air Lockers][air-lockers] | Medium   |
 | Radio Ground Routing                   | Path for 14 AWG ground wires from GMRS / Intercom (dashboard) to START battery negative (driver rear wheel well) - direct grounds required for RF noise isolation | [Firewall Ingress][firewall-ingress] | Medium   |
+| Programming Button Storage             | Hidden but accessible location (under dash or in trunk) for PBS-I fob-learn and 4-digit-PIN emergency bypass | [Keyless Ignition][keyless]          | Medium   |
+| PBS-I Quiescent Current                | Measure or vendor-confirm standby draw to add to START battery parasitic budget  | [Keyless Ignition][keyless]          | Medium   |
+| PBS-I Feature Programming Defaults     | Confirm shipped Feature Programming defaults are acceptable before install (no DIP/jumper menu on PBS-I) | [Keyless Ignition][keyless]          | Medium   |
 
 ---
 
@@ -221,12 +229,12 @@ Items completed since last update.
 | Priority         | Count  |
 | :--------------- | :----- |
 | 🔴 Critical      | 0      |
-| High             | 8      |
-| 📋 Medium        | 15     |
+| High             | 13     |
+| 📋 Medium        | 18     |
 | 📝 Low           | 2      |
 | 🔍 Verify        | 1      |
 | 🚙 Drivetrain    | 12     |
-| **TOTAL**        | **38** |
+| **TOTAL**        | **46** |
 
 ## Related Documentation
 
