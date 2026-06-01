@@ -9,7 +9,9 @@ hide:
 
 **Last Updated:** 2026-05-31
 
-**Total Open Items:** 58
+**Total Open Items:** 46
+
+> Count reflects the priority sections below. The Critical-Spec Verification Audit is a separate validation log (its open on-arrival/on-vehicle checks are tracked via GitHub issue [#29][i29]); items already marked ✅ Resolved are not counted.
 
 ---
 
@@ -32,17 +34,11 @@ Items needed before installation begins but not system-critical.
 | Dakota Digital Panel Mounting     | HDPE sheet dimensions and location                              | [Wire Routing][wire-routing]   | High     |
 | Turbolamik Aux: Reverse           | Confirm aux output channel + pinout configured for Reverse signal → PMU In 3 | [Transmission][transmission]   | High     |
 | Turbolamik Aux: P/N               | Confirm aux output channel + pinout configured for P/N (start interlock) | [Transmission][transmission]   | High     |
-| Dash Push-Button (Keyless)        | Select 19/22mm illuminated momentary NO push-button for keyless start/stop | [Keyless Ignition][keyless]   | High     |
-| Boomerang Bullet 230              | Order RFID receiver + fob; mounting location under dash         | [Keyless Ignition][keyless]   | High     |
-| Boomerang Mounting Location       | Under-dash position near driver (3-6 ft range to driver seat)   | [Keyless Ignition][keyless]   | High     |
-| ECM Ignition Relay                | Select Hella/Bosch SPST 30-40A automotive relay                 | [Keyless Ignition][keyless]   | High     |
-| P/N Interlock Relay               | Select SPST 30A automotive relay (Turbolamik P/N → coil)        | [Keyless Ignition][keyless]   | High     |
-| Engine-Running Lockout Relay      | Select SPST 30A automotive relay with NC contacts               | [Keyless Ignition][keyless]   | High     |
-| Engine-Running Voltage Filter     | Design diode + zener + resistor filter on alternator B+ tap for lockout coil drive | [Keyless Ignition][keyless]   | High     |
-| Keyless Firewall Pin Assignments  | Assign 3 new HDP24 pins (fob, OUT24 supply, gated start return); current connector is full | [Firewall Ingress][firewall-ingress] | High     |
-| Hidden Bypass Toggle              | Select part + mounting location for emergency get-home bypass   | [Keyless Ignition][keyless]   | High     |
-| PMU Output Strategy (Keyless)     | Decide: OUT24-only + engine-running lockout (current plan) vs. free OUT15 winch trigger for dedicated crank output | [Keyless Ignition][keyless]   | High     |
-| PMU24 Keyless State Machine       | Program ECUMaster Light Client logic for OFF/RUN/CRANK transitions, fob detection, kill behavior | [PMU Programming][pmu-programming]   | High     |
+| PBS-I Kit Order                   | Order Digital Guard Dawg PBS-I kit (ICM, 2 iTag fobs, Start Button + 36" harness, Programming Button, Bypass Card) | [Keyless Ignition][keyless]   | High     |
+| WAIT-Gate Relay Part              | Select SPST 30A automotive relay, NC contacts in start path (e.g. Bosch 0332019150 or Hella 4RA 003 510-04) | [Keyless Ignition][keyless]   | High     |
+| ECM Pin 41 Inline Fuse            | Add 5A inline fuse on ignition outbound wire to ECM Pin 41 per Cummins R2.8 install manual (doc 0042728) | [Keyless Ignition][keyless]   | High     |
+| PBS-I Module Mounting Location    | Cabin under-dash position; module ~5.5"×3"×1.25"; away from heat and water (do NOT engine-bay mount) | [Keyless Ignition][keyless]   | High     |
+| Start Button Mounting Location    | Dash position within easy reach of driver (button + 36" harness included in PBS-I kit) | [Keyless Ignition][keyless]   | High     |
 | R2.8 Turbo Inlet OD               | Measure turbo inlet tube outside diameter to confirm AMOT 4261M-02 (2.8" body) fitment and select intake-side adapter | [Runaway Protection][runaway-protection] | High     |
 | AMOT-to-Intake Adapters           | Source NPT-to-hose fittings sized to match measured turbo inlet OD                                | [Runaway Protection][runaway-protection] | High     |
 | AMOT T-Handle Mounting Location   | Select dash mounting position for Midwest Control 30-144-TTL-BH-3 (reachable belted, away from accidental contact) | [Runaway Protection][runaway-protection] | High     |
@@ -63,7 +59,6 @@ Items that improve the design but don't block installation.
 | Roof/Roll Bar Routing                  | Light bars, dome lights                                                          | [Wire Routing][wire-routing]         | Medium   |
 | Speaker Mounting Locations             | Dash end caps or kick panels                                                     | [Audio Systems][audio-systems]       | Medium   |
 | RF Power Grommet Location              | Grommet 6 location near battery for radio power                                  | [Wire Routing][wire-routing]         | Medium   |
-| Solar Panel Wire Gauge                 | Wire sizing for Cascadia 4x4 80W panel connection                                | [BCDC][bcdc]                         | Medium   |
 | Alternator Output Terminal Size        | Terminal size for 1/0 AWG lug selection                                          | [Alternator][alternator]             | Medium   |
 | Alternator Voltage Regulator Set Point | Verify 14.2-14.4V for AGM batteries                                              | [Alternator][alternator]             | Medium   |
 | BODY PDU Metri-Pack Pinout             | J301-J306 connector pinout (military TM or reverse engineering)                  | [BODY PDU][body-rtmr]                | Medium   |
@@ -80,6 +75,9 @@ Items that improve the design but don't block installation.
 | Winch Trigger Control Routing          | Path for 14 AWG control wire (~13 ft) from SafetyHub ATC-1 (passenger rear wheel well) to winch contactor (front bumper) | [Recovery Systems][recovery-systems] | Medium   |
 | Front Air Locker Solenoid Routing      | Path for 18 AWG (~12 ft) from SwitchPros OUTPUT-17 (passenger rear wheel well) to front axle solenoid - cross-cab + forward | [Air Lockers][air-lockers] | Medium   |
 | Radio Ground Routing                   | Path for 14 AWG ground wires from GMRS / Intercom (dashboard) to START battery negative (driver rear wheel well) - direct grounds required for RF noise isolation | [Firewall Ingress][firewall-ingress] | Medium   |
+| Programming Button Storage             | Hidden but accessible location (under dash or in trunk) for PBS-I fob-learn and 4-digit-PIN emergency bypass | [Keyless Ignition][keyless]          | Medium   |
+| PBS-I Quiescent Current                | Measure or vendor-confirm standby draw to add to START battery parasitic budget  | [Keyless Ignition][keyless]          | Medium   |
+| PBS-I Feature Programming Defaults     | Confirm shipped Feature Programming defaults are acceptable before install (no DIP/jumper menu on PBS-I) | [Keyless Ignition][keyless]          | Medium   |
 
 ---
 
@@ -89,7 +87,7 @@ Items that can be determined during build.
 
 | Item                              | Description                                                                     | File                                 | Priority |
 | :-------------------------------- | :------------------------------------------------------------------------------ | :----------------------------------- | :------- |
-| BIM Module Current Draw           | Current draw for BIM-17-2, BIM-11-2, BIM-12-2, BIM-13-2 (powered via BIM cable) | [Gauge Cluster][gauge-cluster]       | Low      |
+| BIM Module Current Draw           | Current draw for BIM-01-2-J1939, GPS-50-2, BIM-22-3, BIM-17-2 (powered via BIM cable) | [Gauge Cluster][gauge-cluster]       | Low      |
 | LED4Life Wire Colors              | Confirm pod wire colors match MLC-RW pinout before install                      | [Footwell Lights][footwell-lights]   | Low      |
 
 ---
@@ -112,17 +110,18 @@ Mechanical drivetrain specifications, tracked separately from the electrical bui
 | :-------------------------------- | :------------------------------------------------------------------------------------------- | :-------------------------------- | :------- |
 | TCU Brake Switch Routing          | Brake pedal switch already feeds PMU In 2 via HDP24 pin 13. Decide: shared signal tap or dedicated wire to TCU? | [Harness Inventory][harness-inventory] | Medium |
 | Transmission Pilot Bearing        | If required by flywheel/crank combination                                                    | [Transmission][transmission]      | Medium   |
-| Transfer Case Specs               | Output type, fluid type and capacity                                                         | [Transfer Case][transfer-case]    | Medium   |
-| Front Driveshaft Specs            | Type, length, U-joint selection                                                              | [Driveshafts][driveshafts]        | Medium   |
-| Rear Driveshaft Specs             | Type, length, U-joint selection                                                              | [Driveshafts][driveshafts]        | Medium   |
+| Transfer Case Specs               | JK NVG241 (2.72:1) — input spline (per 8HP70 adapter), output type, fluid type & capacity     | [Transfer Case][transfer-case]    | Medium   |
+| Front Driveshaft Specs            | Custom (Tom Woods) decided — measure length at final ride height & order                     | [Driveshafts][driveshafts]        | Medium   |
+| Rear Driveshaft Specs             | Custom (Tom Woods) decided — measure length at final ride height & order                     | [Driveshafts][driveshafts]        | Medium   |
 | Front Axle Gearing & Manufacturer | Ratio and axle housing manufacturer                                                          | [Front Axle][front-axle]          | Medium   |
 | Rear Axle Gearing & Locker        | Ratio, manufacturer, and locker type                                                         | [Rear Axle][rear-axle]            | Medium   |
 | Front Suspension Components       | Coil rate, bypass valving, control arms, track bar, sway bar                                 | [Suspension][suspension]          | Medium   |
 | Rear Suspension Components        | Coil rate, bypass valving, control arms, track bar, sway bar                                 | [Suspension][suspension]          | Medium   |
-| Hydroboost Pump Specs             | Model, flow rate, pressure, drive type                                                       | [Steering][steering]              | Medium   |
-| Hydroboost Ram Specs              | Model, bore, stroke, mount type                                                              | [Steering][steering]              | Medium   |
+| Steering Pump Specs               | Kit pump PK40JP2-FH is Jeep 4.0L-only — source Cummins R2.8 PSC pump/bracket; flow/pressure/drive TBD | [Steering][steering]              | Medium   |
+| Steering Ram Specs                | PSC SC2227K1 (2.75×8 double-ended, FHK400TJ, 40"+ confirmed) on Artec D60 mount cut to D44 + Busted Knuckle stops; mount P/N + D44 stroke length TBD | [Steering][steering]              | Medium   |
+| Steering Cooler Fan (electrical)  | On PMU Out 8 (~15A, 180°F inline thermostat); confirm actual Mishimoto fan draw fits budget   | [Steering][steering]              | Medium   |
 | Suspension Geometry               | Departure and breakover angles (calculated from chosen suspension)                           | [Suspension][suspension]          | Low      |
-| Hydroboost Reservoir & Fluid      | Reservoir type/capacity/location and fluid type/capacity                                     | [Steering][steering]              | Low      |
+| Steering Reservoir & Fluid        | Fluid = PSC/SWEPCO 715; remote reservoir (in pump kit) model/location + system fill qty TBD  | [Steering][steering]              | Low      |
 
 ---
 
@@ -132,6 +131,7 @@ Items completed since last update.
 
 | Item                          | Resolution                                                                                                                    | Date       |
 | :---------------------------- | :---------------------------------------------------------------------------------------------------------------------------- | :--------- |
+| Solar Panel Wire Gauge        | 10 AWG minimum (for 2.23A Isc with safety margin) - already specified in solar generation doc                                 | 2026-05-30 |
 | SwitchPros Power Module Location | **Architecture change:** Moved from passenger rear wheel well to firewall (cabin side, passenger area). Output fan-out is ~58% forward — placing module near loads minimizes total output wire. SwitchPros Ground Bus moves with controller. Input is 2 AWG, ~2 ft from Firewall CONSTANT Bus. Control cable shortens from 10.5 ft to ~5 ft. | 2026-05-30 |
 | AUX Battery CONSTANT Bus #1 (rear) | **Architecture change:** Removed. With SwitchPros, BODY PDU, and Fusion Amp moved to firewall distribution, only 2 CB-protected feeds + 2 direct connections leave the AUX battery. Replaced rear CONSTANT bus with 4 stacked ring lugs on battery + 2 inline CBs (300A master + 150A SafetyHub) on a wheel well bracket. | 2026-05-30 |
 | Firewall CONSTANT Bus (new)   | **Architecture change:** Added Blue Sea 2105 MaxiBus (250A) on firewall (passenger cabin side). Fed by 2/0 AWG forward feed from AUX battery via 300A master CB. Feeds SwitchPros (150A CB), BODY PDU (100A CB), Fusion Amp (100A CB). Places distribution near loads; collapses 3 forward feeds into 1 heavy cable through cabin trunk. | 2026-05-30 |
@@ -229,19 +229,18 @@ Items completed since last update.
 | Priority         | Count  |
 | :--------------- | :----- |
 | 🔴 Critical      | 0      |
-| High             | 19     |
-| 📋 Medium        | 16     |
+| High             | 13     |
+| 📋 Medium        | 18     |
 | 📝 Low           | 2      |
 | 🔍 Verify        | 1      |
-| 🚙 Drivetrain    | 13     |
-| **TOTAL**        | **51** |
+| 🚙 Drivetrain    | 12     |
+| **TOTAL**        | **46** |
 
 ## Related Documentation
 
 - [Section 1 Installation Checklist][section-1-install] - Power systems installation guide
 - [Section 1.7 Wire Routing][wire-routing] - Wire routing organized by location
 
-[bcdc]: ../01-power-systems/01-power-generation/03-bcdc.md
 [gauge-cluster]: ../02-engine-systems/09-gauge-cluster/index.md
 [radiator-fan]: ../02-engine-systems/06-radiator-fan.md
 [wire-routing]: ../01-power-systems/07-wire-routing/index.md
@@ -270,6 +269,7 @@ Items completed since last update.
 [rear-axle]: ../10-drivetrain/05-rear-axle.md
 [suspension]: ../10-drivetrain/06-suspension.md
 [steering]: ../10-drivetrain/07-steering.md
+[i29]: https://github.com/sob/drawings/issues/29
 [constant-bus]: ../01-power-systems/03-aux-battery-distribution/02-constant-bus.md
 [starter-doc]: ../02-engine-systems/01-starter.md
 [keyless]: ../05-control-interfaces/06-keyless-ignition.md

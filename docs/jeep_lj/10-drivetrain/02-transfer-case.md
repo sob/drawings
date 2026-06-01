@@ -88,6 +88,8 @@ The 8HP *family* does pair with an NV241 from the factory — the JL Wrangler au
 | Fluid Type | ATF+4[^fluid] |
 | Capacity | ≈1.6 L (3.4 pt); fill to overflow[^fluid] |
 
+[^tc-ratio]: The 2012 Jeep Wrangler JK Command-Trac (NVG241 Gen II) low-range ratio is **2.72:1** per Jeep factory specification; the 4.0:1 unit is the Rubicon-only Rock-Trac (NV241OR), which this build no longer uses. Confirm against the JK FSM transfer-case section when finalizing crawl-ratio math.
+
 ## Outstanding Items
 
 - [ ] Measure 8HP70 output-shaft protrusion (≤~96 mm, else order DomiWorks spacer plate or shorten)

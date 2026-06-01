@@ -30,8 +30,8 @@ Complete drivetrain system documentation for the Jeep LJ build.
 
 - Transmission: ZF 8HP70 (845RE) - 8-speed automatic from 2015-2019 RAM 1500 EcoDiesel 4x4
 - Transfer Case: NV241 GenII Command-Trac (2012 JK Sport) - 2.72:1 low range
-- Front Driveshaft: TBD
-- Rear Driveshaft: TBD
+- Front Driveshaft: Custom (Tom Woods) - measure at final ride height
+- Rear Driveshaft: Custom (Tom Woods) - measure at final ride height
 
 **Suspension:**
 
