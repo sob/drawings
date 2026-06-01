@@ -272,6 +272,7 @@ Items completed since last update.
 [rear-axle]: ../10-drivetrain/05-rear-axle.md
 [suspension]: ../10-drivetrain/06-suspension.md
 [steering]: ../10-drivetrain/07-steering.md
+[i29]: https://github.com/sob/drawings/issues/29
 [constant-bus]: ../01-power-systems/03-aux-battery-distribution/02-constant-bus.md
 [starter-doc]: ../02-engine-systems/01-starter.md
 [keyless]: ../05-control-interfaces/06-keyless-ignition.md
